@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>muni.api</groupId>
+    <artifactId>api-muni</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <name>model</name>
+    <description>muni objects</description>
+    <packaging>jar</packaging>
+
+    <properties>
+        <java.version>11</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <encoding>UTF-8</encoding>
+        <project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
+        <project.resources.sourceEncoding>${encoding}</project.resources.sourceEncoding>
+        <archetype.encoding>${encoding}</archetype.encoding>
+
+
+        <!-- Project specific -->
+<!--        <spring-boot-admin.version>2.2.1</spring-boot-admin.version>-->
+<!--        <avro.version>1.8.2</avro.version>-->
+<!--        <spring-boot.version>2.2.4.RELEASE</spring-boot.version>-->
+<!--        <spring-cloud.version>Hoxton.SR1</spring-cloud.version>-->
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java</artifactId>
+            <version>3.11.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java-util</artifactId>
+            <version>3.11.1</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <extensions>
+            <!-- kr motd provides os.detected to proto plugin-->
+            <extension>
+                <groupId>kr.motd.maven</groupId>
+                <artifactId>os-maven-plugin</artifactId>
+                <version>1.6.2</version>
+            </extension>
+        </extensions>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>3.0.0</version>
+                <executions>
+                    <execution>
+                        <id>add-source</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>add-source</goal>
+                        </goals>
+                        <configuration>
+                            <sources>
+                                <!--							<source>${project.build.directory}/generated-sources/protobuf</source>-->
+                                <source>src/zgen/proto/java</source> <!-- ONly for proto-->
+<!--                                <source>src/zgen/avro/java</source> &lt;!&ndash; ONly for avro&ndash;&gt;-->
+                            </sources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.7.0</version>
+                <configuration>
+                    <source>11</source>
+                    <target>11</target>
+                </configuration>
+            </plugin>
+            <!--
+    Enable PROTO plugiin only for the duration of regenerate
+
+    Remember to add these annotation back to generated classes
+     @JsonSerialize(using = SerializerGeneric.class)
+     @JsonDeserialize(using = DeserializeSearchRequest.class)
+     public  static final class SearchRequest extends
+
+
+     @JsonSerialize(using = SerializerGeneric.class)
+     public  static final class SearchResponse extends
+
+    -->
+            <plugin>
+                <groupId>org.xolstice.maven.plugins</groupId>
+                <artifactId>protobuf-maven-plugin</artifactId>
+                <version>0.6.1</version>
+                <configuration>
+                    <protocArtifact>com.google.protobuf:protoc:3.13.0:exe:${os.detected.classifier}</protocArtifact>
+                    <pluginId>grpc-java</pluginId>
+<!--                    <protocExecutable>C:/apps/google/protoc-3.13.0/bin/protoc.exe</protocExecutable>-->
+                    <pluginArtifact>io.grpc:protoc-gen-grpc-java:1.32.1:exe:${os.detected.classifier}</pluginArtifact>
+                    <protoSourceRoot>${basedir}/schema/proto</protoSourceRoot>
+                    <outputDirectory>${basedir}/src/main/java</outputDirectory>
+<!--                    <outputDirectory>${basedir}/src/zgen/proto/java</outputDirectory>-->
+                    <clearOutputDirectory>false</clearOutputDirectory>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>compile</goal>
+                            <goal>compile-custom</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
