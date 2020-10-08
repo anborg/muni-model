@@ -172,7 +172,7 @@ public final class SearchServiceGrpc {
      * <pre>
      * Returns a specific Person
      * Client example - returns person id=1:
-     *   curl http://localhost:8080/mkapp/v1/person/1
+     *   curl http://localhost:8080//mkapp/v1/persons/byId
      * </pre>
      */
     public void personById(muni.model.MuniService.SearchPersonReq request,
@@ -242,7 +242,7 @@ public final class SearchServiceGrpc {
      * <pre>
      * Returns a specific Person
      * Client example - returns person id=1:
-     *   curl http://localhost:8080/mkapp/v1/person/1
+     *   curl http://localhost:8080//mkapp/v1/persons/byId
      * </pre>
      */
     public void personById(muni.model.MuniService.SearchPersonReq request,
@@ -289,7 +289,7 @@ public final class SearchServiceGrpc {
      * <pre>
      * Returns a specific Person
      * Client example - returns person id=1:
-     *   curl http://localhost:8080/mkapp/v1/person/1
+     *   curl http://localhost:8080//mkapp/v1/persons/byId
      * </pre>
      */
     public muni.model.MuniService.SearchPersonRes personById(muni.model.MuniService.SearchPersonReq request) {
@@ -333,7 +333,7 @@ public final class SearchServiceGrpc {
      * <pre>
      * Returns a specific Person
      * Client example - returns person id=1:
-     *   curl http://localhost:8080/mkapp/v1/person/1
+     *   curl http://localhost:8080//mkapp/v1/persons/byId
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<muni.model.MuniService.SearchPersonRes> personById(

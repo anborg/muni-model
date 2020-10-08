@@ -1,9 +1,6 @@
-package muni.util;
-
 import com.google.protobuf.Message;
 import com.google.protobuf.MessageOrBuilder;
 import com.google.protobuf.util.JsonFormat;
-import muni.ApiException;
 
 public class ProtoUtil {
     public static <T extends Message> String toJson(T obj){

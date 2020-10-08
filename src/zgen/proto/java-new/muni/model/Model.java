@@ -120,6 +120,7 @@ public final class Model {
 
     /**
      * <pre>
+     *Output only
      * </pre>
      *
      * <code>.google.protobuf.Timestamp createTime = 1;</code>
@@ -128,6 +129,7 @@ public final class Model {
     boolean hasCreateTime();
     /**
      * <pre>
+     *Output only
      * </pre>
      *
      * <code>.google.protobuf.Timestamp createTime = 1;</code>
@@ -136,6 +138,7 @@ public final class Model {
     com.google.protobuf.Timestamp getCreateTime();
     /**
      * <pre>
+     *Output only
      * </pre>
      *
      * <code>.google.protobuf.Timestamp createTime = 1;</code>
@@ -143,16 +146,28 @@ public final class Model {
     com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder();
 
     /**
+     * <pre>
+     *Output only
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updateTime = 2;</code>
      * @return Whether the updateTime field is set.
      */
     boolean hasUpdateTime();
     /**
+     * <pre>
+     *Output only
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updateTime = 2;</code>
      * @return The updateTime.
      */
     com.google.protobuf.Timestamp getUpdateTime();
     /**
+     * <pre>
+     *Output only
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updateTime = 2;</code>
      */
     com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder();
@@ -619,6 +634,7 @@ public final class Model {
     private com.google.protobuf.Timestamp createTime_;
     /**
      * <pre>
+     *Output only
      * </pre>
      *
      * <code>.google.protobuf.Timestamp createTime = 1;</code>
@@ -630,6 +646,7 @@ public final class Model {
     }
     /**
      * <pre>
+     *Output only
      * </pre>
      *
      * <code>.google.protobuf.Timestamp createTime = 1;</code>
@@ -641,6 +658,7 @@ public final class Model {
     }
     /**
      * <pre>
+     *Output only
      * </pre>
      *
      * <code>.google.protobuf.Timestamp createTime = 1;</code>
@@ -653,6 +671,10 @@ public final class Model {
     public static final int UPDATETIME_FIELD_NUMBER = 2;
     private com.google.protobuf.Timestamp updateTime_;
     /**
+     * <pre>
+     *Output only
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updateTime = 2;</code>
      * @return Whether the updateTime field is set.
      */
@@ -661,6 +683,10 @@ public final class Model {
       return updateTime_ != null;
     }
     /**
+     * <pre>
+     *Output only
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updateTime = 2;</code>
      * @return The updateTime.
      */
@@ -669,6 +695,10 @@ public final class Model {
       return updateTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updateTime_;
     }
     /**
+     * <pre>
+     *Output only
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updateTime = 2;</code>
      */
     @java.lang.Override
@@ -1793,6 +1823,7 @@ public final class Model {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createTimeBuilder_;
       /**
        * <pre>
+       *Output only
        * </pre>
        *
        * <code>.google.protobuf.Timestamp createTime = 1;</code>
@@ -1803,6 +1834,7 @@ public final class Model {
       }
       /**
        * <pre>
+       *Output only
        * </pre>
        *
        * <code>.google.protobuf.Timestamp createTime = 1;</code>
@@ -1817,6 +1849,7 @@ public final class Model {
       }
       /**
        * <pre>
+       *Output only
        * </pre>
        *
        * <code>.google.protobuf.Timestamp createTime = 1;</code>
@@ -1836,6 +1869,7 @@ public final class Model {
       }
       /**
        * <pre>
+       *Output only
        * </pre>
        *
        * <code>.google.protobuf.Timestamp createTime = 1;</code>
@@ -1853,6 +1887,7 @@ public final class Model {
       }
       /**
        * <pre>
+       *Output only
        * </pre>
        *
        * <code>.google.protobuf.Timestamp createTime = 1;</code>
@@ -1874,6 +1909,7 @@ public final class Model {
       }
       /**
        * <pre>
+       *Output only
        * </pre>
        *
        * <code>.google.protobuf.Timestamp createTime = 1;</code>
@@ -1891,6 +1927,7 @@ public final class Model {
       }
       /**
        * <pre>
+       *Output only
        * </pre>
        *
        * <code>.google.protobuf.Timestamp createTime = 1;</code>
@@ -1902,6 +1939,7 @@ public final class Model {
       }
       /**
        * <pre>
+       *Output only
        * </pre>
        *
        * <code>.google.protobuf.Timestamp createTime = 1;</code>
@@ -1916,6 +1954,7 @@ public final class Model {
       }
       /**
        * <pre>
+       *Output only
        * </pre>
        *
        * <code>.google.protobuf.Timestamp createTime = 1;</code>
@@ -1938,6 +1977,10 @@ public final class Model {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updateTimeBuilder_;
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updateTime = 2;</code>
        * @return Whether the updateTime field is set.
        */
@@ -1945,6 +1988,10 @@ public final class Model {
         return updateTimeBuilder_ != null || updateTime_ != null;
       }
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updateTime = 2;</code>
        * @return The updateTime.
        */
@@ -1956,6 +2003,10 @@ public final class Model {
         }
       }
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updateTime = 2;</code>
        */
       public Builder setUpdateTime(com.google.protobuf.Timestamp value) {
@@ -1972,6 +2023,10 @@ public final class Model {
         return this;
       }
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updateTime = 2;</code>
        */
       public Builder setUpdateTime(
@@ -1986,6 +2041,10 @@ public final class Model {
         return this;
       }
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updateTime = 2;</code>
        */
       public Builder mergeUpdateTime(com.google.protobuf.Timestamp value) {
@@ -2004,6 +2063,10 @@ public final class Model {
         return this;
       }
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updateTime = 2;</code>
        */
       public Builder clearUpdateTime() {
@@ -2018,6 +2081,10 @@ public final class Model {
         return this;
       }
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updateTime = 2;</code>
        */
       public com.google.protobuf.Timestamp.Builder getUpdateTimeBuilder() {
@@ -2026,6 +2093,10 @@ public final class Model {
         return getUpdateTimeFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updateTime = 2;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder() {
@@ -2037,6 +2108,10 @@ public final class Model {
         }
       }
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updateTime = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2110,11 +2185,19 @@ public final class Model {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     *Output only
+     * </pre>
+     *
      * <code>string id = 3;</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
+     * <pre>
+     *Output only
+     * </pre>
+     *
      * <code>string id = 3;</code>
      * @return The bytes for id.
      */
@@ -2162,6 +2245,7 @@ public final class Model {
 
     /**
      * <pre>
+     *Output only
      * </pre>
      *
      * <code>.google.protobuf.Timestamp createTime = 1;</code>
@@ -2170,6 +2254,7 @@ public final class Model {
     boolean hasCreateTime();
     /**
      * <pre>
+     *Output only
      * </pre>
      *
      * <code>.google.protobuf.Timestamp createTime = 1;</code>
@@ -2178,6 +2263,7 @@ public final class Model {
     com.google.protobuf.Timestamp getCreateTime();
     /**
      * <pre>
+     *Output only
      * </pre>
      *
      * <code>.google.protobuf.Timestamp createTime = 1;</code>
@@ -2185,16 +2271,28 @@ public final class Model {
     com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder();
 
     /**
+     * <pre>
+     *Output only
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updateTime = 2;</code>
      * @return Whether the updateTime field is set.
      */
     boolean hasUpdateTime();
     /**
+     * <pre>
+     *Output only
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updateTime = 2;</code>
      * @return The updateTime.
      */
     com.google.protobuf.Timestamp getUpdateTime();
     /**
+     * <pre>
+     *Output only
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updateTime = 2;</code>
      */
     com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder();
@@ -2339,6 +2437,10 @@ public final class Model {
     public static final int ID_FIELD_NUMBER = 3;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     *Output only
+     * </pre>
+     *
      * <code>string id = 3;</code>
      * @return The id.
      */
@@ -2356,6 +2458,10 @@ public final class Model {
       }
     }
     /**
+     * <pre>
+     *Output only
+     * </pre>
+     *
      * <code>string id = 3;</code>
      * @return The bytes for id.
      */
@@ -2480,6 +2586,7 @@ public final class Model {
     private com.google.protobuf.Timestamp createTime_;
     /**
      * <pre>
+     *Output only
      * </pre>
      *
      * <code>.google.protobuf.Timestamp createTime = 1;</code>
@@ -2491,6 +2598,7 @@ public final class Model {
     }
     /**
      * <pre>
+     *Output only
      * </pre>
      *
      * <code>.google.protobuf.Timestamp createTime = 1;</code>
@@ -2502,6 +2610,7 @@ public final class Model {
     }
     /**
      * <pre>
+     *Output only
      * </pre>
      *
      * <code>.google.protobuf.Timestamp createTime = 1;</code>
@@ -2514,6 +2623,10 @@ public final class Model {
     public static final int UPDATETIME_FIELD_NUMBER = 2;
     private com.google.protobuf.Timestamp updateTime_;
     /**
+     * <pre>
+     *Output only
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updateTime = 2;</code>
      * @return Whether the updateTime field is set.
      */
@@ -2522,6 +2635,10 @@ public final class Model {
       return updateTime_ != null;
     }
     /**
+     * <pre>
+     *Output only
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updateTime = 2;</code>
      * @return The updateTime.
      */
@@ -2530,6 +2647,10 @@ public final class Model {
       return updateTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updateTime_;
     }
     /**
+     * <pre>
+     *Output only
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updateTime = 2;</code>
      */
     @java.lang.Override
@@ -2965,6 +3086,10 @@ public final class Model {
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>string id = 3;</code>
        * @return The id.
        */
@@ -2981,6 +3106,10 @@ public final class Model {
         }
       }
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>string id = 3;</code>
        * @return The bytes for id.
        */
@@ -2998,6 +3127,10 @@ public final class Model {
         }
       }
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>string id = 3;</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -3013,6 +3146,10 @@ public final class Model {
         return this;
       }
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>string id = 3;</code>
        * @return This builder for chaining.
        */
@@ -3023,6 +3160,10 @@ public final class Model {
         return this;
       }
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>string id = 3;</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
@@ -3315,6 +3456,7 @@ public final class Model {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createTimeBuilder_;
       /**
        * <pre>
+       *Output only
        * </pre>
        *
        * <code>.google.protobuf.Timestamp createTime = 1;</code>
@@ -3325,6 +3467,7 @@ public final class Model {
       }
       /**
        * <pre>
+       *Output only
        * </pre>
        *
        * <code>.google.protobuf.Timestamp createTime = 1;</code>
@@ -3339,6 +3482,7 @@ public final class Model {
       }
       /**
        * <pre>
+       *Output only
        * </pre>
        *
        * <code>.google.protobuf.Timestamp createTime = 1;</code>
@@ -3358,6 +3502,7 @@ public final class Model {
       }
       /**
        * <pre>
+       *Output only
        * </pre>
        *
        * <code>.google.protobuf.Timestamp createTime = 1;</code>
@@ -3375,6 +3520,7 @@ public final class Model {
       }
       /**
        * <pre>
+       *Output only
        * </pre>
        *
        * <code>.google.protobuf.Timestamp createTime = 1;</code>
@@ -3396,6 +3542,7 @@ public final class Model {
       }
       /**
        * <pre>
+       *Output only
        * </pre>
        *
        * <code>.google.protobuf.Timestamp createTime = 1;</code>
@@ -3413,6 +3560,7 @@ public final class Model {
       }
       /**
        * <pre>
+       *Output only
        * </pre>
        *
        * <code>.google.protobuf.Timestamp createTime = 1;</code>
@@ -3424,6 +3572,7 @@ public final class Model {
       }
       /**
        * <pre>
+       *Output only
        * </pre>
        *
        * <code>.google.protobuf.Timestamp createTime = 1;</code>
@@ -3438,6 +3587,7 @@ public final class Model {
       }
       /**
        * <pre>
+       *Output only
        * </pre>
        *
        * <code>.google.protobuf.Timestamp createTime = 1;</code>
@@ -3460,6 +3610,10 @@ public final class Model {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updateTimeBuilder_;
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updateTime = 2;</code>
        * @return Whether the updateTime field is set.
        */
@@ -3467,6 +3621,10 @@ public final class Model {
         return updateTimeBuilder_ != null || updateTime_ != null;
       }
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updateTime = 2;</code>
        * @return The updateTime.
        */
@@ -3478,6 +3636,10 @@ public final class Model {
         }
       }
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updateTime = 2;</code>
        */
       public Builder setUpdateTime(com.google.protobuf.Timestamp value) {
@@ -3494,6 +3656,10 @@ public final class Model {
         return this;
       }
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updateTime = 2;</code>
        */
       public Builder setUpdateTime(
@@ -3508,6 +3674,10 @@ public final class Model {
         return this;
       }
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updateTime = 2;</code>
        */
       public Builder mergeUpdateTime(com.google.protobuf.Timestamp value) {
@@ -3526,6 +3696,10 @@ public final class Model {
         return this;
       }
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updateTime = 2;</code>
        */
       public Builder clearUpdateTime() {
@@ -3540,6 +3714,10 @@ public final class Model {
         return this;
       }
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updateTime = 2;</code>
        */
       public com.google.protobuf.Timestamp.Builder getUpdateTimeBuilder() {
@@ -3548,6 +3726,10 @@ public final class Model {
         return getUpdateTimeFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updateTime = 2;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder() {
@@ -3559,6 +3741,10 @@ public final class Model {
         }
       }
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updateTime = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3632,11 +3818,19 @@ public final class Model {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     *Output only
+     * </pre>
+     *
      * <code>string id = 3;</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
+     * <pre>
+     *Output only
+     * </pre>
+     *
      * <code>string id = 3;</code>
      * @return The bytes for id.
      */
@@ -3684,6 +3878,7 @@ public final class Model {
 
     /**
      * <pre>
+     *Output only
      * </pre>
      *
      * <code>.google.protobuf.Timestamp createTime = 1;</code>
@@ -3692,6 +3887,7 @@ public final class Model {
     boolean hasCreateTime();
     /**
      * <pre>
+     *Output only
      * </pre>
      *
      * <code>.google.protobuf.Timestamp createTime = 1;</code>
@@ -3700,6 +3896,7 @@ public final class Model {
     com.google.protobuf.Timestamp getCreateTime();
     /**
      * <pre>
+     *Output only
      * </pre>
      *
      * <code>.google.protobuf.Timestamp createTime = 1;</code>
@@ -3707,16 +3904,28 @@ public final class Model {
     com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder();
 
     /**
+     * <pre>
+     *Output only
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updateTime = 2;</code>
      * @return Whether the updateTime field is set.
      */
     boolean hasUpdateTime();
     /**
+     * <pre>
+     *Output only
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updateTime = 2;</code>
      * @return The updateTime.
      */
     com.google.protobuf.Timestamp getUpdateTime();
     /**
+     * <pre>
+     *Output only
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updateTime = 2;</code>
      */
     com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder();
@@ -3861,6 +4070,10 @@ public final class Model {
     public static final int ID_FIELD_NUMBER = 3;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     *Output only
+     * </pre>
+     *
      * <code>string id = 3;</code>
      * @return The id.
      */
@@ -3878,6 +4091,10 @@ public final class Model {
       }
     }
     /**
+     * <pre>
+     *Output only
+     * </pre>
+     *
      * <code>string id = 3;</code>
      * @return The bytes for id.
      */
@@ -4002,6 +4219,7 @@ public final class Model {
     private com.google.protobuf.Timestamp createTime_;
     /**
      * <pre>
+     *Output only
      * </pre>
      *
      * <code>.google.protobuf.Timestamp createTime = 1;</code>
@@ -4013,6 +4231,7 @@ public final class Model {
     }
     /**
      * <pre>
+     *Output only
      * </pre>
      *
      * <code>.google.protobuf.Timestamp createTime = 1;</code>
@@ -4024,6 +4243,7 @@ public final class Model {
     }
     /**
      * <pre>
+     *Output only
      * </pre>
      *
      * <code>.google.protobuf.Timestamp createTime = 1;</code>
@@ -4036,6 +4256,10 @@ public final class Model {
     public static final int UPDATETIME_FIELD_NUMBER = 2;
     private com.google.protobuf.Timestamp updateTime_;
     /**
+     * <pre>
+     *Output only
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updateTime = 2;</code>
      * @return Whether the updateTime field is set.
      */
@@ -4044,6 +4268,10 @@ public final class Model {
       return updateTime_ != null;
     }
     /**
+     * <pre>
+     *Output only
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updateTime = 2;</code>
      * @return The updateTime.
      */
@@ -4052,6 +4280,10 @@ public final class Model {
       return updateTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updateTime_;
     }
     /**
+     * <pre>
+     *Output only
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updateTime = 2;</code>
      */
     @java.lang.Override
@@ -4487,6 +4719,10 @@ public final class Model {
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>string id = 3;</code>
        * @return The id.
        */
@@ -4503,6 +4739,10 @@ public final class Model {
         }
       }
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>string id = 3;</code>
        * @return The bytes for id.
        */
@@ -4520,6 +4760,10 @@ public final class Model {
         }
       }
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>string id = 3;</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -4535,6 +4779,10 @@ public final class Model {
         return this;
       }
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>string id = 3;</code>
        * @return This builder for chaining.
        */
@@ -4545,6 +4793,10 @@ public final class Model {
         return this;
       }
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>string id = 3;</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
@@ -4837,6 +5089,7 @@ public final class Model {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createTimeBuilder_;
       /**
        * <pre>
+       *Output only
        * </pre>
        *
        * <code>.google.protobuf.Timestamp createTime = 1;</code>
@@ -4847,6 +5100,7 @@ public final class Model {
       }
       /**
        * <pre>
+       *Output only
        * </pre>
        *
        * <code>.google.protobuf.Timestamp createTime = 1;</code>
@@ -4861,6 +5115,7 @@ public final class Model {
       }
       /**
        * <pre>
+       *Output only
        * </pre>
        *
        * <code>.google.protobuf.Timestamp createTime = 1;</code>
@@ -4880,6 +5135,7 @@ public final class Model {
       }
       /**
        * <pre>
+       *Output only
        * </pre>
        *
        * <code>.google.protobuf.Timestamp createTime = 1;</code>
@@ -4897,6 +5153,7 @@ public final class Model {
       }
       /**
        * <pre>
+       *Output only
        * </pre>
        *
        * <code>.google.protobuf.Timestamp createTime = 1;</code>
@@ -4918,6 +5175,7 @@ public final class Model {
       }
       /**
        * <pre>
+       *Output only
        * </pre>
        *
        * <code>.google.protobuf.Timestamp createTime = 1;</code>
@@ -4935,6 +5193,7 @@ public final class Model {
       }
       /**
        * <pre>
+       *Output only
        * </pre>
        *
        * <code>.google.protobuf.Timestamp createTime = 1;</code>
@@ -4946,6 +5205,7 @@ public final class Model {
       }
       /**
        * <pre>
+       *Output only
        * </pre>
        *
        * <code>.google.protobuf.Timestamp createTime = 1;</code>
@@ -4960,6 +5220,7 @@ public final class Model {
       }
       /**
        * <pre>
+       *Output only
        * </pre>
        *
        * <code>.google.protobuf.Timestamp createTime = 1;</code>
@@ -4982,6 +5243,10 @@ public final class Model {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updateTimeBuilder_;
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updateTime = 2;</code>
        * @return Whether the updateTime field is set.
        */
@@ -4989,6 +5254,10 @@ public final class Model {
         return updateTimeBuilder_ != null || updateTime_ != null;
       }
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updateTime = 2;</code>
        * @return The updateTime.
        */
@@ -5000,6 +5269,10 @@ public final class Model {
         }
       }
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updateTime = 2;</code>
        */
       public Builder setUpdateTime(com.google.protobuf.Timestamp value) {
@@ -5016,6 +5289,10 @@ public final class Model {
         return this;
       }
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updateTime = 2;</code>
        */
       public Builder setUpdateTime(
@@ -5030,6 +5307,10 @@ public final class Model {
         return this;
       }
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updateTime = 2;</code>
        */
       public Builder mergeUpdateTime(com.google.protobuf.Timestamp value) {
@@ -5048,6 +5329,10 @@ public final class Model {
         return this;
       }
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updateTime = 2;</code>
        */
       public Builder clearUpdateTime() {
@@ -5062,6 +5347,10 @@ public final class Model {
         return this;
       }
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updateTime = 2;</code>
        */
       public com.google.protobuf.Timestamp.Builder getUpdateTimeBuilder() {
@@ -5070,6 +5359,10 @@ public final class Model {
         return getUpdateTimeFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updateTime = 2;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder() {
@@ -5081,6 +5374,10 @@ public final class Model {
         }
       }
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updateTime = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -7719,36 +8016,38 @@ public final class Model {
   static {
     java.lang.String[] descriptorData = {
       "\n\020muni-model.proto\022\nmuni.model\032\037google/p" +
-      "rotobuf/timestamp.proto\"\201\002\n\rPostalAddres" +
-      "s\022\n\n\002id\030\003 \001(\t\022\021\n\tstreetNum\030\004 \001(\t\022\022\n\nstre" +
-      "etName\030\005 \001(\t\022\014\n\004city\030\006 \001(\t\022\020\n\010province\030\007" +
-      " \001(\t\022\017\n\007country\030\010 \001(\t\022\022\n\npostalCode\030\t \001(" +
-      "\t\022\013\n\003lat\030\n \001(\001\022\013\n\003lon\030\013 \001(\001\022.\n\ncreateTim" +
-      "e\030\001 \001(\0132\032.google.protobuf.Timestamp\022.\n\nu" +
-      "pdateTime\030\002 \001(\0132\032.google.protobuf.Timest" +
-      "amp\"\317\001\n\006Person\022\n\n\002id\030\003 \001(\t\022\021\n\tfirstName\030" +
-      "\004 \001(\t\022\020\n\010lastName\030\005 \001(\t\0224\n\017contactChanne" +
-      "ls\030\010 \001(\0132\033.muni.model.ContactChannels\022.\n" +
-      "\ncreateTime\030\001 \001(\0132\032.google.protobuf.Time" +
-      "stamp\022.\n\nupdateTime\030\002 \001(\0132\032.google.proto" +
-      "buf.Timestamp\"\317\001\n\014Organization\022\n\n\002id\030\003 \001" +
-      "(\t\022\014\n\004name\030\004 \001(\t\0224\n\017contactChannels\030\005 \001(" +
-      "\0132\033.muni.model.ContactChannels\022\017\n\007websit" +
-      "e\030\006 \001(\t\022.\n\ncreateTime\030\001 \001(\0132\032.google.pro" +
-      "tobuf.Timestamp\022.\n\nupdateTime\030\002 \001(\0132\032.go" +
-      "ogle.protobuf.Timestamp\"\253\001\n\017ContactChann" +
-      "els\022!\n\006phone1\030\001 \001(\0132\021.muni.model.Phone\022!" +
-      "\n\006phone2\030\002 \001(\0132\021.muni.model.Phone\022 \n\005ema" +
-      "il\030\003 \001(\0132\021.muni.model.Email\0220\n\rpostalAdd" +
-      "ress\030\004 \001(\0132\031.muni.model.PostalAddress\"9\n" +
-      "\005Phone\022\023\n\013countryCode\030\001 \001(\005\022\016\n\006number\030\002 " +
-      "\001(\005\022\013\n\003ext\030\003 \001(\t\"\026\n\005Email\022\r\n\005value\030\001 \001(\t" +
-      "B\014B\005ModelP\000\210\001\000b\006proto3"
+      "rotobuf/timestamp.proto\032 google/protobuf" +
+      "/field_mask.proto\"\201\002\n\rPostalAddress\022\n\n\002i" +
+      "d\030\003 \001(\t\022\021\n\tstreetNum\030\004 \001(\t\022\022\n\nstreetName" +
+      "\030\005 \001(\t\022\014\n\004city\030\006 \001(\t\022\020\n\010province\030\007 \001(\t\022\017" +
+      "\n\007country\030\010 \001(\t\022\022\n\npostalCode\030\t \001(\t\022\013\n\003l" +
+      "at\030\n \001(\001\022\013\n\003lon\030\013 \001(\001\022.\n\ncreateTime\030\001 \001(" +
+      "\0132\032.google.protobuf.Timestamp\022.\n\nupdateT" +
+      "ime\030\002 \001(\0132\032.google.protobuf.Timestamp\"\317\001" +
+      "\n\006Person\022\n\n\002id\030\003 \001(\t\022\021\n\tfirstName\030\004 \001(\t\022" +
+      "\020\n\010lastName\030\005 \001(\t\0224\n\017contactChannels\030\010 \001" +
+      "(\0132\033.muni.model.ContactChannels\022.\n\ncreat" +
+      "eTime\030\001 \001(\0132\032.google.protobuf.Timestamp\022" +
+      ".\n\nupdateTime\030\002 \001(\0132\032.google.protobuf.Ti" +
+      "mestamp\"\317\001\n\014Organization\022\n\n\002id\030\003 \001(\t\022\014\n\004" +
+      "name\030\004 \001(\t\0224\n\017contactChannels\030\005 \001(\0132\033.mu" +
+      "ni.model.ContactChannels\022\017\n\007website\030\006 \001(" +
+      "\t\022.\n\ncreateTime\030\001 \001(\0132\032.google.protobuf." +
+      "Timestamp\022.\n\nupdateTime\030\002 \001(\0132\032.google.p" +
+      "rotobuf.Timestamp\"\253\001\n\017ContactChannels\022!\n" +
+      "\006phone1\030\001 \001(\0132\021.muni.model.Phone\022!\n\006phon" +
+      "e2\030\002 \001(\0132\021.muni.model.Phone\022 \n\005email\030\003 \001" +
+      "(\0132\021.muni.model.Email\0220\n\rpostalAddress\030\004" +
+      " \001(\0132\031.muni.model.PostalAddress\"9\n\005Phone" +
+      "\022\023\n\013countryCode\030\001 \001(\005\022\016\n\006number\030\002 \001(\005\022\013\n" +
+      "\003ext\030\003 \001(\t\"\026\n\005Email\022\r\n\005value\030\001 \001(\tB\014B\005Mo" +
+      "delP\000\210\001\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
+          com.google.protobuf.FieldMaskProto.getDescriptor(),
         });
     internal_static_muni_model_PostalAddress_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -7787,6 +8086,7 @@ public final class Model {
         internal_static_muni_model_Email_descriptor,
         new java.lang.String[] { "Value", });
     com.google.protobuf.TimestampProto.getDescriptor();
+    com.google.protobuf.FieldMaskProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
