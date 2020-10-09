@@ -27,6 +27,37 @@ public final class PersonServiceGrpc {
   public static final String SERVICE_NAME = "muni.model.PersonService";
 
   // Static method descriptors that strictly reflect the proto.
+  private static volatile io.grpc.MethodDescriptor<muni.model.MuniService.ById,
+      muni.model.Model.Person> getGetMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "get",
+      requestType = muni.model.MuniService.ById.class,
+      responseType = muni.model.Model.Person.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<muni.model.MuniService.ById,
+      muni.model.Model.Person> getGetMethod() {
+    io.grpc.MethodDescriptor<muni.model.MuniService.ById, muni.model.Model.Person> getGetMethod;
+    if ((getGetMethod = PersonServiceGrpc.getGetMethod) == null) {
+      synchronized (PersonServiceGrpc.class) {
+        if ((getGetMethod = PersonServiceGrpc.getGetMethod) == null) {
+          PersonServiceGrpc.getGetMethod = getGetMethod =
+              io.grpc.MethodDescriptor.<muni.model.MuniService.ById, muni.model.Model.Person>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "get"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  muni.model.MuniService.ById.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  muni.model.Model.Person.getDefaultInstance()))
+              .setSchemaDescriptor(new PersonServiceMethodDescriptorSupplier("get"))
+              .build();
+        }
+      }
+    }
+    return getGetMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<muni.model.MuniService.CreatePersonReq,
       muni.model.Model.Person> getCreateMethod;
 
@@ -56,6 +87,37 @@ public final class PersonServiceGrpc {
       }
     }
     return getCreateMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.google.protobuf.Empty,
+      muni.model.MuniService.PersonList> getGetAllMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "getAll",
+      requestType = com.google.protobuf.Empty.class,
+      responseType = muni.model.MuniService.PersonList.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.google.protobuf.Empty,
+      muni.model.MuniService.PersonList> getGetAllMethod() {
+    io.grpc.MethodDescriptor<com.google.protobuf.Empty, muni.model.MuniService.PersonList> getGetAllMethod;
+    if ((getGetAllMethod = PersonServiceGrpc.getGetAllMethod) == null) {
+      synchronized (PersonServiceGrpc.class) {
+        if ((getGetAllMethod = PersonServiceGrpc.getGetAllMethod) == null) {
+          PersonServiceGrpc.getGetAllMethod = getGetAllMethod =
+              io.grpc.MethodDescriptor.<com.google.protobuf.Empty, muni.model.MuniService.PersonList>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getAll"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  muni.model.MuniService.PersonList.getDefaultInstance()))
+              .setSchemaDescriptor(new PersonServiceMethodDescriptorSupplier("getAll"))
+              .build();
+        }
+      }
+    }
+    return getGetAllMethod;
   }
 
   /**
@@ -107,17 +169,38 @@ public final class PersonServiceGrpc {
   public static abstract class PersonServiceImplBase implements io.grpc.BindableService {
 
     /**
-     * <pre>
-     * Creates a new shelf in the bookstore.
-     * </pre>
+     */
+    public void get(muni.model.MuniService.ById request,
+        io.grpc.stub.StreamObserver<muni.model.Model.Person> responseObserver) {
+      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+    }
+
+    /**
      */
     public void create(muni.model.MuniService.CreatePersonReq request,
         io.grpc.stub.StreamObserver<muni.model.Model.Person> responseObserver) {
       asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     *google.protobuf.Empty
+     * </pre>
+     */
+    public void getAll(com.google.protobuf.Empty request,
+        io.grpc.stub.StreamObserver<muni.model.MuniService.PersonList> responseObserver) {
+      asyncUnimplementedUnaryCall(getGetAllMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+          .addMethod(
+            getGetMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                muni.model.MuniService.ById,
+                muni.model.Model.Person>(
+                  this, METHODID_GET)))
           .addMethod(
             getCreateMethod(),
             asyncUnaryCall(
@@ -125,6 +208,13 @@ public final class PersonServiceGrpc {
                 muni.model.MuniService.CreatePersonReq,
                 muni.model.Model.Person>(
                   this, METHODID_CREATE)))
+          .addMethod(
+            getGetAllMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.google.protobuf.Empty,
+                muni.model.MuniService.PersonList>(
+                  this, METHODID_GET_ALL)))
           .build();
     }
   }
@@ -144,14 +234,30 @@ public final class PersonServiceGrpc {
     }
 
     /**
-     * <pre>
-     * Creates a new shelf in the bookstore.
-     * </pre>
+     */
+    public void get(muni.model.MuniService.ById request,
+        io.grpc.stub.StreamObserver<muni.model.Model.Person> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
      */
     public void create(muni.model.MuniService.CreatePersonReq request,
         io.grpc.stub.StreamObserver<muni.model.Model.Person> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     *google.protobuf.Empty
+     * </pre>
+     */
+    public void getAll(com.google.protobuf.Empty request,
+        io.grpc.stub.StreamObserver<muni.model.MuniService.PersonList> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getGetAllMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -170,13 +276,27 @@ public final class PersonServiceGrpc {
     }
 
     /**
-     * <pre>
-     * Creates a new shelf in the bookstore.
-     * </pre>
+     */
+    public muni.model.Model.Person get(muni.model.MuniService.ById request) {
+      return blockingUnaryCall(
+          getChannel(), getGetMethod(), getCallOptions(), request);
+    }
+
+    /**
      */
     public muni.model.Model.Person create(muni.model.MuniService.CreatePersonReq request) {
       return blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     *google.protobuf.Empty
+     * </pre>
+     */
+    public muni.model.MuniService.PersonList getAll(com.google.protobuf.Empty request) {
+      return blockingUnaryCall(
+          getChannel(), getGetAllMethod(), getCallOptions(), request);
     }
   }
 
@@ -195,18 +315,36 @@ public final class PersonServiceGrpc {
     }
 
     /**
-     * <pre>
-     * Creates a new shelf in the bookstore.
-     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<muni.model.Model.Person> get(
+        muni.model.MuniService.ById request) {
+      return futureUnaryCall(
+          getChannel().newCall(getGetMethod(), getCallOptions()), request);
+    }
+
+    /**
      */
     public com.google.common.util.concurrent.ListenableFuture<muni.model.Model.Person> create(
         muni.model.MuniService.CreatePersonReq request) {
       return futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     *google.protobuf.Empty
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<muni.model.MuniService.PersonList> getAll(
+        com.google.protobuf.Empty request) {
+      return futureUnaryCall(
+          getChannel().newCall(getGetAllMethod(), getCallOptions()), request);
+    }
   }
 
-  private static final int METHODID_CREATE = 0;
+  private static final int METHODID_GET = 0;
+  private static final int METHODID_CREATE = 1;
+  private static final int METHODID_GET_ALL = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -225,9 +363,17 @@ public final class PersonServiceGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_GET:
+          serviceImpl.get((muni.model.MuniService.ById) request,
+              (io.grpc.stub.StreamObserver<muni.model.Model.Person>) responseObserver);
+          break;
         case METHODID_CREATE:
           serviceImpl.create((muni.model.MuniService.CreatePersonReq) request,
               (io.grpc.stub.StreamObserver<muni.model.Model.Person>) responseObserver);
+          break;
+        case METHODID_GET_ALL:
+          serviceImpl.getAll((com.google.protobuf.Empty) request,
+              (io.grpc.stub.StreamObserver<muni.model.MuniService.PersonList>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -290,7 +436,9 @@ public final class PersonServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new PersonServiceFileDescriptorSupplier())
+              .addMethod(getGetMethod())
               .addMethod(getCreateMethod())
+              .addMethod(getGetAllMethod())
               .build();
         }
       }

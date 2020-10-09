@@ -10,57 +10,102 @@ package muni.model; //find out how to make it work with "muni.service"
 option java_generic_services = false; //default, prevents complex generic
 option java_multiple_files = false; //default behavior
 
-//Listed in the order of dependency
-message SearchPersonReq{
-  Person person =1;
-  google.protobuf.FieldMask create_mask = 2;
-}
-message SearchPersonRes{
-  repeated  Person persons =1;
-}
 
 message CreatePersonReq{
   Person person=1;
   google.protobuf.FieldMask create_mask=2;
 }
+
+message ById{
+  string id=1;
+}
 service PersonService{
-  // Creates a new shelf in the bookstore.
+
+  rpc get(ById) returns (Person){
+    option (google.api.http) = {//byId
+      get: "/mkapp/rest/v1/persons/{id}"
+      //body: "personById"
+    };
+  }
   rpc create(CreatePersonReq) returns (Person) {
     // Client example:
     //   curl -d '{"id":"99", "firstName": "Bat". "lastName": "Man"}' http://localhost:8080/mkapp/v1/persons/create
     option (google.api.http) = {
-      post: "/mkapp/v1/persons/create"
+      post: "/mkapp/rest/v1/persons"
       body: "*"
     };
-
 //    option(grpc.gateway.protoc_gen_swagger.options.openapiv2_operation) = {
 //      summary: "Add a person"
 //      description: "add a person to Golden Data"
 //      tags: "Person"
 //    };
   }
+  rpc getAll(google.protobuf.Empty) returns (PersonList){//google.protobuf.Empty
+    option (google.api.http) = {
+      get: "/mkapp/rest/v1/persons"
+    };
+  };
+
 }
+
+service CaseService{
+
+  rpc get(ById) returns (Case){
+    option (google.api.http) = {//byId
+      get: "/mkapp/rest/v1/case/{id}"
+      //body: "personById"
+    };
+  }
+  rpc create(Case) returns (Case){
+    option (google.api.http) = {//byId
+      post: "/mkapp/rest/v1/case"
+      body: "case"
+    };
+  }
+
+}
+
+
+
+message SearchRes{
+  string status =1;
+  int32 count =2;
+  ErrorInfo error=3;
+  //4-9  reserved.
+  oneof res {
+    PersonList personList = 10;
+    PostalAddressList postalAddressList = 11;
+  }
+}
+
+message PersonList{
+  repeated Person persons=1;
+}
+message PostalAddressList{
+    repeated PostalAddress addresses=1;
+}
+
+message SearchReqPerson{ //Search for a person who's
+  Person person = 1; //firstname/lastname - not for address
+  google.protobuf.FieldMask create_mask = 2;
+}
+message SearchReqPostalAddress{
+  PostalAddress postalAddress =1;
+  google.protobuf.FieldMask create_mask = 2;
+}
+
 
 service SearchService{
   // Returns a specific Person
   // Client example - returns person id=1:
 //   curl http://localhost:8080//mkapp/v1/persons/byId
-  rpc personById(SearchPersonReq) returns (SearchPersonRes){
-    option (google.api.http) = {//byId
-      post: "/mkapp/v1/persons/{person.id}}"
-      body: "person"
-    };
-  }
-  rpc personsSimilar(SearchPersonReq) returns (SearchPersonRes){
+
+  rpc personsLike(SearchReqPerson) returns (SearchRes){
      option (google.api.http) = {
-       post: "/mkapp/v1/persons/similar"
+       post: "/mkapp/rest/v1/search/persons"
        body: "person"
      };
   };
-  rpc personsAll(google.protobuf.Empty) returns (SearchPersonRes){//google.protobuf.Empty
-     option (google.api.http) = {
-       get: "/mkapp/v1/persons/all"
-     };
-  };
+
 
 }

@@ -7,19 +7,6 @@
   <artifactId>muni-api-protogen</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
-    <!--
-        Enable PROTO plugiin only for the duration of regenerate
-
-        !! !! Remember to add these annotation back to GENERATED classes!! !! !! !!
-
-        @JsonSerialize(using = SerializerGeneric.class)
-        @JsonDeserialize(using = DeserializeSearchRequest.class)
-        public  static final class SearchRequest extends
-
-        @JsonSerialize(using = SerializerGeneric.class)
-        public  static final class SearchResponse extends
-    -->
-
   <properties>
     <protoc.version>3.13.0</protoc.version>
     <protobuf.version>3.11.1</protobuf.version>
@@ -29,7 +16,6 @@
     <grpc.version>1.29.0</grpc.version>
 
     <compiler-plugin.version>3.8.0</compiler-plugin.version>
-
     <!-- Move these to parent? -->
     <java.version>11</java.version>
     <maven.compiler.source>${java.version}</maven.compiler.source>
@@ -58,6 +44,13 @@
       <version>${protobuf.version}</version>
       <scope>compile</scope>
     </dependency>
+
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter</artifactId>
+      <version>5.7.0</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 
   <build>
@@ -84,7 +77,7 @@
 <!--          <protocExecutable>C:/apps/google/protoc-3.13.0/bin/protoc.exe</protocExecutable>-->
           <pluginArtifact>io.grpc:protoc-gen-grpc-java:1.32.1:exe:${os.detected.classifier}</pluginArtifact>
           <protoSourceRoot>${basedir}/schema/proto</protoSourceRoot>
-          <outputDirectory>${basedir}/src/zgen/proto/java-new</outputDirectory>
+          <outputDirectory>${basedir}/src/zgen/proto/java</outputDirectory> <!-- Generate in java-new, build from java?-->
           <clearOutputDirectory>false</clearOutputDirectory>
 <!--          <includes>-->
 <!--            <include>**/*.proto</include>-->
@@ -97,6 +90,28 @@
               <goal>compile</goal>
               <goal>compile-custom</goal>
             </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>build-helper-maven-plugin</artifactId>
+        <version>3.0.0</version>
+        <executions>
+          <execution>
+            <id>add-source</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>add-source</goal>
+            </goals>
+            <configuration>
+              <sources>
+                <source>${basedir}/src/main/java</source>
+                <source>${basedir}/src/zgen/proto/java</source>
+              </sources>
+            </configuration>
           </execution>
         </executions>
       </plugin>

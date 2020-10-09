@@ -1,6 +1,5 @@
 syntax = "proto3";
 import "google/protobuf/timestamp.proto";
-import "google/protobuf/field_mask.proto";
 package muni.model;
 
 option java_outer_classname = "Model"; //muni.api.Model
@@ -35,6 +34,28 @@ message Person{
   google.protobuf.Timestamp updateTime = 2;
 }
 
+message Case{
+  string id = 3;
+  string status =4; //TODO  convert to enum
+  Person reportedByCustomer=5;
+  Person createdByEmployee=6;
+
+
+
+
+
+  //Output only
+  google.protobuf.Timestamp createTime = 1;
+  //Output only
+  google.protobuf.Timestamp updateTime = 2;
+}
+
+
+message Subsystem{
+  string subsystemId =1; //TODO avoid converting to enum, that would make api less generic?
+
+}
+
 message Organization {
   //Output only
   string id = 3;
@@ -65,3 +86,9 @@ message Email{ // Modeled separately to apply clean data rules
 }
 
 
+//https://developers.google.com/protocol-buffers/docs/proto3#any
+import "google/protobuf/any.proto";
+message ErrorInfo {
+  string message = 1;
+  repeated google.protobuf.Any details = 2;
+}

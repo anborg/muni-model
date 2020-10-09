@@ -5,3 +5,12 @@ wget https://raw.githubusercontent.com/googleapis/googleapis/master/google/api/a
 curl https://raw.githubusercontent.com/googleapis/googleapis/master/google/api/http.proto > google/api/http.proto
 
 python -m grpc_tools.protoc google/api/http.proto google/api/annotations.proto -I. --python_out=. --grpc_python_out=. your_proto.proto
+
+
+
+# To generate openapi file
+
+go get github.com/googleapis/gnostic/...
+go install github.com/googleapis/gnostic/apps/protoc-gen-openapi
+
+protoc muni-service.proto -I. --openapi_out=.
