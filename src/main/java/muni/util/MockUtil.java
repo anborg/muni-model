@@ -48,9 +48,9 @@ public class MockUtil {
 
     public static Model.ContactChannels buildContactChannels(){
         return Model.ContactChannels.newBuilder()
-                .setEmail(Model.Email.newBuilder().setValue("me@gmail.com").build())
-                .setPhone1(Model.Phone.newBuilder().setCountryCode(1).setNumber(123445678).setExt("xs234").build())
-                .setPhone2(Model.Phone.newBuilder().setCountryCode(1).setNumber(123445678).setExt("xs234").build())
+                .setEmail("me@gmail.com")
+                .setPhone1(Model.Phone.newBuilder().setCountryCode(1).setNumber("123445678").setExt("xs234").build())
+                .setPhone2(Model.Phone.newBuilder().setCountryCode(1).setNumber("123445678").setExt("xs234").build())
                 .setPostalAddress(buildAddress())
                 .build();
     }

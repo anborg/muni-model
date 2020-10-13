@@ -4,141 +4,135 @@
 package muni.model;
 
 public final class Model {
-  private Model() {}
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistryLite registry) {
+  private Model() {
   }
 
   public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
+          com.google.protobuf.ExtensionRegistryLite registry) {
   }
-  public interface PostalAddressOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:muni.model.PostalAddress)
-      com.google.protobuf.MessageOrBuilder {
+
+  public static void registerAllExtensions(
+          com.google.protobuf.ExtensionRegistry registry) {
+    registerAllExtensions(
+            (com.google.protobuf.ExtensionRegistryLite) registry);
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
+          internal_static_muni_model_Person_descriptor;
+  private static final
+  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internal_static_muni_model_Person_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+          internal_static_muni_model_PostalAddress_descriptor;
+  private static final
+  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internal_static_muni_model_PostalAddress_fieldAccessorTable;
+
+  public interface CaseOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:muni.model.Case)
+          com.google.protobuf.MessageOrBuilder {
 
     /**
      * <code>string id = 3;</code>
+     *
      * @return The id.
      */
     java.lang.String getId();
+
     /**
      * <code>string id = 3;</code>
+     *
      * @return The bytes for id.
      */
     com.google.protobuf.ByteString
-        getIdBytes();
-
-    /**
-     * <code>string streetNum = 4;</code>
-     * @return The streetNum.
-     */
-    java.lang.String getStreetNum();
-    /**
-     * <code>string streetNum = 4;</code>
-     * @return The bytes for streetNum.
-     */
-    com.google.protobuf.ByteString
-        getStreetNumBytes();
-
-    /**
-     * <code>string streetName = 5;</code>
-     * @return The streetName.
-     */
-    java.lang.String getStreetName();
-    /**
-     * <code>string streetName = 5;</code>
-     * @return The bytes for streetName.
-     */
-    com.google.protobuf.ByteString
-        getStreetNameBytes();
-
-    /**
-     * <code>string city = 6;</code>
-     * @return The city.
-     */
-    java.lang.String getCity();
-    /**
-     * <code>string city = 6;</code>
-     * @return The bytes for city.
-     */
-    com.google.protobuf.ByteString
-        getCityBytes();
-
-    /**
-     * <code>string province = 7;</code>
-     * @return The province.
-     */
-    java.lang.String getProvince();
-    /**
-     * <code>string province = 7;</code>
-     * @return The bytes for province.
-     */
-    com.google.protobuf.ByteString
-        getProvinceBytes();
-
-    /**
-     * <code>string country = 8;</code>
-     * @return The country.
-     */
-    java.lang.String getCountry();
-    /**
-     * <code>string country = 8;</code>
-     * @return The bytes for country.
-     */
-    com.google.protobuf.ByteString
-        getCountryBytes();
-
-    /**
-     * <code>string postalCode = 9;</code>
-     * @return The postalCode.
-     */
-    java.lang.String getPostalCode();
-    /**
-     * <code>string postalCode = 9;</code>
-     * @return The bytes for postalCode.
-     */
-    com.google.protobuf.ByteString
-        getPostalCodeBytes();
+    getIdBytes();
 
     /**
      * <pre>
-     *geo
+     * TODO  convert to enum
      * </pre>
      *
-     * <code>double lat = 10;</code>
-     * @return The lat.
+     * <code>string status = 4;</code>
+     *
+     * @return The status.
      */
-    double getLat();
-
-    /**
-     * <code>double lon = 11;</code>
-     * @return The lon.
-     */
-    double getLon();
+    java.lang.String getStatus();
 
     /**
      * <pre>
-     *Output only
+     * TODO  convert to enum
+     * </pre>
+     *
+     * <code>string status = 4;</code>
+     *
+     * @return The bytes for status.
+     */
+    com.google.protobuf.ByteString
+    getStatusBytes();
+
+    /**
+     * <code>.muni.model.Person reportedByCustomer = 5;</code>
+     *
+     * @return Whether the reportedByCustomer field is set.
+     */
+    boolean hasReportedByCustomer();
+
+    /**
+     * <code>.muni.model.Person reportedByCustomer = 5;</code>
+     *
+     * @return The reportedByCustomer.
+     */
+    muni.model.Model.Person getReportedByCustomer();
+
+    /**
+     * <code>.muni.model.Person reportedByCustomer = 5;</code>
+     */
+    muni.model.Model.PersonOrBuilder getReportedByCustomerOrBuilder();
+
+    /**
+     * <code>.muni.model.Person createdByEmployee = 6;</code>
+     *
+     * @return Whether the createdByEmployee field is set.
+     */
+    boolean hasCreatedByEmployee();
+
+    /**
+     * <code>.muni.model.Person createdByEmployee = 6;</code>
+     *
+     * @return The createdByEmployee.
+     */
+    muni.model.Model.Person getCreatedByEmployee();
+
+    /**
+     * <code>.muni.model.Person createdByEmployee = 6;</code>
+     */
+    muni.model.Model.PersonOrBuilder getCreatedByEmployeeOrBuilder();
+
+    /**
+     * <pre>
+     * Output only
      * </pre>
      *
      * <code>.google.protobuf.Timestamp createTime = 1;</code>
+     *
      * @return Whether the createTime field is set.
      */
     boolean hasCreateTime();
+
     /**
      * <pre>
-     *Output only
+     * Output only
      * </pre>
      *
      * <code>.google.protobuf.Timestamp createTime = 1;</code>
+     *
      * @return The createTime.
      */
     com.google.protobuf.Timestamp getCreateTime();
+
     /**
      * <pre>
-     *Output only
+     * Output only
      * </pre>
      *
      * <code>.google.protobuf.Timestamp createTime = 1;</code>
@@ -147,47 +141,2511 @@ public final class Model {
 
     /**
      * <pre>
-     *Output only
+     * Output only
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+     *
      * @return Whether the updateTime field is set.
      */
     boolean hasUpdateTime();
+
     /**
      * <pre>
-     *Output only
+     * Output only
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+     *
      * @return The updateTime.
      */
     com.google.protobuf.Timestamp getUpdateTime();
+
     /**
      * <pre>
-     *Output only
+     * Output only
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updateTime = 2;</code>
      */
     com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder();
   }
+
+  private static final com.google.protobuf.Descriptors.FileDescriptor
+          descriptor;
+
+  public interface SubsystemOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:muni.model.Subsystem)
+          com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * TODO avoid converting to enum, that would make api less generic?
+     * </pre>
+     *
+     * <code>string subsystemId = 1;</code>
+     *
+     * @return The subsystemId.
+     */
+    java.lang.String getSubsystemId();
+
+    /**
+     * <pre>
+     * TODO avoid converting to enum, that would make api less generic?
+     * </pre>
+     *
+     * <code>string subsystemId = 1;</code>
+     *
+     * @return The bytes for subsystemId.
+     */
+    com.google.protobuf.ByteString
+    getSubsystemIdBytes();
+  }
+
+  static {
+    java.lang.String[] descriptorData = {
+            "\n\020muni-model.proto\022\nmuni.model\032\037google/p" +
+                    "rotobuf/timestamp.proto\032\031google/protobuf" +
+                    "/any.proto\"\317\001\n\006Person\022\n\n\002id\030\003 \001(\t\022\021\n\tfir" +
+                    "stName\030\004 \001(\t\022\020\n\010lastName\030\005 \001(\t\0224\n\017contac" +
+                    "tChannels\030\010 \001(\0132\033.muni.model.ContactChan" +
+                    "nels\022.\n\ncreateTime\030\001 \001(\0132\032.google.protob" +
+                    "uf.Timestamp\022.\n\nupdateTime\030\002 \001(\0132\032.googl" +
+                    "e.protobuf.Timestamp\"\201\002\n\rPostalAddress\022\n" +
+                    "\n\002id\030\003 \001(\t\022\021\n\tstreetNum\030\004 \001(\t\022\022\n\nstreetN" +
+                    "ame\030\005 \001(\t\022\014\n\004city\030\006 \001(\t\022\020\n\010province\030\007 \001(" +
+                    "\t\022\017\n\007country\030\010 \001(\t\022\022\n\npostalCode\030\t \001(\t\022\013" +
+                    "\n\003lat\030\n \001(\001\022\013\n\003lon\030\013 \001(\001\022.\n\ncreateTime\030\001" +
+                    " \001(\0132\032.google.protobuf.Timestamp\022.\n\nupda" +
+                    "teTime\030\002 \001(\0132\032.google.protobuf.Timestamp" +
+                    "\"\341\001\n\004Case\022\n\n\002id\030\003 \001(\t\022\016\n\006status\030\004 \001(\t\022.\n" +
+                    "\022reportedByCustomer\030\005 \001(\0132\022.muni.model.P" +
+                    "erson\022-\n\021createdByEmployee\030\006 \001(\0132\022.muni." +
+                    "model.Person\022.\n\ncreateTime\030\001 \001(\0132\032.googl" +
+                    "e.protobuf.Timestamp\022.\n\nupdateTime\030\002 \001(\013" +
+                    "2\032.google.protobuf.Timestamp\" \n\tSubsyste" +
+                    "m\022\023\n\013subsystemId\030\001 \001(\t\"\317\001\n\014Organization\022" +
+                    "\n\n\002id\030\003 \001(\t\022\014\n\004name\030\004 \001(\t\0224\n\017contactChan" +
+                    "nels\030\005 \001(\0132\033.muni.model.ContactChannels\022" +
+                    "\017\n\007website\030\006 \001(\t\022.\n\ncreateTime\030\001 \001(\0132\032.g" +
+                    "oogle.protobuf.Timestamp\022.\n\nupdateTime\030\002" +
+                    " \001(\0132\032.google.protobuf.Timestamp\"\230\001\n\017Con" +
+                    "tactChannels\022!\n\006phone1\030\001 \001(\0132\021.muni.mode" +
+                    "l.Phone\022!\n\006phone2\030\002 \001(\0132\021.muni.model.Pho" +
+                    "ne\022\r\n\005email\030\003 \001(\t\0220\n\rpostalAddress\030\004 \001(\013" +
+                    "2\031.muni.model.PostalAddress\"9\n\005Phone\022\023\n\013" +
+                    "countryCode\030\001 \001(\005\022\016\n\006number\030\002 \001(\t\022\013\n\003ext" +
+                    "\030\003 \001(\t\"C\n\tErrorInfo\022\017\n\007message\030\001 \001(\t\022%\n\007" +
+                    "details\030\002 \003(\0132\024.google.protobuf.AnyB\014B\005M" +
+                    "odelP\000\210\001\000b\006proto3"
+    };
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
+            .internalBuildGeneratedFileFrom(descriptorData,
+                    new com.google.protobuf.Descriptors.FileDescriptor[]{
+                            com.google.protobuf.TimestampProto.getDescriptor(),
+                            com.google.protobuf.AnyProto.getDescriptor(),
+                    });
+    internal_static_muni_model_Person_descriptor =
+            getDescriptor().getMessageTypes().get(0);
+    internal_static_muni_model_Person_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_muni_model_Person_descriptor,
+            new java.lang.String[]{"Id", "FirstName", "LastName", "ContactChannels", "CreateTime", "UpdateTime",});
+    internal_static_muni_model_PostalAddress_descriptor =
+            getDescriptor().getMessageTypes().get(1);
+    internal_static_muni_model_PostalAddress_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_muni_model_PostalAddress_descriptor,
+            new java.lang.String[]{"Id", "StreetNum", "StreetName", "City", "Province", "Country", "PostalCode", "Lat", "Lon", "CreateTime", "UpdateTime",});
+    internal_static_muni_model_Case_descriptor =
+            getDescriptor().getMessageTypes().get(2);
+    internal_static_muni_model_Case_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_muni_model_Case_descriptor,
+            new java.lang.String[]{"Id", "Status", "ReportedByCustomer", "CreatedByEmployee", "CreateTime", "UpdateTime",});
+    internal_static_muni_model_Subsystem_descriptor =
+            getDescriptor().getMessageTypes().get(3);
+    internal_static_muni_model_Subsystem_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_muni_model_Subsystem_descriptor,
+            new java.lang.String[]{"SubsystemId",});
+    internal_static_muni_model_Organization_descriptor =
+            getDescriptor().getMessageTypes().get(4);
+    internal_static_muni_model_Organization_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_muni_model_Organization_descriptor,
+            new java.lang.String[]{"Id", "Name", "ContactChannels", "Website", "CreateTime", "UpdateTime",});
+    internal_static_muni_model_ContactChannels_descriptor =
+            getDescriptor().getMessageTypes().get(5);
+    internal_static_muni_model_ContactChannels_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_muni_model_ContactChannels_descriptor,
+            new java.lang.String[]{"Phone1", "Phone2", "Email", "PostalAddress",});
+    internal_static_muni_model_Phone_descriptor =
+            getDescriptor().getMessageTypes().get(6);
+    internal_static_muni_model_Phone_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_muni_model_Phone_descriptor,
+            new java.lang.String[]{"CountryCode", "Number", "Ext",});
+    internal_static_muni_model_ErrorInfo_descriptor =
+            getDescriptor().getMessageTypes().get(7);
+    internal_static_muni_model_ErrorInfo_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_muni_model_ErrorInfo_descriptor,
+            new java.lang.String[]{"Message", "Details",});
+    com.google.protobuf.TimestampProto.getDescriptor();
+    com.google.protobuf.AnyProto.getDescriptor();
+  }
+
+  public interface OrganizationOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:muni.model.Organization)
+          com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Output only
+     * </pre>
+     *
+     * <code>string id = 3;</code>
+     *
+     * @return The id.
+     */
+    java.lang.String getId();
+
+    /**
+     * <pre>
+     * Output only
+     * </pre>
+     *
+     * <code>string id = 3;</code>
+     *
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+    getIdBytes();
+
+    /**
+     * <code>string name = 4;</code>
+     *
+     * @return The name.
+     */
+    java.lang.String getName();
+
+    /**
+     * <code>string name = 4;</code>
+     *
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+    getNameBytes();
+
+    /**
+     * <code>.muni.model.ContactChannels contactChannels = 5;</code>
+     *
+     * @return Whether the contactChannels field is set.
+     */
+    boolean hasContactChannels();
+
+    /**
+     * <code>.muni.model.ContactChannels contactChannels = 5;</code>
+     *
+     * @return The contactChannels.
+     */
+    muni.model.Model.ContactChannels getContactChannels();
+
+    /**
+     * <code>.muni.model.ContactChannels contactChannels = 5;</code>
+     */
+    muni.model.Model.ContactChannelsOrBuilder getContactChannelsOrBuilder();
+
+    /**
+     * <code>string website = 6;</code>
+     *
+     * @return The website.
+     */
+    java.lang.String getWebsite();
+
+    /**
+     * <code>string website = 6;</code>
+     *
+     * @return The bytes for website.
+     */
+    com.google.protobuf.ByteString
+    getWebsiteBytes();
+
+    /**
+     * <pre>
+     * Output only
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp createTime = 1;</code>
+     *
+     * @return Whether the createTime field is set.
+     */
+    boolean hasCreateTime();
+
+    /**
+     * <pre>
+     * Output only
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp createTime = 1;</code>
+     *
+     * @return The createTime.
+     */
+    com.google.protobuf.Timestamp getCreateTime();
+
+    /**
+     * <pre>
+     * Output only
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp createTime = 1;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder();
+
+    /**
+     * <pre>
+     * Output only
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+     *
+     * @return Whether the updateTime field is set.
+     */
+    boolean hasUpdateTime();
+
+    /**
+     * <pre>
+     * Output only
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+     *
+     * @return The updateTime.
+     */
+    com.google.protobuf.Timestamp getUpdateTime();
+
+    /**
+     * <pre>
+     * Output only
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder();
+  }
+
+  public interface PersonOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:muni.model.Person)
+          com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Output only
+     * </pre>
+     *
+     * <code>string id = 3;</code>
+     *
+     * @return The id.
+     */
+    java.lang.String getId();
+
+    /**
+     * <pre>
+     * Output only
+     * </pre>
+     *
+     * <code>string id = 3;</code>
+     *
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+    getIdBytes();
+
+    /**
+     * <code>string firstName = 4;</code>
+     *
+     * @return The firstName.
+     */
+    java.lang.String getFirstName();
+
+    /**
+     * <code>string firstName = 4;</code>
+     *
+     * @return The bytes for firstName.
+     */
+    com.google.protobuf.ByteString
+    getFirstNameBytes();
+
+    /**
+     * <code>string lastName = 5;</code>
+     *
+     * @return The lastName.
+     */
+    java.lang.String getLastName();
+
+    /**
+     * <code>string lastName = 5;</code>
+     *
+     * @return The bytes for lastName.
+     */
+    com.google.protobuf.ByteString
+    getLastNameBytes();
+
+    /**
+     * <code>.muni.model.ContactChannels contactChannels = 8;</code>
+     *
+     * @return Whether the contactChannels field is set.
+     */
+    boolean hasContactChannels();
+
+    /**
+     * <code>.muni.model.ContactChannels contactChannels = 8;</code>
+     *
+     * @return The contactChannels.
+     */
+    muni.model.Model.ContactChannels getContactChannels();
+
+    /**
+     * <code>.muni.model.ContactChannels contactChannels = 8;</code>
+     */
+    muni.model.Model.ContactChannelsOrBuilder getContactChannelsOrBuilder();
+
+    /**
+     * <pre>
+     * Output only
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp createTime = 1;</code>
+     *
+     * @return Whether the createTime field is set.
+     */
+    boolean hasCreateTime();
+
+    /**
+     * <pre>
+     * Output only
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp createTime = 1;</code>
+     *
+     * @return The createTime.
+     */
+    com.google.protobuf.Timestamp getCreateTime();
+
+    /**
+     * <pre>
+     * Output only
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp createTime = 1;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder();
+
+    /**
+     * <pre>
+     * Output only
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+     *
+     * @return Whether the updateTime field is set.
+     */
+    boolean hasUpdateTime();
+
+    /**
+     * <pre>
+     * Output only
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+     *
+     * @return The updateTime.
+     */
+    com.google.protobuf.Timestamp getUpdateTime();
+
+    /**
+     * <pre>
+     * Output only
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder();
+  }
+
+  public interface PostalAddressOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:muni.model.PostalAddress)
+          com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string id = 3;</code>
+     *
+     * @return The id.
+     */
+    java.lang.String getId();
+
+    /**
+     * <code>string id = 3;</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+    getIdBytes();
+
+    /**
+     * <code>string streetNum = 4;</code>
+     * @return The streetNum.
+     */
+    java.lang.String getStreetNum();
+
+    /**
+     * <code>string streetNum = 4;</code>
+     * @return The bytes for streetNum.
+     */
+    com.google.protobuf.ByteString
+    getStreetNumBytes();
+
+    /**
+     * <code>string streetName = 5;</code>
+     * @return The streetName.
+     */
+    java.lang.String getStreetName();
+
+    /**
+     * <code>string streetName = 5;</code>
+     * @return The bytes for streetName.
+     */
+    com.google.protobuf.ByteString
+    getStreetNameBytes();
+
+    /**
+     * <code>string city = 6;</code>
+     * @return The city.
+     */
+    java.lang.String getCity();
+
+    /**
+     * <code>string city = 6;</code>
+     * @return The bytes for city.
+     */
+    com.google.protobuf.ByteString
+    getCityBytes();
+
+    /**
+     * <code>string province = 7;</code>
+     * @return The province.
+     */
+    java.lang.String getProvince();
+
+    /**
+     * <code>string province = 7;</code>
+     * @return The bytes for province.
+     */
+    com.google.protobuf.ByteString
+    getProvinceBytes();
+
+    /**
+     * <code>string country = 8;</code>
+     * @return The country.
+     */
+    java.lang.String getCountry();
+
+    /**
+     * <code>string country = 8;</code>
+     * @return The bytes for country.
+     */
+    com.google.protobuf.ByteString
+    getCountryBytes();
+
+    /**
+     * <code>string postalCode = 9;</code>
+     * @return The postalCode.
+     */
+    java.lang.String getPostalCode();
+
+    /**
+     * <code>string postalCode = 9;</code>
+     *
+     * @return The bytes for postalCode.
+     */
+    com.google.protobuf.ByteString
+    getPostalCodeBytes();
+
+    /**
+     * <pre>
+     * geo
+     * </pre>
+     *
+     * <code>double lat = 10;</code>
+     *
+     * @return The lat.
+     */
+    double getLat();
+
+    /**
+     * <code>double lon = 11;</code>
+     *
+     * @return The lon.
+     */
+    double getLon();
+
+    /**
+     * <pre>
+     * Output only
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp createTime = 1;</code>
+     *
+     * @return Whether the createTime field is set.
+     */
+    boolean hasCreateTime();
+
+    /**
+     * <pre>
+     * Output only
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp createTime = 1;</code>
+     *
+     * @return The createTime.
+     */
+    com.google.protobuf.Timestamp getCreateTime();
+
+    /**
+     * <pre>
+     * Output only
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp createTime = 1;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder();
+
+    /**
+     * <pre>
+     * Output only
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+     *
+     * @return Whether the updateTime field is set.
+     */
+    boolean hasUpdateTime();
+
+    /**
+     * <pre>
+     * Output only
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+     *
+     * @return The updateTime.
+     */
+    com.google.protobuf.Timestamp getUpdateTime();
+
+    /**
+     * <pre>
+     * Output only
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder();
+  }
+
+  public interface ContactChannelsOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:muni.model.ContactChannels)
+          com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.muni.model.Phone phone1 = 1;</code>
+     *
+     * @return Whether the phone1 field is set.
+     */
+    boolean hasPhone1();
+
+    /**
+     * <code>.muni.model.Phone phone1 = 1;</code>
+     *
+     * @return The phone1.
+     */
+    muni.model.Model.Phone getPhone1();
+
+    /**
+     * <code>.muni.model.Phone phone1 = 1;</code>
+     */
+    muni.model.Model.PhoneOrBuilder getPhone1OrBuilder();
+
+    /**
+     * <code>.muni.model.Phone phone2 = 2;</code>
+     *
+     * @return Whether the phone2 field is set.
+     */
+    boolean hasPhone2();
+
+    /**
+     * <code>.muni.model.Phone phone2 = 2;</code>
+     *
+     * @return The phone2.
+     */
+    muni.model.Model.Phone getPhone2();
+
+    /**
+     * <code>.muni.model.Phone phone2 = 2;</code>
+     */
+    muni.model.Model.PhoneOrBuilder getPhone2OrBuilder();
+
+    /**
+     * <code>string email = 3;</code>
+     *
+     * @return The email.
+     */
+    java.lang.String getEmail();
+
+    /**
+     * <code>string email = 3;</code>
+     *
+     * @return The bytes for email.
+     */
+    com.google.protobuf.ByteString
+    getEmailBytes();
+
+    /**
+     * <code>.muni.model.PostalAddress postalAddress = 4;</code>
+     *
+     * @return Whether the postalAddress field is set.
+     */
+    boolean hasPostalAddress();
+
+    /**
+     * <code>.muni.model.PostalAddress postalAddress = 4;</code>
+     *
+     * @return The postalAddress.
+     */
+    muni.model.Model.PostalAddress getPostalAddress();
+
+    /**
+     * <code>.muni.model.PostalAddress postalAddress = 4;</code>
+     */
+    muni.model.Model.PostalAddressOrBuilder getPostalAddressOrBuilder();
+  }
+
+  public interface PhoneOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:muni.model.Phone)
+          com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int32 countryCode = 1;</code>
+     *
+     * @return The countryCode.
+     */
+    int getCountryCode();
+
+    /**
+     * <code>string number = 2;</code>
+     *
+     * @return The number.
+     */
+    java.lang.String getNumber();
+
+    /**
+     * <code>string number = 2;</code>
+     *
+     * @return The bytes for number.
+     */
+    com.google.protobuf.ByteString
+    getNumberBytes();
+
+    /**
+     * <code>string ext = 3;</code>
+     *
+     * @return The ext.
+     */
+    java.lang.String getExt();
+
+    /**
+     * <code>string ext = 3;</code>
+     *
+     * @return The bytes for ext.
+     */
+    com.google.protobuf.ByteString
+    getExtBytes();
+  }
+
+  /**
+   * Protobuf type {@code muni.model.Person}
+   */
+  public static final class Person extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:muni.model.Person)
+          PersonOrBuilder {
+    private static final long serialVersionUID = 0L;
+    public static final int FIRSTNAME_FIELD_NUMBER = 4;
+    public static final int LASTNAME_FIELD_NUMBER = 5;
+    public static final int CONTACTCHANNELS_FIELD_NUMBER = 8;
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+
+    // @@protoc_insertion_point(class_scope:muni.model.Person)
+    private static final muni.model.Model.Person DEFAULT_INSTANCE;
+    private static final com.google.protobuf.Parser<Person>
+            PARSER = new com.google.protobuf.AbstractParser<Person>() {
+      @java.lang.Override
+      public Person parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Person(input, extensionRegistry);
+      }
+    };
+
+    static {
+      DEFAULT_INSTANCE = new muni.model.Model.Person();
+    }
+
+    public static final int ID_FIELD_NUMBER = 3;
+    private volatile java.lang.Object id_;
+
+    private volatile java.lang.Object firstName_;
+    private volatile java.lang.Object lastName_;
+    private muni.model.Model.ContactChannels contactChannels_;
+
+    // Use Person.newBuilder() to construct.
+    private Person(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+
+    private Person() {
+      id_ = "";
+      firstName_ = "";
+      lastName_ = "";
+    }
+
+    private Person(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+              com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (createTime_ != null) {
+                subBuilder = createTime_.toBuilder();
+              }
+              createTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(createTime_);
+                createTime_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (updateTime_ != null) {
+                subBuilder = updateTime_.toBuilder();
+              }
+              updateTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(updateTime_);
+                updateTime_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              firstName_ = s;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              lastName_ = s;
+              break;
+            }
+            case 66: {
+              muni.model.Model.ContactChannels.Builder subBuilder = null;
+              if (contactChannels_ != null) {
+                subBuilder = contactChannels_.toBuilder();
+              }
+              contactChannels_ = input.readMessage(muni.model.Model.ContactChannels.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(contactChannels_);
+                contactChannels_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                      input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+                e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+    getDescriptor() {
+      return muni.model.Model.internal_static_muni_model_Person_descriptor;
+    }
+
+    public static muni.model.Model.Person parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+
+    public static muni.model.Model.Person parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+
+    public static muni.model.Model.Person parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+
+    public static muni.model.Model.Person parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+
+    public static muni.model.Model.Person parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+
+    public static muni.model.Model.Person parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+
+    public static muni.model.Model.Person parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+    }
+
+    public static muni.model.Model.Person parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static final int CREATETIME_FIELD_NUMBER = 1;
+    private com.google.protobuf.Timestamp createTime_;
+
+    /**
+     * <pre>
+     * Output only
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp createTime = 1;</code>
+     *
+     * @return Whether the createTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasCreateTime() {
+      return createTime_ != null;
+    }
+
+    /**
+     * <pre>
+     * Output only
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp createTime = 1;</code>
+     *
+     * @return The createTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getCreateTime() {
+      return createTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createTime_;
+    }
+
+    /**
+     * <pre>
+     * Output only
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp createTime = 1;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder() {
+      return getCreateTime();
+    }
+
+    public static final int UPDATETIME_FIELD_NUMBER = 2;
+    private com.google.protobuf.Timestamp updateTime_;
+
+    /**
+     * <pre>
+     * Output only
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+     *
+     * @return Whether the updateTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasUpdateTime() {
+      return updateTime_ != null;
+    }
+
+    /**
+     * <pre>
+     * Output only
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+     *
+     * @return The updateTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getUpdateTime() {
+      return updateTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updateTime_;
+    }
+
+    /**
+     * <pre>
+     * Output only
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder() {
+      return getUpdateTime();
+    }
+
+    private byte memoizedIsInitialized = -1;
+
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public static muni.model.Model.Person parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static muni.model.Model.Person parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static muni.model.Model.Person parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+    }
+
+    public static muni.model.Model.Person parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder(muni.model.Model.Person prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+
+    public static muni.model.Model.Person getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    public static com.google.protobuf.Parser<Person> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+      return new Person();
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    internalGetFieldAccessorTable() {
+      return muni.model.Model.internal_static_muni_model_Person_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                      muni.model.Model.Person.class, muni.model.Model.Person.Builder.class);
+    }
+
+    /**
+     * <pre>
+     * Output only
+     * </pre>
+     *
+     * <code>string id = 3;</code>
+     *
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+
+    /**
+     * <pre>
+     * Output only
+     * </pre>
+     *
+     * <code>string id = 3;</code>
+     *
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+    getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
+                        (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    /**
+     * <code>string firstName = 4;</code>
+     *
+     * @return The firstName.
+     */
+    @java.lang.Override
+    public java.lang.String getFirstName() {
+      java.lang.Object ref = firstName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        firstName_ = s;
+        return s;
+      }
+    }
+
+    /**
+     * <code>string firstName = 4;</code>
+     *
+     * @return The bytes for firstName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+    getFirstNameBytes() {
+      java.lang.Object ref = firstName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
+                        (java.lang.String) ref);
+        firstName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    /**
+     * <code>string lastName = 5;</code>
+     *
+     * @return The lastName.
+     */
+    @java.lang.Override
+    public java.lang.String getLastName() {
+      java.lang.Object ref = lastName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        lastName_ = s;
+        return s;
+      }
+    }
+
+    /**
+     * <code>string lastName = 5;</code>
+     *
+     * @return The bytes for lastName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+    getLastNameBytes() {
+      java.lang.Object ref = lastName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
+                        (java.lang.String) ref);
+        lastName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    /**
+     * <code>.muni.model.ContactChannels contactChannels = 8;</code>
+     *
+     * @return Whether the contactChannels field is set.
+     */
+    @java.lang.Override
+    public boolean hasContactChannels() {
+      return contactChannels_ != null;
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() {
+      return newBuilder();
+    }
+
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+
+    /**
+     * <code>.muni.model.ContactChannels contactChannels = 8;</code>
+     *
+     * @return The contactChannels.
+     */
+    @java.lang.Override
+    public muni.model.Model.ContactChannels getContactChannels() {
+      return contactChannels_ == null ? muni.model.Model.ContactChannels.getDefaultInstance() : contactChannels_;
+    }
+
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+
+    /**
+     * <code>.muni.model.ContactChannels contactChannels = 8;</code>
+     */
+    @java.lang.Override
+    public muni.model.Model.ContactChannelsOrBuilder getContactChannelsOrBuilder() {
+      return getContactChannels();
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+            throws java.io.IOException {
+      if (createTime_ != null) {
+        output.writeMessage(1, getCreateTime());
+      }
+      if (updateTime_ != null) {
+        output.writeMessage(2, getUpdateTime());
+      }
+      if (!getIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, id_);
+      }
+      if (!getFirstNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, firstName_);
+      }
+      if (!getLastNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, lastName_);
+      }
+      if (contactChannels_ != null) {
+        output.writeMessage(8, getContactChannels());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (createTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+                .computeMessageSize(1, getCreateTime());
+      }
+      if (updateTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+                .computeMessageSize(2, getUpdateTime());
+      }
+      if (!getIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, id_);
+      }
+      if (!getFirstNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, firstName_);
+      }
+      if (!getLastNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, lastName_);
+      }
+      if (contactChannels_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+                .computeMessageSize(8, getContactChannels());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+        return true;
+      }
+      if (!(obj instanceof muni.model.Model.Person)) {
+        return super.equals(obj);
+      }
+      muni.model.Model.Person other = (muni.model.Model.Person) obj;
+
+      if (!getId()
+              .equals(other.getId())) return false;
+      if (!getFirstName()
+              .equals(other.getFirstName())) return false;
+      if (!getLastName()
+              .equals(other.getLastName())) return false;
+      if (hasContactChannels() != other.hasContactChannels()) return false;
+      if (hasContactChannels()) {
+        if (!getContactChannels()
+                .equals(other.getContactChannels())) return false;
+      }
+      if (hasCreateTime() != other.hasCreateTime()) return false;
+      if (hasCreateTime()) {
+        if (!getCreateTime()
+                .equals(other.getCreateTime())) return false;
+      }
+      if (hasUpdateTime() != other.hasUpdateTime()) return false;
+      if (hasUpdateTime()) {
+        if (!getUpdateTime()
+                .equals(other.getUpdateTime())) return false;
+      }
+      return unknownFields.equals(other.unknownFields);
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + FIRSTNAME_FIELD_NUMBER;
+      hash = (53 * hash) + getFirstName().hashCode();
+      hash = (37 * hash) + LASTNAME_FIELD_NUMBER;
+      hash = (53 * hash) + getLastName().hashCode();
+      if (hasContactChannels()) {
+        hash = (37 * hash) + CONTACTCHANNELS_FIELD_NUMBER;
+        hash = (53 * hash) + getContactChannels().hashCode();
+      }
+      if (hasCreateTime()) {
+        hash = (37 * hash) + CREATETIME_FIELD_NUMBER;
+        hash = (53 * hash) + getCreateTime().hashCode();
+      }
+      if (hasUpdateTime()) {
+        hash = (37 * hash) + UPDATETIME_FIELD_NUMBER;
+        hash = (53 * hash) + getUpdateTime().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Person> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public muni.model.Model.Person getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+    /**
+     * Protobuf type {@code muni.model.Person}
+     */
+    public static final class Builder extends
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:muni.model.Person)
+            muni.model.Model.PersonOrBuilder {
+      private java.lang.Object firstName_ = "";
+      private java.lang.Object lastName_ = "";
+      private muni.model.Model.ContactChannels contactChannels_;
+
+      private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+              muni.model.Model.ContactChannels, muni.model.Model.ContactChannels.Builder, muni.model.Model.ContactChannelsOrBuilder> contactChannelsBuilder_;
+
+      // Construct using muni.model.Model.Person.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+        return muni.model.Model.internal_static_muni_model_Person_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internalGetFieldAccessorTable() {
+        return muni.model.Model.internal_static_muni_model_Person_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                        muni.model.Model.Person.class, muni.model.Model.Person.Builder.class);
+      }
+
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = "";
+
+        firstName_ = "";
+
+        lastName_ = "";
+
+        if (contactChannelsBuilder_ == null) {
+          contactChannels_ = null;
+        } else {
+          contactChannels_ = null;
+          contactChannelsBuilder_ = null;
+        }
+        if (createTimeBuilder_ == null) {
+          createTime_ = null;
+        } else {
+          createTime_ = null;
+          createTimeBuilder_ = null;
+        }
+        if (updateTimeBuilder_ == null) {
+          updateTime_ = null;
+        } else {
+          updateTime_ = null;
+          updateTimeBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+
+      @java.lang.Override
+      public Builder setField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+        return super.setField(field, value);
+      }
+
+      @java.lang.Override
+      public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+
+      @java.lang.Override
+      public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+
+      @java.lang.Override
+      public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+
+      @java.lang.Override
+      public Builder addRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+      getDescriptorForType() {
+        return muni.model.Model.internal_static_muni_model_Person_descriptor;
+      }
+
+      @java.lang.Override
+      public muni.model.Model.Person getDefaultInstanceForType() {
+        return muni.model.Model.Person.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public muni.model.Model.Person build() {
+        muni.model.Model.Person result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      private java.lang.Object id_ = "";
+
+      @java.lang.Override
+      public muni.model.Model.Person buildPartial() {
+        muni.model.Model.Person result = new muni.model.Model.Person(this);
+        result.id_ = id_;
+        result.firstName_ = firstName_;
+        result.lastName_ = lastName_;
+        if (contactChannelsBuilder_ == null) {
+          result.contactChannels_ = contactChannels_;
+        } else {
+          result.contactChannels_ = contactChannelsBuilder_.build();
+        }
+        if (createTimeBuilder_ == null) {
+          result.createTime_ = createTime_;
+        } else {
+          result.createTime_ = createTimeBuilder_.build();
+        }
+        if (updateTimeBuilder_ == null) {
+          result.updateTime_ = updateTime_;
+        } else {
+          result.updateTime_ = updateTimeBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof muni.model.Model.Person) {
+          return mergeFrom((muni.model.Model.Person) other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(muni.model.Model.Person other) {
+        if (other == muni.model.Model.Person.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        if (!other.getFirstName().isEmpty()) {
+          firstName_ = other.firstName_;
+          onChanged();
+        }
+        if (!other.getLastName().isEmpty()) {
+          lastName_ = other.lastName_;
+          onChanged();
+        }
+        if (other.hasContactChannels()) {
+          mergeContactChannels(other.getContactChannels());
+        }
+        if (other.hasCreateTime()) {
+          mergeCreateTime(other.getCreateTime());
+        }
+        if (other.hasUpdateTime()) {
+          mergeUpdateTime(other.getUpdateTime());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+        muni.model.Model.Person parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (muni.model.Model.Person) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Output only
+       * </pre>
+       *
+       * <code>string id = 3;</code>
+       *
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+
+      /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
+       * <code>string id = 3;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+              java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Output only
+       * </pre>
+       *
+       * <code>string id = 3;</code>
+       *
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+      getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                          (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
+       * <code>string id = 3;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+              com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Output only
+       * </pre>
+       *
+       * <code>string id = 3;</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>string firstName = 4;</code>
+       *
+       * @return The firstName.
+       */
+      public java.lang.String getFirstName() {
+        java.lang.Object ref = firstName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          firstName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+
+      /**
+       * <code>string firstName = 4;</code>
+       *
+       * @param value The firstName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFirstName(
+              java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        firstName_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>string firstName = 4;</code>
+       *
+       * @return The bytes for firstName.
+       */
+      public com.google.protobuf.ByteString
+      getFirstNameBytes() {
+        java.lang.Object ref = firstName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                          (java.lang.String) ref);
+          firstName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      /**
+       * <code>string firstName = 4;</code>
+       *
+       * @param value The bytes for firstName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFirstNameBytes(
+              com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        firstName_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>string firstName = 4;</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearFirstName() {
+
+        firstName_ = getDefaultInstance().getFirstName();
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>string lastName = 5;</code>
+       *
+       * @return The lastName.
+       */
+      public java.lang.String getLastName() {
+        java.lang.Object ref = lastName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          lastName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+
+      /**
+       * <code>string lastName = 5;</code>
+       *
+       * @param value The lastName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLastName(
+              java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        lastName_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>string lastName = 5;</code>
+       *
+       * @return The bytes for lastName.
+       */
+      public com.google.protobuf.ByteString
+      getLastNameBytes() {
+        java.lang.Object ref = lastName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                          (java.lang.String) ref);
+          lastName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      /**
+       * <code>string lastName = 5;</code>
+       *
+       * @param value The bytes for lastName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLastNameBytes(
+              com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        lastName_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>string lastName = 5;</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearLastName() {
+
+        lastName_ = getDefaultInstance().getLastName();
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>.muni.model.ContactChannels contactChannels = 8;</code>
+       *
+       * @return Whether the contactChannels field is set.
+       */
+      public boolean hasContactChannels() {
+        return contactChannelsBuilder_ != null || contactChannels_ != null;
+      }
+
+      /**
+       * <code>.muni.model.ContactChannels contactChannels = 8;</code>
+       *
+       * @return The contactChannels.
+       */
+      public muni.model.Model.ContactChannels getContactChannels() {
+        if (contactChannelsBuilder_ == null) {
+          return contactChannels_ == null ? muni.model.Model.ContactChannels.getDefaultInstance() : contactChannels_;
+        } else {
+          return contactChannelsBuilder_.getMessage();
+        }
+      }
+
+      /**
+       * <code>.muni.model.ContactChannels contactChannels = 8;</code>
+       */
+      public Builder setContactChannels(muni.model.Model.ContactChannels value) {
+        if (contactChannelsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          contactChannels_ = value;
+          onChanged();
+        } else {
+          contactChannelsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+
+      /**
+       * <code>.muni.model.ContactChannels contactChannels = 8;</code>
+       */
+      public Builder setContactChannels(
+              muni.model.Model.ContactChannels.Builder builderForValue) {
+        if (contactChannelsBuilder_ == null) {
+          contactChannels_ = builderForValue.build();
+          onChanged();
+        } else {
+          contactChannelsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+
+      /**
+       * <code>.muni.model.ContactChannels contactChannels = 8;</code>
+       */
+      public Builder mergeContactChannels(muni.model.Model.ContactChannels value) {
+        if (contactChannelsBuilder_ == null) {
+          if (contactChannels_ != null) {
+            contactChannels_ =
+                    muni.model.Model.ContactChannels.newBuilder(contactChannels_).mergeFrom(value).buildPartial();
+          } else {
+            contactChannels_ = value;
+          }
+          onChanged();
+        } else {
+          contactChannelsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+
+      /**
+       * <code>.muni.model.ContactChannels contactChannels = 8;</code>
+       */
+      public Builder clearContactChannels() {
+        if (contactChannelsBuilder_ == null) {
+          contactChannels_ = null;
+          onChanged();
+        } else {
+          contactChannels_ = null;
+          contactChannelsBuilder_ = null;
+        }
+
+        return this;
+      }
+
+      /**
+       * <code>.muni.model.ContactChannels contactChannels = 8;</code>
+       */
+      public muni.model.Model.ContactChannels.Builder getContactChannelsBuilder() {
+
+        onChanged();
+        return getContactChannelsFieldBuilder().getBuilder();
+      }
+
+      /**
+       * <code>.muni.model.ContactChannels contactChannels = 8;</code>
+       */
+      public muni.model.Model.ContactChannelsOrBuilder getContactChannelsOrBuilder() {
+        if (contactChannelsBuilder_ != null) {
+          return contactChannelsBuilder_.getMessageOrBuilder();
+        } else {
+          return contactChannels_ == null ?
+                  muni.model.Model.ContactChannels.getDefaultInstance() : contactChannels_;
+        }
+      }
+
+      /**
+       * <code>.muni.model.ContactChannels contactChannels = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+              muni.model.Model.ContactChannels, muni.model.Model.ContactChannels.Builder, muni.model.Model.ContactChannelsOrBuilder>
+      getContactChannelsFieldBuilder() {
+        if (contactChannelsBuilder_ == null) {
+          contactChannelsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                  muni.model.Model.ContactChannels, muni.model.Model.ContactChannels.Builder, muni.model.Model.ContactChannelsOrBuilder>(
+                  getContactChannels(),
+                  getParentForChildren(),
+                  isClean());
+          contactChannels_ = null;
+        }
+        return contactChannelsBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp createTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createTimeBuilder_;
+
+      /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp createTime = 1;</code>
+       * @return Whether the createTime field is set.
+       */
+      public boolean hasCreateTime() {
+        return createTimeBuilder_ != null || createTime_ != null;
+      }
+
+      /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp createTime = 1;</code>
+       * @return The createTime.
+       */
+      public com.google.protobuf.Timestamp getCreateTime() {
+        if (createTimeBuilder_ == null) {
+          return createTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createTime_;
+        } else {
+          return createTimeBuilder_.getMessage();
+        }
+      }
+
+      /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp createTime = 1;</code>
+       */
+      public Builder setCreateTime(com.google.protobuf.Timestamp value) {
+        if (createTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          createTime_ = value;
+          onChanged();
+        } else {
+          createTimeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+
+      /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp createTime = 1;</code>
+       */
+      public Builder setCreateTime(
+              com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (createTimeBuilder_ == null) {
+          createTime_ = builderForValue.build();
+          onChanged();
+        } else {
+          createTimeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+
+      /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp createTime = 1;</code>
+       */
+      public Builder mergeCreateTime(com.google.protobuf.Timestamp value) {
+        if (createTimeBuilder_ == null) {
+          if (createTime_ != null) {
+            createTime_ =
+                    com.google.protobuf.Timestamp.newBuilder(createTime_).mergeFrom(value).buildPartial();
+          } else {
+            createTime_ = value;
+          }
+          onChanged();
+        } else {
+          createTimeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+
+      /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp createTime = 1;</code>
+       */
+      public Builder clearCreateTime() {
+        if (createTimeBuilder_ == null) {
+          createTime_ = null;
+          onChanged();
+        } else {
+          createTime_ = null;
+          createTimeBuilder_ = null;
+        }
+
+        return this;
+      }
+
+      /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp createTime = 1;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getCreateTimeBuilder() {
+
+        onChanged();
+        return getCreateTimeFieldBuilder().getBuilder();
+      }
+
+      /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp createTime = 1;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder() {
+        if (createTimeBuilder_ != null) {
+          return createTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return createTime_ == null ?
+                  com.google.protobuf.Timestamp.getDefaultInstance() : createTime_;
+        }
+      }
+
+      /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp createTime = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>
+      getCreateTimeFieldBuilder() {
+        if (createTimeBuilder_ == null) {
+          createTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                  com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getCreateTime(),
+                  getParentForChildren(),
+                  isClean());
+          createTime_ = null;
+        }
+        return createTimeBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp updateTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updateTimeBuilder_;
+
+      /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+       * @return Whether the updateTime field is set.
+       */
+      public boolean hasUpdateTime() {
+        return updateTimeBuilder_ != null || updateTime_ != null;
+      }
+
+      /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+       * @return The updateTime.
+       */
+      public com.google.protobuf.Timestamp getUpdateTime() {
+        if (updateTimeBuilder_ == null) {
+          return updateTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updateTime_;
+        } else {
+          return updateTimeBuilder_.getMessage();
+        }
+      }
+
+      /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+       */
+      public Builder setUpdateTime(com.google.protobuf.Timestamp value) {
+        if (updateTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          updateTime_ = value;
+          onChanged();
+        } else {
+          updateTimeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+
+      /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+       */
+      public Builder setUpdateTime(
+              com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (updateTimeBuilder_ == null) {
+          updateTime_ = builderForValue.build();
+          onChanged();
+        } else {
+          updateTimeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Output only
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+       */
+      public Builder mergeUpdateTime(com.google.protobuf.Timestamp value) {
+        if (updateTimeBuilder_ == null) {
+          if (updateTime_ != null) {
+            updateTime_ =
+                    com.google.protobuf.Timestamp.newBuilder(updateTime_).mergeFrom(value).buildPartial();
+          } else {
+            updateTime_ = value;
+          }
+          onChanged();
+        } else {
+          updateTimeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Output only
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+       */
+      public Builder clearUpdateTime() {
+        if (updateTimeBuilder_ == null) {
+          updateTime_ = null;
+          onChanged();
+        } else {
+          updateTime_ = null;
+          updateTimeBuilder_ = null;
+        }
+
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Output only
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getUpdateTimeBuilder() {
+
+        onChanged();
+        return getUpdateTimeFieldBuilder().getBuilder();
+      }
+
+      /**
+       * <pre>
+       * Output only
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder() {
+        if (updateTimeBuilder_ != null) {
+          return updateTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return updateTime_ == null ?
+                  com.google.protobuf.Timestamp.getDefaultInstance() : updateTime_;
+        }
+      }
+
+      /**
+       * <pre>
+       * Output only
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>
+      getUpdateTimeFieldBuilder() {
+        if (updateTimeBuilder_ == null) {
+          updateTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                  com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getUpdateTime(),
+                  getParentForChildren(),
+                  isClean());
+          updateTime_ = null;
+        }
+        return updateTimeBuilder_;
+      }
+
+      @java.lang.Override
+      public final Builder setUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:muni.model.Person)
+    }
+
+  }
+
+  public interface ErrorInfoOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:muni.model.ErrorInfo)
+          com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string message = 1;</code>
+     *
+     * @return The message.
+     */
+    java.lang.String getMessage();
+
+    /**
+     * <code>string message = 1;</code>
+     *
+     * @return The bytes for message.
+     */
+    com.google.protobuf.ByteString
+    getMessageBytes();
+
+    /**
+     * <code>repeated .google.protobuf.Any details = 2;</code>
+     */
+    java.util.List<com.google.protobuf.Any>
+    getDetailsList();
+
+    /**
+     * <code>repeated .google.protobuf.Any details = 2;</code>
+     */
+    com.google.protobuf.Any getDetails(int index);
+
+    /**
+     * <code>repeated .google.protobuf.Any details = 2;</code>
+     */
+    int getDetailsCount();
+
+    /**
+     * <code>repeated .google.protobuf.Any details = 2;</code>
+     */
+    java.util.List<? extends com.google.protobuf.AnyOrBuilder>
+    getDetailsOrBuilderList();
+
+    /**
+     * <code>repeated .google.protobuf.Any details = 2;</code>
+     */
+    com.google.protobuf.AnyOrBuilder getDetailsOrBuilder(
+            int index);
+  }
+
   /**
    * <pre>
-   *Listed in the order of dependency
+   * Listed in the order of dependency
    * </pre>
-   *
+   * <p>
    * Protobuf type {@code muni.model.PostalAddress}
    */
   public static final class PostalAddress extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:muni.model.PostalAddress)
-      PostalAddressOrBuilder {
-  private static final long serialVersionUID = 0L;
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:muni.model.PostalAddress)
+          PostalAddressOrBuilder {
+    private static final long serialVersionUID = 0L;
+    public static final int STREETNUM_FIELD_NUMBER = 4;
+    public static final int STREETNAME_FIELD_NUMBER = 5;
+    public static final int CITY_FIELD_NUMBER = 6;
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+
+    public static final int PROVINCE_FIELD_NUMBER = 7;
+    public static final int COUNTRY_FIELD_NUMBER = 8;
+    public static final int POSTALCODE_FIELD_NUMBER = 9;
+
+    public static final int ID_FIELD_NUMBER = 3;
+    private volatile java.lang.Object id_;
+
+    /**
+     * <code>string id = 3;</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+
+    /**
+     * <code>string id = 3;</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+    getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
+                        (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LAT_FIELD_NUMBER = 10;
+    public static final int LON_FIELD_NUMBER = 11;
+    // @@protoc_insertion_point(class_scope:muni.model.PostalAddress)
+    private static final muni.model.Model.PostalAddress DEFAULT_INSTANCE;
+    private static final com.google.protobuf.Parser<PostalAddress>
+            PARSER = new com.google.protobuf.AbstractParser<PostalAddress>() {
+      @java.lang.Override
+      public PostalAddress parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PostalAddress(input, extensionRegistry);
+      }
+    };
+
+    static {
+      DEFAULT_INSTANCE = new muni.model.Model.PostalAddress();
+    }
+
+    private volatile java.lang.Object streetNum_;
+    private volatile java.lang.Object streetName_;
+    private volatile java.lang.Object city_;
+    private volatile java.lang.Object province_;
+    private volatile java.lang.Object country_;
+    private volatile java.lang.Object postalCode_;
+    private double lat_;
+    private double lon_;
+
     // Use PostalAddress.newBuilder() to construct.
     private PostalAddress(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
+
     private PostalAddress() {
       id_ = "";
       streetNum_ = "";
@@ -198,28 +2656,16 @@ public final class Model {
       postalCode_ = "";
     }
 
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new PostalAddress();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     private PostalAddress(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+              com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -308,7 +2754,7 @@ public final class Model {
             }
             default: {
               if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
+                      input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -319,319 +2765,106 @@ public final class Model {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
+                e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
+
     public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
+    getDescriptor() {
       return muni.model.Model.internal_static_muni_model_PostalAddress_descriptor;
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return muni.model.Model.internal_static_muni_model_PostalAddress_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              muni.model.Model.PostalAddress.class, muni.model.Model.PostalAddress.Builder.class);
+    public static muni.model.Model.PostalAddress parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
     }
 
-    public static final int ID_FIELD_NUMBER = 3;
-    private volatile java.lang.Object id_;
-    /**
-     * <code>string id = 3;</code>
-     * @return The id.
-     */
-    @java.lang.Override
-    public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        id_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string id = 3;</code>
-     * @return The bytes for id.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public static muni.model.Model.PostalAddress parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
     }
 
-    public static final int STREETNUM_FIELD_NUMBER = 4;
-    private volatile java.lang.Object streetNum_;
-    /**
-     * <code>string streetNum = 4;</code>
-     * @return The streetNum.
-     */
-    @java.lang.Override
-    public java.lang.String getStreetNum() {
-      java.lang.Object ref = streetNum_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        streetNum_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string streetNum = 4;</code>
-     * @return The bytes for streetNum.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getStreetNumBytes() {
-      java.lang.Object ref = streetNum_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        streetNum_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public static muni.model.Model.PostalAddress parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
     }
 
-    public static final int STREETNAME_FIELD_NUMBER = 5;
-    private volatile java.lang.Object streetName_;
-    /**
-     * <code>string streetName = 5;</code>
-     * @return The streetName.
-     */
-    @java.lang.Override
-    public java.lang.String getStreetName() {
-      java.lang.Object ref = streetName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        streetName_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string streetName = 5;</code>
-     * @return The bytes for streetName.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getStreetNameBytes() {
-      java.lang.Object ref = streetName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        streetName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public static muni.model.Model.PostalAddress parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
     }
 
-    public static final int CITY_FIELD_NUMBER = 6;
-    private volatile java.lang.Object city_;
-    /**
-     * <code>string city = 6;</code>
-     * @return The city.
-     */
-    @java.lang.Override
-    public java.lang.String getCity() {
-      java.lang.Object ref = city_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        city_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string city = 6;</code>
-     * @return The bytes for city.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getCityBytes() {
-      java.lang.Object ref = city_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        city_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public static muni.model.Model.PostalAddress parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
     }
 
-    public static final int PROVINCE_FIELD_NUMBER = 7;
-    private volatile java.lang.Object province_;
-    /**
-     * <code>string province = 7;</code>
-     * @return The province.
-     */
-    @java.lang.Override
-    public java.lang.String getProvince() {
-      java.lang.Object ref = province_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        province_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string province = 7;</code>
-     * @return The bytes for province.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getProvinceBytes() {
-      java.lang.Object ref = province_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        province_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public static muni.model.Model.PostalAddress parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
     }
 
-    public static final int COUNTRY_FIELD_NUMBER = 8;
-    private volatile java.lang.Object country_;
-    /**
-     * <code>string country = 8;</code>
-     * @return The country.
-     */
-    @java.lang.Override
-    public java.lang.String getCountry() {
-      java.lang.Object ref = country_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        country_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string country = 8;</code>
-     * @return The bytes for country.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getCountryBytes() {
-      java.lang.Object ref = country_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        country_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public static muni.model.Model.PostalAddress parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
     }
 
-    public static final int POSTALCODE_FIELD_NUMBER = 9;
-    private volatile java.lang.Object postalCode_;
-    /**
-     * <code>string postalCode = 9;</code>
-     * @return The postalCode.
-     */
-    @java.lang.Override
-    public java.lang.String getPostalCode() {
-      java.lang.Object ref = postalCode_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        postalCode_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string postalCode = 9;</code>
-     * @return The bytes for postalCode.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getPostalCodeBytes() {
-      java.lang.Object ref = postalCode_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        postalCode_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public static muni.model.Model.PostalAddress parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static final int LAT_FIELD_NUMBER = 10;
-    private double lat_;
-    /**
-     * <pre>
-     *geo
-     * </pre>
-     *
-     * <code>double lat = 10;</code>
-     * @return The lat.
-     */
-    @java.lang.Override
-    public double getLat() {
-      return lat_;
+    public static muni.model.Model.PostalAddress parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static final int LON_FIELD_NUMBER = 11;
-    private double lon_;
-    /**
-     * <code>double lon = 11;</code>
-     * @return The lon.
-     */
-    @java.lang.Override
-    public double getLon() {
-      return lon_;
+    public static muni.model.Model.PostalAddress parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static muni.model.Model.PostalAddress parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+    }
+
+    public static muni.model.Model.PostalAddress parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder(muni.model.Model.PostalAddress prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
 
     public static final int CREATETIME_FIELD_NUMBER = 1;
     private com.google.protobuf.Timestamp createTime_;
+
     /**
      * <pre>
      *Output only
@@ -644,21 +2877,24 @@ public final class Model {
     public boolean hasCreateTime() {
       return createTime_ != null;
     }
+
     /**
      * <pre>
-     *Output only
+     * Output only
      * </pre>
      *
      * <code>.google.protobuf.Timestamp createTime = 1;</code>
+     *
      * @return The createTime.
      */
     @java.lang.Override
     public com.google.protobuf.Timestamp getCreateTime() {
       return createTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createTime_;
     }
+
     /**
      * <pre>
-     *Output only
+     * Output only
      * </pre>
      *
      * <code>.google.protobuf.Timestamp createTime = 1;</code>
@@ -670,6 +2906,7 @@ public final class Model {
 
     public static final int UPDATETIME_FIELD_NUMBER = 2;
     private com.google.protobuf.Timestamp updateTime_;
+
     /**
      * <pre>
      *Output only
@@ -682,21 +2919,24 @@ public final class Model {
     public boolean hasUpdateTime() {
       return updateTime_ != null;
     }
+
     /**
      * <pre>
-     *Output only
+     * Output only
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+     *
      * @return The updateTime.
      */
     @java.lang.Override
     public com.google.protobuf.Timestamp getUpdateTime() {
       return updateTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updateTime_;
     }
+
     /**
      * <pre>
-     *Output only
+     * Output only
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updateTime = 2;</code>
@@ -707,6 +2947,7 @@ public final class Model {
     }
 
     private byte memoizedIsInitialized = -1;
+
     @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -717,9 +2958,312 @@ public final class Model {
       return true;
     }
 
+    public static muni.model.Model.PostalAddress getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    public static com.google.protobuf.Parser<PostalAddress> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+      return new PostalAddress();
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    internalGetFieldAccessorTable() {
+      return muni.model.Model.internal_static_muni_model_PostalAddress_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                      muni.model.Model.PostalAddress.class, muni.model.Model.PostalAddress.Builder.class);
+    }
+
+    /**
+     * <code>string streetNum = 4;</code>
+     *
+     * @return The streetNum.
+     */
+    @java.lang.Override
+    public java.lang.String getStreetNum() {
+      java.lang.Object ref = streetNum_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        streetNum_ = s;
+        return s;
+      }
+    }
+
+    /**
+     * <code>string streetNum = 4;</code>
+     *
+     * @return The bytes for streetNum.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+    getStreetNumBytes() {
+      java.lang.Object ref = streetNum_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
+                        (java.lang.String) ref);
+        streetNum_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    /**
+     * <code>string streetName = 5;</code>
+     *
+     * @return The streetName.
+     */
+    @java.lang.Override
+    public java.lang.String getStreetName() {
+      java.lang.Object ref = streetName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        streetName_ = s;
+        return s;
+      }
+    }
+
+    /**
+     * <code>string streetName = 5;</code>
+     *
+     * @return The bytes for streetName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+    getStreetNameBytes() {
+      java.lang.Object ref = streetName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
+                        (java.lang.String) ref);
+        streetName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    /**
+     * <code>string city = 6;</code>
+     *
+     * @return The city.
+     */
+    @java.lang.Override
+    public java.lang.String getCity() {
+      java.lang.Object ref = city_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        city_ = s;
+        return s;
+      }
+    }
+
+    /**
+     * <code>string city = 6;</code>
+     *
+     * @return The bytes for city.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+    getCityBytes() {
+      java.lang.Object ref = city_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
+                        (java.lang.String) ref);
+        city_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    /**
+     * <code>string province = 7;</code>
+     *
+     * @return The province.
+     */
+    @java.lang.Override
+    public java.lang.String getProvince() {
+      java.lang.Object ref = province_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        province_ = s;
+        return s;
+      }
+    }
+
+    /**
+     * <code>string province = 7;</code>
+     *
+     * @return The bytes for province.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+    getProvinceBytes() {
+      java.lang.Object ref = province_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
+                        (java.lang.String) ref);
+        province_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    /**
+     * <code>string country = 8;</code>
+     *
+     * @return The country.
+     */
+    @java.lang.Override
+    public java.lang.String getCountry() {
+      java.lang.Object ref = country_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        country_ = s;
+        return s;
+      }
+    }
+
+    /**
+     * <code>string country = 8;</code>
+     *
+     * @return The bytes for country.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+    getCountryBytes() {
+      java.lang.Object ref = country_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
+                        (java.lang.String) ref);
+        country_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    /**
+     * <code>string postalCode = 9;</code>
+     *
+     * @return The postalCode.
+     */
+    @java.lang.Override
+    public java.lang.String getPostalCode() {
+      java.lang.Object ref = postalCode_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        postalCode_ = s;
+        return s;
+      }
+    }
+
+    /**
+     * <code>string postalCode = 9;</code>
+     *
+     * @return The bytes for postalCode.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+    getPostalCodeBytes() {
+      java.lang.Object ref = postalCode_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
+                        (java.lang.String) ref);
+        postalCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() {
+      return newBuilder();
+    }
+
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+
+    /**
+     * <pre>
+     * geo
+     * </pre>
+     *
+     * <code>double lat = 10;</code>
+     *
+     * @return The lat.
+     */
+    @java.lang.Override
+    public double getLat() {
+      return lat_;
+    }
+
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+
+    /**
+     * <code>double lon = 11;</code>
+     *
+     * @return The lon.
+     */
+    @java.lang.Override
+    public double getLon() {
+      return lon_;
+    }
+
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
+            throws java.io.IOException {
       if (createTime_ != null) {
         output.writeMessage(1, getCreateTime());
       }
@@ -764,11 +3308,11 @@ public final class Model {
       size = 0;
       if (createTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getCreateTime());
+                .computeMessageSize(1, getCreateTime());
       }
       if (updateTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getUpdateTime());
+                .computeMessageSize(2, getUpdateTime());
       }
       if (!getIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, id_);
@@ -793,11 +3337,11 @@ public final class Model {
       }
       if (lat_ != 0D) {
         size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(10, lat_);
+                .computeDoubleSize(10, lat_);
       }
       if (lon_ != 0D) {
         size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(11, lon_);
+                .computeDoubleSize(11, lon_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -807,7 +3351,7 @@ public final class Model {
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-       return true;
+        return true;
       }
       if (!(obj instanceof muni.model.Model.PostalAddress)) {
         return super.equals(obj);
@@ -815,37 +3359,36 @@ public final class Model {
       muni.model.Model.PostalAddress other = (muni.model.Model.PostalAddress) obj;
 
       if (!getId()
-          .equals(other.getId())) return false;
+              .equals(other.getId())) return false;
       if (!getStreetNum()
-          .equals(other.getStreetNum())) return false;
+              .equals(other.getStreetNum())) return false;
       if (!getStreetName()
-          .equals(other.getStreetName())) return false;
+              .equals(other.getStreetName())) return false;
       if (!getCity()
-          .equals(other.getCity())) return false;
+              .equals(other.getCity())) return false;
       if (!getProvince()
-          .equals(other.getProvince())) return false;
+              .equals(other.getProvince())) return false;
       if (!getCountry()
-          .equals(other.getCountry())) return false;
+              .equals(other.getCountry())) return false;
       if (!getPostalCode()
-          .equals(other.getPostalCode())) return false;
+              .equals(other.getPostalCode())) return false;
       if (java.lang.Double.doubleToLongBits(getLat())
-          != java.lang.Double.doubleToLongBits(
+              != java.lang.Double.doubleToLongBits(
               other.getLat())) return false;
       if (java.lang.Double.doubleToLongBits(getLon())
-          != java.lang.Double.doubleToLongBits(
+              != java.lang.Double.doubleToLongBits(
               other.getLon())) return false;
       if (hasCreateTime() != other.hasCreateTime()) return false;
       if (hasCreateTime()) {
         if (!getCreateTime()
-            .equals(other.getCreateTime())) return false;
+                .equals(other.getCreateTime())) return false;
       }
       if (hasUpdateTime() != other.hasUpdateTime()) return false;
       if (hasUpdateTime()) {
         if (!getUpdateTime()
-            .equals(other.getUpdateTime())) return false;
+                .equals(other.getUpdateTime())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      return unknownFields.equals(other.unknownFields);
     }
 
     @java.lang.Override
@@ -871,10 +3414,10 @@ public final class Model {
       hash = (53 * hash) + getPostalCode().hashCode();
       hash = (37 * hash) + LAT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getLat()));
+              java.lang.Double.doubleToLongBits(getLat()));
       hash = (37 * hash) + LON_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getLon()));
+              java.lang.Double.doubleToLongBits(getLon()));
       if (hasCreateTime()) {
         hash = (37 * hash) + CREATETIME_FIELD_NUMBER;
         hash = (53 * hash) + getCreateTime().hashCode();
@@ -888,118 +3431,85 @@ public final class Model {
       return hash;
     }
 
-    public static muni.model.Model.PostalAddress parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static muni.model.Model.PostalAddress parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static muni.model.Model.PostalAddress parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static muni.model.Model.PostalAddress parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static muni.model.Model.PostalAddress parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static muni.model.Model.PostalAddress parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static muni.model.Model.PostalAddress parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static muni.model.Model.PostalAddress parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static muni.model.Model.PostalAddress parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static muni.model.Model.PostalAddress parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static muni.model.Model.PostalAddress parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static muni.model.Model.PostalAddress parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+    @java.lang.Override
+    public com.google.protobuf.Parser<PostalAddress> getParserForType() {
+      return PARSER;
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(muni.model.Model.PostalAddress prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+    public muni.model.Model.PostalAddress getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
-     *Listed in the order of dependency
+     * Listed in the order of dependency
      * </pre>
-     *
+     * <p>
      * Protobuf type {@code muni.model.PostalAddress}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:muni.model.PostalAddress)
-        muni.model.Model.PostalAddressOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return muni.model.Model.internal_static_muni_model_PostalAddress_descriptor;
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:muni.model.PostalAddress)
+            muni.model.Model.PostalAddressOrBuilder {
+      private java.lang.Object streetNum_ = "";
+      private java.lang.Object streetName_ = "";
+      private java.lang.Object city_ = "";
+
+      private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+
+      private java.lang.Object province_ = "";
+      private java.lang.Object country_ = "";
+      private java.lang.Object postalCode_ = "";
+      private double lat_;
+      private double lon_;
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
       }
 
       @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return muni.model.Model.internal_static_muni_model_PostalAddress_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                muni.model.Model.PostalAddress.class, muni.model.Model.PostalAddress.Builder.class);
+      public Builder setField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+        return super.setField(field, value);
+      }
+
+      @java.lang.Override
+      public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+
+      @java.lang.Override
+      public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+
+      @java.lang.Override
+      public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+
+      @java.lang.Override
+      public Builder addRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+        return super.addRepeatedField(field, value);
       }
 
       // Construct using muni.model.Model.PostalAddress.newBuilder()
@@ -1007,16 +3517,110 @@ public final class Model {
         maybeForceBuilderInitialization();
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
+      public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+        return muni.model.Model.internal_static_muni_model_PostalAddress_descriptor;
       }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internalGetFieldAccessorTable() {
+        return muni.model.Model.internal_static_muni_model_PostalAddress_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                        muni.model.Model.PostalAddress.class, muni.model.Model.PostalAddress.Builder.class);
+      }
+
+      private java.lang.Object id_ = "";
+
+      /**
+       * <code>string id = 3;</code>
+       *
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
         }
       }
+
+      /**
+       * <code>string id = 3;</code>
+       *
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+      getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                          (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      /**
+       * <code>string id = 3;</code>
+       *
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+              java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>string id = 3;</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>string id = 3;</code>
+       *
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+              com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -1055,7 +3659,7 @@ public final class Model {
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
+      getDescriptorForType() {
         return muni.model.Model.internal_static_muni_model_PostalAddress_descriptor;
       }
 
@@ -1100,41 +3704,9 @@ public final class Model {
       }
 
       @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof muni.model.Model.PostalAddress) {
-          return mergeFrom((muni.model.Model.PostalAddress)other);
+          return mergeFrom((muni.model.Model.PostalAddress) other);
         } else {
           super.mergeFrom(other);
           return this;
@@ -1189,15 +3761,10 @@ public final class Model {
       }
 
       @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
         muni.model.Model.PostalAddress parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
@@ -1212,92 +3779,16 @@ public final class Model {
         return this;
       }
 
-      private java.lang.Object id_ = "";
-      /**
-       * <code>string id = 3;</code>
-       * @return The id.
-       */
-      public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          id_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string id = 3;</code>
-       * @return The bytes for id.
-       */
-      public com.google.protobuf.ByteString
-          getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string id = 3;</code>
-       * @param value The id to set.
-       * @return This builder for chaining.
-       */
-      public Builder setId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        id_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string id = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearId() {
-        
-        id_ = getDefaultInstance().getId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string id = 3;</code>
-       * @param value The bytes for id to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        id_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object streetNum_ = "";
       /**
        * <code>string streetNum = 4;</code>
+       *
        * @return The streetNum.
        */
       public java.lang.String getStreetNum() {
         java.lang.Object ref = streetNum_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+                  (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           streetNum_ = s;
           return s;
@@ -1305,75 +3796,81 @@ public final class Model {
           return (java.lang.String) ref;
         }
       }
+
       /**
        * <code>string streetNum = 4;</code>
+       *
+       * @param value The streetNum to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStreetNum(
+              java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        streetNum_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>string streetNum = 4;</code>
+       *
        * @return The bytes for streetNum.
        */
       public com.google.protobuf.ByteString
-          getStreetNumBytes() {
+      getStreetNumBytes() {
         java.lang.Object ref = streetNum_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                          (java.lang.String) ref);
           streetNum_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
-      /**
-       * <code>string streetNum = 4;</code>
-       * @param value The streetNum to set.
-       * @return This builder for chaining.
-       */
-      public Builder setStreetNum(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        streetNum_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string streetNum = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearStreetNum() {
-        
-        streetNum_ = getDefaultInstance().getStreetNum();
-        onChanged();
-        return this;
-      }
+
       /**
        * <code>string streetNum = 4;</code>
        * @param value The bytes for streetNum to set.
        * @return This builder for chaining.
        */
       public Builder setStreetNumBytes(
-          com.google.protobuf.ByteString value) {
+              com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         streetNum_ = value;
         onChanged();
         return this;
       }
 
-      private java.lang.Object streetName_ = "";
+      /**
+       * <code>string streetNum = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStreetNum() {
+
+        streetNum_ = getDefaultInstance().getStreetNum();
+        onChanged();
+        return this;
+      }
+
       /**
        * <code>string streetName = 5;</code>
+       *
        * @return The streetName.
        */
       public java.lang.String getStreetName() {
         java.lang.Object ref = streetName_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+                  (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           streetName_ = s;
           return s;
@@ -1381,75 +3878,83 @@ public final class Model {
           return (java.lang.String) ref;
         }
       }
+
       /**
        * <code>string streetName = 5;</code>
+       *
+       * @param value The streetName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStreetName(
+              java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        streetName_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>string streetName = 5;</code>
+       *
        * @return The bytes for streetName.
        */
       public com.google.protobuf.ByteString
-          getStreetNameBytes() {
+      getStreetNameBytes() {
         java.lang.Object ref = streetName_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                          (java.lang.String) ref);
           streetName_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
+
       /**
        * <code>string streetName = 5;</code>
-       * @param value The streetName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setStreetName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        streetName_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string streetName = 5;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearStreetName() {
-        
-        streetName_ = getDefaultInstance().getStreetName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string streetName = 5;</code>
+       *
        * @param value The bytes for streetName to set.
        * @return This builder for chaining.
        */
       public Builder setStreetNameBytes(
-          com.google.protobuf.ByteString value) {
+              com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         streetName_ = value;
         onChanged();
         return this;
       }
 
-      private java.lang.Object city_ = "";
+      /**
+       * <code>string streetName = 5;</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearStreetName() {
+
+        streetName_ = getDefaultInstance().getStreetName();
+        onChanged();
+        return this;
+      }
+
       /**
        * <code>string city = 6;</code>
+       *
        * @return The city.
        */
       public java.lang.String getCity() {
         java.lang.Object ref = city_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+                  (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           city_ = s;
           return s;
@@ -1457,75 +3962,82 @@ public final class Model {
           return (java.lang.String) ref;
         }
       }
+
       /**
        * <code>string city = 6;</code>
+       *
+       * @param value The city to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCity(
+              java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        city_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>string city = 6;</code>
+       *
        * @return The bytes for city.
        */
       public com.google.protobuf.ByteString
-          getCityBytes() {
+      getCityBytes() {
         java.lang.Object ref = city_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                          (java.lang.String) ref);
           city_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
-      /**
-       * <code>string city = 6;</code>
-       * @param value The city to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCity(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        city_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string city = 6;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCity() {
-        
-        city_ = getDefaultInstance().getCity();
-        onChanged();
-        return this;
-      }
+
       /**
        * <code>string city = 6;</code>
        * @param value The bytes for city to set.
        * @return This builder for chaining.
        */
       public Builder setCityBytes(
-          com.google.protobuf.ByteString value) {
+              com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         city_ = value;
         onChanged();
         return this;
       }
 
-      private java.lang.Object province_ = "";
+      /**
+       * <code>string city = 6;</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearCity() {
+
+        city_ = getDefaultInstance().getCity();
+        onChanged();
+        return this;
+      }
+
       /**
        * <code>string province = 7;</code>
+       *
        * @return The province.
        */
       public java.lang.String getProvince() {
         java.lang.Object ref = province_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+                  (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           province_ = s;
           return s;
@@ -1533,75 +4045,81 @@ public final class Model {
           return (java.lang.String) ref;
         }
       }
-      /**
-       * <code>string province = 7;</code>
-       * @return The bytes for province.
-       */
-      public com.google.protobuf.ByteString
-          getProvinceBytes() {
-        java.lang.Object ref = province_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          province_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
+
       /**
        * <code>string province = 7;</code>
        * @param value The province to set.
        * @return This builder for chaining.
        */
       public Builder setProvince(
-          java.lang.String value) {
+              java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         province_ = value;
         onChanged();
         return this;
       }
+
       /**
        * <code>string province = 7;</code>
-       * @return This builder for chaining.
+       *
+       * @return The bytes for province.
        */
-      public Builder clearProvince() {
-        
-        province_ = getDefaultInstance().getProvince();
-        onChanged();
-        return this;
+      public com.google.protobuf.ByteString
+      getProvinceBytes() {
+        java.lang.Object ref = province_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                          (java.lang.String) ref);
+          province_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
       }
+
       /**
        * <code>string province = 7;</code>
        * @param value The bytes for province to set.
        * @return This builder for chaining.
        */
       public Builder setProvinceBytes(
-          com.google.protobuf.ByteString value) {
+              com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         province_ = value;
         onChanged();
         return this;
       }
 
-      private java.lang.Object country_ = "";
+      /**
+       * <code>string province = 7;</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearProvince() {
+
+        province_ = getDefaultInstance().getProvince();
+        onChanged();
+        return this;
+      }
+
       /**
        * <code>string country = 8;</code>
+       *
        * @return The country.
        */
       public java.lang.String getCountry() {
         java.lang.Object ref = country_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+                  (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           country_ = s;
           return s;
@@ -1609,66 +4127,71 @@ public final class Model {
           return (java.lang.String) ref;
         }
       }
+
       /**
        * <code>string country = 8;</code>
+       *
+       * @param value The country to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCountry(
+              java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        country_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>string country = 8;</code>
+       *
        * @return The bytes for country.
        */
       public com.google.protobuf.ByteString
-          getCountryBytes() {
+      getCountryBytes() {
         java.lang.Object ref = country_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                          (java.lang.String) ref);
           country_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
-      /**
-       * <code>string country = 8;</code>
-       * @param value The country to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCountry(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        country_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string country = 8;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCountry() {
-        
-        country_ = getDefaultInstance().getCountry();
-        onChanged();
-        return this;
-      }
+
       /**
        * <code>string country = 8;</code>
        * @param value The bytes for country to set.
        * @return This builder for chaining.
        */
       public Builder setCountryBytes(
-          com.google.protobuf.ByteString value) {
+              com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         country_ = value;
         onChanged();
         return this;
       }
 
-      private java.lang.Object postalCode_ = "";
+      /**
+       * <code>string country = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCountry() {
+
+        country_ = getDefaultInstance().getCountry();
+        onChanged();
+        return this;
+      }
+
       /**
        * <code>string postalCode = 9;</code>
        * @return The postalCode.
@@ -1677,7 +4200,7 @@ public final class Model {
         java.lang.Object ref = postalCode_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+                  (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           postalCode_ = s;
           return s;
@@ -1685,66 +4208,69 @@ public final class Model {
           return (java.lang.String) ref;
         }
       }
-      /**
-       * <code>string postalCode = 9;</code>
-       * @return The bytes for postalCode.
-       */
-      public com.google.protobuf.ByteString
-          getPostalCodeBytes() {
-        java.lang.Object ref = postalCode_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          postalCode_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
+
       /**
        * <code>string postalCode = 9;</code>
        * @param value The postalCode to set.
        * @return This builder for chaining.
        */
       public Builder setPostalCode(
-          java.lang.String value) {
+              java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         postalCode_ = value;
         onChanged();
         return this;
       }
+
       /**
        * <code>string postalCode = 9;</code>
-       * @return This builder for chaining.
+       * @return The bytes for postalCode.
        */
-      public Builder clearPostalCode() {
-        
-        postalCode_ = getDefaultInstance().getPostalCode();
-        onChanged();
-        return this;
+      public com.google.protobuf.ByteString
+      getPostalCodeBytes() {
+        java.lang.Object ref = postalCode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                          (java.lang.String) ref);
+          postalCode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
       }
+
       /**
        * <code>string postalCode = 9;</code>
        * @param value The bytes for postalCode to set.
        * @return This builder for chaining.
        */
       public Builder setPostalCodeBytes(
-          com.google.protobuf.ByteString value) {
+              com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         postalCode_ = value;
         onChanged();
         return this;
       }
 
-      private double lat_ ;
+      /**
+       * <code>string postalCode = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPostalCode() {
+
+        postalCode_ = getDefaultInstance().getPostalCode();
+        onChanged();
+        return this;
+      }
+
       /**
        * <pre>
        *geo
@@ -1757,6 +4283,7 @@ public final class Model {
       public double getLat() {
         return lat_;
       }
+
       /**
        * <pre>
        *geo
@@ -1767,11 +4294,12 @@ public final class Model {
        * @return This builder for chaining.
        */
       public Builder setLat(double value) {
-        
+
         lat_ = value;
         onChanged();
         return this;
       }
+
       /**
        * <pre>
        *geo
@@ -1781,38 +4309,40 @@ public final class Model {
        * @return This builder for chaining.
        */
       public Builder clearLat() {
-        
+
         lat_ = 0D;
         onChanged();
         return this;
       }
 
-      private double lon_ ;
       /**
        * <code>double lon = 11;</code>
+       *
        * @return The lon.
        */
       @java.lang.Override
       public double getLon() {
         return lon_;
       }
+
       /**
        * <code>double lon = 11;</code>
        * @param value The lon to set.
        * @return This builder for chaining.
        */
       public Builder setLon(double value) {
-        
+
         lon_ = value;
         onChanged();
         return this;
       }
+
       /**
        * <code>double lon = 11;</code>
        * @return This builder for chaining.
        */
       public Builder clearLon() {
-        
+
         lon_ = 0D;
         onChanged();
         return this;
@@ -1820,7 +4350,8 @@ public final class Model {
 
       private com.google.protobuf.Timestamp createTime_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createTimeBuilder_;
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createTimeBuilder_;
+
       /**
        * <pre>
        *Output only
@@ -1832,6 +4363,7 @@ public final class Model {
       public boolean hasCreateTime() {
         return createTimeBuilder_ != null || createTime_ != null;
       }
+
       /**
        * <pre>
        *Output only
@@ -1847,6 +4379,7 @@ public final class Model {
           return createTimeBuilder_.getMessage();
         }
       }
+
       /**
        * <pre>
        *Output only
@@ -1867,6 +4400,7 @@ public final class Model {
 
         return this;
       }
+
       /**
        * <pre>
        *Output only
@@ -1875,7 +4409,7 @@ public final class Model {
        * <code>.google.protobuf.Timestamp createTime = 1;</code>
        */
       public Builder setCreateTime(
-          com.google.protobuf.Timestamp.Builder builderForValue) {
+              com.google.protobuf.Timestamp.Builder builderForValue) {
         if (createTimeBuilder_ == null) {
           createTime_ = builderForValue.build();
           onChanged();
@@ -1885,6 +4419,7 @@ public final class Model {
 
         return this;
       }
+
       /**
        * <pre>
        *Output only
@@ -1896,7 +4431,7 @@ public final class Model {
         if (createTimeBuilder_ == null) {
           if (createTime_ != null) {
             createTime_ =
-              com.google.protobuf.Timestamp.newBuilder(createTime_).mergeFrom(value).buildPartial();
+                    com.google.protobuf.Timestamp.newBuilder(createTime_).mergeFrom(value).buildPartial();
           } else {
             createTime_ = value;
           }
@@ -1907,6 +4442,7 @@ public final class Model {
 
         return this;
       }
+
       /**
        * <pre>
        *Output only
@@ -1925,6 +4461,7 @@ public final class Model {
 
         return this;
       }
+
       /**
        * <pre>
        *Output only
@@ -1933,10 +4470,11 @@ public final class Model {
        * <code>.google.protobuf.Timestamp createTime = 1;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreateTimeBuilder() {
-        
+
         onChanged();
         return getCreateTimeFieldBuilder().getBuilder();
       }
+
       /**
        * <pre>
        *Output only
@@ -1949,9 +4487,10 @@ public final class Model {
           return createTimeBuilder_.getMessageOrBuilder();
         } else {
           return createTime_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : createTime_;
+                  com.google.protobuf.Timestamp.getDefaultInstance() : createTime_;
         }
       }
+
       /**
        * <pre>
        *Output only
@@ -1960,11 +4499,11 @@ public final class Model {
        * <code>.google.protobuf.Timestamp createTime = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-          getCreateTimeFieldBuilder() {
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>
+      getCreateTimeFieldBuilder() {
         if (createTimeBuilder_ == null) {
           createTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
                   getCreateTime(),
                   getParentForChildren(),
                   isClean());
@@ -1975,7 +4514,8 @@ public final class Model {
 
       private com.google.protobuf.Timestamp updateTime_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updateTimeBuilder_;
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updateTimeBuilder_;
+
       /**
        * <pre>
        *Output only
@@ -1987,6 +4527,7 @@ public final class Model {
       public boolean hasUpdateTime() {
         return updateTimeBuilder_ != null || updateTime_ != null;
       }
+
       /**
        * <pre>
        *Output only
@@ -2002,6 +4543,7 @@ public final class Model {
           return updateTimeBuilder_.getMessage();
         }
       }
+
       /**
        * <pre>
        *Output only
@@ -2022,6 +4564,7 @@ public final class Model {
 
         return this;
       }
+
       /**
        * <pre>
        *Output only
@@ -2030,7 +4573,7 @@ public final class Model {
        * <code>.google.protobuf.Timestamp updateTime = 2;</code>
        */
       public Builder setUpdateTime(
-          com.google.protobuf.Timestamp.Builder builderForValue) {
+              com.google.protobuf.Timestamp.Builder builderForValue) {
         if (updateTimeBuilder_ == null) {
           updateTime_ = builderForValue.build();
           onChanged();
@@ -2040,6 +4583,7 @@ public final class Model {
 
         return this;
       }
+
       /**
        * <pre>
        *Output only
@@ -2051,7 +4595,7 @@ public final class Model {
         if (updateTimeBuilder_ == null) {
           if (updateTime_ != null) {
             updateTime_ =
-              com.google.protobuf.Timestamp.newBuilder(updateTime_).mergeFrom(value).buildPartial();
+                    com.google.protobuf.Timestamp.newBuilder(updateTime_).mergeFrom(value).buildPartial();
           } else {
             updateTime_ = value;
           }
@@ -2062,6 +4606,7 @@ public final class Model {
 
         return this;
       }
+
       /**
        * <pre>
        *Output only
@@ -2080,6 +4625,7 @@ public final class Model {
 
         return this;
       }
+
       /**
        * <pre>
        *Output only
@@ -2088,10 +4634,11 @@ public final class Model {
        * <code>.google.protobuf.Timestamp updateTime = 2;</code>
        */
       public com.google.protobuf.Timestamp.Builder getUpdateTimeBuilder() {
-        
+
         onChanged();
         return getUpdateTimeFieldBuilder().getBuilder();
       }
+
       /**
        * <pre>
        *Output only
@@ -2104,9 +4651,10 @@ public final class Model {
           return updateTimeBuilder_.getMessageOrBuilder();
         } else {
           return updateTime_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : updateTime_;
+                  com.google.protobuf.Timestamp.getDefaultInstance() : updateTime_;
         }
       }
+
       /**
        * <pre>
        *Output only
@@ -2115,11 +4663,11 @@ public final class Model {
        * <code>.google.protobuf.Timestamp updateTime = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-          getUpdateTimeFieldBuilder() {
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>
+      getUpdateTimeFieldBuilder() {
         if (updateTimeBuilder_ == null) {
           updateTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
                   getUpdateTime(),
                   getParentForChildren(),
                   isClean());
@@ -2127,15 +4675,16 @@ public final class Model {
         }
         return updateTimeBuilder_;
       }
+
       @java.lang.Override
       public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
       public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
@@ -2143,1796 +4692,8 @@ public final class Model {
       // @@protoc_insertion_point(builder_scope:muni.model.PostalAddress)
     }
 
-    // @@protoc_insertion_point(class_scope:muni.model.PostalAddress)
-    private static final muni.model.Model.PostalAddress DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new muni.model.Model.PostalAddress();
-    }
-
-    public static muni.model.Model.PostalAddress getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<PostalAddress>
-        PARSER = new com.google.protobuf.AbstractParser<PostalAddress>() {
-      @java.lang.Override
-      public PostalAddress parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new PostalAddress(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<PostalAddress> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<PostalAddress> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public muni.model.Model.PostalAddress getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
-  public interface PersonOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:muni.model.Person)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     *Output only
-     * </pre>
-     *
-     * <code>string id = 3;</code>
-     * @return The id.
-     */
-    java.lang.String getId();
-    /**
-     * <pre>
-     *Output only
-     * </pre>
-     *
-     * <code>string id = 3;</code>
-     * @return The bytes for id.
-     */
-    com.google.protobuf.ByteString
-        getIdBytes();
-
-    /**
-     * <code>string firstName = 4;</code>
-     * @return The firstName.
-     */
-    java.lang.String getFirstName();
-    /**
-     * <code>string firstName = 4;</code>
-     * @return The bytes for firstName.
-     */
-    com.google.protobuf.ByteString
-        getFirstNameBytes();
-
-    /**
-     * <code>string lastName = 5;</code>
-     * @return The lastName.
-     */
-    java.lang.String getLastName();
-    /**
-     * <code>string lastName = 5;</code>
-     * @return The bytes for lastName.
-     */
-    com.google.protobuf.ByteString
-        getLastNameBytes();
-
-    /**
-     * <code>.muni.model.ContactChannels contactChannels = 8;</code>
-     * @return Whether the contactChannels field is set.
-     */
-    boolean hasContactChannels();
-    /**
-     * <code>.muni.model.ContactChannels contactChannels = 8;</code>
-     * @return The contactChannels.
-     */
-    muni.model.Model.ContactChannels getContactChannels();
-    /**
-     * <code>.muni.model.ContactChannels contactChannels = 8;</code>
-     */
-    muni.model.Model.ContactChannelsOrBuilder getContactChannelsOrBuilder();
-
-    /**
-     * <pre>
-     *Output only
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp createTime = 1;</code>
-     * @return Whether the createTime field is set.
-     */
-    boolean hasCreateTime();
-    /**
-     * <pre>
-     *Output only
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp createTime = 1;</code>
-     * @return The createTime.
-     */
-    com.google.protobuf.Timestamp getCreateTime();
-    /**
-     * <pre>
-     *Output only
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp createTime = 1;</code>
-     */
-    com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder();
-
-    /**
-     * <pre>
-     *Output only
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
-     * @return Whether the updateTime field is set.
-     */
-    boolean hasUpdateTime();
-    /**
-     * <pre>
-     *Output only
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
-     * @return The updateTime.
-     */
-    com.google.protobuf.Timestamp getUpdateTime();
-    /**
-     * <pre>
-     *Output only
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
-     */
-    com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder();
-  }
-  /**
-   * Protobuf type {@code muni.model.Person}
-   */
-  public static final class Person extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:muni.model.Person)
-      PersonOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Person.newBuilder() to construct.
-    private Person(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Person() {
-      id_ = "";
-      firstName_ = "";
-      lastName_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Person();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Person(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (createTime_ != null) {
-                subBuilder = createTime_.toBuilder();
-              }
-              createTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(createTime_);
-                createTime_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 18: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (updateTime_ != null) {
-                subBuilder = updateTime_.toBuilder();
-              }
-              updateTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(updateTime_);
-                updateTime_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              firstName_ = s;
-              break;
-            }
-            case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              lastName_ = s;
-              break;
-            }
-            case 66: {
-              muni.model.Model.ContactChannels.Builder subBuilder = null;
-              if (contactChannels_ != null) {
-                subBuilder = contactChannels_.toBuilder();
-              }
-              contactChannels_ = input.readMessage(muni.model.Model.ContactChannels.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(contactChannels_);
-                contactChannels_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return muni.model.Model.internal_static_muni_model_Person_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return muni.model.Model.internal_static_muni_model_Person_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              muni.model.Model.Person.class, muni.model.Model.Person.Builder.class);
-    }
-
-    public static final int ID_FIELD_NUMBER = 3;
-    private volatile java.lang.Object id_;
-    /**
-     * <pre>
-     *Output only
-     * </pre>
-     *
-     * <code>string id = 3;</code>
-     * @return The id.
-     */
-    @java.lang.Override
-    public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        id_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     *Output only
-     * </pre>
-     *
-     * <code>string id = 3;</code>
-     * @return The bytes for id.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int FIRSTNAME_FIELD_NUMBER = 4;
-    private volatile java.lang.Object firstName_;
-    /**
-     * <code>string firstName = 4;</code>
-     * @return The firstName.
-     */
-    @java.lang.Override
-    public java.lang.String getFirstName() {
-      java.lang.Object ref = firstName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        firstName_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string firstName = 4;</code>
-     * @return The bytes for firstName.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getFirstNameBytes() {
-      java.lang.Object ref = firstName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        firstName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int LASTNAME_FIELD_NUMBER = 5;
-    private volatile java.lang.Object lastName_;
-    /**
-     * <code>string lastName = 5;</code>
-     * @return The lastName.
-     */
-    @java.lang.Override
-    public java.lang.String getLastName() {
-      java.lang.Object ref = lastName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        lastName_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string lastName = 5;</code>
-     * @return The bytes for lastName.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getLastNameBytes() {
-      java.lang.Object ref = lastName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        lastName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int CONTACTCHANNELS_FIELD_NUMBER = 8;
-    private muni.model.Model.ContactChannels contactChannels_;
-    /**
-     * <code>.muni.model.ContactChannels contactChannels = 8;</code>
-     * @return Whether the contactChannels field is set.
-     */
-    @java.lang.Override
-    public boolean hasContactChannels() {
-      return contactChannels_ != null;
-    }
-    /**
-     * <code>.muni.model.ContactChannels contactChannels = 8;</code>
-     * @return The contactChannels.
-     */
-    @java.lang.Override
-    public muni.model.Model.ContactChannels getContactChannels() {
-      return contactChannels_ == null ? muni.model.Model.ContactChannels.getDefaultInstance() : contactChannels_;
-    }
-    /**
-     * <code>.muni.model.ContactChannels contactChannels = 8;</code>
-     */
-    @java.lang.Override
-    public muni.model.Model.ContactChannelsOrBuilder getContactChannelsOrBuilder() {
-      return getContactChannels();
-    }
-
-    public static final int CREATETIME_FIELD_NUMBER = 1;
-    private com.google.protobuf.Timestamp createTime_;
-    /**
-     * <pre>
-     *Output only
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp createTime = 1;</code>
-     * @return Whether the createTime field is set.
-     */
-    @java.lang.Override
-    public boolean hasCreateTime() {
-      return createTime_ != null;
-    }
-    /**
-     * <pre>
-     *Output only
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp createTime = 1;</code>
-     * @return The createTime.
-     */
-    @java.lang.Override
-    public com.google.protobuf.Timestamp getCreateTime() {
-      return createTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createTime_;
-    }
-    /**
-     * <pre>
-     *Output only
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp createTime = 1;</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder() {
-      return getCreateTime();
-    }
-
-    public static final int UPDATETIME_FIELD_NUMBER = 2;
-    private com.google.protobuf.Timestamp updateTime_;
-    /**
-     * <pre>
-     *Output only
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
-     * @return Whether the updateTime field is set.
-     */
-    @java.lang.Override
-    public boolean hasUpdateTime() {
-      return updateTime_ != null;
-    }
-    /**
-     * <pre>
-     *Output only
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
-     * @return The updateTime.
-     */
-    @java.lang.Override
-    public com.google.protobuf.Timestamp getUpdateTime() {
-      return updateTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updateTime_;
-    }
-    /**
-     * <pre>
-     *Output only
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder() {
-      return getUpdateTime();
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (createTime_ != null) {
-        output.writeMessage(1, getCreateTime());
-      }
-      if (updateTime_ != null) {
-        output.writeMessage(2, getUpdateTime());
-      }
-      if (!getIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, id_);
-      }
-      if (!getFirstNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, firstName_);
-      }
-      if (!getLastNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, lastName_);
-      }
-      if (contactChannels_ != null) {
-        output.writeMessage(8, getContactChannels());
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (createTime_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getCreateTime());
-      }
-      if (updateTime_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getUpdateTime());
-      }
-      if (!getIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, id_);
-      }
-      if (!getFirstNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, firstName_);
-      }
-      if (!getLastNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, lastName_);
-      }
-      if (contactChannels_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, getContactChannels());
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof muni.model.Model.Person)) {
-        return super.equals(obj);
-      }
-      muni.model.Model.Person other = (muni.model.Model.Person) obj;
-
-      if (!getId()
-          .equals(other.getId())) return false;
-      if (!getFirstName()
-          .equals(other.getFirstName())) return false;
-      if (!getLastName()
-          .equals(other.getLastName())) return false;
-      if (hasContactChannels() != other.hasContactChannels()) return false;
-      if (hasContactChannels()) {
-        if (!getContactChannels()
-            .equals(other.getContactChannels())) return false;
-      }
-      if (hasCreateTime() != other.hasCreateTime()) return false;
-      if (hasCreateTime()) {
-        if (!getCreateTime()
-            .equals(other.getCreateTime())) return false;
-      }
-      if (hasUpdateTime() != other.hasUpdateTime()) return false;
-      if (hasUpdateTime()) {
-        if (!getUpdateTime()
-            .equals(other.getUpdateTime())) return false;
-      }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
-      hash = (37 * hash) + FIRSTNAME_FIELD_NUMBER;
-      hash = (53 * hash) + getFirstName().hashCode();
-      hash = (37 * hash) + LASTNAME_FIELD_NUMBER;
-      hash = (53 * hash) + getLastName().hashCode();
-      if (hasContactChannels()) {
-        hash = (37 * hash) + CONTACTCHANNELS_FIELD_NUMBER;
-        hash = (53 * hash) + getContactChannels().hashCode();
-      }
-      if (hasCreateTime()) {
-        hash = (37 * hash) + CREATETIME_FIELD_NUMBER;
-        hash = (53 * hash) + getCreateTime().hashCode();
-      }
-      if (hasUpdateTime()) {
-        hash = (37 * hash) + UPDATETIME_FIELD_NUMBER;
-        hash = (53 * hash) + getUpdateTime().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static muni.model.Model.Person parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static muni.model.Model.Person parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static muni.model.Model.Person parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static muni.model.Model.Person parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static muni.model.Model.Person parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static muni.model.Model.Person parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static muni.model.Model.Person parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static muni.model.Model.Person parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static muni.model.Model.Person parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static muni.model.Model.Person parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static muni.model.Model.Person parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static muni.model.Model.Person parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(muni.model.Model.Person prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code muni.model.Person}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:muni.model.Person)
-        muni.model.Model.PersonOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return muni.model.Model.internal_static_muni_model_Person_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return muni.model.Model.internal_static_muni_model_Person_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                muni.model.Model.Person.class, muni.model.Model.Person.Builder.class);
-      }
-
-      // Construct using muni.model.Model.Person.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        id_ = "";
-
-        firstName_ = "";
-
-        lastName_ = "";
-
-        if (contactChannelsBuilder_ == null) {
-          contactChannels_ = null;
-        } else {
-          contactChannels_ = null;
-          contactChannelsBuilder_ = null;
-        }
-        if (createTimeBuilder_ == null) {
-          createTime_ = null;
-        } else {
-          createTime_ = null;
-          createTimeBuilder_ = null;
-        }
-        if (updateTimeBuilder_ == null) {
-          updateTime_ = null;
-        } else {
-          updateTime_ = null;
-          updateTimeBuilder_ = null;
-        }
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return muni.model.Model.internal_static_muni_model_Person_descriptor;
-      }
-
-      @java.lang.Override
-      public muni.model.Model.Person getDefaultInstanceForType() {
-        return muni.model.Model.Person.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public muni.model.Model.Person build() {
-        muni.model.Model.Person result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public muni.model.Model.Person buildPartial() {
-        muni.model.Model.Person result = new muni.model.Model.Person(this);
-        result.id_ = id_;
-        result.firstName_ = firstName_;
-        result.lastName_ = lastName_;
-        if (contactChannelsBuilder_ == null) {
-          result.contactChannels_ = contactChannels_;
-        } else {
-          result.contactChannels_ = contactChannelsBuilder_.build();
-        }
-        if (createTimeBuilder_ == null) {
-          result.createTime_ = createTime_;
-        } else {
-          result.createTime_ = createTimeBuilder_.build();
-        }
-        if (updateTimeBuilder_ == null) {
-          result.updateTime_ = updateTime_;
-        } else {
-          result.updateTime_ = updateTimeBuilder_.build();
-        }
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof muni.model.Model.Person) {
-          return mergeFrom((muni.model.Model.Person)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(muni.model.Model.Person other) {
-        if (other == muni.model.Model.Person.getDefaultInstance()) return this;
-        if (!other.getId().isEmpty()) {
-          id_ = other.id_;
-          onChanged();
-        }
-        if (!other.getFirstName().isEmpty()) {
-          firstName_ = other.firstName_;
-          onChanged();
-        }
-        if (!other.getLastName().isEmpty()) {
-          lastName_ = other.lastName_;
-          onChanged();
-        }
-        if (other.hasContactChannels()) {
-          mergeContactChannels(other.getContactChannels());
-        }
-        if (other.hasCreateTime()) {
-          mergeCreateTime(other.getCreateTime());
-        }
-        if (other.hasUpdateTime()) {
-          mergeUpdateTime(other.getUpdateTime());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        muni.model.Model.Person parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (muni.model.Model.Person) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object id_ = "";
-      /**
-       * <pre>
-       *Output only
-       * </pre>
-       *
-       * <code>string id = 3;</code>
-       * @return The id.
-       */
-      public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          id_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       *Output only
-       * </pre>
-       *
-       * <code>string id = 3;</code>
-       * @return The bytes for id.
-       */
-      public com.google.protobuf.ByteString
-          getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       *Output only
-       * </pre>
-       *
-       * <code>string id = 3;</code>
-       * @param value The id to set.
-       * @return This builder for chaining.
-       */
-      public Builder setId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        id_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *Output only
-       * </pre>
-       *
-       * <code>string id = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearId() {
-        
-        id_ = getDefaultInstance().getId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *Output only
-       * </pre>
-       *
-       * <code>string id = 3;</code>
-       * @param value The bytes for id to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        id_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object firstName_ = "";
-      /**
-       * <code>string firstName = 4;</code>
-       * @return The firstName.
-       */
-      public java.lang.String getFirstName() {
-        java.lang.Object ref = firstName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          firstName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string firstName = 4;</code>
-       * @return The bytes for firstName.
-       */
-      public com.google.protobuf.ByteString
-          getFirstNameBytes() {
-        java.lang.Object ref = firstName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          firstName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string firstName = 4;</code>
-       * @param value The firstName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setFirstName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        firstName_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string firstName = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearFirstName() {
-        
-        firstName_ = getDefaultInstance().getFirstName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string firstName = 4;</code>
-       * @param value The bytes for firstName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setFirstNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        firstName_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object lastName_ = "";
-      /**
-       * <code>string lastName = 5;</code>
-       * @return The lastName.
-       */
-      public java.lang.String getLastName() {
-        java.lang.Object ref = lastName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          lastName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string lastName = 5;</code>
-       * @return The bytes for lastName.
-       */
-      public com.google.protobuf.ByteString
-          getLastNameBytes() {
-        java.lang.Object ref = lastName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          lastName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string lastName = 5;</code>
-       * @param value The lastName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setLastName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        lastName_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string lastName = 5;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearLastName() {
-        
-        lastName_ = getDefaultInstance().getLastName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string lastName = 5;</code>
-       * @param value The bytes for lastName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setLastNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        lastName_ = value;
-        onChanged();
-        return this;
-      }
-
-      private muni.model.Model.ContactChannels contactChannels_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          muni.model.Model.ContactChannels, muni.model.Model.ContactChannels.Builder, muni.model.Model.ContactChannelsOrBuilder> contactChannelsBuilder_;
-      /**
-       * <code>.muni.model.ContactChannels contactChannels = 8;</code>
-       * @return Whether the contactChannels field is set.
-       */
-      public boolean hasContactChannels() {
-        return contactChannelsBuilder_ != null || contactChannels_ != null;
-      }
-      /**
-       * <code>.muni.model.ContactChannels contactChannels = 8;</code>
-       * @return The contactChannels.
-       */
-      public muni.model.Model.ContactChannels getContactChannels() {
-        if (contactChannelsBuilder_ == null) {
-          return contactChannels_ == null ? muni.model.Model.ContactChannels.getDefaultInstance() : contactChannels_;
-        } else {
-          return contactChannelsBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.muni.model.ContactChannels contactChannels = 8;</code>
-       */
-      public Builder setContactChannels(muni.model.Model.ContactChannels value) {
-        if (contactChannelsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          contactChannels_ = value;
-          onChanged();
-        } else {
-          contactChannelsBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.muni.model.ContactChannels contactChannels = 8;</code>
-       */
-      public Builder setContactChannels(
-          muni.model.Model.ContactChannels.Builder builderForValue) {
-        if (contactChannelsBuilder_ == null) {
-          contactChannels_ = builderForValue.build();
-          onChanged();
-        } else {
-          contactChannelsBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.muni.model.ContactChannels contactChannels = 8;</code>
-       */
-      public Builder mergeContactChannels(muni.model.Model.ContactChannels value) {
-        if (contactChannelsBuilder_ == null) {
-          if (contactChannels_ != null) {
-            contactChannels_ =
-              muni.model.Model.ContactChannels.newBuilder(contactChannels_).mergeFrom(value).buildPartial();
-          } else {
-            contactChannels_ = value;
-          }
-          onChanged();
-        } else {
-          contactChannelsBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.muni.model.ContactChannels contactChannels = 8;</code>
-       */
-      public Builder clearContactChannels() {
-        if (contactChannelsBuilder_ == null) {
-          contactChannels_ = null;
-          onChanged();
-        } else {
-          contactChannels_ = null;
-          contactChannelsBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.muni.model.ContactChannels contactChannels = 8;</code>
-       */
-      public muni.model.Model.ContactChannels.Builder getContactChannelsBuilder() {
-        
-        onChanged();
-        return getContactChannelsFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.muni.model.ContactChannels contactChannels = 8;</code>
-       */
-      public muni.model.Model.ContactChannelsOrBuilder getContactChannelsOrBuilder() {
-        if (contactChannelsBuilder_ != null) {
-          return contactChannelsBuilder_.getMessageOrBuilder();
-        } else {
-          return contactChannels_ == null ?
-              muni.model.Model.ContactChannels.getDefaultInstance() : contactChannels_;
-        }
-      }
-      /**
-       * <code>.muni.model.ContactChannels contactChannels = 8;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          muni.model.Model.ContactChannels, muni.model.Model.ContactChannels.Builder, muni.model.Model.ContactChannelsOrBuilder> 
-          getContactChannelsFieldBuilder() {
-        if (contactChannelsBuilder_ == null) {
-          contactChannelsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              muni.model.Model.ContactChannels, muni.model.Model.ContactChannels.Builder, muni.model.Model.ContactChannelsOrBuilder>(
-                  getContactChannels(),
-                  getParentForChildren(),
-                  isClean());
-          contactChannels_ = null;
-        }
-        return contactChannelsBuilder_;
-      }
-
-      private com.google.protobuf.Timestamp createTime_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createTimeBuilder_;
-      /**
-       * <pre>
-       *Output only
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp createTime = 1;</code>
-       * @return Whether the createTime field is set.
-       */
-      public boolean hasCreateTime() {
-        return createTimeBuilder_ != null || createTime_ != null;
-      }
-      /**
-       * <pre>
-       *Output only
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp createTime = 1;</code>
-       * @return The createTime.
-       */
-      public com.google.protobuf.Timestamp getCreateTime() {
-        if (createTimeBuilder_ == null) {
-          return createTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createTime_;
-        } else {
-          return createTimeBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       *Output only
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp createTime = 1;</code>
-       */
-      public Builder setCreateTime(com.google.protobuf.Timestamp value) {
-        if (createTimeBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          createTime_ = value;
-          onChanged();
-        } else {
-          createTimeBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       *Output only
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp createTime = 1;</code>
-       */
-      public Builder setCreateTime(
-          com.google.protobuf.Timestamp.Builder builderForValue) {
-        if (createTimeBuilder_ == null) {
-          createTime_ = builderForValue.build();
-          onChanged();
-        } else {
-          createTimeBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       *Output only
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp createTime = 1;</code>
-       */
-      public Builder mergeCreateTime(com.google.protobuf.Timestamp value) {
-        if (createTimeBuilder_ == null) {
-          if (createTime_ != null) {
-            createTime_ =
-              com.google.protobuf.Timestamp.newBuilder(createTime_).mergeFrom(value).buildPartial();
-          } else {
-            createTime_ = value;
-          }
-          onChanged();
-        } else {
-          createTimeBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       *Output only
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp createTime = 1;</code>
-       */
-      public Builder clearCreateTime() {
-        if (createTimeBuilder_ == null) {
-          createTime_ = null;
-          onChanged();
-        } else {
-          createTime_ = null;
-          createTimeBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       *Output only
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp createTime = 1;</code>
-       */
-      public com.google.protobuf.Timestamp.Builder getCreateTimeBuilder() {
-        
-        onChanged();
-        return getCreateTimeFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       *Output only
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp createTime = 1;</code>
-       */
-      public com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder() {
-        if (createTimeBuilder_ != null) {
-          return createTimeBuilder_.getMessageOrBuilder();
-        } else {
-          return createTime_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : createTime_;
-        }
-      }
-      /**
-       * <pre>
-       *Output only
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp createTime = 1;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-          getCreateTimeFieldBuilder() {
-        if (createTimeBuilder_ == null) {
-          createTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getCreateTime(),
-                  getParentForChildren(),
-                  isClean());
-          createTime_ = null;
-        }
-        return createTimeBuilder_;
-      }
-
-      private com.google.protobuf.Timestamp updateTime_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updateTimeBuilder_;
-      /**
-       * <pre>
-       *Output only
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
-       * @return Whether the updateTime field is set.
-       */
-      public boolean hasUpdateTime() {
-        return updateTimeBuilder_ != null || updateTime_ != null;
-      }
-      /**
-       * <pre>
-       *Output only
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
-       * @return The updateTime.
-       */
-      public com.google.protobuf.Timestamp getUpdateTime() {
-        if (updateTimeBuilder_ == null) {
-          return updateTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updateTime_;
-        } else {
-          return updateTimeBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       *Output only
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
-       */
-      public Builder setUpdateTime(com.google.protobuf.Timestamp value) {
-        if (updateTimeBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          updateTime_ = value;
-          onChanged();
-        } else {
-          updateTimeBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       *Output only
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
-       */
-      public Builder setUpdateTime(
-          com.google.protobuf.Timestamp.Builder builderForValue) {
-        if (updateTimeBuilder_ == null) {
-          updateTime_ = builderForValue.build();
-          onChanged();
-        } else {
-          updateTimeBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       *Output only
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
-       */
-      public Builder mergeUpdateTime(com.google.protobuf.Timestamp value) {
-        if (updateTimeBuilder_ == null) {
-          if (updateTime_ != null) {
-            updateTime_ =
-              com.google.protobuf.Timestamp.newBuilder(updateTime_).mergeFrom(value).buildPartial();
-          } else {
-            updateTime_ = value;
-          }
-          onChanged();
-        } else {
-          updateTimeBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       *Output only
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
-       */
-      public Builder clearUpdateTime() {
-        if (updateTimeBuilder_ == null) {
-          updateTime_ = null;
-          onChanged();
-        } else {
-          updateTime_ = null;
-          updateTimeBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       *Output only
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
-       */
-      public com.google.protobuf.Timestamp.Builder getUpdateTimeBuilder() {
-        
-        onChanged();
-        return getUpdateTimeFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       *Output only
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
-       */
-      public com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder() {
-        if (updateTimeBuilder_ != null) {
-          return updateTimeBuilder_.getMessageOrBuilder();
-        } else {
-          return updateTime_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : updateTime_;
-        }
-      }
-      /**
-       * <pre>
-       *Output only
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-          getUpdateTimeFieldBuilder() {
-        if (updateTimeBuilder_ == null) {
-          updateTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getUpdateTime(),
-                  getParentForChildren(),
-                  isClean());
-          updateTime_ = null;
-        }
-        return updateTimeBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:muni.model.Person)
-    }
-
-    // @@protoc_insertion_point(class_scope:muni.model.Person)
-    private static final muni.model.Model.Person DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new muni.model.Model.Person();
-    }
-
-    public static muni.model.Model.Person getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Person>
-        PARSER = new com.google.protobuf.AbstractParser<Person>() {
-      @java.lang.Override
-      public Person parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Person(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<Person> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Person> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public muni.model.Model.Person getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface CaseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:muni.model.Case)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string id = 3;</code>
-     * @return The id.
-     */
-    java.lang.String getId();
-    /**
-     * <code>string id = 3;</code>
-     * @return The bytes for id.
-     */
-    com.google.protobuf.ByteString
-        getIdBytes();
-
-    /**
-     * <pre>
-     *TODO  convert to enum
-     * </pre>
-     *
-     * <code>string status = 4;</code>
-     * @return The status.
-     */
-    java.lang.String getStatus();
-    /**
-     * <pre>
-     *TODO  convert to enum
-     * </pre>
-     *
-     * <code>string status = 4;</code>
-     * @return The bytes for status.
-     */
-    com.google.protobuf.ByteString
-        getStatusBytes();
-
-    /**
-     * <code>.muni.model.Person reportedByCustomer = 5;</code>
-     * @return Whether the reportedByCustomer field is set.
-     */
-    boolean hasReportedByCustomer();
-    /**
-     * <code>.muni.model.Person reportedByCustomer = 5;</code>
-     * @return The reportedByCustomer.
-     */
-    muni.model.Model.Person getReportedByCustomer();
-    /**
-     * <code>.muni.model.Person reportedByCustomer = 5;</code>
-     */
-    muni.model.Model.PersonOrBuilder getReportedByCustomerOrBuilder();
-
-    /**
-     * <code>.muni.model.Person createdByEmployee = 6;</code>
-     * @return Whether the createdByEmployee field is set.
-     */
-    boolean hasCreatedByEmployee();
-    /**
-     * <code>.muni.model.Person createdByEmployee = 6;</code>
-     * @return The createdByEmployee.
-     */
-    muni.model.Model.Person getCreatedByEmployee();
-    /**
-     * <code>.muni.model.Person createdByEmployee = 6;</code>
-     */
-    muni.model.Model.PersonOrBuilder getCreatedByEmployeeOrBuilder();
-
-    /**
-     * <pre>
-     *Output only
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp createTime = 1;</code>
-     * @return Whether the createTime field is set.
-     */
-    boolean hasCreateTime();
-    /**
-     * <pre>
-     *Output only
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp createTime = 1;</code>
-     * @return The createTime.
-     */
-    com.google.protobuf.Timestamp getCreateTime();
-    /**
-     * <pre>
-     *Output only
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp createTime = 1;</code>
-     */
-    com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder();
-
-    /**
-     * <pre>
-     *Output only
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
-     * @return Whether the updateTime field is set.
-     */
-    boolean hasUpdateTime();
-    /**
-     * <pre>
-     *Output only
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
-     * @return The updateTime.
-     */
-    com.google.protobuf.Timestamp getUpdateTime();
-    /**
-     * <pre>
-     *Output only
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
-     */
-    com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder();
-  }
   /**
    * Protobuf type {@code muni.model.Case}
    */
@@ -3971,7 +4732,7 @@ public final class Model {
         throw new java.lang.NullPointerException();
       }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+              com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -4088,7 +4849,7 @@ public final class Model {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         id_ = s;
@@ -4104,7 +4865,7 @@ public final class Model {
         getIdBytes() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         id_ = b;
@@ -4130,7 +4891,7 @@ public final class Model {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         status_ = s;
@@ -4150,7 +4911,7 @@ public final class Model {
         getStatusBytes() {
       java.lang.Object ref = status_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         status_ = b;
@@ -4390,8 +5151,7 @@ public final class Model {
         if (!getUpdateTime()
             .equals(other.getUpdateTime())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      return unknownFields.equals(other.unknownFields);
     }
 
     @java.lang.Override
@@ -4752,7 +5512,7 @@ public final class Model {
           getIdBytes() {
         java.lang.Object ref = id_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           id_ = b;
@@ -4771,7 +5531,7 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+
         id_ = value;
         onChanged();
         return this;
@@ -4781,7 +5541,7 @@ public final class Model {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
+
         id_ = getDefaultInstance().getId();
         onChanged();
         return this;
@@ -4797,7 +5557,7 @@ public final class Model {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-        
+
         id_ = value;
         onChanged();
         return this;
@@ -4836,7 +5596,7 @@ public final class Model {
           getStatusBytes() {
         java.lang.Object ref = status_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           status_ = b;
@@ -4855,11 +5615,11 @@ public final class Model {
        * @return This builder for chaining.
        */
       public Builder setStatus(
-          java.lang.String value) {
+              java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         status_ = value;
         onChanged();
         return this;
@@ -4873,7 +5633,7 @@ public final class Model {
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
-        
+
         status_ = getDefaultInstance().getStatus();
         onChanged();
         return this;
@@ -4893,7 +5653,7 @@ public final class Model {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-        
+
         status_ = value;
         onChanged();
         return this;
@@ -4986,7 +5746,7 @@ public final class Model {
        * <code>.muni.model.Person reportedByCustomer = 5;</code>
        */
       public muni.model.Model.Person.Builder getReportedByCustomerBuilder() {
-        
+
         onChanged();
         return getReportedByCustomerFieldBuilder().getBuilder();
       }
@@ -5005,7 +5765,7 @@ public final class Model {
        * <code>.muni.model.Person reportedByCustomer = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          muni.model.Model.Person, muni.model.Model.Person.Builder, muni.model.Model.PersonOrBuilder> 
+          muni.model.Model.Person, muni.model.Model.Person.Builder, muni.model.Model.PersonOrBuilder>
           getReportedByCustomerFieldBuilder() {
         if (reportedByCustomerBuilder_ == null) {
           reportedByCustomerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -5105,7 +5865,7 @@ public final class Model {
        * <code>.muni.model.Person createdByEmployee = 6;</code>
        */
       public muni.model.Model.Person.Builder getCreatedByEmployeeBuilder() {
-        
+
         onChanged();
         return getCreatedByEmployeeFieldBuilder().getBuilder();
       }
@@ -5124,7 +5884,7 @@ public final class Model {
        * <code>.muni.model.Person createdByEmployee = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          muni.model.Model.Person, muni.model.Model.Person.Builder, muni.model.Model.PersonOrBuilder> 
+              muni.model.Model.Person, muni.model.Model.Person.Builder, muni.model.Model.PersonOrBuilder>
           getCreatedByEmployeeFieldBuilder() {
         if (createdByEmployeeBuilder_ == null) {
           createdByEmployeeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -5252,7 +6012,7 @@ public final class Model {
        * <code>.google.protobuf.Timestamp createTime = 1;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreateTimeBuilder() {
-        
+
         onChanged();
         return getCreateTimeFieldBuilder().getBuilder();
       }
@@ -5279,7 +6039,7 @@ public final class Model {
        * <code>.google.protobuf.Timestamp createTime = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>
           getCreateTimeFieldBuilder() {
         if (createTimeBuilder_ == null) {
           createTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -5407,7 +6167,7 @@ public final class Model {
        * <code>.google.protobuf.Timestamp updateTime = 2;</code>
        */
       public com.google.protobuf.Timestamp.Builder getUpdateTimeBuilder() {
-        
+
         onChanged();
         return getUpdateTimeFieldBuilder().getBuilder();
       }
@@ -5434,7 +6194,7 @@ public final class Model {
        * <code>.google.protobuf.Timestamp updateTime = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>
           getUpdateTimeFieldBuilder() {
         if (updateTimeBuilder_ == null) {
           updateTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -5454,7 +6214,7 @@ public final class Model {
 
       @java.lang.Override
       public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
@@ -5473,7 +6233,7 @@ public final class Model {
     }
 
     private static final com.google.protobuf.Parser<Case>
-        PARSER = new com.google.protobuf.AbstractParser<Case>() {
+            PARSER = new com.google.protobuf.AbstractParser<Case>() {
       @java.lang.Override
       public Case parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
@@ -5499,30 +6259,6 @@ public final class Model {
 
   }
 
-  public interface SubsystemOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:muni.model.Subsystem)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     *TODO avoid converting to enum, that would make api less generic?
-     * </pre>
-     *
-     * <code>string subsystemId = 1;</code>
-     * @return The subsystemId.
-     */
-    java.lang.String getSubsystemId();
-    /**
-     * <pre>
-     *TODO avoid converting to enum, that would make api less generic?
-     * </pre>
-     *
-     * <code>string subsystemId = 1;</code>
-     * @return The bytes for subsystemId.
-     */
-    com.google.protobuf.ByteString
-        getSubsystemIdBytes();
-  }
   /**
    * Protobuf type {@code muni.model.Subsystem}
    */
@@ -5623,7 +6359,7 @@ public final class Model {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         subsystemId_ = s;
@@ -5643,7 +6379,7 @@ public final class Model {
         getSubsystemIdBytes() {
       java.lang.Object ref = subsystemId_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         subsystemId_ = b;
@@ -5699,8 +6435,7 @@ public final class Model {
 
       if (!getSubsystemId()
           .equals(other.getSubsystemId())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      return unknownFields.equals(other.unknownFields);
     }
 
     @java.lang.Override
@@ -5988,7 +6723,7 @@ public final class Model {
           getSubsystemIdBytes() {
         java.lang.Object ref = subsystemId_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           subsystemId_ = b;
@@ -6011,7 +6746,7 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+
         subsystemId_ = value;
         onChanged();
         return this;
@@ -6025,7 +6760,7 @@ public final class Model {
        * @return This builder for chaining.
        */
       public Builder clearSubsystemId() {
-        
+
         subsystemId_ = getDefaultInstance().getSubsystemId();
         onChanged();
         return this;
@@ -6045,7 +6780,7 @@ public final class Model {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-        
+
         subsystemId_ = value;
         onChanged();
         return this;
@@ -6103,135 +6838,20 @@ public final class Model {
 
   }
 
-  public interface OrganizationOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:muni.model.Organization)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     *Output only
-     * </pre>
-     *
-     * <code>string id = 3;</code>
-     * @return The id.
-     */
-    java.lang.String getId();
-    /**
-     * <pre>
-     *Output only
-     * </pre>
-     *
-     * <code>string id = 3;</code>
-     * @return The bytes for id.
-     */
-    com.google.protobuf.ByteString
-        getIdBytes();
-
-    /**
-     * <code>string name = 4;</code>
-     * @return The name.
-     */
-    java.lang.String getName();
-    /**
-     * <code>string name = 4;</code>
-     * @return The bytes for name.
-     */
-    com.google.protobuf.ByteString
-        getNameBytes();
-
-    /**
-     * <code>.muni.model.ContactChannels contactChannels = 5;</code>
-     * @return Whether the contactChannels field is set.
-     */
-    boolean hasContactChannels();
-    /**
-     * <code>.muni.model.ContactChannels contactChannels = 5;</code>
-     * @return The contactChannels.
-     */
-    muni.model.Model.ContactChannels getContactChannels();
-    /**
-     * <code>.muni.model.ContactChannels contactChannels = 5;</code>
-     */
-    muni.model.Model.ContactChannelsOrBuilder getContactChannelsOrBuilder();
-
-    /**
-     * <code>string website = 6;</code>
-     * @return The website.
-     */
-    java.lang.String getWebsite();
-    /**
-     * <code>string website = 6;</code>
-     * @return The bytes for website.
-     */
-    com.google.protobuf.ByteString
-        getWebsiteBytes();
-
-    /**
-     * <pre>
-     *Output only
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp createTime = 1;</code>
-     * @return Whether the createTime field is set.
-     */
-    boolean hasCreateTime();
-    /**
-     * <pre>
-     *Output only
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp createTime = 1;</code>
-     * @return The createTime.
-     */
-    com.google.protobuf.Timestamp getCreateTime();
-    /**
-     * <pre>
-     *Output only
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp createTime = 1;</code>
-     */
-    com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder();
-
-    /**
-     * <pre>
-     *Output only
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
-     * @return Whether the updateTime field is set.
-     */
-    boolean hasUpdateTime();
-    /**
-     * <pre>
-     *Output only
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
-     * @return The updateTime.
-     */
-    com.google.protobuf.Timestamp getUpdateTime();
-    /**
-     * <pre>
-     *Output only
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
-     */
-    com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder();
-  }
   /**
    * Protobuf type {@code muni.model.Organization}
    */
   public static final class Organization extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:muni.model.Organization)
-      OrganizationOrBuilder {
-  private static final long serialVersionUID = 0L;
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:muni.model.Organization)
+          OrganizationOrBuilder {
+    private static final long serialVersionUID = 0L;
+
     // Use Organization.newBuilder() to construct.
     private Organization(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
+
     private Organization() {
       id_ = "";
       name_ = "";
@@ -6241,7 +6861,7 @@ public final class Model {
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
+            UnusedPrivateParameter unused) {
       return new Organization();
     }
 
@@ -6250,16 +6870,17 @@ public final class Model {
     getUnknownFields() {
       return this.unknownFields;
     }
+
     private Organization(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+              com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -6327,7 +6948,7 @@ public final class Model {
             }
             default: {
               if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
+                      input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -6338,27 +6959,29 @@ public final class Model {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
+                e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
+
     public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
+    getDescriptor() {
       return muni.model.Model.internal_static_muni_model_Organization_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
+    internalGetFieldAccessorTable() {
       return muni.model.Model.internal_static_muni_model_Organization_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              muni.model.Model.Organization.class, muni.model.Model.Organization.Builder.class);
+              .ensureFieldAccessorsInitialized(
+                      muni.model.Model.Organization.class, muni.model.Model.Organization.Builder.class);
     }
 
     public static final int ID_FIELD_NUMBER = 3;
     private volatile java.lang.Object id_;
+
     /**
      * <pre>
      *Output only
@@ -6373,13 +6996,14 @@ public final class Model {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         id_ = s;
         return s;
       }
     }
+
     /**
      * <pre>
      *Output only
@@ -6390,12 +7014,12 @@ public final class Model {
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getIdBytes() {
+    getIdBytes() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
+                        (java.lang.String) ref);
         id_ = b;
         return b;
       } else {
@@ -6405,6 +7029,7 @@ public final class Model {
 
     public static final int NAME_FIELD_NUMBER = 4;
     private volatile java.lang.Object name_;
+
     /**
      * <code>string name = 4;</code>
      * @return The name.
@@ -6415,25 +7040,26 @@ public final class Model {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         name_ = s;
         return s;
       }
     }
+
     /**
      * <code>string name = 4;</code>
      * @return The bytes for name.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getNameBytes() {
+    getNameBytes() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
+                        (java.lang.String) ref);
         name_ = b;
         return b;
       } else {
@@ -6443,6 +7069,7 @@ public final class Model {
 
     public static final int CONTACTCHANNELS_FIELD_NUMBER = 5;
     private muni.model.Model.ContactChannels contactChannels_;
+
     /**
      * <code>.muni.model.ContactChannels contactChannels = 5;</code>
      * @return Whether the contactChannels field is set.
@@ -6451,6 +7078,7 @@ public final class Model {
     public boolean hasContactChannels() {
       return contactChannels_ != null;
     }
+
     /**
      * <code>.muni.model.ContactChannels contactChannels = 5;</code>
      * @return The contactChannels.
@@ -6459,6 +7087,7 @@ public final class Model {
     public muni.model.Model.ContactChannels getContactChannels() {
       return contactChannels_ == null ? muni.model.Model.ContactChannels.getDefaultInstance() : contactChannels_;
     }
+
     /**
      * <code>.muni.model.ContactChannels contactChannels = 5;</code>
      */
@@ -6469,6 +7098,7 @@ public final class Model {
 
     public static final int WEBSITE_FIELD_NUMBER = 6;
     private volatile java.lang.Object website_;
+
     /**
      * <code>string website = 6;</code>
      * @return The website.
@@ -6479,25 +7109,26 @@ public final class Model {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         website_ = s;
         return s;
       }
     }
+
     /**
      * <code>string website = 6;</code>
      * @return The bytes for website.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getWebsiteBytes() {
+    getWebsiteBytes() {
       java.lang.Object ref = website_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
+                        (java.lang.String) ref);
         website_ = b;
         return b;
       } else {
@@ -6507,6 +7138,7 @@ public final class Model {
 
     public static final int CREATETIME_FIELD_NUMBER = 1;
     private com.google.protobuf.Timestamp createTime_;
+
     /**
      * <pre>
      *Output only
@@ -6519,6 +7151,7 @@ public final class Model {
     public boolean hasCreateTime() {
       return createTime_ != null;
     }
+
     /**
      * <pre>
      *Output only
@@ -6531,6 +7164,7 @@ public final class Model {
     public com.google.protobuf.Timestamp getCreateTime() {
       return createTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createTime_;
     }
+
     /**
      * <pre>
      *Output only
@@ -6545,6 +7179,7 @@ public final class Model {
 
     public static final int UPDATETIME_FIELD_NUMBER = 2;
     private com.google.protobuf.Timestamp updateTime_;
+
     /**
      * <pre>
      *Output only
@@ -6557,6 +7192,7 @@ public final class Model {
     public boolean hasUpdateTime() {
       return updateTime_ != null;
     }
+
     /**
      * <pre>
      *Output only
@@ -6569,6 +7205,7 @@ public final class Model {
     public com.google.protobuf.Timestamp getUpdateTime() {
       return updateTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updateTime_;
     }
+
     /**
      * <pre>
      *Output only
@@ -6582,6 +7219,7 @@ public final class Model {
     }
 
     private byte memoizedIsInitialized = -1;
+
     @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -6594,7 +7232,7 @@ public final class Model {
 
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
+            throws java.io.IOException {
       if (createTime_ != null) {
         output.writeMessage(1, getCreateTime());
       }
@@ -6624,11 +7262,11 @@ public final class Model {
       size = 0;
       if (createTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getCreateTime());
+                .computeMessageSize(1, getCreateTime());
       }
       if (updateTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getUpdateTime());
+                .computeMessageSize(2, getUpdateTime());
       }
       if (!getIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, id_);
@@ -6638,7 +7276,7 @@ public final class Model {
       }
       if (contactChannels_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, getContactChannels());
+                .computeMessageSize(5, getContactChannels());
       }
       if (!getWebsiteBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, website_);
@@ -6651,7 +7289,7 @@ public final class Model {
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-       return true;
+        return true;
       }
       if (!(obj instanceof muni.model.Model.Organization)) {
         return super.equals(obj);
@@ -6659,28 +7297,27 @@ public final class Model {
       muni.model.Model.Organization other = (muni.model.Model.Organization) obj;
 
       if (!getId()
-          .equals(other.getId())) return false;
+              .equals(other.getId())) return false;
       if (!getName()
-          .equals(other.getName())) return false;
+              .equals(other.getName())) return false;
       if (hasContactChannels() != other.hasContactChannels()) return false;
       if (hasContactChannels()) {
         if (!getContactChannels()
-            .equals(other.getContactChannels())) return false;
+                .equals(other.getContactChannels())) return false;
       }
       if (!getWebsite()
-          .equals(other.getWebsite())) return false;
+              .equals(other.getWebsite())) return false;
       if (hasCreateTime() != other.hasCreateTime()) return false;
       if (hasCreateTime()) {
         if (!getCreateTime()
-            .equals(other.getCreateTime())) return false;
+                .equals(other.getCreateTime())) return false;
       }
       if (hasUpdateTime() != other.hasUpdateTime()) return false;
       if (hasUpdateTime()) {
         if (!getUpdateTime()
-            .equals(other.getUpdateTime())) return false;
+                .equals(other.getUpdateTime())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      return unknownFields.equals(other.unknownFields);
     }
 
     @java.lang.Override
@@ -6714,113 +7351,128 @@ public final class Model {
     }
 
     public static muni.model.Model.Organization parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static muni.model.Model.Organization parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static muni.model.Model.Organization parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static muni.model.Model.Organization parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static muni.model.Model.Organization parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static muni.model.Model.Organization parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static muni.model.Model.Organization parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+              .parseWithIOException(PARSER, input);
     }
+
     public static muni.model.Model.Organization parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+              .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static muni.model.Model.Organization parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+              .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static muni.model.Model.Organization parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static muni.model.Model.Organization parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+              .parseWithIOException(PARSER, input);
     }
+
     public static muni.model.Model.Organization parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+              .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
+
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
+
     public static Builder newBuilder(muni.model.Model.Organization prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+
     @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+              ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+
     /**
      * Protobuf type {@code muni.model.Organization}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:muni.model.Organization)
-        muni.model.Model.OrganizationOrBuilder {
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:muni.model.Organization)
+            muni.model.Model.OrganizationOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
+      getDescriptor() {
         return muni.model.Model.internal_static_muni_model_Organization_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
+      internalGetFieldAccessorTable() {
         return muni.model.Model.internal_static_muni_model_Organization_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                muni.model.Model.Organization.class, muni.model.Model.Organization.Builder.class);
+                .ensureFieldAccessorsInitialized(
+                        muni.model.Model.Organization.class, muni.model.Model.Organization.Builder.class);
       }
 
       // Construct using muni.model.Model.Organization.newBuilder()
@@ -6829,15 +7481,17 @@ public final class Model {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
+
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
         }
       }
+
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -6870,7 +7524,7 @@ public final class Model {
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
+      getDescriptorForType() {
         return muni.model.Model.internal_static_muni_model_Organization_descriptor;
       }
 
@@ -6917,34 +7571,40 @@ public final class Model {
       public Builder clone() {
         return super.clone();
       }
+
       @java.lang.Override
       public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
         return super.setField(field, value);
       }
+
       @java.lang.Override
       public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
+
       @java.lang.Override
       public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
+
       @java.lang.Override
       public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
+
       @java.lang.Override
       public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof muni.model.Model.Organization) {
@@ -6990,9 +7650,9 @@ public final class Model {
 
       @java.lang.Override
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
         muni.model.Model.Organization parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
@@ -7008,6 +7668,7 @@ public final class Model {
       }
 
       private java.lang.Object id_ = "";
+
       /**
        * <pre>
        *Output only
@@ -7020,7 +7681,7 @@ public final class Model {
         java.lang.Object ref = id_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+                  (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           id_ = s;
           return s;
@@ -7028,6 +7689,7 @@ public final class Model {
           return (java.lang.String) ref;
         }
       }
+
       /**
        * <pre>
        *Output only
@@ -7037,18 +7699,19 @@ public final class Model {
        * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
-          getIdBytes() {
+      getIdBytes() {
         java.lang.Object ref = id_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                          (java.lang.String) ref);
           id_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
+
       /**
        * <pre>
        *Output only
@@ -7059,15 +7722,16 @@ public final class Model {
        * @return This builder for chaining.
        */
       public Builder setId(
-          java.lang.String value) {
+              java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         id_ = value;
         onChanged();
         return this;
       }
+
       /**
        * <pre>
        *Output only
@@ -7077,11 +7741,12 @@ public final class Model {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
+
         id_ = getDefaultInstance().getId();
         onChanged();
         return this;
       }
+
       /**
        * <pre>
        *Output only
@@ -7092,18 +7757,19 @@ public final class Model {
        * @return This builder for chaining.
        */
       public Builder setIdBytes(
-          com.google.protobuf.ByteString value) {
+              com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         id_ = value;
         onChanged();
         return this;
       }
 
       private java.lang.Object name_ = "";
+
       /**
        * <code>string name = 4;</code>
        * @return The name.
@@ -7112,7 +7778,7 @@ public final class Model {
         java.lang.Object ref = name_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+                  (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           name_ = s;
           return s;
@@ -7120,60 +7786,64 @@ public final class Model {
           return (java.lang.String) ref;
         }
       }
+
       /**
        * <code>string name = 4;</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
-          getNameBytes() {
+      getNameBytes() {
         java.lang.Object ref = name_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                          (java.lang.String) ref);
           name_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
+
       /**
        * <code>string name = 4;</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
       public Builder setName(
-          java.lang.String value) {
+              java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         name_ = value;
         onChanged();
         return this;
       }
+
       /**
        * <code>string name = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
+
         name_ = getDefaultInstance().getName();
         onChanged();
         return this;
       }
+
       /**
        * <code>string name = 4;</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
       public Builder setNameBytes(
-          com.google.protobuf.ByteString value) {
+              com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         name_ = value;
         onChanged();
         return this;
@@ -7181,7 +7851,8 @@ public final class Model {
 
       private muni.model.Model.ContactChannels contactChannels_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          muni.model.Model.ContactChannels, muni.model.Model.ContactChannels.Builder, muni.model.Model.ContactChannelsOrBuilder> contactChannelsBuilder_;
+              muni.model.Model.ContactChannels, muni.model.Model.ContactChannels.Builder, muni.model.Model.ContactChannelsOrBuilder> contactChannelsBuilder_;
+
       /**
        * <code>.muni.model.ContactChannels contactChannels = 5;</code>
        * @return Whether the contactChannels field is set.
@@ -7189,6 +7860,7 @@ public final class Model {
       public boolean hasContactChannels() {
         return contactChannelsBuilder_ != null || contactChannels_ != null;
       }
+
       /**
        * <code>.muni.model.ContactChannels contactChannels = 5;</code>
        * @return The contactChannels.
@@ -7200,6 +7872,7 @@ public final class Model {
           return contactChannelsBuilder_.getMessage();
         }
       }
+
       /**
        * <code>.muni.model.ContactChannels contactChannels = 5;</code>
        */
@@ -7216,11 +7889,12 @@ public final class Model {
 
         return this;
       }
+
       /**
        * <code>.muni.model.ContactChannels contactChannels = 5;</code>
        */
       public Builder setContactChannels(
-          muni.model.Model.ContactChannels.Builder builderForValue) {
+              muni.model.Model.ContactChannels.Builder builderForValue) {
         if (contactChannelsBuilder_ == null) {
           contactChannels_ = builderForValue.build();
           onChanged();
@@ -7230,6 +7904,7 @@ public final class Model {
 
         return this;
       }
+
       /**
        * <code>.muni.model.ContactChannels contactChannels = 5;</code>
        */
@@ -7237,7 +7912,7 @@ public final class Model {
         if (contactChannelsBuilder_ == null) {
           if (contactChannels_ != null) {
             contactChannels_ =
-              muni.model.Model.ContactChannels.newBuilder(contactChannels_).mergeFrom(value).buildPartial();
+                    muni.model.Model.ContactChannels.newBuilder(contactChannels_).mergeFrom(value).buildPartial();
           } else {
             contactChannels_ = value;
           }
@@ -7248,6 +7923,7 @@ public final class Model {
 
         return this;
       }
+
       /**
        * <code>.muni.model.ContactChannels contactChannels = 5;</code>
        */
@@ -7262,14 +7938,16 @@ public final class Model {
 
         return this;
       }
+
       /**
        * <code>.muni.model.ContactChannels contactChannels = 5;</code>
        */
       public muni.model.Model.ContactChannels.Builder getContactChannelsBuilder() {
-        
+
         onChanged();
         return getContactChannelsFieldBuilder().getBuilder();
       }
+
       /**
        * <code>.muni.model.ContactChannels contactChannels = 5;</code>
        */
@@ -7278,18 +7956,19 @@ public final class Model {
           return contactChannelsBuilder_.getMessageOrBuilder();
         } else {
           return contactChannels_ == null ?
-              muni.model.Model.ContactChannels.getDefaultInstance() : contactChannels_;
+                  muni.model.Model.ContactChannels.getDefaultInstance() : contactChannels_;
         }
       }
+
       /**
        * <code>.muni.model.ContactChannels contactChannels = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          muni.model.Model.ContactChannels, muni.model.Model.ContactChannels.Builder, muni.model.Model.ContactChannelsOrBuilder> 
-          getContactChannelsFieldBuilder() {
+              muni.model.Model.ContactChannels, muni.model.Model.ContactChannels.Builder, muni.model.Model.ContactChannelsOrBuilder>
+      getContactChannelsFieldBuilder() {
         if (contactChannelsBuilder_ == null) {
           contactChannelsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              muni.model.Model.ContactChannels, muni.model.Model.ContactChannels.Builder, muni.model.Model.ContactChannelsOrBuilder>(
+                  muni.model.Model.ContactChannels, muni.model.Model.ContactChannels.Builder, muni.model.Model.ContactChannelsOrBuilder>(
                   getContactChannels(),
                   getParentForChildren(),
                   isClean());
@@ -7299,6 +7978,7 @@ public final class Model {
       }
 
       private java.lang.Object website_ = "";
+
       /**
        * <code>string website = 6;</code>
        * @return The website.
@@ -7307,7 +7987,7 @@ public final class Model {
         java.lang.Object ref = website_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+                  (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           website_ = s;
           return s;
@@ -7315,60 +7995,65 @@ public final class Model {
           return (java.lang.String) ref;
         }
       }
+
       /**
        * <code>string website = 6;</code>
        * @return The bytes for website.
        */
       public com.google.protobuf.ByteString
-          getWebsiteBytes() {
+      getWebsiteBytes() {
         java.lang.Object ref = website_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                          (java.lang.String) ref);
           website_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
+
       /**
        * <code>string website = 6;</code>
        * @param value The website to set.
        * @return This builder for chaining.
        */
       public Builder setWebsite(
-          java.lang.String value) {
+              java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         website_ = value;
         onChanged();
         return this;
       }
+
       /**
        * <code>string website = 6;</code>
+       *
        * @return This builder for chaining.
        */
       public Builder clearWebsite() {
-        
+
         website_ = getDefaultInstance().getWebsite();
         onChanged();
         return this;
       }
+
       /**
        * <code>string website = 6;</code>
        * @param value The bytes for website to set.
        * @return This builder for chaining.
        */
       public Builder setWebsiteBytes(
-          com.google.protobuf.ByteString value) {
+              com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         website_ = value;
         onChanged();
         return this;
@@ -7376,7 +8061,8 @@ public final class Model {
 
       private com.google.protobuf.Timestamp createTime_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createTimeBuilder_;
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createTimeBuilder_;
+
       /**
        * <pre>
        *Output only
@@ -7388,6 +8074,7 @@ public final class Model {
       public boolean hasCreateTime() {
         return createTimeBuilder_ != null || createTime_ != null;
       }
+
       /**
        * <pre>
        *Output only
@@ -7403,6 +8090,7 @@ public final class Model {
           return createTimeBuilder_.getMessage();
         }
       }
+
       /**
        * <pre>
        *Output only
@@ -7423,6 +8111,7 @@ public final class Model {
 
         return this;
       }
+
       /**
        * <pre>
        *Output only
@@ -7431,7 +8120,7 @@ public final class Model {
        * <code>.google.protobuf.Timestamp createTime = 1;</code>
        */
       public Builder setCreateTime(
-          com.google.protobuf.Timestamp.Builder builderForValue) {
+              com.google.protobuf.Timestamp.Builder builderForValue) {
         if (createTimeBuilder_ == null) {
           createTime_ = builderForValue.build();
           onChanged();
@@ -7441,6 +8130,7 @@ public final class Model {
 
         return this;
       }
+
       /**
        * <pre>
        *Output only
@@ -7452,7 +8142,7 @@ public final class Model {
         if (createTimeBuilder_ == null) {
           if (createTime_ != null) {
             createTime_ =
-              com.google.protobuf.Timestamp.newBuilder(createTime_).mergeFrom(value).buildPartial();
+                    com.google.protobuf.Timestamp.newBuilder(createTime_).mergeFrom(value).buildPartial();
           } else {
             createTime_ = value;
           }
@@ -7463,6 +8153,7 @@ public final class Model {
 
         return this;
       }
+
       /**
        * <pre>
        *Output only
@@ -7481,6 +8172,7 @@ public final class Model {
 
         return this;
       }
+
       /**
        * <pre>
        *Output only
@@ -7489,10 +8181,11 @@ public final class Model {
        * <code>.google.protobuf.Timestamp createTime = 1;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreateTimeBuilder() {
-        
+
         onChanged();
         return getCreateTimeFieldBuilder().getBuilder();
       }
+
       /**
        * <pre>
        *Output only
@@ -7505,9 +8198,10 @@ public final class Model {
           return createTimeBuilder_.getMessageOrBuilder();
         } else {
           return createTime_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : createTime_;
+                  com.google.protobuf.Timestamp.getDefaultInstance() : createTime_;
         }
       }
+
       /**
        * <pre>
        *Output only
@@ -7516,11 +8210,11 @@ public final class Model {
        * <code>.google.protobuf.Timestamp createTime = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-          getCreateTimeFieldBuilder() {
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>
+      getCreateTimeFieldBuilder() {
         if (createTimeBuilder_ == null) {
           createTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
                   getCreateTime(),
                   getParentForChildren(),
                   isClean());
@@ -7531,7 +8225,8 @@ public final class Model {
 
       private com.google.protobuf.Timestamp updateTime_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updateTimeBuilder_;
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updateTimeBuilder_;
+
       /**
        * <pre>
        *Output only
@@ -7543,6 +8238,7 @@ public final class Model {
       public boolean hasUpdateTime() {
         return updateTimeBuilder_ != null || updateTime_ != null;
       }
+
       /**
        * <pre>
        *Output only
@@ -7558,6 +8254,7 @@ public final class Model {
           return updateTimeBuilder_.getMessage();
         }
       }
+
       /**
        * <pre>
        *Output only
@@ -7578,6 +8275,7 @@ public final class Model {
 
         return this;
       }
+
       /**
        * <pre>
        *Output only
@@ -7586,7 +8284,7 @@ public final class Model {
        * <code>.google.protobuf.Timestamp updateTime = 2;</code>
        */
       public Builder setUpdateTime(
-          com.google.protobuf.Timestamp.Builder builderForValue) {
+              com.google.protobuf.Timestamp.Builder builderForValue) {
         if (updateTimeBuilder_ == null) {
           updateTime_ = builderForValue.build();
           onChanged();
@@ -7596,6 +8294,7 @@ public final class Model {
 
         return this;
       }
+
       /**
        * <pre>
        *Output only
@@ -7607,7 +8306,7 @@ public final class Model {
         if (updateTimeBuilder_ == null) {
           if (updateTime_ != null) {
             updateTime_ =
-              com.google.protobuf.Timestamp.newBuilder(updateTime_).mergeFrom(value).buildPartial();
+                    com.google.protobuf.Timestamp.newBuilder(updateTime_).mergeFrom(value).buildPartial();
           } else {
             updateTime_ = value;
           }
@@ -7618,9 +8317,10 @@ public final class Model {
 
         return this;
       }
+
       /**
        * <pre>
-       *Output only
+       * Output only
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updateTime = 2;</code>
@@ -7636,21 +8336,23 @@ public final class Model {
 
         return this;
       }
+
       /**
        * <pre>
-       *Output only
+       * Output only
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updateTime = 2;</code>
        */
       public com.google.protobuf.Timestamp.Builder getUpdateTimeBuilder() {
-        
+
         onChanged();
         return getUpdateTimeFieldBuilder().getBuilder();
       }
+
       /**
        * <pre>
-       *Output only
+       * Output only
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updateTime = 2;</code>
@@ -7660,22 +8362,23 @@ public final class Model {
           return updateTimeBuilder_.getMessageOrBuilder();
         } else {
           return updateTime_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : updateTime_;
+                  com.google.protobuf.Timestamp.getDefaultInstance() : updateTime_;
         }
       }
+
       /**
        * <pre>
-       *Output only
+       * Output only
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updateTime = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-          getUpdateTimeFieldBuilder() {
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>
+      getUpdateTimeFieldBuilder() {
         if (updateTimeBuilder_ == null) {
           updateTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
                   getUpdateTime(),
                   getParentForChildren(),
                   isClean());
@@ -7683,15 +8386,16 @@ public final class Model {
         }
         return updateTimeBuilder_;
       }
+
       @java.lang.Override
       public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
       public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
@@ -7701,6 +8405,7 @@ public final class Model {
 
     // @@protoc_insertion_point(class_scope:muni.model.Organization)
     private static final muni.model.Model.Organization DEFAULT_INSTANCE;
+
     static {
       DEFAULT_INSTANCE = new muni.model.Model.Organization();
     }
@@ -7710,12 +8415,12 @@ public final class Model {
     }
 
     private static final com.google.protobuf.Parser<Organization>
-        PARSER = new com.google.protobuf.AbstractParser<Organization>() {
+            PARSER = new com.google.protobuf.AbstractParser<Organization>() {
       @java.lang.Override
       public Organization parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
         return new Organization(input, extensionRegistry);
       }
     };
@@ -7736,70 +8441,6 @@ public final class Model {
 
   }
 
-  public interface ContactChannelsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:muni.model.ContactChannels)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>.muni.model.Phone phone1 = 1;</code>
-     * @return Whether the phone1 field is set.
-     */
-    boolean hasPhone1();
-    /**
-     * <code>.muni.model.Phone phone1 = 1;</code>
-     * @return The phone1.
-     */
-    muni.model.Model.Phone getPhone1();
-    /**
-     * <code>.muni.model.Phone phone1 = 1;</code>
-     */
-    muni.model.Model.PhoneOrBuilder getPhone1OrBuilder();
-
-    /**
-     * <code>.muni.model.Phone phone2 = 2;</code>
-     * @return Whether the phone2 field is set.
-     */
-    boolean hasPhone2();
-    /**
-     * <code>.muni.model.Phone phone2 = 2;</code>
-     * @return The phone2.
-     */
-    muni.model.Model.Phone getPhone2();
-    /**
-     * <code>.muni.model.Phone phone2 = 2;</code>
-     */
-    muni.model.Model.PhoneOrBuilder getPhone2OrBuilder();
-
-    /**
-     * <code>.muni.model.Email email = 3;</code>
-     * @return Whether the email field is set.
-     */
-    boolean hasEmail();
-    /**
-     * <code>.muni.model.Email email = 3;</code>
-     * @return The email.
-     */
-    muni.model.Model.Email getEmail();
-    /**
-     * <code>.muni.model.Email email = 3;</code>
-     */
-    muni.model.Model.EmailOrBuilder getEmailOrBuilder();
-
-    /**
-     * <code>.muni.model.PostalAddress postalAddress = 4;</code>
-     * @return Whether the postalAddress field is set.
-     */
-    boolean hasPostalAddress();
-    /**
-     * <code>.muni.model.PostalAddress postalAddress = 4;</code>
-     * @return The postalAddress.
-     */
-    muni.model.Model.PostalAddress getPostalAddress();
-    /**
-     * <code>.muni.model.PostalAddress postalAddress = 4;</code>
-     */
-    muni.model.Model.PostalAddressOrBuilder getPostalAddressOrBuilder();
-  }
   /**
    * <pre>
    *aggregate, some may be in different tables in backend
@@ -7808,21 +8449,22 @@ public final class Model {
    * Protobuf type {@code muni.model.ContactChannels}
    */
   public static final class ContactChannels extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:muni.model.ContactChannels)
-      ContactChannelsOrBuilder {
-  private static final long serialVersionUID = 0L;
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:muni.model.ContactChannels)
+          ContactChannelsOrBuilder {
+    private static final long serialVersionUID = 0L;
+
     // Use ContactChannels.newBuilder() to construct.
     private ContactChannels(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private ContactChannels() {
-    }
+
+    private volatile java.lang.Object email_;
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
+            UnusedPrivateParameter unused) {
       return new ContactChannels();
     }
 
@@ -7831,16 +8473,96 @@ public final class Model {
     getUnknownFields() {
       return this.unknownFields;
     }
+
+    private ContactChannels() {
+      email_ = "";
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+    getDescriptor() {
+      return muni.model.Model.internal_static_muni_model_ContactChannels_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    internalGetFieldAccessorTable() {
+      return muni.model.Model.internal_static_muni_model_ContactChannels_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                      muni.model.Model.ContactChannels.class, muni.model.Model.ContactChannels.Builder.class);
+    }
+
+    public static final int PHONE1_FIELD_NUMBER = 1;
+    private muni.model.Model.Phone phone1_;
+
+    /**
+     * <code>.muni.model.Phone phone1 = 1;</code>
+     *
+     * @return Whether the phone1 field is set.
+     */
+    @java.lang.Override
+    public boolean hasPhone1() {
+      return phone1_ != null;
+    }
+
+    /**
+     * <code>.muni.model.Phone phone1 = 1;</code>
+     *
+     * @return The phone1.
+     */
+    @java.lang.Override
+    public muni.model.Model.Phone getPhone1() {
+      return phone1_ == null ? muni.model.Model.Phone.getDefaultInstance() : phone1_;
+    }
+
+    /**
+     * <code>.muni.model.Phone phone1 = 1;</code>
+     */
+    @java.lang.Override
+    public muni.model.Model.PhoneOrBuilder getPhone1OrBuilder() {
+      return getPhone1();
+    }
+
+    public static final int PHONE2_FIELD_NUMBER = 2;
+    private muni.model.Model.Phone phone2_;
+
+    /**
+     * <code>.muni.model.Phone phone2 = 2;</code>
+     * @return Whether the phone2 field is set.
+     */
+    @java.lang.Override
+    public boolean hasPhone2() {
+      return phone2_ != null;
+    }
+
+    /**
+     * <code>.muni.model.Phone phone2 = 2;</code>
+     * @return The phone2.
+     */
+    @java.lang.Override
+    public muni.model.Model.Phone getPhone2() {
+      return phone2_ == null ? muni.model.Model.Phone.getDefaultInstance() : phone2_;
+    }
+
+    /**
+     * <code>.muni.model.Phone phone2 = 2;</code>
+     */
+    @java.lang.Override
+    public muni.model.Model.PhoneOrBuilder getPhone2OrBuilder() {
+      return getPhone2();
+    }
+
+    public static final int EMAIL_FIELD_NUMBER = 3;
+
     private ContactChannels(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+              com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -7876,16 +8598,9 @@ public final class Model {
               break;
             }
             case 26: {
-              muni.model.Model.Email.Builder subBuilder = null;
-              if (email_ != null) {
-                subBuilder = email_.toBuilder();
-              }
-              email_ = input.readMessage(muni.model.Model.Email.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(email_);
-                email_ = subBuilder.buildPartial();
-              }
+              java.lang.String s = input.readStringRequireUtf8();
 
+              email_ = s;
               break;
             }
             case 34: {
@@ -7903,7 +8618,7 @@ public final class Model {
             }
             default: {
               if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
+                      input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -7914,105 +8629,54 @@ public final class Model {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
+                e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return muni.model.Model.internal_static_muni_model_ContactChannels_descriptor;
-    }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return muni.model.Model.internal_static_muni_model_ContactChannels_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              muni.model.Model.ContactChannels.class, muni.model.Model.ContactChannels.Builder.class);
-    }
-
-    public static final int PHONE1_FIELD_NUMBER = 1;
-    private muni.model.Model.Phone phone1_;
     /**
-     * <code>.muni.model.Phone phone1 = 1;</code>
-     * @return Whether the phone1 field is set.
-     */
-    @java.lang.Override
-    public boolean hasPhone1() {
-      return phone1_ != null;
-    }
-    /**
-     * <code>.muni.model.Phone phone1 = 1;</code>
-     * @return The phone1.
-     */
-    @java.lang.Override
-    public muni.model.Model.Phone getPhone1() {
-      return phone1_ == null ? muni.model.Model.Phone.getDefaultInstance() : phone1_;
-    }
-    /**
-     * <code>.muni.model.Phone phone1 = 1;</code>
-     */
-    @java.lang.Override
-    public muni.model.Model.PhoneOrBuilder getPhone1OrBuilder() {
-      return getPhone1();
-    }
-
-    public static final int PHONE2_FIELD_NUMBER = 2;
-    private muni.model.Model.Phone phone2_;
-    /**
-     * <code>.muni.model.Phone phone2 = 2;</code>
-     * @return Whether the phone2 field is set.
-     */
-    @java.lang.Override
-    public boolean hasPhone2() {
-      return phone2_ != null;
-    }
-    /**
-     * <code>.muni.model.Phone phone2 = 2;</code>
-     * @return The phone2.
-     */
-    @java.lang.Override
-    public muni.model.Model.Phone getPhone2() {
-      return phone2_ == null ? muni.model.Model.Phone.getDefaultInstance() : phone2_;
-    }
-    /**
-     * <code>.muni.model.Phone phone2 = 2;</code>
-     */
-    @java.lang.Override
-    public muni.model.Model.PhoneOrBuilder getPhone2OrBuilder() {
-      return getPhone2();
-    }
-
-    public static final int EMAIL_FIELD_NUMBER = 3;
-    private muni.model.Model.Email email_;
-    /**
-     * <code>.muni.model.Email email = 3;</code>
-     * @return Whether the email field is set.
-     */
-    @java.lang.Override
-    public boolean hasEmail() {
-      return email_ != null;
-    }
-    /**
-     * <code>.muni.model.Email email = 3;</code>
+     * <code>string email = 3;</code>
+     *
      * @return The email.
      */
     @java.lang.Override
-    public muni.model.Model.Email getEmail() {
-      return email_ == null ? muni.model.Model.Email.getDefaultInstance() : email_;
+    public java.lang.String getEmail() {
+      java.lang.Object ref = email_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        email_ = s;
+        return s;
+      }
     }
+
     /**
-     * <code>.muni.model.Email email = 3;</code>
+     * <code>string email = 3;</code>
+     * @return The bytes for email.
      */
     @java.lang.Override
-    public muni.model.Model.EmailOrBuilder getEmailOrBuilder() {
-      return getEmail();
+    public com.google.protobuf.ByteString
+    getEmailBytes() {
+      java.lang.Object ref = email_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
+                        (java.lang.String) ref);
+        email_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int POSTALADDRESS_FIELD_NUMBER = 4;
     private muni.model.Model.PostalAddress postalAddress_;
+
     /**
      * <code>.muni.model.PostalAddress postalAddress = 4;</code>
      * @return Whether the postalAddress field is set.
@@ -8021,6 +8685,7 @@ public final class Model {
     public boolean hasPostalAddress() {
       return postalAddress_ != null;
     }
+
     /**
      * <code>.muni.model.PostalAddress postalAddress = 4;</code>
      * @return The postalAddress.
@@ -8029,6 +8694,7 @@ public final class Model {
     public muni.model.Model.PostalAddress getPostalAddress() {
       return postalAddress_ == null ? muni.model.Model.PostalAddress.getDefaultInstance() : postalAddress_;
     }
+
     /**
      * <code>.muni.model.PostalAddress postalAddress = 4;</code>
      */
@@ -8038,6 +8704,7 @@ public final class Model {
     }
 
     private byte memoizedIsInitialized = -1;
+
     @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -8050,15 +8717,15 @@ public final class Model {
 
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
+            throws java.io.IOException {
       if (phone1_ != null) {
         output.writeMessage(1, getPhone1());
       }
       if (phone2_ != null) {
         output.writeMessage(2, getPhone2());
       }
-      if (email_ != null) {
-        output.writeMessage(3, getEmail());
+      if (!getEmailBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, email_);
       }
       if (postalAddress_ != null) {
         output.writeMessage(4, getPostalAddress());
@@ -8074,19 +8741,18 @@ public final class Model {
       size = 0;
       if (phone1_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getPhone1());
+                .computeMessageSize(1, getPhone1());
       }
       if (phone2_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getPhone2());
+                .computeMessageSize(2, getPhone2());
       }
-      if (email_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getEmail());
+      if (!getEmailBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, email_);
       }
       if (postalAddress_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getPostalAddress());
+                .computeMessageSize(4, getPostalAddress());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8096,7 +8762,7 @@ public final class Model {
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-       return true;
+        return true;
       }
       if (!(obj instanceof muni.model.Model.ContactChannels)) {
         return super.equals(obj);
@@ -8106,25 +8772,21 @@ public final class Model {
       if (hasPhone1() != other.hasPhone1()) return false;
       if (hasPhone1()) {
         if (!getPhone1()
-            .equals(other.getPhone1())) return false;
+                .equals(other.getPhone1())) return false;
       }
       if (hasPhone2() != other.hasPhone2()) return false;
       if (hasPhone2()) {
         if (!getPhone2()
-            .equals(other.getPhone2())) return false;
+                .equals(other.getPhone2())) return false;
       }
-      if (hasEmail() != other.hasEmail()) return false;
-      if (hasEmail()) {
-        if (!getEmail()
-            .equals(other.getEmail())) return false;
-      }
+      if (!getEmail()
+              .equals(other.getEmail())) return false;
       if (hasPostalAddress() != other.hasPostalAddress()) return false;
       if (hasPostalAddress()) {
         if (!getPostalAddress()
-            .equals(other.getPostalAddress())) return false;
+                .equals(other.getPostalAddress())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      return unknownFields.equals(other.unknownFields);
     }
 
     @java.lang.Override
@@ -8142,10 +8804,8 @@ public final class Model {
         hash = (37 * hash) + PHONE2_FIELD_NUMBER;
         hash = (53 * hash) + getPhone2().hashCode();
       }
-      if (hasEmail()) {
-        hash = (37 * hash) + EMAIL_FIELD_NUMBER;
-        hash = (53 * hash) + getEmail().hashCode();
-      }
+      hash = (37 * hash) + EMAIL_FIELD_NUMBER;
+      hash = (53 * hash) + getEmail().hashCode();
       if (hasPostalAddress()) {
         hash = (37 * hash) + POSTALADDRESS_FIELD_NUMBER;
         hash = (53 * hash) + getPostalAddress().hashCode();
@@ -8156,117 +8816,134 @@ public final class Model {
     }
 
     public static muni.model.Model.ContactChannels parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static muni.model.Model.ContactChannels parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static muni.model.Model.ContactChannels parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static muni.model.Model.ContactChannels parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static muni.model.Model.ContactChannels parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static muni.model.Model.ContactChannels parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static muni.model.Model.ContactChannels parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+              .parseWithIOException(PARSER, input);
     }
+
     public static muni.model.Model.ContactChannels parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+              .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static muni.model.Model.ContactChannels parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+              .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static muni.model.Model.ContactChannels parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static muni.model.Model.ContactChannels parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+              .parseWithIOException(PARSER, input);
     }
+
     public static muni.model.Model.ContactChannels parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+              .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
+    public Builder newBuilderForType() {
+      return newBuilder();
+    }
+
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
+
     public static Builder newBuilder(muni.model.Model.ContactChannels prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+
     @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+              ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+
     /**
      * <pre>
-     *aggregate, some may be in different tables in backend
+     * aggregate, some may be in different tables in backend
      * </pre>
-     *
+     * <p>
      * Protobuf type {@code muni.model.ContactChannels}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:muni.model.ContactChannels)
-        muni.model.Model.ContactChannelsOrBuilder {
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:muni.model.ContactChannels)
+            muni.model.Model.ContactChannelsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
+      getDescriptor() {
         return muni.model.Model.internal_static_muni_model_ContactChannels_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
+      internalGetFieldAccessorTable() {
         return muni.model.Model.internal_static_muni_model_ContactChannels_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                muni.model.Model.ContactChannels.class, muni.model.Model.ContactChannels.Builder.class);
+                .ensureFieldAccessorsInitialized(
+                        muni.model.Model.ContactChannels.class, muni.model.Model.ContactChannels.Builder.class);
       }
 
       // Construct using muni.model.Model.ContactChannels.newBuilder()
@@ -8275,48 +8952,22 @@ public final class Model {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
+
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
         }
       }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        if (phone1Builder_ == null) {
-          phone1_ = null;
-        } else {
-          phone1_ = null;
-          phone1Builder_ = null;
-        }
-        if (phone2Builder_ == null) {
-          phone2_ = null;
-        } else {
-          phone2_ = null;
-          phone2Builder_ = null;
-        }
-        if (emailBuilder_ == null) {
-          email_ = null;
-        } else {
-          email_ = null;
-          emailBuilder_ = null;
-        }
-        if (postalAddressBuilder_ == null) {
-          postalAddress_ = null;
-        } else {
-          postalAddress_ = null;
-          postalAddressBuilder_ = null;
-        }
-        return this;
-      }
+
+      private java.lang.Object email_ = "";
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
+      getDescriptorForType() {
         return muni.model.Model.internal_static_muni_model_ContactChannels_descriptor;
       }
 
@@ -8335,6 +8986,80 @@ public final class Model {
       }
 
       @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (phone1Builder_ == null) {
+          phone1_ = null;
+        } else {
+          phone1_ = null;
+          phone1Builder_ = null;
+        }
+        if (phone2Builder_ == null) {
+          phone2_ = null;
+        } else {
+          phone2_ = null;
+          phone2Builder_ = null;
+        }
+        email_ = "";
+
+        if (postalAddressBuilder_ == null) {
+          postalAddress_ = null;
+        } else {
+          postalAddress_ = null;
+          postalAddressBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+
+      @java.lang.Override
+      public Builder setField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+        return super.setField(field, value);
+      }
+
+      @java.lang.Override
+      public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+
+      @java.lang.Override
+      public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+
+      @java.lang.Override
+      public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+
+      @java.lang.Override
+      public Builder addRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof muni.model.Model.ContactChannels) {
+          return mergeFrom((muni.model.Model.ContactChannels) other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      @java.lang.Override
       public muni.model.Model.ContactChannels buildPartial() {
         muni.model.Model.ContactChannels result = new muni.model.Model.ContactChannels(this);
         if (phone1Builder_ == null) {
@@ -8347,11 +9072,7 @@ public final class Model {
         } else {
           result.phone2_ = phone2Builder_.build();
         }
-        if (emailBuilder_ == null) {
-          result.email_ = email_;
-        } else {
-          result.email_ = emailBuilder_.build();
-        }
+        result.email_ = email_;
         if (postalAddressBuilder_ == null) {
           result.postalAddress_ = postalAddress_;
         } else {
@@ -8362,76 +9083,15 @@ public final class Model {
       }
 
       @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof muni.model.Model.ContactChannels) {
-          return mergeFrom((muni.model.Model.ContactChannels)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(muni.model.Model.ContactChannels other) {
-        if (other == muni.model.Model.ContactChannels.getDefaultInstance()) return this;
-        if (other.hasPhone1()) {
-          mergePhone1(other.getPhone1());
-        }
-        if (other.hasPhone2()) {
-          mergePhone2(other.getPhone2());
-        }
-        if (other.hasEmail()) {
-          mergeEmail(other.getEmail());
-        }
-        if (other.hasPostalAddress()) {
-          mergePostalAddress(other.getPostalAddress());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
       @java.lang.Override
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
         muni.model.Model.ContactChannels parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
@@ -8448,7 +9108,8 @@ public final class Model {
 
       private muni.model.Model.Phone phone1_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          muni.model.Model.Phone, muni.model.Model.Phone.Builder, muni.model.Model.PhoneOrBuilder> phone1Builder_;
+              muni.model.Model.Phone, muni.model.Model.Phone.Builder, muni.model.Model.PhoneOrBuilder> phone1Builder_;
+
       /**
        * <code>.muni.model.Phone phone1 = 1;</code>
        * @return Whether the phone1 field is set.
@@ -8456,6 +9117,7 @@ public final class Model {
       public boolean hasPhone1() {
         return phone1Builder_ != null || phone1_ != null;
       }
+
       /**
        * <code>.muni.model.Phone phone1 = 1;</code>
        * @return The phone1.
@@ -8467,6 +9129,7 @@ public final class Model {
           return phone1Builder_.getMessage();
         }
       }
+
       /**
        * <code>.muni.model.Phone phone1 = 1;</code>
        */
@@ -8483,11 +9146,12 @@ public final class Model {
 
         return this;
       }
+
       /**
        * <code>.muni.model.Phone phone1 = 1;</code>
        */
       public Builder setPhone1(
-          muni.model.Model.Phone.Builder builderForValue) {
+              muni.model.Model.Phone.Builder builderForValue) {
         if (phone1Builder_ == null) {
           phone1_ = builderForValue.build();
           onChanged();
@@ -8497,6 +9161,7 @@ public final class Model {
 
         return this;
       }
+
       /**
        * <code>.muni.model.Phone phone1 = 1;</code>
        */
@@ -8504,7 +9169,7 @@ public final class Model {
         if (phone1Builder_ == null) {
           if (phone1_ != null) {
             phone1_ =
-              muni.model.Model.Phone.newBuilder(phone1_).mergeFrom(value).buildPartial();
+                    muni.model.Model.Phone.newBuilder(phone1_).mergeFrom(value).buildPartial();
           } else {
             phone1_ = value;
           }
@@ -8515,6 +9180,7 @@ public final class Model {
 
         return this;
       }
+
       /**
        * <code>.muni.model.Phone phone1 = 1;</code>
        */
@@ -8529,14 +9195,16 @@ public final class Model {
 
         return this;
       }
+
       /**
        * <code>.muni.model.Phone phone1 = 1;</code>
        */
       public muni.model.Model.Phone.Builder getPhone1Builder() {
-        
+
         onChanged();
         return getPhone1FieldBuilder().getBuilder();
       }
+
       /**
        * <code>.muni.model.Phone phone1 = 1;</code>
        */
@@ -8545,18 +9213,19 @@ public final class Model {
           return phone1Builder_.getMessageOrBuilder();
         } else {
           return phone1_ == null ?
-              muni.model.Model.Phone.getDefaultInstance() : phone1_;
+                  muni.model.Model.Phone.getDefaultInstance() : phone1_;
         }
       }
+
       /**
        * <code>.muni.model.Phone phone1 = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          muni.model.Model.Phone, muni.model.Model.Phone.Builder, muni.model.Model.PhoneOrBuilder> 
-          getPhone1FieldBuilder() {
+              muni.model.Model.Phone, muni.model.Model.Phone.Builder, muni.model.Model.PhoneOrBuilder>
+      getPhone1FieldBuilder() {
         if (phone1Builder_ == null) {
           phone1Builder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              muni.model.Model.Phone, muni.model.Model.Phone.Builder, muni.model.Model.PhoneOrBuilder>(
+                  muni.model.Model.Phone, muni.model.Model.Phone.Builder, muni.model.Model.PhoneOrBuilder>(
                   getPhone1(),
                   getParentForChildren(),
                   isClean());
@@ -8567,16 +9236,20 @@ public final class Model {
 
       private muni.model.Model.Phone phone2_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          muni.model.Model.Phone, muni.model.Model.Phone.Builder, muni.model.Model.PhoneOrBuilder> phone2Builder_;
+              muni.model.Model.Phone, muni.model.Model.Phone.Builder, muni.model.Model.PhoneOrBuilder> phone2Builder_;
+
       /**
        * <code>.muni.model.Phone phone2 = 2;</code>
+       *
        * @return Whether the phone2 field is set.
        */
       public boolean hasPhone2() {
         return phone2Builder_ != null || phone2_ != null;
       }
+
       /**
        * <code>.muni.model.Phone phone2 = 2;</code>
+       *
        * @return The phone2.
        */
       public muni.model.Model.Phone getPhone2() {
@@ -8586,6 +9259,7 @@ public final class Model {
           return phone2Builder_.getMessage();
         }
       }
+
       /**
        * <code>.muni.model.Phone phone2 = 2;</code>
        */
@@ -8602,11 +9276,12 @@ public final class Model {
 
         return this;
       }
+
       /**
        * <code>.muni.model.Phone phone2 = 2;</code>
        */
       public Builder setPhone2(
-          muni.model.Model.Phone.Builder builderForValue) {
+              muni.model.Model.Phone.Builder builderForValue) {
         if (phone2Builder_ == null) {
           phone2_ = builderForValue.build();
           onChanged();
@@ -8616,6 +9291,7 @@ public final class Model {
 
         return this;
       }
+
       /**
        * <code>.muni.model.Phone phone2 = 2;</code>
        */
@@ -8623,7 +9299,7 @@ public final class Model {
         if (phone2Builder_ == null) {
           if (phone2_ != null) {
             phone2_ =
-              muni.model.Model.Phone.newBuilder(phone2_).mergeFrom(value).buildPartial();
+                    muni.model.Model.Phone.newBuilder(phone2_).mergeFrom(value).buildPartial();
           } else {
             phone2_ = value;
           }
@@ -8634,6 +9310,7 @@ public final class Model {
 
         return this;
       }
+
       /**
        * <code>.muni.model.Phone phone2 = 2;</code>
        */
@@ -8648,14 +9325,16 @@ public final class Model {
 
         return this;
       }
+
       /**
        * <code>.muni.model.Phone phone2 = 2;</code>
        */
       public muni.model.Model.Phone.Builder getPhone2Builder() {
-        
+
         onChanged();
         return getPhone2FieldBuilder().getBuilder();
       }
+
       /**
        * <code>.muni.model.Phone phone2 = 2;</code>
        */
@@ -8664,18 +9343,19 @@ public final class Model {
           return phone2Builder_.getMessageOrBuilder();
         } else {
           return phone2_ == null ?
-              muni.model.Model.Phone.getDefaultInstance() : phone2_;
+                  muni.model.Model.Phone.getDefaultInstance() : phone2_;
         }
       }
+
       /**
        * <code>.muni.model.Phone phone2 = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          muni.model.Model.Phone, muni.model.Model.Phone.Builder, muni.model.Model.PhoneOrBuilder> 
-          getPhone2FieldBuilder() {
+              muni.model.Model.Phone, muni.model.Model.Phone.Builder, muni.model.Model.PhoneOrBuilder>
+      getPhone2FieldBuilder() {
         if (phone2Builder_ == null) {
           phone2Builder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              muni.model.Model.Phone, muni.model.Model.Phone.Builder, muni.model.Model.PhoneOrBuilder>(
+                  muni.model.Model.Phone, muni.model.Model.Phone.Builder, muni.model.Model.PhoneOrBuilder>(
                   getPhone2(),
                   getParentForChildren(),
                   isClean());
@@ -8684,128 +9364,109 @@ public final class Model {
         return phone2Builder_;
       }
 
-      private muni.model.Model.Email email_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          muni.model.Model.Email, muni.model.Model.Email.Builder, muni.model.Model.EmailOrBuilder> emailBuilder_;
-      /**
-       * <code>.muni.model.Email email = 3;</code>
-       * @return Whether the email field is set.
-       */
-      public boolean hasEmail() {
-        return emailBuilder_ != null || email_ != null;
+      public Builder mergeFrom(muni.model.Model.ContactChannels other) {
+        if (other == muni.model.Model.ContactChannels.getDefaultInstance()) return this;
+        if (other.hasPhone1()) {
+          mergePhone1(other.getPhone1());
+        }
+        if (other.hasPhone2()) {
+          mergePhone2(other.getPhone2());
+        }
+        if (!other.getEmail().isEmpty()) {
+          email_ = other.email_;
+          onChanged();
+        }
+        if (other.hasPostalAddress()) {
+          mergePostalAddress(other.getPostalAddress());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
       }
+
       /**
-       * <code>.muni.model.Email email = 3;</code>
+       * <code>string email = 3;</code>
        * @return The email.
        */
-      public muni.model.Model.Email getEmail() {
-        if (emailBuilder_ == null) {
-          return email_ == null ? muni.model.Model.Email.getDefaultInstance() : email_;
+      public java.lang.String getEmail() {
+        java.lang.Object ref = email_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          email_ = s;
+          return s;
         } else {
-          return emailBuilder_.getMessage();
+          return (java.lang.String) ref;
         }
       }
-      /**
-       * <code>.muni.model.Email email = 3;</code>
-       */
-      public Builder setEmail(muni.model.Model.Email value) {
-        if (emailBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          email_ = value;
-          onChanged();
-        } else {
-          emailBuilder_.setMessage(value);
-        }
 
-        return this;
-      }
       /**
-       * <code>.muni.model.Email email = 3;</code>
+       * <code>string email = 3;</code>
+       * @param value The email to set.
+       * @return This builder for chaining.
        */
       public Builder setEmail(
-          muni.model.Model.Email.Builder builderForValue) {
-        if (emailBuilder_ == null) {
-          email_ = builderForValue.build();
-          onChanged();
-        } else {
-          emailBuilder_.setMessage(builderForValue.build());
+              java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
         }
 
+        email_ = value;
+        onChanged();
         return this;
       }
+
       /**
-       * <code>.muni.model.Email email = 3;</code>
+       * <code>string email = 3;</code>
+       * @return The bytes for email.
        */
-      public Builder mergeEmail(muni.model.Model.Email value) {
-        if (emailBuilder_ == null) {
-          if (email_ != null) {
-            email_ =
-              muni.model.Model.Email.newBuilder(email_).mergeFrom(value).buildPartial();
-          } else {
-            email_ = value;
-          }
-          onChanged();
+      public com.google.protobuf.ByteString
+      getEmailBytes() {
+        java.lang.Object ref = email_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                          (java.lang.String) ref);
+          email_ = b;
+          return b;
         } else {
-          emailBuilder_.mergeFrom(value);
+          return (com.google.protobuf.ByteString) ref;
         }
+      }
 
+      /**
+       * <code>string email = 3;</code>
+       * @param value The bytes for email to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmailBytes(
+              com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        email_ = value;
+        onChanged();
         return this;
       }
+
       /**
-       * <code>.muni.model.Email email = 3;</code>
+       * <code>string email = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearEmail() {
-        if (emailBuilder_ == null) {
-          email_ = null;
-          onChanged();
-        } else {
-          email_ = null;
-          emailBuilder_ = null;
-        }
 
-        return this;
-      }
-      /**
-       * <code>.muni.model.Email email = 3;</code>
-       */
-      public muni.model.Model.Email.Builder getEmailBuilder() {
-        
+        email_ = getDefaultInstance().getEmail();
         onChanged();
-        return getEmailFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.muni.model.Email email = 3;</code>
-       */
-      public muni.model.Model.EmailOrBuilder getEmailOrBuilder() {
-        if (emailBuilder_ != null) {
-          return emailBuilder_.getMessageOrBuilder();
-        } else {
-          return email_ == null ?
-              muni.model.Model.Email.getDefaultInstance() : email_;
-        }
-      }
-      /**
-       * <code>.muni.model.Email email = 3;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          muni.model.Model.Email, muni.model.Model.Email.Builder, muni.model.Model.EmailOrBuilder> 
-          getEmailFieldBuilder() {
-        if (emailBuilder_ == null) {
-          emailBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              muni.model.Model.Email, muni.model.Model.Email.Builder, muni.model.Model.EmailOrBuilder>(
-                  getEmail(),
-                  getParentForChildren(),
-                  isClean());
-          email_ = null;
-        }
-        return emailBuilder_;
+        return this;
       }
 
       private muni.model.Model.PostalAddress postalAddress_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          muni.model.Model.PostalAddress, muni.model.Model.PostalAddress.Builder, muni.model.Model.PostalAddressOrBuilder> postalAddressBuilder_;
+              muni.model.Model.PostalAddress, muni.model.Model.PostalAddress.Builder, muni.model.Model.PostalAddressOrBuilder> postalAddressBuilder_;
+
       /**
        * <code>.muni.model.PostalAddress postalAddress = 4;</code>
        * @return Whether the postalAddress field is set.
@@ -8813,6 +9474,7 @@ public final class Model {
       public boolean hasPostalAddress() {
         return postalAddressBuilder_ != null || postalAddress_ != null;
       }
+
       /**
        * <code>.muni.model.PostalAddress postalAddress = 4;</code>
        * @return The postalAddress.
@@ -8824,6 +9486,7 @@ public final class Model {
           return postalAddressBuilder_.getMessage();
         }
       }
+
       /**
        * <code>.muni.model.PostalAddress postalAddress = 4;</code>
        */
@@ -8840,11 +9503,12 @@ public final class Model {
 
         return this;
       }
+
       /**
        * <code>.muni.model.PostalAddress postalAddress = 4;</code>
        */
       public Builder setPostalAddress(
-          muni.model.Model.PostalAddress.Builder builderForValue) {
+              muni.model.Model.PostalAddress.Builder builderForValue) {
         if (postalAddressBuilder_ == null) {
           postalAddress_ = builderForValue.build();
           onChanged();
@@ -8854,6 +9518,7 @@ public final class Model {
 
         return this;
       }
+
       /**
        * <code>.muni.model.PostalAddress postalAddress = 4;</code>
        */
@@ -8861,7 +9526,7 @@ public final class Model {
         if (postalAddressBuilder_ == null) {
           if (postalAddress_ != null) {
             postalAddress_ =
-              muni.model.Model.PostalAddress.newBuilder(postalAddress_).mergeFrom(value).buildPartial();
+                    muni.model.Model.PostalAddress.newBuilder(postalAddress_).mergeFrom(value).buildPartial();
           } else {
             postalAddress_ = value;
           }
@@ -8872,6 +9537,7 @@ public final class Model {
 
         return this;
       }
+
       /**
        * <code>.muni.model.PostalAddress postalAddress = 4;</code>
        */
@@ -8886,14 +9552,16 @@ public final class Model {
 
         return this;
       }
+
       /**
        * <code>.muni.model.PostalAddress postalAddress = 4;</code>
        */
       public muni.model.Model.PostalAddress.Builder getPostalAddressBuilder() {
-        
+
         onChanged();
         return getPostalAddressFieldBuilder().getBuilder();
       }
+
       /**
        * <code>.muni.model.PostalAddress postalAddress = 4;</code>
        */
@@ -8902,18 +9570,19 @@ public final class Model {
           return postalAddressBuilder_.getMessageOrBuilder();
         } else {
           return postalAddress_ == null ?
-              muni.model.Model.PostalAddress.getDefaultInstance() : postalAddress_;
+                  muni.model.Model.PostalAddress.getDefaultInstance() : postalAddress_;
         }
       }
+
       /**
        * <code>.muni.model.PostalAddress postalAddress = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          muni.model.Model.PostalAddress, muni.model.Model.PostalAddress.Builder, muni.model.Model.PostalAddressOrBuilder> 
-          getPostalAddressFieldBuilder() {
+              muni.model.Model.PostalAddress, muni.model.Model.PostalAddress.Builder, muni.model.Model.PostalAddressOrBuilder>
+      getPostalAddressFieldBuilder() {
         if (postalAddressBuilder_ == null) {
           postalAddressBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              muni.model.Model.PostalAddress, muni.model.Model.PostalAddress.Builder, muni.model.Model.PostalAddressOrBuilder>(
+                  muni.model.Model.PostalAddress, muni.model.Model.PostalAddress.Builder, muni.model.Model.PostalAddressOrBuilder>(
                   getPostalAddress(),
                   getParentForChildren(),
                   isClean());
@@ -8921,15 +9590,16 @@ public final class Model {
         }
         return postalAddressBuilder_;
       }
+
       @java.lang.Override
       public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
       public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
@@ -8939,6 +9609,7 @@ public final class Model {
 
     // @@protoc_insertion_point(class_scope:muni.model.ContactChannels)
     private static final muni.model.Model.ContactChannels DEFAULT_INSTANCE;
+
     static {
       DEFAULT_INSTANCE = new muni.model.Model.ContactChannels();
     }
@@ -8948,12 +9619,12 @@ public final class Model {
     }
 
     private static final com.google.protobuf.Parser<ContactChannels>
-        PARSER = new com.google.protobuf.AbstractParser<ContactChannels>() {
+            PARSER = new com.google.protobuf.AbstractParser<ContactChannels>() {
       @java.lang.Override
       public ContactChannels parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
         return new ContactChannels(input, extensionRegistry);
       }
     };
@@ -8974,34 +9645,42 @@ public final class Model {
 
   }
 
-  public interface PhoneOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:muni.model.Phone)
-      com.google.protobuf.MessageOrBuilder {
+  private static final com.google.protobuf.Descriptors.Descriptor
+          internal_static_muni_model_Case_descriptor;
+  private static final
+  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internal_static_muni_model_Case_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+          internal_static_muni_model_Subsystem_descriptor;
+  private static final
+  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internal_static_muni_model_Subsystem_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+          internal_static_muni_model_Organization_descriptor;
+  private static final
+  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internal_static_muni_model_Organization_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+          internal_static_muni_model_ContactChannels_descriptor;
+  private static final
+  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internal_static_muni_model_ContactChannels_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_muni_model_Phone_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internal_static_muni_model_Phone_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+          internal_static_muni_model_ErrorInfo_descriptor;
+  private static final
+  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internal_static_muni_model_ErrorInfo_fieldAccessorTable;
 
-    /**
-     * <code>int32 countryCode = 1;</code>
-     * @return The countryCode.
-     */
-    int getCountryCode();
-
-    /**
-     * <code>int32 number = 2;</code>
-     * @return The number.
-     */
-    int getNumber();
-
-    /**
-     * <code>string ext = 3;</code>
-     * @return The ext.
-     */
-    java.lang.String getExt();
-    /**
-     * <code>string ext = 3;</code>
-     * @return The bytes for ext.
-     */
-    com.google.protobuf.ByteString
-        getExtBytes();
+  public static com.google.protobuf.Descriptors.FileDescriptor
+  getDescriptor() {
+    return descriptor;
   }
+
   /**
    * <pre>
    * modeled separately to apply clean data rules
@@ -9010,22 +9689,22 @@ public final class Model {
    * Protobuf type {@code muni.model.Phone}
    */
   public static final class Phone extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:muni.model.Phone)
-      PhoneOrBuilder {
-  private static final long serialVersionUID = 0L;
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:muni.model.Phone)
+          PhoneOrBuilder {
+    private static final long serialVersionUID = 0L;
+
     // Use Phone.newBuilder() to construct.
     private Phone(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private Phone() {
-      ext_ = "";
-    }
+
+    private volatile java.lang.Object number_;
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
+            UnusedPrivateParameter unused) {
       return new Phone();
     }
 
@@ -9034,16 +9713,50 @@ public final class Model {
     getUnknownFields() {
       return this.unknownFields;
     }
+
+    private Phone() {
+      number_ = "";
+      ext_ = "";
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+    getDescriptor() {
+      return muni.model.Model.internal_static_muni_model_Phone_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    internalGetFieldAccessorTable() {
+      return muni.model.Model.internal_static_muni_model_Phone_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                      muni.model.Model.Phone.class, muni.model.Model.Phone.Builder.class);
+    }
+
+    public static final int COUNTRYCODE_FIELD_NUMBER = 1;
+    private int countryCode_;
+
+    /**
+     * <code>int32 countryCode = 1;</code>
+     *
+     * @return The countryCode.
+     */
+    @java.lang.Override
+    public int getCountryCode() {
+      return countryCode_;
+    }
+
+    public static final int NUMBER_FIELD_NUMBER = 2;
+
     private Phone(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+              com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -9057,9 +9770,10 @@ public final class Model {
               countryCode_ = input.readInt32();
               break;
             }
-            case 16: {
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
 
-              number_ = input.readInt32();
+              number_ = s;
               break;
             }
             case 26: {
@@ -9070,7 +9784,7 @@ public final class Model {
             }
             default: {
               if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
+                      input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -9081,49 +9795,53 @@ public final class Model {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
+                e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return muni.model.Model.internal_static_muni_model_Phone_descriptor;
-    }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return muni.model.Model.internal_static_muni_model_Phone_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              muni.model.Model.Phone.class, muni.model.Model.Phone.Builder.class);
-    }
-
-    public static final int COUNTRYCODE_FIELD_NUMBER = 1;
-    private int countryCode_;
     /**
-     * <code>int32 countryCode = 1;</code>
-     * @return The countryCode.
-     */
-    @java.lang.Override
-    public int getCountryCode() {
-      return countryCode_;
-    }
-
-    public static final int NUMBER_FIELD_NUMBER = 2;
-    private int number_;
-    /**
-     * <code>int32 number = 2;</code>
+     * <code>string number = 2;</code>
      * @return The number.
      */
     @java.lang.Override
-    public int getNumber() {
-      return number_;
+    public java.lang.String getNumber() {
+      java.lang.Object ref = number_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        number_ = s;
+        return s;
+      }
+    }
+
+    /**
+     * <code>string number = 2;</code>
+     * @return The bytes for number.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+    getNumberBytes() {
+      java.lang.Object ref = number_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
+                        (java.lang.String) ref);
+        number_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int EXT_FIELD_NUMBER = 3;
     private volatile java.lang.Object ext_;
+
     /**
      * <code>string ext = 3;</code>
      * @return The ext.
@@ -9134,25 +9852,26 @@ public final class Model {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         ext_ = s;
         return s;
       }
     }
+
     /**
      * <code>string ext = 3;</code>
      * @return The bytes for ext.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getExtBytes() {
+    getExtBytes() {
       java.lang.Object ref = ext_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
+                        (java.lang.String) ref);
         ext_ = b;
         return b;
       } else {
@@ -9161,6 +9880,7 @@ public final class Model {
     }
 
     private byte memoizedIsInitialized = -1;
+
     @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -9173,12 +9893,12 @@ public final class Model {
 
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
+            throws java.io.IOException {
       if (countryCode_ != 0) {
         output.writeInt32(1, countryCode_);
       }
-      if (number_ != 0) {
-        output.writeInt32(2, number_);
+      if (!getNumberBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, number_);
       }
       if (!getExtBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, ext_);
@@ -9194,11 +9914,10 @@ public final class Model {
       size = 0;
       if (countryCode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, countryCode_);
+                .computeInt32Size(1, countryCode_);
       }
-      if (number_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, number_);
+      if (!getNumberBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, number_);
       }
       if (!getExtBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, ext_);
@@ -9211,7 +9930,7 @@ public final class Model {
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-       return true;
+        return true;
       }
       if (!(obj instanceof muni.model.Model.Phone)) {
         return super.equals(obj);
@@ -9219,13 +9938,12 @@ public final class Model {
       muni.model.Model.Phone other = (muni.model.Model.Phone) obj;
 
       if (getCountryCode()
-          != other.getCountryCode()) return false;
-      if (getNumber()
-          != other.getNumber()) return false;
+              != other.getCountryCode()) return false;
+      if (!getNumber()
+              .equals(other.getNumber())) return false;
       if (!getExt()
-          .equals(other.getExt())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+              .equals(other.getExt())) return false;
+      return unknownFields.equals(other.unknownFields);
     }
 
     @java.lang.Override
@@ -9238,7 +9956,7 @@ public final class Model {
       hash = (37 * hash) + COUNTRYCODE_FIELD_NUMBER;
       hash = (53 * hash) + getCountryCode();
       hash = (37 * hash) + NUMBER_FIELD_NUMBER;
-      hash = (53 * hash) + getNumber();
+      hash = (53 * hash) + getNumber().hashCode();
       hash = (37 * hash) + EXT_FIELD_NUMBER;
       hash = (53 * hash) + getExt().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
@@ -9247,95 +9965,110 @@ public final class Model {
     }
 
     public static muni.model.Model.Phone parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static muni.model.Model.Phone parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static muni.model.Model.Phone parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static muni.model.Model.Phone parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static muni.model.Model.Phone parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static muni.model.Model.Phone parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static muni.model.Model.Phone parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+              .parseWithIOException(PARSER, input);
     }
+
     public static muni.model.Model.Phone parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+              .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static muni.model.Model.Phone parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+              .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static muni.model.Model.Phone parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static muni.model.Model.Phone parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+              .parseWithIOException(PARSER, input);
     }
+
     public static muni.model.Model.Phone parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+              .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
+
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
+
     public static Builder newBuilder(muni.model.Model.Phone prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+
     @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+              ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+
     /**
      * <pre>
      * modeled separately to apply clean data rules
@@ -9344,20 +10077,20 @@ public final class Model {
      * Protobuf type {@code muni.model.Phone}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:muni.model.Phone)
-        muni.model.Model.PhoneOrBuilder {
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:muni.model.Phone)
+            muni.model.Model.PhoneOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
+      getDescriptor() {
         return muni.model.Model.internal_static_muni_model_Phone_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
+      internalGetFieldAccessorTable() {
         return muni.model.Model.internal_static_muni_model_Phone_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                muni.model.Model.Phone.class, muni.model.Model.Phone.Builder.class);
+                .ensureFieldAccessorsInitialized(
+                        muni.model.Model.Phone.class, muni.model.Model.Phone.Builder.class);
       }
 
       // Construct using muni.model.Model.Phone.newBuilder()
@@ -9366,30 +10099,22 @@ public final class Model {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
+
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
         }
       }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        countryCode_ = 0;
 
-        number_ = 0;
-
-        ext_ = "";
-
-        return this;
-      }
+      private java.lang.Object number_ = "";
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
+      getDescriptorForType() {
         return muni.model.Model.internal_static_muni_model_Phone_descriptor;
       }
 
@@ -9421,58 +10146,59 @@ public final class Model {
       public Builder clone() {
         return super.clone();
       }
+
       @java.lang.Override
       public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
         return super.setField(field, value);
       }
+
       @java.lang.Override
       public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
+
       @java.lang.Override
       public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
+
       @java.lang.Override
       public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
+
       @java.lang.Override
       public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof muni.model.Model.Phone) {
-          return mergeFrom((muni.model.Model.Phone)other);
+          return mergeFrom((muni.model.Model.Phone) other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(muni.model.Model.Phone other) {
-        if (other == muni.model.Model.Phone.getDefaultInstance()) return this;
-        if (other.getCountryCode() != 0) {
-          setCountryCode(other.getCountryCode());
-        }
-        if (other.getNumber() != 0) {
-          setNumber(other.getNumber());
-        }
-        if (!other.getExt().isEmpty()) {
-          ext_ = other.ext_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        countryCode_ = 0;
+
+        number_ = "";
+
+        ext_ = "";
+
         return this;
       }
 
@@ -9483,9 +10209,9 @@ public final class Model {
 
       @java.lang.Override
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
         muni.model.Model.Phone parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
@@ -9500,7 +10226,8 @@ public final class Model {
         return this;
       }
 
-      private int countryCode_ ;
+      private int countryCode_;
+
       /**
        * <code>int32 countryCode = 1;</code>
        * @return The countryCode.
@@ -9509,60 +10236,129 @@ public final class Model {
       public int getCountryCode() {
         return countryCode_;
       }
+
       /**
        * <code>int32 countryCode = 1;</code>
        * @param value The countryCode to set.
        * @return This builder for chaining.
        */
       public Builder setCountryCode(int value) {
-        
+
         countryCode_ = value;
         onChanged();
         return this;
       }
+
       /**
        * <code>int32 countryCode = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearCountryCode() {
-        
+
         countryCode_ = 0;
         onChanged();
         return this;
       }
 
-      private int number_ ;
+      public Builder mergeFrom(muni.model.Model.Phone other) {
+        if (other == muni.model.Model.Phone.getDefaultInstance()) return this;
+        if (other.getCountryCode() != 0) {
+          setCountryCode(other.getCountryCode());
+        }
+        if (!other.getNumber().isEmpty()) {
+          number_ = other.number_;
+          onChanged();
+        }
+        if (!other.getExt().isEmpty()) {
+          ext_ = other.ext_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
       /**
-       * <code>int32 number = 2;</code>
+       * <code>string number = 2;</code>
        * @return The number.
        */
-      @java.lang.Override
-      public int getNumber() {
-        return number_;
+      public java.lang.String getNumber() {
+        java.lang.Object ref = number_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          number_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
       }
+
       /**
-       * <code>int32 number = 2;</code>
+       * <code>string number = 2;</code>
        * @param value The number to set.
        * @return This builder for chaining.
        */
-      public Builder setNumber(int value) {
-        
+      public Builder setNumber(
+              java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
         number_ = value;
         onChanged();
         return this;
       }
+
       /**
-       * <code>int32 number = 2;</code>
+       * <code>string number = 2;</code>
+       * @return The bytes for number.
+       */
+      public com.google.protobuf.ByteString
+      getNumberBytes() {
+        java.lang.Object ref = number_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                          (java.lang.String) ref);
+          number_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      /**
+       * <code>string number = 2;</code>
+       * @param value The bytes for number to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNumberBytes(
+              com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        number_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>string number = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearNumber() {
-        
-        number_ = 0;
+
+        number_ = getDefaultInstance().getNumber();
         onChanged();
         return this;
       }
 
       private java.lang.Object ext_ = "";
+
       /**
        * <code>string ext = 3;</code>
        * @return The ext.
@@ -9571,7 +10367,7 @@ public final class Model {
         java.lang.Object ref = ext_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+                  (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           ext_ = s;
           return s;
@@ -9579,73 +10375,78 @@ public final class Model {
           return (java.lang.String) ref;
         }
       }
+
       /**
        * <code>string ext = 3;</code>
        * @return The bytes for ext.
        */
       public com.google.protobuf.ByteString
-          getExtBytes() {
+      getExtBytes() {
         java.lang.Object ref = ext_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                          (java.lang.String) ref);
           ext_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
+
       /**
        * <code>string ext = 3;</code>
        * @param value The ext to set.
        * @return This builder for chaining.
        */
       public Builder setExt(
-          java.lang.String value) {
+              java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         ext_ = value;
         onChanged();
         return this;
       }
+
       /**
        * <code>string ext = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearExt() {
-        
+
         ext_ = getDefaultInstance().getExt();
         onChanged();
         return this;
       }
+
       /**
        * <code>string ext = 3;</code>
        * @param value The bytes for ext to set.
        * @return This builder for chaining.
        */
       public Builder setExtBytes(
-          com.google.protobuf.ByteString value) {
+              com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         ext_ = value;
         onChanged();
         return this;
       }
+
       @java.lang.Override
       public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
       public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
@@ -9655,6 +10456,7 @@ public final class Model {
 
     // @@protoc_insertion_point(class_scope:muni.model.Phone)
     private static final muni.model.Model.Phone DEFAULT_INSTANCE;
+
     static {
       DEFAULT_INSTANCE = new muni.model.Model.Phone();
     }
@@ -9664,12 +10466,12 @@ public final class Model {
     }
 
     private static final com.google.protobuf.Parser<Phone>
-        PARSER = new com.google.protobuf.AbstractParser<Phone>() {
+            PARSER = new com.google.protobuf.AbstractParser<Phone>() {
       @java.lang.Override
       public Phone parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
         return new Phone(input, extensionRegistry);
       }
     };
@@ -9690,622 +10492,6 @@ public final class Model {
 
   }
 
-  public interface EmailOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:muni.model.Email)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string value = 1;</code>
-     * @return The value.
-     */
-    java.lang.String getValue();
-    /**
-     * <code>string value = 1;</code>
-     * @return The bytes for value.
-     */
-    com.google.protobuf.ByteString
-        getValueBytes();
-  }
-  /**
-   * <pre>
-   * Modeled separately to apply clean data rules
-   * </pre>
-   *
-   * Protobuf type {@code muni.model.Email}
-   */
-  public static final class Email extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:muni.model.Email)
-      EmailOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Email.newBuilder() to construct.
-    private Email(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Email() {
-      value_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Email();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Email(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              value_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return muni.model.Model.internal_static_muni_model_Email_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return muni.model.Model.internal_static_muni_model_Email_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              muni.model.Model.Email.class, muni.model.Model.Email.Builder.class);
-    }
-
-    public static final int VALUE_FIELD_NUMBER = 1;
-    private volatile java.lang.Object value_;
-    /**
-     * <code>string value = 1;</code>
-     * @return The value.
-     */
-    @java.lang.Override
-    public java.lang.String getValue() {
-      java.lang.Object ref = value_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        value_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string value = 1;</code>
-     * @return The bytes for value.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getValueBytes() {
-      java.lang.Object ref = value_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        value_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getValueBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, value_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getValueBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, value_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof muni.model.Model.Email)) {
-        return super.equals(obj);
-      }
-      muni.model.Model.Email other = (muni.model.Model.Email) obj;
-
-      if (!getValue()
-          .equals(other.getValue())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + VALUE_FIELD_NUMBER;
-      hash = (53 * hash) + getValue().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static muni.model.Model.Email parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static muni.model.Model.Email parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static muni.model.Model.Email parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static muni.model.Model.Email parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static muni.model.Model.Email parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static muni.model.Model.Email parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static muni.model.Model.Email parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static muni.model.Model.Email parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static muni.model.Model.Email parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static muni.model.Model.Email parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static muni.model.Model.Email parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static muni.model.Model.Email parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(muni.model.Model.Email prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * Modeled separately to apply clean data rules
-     * </pre>
-     *
-     * Protobuf type {@code muni.model.Email}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:muni.model.Email)
-        muni.model.Model.EmailOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return muni.model.Model.internal_static_muni_model_Email_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return muni.model.Model.internal_static_muni_model_Email_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                muni.model.Model.Email.class, muni.model.Model.Email.Builder.class);
-      }
-
-      // Construct using muni.model.Model.Email.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        value_ = "";
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return muni.model.Model.internal_static_muni_model_Email_descriptor;
-      }
-
-      @java.lang.Override
-      public muni.model.Model.Email getDefaultInstanceForType() {
-        return muni.model.Model.Email.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public muni.model.Model.Email build() {
-        muni.model.Model.Email result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public muni.model.Model.Email buildPartial() {
-        muni.model.Model.Email result = new muni.model.Model.Email(this);
-        result.value_ = value_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof muni.model.Model.Email) {
-          return mergeFrom((muni.model.Model.Email)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(muni.model.Model.Email other) {
-        if (other == muni.model.Model.Email.getDefaultInstance()) return this;
-        if (!other.getValue().isEmpty()) {
-          value_ = other.value_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        muni.model.Model.Email parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (muni.model.Model.Email) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object value_ = "";
-      /**
-       * <code>string value = 1;</code>
-       * @return The value.
-       */
-      public java.lang.String getValue() {
-        java.lang.Object ref = value_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          value_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string value = 1;</code>
-       * @return The bytes for value.
-       */
-      public com.google.protobuf.ByteString
-          getValueBytes() {
-        java.lang.Object ref = value_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          value_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string value = 1;</code>
-       * @param value The value to set.
-       * @return This builder for chaining.
-       */
-      public Builder setValue(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        value_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string value = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearValue() {
-        
-        value_ = getDefaultInstance().getValue();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string value = 1;</code>
-       * @param value The bytes for value to set.
-       * @return This builder for chaining.
-       */
-      public Builder setValueBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        value_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:muni.model.Email)
-    }
-
-    // @@protoc_insertion_point(class_scope:muni.model.Email)
-    private static final muni.model.Model.Email DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new muni.model.Model.Email();
-    }
-
-    public static muni.model.Model.Email getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Email>
-        PARSER = new com.google.protobuf.AbstractParser<Email>() {
-      @java.lang.Override
-      public Email parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Email(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<Email> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Email> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public muni.model.Model.Email getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface ErrorInfoOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:muni.model.ErrorInfo)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string message = 1;</code>
-     * @return The message.
-     */
-    java.lang.String getMessage();
-    /**
-     * <code>string message = 1;</code>
-     * @return The bytes for message.
-     */
-    com.google.protobuf.ByteString
-        getMessageBytes();
-
-    /**
-     * <code>repeated .google.protobuf.Any details = 2;</code>
-     */
-    java.util.List<com.google.protobuf.Any> 
-        getDetailsList();
-    /**
-     * <code>repeated .google.protobuf.Any details = 2;</code>
-     */
-    com.google.protobuf.Any getDetails(int index);
-    /**
-     * <code>repeated .google.protobuf.Any details = 2;</code>
-     */
-    int getDetailsCount();
-    /**
-     * <code>repeated .google.protobuf.Any details = 2;</code>
-     */
-    java.util.List<? extends com.google.protobuf.AnyOrBuilder> 
-        getDetailsOrBuilderList();
-    /**
-     * <code>repeated .google.protobuf.Any details = 2;</code>
-     */
-    com.google.protobuf.AnyOrBuilder getDetailsOrBuilder(
-        int index);
-  }
   /**
    * Protobuf type {@code muni.model.ErrorInfo}
    */
@@ -10400,7 +10586,7 @@ public final class Model {
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return muni.model.Model.internal_static_muni_model_ErrorInfo_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
+              .ensureFieldAccessorsInitialized(
               muni.model.Model.ErrorInfo.class, muni.model.Model.ErrorInfo.Builder.class);
     }
 
@@ -10416,23 +10602,24 @@ public final class Model {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         message_ = s;
         return s;
       }
     }
+
     /**
      * <code>string message = 1;</code>
      * @return The bytes for message.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getMessageBytes() {
+    getMessageBytes() {
       java.lang.Object ref = message_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         message_ = b;
@@ -10455,7 +10642,7 @@ public final class Model {
      * <code>repeated .google.protobuf.Any details = 2;</code>
      */
     @java.lang.Override
-    public java.util.List<? extends com.google.protobuf.AnyOrBuilder> 
+    public java.util.List<? extends com.google.protobuf.AnyOrBuilder>
         getDetailsOrBuilderList() {
       return details_;
     }
@@ -10537,8 +10724,7 @@ public final class Model {
           .equals(other.getMessage())) return false;
       if (!getDetailsList()
           .equals(other.getDetailsList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      return unknownFields.equals(other.unknownFields);
     }
 
     @java.lang.Override
@@ -10654,8 +10840,8 @@ public final class Model {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:muni.model.ErrorInfo)
-        muni.model.Model.ErrorInfoOrBuilder {
+            // @@protoc_insertion_point(builder_implements:muni.model.ErrorInfo)
+            muni.model.Model.ErrorInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return muni.model.Model.internal_static_muni_model_ErrorInfo_descriptor;
@@ -10772,7 +10958,7 @@ public final class Model {
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof muni.model.Model.ErrorInfo) {
-          return mergeFrom((muni.model.Model.ErrorInfo)other);
+          return mergeFrom((muni.model.Model.ErrorInfo) other);
         } else {
           super.mergeFrom(other);
           return this;
@@ -10803,7 +10989,7 @@ public final class Model {
               detailsBuilder_ = null;
               details_ = other.details_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              detailsBuilder_ = 
+              detailsBuilder_ =
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getDetailsFieldBuilder() : null;
             } else {
@@ -10866,7 +11052,7 @@ public final class Model {
           getMessageBytes() {
         java.lang.Object ref = message_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           message_ = b;
@@ -10885,7 +11071,7 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+
         message_ = value;
         onChanged();
         return this;
@@ -10895,7 +11081,7 @@ public final class Model {
        * @return This builder for chaining.
        */
       public Builder clearMessage() {
-        
+
         message_ = getDefaultInstance().getMessage();
         onChanged();
         return this;
@@ -10911,7 +11097,7 @@ public final class Model {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-        
+
         message_ = value;
         onChanged();
         return this;
@@ -10939,6 +11125,7 @@ public final class Model {
           return detailsBuilder_.getMessageList();
         }
       }
+
       /**
        * <code>repeated .google.protobuf.Any details = 2;</code>
        */
@@ -10949,6 +11136,7 @@ public final class Model {
           return detailsBuilder_.getCount();
         }
       }
+
       /**
        * <code>repeated .google.protobuf.Any details = 2;</code>
        */
@@ -10963,7 +11151,7 @@ public final class Model {
        * <code>repeated .google.protobuf.Any details = 2;</code>
        */
       public Builder setDetails(
-          int index, com.google.protobuf.Any value) {
+              int index, com.google.protobuf.Any value) {
         if (detailsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -10976,11 +11164,12 @@ public final class Model {
         }
         return this;
       }
+
       /**
        * <code>repeated .google.protobuf.Any details = 2;</code>
        */
       public Builder setDetails(
-          int index, com.google.protobuf.Any.Builder builderForValue) {
+              int index, com.google.protobuf.Any.Builder builderForValue) {
         if (detailsBuilder_ == null) {
           ensureDetailsIsMutable();
           details_.set(index, builderForValue.build());
@@ -10990,6 +11179,7 @@ public final class Model {
         }
         return this;
       }
+
       /**
        * <code>repeated .google.protobuf.Any details = 2;</code>
        */
@@ -11066,6 +11256,7 @@ public final class Model {
         }
         return this;
       }
+
       /**
        * <code>repeated .google.protobuf.Any details = 2;</code>
        */
@@ -11079,6 +11270,7 @@ public final class Model {
         }
         return this;
       }
+
       /**
        * <code>repeated .google.protobuf.Any details = 2;</code>
        */
@@ -11096,30 +11288,34 @@ public final class Model {
        * <code>repeated .google.protobuf.Any details = 2;</code>
        */
       public com.google.protobuf.Any.Builder getDetailsBuilder(
-          int index) {
+              int index) {
         return getDetailsFieldBuilder().getBuilder(index);
       }
+
       /**
        * <code>repeated .google.protobuf.Any details = 2;</code>
        */
       public com.google.protobuf.AnyOrBuilder getDetailsOrBuilder(
-          int index) {
+              int index) {
         if (detailsBuilder_ == null) {
-          return details_.get(index);  } else {
+          return details_.get(index);
+        } else {
           return detailsBuilder_.getMessageOrBuilder(index);
         }
       }
+
       /**
        * <code>repeated .google.protobuf.Any details = 2;</code>
        */
-      public java.util.List<? extends com.google.protobuf.AnyOrBuilder> 
-           getDetailsOrBuilderList() {
+      public java.util.List<? extends com.google.protobuf.AnyOrBuilder>
+      getDetailsOrBuilderList() {
         if (detailsBuilder_ != null) {
           return detailsBuilder_.getMessageOrBuilderList();
         } else {
           return java.util.Collections.unmodifiableList(details_);
         }
       }
+
       /**
        * <code>repeated .google.protobuf.Any details = 2;</code>
        */
@@ -11138,12 +11334,12 @@ public final class Model {
       /**
        * <code>repeated .google.protobuf.Any details = 2;</code>
        */
-      public java.util.List<com.google.protobuf.Any.Builder> 
+      public java.util.List<com.google.protobuf.Any.Builder>
            getDetailsBuilderList() {
         return getDetailsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> 
+          com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder>
           getDetailsFieldBuilder() {
         if (detailsBuilder_ == null) {
           detailsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
@@ -11207,160 +11403,6 @@ public final class Model {
       return DEFAULT_INSTANCE;
     }
 
-  }
-
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_muni_model_PostalAddress_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_muni_model_PostalAddress_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_muni_model_Person_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_muni_model_Person_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_muni_model_Case_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_muni_model_Case_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_muni_model_Subsystem_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_muni_model_Subsystem_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_muni_model_Organization_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_muni_model_Organization_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_muni_model_ContactChannels_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_muni_model_ContactChannels_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_muni_model_Phone_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_muni_model_Phone_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_muni_model_Email_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_muni_model_Email_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_muni_model_ErrorInfo_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_muni_model_ErrorInfo_fieldAccessorTable;
-
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
-    return descriptor;
-  }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
-  static {
-    java.lang.String[] descriptorData = {
-      "\n\020muni-model.proto\022\nmuni.model\032\037google/p" +
-      "rotobuf/timestamp.proto\032\031google/protobuf" +
-      "/any.proto\"\201\002\n\rPostalAddress\022\n\n\002id\030\003 \001(\t" +
-      "\022\021\n\tstreetNum\030\004 \001(\t\022\022\n\nstreetName\030\005 \001(\t\022" +
-      "\014\n\004city\030\006 \001(\t\022\020\n\010province\030\007 \001(\t\022\017\n\007count" +
-      "ry\030\010 \001(\t\022\022\n\npostalCode\030\t \001(\t\022\013\n\003lat\030\n \001(" +
-      "\001\022\013\n\003lon\030\013 \001(\001\022.\n\ncreateTime\030\001 \001(\0132\032.goo" +
-      "gle.protobuf.Timestamp\022.\n\nupdateTime\030\002 \001" +
-      "(\0132\032.google.protobuf.Timestamp\"\317\001\n\006Perso" +
-      "n\022\n\n\002id\030\003 \001(\t\022\021\n\tfirstName\030\004 \001(\t\022\020\n\010last" +
-      "Name\030\005 \001(\t\0224\n\017contactChannels\030\010 \001(\0132\033.mu" +
-      "ni.model.ContactChannels\022.\n\ncreateTime\030\001" +
-      " \001(\0132\032.google.protobuf.Timestamp\022.\n\nupda" +
-      "teTime\030\002 \001(\0132\032.google.protobuf.Timestamp" +
-      "\"\341\001\n\004Case\022\n\n\002id\030\003 \001(\t\022\016\n\006status\030\004 \001(\t\022.\n" +
-      "\022reportedByCustomer\030\005 \001(\0132\022.muni.model.P" +
-      "erson\022-\n\021createdByEmployee\030\006 \001(\0132\022.muni." +
-      "model.Person\022.\n\ncreateTime\030\001 \001(\0132\032.googl" +
-      "e.protobuf.Timestamp\022.\n\nupdateTime\030\002 \001(\013" +
-      "2\032.google.protobuf.Timestamp\" \n\tSubsyste" +
-      "m\022\023\n\013subsystemId\030\001 \001(\t\"\317\001\n\014Organization\022" +
-      "\n\n\002id\030\003 \001(\t\022\014\n\004name\030\004 \001(\t\0224\n\017contactChan" +
-      "nels\030\005 \001(\0132\033.muni.model.ContactChannels\022" +
-      "\017\n\007website\030\006 \001(\t\022.\n\ncreateTime\030\001 \001(\0132\032.g" +
-      "oogle.protobuf.Timestamp\022.\n\nupdateTime\030\002" +
-      " \001(\0132\032.google.protobuf.Timestamp\"\253\001\n\017Con" +
-      "tactChannels\022!\n\006phone1\030\001 \001(\0132\021.muni.mode" +
-      "l.Phone\022!\n\006phone2\030\002 \001(\0132\021.muni.model.Pho" +
-      "ne\022 \n\005email\030\003 \001(\0132\021.muni.model.Email\0220\n\r" +
-      "postalAddress\030\004 \001(\0132\031.muni.model.PostalA" +
-      "ddress\"9\n\005Phone\022\023\n\013countryCode\030\001 \001(\005\022\016\n\006" +
-      "number\030\002 \001(\005\022\013\n\003ext\030\003 \001(\t\"\026\n\005Email\022\r\n\005va" +
-      "lue\030\001 \001(\t\"C\n\tErrorInfo\022\017\n\007message\030\001 \001(\t\022" +
-      "%\n\007details\030\002 \003(\0132\024.google.protobuf.AnyB\014" +
-      "B\005ModelP\000\210\001\000b\006proto3"
-    };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.protobuf.TimestampProto.getDescriptor(),
-          com.google.protobuf.AnyProto.getDescriptor(),
-        });
-    internal_static_muni_model_PostalAddress_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_muni_model_PostalAddress_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_muni_model_PostalAddress_descriptor,
-        new java.lang.String[] { "Id", "StreetNum", "StreetName", "City", "Province", "Country", "PostalCode", "Lat", "Lon", "CreateTime", "UpdateTime", });
-    internal_static_muni_model_Person_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_muni_model_Person_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_muni_model_Person_descriptor,
-        new java.lang.String[] { "Id", "FirstName", "LastName", "ContactChannels", "CreateTime", "UpdateTime", });
-    internal_static_muni_model_Case_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_muni_model_Case_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_muni_model_Case_descriptor,
-        new java.lang.String[] { "Id", "Status", "ReportedByCustomer", "CreatedByEmployee", "CreateTime", "UpdateTime", });
-    internal_static_muni_model_Subsystem_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_muni_model_Subsystem_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_muni_model_Subsystem_descriptor,
-        new java.lang.String[] { "SubsystemId", });
-    internal_static_muni_model_Organization_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_muni_model_Organization_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_muni_model_Organization_descriptor,
-        new java.lang.String[] { "Id", "Name", "ContactChannels", "Website", "CreateTime", "UpdateTime", });
-    internal_static_muni_model_ContactChannels_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_muni_model_ContactChannels_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_muni_model_ContactChannels_descriptor,
-        new java.lang.String[] { "Phone1", "Phone2", "Email", "PostalAddress", });
-    internal_static_muni_model_Phone_descriptor =
-      getDescriptor().getMessageTypes().get(6);
-    internal_static_muni_model_Phone_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_muni_model_Phone_descriptor,
-        new java.lang.String[] { "CountryCode", "Number", "Ext", });
-    internal_static_muni_model_Email_descriptor =
-      getDescriptor().getMessageTypes().get(7);
-    internal_static_muni_model_Email_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_muni_model_Email_descriptor,
-        new java.lang.String[] { "Value", });
-    internal_static_muni_model_ErrorInfo_descriptor =
-      getDescriptor().getMessageTypes().get(8);
-    internal_static_muni_model_ErrorInfo_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_muni_model_ErrorInfo_descriptor,
-        new java.lang.String[] { "Message", "Details", });
-    com.google.protobuf.TimestampProto.getDescriptor();
-    com.google.protobuf.AnyProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

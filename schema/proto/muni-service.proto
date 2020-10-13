@@ -27,19 +27,21 @@ service PersonService{
       //body: "personById"
     };
   }
-  rpc create(CreatePersonReq) returns (Person) {
-    // Client example:
-    //   curl -d '{"id":"99", "firstName": "Bat". "lastName": "Man"}' http://localhost:8080/mkapp/v1/persons/create
+  rpc create(CreatePersonReq) returns (Person) {//TODO change to CreateReq - generic?
+    // example:
+    //   curl -d '{"id":"99", "firstName": "Bat". "lastName": "Man"}' http://localhost:8080/mkapp/rest/v1/persons/
     option (google.api.http) = {
       post: "/mkapp/rest/v1/persons"
       body: "*"
     };
-//    option(grpc.gateway.protoc_gen_swagger.options.openapiv2_operation) = {
-//      summary: "Add a person"
-//      description: "add a person to Golden Data"
-//      tags: "Person"
-//    };
   }
+  rpc update(Person) returns (Person) {
+    option (google.api.http) = {
+      post: "/mkapp/rest/v1/persons"
+      body: "*"
+    };
+  }
+
   rpc getAll(google.protobuf.Empty) returns (PersonList){//google.protobuf.Empty
     option (google.api.http) = {
       get: "/mkapp/rest/v1/persons"
@@ -62,7 +64,12 @@ service CaseService{
       body: "case"
     };
   }
-
+  rpc update(Case) returns (Case){
+    option (google.api.http) = {//byId
+      post: "/mkapp/rest/v1/case"
+      body: "case"
+    };
+  }
 }
 
 
@@ -82,7 +89,7 @@ message PersonList{
   repeated Person persons=1;
 }
 message PostalAddressList{
-    repeated PostalAddress addresses=1;
+  repeated PostalAddress addresses = 1;
 }
 
 message SearchReqPerson{ //Search for a person who's
@@ -96,16 +103,22 @@ message SearchReqPostalAddress{
 
 
 service SearchService{
-  // Returns a specific Person
-  // Client example - returns person id=1:
-//   curl http://localhost:8080//mkapp/v1/persons/byId
-
   rpc personsLike(SearchReqPerson) returns (SearchRes){
-     option (google.api.http) = {
-       post: "/mkapp/rest/v1/search/persons"
-       body: "person"
-     };
+    option (google.api.http) = {
+      post: "/mkapp/rest/v1/search/persons"
+      body: "person"
+    };
   };
 
 
 }
+
+// example:
+//   curl -d '{"id":"99", "firstName": "Bat". "lastName": "Man"}' http://localhost:8080/mkapp/rest/v1/persons/
+
+
+//    option(grpc.gateway.protoc_gen_swagger.options.openapiv2_operation) = {
+//      summary: "Add a person"
+//      description: "add a person to Golden Data"
+//      tags: "Person"
+//    };

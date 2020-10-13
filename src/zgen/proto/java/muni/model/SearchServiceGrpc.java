@@ -1,26 +1,13 @@
 package muni.model;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
 import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
 import static io.grpc.stub.ClientCalls.blockingUnaryCall;
 import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
- * <pre>
- * Returns a specific Person
- * Client example - returns person id=1:
- *   curl http://localhost:8080//mkapp/v1/persons/byId
- * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.32.1)",
@@ -108,11 +95,6 @@ public final class SearchServiceGrpc {
   }
 
   /**
-   * <pre>
-   * Returns a specific Person
-   * Client example - returns person id=1:
-   *   curl http://localhost:8080//mkapp/v1/persons/byId
-   * </pre>
    */
   public static abstract class SearchServiceImplBase implements io.grpc.BindableService {
 
@@ -137,11 +119,6 @@ public final class SearchServiceGrpc {
   }
 
   /**
-   * <pre>
-   * Returns a specific Person
-   * Client example - returns person id=1:
-   *   curl http://localhost:8080//mkapp/v1/persons/byId
-   * </pre>
    */
   public static final class SearchServiceStub extends io.grpc.stub.AbstractAsyncStub<SearchServiceStub> {
     private SearchServiceStub(
@@ -165,11 +142,6 @@ public final class SearchServiceGrpc {
   }
 
   /**
-   * <pre>
-   * Returns a specific Person
-   * Client example - returns person id=1:
-   *   curl http://localhost:8080//mkapp/v1/persons/byId
-   * </pre>
    */
   public static final class SearchServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<SearchServiceBlockingStub> {
     private SearchServiceBlockingStub(
@@ -192,11 +164,6 @@ public final class SearchServiceGrpc {
   }
 
   /**
-   * <pre>
-   * Returns a specific Person
-   * Client example - returns person id=1:
-   *   curl http://localhost:8080//mkapp/v1/persons/byId
-   * </pre>
    */
   public static final class SearchServiceFutureStub extends io.grpc.stub.AbstractFutureStub<SearchServiceFutureStub> {
     private SearchServiceFutureStub(
