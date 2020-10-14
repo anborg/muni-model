@@ -9,36 +9,36 @@ option java_multiple_files = false; //default behavior
 
 message Person{
   //Output only
-  string id = 3;
-  string firstName = 4;
-  string lastName = 5;
+  optional string id = 3;
+  optional string firstName = 4; // optional added to test hasFirstName()
+  optional string lastName = 5;
   //ContactChannels contactChannels = 8;
-  string email = 6;
-  string phone1 = 7;
-  string phone2 = 8;
-  PostalAddress address = 9;
-  bool dirty = 10;
+  optional string email = 6;
+  optional string phone1 = 7;
+  optional string phone2 = 8;
+  PostalAddress address = 9; //For objects no need for optional, hasAddress() works
+  bool dirty = 10;//for boolean getDirty() default is enough, no need for optional
   //Output only
-  optional google.protobuf.Timestamp createTime = 1;
+  google.protobuf.Timestamp createTime = 1;
   //Output only
-  optional google.protobuf.Timestamp updateTime = 2;
+  google.protobuf.Timestamp updateTime = 2;
 }
 //Listed in the order of dependency
 message PostalAddress{
-  string id = 3;
-  string streetNum = 4;
-  string streetName = 5;
+  optional string id = 3;
+  optional string streetNum = 4;
+  optional string streetName = 5;
   string city = 6;
   string province = 7;
   string country = 8;
-  string postalCode = 9;
+  optional string postalCode = 9;
   double lat = 10;//geo
   double lon = 11;
   bool dirty = 12;
   //Output only
-  optional google.protobuf.Timestamp createTime = 1;
+  google.protobuf.Timestamp createTime = 1;
   //Output only
-  optional google.protobuf.Timestamp updateTime = 2;
+  google.protobuf.Timestamp updateTime = 2;
 }
 
 

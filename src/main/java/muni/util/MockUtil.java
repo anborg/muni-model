@@ -44,8 +44,6 @@ public class MockUtil {
         Optional.ofNullable(buildAddress()).ifPresent(pb::setAddress);
         Optional.ofNullable(ts).ifPresent(pb::setCreateTime);
         Optional.ofNullable(ts).ifPresent(pb::setUpdateTime);
-
-
         return pb.build();
     }
 

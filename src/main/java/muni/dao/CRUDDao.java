@@ -4,13 +4,17 @@ import java.util.List;
 import java.util.Optional;
 
 public interface CRUDDao<T> {
-    Optional<T> get(long id);
+    Long save(T in); //CreateOrUpdate
 
-    Long save(T in); //CreateOrUpdate may internally calls get(id)
+    Optional<T> getById(long id); //select - where active=true ()
+
+    List<T> findBySample(T in);//dynamic select
+
+    void setInactive(T in);// pass an object so, lifecycle of subobjects can be determined.
 
     //
     @Deprecated
-    //Marked deprecated - not for production
+//Marked deprecated - not for production
     List<T> getAll();
 
     @Deprecated
