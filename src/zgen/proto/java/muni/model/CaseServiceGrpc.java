@@ -43,7 +43,7 @@ public final class CaseServiceGrpc {
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   muni.model.Model.Case.getDefaultInstance()))
               .setSchemaDescriptor(new CaseServiceMethodDescriptorSupplier("get"))
-              .build();
+                      .build();
         }
       }
     }
@@ -51,82 +51,57 @@ public final class CaseServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<muni.model.Model.Case,
-      muni.model.Model.Case> getCreateMethod;
+          muni.model.Model.Case> getCreateMethod;
 
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "create",
-      requestType = muni.model.Model.Case.class,
-      responseType = muni.model.Model.Case.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<muni.model.Model.Case,
-      muni.model.Model.Case> getCreateMethod() {
-    io.grpc.MethodDescriptor<muni.model.Model.Case, muni.model.Model.Case> getCreateMethod;
-    if ((getCreateMethod = CaseServiceGrpc.getCreateMethod) == null) {
-      synchronized (CaseServiceGrpc.class) {
-        if ((getCreateMethod = CaseServiceGrpc.getCreateMethod) == null) {
-          CaseServiceGrpc.getCreateMethod = getCreateMethod =
-              io.grpc.MethodDescriptor.<muni.model.Model.Case, muni.model.Model.Case>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "create"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  muni.model.Model.Case.getDefaultInstance()))
-                      .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                              muni.model.Model.Case.getDefaultInstance()))
-                      .setSchemaDescriptor(new CaseServiceMethodDescriptorSupplier("create"))
-                      .build();
-        }
-      }
-    }
-    return getCreateMethod;
-  }
-
+  private static final int METHODID_GET = 0;
+  private static final int METHODID_CREATE = 1;
   private static final int METHODID_UPDATE = 2;
   private static volatile io.grpc.MethodDescriptor<muni.model.Model.Case,
           muni.model.Model.Case> getUpdateMethod;
 
   /**
-   * Creates a new async stub that supports all call types for the service
-   */
-  public static CaseServiceStub newStub(io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<CaseServiceStub> factory =
-            new io.grpc.stub.AbstractStub.StubFactory<CaseServiceStub>() {
-              @java.lang.Override
-              public CaseServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-                return new CaseServiceStub(channel, callOptions);
-        }
-      };
-    return CaseServiceStub.newStub(factory, channel);
-  }
-
-  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static CaseServiceBlockingStub newBlockingStub(
-      io.grpc.Channel channel) {
+          io.grpc.Channel channel) {
     io.grpc.stub.AbstractStub.StubFactory<CaseServiceBlockingStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<CaseServiceBlockingStub>() {
-        @java.lang.Override
-        public CaseServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new CaseServiceBlockingStub(channel, callOptions);
-        }
-      };
+            new io.grpc.stub.AbstractStub.StubFactory<CaseServiceBlockingStub>() {
+              @java.lang.Override
+              public CaseServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+                return new CaseServiceBlockingStub(channel, callOptions);
+              }
+            };
     return CaseServiceBlockingStub.newStub(factory, channel);
   }
 
-  /**
-   * Creates a new ListenableFuture-style stub that supports unary calls on the service
-   */
-  public static CaseServiceFutureStub newFutureStub(
-      io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<CaseServiceFutureStub> factory =
-            new io.grpc.stub.AbstractStub.StubFactory<CaseServiceFutureStub>() {
-              @java.lang.Override
-              public CaseServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-                return new CaseServiceFutureStub(channel, callOptions);
-              }
-            };
-    return CaseServiceFutureStub.newStub(factory, channel);
+  private static volatile io.grpc.ServiceDescriptor serviceDescriptor;
+
+  @io.grpc.stub.annotations.RpcMethod(
+          fullMethodName = SERVICE_NAME + '/' + "create",
+          requestType = muni.model.Model.Case.class,
+          responseType = muni.model.Model.Case.class,
+          methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<muni.model.Model.Case,
+          muni.model.Model.Case> getCreateMethod() {
+    io.grpc.MethodDescriptor<muni.model.Model.Case, muni.model.Model.Case> getCreateMethod;
+    if ((getCreateMethod = CaseServiceGrpc.getCreateMethod) == null) {
+      synchronized (CaseServiceGrpc.class) {
+        if ((getCreateMethod = CaseServiceGrpc.getCreateMethod) == null) {
+          CaseServiceGrpc.getCreateMethod = getCreateMethod =
+                  io.grpc.MethodDescriptor.<muni.model.Model.Case, muni.model.Model.Case>newBuilder()
+                          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+                          .setFullMethodName(generateFullMethodName(SERVICE_NAME, "create"))
+                          .setSampledToLocalTracing(true)
+                          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                                  muni.model.Model.Case.getDefaultInstance()))
+                          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                                  muni.model.Model.Case.getDefaultInstance()))
+                          .setSchemaDescriptor(new CaseServiceMethodDescriptorSupplier("create"))
+                          .build();
+        }
+      }
+    }
+    return getCreateMethod;
   }
 
   @io.grpc.stub.annotations.RpcMethod(
@@ -157,6 +132,35 @@ public final class CaseServiceGrpc {
     return getUpdateMethod;
   }
 
+  /**
+   * Creates a new async stub that supports all call types for the service
+   */
+  public static CaseServiceStub newStub(io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<CaseServiceStub> factory =
+            new io.grpc.stub.AbstractStub.StubFactory<CaseServiceStub>() {
+              @java.lang.Override
+              public CaseServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+                return new CaseServiceStub(channel, callOptions);
+              }
+            };
+    return CaseServiceStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new ListenableFuture-style stub that supports unary calls on the service
+   */
+  public static CaseServiceFutureStub newFutureStub(
+          io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<CaseServiceFutureStub> factory =
+            new io.grpc.stub.AbstractStub.StubFactory<CaseServiceFutureStub>() {
+              @java.lang.Override
+              public CaseServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+                return new CaseServiceFutureStub(channel, callOptions);
+              }
+            };
+    return CaseServiceFutureStub.newStub(factory, channel);
+  }
+
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
     io.grpc.ServiceDescriptor result = serviceDescriptor;
     if (result == null) {
@@ -176,11 +180,11 @@ public final class CaseServiceGrpc {
   }
 
   /**
-   *
    */
   public static abstract class CaseServiceImplBase implements io.grpc.BindableService {
 
     /**
+     *
      */
     public void get(muni.model.MuniService.ById request,
                     io.grpc.stub.StreamObserver<muni.model.Model.Case> responseObserver) {
@@ -188,6 +192,7 @@ public final class CaseServiceGrpc {
     }
 
     /**
+     *
      */
     public void create(muni.model.Model.Case request,
                        io.grpc.stub.StreamObserver<muni.model.Model.Case> responseObserver) {
@@ -195,6 +200,7 @@ public final class CaseServiceGrpc {
     }
 
     /**
+     *
      */
     public void update(muni.model.Model.Case request,
                        io.grpc.stub.StreamObserver<muni.model.Model.Case> responseObserver) {
@@ -270,11 +276,7 @@ public final class CaseServiceGrpc {
     }
   }
 
-  private static final int METHODID_GET = 0;
-  private static final int METHODID_CREATE = 1;
-
   /**
-   *
    */
   public static final class CaseServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<CaseServiceBlockingStub> {
     private CaseServiceBlockingStub(
@@ -296,7 +298,6 @@ public final class CaseServiceGrpc {
     }
 
     /**
-     *
      */
     public muni.model.Model.Case create(muni.model.Model.Case request) {
       return blockingUnaryCall(
@@ -304,7 +305,6 @@ public final class CaseServiceGrpc {
     }
 
     /**
-     *
      */
     public muni.model.Model.Case update(muni.model.Model.Case request) {
       return blockingUnaryCall(
@@ -327,6 +327,7 @@ public final class CaseServiceGrpc {
     }
 
     /**
+     *
      */
     public com.google.common.util.concurrent.ListenableFuture<muni.model.Model.Case> get(
             muni.model.MuniService.ById request) {
@@ -352,45 +353,6 @@ public final class CaseServiceGrpc {
               getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
   }
-
-  private static abstract class CaseServiceBaseDescriptorSupplier
-          implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    CaseServiceBaseDescriptorSupplier() {
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return muni.model.MuniService.getDescriptor();
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("CaseService");
-    }
-  }
-
-  private static final class CaseServiceFileDescriptorSupplier
-          extends CaseServiceBaseDescriptorSupplier {
-    CaseServiceFileDescriptorSupplier() {
-    }
-  }
-
-  private static final class CaseServiceMethodDescriptorSupplier
-          extends CaseServiceBaseDescriptorSupplier
-          implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
-
-    CaseServiceMethodDescriptorSupplier(String methodName) {
-      this.methodName = methodName;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
-      return getServiceDescriptor().findMethodByName(methodName);
-    }
-  }
-
-  private static volatile io.grpc.ServiceDescriptor serviceDescriptor;
 
   private static final class MethodHandlers<Req, Resp> implements
           io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -429,11 +391,48 @@ public final class CaseServiceGrpc {
     @java.lang.Override
     @java.lang.SuppressWarnings("unchecked")
     public io.grpc.stub.StreamObserver<Req> invoke(
-        io.grpc.stub.StreamObserver<Resp> responseObserver) {
+            io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         default:
           throw new AssertionError();
       }
+    }
+  }
+
+  private static abstract class CaseServiceBaseDescriptorSupplier
+          implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
+    CaseServiceBaseDescriptorSupplier() {
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
+      return muni.model.MuniService.getDescriptor();
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
+      return getFileDescriptor().findServiceByName("CaseService");
+    }
+  }
+
+  private static final class CaseServiceFileDescriptorSupplier
+          extends CaseServiceBaseDescriptorSupplier {
+    CaseServiceFileDescriptorSupplier() {
+    }
+  }
+
+  private static final class CaseServiceMethodDescriptorSupplier
+          extends CaseServiceBaseDescriptorSupplier
+          implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
+    private final String methodName;
+
+    CaseServiceMethodDescriptorSupplier(String methodName) {
+      this.methodName = methodName;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
+      return getServiceDescriptor().findMethodByName(methodName);
     }
   }
 }

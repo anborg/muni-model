@@ -1,11 +1,12 @@
 package muni.dao;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface CRUDDao<T> {
-    T get(long id);
+    Optional<T> get(long id);
 
-    long save(T in); //may internally calls get(id)
+    Long save(T in); //CreateOrUpdate may internally calls get(id)
 
     //
     @Deprecated
@@ -18,6 +19,4 @@ public interface CRUDDao<T> {
     @Deprecated
     void delete(long id);
 
-    @Deprecated
-    void createTable();
 }

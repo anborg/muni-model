@@ -12,7 +12,12 @@ message Person{
   string id = 3;
   string firstName = 4;
   string lastName = 5;
-  ContactChannels contactChannels = 8;
+  //ContactChannels contactChannels = 8;
+  string email = 6;
+  string phone1 = 7;
+  string phone2 = 8;
+  PostalAddress address = 9;
+  bool dirty = 10;
   //Output only
   google.protobuf.Timestamp createTime = 1;
   //Output only
@@ -28,7 +33,8 @@ message PostalAddress{
   string country = 8;
   string postalCode = 9;
   double lat = 10;//geo
-  double lon=11;
+  double lon = 11;
+  bool dirty = 12;
   //Output only
   google.protobuf.Timestamp createTime = 1;
   //Output only
@@ -41,12 +47,12 @@ message Case{
   string id = 3;
   string status =4; //TODO  convert to enum
   Person reportedByCustomer=5;
-  Person createdByEmployee=6;
-
+  Person createdByEmployee = 6;
+  bool dirty = 7;
   //Output only
-  google.protobuf.Timestamp createTime = 1;
+  optional google.protobuf.Timestamp createTime = 1;
   //Output only
-  google.protobuf.Timestamp updateTime = 2;
+  optional google.protobuf.Timestamp updateTime = 2;
 }
 
 
@@ -59,26 +65,30 @@ message Organization {
   //Output only
   string id = 3;
   string name = 4;
-  ContactChannels contactChannels = 5;
-  string website = 6;
+  string website = 5;
+  string email = 6;
+  string phone1 = 7;
+  string phone2 = 8;
+  optional PostalAddress address = 9;
+  bool dirty = 10;
   //Output only
-  google.protobuf.Timestamp createTime = 1;
+  optional google.protobuf.Timestamp createTime = 1;
   //Output only
-  google.protobuf.Timestamp updateTime = 2;
+  optional google.protobuf.Timestamp updateTime = 2;
 }
 
-message ContactChannels{ //aggregate, some may be in different tables in backend
-  Phone phone1 =1;
-  Phone phone2 = 2;
-  string email = 3;
-  PostalAddress postalAddress = 4;
-}
+//message ContactChannels{ //aggregate, some may be in different tables in backend
+//  Phone phone1 =1;
+//  Phone phone2 = 2;
+//  string email = 3;
+//  PostalAddress postalAddress = 4;
+//}
 
-message Phone{// modeled separately to apply clean data rules
-  int32 countryCode = 1;
-  string number = 2;
-  string ext = 3;
-}
+//message Phone{// modeled separately to apply clean data rules
+//  int32 countryCode = 1;
+//  string number = 2;
+//  string ext = 3;
+//}
 
 //message Email{ // Modeled separately to apply clean data rules
 //  string value=1;

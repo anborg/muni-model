@@ -6,6 +6,7 @@ import muni.model.Model;
 import muni.model.MuniService;
 
 import java.time.Instant;
+import java.util.Optional;
 
 public class MockUtil {
     public static Model.Person buildPerson(){
@@ -25,7 +26,7 @@ public class MockUtil {
     public static Model.Organization buildOrganization() {
         return Model.Organization.newBuilder()
                 .setName("Costco Enterprise")
-                .setContactChannels(buildContactChannels())
+                .setAddress(buildAddress())
                 .build();
     }
 
@@ -33,42 +34,56 @@ public class MockUtil {
     public static Model.Person buildPerson(String id, String firstName, String lastname ) {
 
         Timestamp ts = Timestamps.fromMillis(System.currentTimeMillis());
+        var pb = Model.Person.newBuilder();
+        Optional.ofNullable(id).ifPresent(pb::setId);
+        Optional.ofNullable(firstName).ifPresent(pb::setFirstName);
+        Optional.ofNullable(lastname).ifPresent(pb::setLastName);
+        Optional.ofNullable("me@gmail.com").ifPresent(pb::setEmail);
+        Optional.ofNullable("123445678").ifPresent(pb::setPhone1);
+        Optional.ofNullable("123445678").ifPresent(pb::setPhone2);
+        Optional.ofNullable(buildAddress()).ifPresent(pb::setAddress);
+        Optional.ofNullable(ts).ifPresent(pb::setCreateTime);
+        Optional.ofNullable(ts).ifPresent(pb::setUpdateTime);
 
-        return Model.Person.newBuilder().setId(id)
-                .setFirstName(firstName)
-                .setLastName(lastname)
-                .setContactChannels(buildContactChannels())
-                .setCreateTime(ts)
-                .setUpdateTime(ts)
-                .build();
+
+        return pb.build();
     }
 
 
+//    public static Model.ContactChannels buildContactChannels(){
+//        return Model.ContactChannels.newBuilder()
+//                .setEmail("me@gmail.com")
+//                .setPhone1(Model.Phone.newBuilder().setCountryCode(1).setNumber("123445678").setExt("xs234").build())
+//                .setPhone2(Model.Phone.newBuilder().setCountryCode(1).setNumber("123445678").setExt("xs234").build())
+//                .setPostalAddress(buildAddress())
+//                .build();
+//    }
 
+//    public static Model.Phone buildPhone(){
+//        return Model.Phone.newBuilder().setCountryCode(1).setNumber("123445678").setExt("xs234").build();
+//    }
 
-    public static Model.ContactChannels buildContactChannels(){
-        return Model.ContactChannels.newBuilder()
-                .setEmail("me@gmail.com")
-                .setPhone1(Model.Phone.newBuilder().setCountryCode(1).setNumber("123445678").setExt("xs234").build())
-                .setPhone2(Model.Phone.newBuilder().setCountryCode(1).setNumber("123445678").setExt("xs234").build())
-                .setPostalAddress(buildAddress())
-                .build();
-    }
-
-    public static Model.PostalAddress buildAddress(){
+    public static Model.PostalAddress buildAddress() {
 //        Timestamp ts = Timestamps.fromMillis(System.currentTimeMillis());
         Instant now = Instant.now();
-        return Model.PostalAddress.newBuilder()
-                .setStreetNum("111")
-                .setStreetName("New Street")
-                .setCity("Toronto")
-                .setProvince("Ontario")
-                .setCountry("Canada")
-                .setPostalCode("L1L2M2")
-                .setId("3")
-                .setCreateTime(Timestamp.newBuilder().setSeconds(now.getEpochSecond()).build())
-                .setUpdateTime(Timestamp.newBuilder().setSeconds(now.getEpochSecond()).build())
-                .build();
+        String streetNum = "111", streetName = "New Street", city = "Toronto", province = "Ontario", country = "Canada", postalCode = "L1L2M2", id = "3";
+        Double lat = 22.1111, lon = 22.1111;
+        var ts = Timestamp.newBuilder().setSeconds(now.getEpochSecond()).build();
+        var ab = Model.PostalAddress.newBuilder();
+        Optional.ofNullable(id).ifPresent(ab::setId);
+        Optional.ofNullable(streetNum).ifPresent(ab::setStreetNum);
+        Optional.ofNullable(streetName).ifPresent(ab::setStreetName);
+        Optional.ofNullable(city).ifPresent(ab::setCity);
+        Optional.ofNullable(country).ifPresent(ab::setCountry);
+        Optional.ofNullable(province).ifPresent(ab::setProvince);
+        Optional.ofNullable(postalCode).ifPresent(ab::setPostalCode);
+        Optional.ofNullable(lat).ifPresent(ab::setLat);
+        Optional.ofNullable(lon).ifPresent(ab::setLon);
+        Optional.ofNullable(ts).ifPresent(ab::setCreateTime);
+        Optional.ofNullable(ts).ifPresent(ab::setUpdateTime);
+
+
+        return ab.build();
     }
 
     public static MuniService.SearchReqPerson buildSearchReqPerson(){

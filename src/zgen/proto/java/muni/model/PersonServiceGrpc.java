@@ -43,7 +43,7 @@ public final class PersonServiceGrpc {
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   muni.model.Model.Person.getDefaultInstance()))
               .setSchemaDescriptor(new PersonServiceMethodDescriptorSupplier("get"))
-              .build();
+                      .build();
         }
       }
     }
@@ -51,81 +51,26 @@ public final class PersonServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<muni.model.MuniService.CreatePersonReq,
-      muni.model.Model.Person> getCreateMethod;
+          muni.model.Model.Person> getCreateMethod;
 
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "create",
-      requestType = muni.model.MuniService.CreatePersonReq.class,
-      responseType = muni.model.Model.Person.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<muni.model.MuniService.CreatePersonReq,
-      muni.model.Model.Person> getCreateMethod() {
-    io.grpc.MethodDescriptor<muni.model.MuniService.CreatePersonReq, muni.model.Model.Person> getCreateMethod;
-    if ((getCreateMethod = PersonServiceGrpc.getCreateMethod) == null) {
-      synchronized (PersonServiceGrpc.class) {
-        if ((getCreateMethod = PersonServiceGrpc.getCreateMethod) == null) {
-          PersonServiceGrpc.getCreateMethod = getCreateMethod =
-              io.grpc.MethodDescriptor.<muni.model.MuniService.CreatePersonReq, muni.model.Model.Person>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "create"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  muni.model.MuniService.CreatePersonReq.getDefaultInstance()))
-                      .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                              muni.model.Model.Person.getDefaultInstance()))
-                      .setSchemaDescriptor(new PersonServiceMethodDescriptorSupplier("create"))
-                      .build();
-        }
-      }
-    }
-    return getCreateMethod;
-  }
-
+  private static final int METHODID_GET = 0;
+  private static final int METHODID_CREATE = 1;
   private static final int METHODID_UPDATE = 2;
   private static final int METHODID_GET_ALL = 3;
-
-  private static volatile io.grpc.MethodDescriptor<com.google.protobuf.Empty,
-          muni.model.MuniService.PersonList> getGetAllMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-          fullMethodName = SERVICE_NAME + '/' + "getAll",
-          requestType = com.google.protobuf.Empty.class,
-          responseType = muni.model.MuniService.PersonList.class,
-          methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.google.protobuf.Empty,
-      muni.model.MuniService.PersonList> getGetAllMethod() {
-    io.grpc.MethodDescriptor<com.google.protobuf.Empty, muni.model.MuniService.PersonList> getGetAllMethod;
-    if ((getGetAllMethod = PersonServiceGrpc.getGetAllMethod) == null) {
-      synchronized (PersonServiceGrpc.class) {
-        if ((getGetAllMethod = PersonServiceGrpc.getGetAllMethod) == null) {
-          PersonServiceGrpc.getGetAllMethod = getGetAllMethod =
-              io.grpc.MethodDescriptor.<com.google.protobuf.Empty, muni.model.MuniService.PersonList>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getAll"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.google.protobuf.Empty.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  muni.model.MuniService.PersonList.getDefaultInstance()))
-              .setSchemaDescriptor(new PersonServiceMethodDescriptorSupplier("getAll"))
-              .build();
-        }
-      }
-    }
-    return getGetAllMethod;
-  }
+  private static volatile io.grpc.MethodDescriptor<muni.model.Model.Person,
+          muni.model.Model.Person> getUpdateMethod;
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static PersonServiceStub newStub(io.grpc.Channel channel) {
     io.grpc.stub.AbstractStub.StubFactory<PersonServiceStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<PersonServiceStub>() {
-        @java.lang.Override
-        public PersonServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new PersonServiceStub(channel, callOptions);
-        }
-      };
+            new io.grpc.stub.AbstractStub.StubFactory<PersonServiceStub>() {
+              @java.lang.Override
+              public PersonServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+                return new PersonServiceStub(channel, callOptions);
+              }
+            };
     return PersonServiceStub.newStub(factory, channel);
   }
 
@@ -133,34 +78,48 @@ public final class PersonServiceGrpc {
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static PersonServiceBlockingStub newBlockingStub(
-      io.grpc.Channel channel) {
+          io.grpc.Channel channel) {
     io.grpc.stub.AbstractStub.StubFactory<PersonServiceBlockingStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<PersonServiceBlockingStub>() {
-        @java.lang.Override
-        public PersonServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new PersonServiceBlockingStub(channel, callOptions);
-        }
-      };
+            new io.grpc.stub.AbstractStub.StubFactory<PersonServiceBlockingStub>() {
+              @java.lang.Override
+              public PersonServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+                return new PersonServiceBlockingStub(channel, callOptions);
+              }
+            };
     return PersonServiceBlockingStub.newStub(factory, channel);
   }
 
-  /**
-   * Creates a new ListenableFuture-style stub that supports unary calls on the service
-   */
-  public static PersonServiceFutureStub newFutureStub(
-          io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<PersonServiceFutureStub> factory =
-            new io.grpc.stub.AbstractStub.StubFactory<PersonServiceFutureStub>() {
-              @java.lang.Override
-              public PersonServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-                return new PersonServiceFutureStub(channel, callOptions);
-              }
-            };
-    return PersonServiceFutureStub.newStub(factory, channel);
-  }
+  private static volatile io.grpc.MethodDescriptor<com.google.protobuf.Empty,
+          muni.model.MuniService.PersonList> getGetAllMethod;
+  private static volatile io.grpc.ServiceDescriptor serviceDescriptor;
 
-  private static volatile io.grpc.MethodDescriptor<muni.model.Model.Person,
-          muni.model.Model.Person> getUpdateMethod;
+  @io.grpc.stub.annotations.RpcMethod(
+          fullMethodName = SERVICE_NAME + '/' + "create",
+          requestType = muni.model.MuniService.CreatePersonReq.class,
+          responseType = muni.model.Model.Person.class,
+          methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<muni.model.MuniService.CreatePersonReq,
+          muni.model.Model.Person> getCreateMethod() {
+    io.grpc.MethodDescriptor<muni.model.MuniService.CreatePersonReq, muni.model.Model.Person> getCreateMethod;
+    if ((getCreateMethod = PersonServiceGrpc.getCreateMethod) == null) {
+      synchronized (PersonServiceGrpc.class) {
+        if ((getCreateMethod = PersonServiceGrpc.getCreateMethod) == null) {
+          PersonServiceGrpc.getCreateMethod = getCreateMethod =
+                  io.grpc.MethodDescriptor.<muni.model.MuniService.CreatePersonReq, muni.model.Model.Person>newBuilder()
+                          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+                          .setFullMethodName(generateFullMethodName(SERVICE_NAME, "create"))
+                          .setSampledToLocalTracing(true)
+                          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                                  muni.model.MuniService.CreatePersonReq.getDefaultInstance()))
+                          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                                  muni.model.Model.Person.getDefaultInstance()))
+                          .setSchemaDescriptor(new PersonServiceMethodDescriptorSupplier("create"))
+                          .build();
+        }
+      }
+    }
+    return getCreateMethod;
+  }
 
   @io.grpc.stub.annotations.RpcMethod(
           fullMethodName = SERVICE_NAME + '/' + "update",
@@ -190,6 +149,49 @@ public final class PersonServiceGrpc {
     return getUpdateMethod;
   }
 
+  @io.grpc.stub.annotations.RpcMethod(
+          fullMethodName = SERVICE_NAME + '/' + "getAll",
+          requestType = com.google.protobuf.Empty.class,
+          responseType = muni.model.MuniService.PersonList.class,
+          methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.google.protobuf.Empty,
+          muni.model.MuniService.PersonList> getGetAllMethod() {
+    io.grpc.MethodDescriptor<com.google.protobuf.Empty, muni.model.MuniService.PersonList> getGetAllMethod;
+    if ((getGetAllMethod = PersonServiceGrpc.getGetAllMethod) == null) {
+      synchronized (PersonServiceGrpc.class) {
+        if ((getGetAllMethod = PersonServiceGrpc.getGetAllMethod) == null) {
+          PersonServiceGrpc.getGetAllMethod = getGetAllMethod =
+              io.grpc.MethodDescriptor.<com.google.protobuf.Empty, muni.model.MuniService.PersonList>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getAll"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  muni.model.MuniService.PersonList.getDefaultInstance()))
+              .setSchemaDescriptor(new PersonServiceMethodDescriptorSupplier("getAll"))
+              .build();
+        }
+      }
+    }
+    return getGetAllMethod;
+  }
+
+  /**
+   * Creates a new ListenableFuture-style stub that supports unary calls on the service
+   */
+  public static PersonServiceFutureStub newFutureStub(
+          io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<PersonServiceFutureStub> factory =
+            new io.grpc.stub.AbstractStub.StubFactory<PersonServiceFutureStub>() {
+              @java.lang.Override
+              public PersonServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+                return new PersonServiceFutureStub(channel, callOptions);
+              }
+            };
+    return PersonServiceFutureStub.newStub(factory, channel);
+  }
+
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
     io.grpc.ServiceDescriptor result = serviceDescriptor;
     if (result == null) {
@@ -210,11 +212,11 @@ public final class PersonServiceGrpc {
   }
 
   /**
-   *
    */
   public static abstract class PersonServiceImplBase implements io.grpc.BindableService {
 
     /**
+     *
      */
     public void get(muni.model.MuniService.ById request,
                     io.grpc.stub.StreamObserver<muni.model.Model.Person> responseObserver) {
@@ -279,15 +281,11 @@ public final class PersonServiceGrpc {
                                       com.google.protobuf.Empty,
                                       muni.model.MuniService.PersonList>(
                                       this, METHODID_GET_ALL)))
-              .build();
+          .build();
     }
   }
 
-  private static final int METHODID_GET = 0;
-  private static final int METHODID_CREATE = 1;
-
   /**
-   *
    */
   public static final class PersonServiceStub extends io.grpc.stub.AbstractAsyncStub<PersonServiceStub> {
     private PersonServiceStub(
@@ -302,6 +300,7 @@ public final class PersonServiceGrpc {
     }
 
     /**
+     *
      */
     public void get(muni.model.MuniService.ById request,
                     io.grpc.stub.StreamObserver<muni.model.Model.Person> responseObserver) {
@@ -356,6 +355,7 @@ public final class PersonServiceGrpc {
     }
 
     /**
+     *
      */
     public muni.model.Model.Person get(muni.model.MuniService.ById request) {
       return blockingUnaryCall(
@@ -364,12 +364,12 @@ public final class PersonServiceGrpc {
 
     /**
      * <pre>
-     * TODO change to CreateReq - generic?
+     *TODO change to CreateReq - generic?
      * </pre>
      */
     public muni.model.Model.Person create(muni.model.MuniService.CreatePersonReq request) {
       return blockingUnaryCall(
-              getChannel(), getCreateMethod(), getCallOptions(), request);
+          getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
     /**
@@ -382,7 +382,7 @@ public final class PersonServiceGrpc {
 
     /**
      * <pre>
-     * google.protobuf.Empty
+     *google.protobuf.Empty
      * </pre>
      */
     public muni.model.MuniService.PersonList getAll(com.google.protobuf.Empty request) {
@@ -401,11 +401,12 @@ public final class PersonServiceGrpc {
 
     @java.lang.Override
     protected PersonServiceFutureStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+            io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new PersonServiceFutureStub(channel, callOptions);
     }
 
     /**
+     *
      */
     public com.google.common.util.concurrent.ListenableFuture<muni.model.Model.Person> get(
             muni.model.MuniService.ById request) {
@@ -444,45 +445,6 @@ public final class PersonServiceGrpc {
               getChannel().newCall(getGetAllMethod(), getCallOptions()), request);
     }
   }
-
-  private static abstract class PersonServiceBaseDescriptorSupplier
-          implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    PersonServiceBaseDescriptorSupplier() {
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return muni.model.MuniService.getDescriptor();
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("PersonService");
-    }
-  }
-
-  private static final class PersonServiceFileDescriptorSupplier
-          extends PersonServiceBaseDescriptorSupplier {
-    PersonServiceFileDescriptorSupplier() {
-    }
-  }
-
-  private static final class PersonServiceMethodDescriptorSupplier
-          extends PersonServiceBaseDescriptorSupplier
-          implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
-
-    PersonServiceMethodDescriptorSupplier(String methodName) {
-      this.methodName = methodName;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
-      return getServiceDescriptor().findMethodByName(methodName);
-    }
-  }
-
-  private static volatile io.grpc.ServiceDescriptor serviceDescriptor;
 
   private static final class MethodHandlers<Req, Resp> implements
           io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -525,11 +487,48 @@ public final class PersonServiceGrpc {
     @java.lang.Override
     @java.lang.SuppressWarnings("unchecked")
     public io.grpc.stub.StreamObserver<Req> invoke(
-        io.grpc.stub.StreamObserver<Resp> responseObserver) {
+            io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         default:
           throw new AssertionError();
       }
+    }
+  }
+
+  private static abstract class PersonServiceBaseDescriptorSupplier
+          implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
+    PersonServiceBaseDescriptorSupplier() {
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
+      return muni.model.MuniService.getDescriptor();
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
+      return getFileDescriptor().findServiceByName("PersonService");
+    }
+  }
+
+  private static final class PersonServiceFileDescriptorSupplier
+          extends PersonServiceBaseDescriptorSupplier {
+    PersonServiceFileDescriptorSupplier() {
+    }
+  }
+
+  private static final class PersonServiceMethodDescriptorSupplier
+          extends PersonServiceBaseDescriptorSupplier
+          implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
+    private final String methodName;
+
+    PersonServiceMethodDescriptorSupplier(String methodName) {
+      this.methodName = methodName;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
+      return getServiceDescriptor().findMethodByName(methodName);
     }
   }
 }
