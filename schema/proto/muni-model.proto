@@ -19,9 +19,9 @@ message Person{
   PostalAddress address = 9;
   bool dirty = 10;
   //Output only
-  google.protobuf.Timestamp createTime = 1;
+  optional google.protobuf.Timestamp createTime = 1;
   //Output only
-  google.protobuf.Timestamp updateTime = 2;
+  optional google.protobuf.Timestamp updateTime = 2;
 }
 //Listed in the order of dependency
 message PostalAddress{
@@ -36,9 +36,9 @@ message PostalAddress{
   double lon = 11;
   bool dirty = 12;
   //Output only
-  google.protobuf.Timestamp createTime = 1;
+  optional google.protobuf.Timestamp createTime = 1;
   //Output only
-  google.protobuf.Timestamp updateTime = 2;
+  optional google.protobuf.Timestamp updateTime = 2;
 }
 
 
