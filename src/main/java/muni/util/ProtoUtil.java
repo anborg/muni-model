@@ -9,7 +9,7 @@ public class ProtoUtil {
         try{
             return JsonFormat.printer().print(obj);
         }catch(Exception e){
-            throw new UtilException("Error converting Proto to json", e);
+            throw new RuntimeException("Error converting Proto to json", e);
         }
     }
     public static <T extends MessageOrBuilder> T toProto(String protoJsonStr, T message){
@@ -19,7 +19,7 @@ public class ProtoUtil {
             T out = (T) builder.build();
             return out;
         }catch(Exception e){
-            throw new UtilException("Error converting Proto to json", e);
+            throw new RuntimeException("Error converting json to Proto", e);
         }
     }
 }
