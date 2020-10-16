@@ -14,7 +14,9 @@ set PROTOC_BIN=%PROTOC_HOME%\bin\protoc.exe
 set PROTOC_INCLUDE=%PROTOC_HOME%\include
 set PLUGIN_CONFIG=%PROTOC_HOME%\protoc-gen-grpc-java-1.32.1.exe
 :: set PROTOC_JAVA_BIN=C:\apps\google\protoc-3.13.0\bin\protoc-gen-grpc-java-1.32.1.exe
-%PROTOC_BIN% -I%PROTOC_INCLUDE%\ -I%GOPATH%\src\github.com\grpc-ecosystem\grpc-gateway\third_party\googleapis --experimental_allow_proto3_optional  --plugin=%PLUGIN_CONFIG% --grpc-java_out=%SRCGEN_DIR% --proto_path=%INPUT_DIR% --java_out=%SRCGEN_DIR% %INPUT_DIR%\muni-service.proto %INPUT_DIR%\muni-model.proto
+
+:: Add this if OPtioal required --experimental_allow_proto3_optional
+%PROTOC_BIN% -I%PROTOC_INCLUDE%\ -I%GOPATH%\src\github.com\grpc-ecosystem\grpc-gateway\third_party\googleapis   --plugin=%PLUGIN_CONFIG% --grpc-java_out=%SRCGEN_DIR% --proto_path=%INPUT_DIR% --java_out=%SRCGEN_DIR% %INPUT_DIR%\muni-service.proto %INPUT_DIR%\muni-model.proto
 echo off
 echo !!!!!!!!!!!!!!!!!!!!!!!!! DO NOT FORGET !!!!!!!!!!!!!!!!!!!!!!!!!!
 echo !!                                                              !!
