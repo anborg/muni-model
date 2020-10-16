@@ -17,12 +17,15 @@ import java.util.Optional;
 public class ProtoUtil {
 
     public static <T extends Message> Optional<String> toJson(T obj) {
-        if(isNullable(obj)) return Optional.empty();
-        try {
-            return Optional.of(JsonFormat.printer().print(obj));
-        } catch (Exception e) {
-            throw new RuntimeException("Error converting Proto to json", e);
+        Optional<String> ostr = Optional.empty();
+        if(isNullable(obj) ==false){
+            try {
+                ostr =  Optional.of(JsonFormat.printer().print(obj));
+            } catch (Exception e) {
+                throw new RuntimeException("Error converting Proto to json", e);
+            }
         }
+        return ostr;
     }//toJson
 
     public static <T extends MessageOrBuilder> Optional<T> toProto(String protoJsonStr, T message) {
@@ -40,7 +43,8 @@ public class ProtoUtil {
     static final String EMPTY_JSON = "{}";
 
     public static boolean isNullable(Message message){
-        return (Objects.isNull(message) || Strings.isNullOrEmpty(message.toString()));
+        return (Objects.isNull(message)
+                || Strings.isNullOrEmpty(message.toString()));
     }
     public static boolean isNullable(String jsonStr){
         return (Strings.isNullOrEmpty(jsonStr) || jsonStr.contentEquals(EMPTY_JSON));
