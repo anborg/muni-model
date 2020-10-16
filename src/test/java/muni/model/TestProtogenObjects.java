@@ -1,13 +1,14 @@
 package muni.model;
 
 import com.google.protobuf.Timestamp;
+import muni.util.ProtoUtil;
 import org.junit.jupiter.api.Test;
 
 import java.time.Instant;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class TestProtoObjects {
+public class TestProtogenObjects {
 
     @Test
     public void objects_UNset_must_false_hasXX() {
@@ -35,6 +36,7 @@ public class TestProtoObjects {
             var add = Model.PostalAddress.newBuilder().setId(id).setStreetNum(streetNum).setStreetName(streetName).setCity(city).setProvince(province).setCountry(country).setPostalCode(postalCode).setCreateTime(ts).setUpdateTime(ts);
             pers = Model.Person.newBuilder().setId("1").setFirstName("Jane").setLastName("Doe").setAddress(add).setDirty(true).build();
         }//pers
+        System.out.println(ProtoUtil.toJson(pers));
 
         //Then
         //set primitives
