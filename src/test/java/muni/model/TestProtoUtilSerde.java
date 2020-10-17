@@ -1,6 +1,7 @@
 package muni.model;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.common.base.Strings;
 import muni.util.MockUtil;
 import muni.util.ProtoUtil;
 import org.junit.jupiter.api.Test;
@@ -18,10 +19,10 @@ public class TestProtoUtilSerde {
         String jsonStr = ClasspathUtil.readFileInClasspath("person.json");
         //when
         Optional<Model.Person> p = ProtoUtil.toProto(jsonStr, Model.Person.getDefaultInstance());
-        Optional<String> jsonStrOut = ProtoUtil.toJson(p.get());
-        assertThat(jsonStrOut.isPresent()).isTrue();
+        String jsonStrOut = ProtoUtil.toJson(p.get());
+        assertThat(Strings.isNullOrEmpty(jsonStrOut)).isFalse();
         //then - verify
-        assertEquals(mapper.readTree(jsonStr), mapper.readTree(jsonStrOut.get()));
+        assertEquals(mapper.readTree(jsonStr), mapper.readTree(jsonStrOut));
     }
     @Test
     public void test_emptyJson_serde_as_emptyJson()throws Exception{
@@ -31,10 +32,10 @@ public class TestProtoUtilSerde {
         //when
         Optional<Model.Person> p = ProtoUtil.toProto(jsonStr, Model.Person.getDefaultInstance());
         assertThat(p.isPresent()).isFalse();
-        Optional<String> jsonStrOut = ProtoUtil.toJson(null);
+        String jsonStrOut = ProtoUtil.toJson(null);
         System.out.println("empty p=" + p);
         //then - verify
-        assertThat(jsonStrOut.isPresent()).isFalse();
+        assertThat(Strings.isNullOrEmpty(jsonStrOut)).isTrue();
         //assertEquals(mapper.readTree(jsonStr), mapper.readTree(jsonStrOut));
     }
 }

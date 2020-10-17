@@ -16,16 +16,13 @@ import java.util.Optional;
  **/
 public class ProtoUtil {
 
-    public static <T extends Message> Optional<String> toJson(T obj) {
-        Optional<String> ostr = Optional.empty();
-        if(isNullable(obj) ==false){
-            try {
-                ostr =  Optional.of(JsonFormat.printer().print(obj));
-            } catch (Exception e) {
-                throw new RuntimeException("Error converting Proto to json", e);
-            }
+    public static <T extends Message> String toJson(T obj) {
+        if(isNullable(obj)) return null;
+        try {
+            return JsonFormat.printer().print(obj);
+        } catch (Exception e) {
+            throw new RuntimeException("Error converting Proto to json", e);
         }
-        return ostr;
     }//toJson
 
     public static <T extends MessageOrBuilder> Optional<T> toProto(String protoJsonStr, T message) {
@@ -49,4 +46,13 @@ public class ProtoUtil {
     public static boolean isNullable(String jsonStr){
         return (Strings.isNullOrEmpty(jsonStr) || jsonStr.contentEquals(EMPTY_JSON));
     }
+    //TODO find reason: This fails in serializer:: class SerGeneric extends JsonSerializer< Message>
+    public static <T extends Message> Optional<String> toJsonOptional(T obj) {
+        if(isNullable(obj)) return Optional.empty();
+        try {
+            return Optional.of(JsonFormat.printer().print(obj));
+        } catch (Exception e) {
+            throw new RuntimeException("Error converting Proto to json", e);
+        }
+    }//toJson
 }
