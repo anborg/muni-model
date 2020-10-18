@@ -5,11 +5,11 @@ import muni.model.Model;
 public class DataQuality {
     public static class Address{
         public static boolean isValidForInsert(Model.PostalAddress in) {
-            if (null != in && in.getId().isEmpty() == true) {// ID must be NULL
+            if (null != in && in.hasId()==false) {// ID must be NULL
                 //mandatory check
-                if (in.getStreetNum().isEmpty() == false
-                        && in.getStreetName().isEmpty() == false
-                        && in.getPostalCode().isEmpty() == false
+                if (in.hasStreetNum()
+                        && in.hasStreetName()
+                        && in.hasPostalCode()
                         && in.hasCreateTime() ==false//NO create ts
                         && in.hasUpdateTime() ==false//NO update ts
                 ) {// streetname , streetnum, postcal code -
@@ -27,24 +27,31 @@ public class DataQuality {
         public static boolean isValidForUpdate(Model.PostalAddress in) {
             // explict signal to update
             return null != in
-                    && in.getId().isEmpty() == false // ID must NOT be NULL - preexisting
+                    && in.hasId() // ID must NOT be NULL - preexisting
                     && in.hasCreateTime() // signal: already created
                     && in.hasUpdateTime() // signal: already created
-                    && in.getDirty() == true;
+                    //&& in.getDirty() == true // Don' tcheck dirty - wont be set in json
+                    ;
         }
     }
     public static class Person {
+
         public static boolean isValidForInsert(Model.Person in) {
-            if (null != in && in.getId().isEmpty() == true) {// ID must be NULL
+            final var absent_id = !in.hasId();
+            final var absent_createTS =!in.hasCreateTime();
+            final var absent_updateTs =!in.hasUpdateTime();
+            final var dirty = in.getDirty();//Don't bother to check this - as clients wont set this field in json.
+            final var present_oneOf = ( in.hasEmail() || in.hasPhone1() || in.hasPhone2() || in.hasAddress()) ;
+            final var present_mandatory = ( in.hasFirstName() &&  in.hasLastName()); //;&& _present_oneOf ;
+
+            System.out.println("IsvalidforUpdate:" + " present_mandatory="+present_mandatory+",present_oneof="+present_oneOf+",absent_id="+absent_id+",absent_createTS="+absent_createTS+",absent_updateTs="+absent_updateTs+" dirty="+dirty);
+
+            if (null != in && absent_id) {// ID must be NULL
                 // Yes no id, so insert.  Is data sufficient for business?
-                if (in.getFirstName().isEmpty() == false //fn NOT empty
-                        && in.getLastName().isEmpty() == false //ln NOT empty
-                        && in.hasCreateTime() == false//NO create ts
-                        && in.hasUpdateTime() == false//NO update ts
-                        && (in.hasAddress()  // one of email/ phone/ address
-                        || in.getEmail().isEmpty() == false
-                        || in.getPhone1().isEmpty() == false
-                        || in.getPhone2().isEmpty() == false)//one contact channel
+                if (present_mandatory
+                        && present_oneOf //one contact channel
+                        && absent_createTS //NO create ts
+                        && absent_updateTs //NO update ts
                 ) {//valid personfor insert
                     return true;
                 } else {//new obj - but mandarory absent
@@ -55,19 +62,18 @@ public class DataQuality {
         }//isvalidfor-insert
 
         public static boolean isValidForUpdate(Model.Person in) {
-            final var id_is_empty = in.getId().isEmpty();
+            final var present_id = in.hasId();
             final var has_create_time =in.hasCreateTime();
             final var has_update_time =in.hasUpdateTime();
-            final var is_dirty = in.getDirty();
-            System.out.println("IsvalidforUpdate: id_is_empty="+id_is_empty+" has_create_time="+has_create_time+" has_update_time="+has_update_time+" is_dirty="+is_dirty);
-            if (null != in &&  id_is_empty == false) {// ID must NOT be NULL - preexisting
-                if (has_create_time ==true // signal: already created
-                        && has_update_time ==true // signal: already created
-                        && is_dirty == true // explict signal to update
+            final var is_dirty = in.getDirty();//don't check dirty - clients won't set in json
+            final var present_mandatory = (in.hasCreateTime() && in.hasUpdateTime());
+            System.out.println("IsvalidforUpdate: present_id="+present_id+" has_create_time="+has_create_time+" has_update_time="+has_update_time+" is_dirty="+is_dirty);
+            if (null != in &&  present_id) {// ID must NOT be NULL - preexisting
+                if (present_mandatory // explict signal to update
                 ) {
                     return true;
                 } else {
-                    throw new RuntimeException("Update=ID-present. BUT! timestamp expected for PRE-exiting obj, dirty=true expected. Hint : Forgot to set dirty=true ?");
+                    throw new RuntimeException("Update=ID-present. BUT! timestamp expected for PRE-exiting obj. Hint : Ensure ts is prsent (though will overridden by db)?");
                 }
             }
             return false;

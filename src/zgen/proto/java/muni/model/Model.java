@@ -23,7 +23,16 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>string id = 3;</code>
+     * <code>optional string id = 3;</code>
+     * @return Whether the id field is set.
+     */
+    boolean hasId();
+    /**
+     * <pre>
+     *Output only
+     * </pre>
+     *
+     * <code>optional string id = 3;</code>
      * @return The id.
      */
     java.lang.String getId();
@@ -32,7 +41,7 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>string id = 3;</code>
+     * <code>optional string id = 3;</code>
      * @return The bytes for id.
      */
     com.google.protobuf.ByteString
@@ -43,7 +52,16 @@ public final class Model {
      * optional added to test hasFirstName()
      * </pre>
      *
-     * <code>string firstName = 4;</code>
+     * <code>optional string firstName = 4;</code>
+     * @return Whether the firstName field is set.
+     */
+    boolean hasFirstName();
+    /**
+     * <pre>
+     * optional added to test hasFirstName()
+     * </pre>
+     *
+     * <code>optional string firstName = 4;</code>
      * @return The firstName.
      */
     java.lang.String getFirstName();
@@ -52,19 +70,24 @@ public final class Model {
      * optional added to test hasFirstName()
      * </pre>
      *
-     * <code>string firstName = 4;</code>
+     * <code>optional string firstName = 4;</code>
      * @return The bytes for firstName.
      */
     com.google.protobuf.ByteString
         getFirstNameBytes();
 
     /**
-     * <code>string lastName = 5;</code>
+     * <code>optional string lastName = 5;</code>
+     * @return Whether the lastName field is set.
+     */
+    boolean hasLastName();
+    /**
+     * <code>optional string lastName = 5;</code>
      * @return The lastName.
      */
     java.lang.String getLastName();
     /**
-     * <code>string lastName = 5;</code>
+     * <code>optional string lastName = 5;</code>
      * @return The bytes for lastName.
      */
     com.google.protobuf.ByteString
@@ -75,7 +98,16 @@ public final class Model {
      *ContactChannels contactChannels = 8;
      * </pre>
      *
-     * <code>string email = 6;</code>
+     * <code>optional string email = 6;</code>
+     * @return Whether the email field is set.
+     */
+    boolean hasEmail();
+    /**
+     * <pre>
+     *ContactChannels contactChannels = 8;
+     * </pre>
+     *
+     * <code>optional string email = 6;</code>
      * @return The email.
      */
     java.lang.String getEmail();
@@ -84,31 +116,41 @@ public final class Model {
      *ContactChannels contactChannels = 8;
      * </pre>
      *
-     * <code>string email = 6;</code>
+     * <code>optional string email = 6;</code>
      * @return The bytes for email.
      */
     com.google.protobuf.ByteString
         getEmailBytes();
 
     /**
-     * <code>string phone1 = 7;</code>
+     * <code>optional string phone1 = 7;</code>
+     * @return Whether the phone1 field is set.
+     */
+    boolean hasPhone1();
+    /**
+     * <code>optional string phone1 = 7;</code>
      * @return The phone1.
      */
     java.lang.String getPhone1();
     /**
-     * <code>string phone1 = 7;</code>
+     * <code>optional string phone1 = 7;</code>
      * @return The bytes for phone1.
      */
     com.google.protobuf.ByteString
         getPhone1Bytes();
 
     /**
-     * <code>string phone2 = 8;</code>
+     * <code>optional string phone2 = 8;</code>
+     * @return Whether the phone2 field is set.
+     */
+    boolean hasPhone2();
+    /**
+     * <code>optional string phone2 = 8;</code>
      * @return The phone2.
      */
     java.lang.String getPhone2();
     /**
-     * <code>string phone2 = 8;</code>
+     * <code>optional string phone2 = 8;</code>
      * @return The bytes for phone2.
      */
     com.google.protobuf.ByteString
@@ -119,7 +161,7 @@ public final class Model {
      *For objects no need for optional, hasAddress() works
      * </pre>
      *
-     * <code>.muni.model.PostalAddress address = 9;</code>
+     * <code>optional .muni.model.PostalAddress address = 9;</code>
      * @return Whether the address field is set.
      */
     boolean hasAddress();
@@ -128,7 +170,7 @@ public final class Model {
      *For objects no need for optional, hasAddress() works
      * </pre>
      *
-     * <code>.muni.model.PostalAddress address = 9;</code>
+     * <code>optional .muni.model.PostalAddress address = 9;</code>
      * @return The address.
      */
     muni.model.Model.PostalAddress getAddress();
@@ -137,7 +179,7 @@ public final class Model {
      *For objects no need for optional, hasAddress() works
      * </pre>
      *
-     * <code>.muni.model.PostalAddress address = 9;</code>
+     * <code>optional .muni.model.PostalAddress address = 9;</code>
      */
     muni.model.Model.PostalAddressOrBuilder getAddressOrBuilder();
 
@@ -146,7 +188,16 @@ public final class Model {
      *for boolean getDirty() default is enough, no need for optional
      * </pre>
      *
-     * <code>bool dirty = 10;</code>
+     * <code>optional bool dirty = 10 [default = false];</code>
+     * @return Whether the dirty field is set.
+     */
+    boolean hasDirty();
+    /**
+     * <pre>
+     *for boolean getDirty() default is enough, no need for optional
+     * </pre>
+     *
+     * <code>optional bool dirty = 10 [default = false];</code>
      * @return The dirty.
      */
     boolean getDirty();
@@ -156,7 +207,7 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp createTime = 1;</code>
+     * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
      * @return Whether the createTime field is set.
      */
     boolean hasCreateTime();
@@ -165,7 +216,7 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp createTime = 1;</code>
+     * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
      * @return The createTime.
      */
     com.google.protobuf.Timestamp getCreateTime();
@@ -174,7 +225,7 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp createTime = 1;</code>
+     * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder();
 
@@ -183,7 +234,7 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+     * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
      * @return Whether the updateTime field is set.
      */
     boolean hasUpdateTime();
@@ -192,7 +243,7 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+     * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
      * @return The updateTime.
      */
     com.google.protobuf.Timestamp getUpdateTime();
@@ -201,7 +252,7 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+     * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
      */
     com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder();
   }
@@ -246,6 +297,7 @@ public final class Model {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -258,7 +310,7 @@ public final class Model {
               break;
             case 10: {
               com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (createTime_ != null) {
+              if (((bitField0_ & 0x00000100) != 0)) {
                 subBuilder = createTime_.toBuilder();
               }
               createTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
@@ -266,12 +318,12 @@ public final class Model {
                 subBuilder.mergeFrom(createTime_);
                 createTime_ = subBuilder.buildPartial();
               }
-
+              bitField0_ |= 0x00000100;
               break;
             }
             case 18: {
               com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (updateTime_ != null) {
+              if (((bitField0_ & 0x00000200) != 0)) {
                 subBuilder = updateTime_.toBuilder();
               }
               updateTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
@@ -279,60 +331,60 @@ public final class Model {
                 subBuilder.mergeFrom(updateTime_);
                 updateTime_ = subBuilder.buildPartial();
               }
-
+              bitField0_ |= 0x00000200;
               break;
             }
             case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              id_ = bs;
               break;
             }
             case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              firstName_ = s;
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              firstName_ = bs;
               break;
             }
             case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              lastName_ = s;
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              lastName_ = bs;
               break;
             }
             case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              email_ = s;
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              email_ = bs;
               break;
             }
             case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              phone1_ = s;
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000010;
+              phone1_ = bs;
               break;
             }
             case 66: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              phone2_ = s;
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000020;
+              phone2_ = bs;
               break;
             }
             case 74: {
               muni.model.Model.PostalAddress.Builder subBuilder = null;
-              if (address_ != null) {
+              if (((bitField0_ & 0x00000040) != 0)) {
                 subBuilder = address_.toBuilder();
               }
-              address_ = input.readMessage(muni.model.Model.PostalAddress.parser(), extensionRegistry);
+              address_ = input.readMessage(muni.model.Model.PostalAddress.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(address_);
                 address_ = subBuilder.buildPartial();
               }
-
+              bitField0_ |= 0x00000040;
               break;
             }
             case 80: {
-
+              bitField0_ |= 0x00000080;
               dirty_ = input.readBool();
               break;
             }
@@ -368,6 +420,7 @@ public final class Model {
               muni.model.Model.Person.class, muni.model.Model.Person.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 3;
     private volatile java.lang.Object id_;
     /**
@@ -375,7 +428,19 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>string id = 3;</code>
+     * <code>optional string id = 3;</code>
+     * @return Whether the id field is set.
+     */
+    @java.lang.Override
+    public boolean hasId() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     *Output only
+     * </pre>
+     *
+     * <code>optional string id = 3;</code>
      * @return The id.
      */
     @java.lang.Override
@@ -387,7 +452,9 @@ public final class Model {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        id_ = s;
+        if (bs.isValidUtf8()) {
+          id_ = s;
+        }
         return s;
       }
     }
@@ -396,7 +463,7 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>string id = 3;</code>
+     * <code>optional string id = 3;</code>
      * @return The bytes for id.
      */
     @java.lang.Override
@@ -421,7 +488,19 @@ public final class Model {
      * optional added to test hasFirstName()
      * </pre>
      *
-     * <code>string firstName = 4;</code>
+     * <code>optional string firstName = 4;</code>
+     * @return Whether the firstName field is set.
+     */
+    @java.lang.Override
+    public boolean hasFirstName() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * optional added to test hasFirstName()
+     * </pre>
+     *
+     * <code>optional string firstName = 4;</code>
      * @return The firstName.
      */
     @java.lang.Override
@@ -433,7 +512,9 @@ public final class Model {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        firstName_ = s;
+        if (bs.isValidUtf8()) {
+          firstName_ = s;
+        }
         return s;
       }
     }
@@ -442,7 +523,7 @@ public final class Model {
      * optional added to test hasFirstName()
      * </pre>
      *
-     * <code>string firstName = 4;</code>
+     * <code>optional string firstName = 4;</code>
      * @return The bytes for firstName.
      */
     @java.lang.Override
@@ -463,7 +544,15 @@ public final class Model {
     public static final int LASTNAME_FIELD_NUMBER = 5;
     private volatile java.lang.Object lastName_;
     /**
-     * <code>string lastName = 5;</code>
+     * <code>optional string lastName = 5;</code>
+     * @return Whether the lastName field is set.
+     */
+    @java.lang.Override
+    public boolean hasLastName() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional string lastName = 5;</code>
      * @return The lastName.
      */
     @java.lang.Override
@@ -475,12 +564,14 @@ public final class Model {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        lastName_ = s;
+        if (bs.isValidUtf8()) {
+          lastName_ = s;
+        }
         return s;
       }
     }
     /**
-     * <code>string lastName = 5;</code>
+     * <code>optional string lastName = 5;</code>
      * @return The bytes for lastName.
      */
     @java.lang.Override
@@ -505,7 +596,19 @@ public final class Model {
      *ContactChannels contactChannels = 8;
      * </pre>
      *
-     * <code>string email = 6;</code>
+     * <code>optional string email = 6;</code>
+     * @return Whether the email field is set.
+     */
+    @java.lang.Override
+    public boolean hasEmail() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     *ContactChannels contactChannels = 8;
+     * </pre>
+     *
+     * <code>optional string email = 6;</code>
      * @return The email.
      */
     @java.lang.Override
@@ -517,7 +620,9 @@ public final class Model {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        email_ = s;
+        if (bs.isValidUtf8()) {
+          email_ = s;
+        }
         return s;
       }
     }
@@ -526,7 +631,7 @@ public final class Model {
      *ContactChannels contactChannels = 8;
      * </pre>
      *
-     * <code>string email = 6;</code>
+     * <code>optional string email = 6;</code>
      * @return The bytes for email.
      */
     @java.lang.Override
@@ -547,7 +652,15 @@ public final class Model {
     public static final int PHONE1_FIELD_NUMBER = 7;
     private volatile java.lang.Object phone1_;
     /**
-     * <code>string phone1 = 7;</code>
+     * <code>optional string phone1 = 7;</code>
+     * @return Whether the phone1 field is set.
+     */
+    @java.lang.Override
+    public boolean hasPhone1() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional string phone1 = 7;</code>
      * @return The phone1.
      */
     @java.lang.Override
@@ -559,12 +672,14 @@ public final class Model {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        phone1_ = s;
+        if (bs.isValidUtf8()) {
+          phone1_ = s;
+        }
         return s;
       }
     }
     /**
-     * <code>string phone1 = 7;</code>
+     * <code>optional string phone1 = 7;</code>
      * @return The bytes for phone1.
      */
     @java.lang.Override
@@ -585,7 +700,15 @@ public final class Model {
     public static final int PHONE2_FIELD_NUMBER = 8;
     private volatile java.lang.Object phone2_;
     /**
-     * <code>string phone2 = 8;</code>
+     * <code>optional string phone2 = 8;</code>
+     * @return Whether the phone2 field is set.
+     */
+    @java.lang.Override
+    public boolean hasPhone2() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <code>optional string phone2 = 8;</code>
      * @return The phone2.
      */
     @java.lang.Override
@@ -597,12 +720,14 @@ public final class Model {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        phone2_ = s;
+        if (bs.isValidUtf8()) {
+          phone2_ = s;
+        }
         return s;
       }
     }
     /**
-     * <code>string phone2 = 8;</code>
+     * <code>optional string phone2 = 8;</code>
      * @return The bytes for phone2.
      */
     @java.lang.Override
@@ -627,19 +752,19 @@ public final class Model {
      *For objects no need for optional, hasAddress() works
      * </pre>
      *
-     * <code>.muni.model.PostalAddress address = 9;</code>
+     * <code>optional .muni.model.PostalAddress address = 9;</code>
      * @return Whether the address field is set.
      */
     @java.lang.Override
     public boolean hasAddress() {
-      return address_ != null;
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <pre>
      *For objects no need for optional, hasAddress() works
      * </pre>
      *
-     * <code>.muni.model.PostalAddress address = 9;</code>
+     * <code>optional .muni.model.PostalAddress address = 9;</code>
      * @return The address.
      */
     @java.lang.Override
@@ -651,11 +776,11 @@ public final class Model {
      *For objects no need for optional, hasAddress() works
      * </pre>
      *
-     * <code>.muni.model.PostalAddress address = 9;</code>
+     * <code>optional .muni.model.PostalAddress address = 9;</code>
      */
     @java.lang.Override
     public muni.model.Model.PostalAddressOrBuilder getAddressOrBuilder() {
-      return getAddress();
+      return address_ == null ? muni.model.Model.PostalAddress.getDefaultInstance() : address_;
     }
 
     public static final int DIRTY_FIELD_NUMBER = 10;
@@ -665,7 +790,19 @@ public final class Model {
      *for boolean getDirty() default is enough, no need for optional
      * </pre>
      *
-     * <code>bool dirty = 10;</code>
+     * <code>optional bool dirty = 10 [default = false];</code>
+     * @return Whether the dirty field is set.
+     */
+    @java.lang.Override
+    public boolean hasDirty() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <pre>
+     *for boolean getDirty() default is enough, no need for optional
+     * </pre>
+     *
+     * <code>optional bool dirty = 10 [default = false];</code>
      * @return The dirty.
      */
     @java.lang.Override
@@ -680,19 +817,19 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp createTime = 1;</code>
+     * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
      * @return Whether the createTime field is set.
      */
     @java.lang.Override
     public boolean hasCreateTime() {
-      return createTime_ != null;
+      return ((bitField0_ & 0x00000100) != 0);
     }
     /**
      * <pre>
      *Output only
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp createTime = 1;</code>
+     * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
      * @return The createTime.
      */
     @java.lang.Override
@@ -704,11 +841,11 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp createTime = 1;</code>
+     * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder() {
-      return getCreateTime();
+      return createTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createTime_;
     }
 
     public static final int UPDATETIME_FIELD_NUMBER = 2;
@@ -718,19 +855,19 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+     * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
      * @return Whether the updateTime field is set.
      */
     @java.lang.Override
     public boolean hasUpdateTime() {
-      return updateTime_ != null;
+      return ((bitField0_ & 0x00000200) != 0);
     }
     /**
      * <pre>
      *Output only
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+     * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
      * @return The updateTime.
      */
     @java.lang.Override
@@ -742,11 +879,11 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+     * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder() {
-      return getUpdateTime();
+      return updateTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updateTime_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -763,34 +900,34 @@ public final class Model {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (createTime_ != null) {
+      if (((bitField0_ & 0x00000100) != 0)) {
         output.writeMessage(1, getCreateTime());
       }
-      if (updateTime_ != null) {
+      if (((bitField0_ & 0x00000200) != 0)) {
         output.writeMessage(2, getUpdateTime());
       }
-      if (!getIdBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, id_);
       }
-      if (!getFirstNameBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, firstName_);
       }
-      if (!getLastNameBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, lastName_);
       }
-      if (!getEmailBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, email_);
       }
-      if (!getPhone1Bytes().isEmpty()) {
+      if (((bitField0_ & 0x00000010) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, phone1_);
       }
-      if (!getPhone2Bytes().isEmpty()) {
+      if (((bitField0_ & 0x00000020) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, phone2_);
       }
-      if (address_ != null) {
+      if (((bitField0_ & 0x00000040) != 0)) {
         output.writeMessage(9, getAddress());
       }
-      if (dirty_ != false) {
+      if (((bitField0_ & 0x00000080) != 0)) {
         output.writeBool(10, dirty_);
       }
       unknownFields.writeTo(output);
@@ -802,37 +939,37 @@ public final class Model {
       if (size != -1) return size;
 
       size = 0;
-      if (createTime_ != null) {
+      if (((bitField0_ & 0x00000100) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCreateTime());
       }
-      if (updateTime_ != null) {
+      if (((bitField0_ & 0x00000200) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getUpdateTime());
       }
-      if (!getIdBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, id_);
       }
-      if (!getFirstNameBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, firstName_);
       }
-      if (!getLastNameBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, lastName_);
       }
-      if (!getEmailBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, email_);
       }
-      if (!getPhone1Bytes().isEmpty()) {
+      if (((bitField0_ & 0x00000010) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, phone1_);
       }
-      if (!getPhone2Bytes().isEmpty()) {
+      if (((bitField0_ & 0x00000020) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, phone2_);
       }
-      if (address_ != null) {
+      if (((bitField0_ & 0x00000040) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getAddress());
       }
-      if (dirty_ != false) {
+      if (((bitField0_ & 0x00000080) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(10, dirty_);
       }
@@ -851,25 +988,46 @@ public final class Model {
       }
       muni.model.Model.Person other = (muni.model.Model.Person) obj;
 
-      if (!getId()
-          .equals(other.getId())) return false;
-      if (!getFirstName()
-          .equals(other.getFirstName())) return false;
-      if (!getLastName()
-          .equals(other.getLastName())) return false;
-      if (!getEmail()
-          .equals(other.getEmail())) return false;
-      if (!getPhone1()
-          .equals(other.getPhone1())) return false;
-      if (!getPhone2()
-          .equals(other.getPhone2())) return false;
+      if (hasId() != other.hasId()) return false;
+      if (hasId()) {
+        if (!getId()
+            .equals(other.getId())) return false;
+      }
+      if (hasFirstName() != other.hasFirstName()) return false;
+      if (hasFirstName()) {
+        if (!getFirstName()
+            .equals(other.getFirstName())) return false;
+      }
+      if (hasLastName() != other.hasLastName()) return false;
+      if (hasLastName()) {
+        if (!getLastName()
+            .equals(other.getLastName())) return false;
+      }
+      if (hasEmail() != other.hasEmail()) return false;
+      if (hasEmail()) {
+        if (!getEmail()
+            .equals(other.getEmail())) return false;
+      }
+      if (hasPhone1() != other.hasPhone1()) return false;
+      if (hasPhone1()) {
+        if (!getPhone1()
+            .equals(other.getPhone1())) return false;
+      }
+      if (hasPhone2() != other.hasPhone2()) return false;
+      if (hasPhone2()) {
+        if (!getPhone2()
+            .equals(other.getPhone2())) return false;
+      }
       if (hasAddress() != other.hasAddress()) return false;
       if (hasAddress()) {
         if (!getAddress()
             .equals(other.getAddress())) return false;
       }
-      if (getDirty()
-          != other.getDirty()) return false;
+      if (hasDirty() != other.hasDirty()) return false;
+      if (hasDirty()) {
+        if (getDirty()
+            != other.getDirty()) return false;
+      }
       if (hasCreateTime() != other.hasCreateTime()) return false;
       if (hasCreateTime()) {
         if (!getCreateTime()
@@ -890,25 +1048,39 @@ public final class Model {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
-      hash = (37 * hash) + FIRSTNAME_FIELD_NUMBER;
-      hash = (53 * hash) + getFirstName().hashCode();
-      hash = (37 * hash) + LASTNAME_FIELD_NUMBER;
-      hash = (53 * hash) + getLastName().hashCode();
-      hash = (37 * hash) + EMAIL_FIELD_NUMBER;
-      hash = (53 * hash) + getEmail().hashCode();
-      hash = (37 * hash) + PHONE1_FIELD_NUMBER;
-      hash = (53 * hash) + getPhone1().hashCode();
-      hash = (37 * hash) + PHONE2_FIELD_NUMBER;
-      hash = (53 * hash) + getPhone2().hashCode();
+      if (hasId()) {
+        hash = (37 * hash) + ID_FIELD_NUMBER;
+        hash = (53 * hash) + getId().hashCode();
+      }
+      if (hasFirstName()) {
+        hash = (37 * hash) + FIRSTNAME_FIELD_NUMBER;
+        hash = (53 * hash) + getFirstName().hashCode();
+      }
+      if (hasLastName()) {
+        hash = (37 * hash) + LASTNAME_FIELD_NUMBER;
+        hash = (53 * hash) + getLastName().hashCode();
+      }
+      if (hasEmail()) {
+        hash = (37 * hash) + EMAIL_FIELD_NUMBER;
+        hash = (53 * hash) + getEmail().hashCode();
+      }
+      if (hasPhone1()) {
+        hash = (37 * hash) + PHONE1_FIELD_NUMBER;
+        hash = (53 * hash) + getPhone1().hashCode();
+      }
+      if (hasPhone2()) {
+        hash = (37 * hash) + PHONE2_FIELD_NUMBER;
+        hash = (53 * hash) + getPhone2().hashCode();
+      }
       if (hasAddress()) {
         hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
         hash = (53 * hash) + getAddress().hashCode();
       }
-      hash = (37 * hash) + DIRTY_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getDirty());
+      if (hasDirty()) {
+        hash = (37 * hash) + DIRTY_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getDirty());
+      }
       if (hasCreateTime()) {
         hash = (37 * hash) + CREATETIME_FIELD_NUMBER;
         hash = (53 * hash) + getCreateTime().hashCode();
@@ -1045,43 +1217,46 @@ public final class Model {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getAddressFieldBuilder();
+          getCreateTimeFieldBuilder();
+          getUpdateTimeFieldBuilder();
         }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         id_ = "";
-
+        bitField0_ = (bitField0_ & ~0x00000001);
         firstName_ = "";
-
+        bitField0_ = (bitField0_ & ~0x00000002);
         lastName_ = "";
-
+        bitField0_ = (bitField0_ & ~0x00000004);
         email_ = "";
-
+        bitField0_ = (bitField0_ & ~0x00000008);
         phone1_ = "";
-
+        bitField0_ = (bitField0_ & ~0x00000010);
         phone2_ = "";
-
+        bitField0_ = (bitField0_ & ~0x00000020);
         if (addressBuilder_ == null) {
           address_ = null;
         } else {
-          address_ = null;
-          addressBuilder_ = null;
+          addressBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000040);
         dirty_ = false;
-
+        bitField0_ = (bitField0_ & ~0x00000080);
         if (createTimeBuilder_ == null) {
           createTime_ = null;
         } else {
-          createTime_ = null;
-          createTimeBuilder_ = null;
+          createTimeBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000100);
         if (updateTimeBuilder_ == null) {
           updateTime_ = null;
         } else {
-          updateTime_ = null;
-          updateTimeBuilder_ = null;
+          updateTimeBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000200);
         return this;
       }
 
@@ -1108,28 +1283,61 @@ public final class Model {
       @java.lang.Override
       public muni.model.Model.Person buildPartial() {
         muni.model.Model.Person result = new muni.model.Model.Person(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
         result.id_ = id_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          to_bitField0_ |= 0x00000002;
+        }
         result.firstName_ = firstName_;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          to_bitField0_ |= 0x00000004;
+        }
         result.lastName_ = lastName_;
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          to_bitField0_ |= 0x00000008;
+        }
         result.email_ = email_;
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          to_bitField0_ |= 0x00000010;
+        }
         result.phone1_ = phone1_;
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          to_bitField0_ |= 0x00000020;
+        }
         result.phone2_ = phone2_;
-        if (addressBuilder_ == null) {
-          result.address_ = address_;
-        } else {
-          result.address_ = addressBuilder_.build();
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          if (addressBuilder_ == null) {
+            result.address_ = address_;
+          } else {
+            result.address_ = addressBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000040;
         }
-        result.dirty_ = dirty_;
-        if (createTimeBuilder_ == null) {
-          result.createTime_ = createTime_;
-        } else {
-          result.createTime_ = createTimeBuilder_.build();
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.dirty_ = dirty_;
+          to_bitField0_ |= 0x00000080;
         }
-        if (updateTimeBuilder_ == null) {
-          result.updateTime_ = updateTime_;
-        } else {
-          result.updateTime_ = updateTimeBuilder_.build();
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          if (createTimeBuilder_ == null) {
+            result.createTime_ = createTime_;
+          } else {
+            result.createTime_ = createTimeBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000100;
         }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          if (updateTimeBuilder_ == null) {
+            result.updateTime_ = updateTime_;
+          } else {
+            result.updateTime_ = updateTimeBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000200;
+        }
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -1178,34 +1386,40 @@ public final class Model {
 
       public Builder mergeFrom(muni.model.Model.Person other) {
         if (other == muni.model.Model.Person.getDefaultInstance()) return this;
-        if (!other.getId().isEmpty()) {
+        if (other.hasId()) {
+          bitField0_ |= 0x00000001;
           id_ = other.id_;
           onChanged();
         }
-        if (!other.getFirstName().isEmpty()) {
+        if (other.hasFirstName()) {
+          bitField0_ |= 0x00000002;
           firstName_ = other.firstName_;
           onChanged();
         }
-        if (!other.getLastName().isEmpty()) {
+        if (other.hasLastName()) {
+          bitField0_ |= 0x00000004;
           lastName_ = other.lastName_;
           onChanged();
         }
-        if (!other.getEmail().isEmpty()) {
+        if (other.hasEmail()) {
+          bitField0_ |= 0x00000008;
           email_ = other.email_;
           onChanged();
         }
-        if (!other.getPhone1().isEmpty()) {
+        if (other.hasPhone1()) {
+          bitField0_ |= 0x00000010;
           phone1_ = other.phone1_;
           onChanged();
         }
-        if (!other.getPhone2().isEmpty()) {
+        if (other.hasPhone2()) {
+          bitField0_ |= 0x00000020;
           phone2_ = other.phone2_;
           onChanged();
         }
         if (other.hasAddress()) {
           mergeAddress(other.getAddress());
         }
-        if (other.getDirty() != false) {
+        if (other.hasDirty()) {
           setDirty(other.getDirty());
         }
         if (other.hasCreateTime()) {
@@ -1242,6 +1456,7 @@ public final class Model {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object id_ = "";
       /**
@@ -1249,7 +1464,18 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>string id = 3;</code>
+       * <code>optional string id = 3;</code>
+       * @return Whether the id field is set.
+       */
+      public boolean hasId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
+       * <code>optional string id = 3;</code>
        * @return The id.
        */
       public java.lang.String getId() {
@@ -1258,7 +1484,9 @@ public final class Model {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          id_ = s;
+          if (bs.isValidUtf8()) {
+            id_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1269,7 +1497,7 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>string id = 3;</code>
+       * <code>optional string id = 3;</code>
        * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
@@ -1290,7 +1518,7 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>string id = 3;</code>
+       * <code>optional string id = 3;</code>
        * @param value The id to set.
        * @return This builder for chaining.
        */
@@ -1299,7 +1527,7 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  bitField0_ |= 0x00000001;
         id_ = value;
         onChanged();
         return this;
@@ -1309,11 +1537,11 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>string id = 3;</code>
+       * <code>optional string id = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         id_ = getDefaultInstance().getId();
         onChanged();
         return this;
@@ -1323,7 +1551,7 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>string id = 3;</code>
+       * <code>optional string id = 3;</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
        */
@@ -1332,8 +1560,7 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  bitField0_ |= 0x00000001;
         id_ = value;
         onChanged();
         return this;
@@ -1345,7 +1572,18 @@ public final class Model {
        * optional added to test hasFirstName()
        * </pre>
        *
-       * <code>string firstName = 4;</code>
+       * <code>optional string firstName = 4;</code>
+       * @return Whether the firstName field is set.
+       */
+      public boolean hasFirstName() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * optional added to test hasFirstName()
+       * </pre>
+       *
+       * <code>optional string firstName = 4;</code>
        * @return The firstName.
        */
       public java.lang.String getFirstName() {
@@ -1354,7 +1592,9 @@ public final class Model {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          firstName_ = s;
+          if (bs.isValidUtf8()) {
+            firstName_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1365,7 +1605,7 @@ public final class Model {
        * optional added to test hasFirstName()
        * </pre>
        *
-       * <code>string firstName = 4;</code>
+       * <code>optional string firstName = 4;</code>
        * @return The bytes for firstName.
        */
       public com.google.protobuf.ByteString
@@ -1386,7 +1626,7 @@ public final class Model {
        * optional added to test hasFirstName()
        * </pre>
        *
-       * <code>string firstName = 4;</code>
+       * <code>optional string firstName = 4;</code>
        * @param value The firstName to set.
        * @return This builder for chaining.
        */
@@ -1395,7 +1635,7 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  bitField0_ |= 0x00000002;
         firstName_ = value;
         onChanged();
         return this;
@@ -1405,11 +1645,11 @@ public final class Model {
        * optional added to test hasFirstName()
        * </pre>
        *
-       * <code>string firstName = 4;</code>
+       * <code>optional string firstName = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearFirstName() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         firstName_ = getDefaultInstance().getFirstName();
         onChanged();
         return this;
@@ -1419,7 +1659,7 @@ public final class Model {
        * optional added to test hasFirstName()
        * </pre>
        *
-       * <code>string firstName = 4;</code>
+       * <code>optional string firstName = 4;</code>
        * @param value The bytes for firstName to set.
        * @return This builder for chaining.
        */
@@ -1428,8 +1668,7 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  bitField0_ |= 0x00000002;
         firstName_ = value;
         onChanged();
         return this;
@@ -1437,7 +1676,14 @@ public final class Model {
 
       private java.lang.Object lastName_ = "";
       /**
-       * <code>string lastName = 5;</code>
+       * <code>optional string lastName = 5;</code>
+       * @return Whether the lastName field is set.
+       */
+      public boolean hasLastName() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional string lastName = 5;</code>
        * @return The lastName.
        */
       public java.lang.String getLastName() {
@@ -1446,14 +1692,16 @@ public final class Model {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          lastName_ = s;
+          if (bs.isValidUtf8()) {
+            lastName_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string lastName = 5;</code>
+       * <code>optional string lastName = 5;</code>
        * @return The bytes for lastName.
        */
       public com.google.protobuf.ByteString
@@ -1470,7 +1718,7 @@ public final class Model {
         }
       }
       /**
-       * <code>string lastName = 5;</code>
+       * <code>optional string lastName = 5;</code>
        * @param value The lastName to set.
        * @return This builder for chaining.
        */
@@ -1479,23 +1727,23 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  bitField0_ |= 0x00000004;
         lastName_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string lastName = 5;</code>
+       * <code>optional string lastName = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearLastName() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         lastName_ = getDefaultInstance().getLastName();
         onChanged();
         return this;
       }
       /**
-       * <code>string lastName = 5;</code>
+       * <code>optional string lastName = 5;</code>
        * @param value The bytes for lastName to set.
        * @return This builder for chaining.
        */
@@ -1504,8 +1752,7 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  bitField0_ |= 0x00000004;
         lastName_ = value;
         onChanged();
         return this;
@@ -1517,7 +1764,18 @@ public final class Model {
        *ContactChannels contactChannels = 8;
        * </pre>
        *
-       * <code>string email = 6;</code>
+       * <code>optional string email = 6;</code>
+       * @return Whether the email field is set.
+       */
+      public boolean hasEmail() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       *ContactChannels contactChannels = 8;
+       * </pre>
+       *
+       * <code>optional string email = 6;</code>
        * @return The email.
        */
       public java.lang.String getEmail() {
@@ -1526,7 +1784,9 @@ public final class Model {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          email_ = s;
+          if (bs.isValidUtf8()) {
+            email_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1537,7 +1797,7 @@ public final class Model {
        *ContactChannels contactChannels = 8;
        * </pre>
        *
-       * <code>string email = 6;</code>
+       * <code>optional string email = 6;</code>
        * @return The bytes for email.
        */
       public com.google.protobuf.ByteString
@@ -1558,7 +1818,7 @@ public final class Model {
        *ContactChannels contactChannels = 8;
        * </pre>
        *
-       * <code>string email = 6;</code>
+       * <code>optional string email = 6;</code>
        * @param value The email to set.
        * @return This builder for chaining.
        */
@@ -1567,7 +1827,7 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  bitField0_ |= 0x00000008;
         email_ = value;
         onChanged();
         return this;
@@ -1577,11 +1837,11 @@ public final class Model {
        *ContactChannels contactChannels = 8;
        * </pre>
        *
-       * <code>string email = 6;</code>
+       * <code>optional string email = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearEmail() {
-        
+        bitField0_ = (bitField0_ & ~0x00000008);
         email_ = getDefaultInstance().getEmail();
         onChanged();
         return this;
@@ -1591,7 +1851,7 @@ public final class Model {
        *ContactChannels contactChannels = 8;
        * </pre>
        *
-       * <code>string email = 6;</code>
+       * <code>optional string email = 6;</code>
        * @param value The bytes for email to set.
        * @return This builder for chaining.
        */
@@ -1600,8 +1860,7 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  bitField0_ |= 0x00000008;
         email_ = value;
         onChanged();
         return this;
@@ -1609,7 +1868,14 @@ public final class Model {
 
       private java.lang.Object phone1_ = "";
       /**
-       * <code>string phone1 = 7;</code>
+       * <code>optional string phone1 = 7;</code>
+       * @return Whether the phone1 field is set.
+       */
+      public boolean hasPhone1() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional string phone1 = 7;</code>
        * @return The phone1.
        */
       public java.lang.String getPhone1() {
@@ -1618,14 +1884,16 @@ public final class Model {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          phone1_ = s;
+          if (bs.isValidUtf8()) {
+            phone1_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string phone1 = 7;</code>
+       * <code>optional string phone1 = 7;</code>
        * @return The bytes for phone1.
        */
       public com.google.protobuf.ByteString
@@ -1642,7 +1910,7 @@ public final class Model {
         }
       }
       /**
-       * <code>string phone1 = 7;</code>
+       * <code>optional string phone1 = 7;</code>
        * @param value The phone1 to set.
        * @return This builder for chaining.
        */
@@ -1651,23 +1919,23 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  bitField0_ |= 0x00000010;
         phone1_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string phone1 = 7;</code>
+       * <code>optional string phone1 = 7;</code>
        * @return This builder for chaining.
        */
       public Builder clearPhone1() {
-        
+        bitField0_ = (bitField0_ & ~0x00000010);
         phone1_ = getDefaultInstance().getPhone1();
         onChanged();
         return this;
       }
       /**
-       * <code>string phone1 = 7;</code>
+       * <code>optional string phone1 = 7;</code>
        * @param value The bytes for phone1 to set.
        * @return This builder for chaining.
        */
@@ -1676,8 +1944,7 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  bitField0_ |= 0x00000010;
         phone1_ = value;
         onChanged();
         return this;
@@ -1685,7 +1952,14 @@ public final class Model {
 
       private java.lang.Object phone2_ = "";
       /**
-       * <code>string phone2 = 8;</code>
+       * <code>optional string phone2 = 8;</code>
+       * @return Whether the phone2 field is set.
+       */
+      public boolean hasPhone2() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>optional string phone2 = 8;</code>
        * @return The phone2.
        */
       public java.lang.String getPhone2() {
@@ -1694,14 +1968,16 @@ public final class Model {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          phone2_ = s;
+          if (bs.isValidUtf8()) {
+            phone2_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string phone2 = 8;</code>
+       * <code>optional string phone2 = 8;</code>
        * @return The bytes for phone2.
        */
       public com.google.protobuf.ByteString
@@ -1718,7 +1994,7 @@ public final class Model {
         }
       }
       /**
-       * <code>string phone2 = 8;</code>
+       * <code>optional string phone2 = 8;</code>
        * @param value The phone2 to set.
        * @return This builder for chaining.
        */
@@ -1727,23 +2003,23 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  bitField0_ |= 0x00000020;
         phone2_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string phone2 = 8;</code>
+       * <code>optional string phone2 = 8;</code>
        * @return This builder for chaining.
        */
       public Builder clearPhone2() {
-        
+        bitField0_ = (bitField0_ & ~0x00000020);
         phone2_ = getDefaultInstance().getPhone2();
         onChanged();
         return this;
       }
       /**
-       * <code>string phone2 = 8;</code>
+       * <code>optional string phone2 = 8;</code>
        * @param value The bytes for phone2 to set.
        * @return This builder for chaining.
        */
@@ -1752,8 +2028,7 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  bitField0_ |= 0x00000020;
         phone2_ = value;
         onChanged();
         return this;
@@ -1767,18 +2042,18 @@ public final class Model {
        *For objects no need for optional, hasAddress() works
        * </pre>
        *
-       * <code>.muni.model.PostalAddress address = 9;</code>
+       * <code>optional .muni.model.PostalAddress address = 9;</code>
        * @return Whether the address field is set.
        */
       public boolean hasAddress() {
-        return addressBuilder_ != null || address_ != null;
+        return ((bitField0_ & 0x00000040) != 0);
       }
       /**
        * <pre>
        *For objects no need for optional, hasAddress() works
        * </pre>
        *
-       * <code>.muni.model.PostalAddress address = 9;</code>
+       * <code>optional .muni.model.PostalAddress address = 9;</code>
        * @return The address.
        */
       public muni.model.Model.PostalAddress getAddress() {
@@ -1793,7 +2068,7 @@ public final class Model {
        *For objects no need for optional, hasAddress() works
        * </pre>
        *
-       * <code>.muni.model.PostalAddress address = 9;</code>
+       * <code>optional .muni.model.PostalAddress address = 9;</code>
        */
       public Builder setAddress(muni.model.Model.PostalAddress value) {
         if (addressBuilder_ == null) {
@@ -1805,7 +2080,7 @@ public final class Model {
         } else {
           addressBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000040;
         return this;
       }
       /**
@@ -1813,7 +2088,7 @@ public final class Model {
        *For objects no need for optional, hasAddress() works
        * </pre>
        *
-       * <code>.muni.model.PostalAddress address = 9;</code>
+       * <code>optional .muni.model.PostalAddress address = 9;</code>
        */
       public Builder setAddress(
           muni.model.Model.PostalAddress.Builder builderForValue) {
@@ -1823,7 +2098,7 @@ public final class Model {
         } else {
           addressBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000040;
         return this;
       }
       /**
@@ -1831,11 +2106,13 @@ public final class Model {
        *For objects no need for optional, hasAddress() works
        * </pre>
        *
-       * <code>.muni.model.PostalAddress address = 9;</code>
+       * <code>optional .muni.model.PostalAddress address = 9;</code>
        */
       public Builder mergeAddress(muni.model.Model.PostalAddress value) {
         if (addressBuilder_ == null) {
-          if (address_ != null) {
+          if (((bitField0_ & 0x00000040) != 0) &&
+              address_ != null &&
+              address_ != muni.model.Model.PostalAddress.getDefaultInstance()) {
             address_ =
               muni.model.Model.PostalAddress.newBuilder(address_).mergeFrom(value).buildPartial();
           } else {
@@ -1845,7 +2122,7 @@ public final class Model {
         } else {
           addressBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000040;
         return this;
       }
       /**
@@ -1853,17 +2130,16 @@ public final class Model {
        *For objects no need for optional, hasAddress() works
        * </pre>
        *
-       * <code>.muni.model.PostalAddress address = 9;</code>
+       * <code>optional .muni.model.PostalAddress address = 9;</code>
        */
       public Builder clearAddress() {
         if (addressBuilder_ == null) {
           address_ = null;
           onChanged();
         } else {
-          address_ = null;
-          addressBuilder_ = null;
+          addressBuilder_.clear();
         }
-
+        bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
       /**
@@ -1871,10 +2147,10 @@ public final class Model {
        *For objects no need for optional, hasAddress() works
        * </pre>
        *
-       * <code>.muni.model.PostalAddress address = 9;</code>
+       * <code>optional .muni.model.PostalAddress address = 9;</code>
        */
       public muni.model.Model.PostalAddress.Builder getAddressBuilder() {
-        
+        bitField0_ |= 0x00000040;
         onChanged();
         return getAddressFieldBuilder().getBuilder();
       }
@@ -1883,7 +2159,7 @@ public final class Model {
        *For objects no need for optional, hasAddress() works
        * </pre>
        *
-       * <code>.muni.model.PostalAddress address = 9;</code>
+       * <code>optional .muni.model.PostalAddress address = 9;</code>
        */
       public muni.model.Model.PostalAddressOrBuilder getAddressOrBuilder() {
         if (addressBuilder_ != null) {
@@ -1898,7 +2174,7 @@ public final class Model {
        *For objects no need for optional, hasAddress() works
        * </pre>
        *
-       * <code>.muni.model.PostalAddress address = 9;</code>
+       * <code>optional .muni.model.PostalAddress address = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           muni.model.Model.PostalAddress, muni.model.Model.PostalAddress.Builder, muni.model.Model.PostalAddressOrBuilder> 
@@ -1920,7 +2196,19 @@ public final class Model {
        *for boolean getDirty() default is enough, no need for optional
        * </pre>
        *
-       * <code>bool dirty = 10;</code>
+       * <code>optional bool dirty = 10 [default = false];</code>
+       * @return Whether the dirty field is set.
+       */
+      @java.lang.Override
+      public boolean hasDirty() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <pre>
+       *for boolean getDirty() default is enough, no need for optional
+       * </pre>
+       *
+       * <code>optional bool dirty = 10 [default = false];</code>
        * @return The dirty.
        */
       @java.lang.Override
@@ -1932,12 +2220,12 @@ public final class Model {
        *for boolean getDirty() default is enough, no need for optional
        * </pre>
        *
-       * <code>bool dirty = 10;</code>
+       * <code>optional bool dirty = 10 [default = false];</code>
        * @param value The dirty to set.
        * @return This builder for chaining.
        */
       public Builder setDirty(boolean value) {
-        
+        bitField0_ |= 0x00000080;
         dirty_ = value;
         onChanged();
         return this;
@@ -1947,11 +2235,11 @@ public final class Model {
        *for boolean getDirty() default is enough, no need for optional
        * </pre>
        *
-       * <code>bool dirty = 10;</code>
+       * <code>optional bool dirty = 10 [default = false];</code>
        * @return This builder for chaining.
        */
       public Builder clearDirty() {
-        
+        bitField0_ = (bitField0_ & ~0x00000080);
         dirty_ = false;
         onChanged();
         return this;
@@ -1965,18 +2253,18 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp createTime = 1;</code>
+       * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
        * @return Whether the createTime field is set.
        */
       public boolean hasCreateTime() {
-        return createTimeBuilder_ != null || createTime_ != null;
+        return ((bitField0_ & 0x00000100) != 0);
       }
       /**
        * <pre>
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp createTime = 1;</code>
+       * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
        * @return The createTime.
        */
       public com.google.protobuf.Timestamp getCreateTime() {
@@ -1991,7 +2279,7 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp createTime = 1;</code>
+       * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
        */
       public Builder setCreateTime(com.google.protobuf.Timestamp value) {
         if (createTimeBuilder_ == null) {
@@ -2003,7 +2291,7 @@ public final class Model {
         } else {
           createTimeBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000100;
         return this;
       }
       /**
@@ -2011,7 +2299,7 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp createTime = 1;</code>
+       * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
        */
       public Builder setCreateTime(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -2021,7 +2309,7 @@ public final class Model {
         } else {
           createTimeBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000100;
         return this;
       }
       /**
@@ -2029,11 +2317,13 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp createTime = 1;</code>
+       * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
        */
       public Builder mergeCreateTime(com.google.protobuf.Timestamp value) {
         if (createTimeBuilder_ == null) {
-          if (createTime_ != null) {
+          if (((bitField0_ & 0x00000100) != 0) &&
+              createTime_ != null &&
+              createTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
             createTime_ =
               com.google.protobuf.Timestamp.newBuilder(createTime_).mergeFrom(value).buildPartial();
           } else {
@@ -2043,7 +2333,7 @@ public final class Model {
         } else {
           createTimeBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000100;
         return this;
       }
       /**
@@ -2051,17 +2341,16 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp createTime = 1;</code>
+       * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
        */
       public Builder clearCreateTime() {
         if (createTimeBuilder_ == null) {
           createTime_ = null;
           onChanged();
         } else {
-          createTime_ = null;
-          createTimeBuilder_ = null;
+          createTimeBuilder_.clear();
         }
-
+        bitField0_ = (bitField0_ & ~0x00000100);
         return this;
       }
       /**
@@ -2069,10 +2358,10 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp createTime = 1;</code>
+       * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreateTimeBuilder() {
-        
+        bitField0_ |= 0x00000100;
         onChanged();
         return getCreateTimeFieldBuilder().getBuilder();
       }
@@ -2081,7 +2370,7 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp createTime = 1;</code>
+       * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder() {
         if (createTimeBuilder_ != null) {
@@ -2096,7 +2385,7 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp createTime = 1;</code>
+       * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -2120,18 +2409,18 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+       * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
        * @return Whether the updateTime field is set.
        */
       public boolean hasUpdateTime() {
-        return updateTimeBuilder_ != null || updateTime_ != null;
+        return ((bitField0_ & 0x00000200) != 0);
       }
       /**
        * <pre>
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+       * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
        * @return The updateTime.
        */
       public com.google.protobuf.Timestamp getUpdateTime() {
@@ -2146,7 +2435,7 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+       * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
        */
       public Builder setUpdateTime(com.google.protobuf.Timestamp value) {
         if (updateTimeBuilder_ == null) {
@@ -2158,7 +2447,7 @@ public final class Model {
         } else {
           updateTimeBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000200;
         return this;
       }
       /**
@@ -2166,7 +2455,7 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+       * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
        */
       public Builder setUpdateTime(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -2176,7 +2465,7 @@ public final class Model {
         } else {
           updateTimeBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000200;
         return this;
       }
       /**
@@ -2184,11 +2473,13 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+       * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
        */
       public Builder mergeUpdateTime(com.google.protobuf.Timestamp value) {
         if (updateTimeBuilder_ == null) {
-          if (updateTime_ != null) {
+          if (((bitField0_ & 0x00000200) != 0) &&
+              updateTime_ != null &&
+              updateTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
             updateTime_ =
               com.google.protobuf.Timestamp.newBuilder(updateTime_).mergeFrom(value).buildPartial();
           } else {
@@ -2198,7 +2489,7 @@ public final class Model {
         } else {
           updateTimeBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000200;
         return this;
       }
       /**
@@ -2206,17 +2497,16 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+       * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
        */
       public Builder clearUpdateTime() {
         if (updateTimeBuilder_ == null) {
           updateTime_ = null;
           onChanged();
         } else {
-          updateTime_ = null;
-          updateTimeBuilder_ = null;
+          updateTimeBuilder_.clear();
         }
-
+        bitField0_ = (bitField0_ & ~0x00000200);
         return this;
       }
       /**
@@ -2224,10 +2514,10 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+       * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
        */
       public com.google.protobuf.Timestamp.Builder getUpdateTimeBuilder() {
-        
+        bitField0_ |= 0x00000200;
         onChanged();
         return getUpdateTimeFieldBuilder().getBuilder();
       }
@@ -2236,7 +2526,7 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+       * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder() {
         if (updateTimeBuilder_ != null) {
@@ -2251,7 +2541,7 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+       * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -2292,7 +2582,7 @@ public final class Model {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Person>
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<Person>
         PARSER = new com.google.protobuf.AbstractParser<Person>() {
       @java.lang.Override
       public Person parsePartialFrom(
@@ -2324,84 +2614,119 @@ public final class Model {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string id = 3;</code>
+     * <code>optional string id = 3;</code>
+     * @return Whether the id field is set.
+     */
+    boolean hasId();
+    /**
+     * <code>optional string id = 3;</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
-     * <code>string id = 3;</code>
+     * <code>optional string id = 3;</code>
      * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
 
     /**
-     * <code>string streetNum = 4;</code>
+     * <code>optional string streetNum = 4;</code>
+     * @return Whether the streetNum field is set.
+     */
+    boolean hasStreetNum();
+    /**
+     * <code>optional string streetNum = 4;</code>
      * @return The streetNum.
      */
     java.lang.String getStreetNum();
     /**
-     * <code>string streetNum = 4;</code>
+     * <code>optional string streetNum = 4;</code>
      * @return The bytes for streetNum.
      */
     com.google.protobuf.ByteString
         getStreetNumBytes();
 
     /**
-     * <code>string streetName = 5;</code>
+     * <code>optional string streetName = 5;</code>
+     * @return Whether the streetName field is set.
+     */
+    boolean hasStreetName();
+    /**
+     * <code>optional string streetName = 5;</code>
      * @return The streetName.
      */
     java.lang.String getStreetName();
     /**
-     * <code>string streetName = 5;</code>
+     * <code>optional string streetName = 5;</code>
      * @return The bytes for streetName.
      */
     com.google.protobuf.ByteString
         getStreetNameBytes();
 
     /**
-     * <code>string city = 6;</code>
+     * <code>optional string city = 6;</code>
+     * @return Whether the city field is set.
+     */
+    boolean hasCity();
+    /**
+     * <code>optional string city = 6;</code>
      * @return The city.
      */
     java.lang.String getCity();
     /**
-     * <code>string city = 6;</code>
+     * <code>optional string city = 6;</code>
      * @return The bytes for city.
      */
     com.google.protobuf.ByteString
         getCityBytes();
 
     /**
-     * <code>string province = 7;</code>
+     * <code>optional string province = 7;</code>
+     * @return Whether the province field is set.
+     */
+    boolean hasProvince();
+    /**
+     * <code>optional string province = 7;</code>
      * @return The province.
      */
     java.lang.String getProvince();
     /**
-     * <code>string province = 7;</code>
+     * <code>optional string province = 7;</code>
      * @return The bytes for province.
      */
     com.google.protobuf.ByteString
         getProvinceBytes();
 
     /**
-     * <code>string country = 8;</code>
+     * <code>optional string country = 8;</code>
+     * @return Whether the country field is set.
+     */
+    boolean hasCountry();
+    /**
+     * <code>optional string country = 8;</code>
      * @return The country.
      */
     java.lang.String getCountry();
     /**
-     * <code>string country = 8;</code>
+     * <code>optional string country = 8;</code>
      * @return The bytes for country.
      */
     com.google.protobuf.ByteString
         getCountryBytes();
 
     /**
-     * <code>string postalCode = 9;</code>
+     * <code>optional string postalCode = 9;</code>
+     * @return Whether the postalCode field is set.
+     */
+    boolean hasPostalCode();
+    /**
+     * <code>optional string postalCode = 9;</code>
      * @return The postalCode.
      */
     java.lang.String getPostalCode();
     /**
-     * <code>string postalCode = 9;</code>
+     * <code>optional string postalCode = 9;</code>
      * @return The bytes for postalCode.
      */
     com.google.protobuf.ByteString
@@ -2412,19 +2737,38 @@ public final class Model {
      *geo
      * </pre>
      *
-     * <code>double lat = 10;</code>
+     * <code>optional double lat = 10;</code>
+     * @return Whether the lat field is set.
+     */
+    boolean hasLat();
+    /**
+     * <pre>
+     *geo
+     * </pre>
+     *
+     * <code>optional double lat = 10;</code>
      * @return The lat.
      */
     double getLat();
 
     /**
-     * <code>double lon = 11;</code>
+     * <code>optional double lon = 11;</code>
+     * @return Whether the lon field is set.
+     */
+    boolean hasLon();
+    /**
+     * <code>optional double lon = 11;</code>
      * @return The lon.
      */
     double getLon();
 
     /**
-     * <code>bool dirty = 12;</code>
+     * <code>optional bool dirty = 12 [default = false];</code>
+     * @return Whether the dirty field is set.
+     */
+    boolean hasDirty();
+    /**
+     * <code>optional bool dirty = 12 [default = false];</code>
      * @return The dirty.
      */
     boolean getDirty();
@@ -2434,7 +2778,7 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp createTime = 1;</code>
+     * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
      * @return Whether the createTime field is set.
      */
     boolean hasCreateTime();
@@ -2443,7 +2787,7 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp createTime = 1;</code>
+     * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
      * @return The createTime.
      */
     com.google.protobuf.Timestamp getCreateTime();
@@ -2452,7 +2796,7 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp createTime = 1;</code>
+     * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder();
 
@@ -2461,7 +2805,7 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+     * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
      * @return Whether the updateTime field is set.
      */
     boolean hasUpdateTime();
@@ -2470,7 +2814,7 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+     * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
      * @return The updateTime.
      */
     com.google.protobuf.Timestamp getUpdateTime();
@@ -2479,7 +2823,7 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+     * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
      */
     com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder();
   }
@@ -2529,6 +2873,7 @@ public final class Model {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2541,7 +2886,7 @@ public final class Model {
               break;
             case 10: {
               com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (createTime_ != null) {
+              if (((bitField0_ & 0x00000400) != 0)) {
                 subBuilder = createTime_.toBuilder();
               }
               createTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
@@ -2549,12 +2894,12 @@ public final class Model {
                 subBuilder.mergeFrom(createTime_);
                 createTime_ = subBuilder.buildPartial();
               }
-
+              bitField0_ |= 0x00000400;
               break;
             }
             case 18: {
               com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (updateTime_ != null) {
+              if (((bitField0_ & 0x00000800) != 0)) {
                 subBuilder = updateTime_.toBuilder();
               }
               updateTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
@@ -2562,63 +2907,63 @@ public final class Model {
                 subBuilder.mergeFrom(updateTime_);
                 updateTime_ = subBuilder.buildPartial();
               }
-
+              bitField0_ |= 0x00000800;
               break;
             }
             case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              id_ = bs;
               break;
             }
             case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              streetNum_ = s;
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              streetNum_ = bs;
               break;
             }
             case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              streetName_ = s;
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              streetName_ = bs;
               break;
             }
             case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              city_ = s;
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              city_ = bs;
               break;
             }
             case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              province_ = s;
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000010;
+              province_ = bs;
               break;
             }
             case 66: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              country_ = s;
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000020;
+              country_ = bs;
               break;
             }
             case 74: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              postalCode_ = s;
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000040;
+              postalCode_ = bs;
               break;
             }
             case 81: {
-
+              bitField0_ |= 0x00000080;
               lat_ = input.readDouble();
               break;
             }
             case 89: {
-
+              bitField0_ |= 0x00000100;
               lon_ = input.readDouble();
               break;
             }
             case 96: {
-
+              bitField0_ |= 0x00000200;
               dirty_ = input.readBool();
               break;
             }
@@ -2654,10 +2999,19 @@ public final class Model {
               muni.model.Model.PostalAddress.class, muni.model.Model.PostalAddress.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 3;
     private volatile java.lang.Object id_;
     /**
-     * <code>string id = 3;</code>
+     * <code>optional string id = 3;</code>
+     * @return Whether the id field is set.
+     */
+    @java.lang.Override
+    public boolean hasId() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string id = 3;</code>
      * @return The id.
      */
     @java.lang.Override
@@ -2669,12 +3023,14 @@ public final class Model {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        id_ = s;
+        if (bs.isValidUtf8()) {
+          id_ = s;
+        }
         return s;
       }
     }
     /**
-     * <code>string id = 3;</code>
+     * <code>optional string id = 3;</code>
      * @return The bytes for id.
      */
     @java.lang.Override
@@ -2695,7 +3051,15 @@ public final class Model {
     public static final int STREETNUM_FIELD_NUMBER = 4;
     private volatile java.lang.Object streetNum_;
     /**
-     * <code>string streetNum = 4;</code>
+     * <code>optional string streetNum = 4;</code>
+     * @return Whether the streetNum field is set.
+     */
+    @java.lang.Override
+    public boolean hasStreetNum() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional string streetNum = 4;</code>
      * @return The streetNum.
      */
     @java.lang.Override
@@ -2707,12 +3071,14 @@ public final class Model {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        streetNum_ = s;
+        if (bs.isValidUtf8()) {
+          streetNum_ = s;
+        }
         return s;
       }
     }
     /**
-     * <code>string streetNum = 4;</code>
+     * <code>optional string streetNum = 4;</code>
      * @return The bytes for streetNum.
      */
     @java.lang.Override
@@ -2733,7 +3099,15 @@ public final class Model {
     public static final int STREETNAME_FIELD_NUMBER = 5;
     private volatile java.lang.Object streetName_;
     /**
-     * <code>string streetName = 5;</code>
+     * <code>optional string streetName = 5;</code>
+     * @return Whether the streetName field is set.
+     */
+    @java.lang.Override
+    public boolean hasStreetName() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional string streetName = 5;</code>
      * @return The streetName.
      */
     @java.lang.Override
@@ -2745,12 +3119,14 @@ public final class Model {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        streetName_ = s;
+        if (bs.isValidUtf8()) {
+          streetName_ = s;
+        }
         return s;
       }
     }
     /**
-     * <code>string streetName = 5;</code>
+     * <code>optional string streetName = 5;</code>
      * @return The bytes for streetName.
      */
     @java.lang.Override
@@ -2771,7 +3147,15 @@ public final class Model {
     public static final int CITY_FIELD_NUMBER = 6;
     private volatile java.lang.Object city_;
     /**
-     * <code>string city = 6;</code>
+     * <code>optional string city = 6;</code>
+     * @return Whether the city field is set.
+     */
+    @java.lang.Override
+    public boolean hasCity() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional string city = 6;</code>
      * @return The city.
      */
     @java.lang.Override
@@ -2783,12 +3167,14 @@ public final class Model {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        city_ = s;
+        if (bs.isValidUtf8()) {
+          city_ = s;
+        }
         return s;
       }
     }
     /**
-     * <code>string city = 6;</code>
+     * <code>optional string city = 6;</code>
      * @return The bytes for city.
      */
     @java.lang.Override
@@ -2809,7 +3195,15 @@ public final class Model {
     public static final int PROVINCE_FIELD_NUMBER = 7;
     private volatile java.lang.Object province_;
     /**
-     * <code>string province = 7;</code>
+     * <code>optional string province = 7;</code>
+     * @return Whether the province field is set.
+     */
+    @java.lang.Override
+    public boolean hasProvince() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional string province = 7;</code>
      * @return The province.
      */
     @java.lang.Override
@@ -2821,12 +3215,14 @@ public final class Model {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        province_ = s;
+        if (bs.isValidUtf8()) {
+          province_ = s;
+        }
         return s;
       }
     }
     /**
-     * <code>string province = 7;</code>
+     * <code>optional string province = 7;</code>
      * @return The bytes for province.
      */
     @java.lang.Override
@@ -2847,7 +3243,15 @@ public final class Model {
     public static final int COUNTRY_FIELD_NUMBER = 8;
     private volatile java.lang.Object country_;
     /**
-     * <code>string country = 8;</code>
+     * <code>optional string country = 8;</code>
+     * @return Whether the country field is set.
+     */
+    @java.lang.Override
+    public boolean hasCountry() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <code>optional string country = 8;</code>
      * @return The country.
      */
     @java.lang.Override
@@ -2859,12 +3263,14 @@ public final class Model {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        country_ = s;
+        if (bs.isValidUtf8()) {
+          country_ = s;
+        }
         return s;
       }
     }
     /**
-     * <code>string country = 8;</code>
+     * <code>optional string country = 8;</code>
      * @return The bytes for country.
      */
     @java.lang.Override
@@ -2885,7 +3291,15 @@ public final class Model {
     public static final int POSTALCODE_FIELD_NUMBER = 9;
     private volatile java.lang.Object postalCode_;
     /**
-     * <code>string postalCode = 9;</code>
+     * <code>optional string postalCode = 9;</code>
+     * @return Whether the postalCode field is set.
+     */
+    @java.lang.Override
+    public boolean hasPostalCode() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>optional string postalCode = 9;</code>
      * @return The postalCode.
      */
     @java.lang.Override
@@ -2897,12 +3311,14 @@ public final class Model {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        postalCode_ = s;
+        if (bs.isValidUtf8()) {
+          postalCode_ = s;
+        }
         return s;
       }
     }
     /**
-     * <code>string postalCode = 9;</code>
+     * <code>optional string postalCode = 9;</code>
      * @return The bytes for postalCode.
      */
     @java.lang.Override
@@ -2927,7 +3343,19 @@ public final class Model {
      *geo
      * </pre>
      *
-     * <code>double lat = 10;</code>
+     * <code>optional double lat = 10;</code>
+     * @return Whether the lat field is set.
+     */
+    @java.lang.Override
+    public boolean hasLat() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <pre>
+     *geo
+     * </pre>
+     *
+     * <code>optional double lat = 10;</code>
      * @return The lat.
      */
     @java.lang.Override
@@ -2938,7 +3366,15 @@ public final class Model {
     public static final int LON_FIELD_NUMBER = 11;
     private double lon_;
     /**
-     * <code>double lon = 11;</code>
+     * <code>optional double lon = 11;</code>
+     * @return Whether the lon field is set.
+     */
+    @java.lang.Override
+    public boolean hasLon() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <code>optional double lon = 11;</code>
      * @return The lon.
      */
     @java.lang.Override
@@ -2949,7 +3385,15 @@ public final class Model {
     public static final int DIRTY_FIELD_NUMBER = 12;
     private boolean dirty_;
     /**
-     * <code>bool dirty = 12;</code>
+     * <code>optional bool dirty = 12 [default = false];</code>
+     * @return Whether the dirty field is set.
+     */
+    @java.lang.Override
+    public boolean hasDirty() {
+      return ((bitField0_ & 0x00000200) != 0);
+    }
+    /**
+     * <code>optional bool dirty = 12 [default = false];</code>
      * @return The dirty.
      */
     @java.lang.Override
@@ -2964,19 +3408,19 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp createTime = 1;</code>
+     * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
      * @return Whether the createTime field is set.
      */
     @java.lang.Override
     public boolean hasCreateTime() {
-      return createTime_ != null;
+      return ((bitField0_ & 0x00000400) != 0);
     }
     /**
      * <pre>
      *Output only
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp createTime = 1;</code>
+     * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
      * @return The createTime.
      */
     @java.lang.Override
@@ -2988,11 +3432,11 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp createTime = 1;</code>
+     * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder() {
-      return getCreateTime();
+      return createTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createTime_;
     }
 
     public static final int UPDATETIME_FIELD_NUMBER = 2;
@@ -3002,19 +3446,19 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+     * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
      * @return Whether the updateTime field is set.
      */
     @java.lang.Override
     public boolean hasUpdateTime() {
-      return updateTime_ != null;
+      return ((bitField0_ & 0x00000800) != 0);
     }
     /**
      * <pre>
      *Output only
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+     * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
      * @return The updateTime.
      */
     @java.lang.Override
@@ -3026,11 +3470,11 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+     * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder() {
-      return getUpdateTime();
+      return updateTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updateTime_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -3047,40 +3491,40 @@ public final class Model {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (createTime_ != null) {
+      if (((bitField0_ & 0x00000400) != 0)) {
         output.writeMessage(1, getCreateTime());
       }
-      if (updateTime_ != null) {
+      if (((bitField0_ & 0x00000800) != 0)) {
         output.writeMessage(2, getUpdateTime());
       }
-      if (!getIdBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, id_);
       }
-      if (!getStreetNumBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, streetNum_);
       }
-      if (!getStreetNameBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, streetName_);
       }
-      if (!getCityBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, city_);
       }
-      if (!getProvinceBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000010) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, province_);
       }
-      if (!getCountryBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000020) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, country_);
       }
-      if (!getPostalCodeBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000040) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, postalCode_);
       }
-      if (lat_ != 0D) {
+      if (((bitField0_ & 0x00000080) != 0)) {
         output.writeDouble(10, lat_);
       }
-      if (lon_ != 0D) {
+      if (((bitField0_ & 0x00000100) != 0)) {
         output.writeDouble(11, lon_);
       }
-      if (dirty_ != false) {
+      if (((bitField0_ & 0x00000200) != 0)) {
         output.writeBool(12, dirty_);
       }
       unknownFields.writeTo(output);
@@ -3092,44 +3536,44 @@ public final class Model {
       if (size != -1) return size;
 
       size = 0;
-      if (createTime_ != null) {
+      if (((bitField0_ & 0x00000400) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCreateTime());
       }
-      if (updateTime_ != null) {
+      if (((bitField0_ & 0x00000800) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getUpdateTime());
       }
-      if (!getIdBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, id_);
       }
-      if (!getStreetNumBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, streetNum_);
       }
-      if (!getStreetNameBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, streetName_);
       }
-      if (!getCityBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, city_);
       }
-      if (!getProvinceBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000010) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, province_);
       }
-      if (!getCountryBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000020) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, country_);
       }
-      if (!getPostalCodeBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000040) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, postalCode_);
       }
-      if (lat_ != 0D) {
+      if (((bitField0_ & 0x00000080) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(10, lat_);
       }
-      if (lon_ != 0D) {
+      if (((bitField0_ & 0x00000100) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(11, lon_);
       }
-      if (dirty_ != false) {
+      if (((bitField0_ & 0x00000200) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(12, dirty_);
       }
@@ -3148,28 +3592,58 @@ public final class Model {
       }
       muni.model.Model.PostalAddress other = (muni.model.Model.PostalAddress) obj;
 
-      if (!getId()
-          .equals(other.getId())) return false;
-      if (!getStreetNum()
-          .equals(other.getStreetNum())) return false;
-      if (!getStreetName()
-          .equals(other.getStreetName())) return false;
-      if (!getCity()
-          .equals(other.getCity())) return false;
-      if (!getProvince()
-          .equals(other.getProvince())) return false;
-      if (!getCountry()
-          .equals(other.getCountry())) return false;
-      if (!getPostalCode()
-          .equals(other.getPostalCode())) return false;
-      if (java.lang.Double.doubleToLongBits(getLat())
-          != java.lang.Double.doubleToLongBits(
-              other.getLat())) return false;
-      if (java.lang.Double.doubleToLongBits(getLon())
-          != java.lang.Double.doubleToLongBits(
-              other.getLon())) return false;
-      if (getDirty()
-          != other.getDirty()) return false;
+      if (hasId() != other.hasId()) return false;
+      if (hasId()) {
+        if (!getId()
+            .equals(other.getId())) return false;
+      }
+      if (hasStreetNum() != other.hasStreetNum()) return false;
+      if (hasStreetNum()) {
+        if (!getStreetNum()
+            .equals(other.getStreetNum())) return false;
+      }
+      if (hasStreetName() != other.hasStreetName()) return false;
+      if (hasStreetName()) {
+        if (!getStreetName()
+            .equals(other.getStreetName())) return false;
+      }
+      if (hasCity() != other.hasCity()) return false;
+      if (hasCity()) {
+        if (!getCity()
+            .equals(other.getCity())) return false;
+      }
+      if (hasProvince() != other.hasProvince()) return false;
+      if (hasProvince()) {
+        if (!getProvince()
+            .equals(other.getProvince())) return false;
+      }
+      if (hasCountry() != other.hasCountry()) return false;
+      if (hasCountry()) {
+        if (!getCountry()
+            .equals(other.getCountry())) return false;
+      }
+      if (hasPostalCode() != other.hasPostalCode()) return false;
+      if (hasPostalCode()) {
+        if (!getPostalCode()
+            .equals(other.getPostalCode())) return false;
+      }
+      if (hasLat() != other.hasLat()) return false;
+      if (hasLat()) {
+        if (java.lang.Double.doubleToLongBits(getLat())
+            != java.lang.Double.doubleToLongBits(
+                other.getLat())) return false;
+      }
+      if (hasLon() != other.hasLon()) return false;
+      if (hasLon()) {
+        if (java.lang.Double.doubleToLongBits(getLon())
+            != java.lang.Double.doubleToLongBits(
+                other.getLon())) return false;
+      }
+      if (hasDirty() != other.hasDirty()) return false;
+      if (hasDirty()) {
+        if (getDirty()
+            != other.getDirty()) return false;
+      }
       if (hasCreateTime() != other.hasCreateTime()) return false;
       if (hasCreateTime()) {
         if (!getCreateTime()
@@ -3190,29 +3664,49 @@ public final class Model {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
-      hash = (37 * hash) + STREETNUM_FIELD_NUMBER;
-      hash = (53 * hash) + getStreetNum().hashCode();
-      hash = (37 * hash) + STREETNAME_FIELD_NUMBER;
-      hash = (53 * hash) + getStreetName().hashCode();
-      hash = (37 * hash) + CITY_FIELD_NUMBER;
-      hash = (53 * hash) + getCity().hashCode();
-      hash = (37 * hash) + PROVINCE_FIELD_NUMBER;
-      hash = (53 * hash) + getProvince().hashCode();
-      hash = (37 * hash) + COUNTRY_FIELD_NUMBER;
-      hash = (53 * hash) + getCountry().hashCode();
-      hash = (37 * hash) + POSTALCODE_FIELD_NUMBER;
-      hash = (53 * hash) + getPostalCode().hashCode();
-      hash = (37 * hash) + LAT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getLat()));
-      hash = (37 * hash) + LON_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getLon()));
-      hash = (37 * hash) + DIRTY_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getDirty());
+      if (hasId()) {
+        hash = (37 * hash) + ID_FIELD_NUMBER;
+        hash = (53 * hash) + getId().hashCode();
+      }
+      if (hasStreetNum()) {
+        hash = (37 * hash) + STREETNUM_FIELD_NUMBER;
+        hash = (53 * hash) + getStreetNum().hashCode();
+      }
+      if (hasStreetName()) {
+        hash = (37 * hash) + STREETNAME_FIELD_NUMBER;
+        hash = (53 * hash) + getStreetName().hashCode();
+      }
+      if (hasCity()) {
+        hash = (37 * hash) + CITY_FIELD_NUMBER;
+        hash = (53 * hash) + getCity().hashCode();
+      }
+      if (hasProvince()) {
+        hash = (37 * hash) + PROVINCE_FIELD_NUMBER;
+        hash = (53 * hash) + getProvince().hashCode();
+      }
+      if (hasCountry()) {
+        hash = (37 * hash) + COUNTRY_FIELD_NUMBER;
+        hash = (53 * hash) + getCountry().hashCode();
+      }
+      if (hasPostalCode()) {
+        hash = (37 * hash) + POSTALCODE_FIELD_NUMBER;
+        hash = (53 * hash) + getPostalCode().hashCode();
+      }
+      if (hasLat()) {
+        hash = (37 * hash) + LAT_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getLat()));
+      }
+      if (hasLon()) {
+        hash = (37 * hash) + LON_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getLon()));
+      }
+      if (hasDirty()) {
+        hash = (37 * hash) + DIRTY_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getDirty());
+      }
       if (hasCreateTime()) {
         hash = (37 * hash) + CREATETIME_FIELD_NUMBER;
         hash = (53 * hash) + getCreateTime().hashCode();
@@ -3353,43 +3847,45 @@ public final class Model {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getCreateTimeFieldBuilder();
+          getUpdateTimeFieldBuilder();
         }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         id_ = "";
-
+        bitField0_ = (bitField0_ & ~0x00000001);
         streetNum_ = "";
-
+        bitField0_ = (bitField0_ & ~0x00000002);
         streetName_ = "";
-
+        bitField0_ = (bitField0_ & ~0x00000004);
         city_ = "";
-
+        bitField0_ = (bitField0_ & ~0x00000008);
         province_ = "";
-
+        bitField0_ = (bitField0_ & ~0x00000010);
         country_ = "";
-
+        bitField0_ = (bitField0_ & ~0x00000020);
         postalCode_ = "";
-
+        bitField0_ = (bitField0_ & ~0x00000040);
         lat_ = 0D;
-
+        bitField0_ = (bitField0_ & ~0x00000080);
         lon_ = 0D;
-
+        bitField0_ = (bitField0_ & ~0x00000100);
         dirty_ = false;
-
+        bitField0_ = (bitField0_ & ~0x00000200);
         if (createTimeBuilder_ == null) {
           createTime_ = null;
         } else {
-          createTime_ = null;
-          createTimeBuilder_ = null;
+          createTimeBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000400);
         if (updateTimeBuilder_ == null) {
           updateTime_ = null;
         } else {
-          updateTime_ = null;
-          updateTimeBuilder_ = null;
+          updateTimeBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000800);
         return this;
       }
 
@@ -3416,26 +3912,65 @@ public final class Model {
       @java.lang.Override
       public muni.model.Model.PostalAddress buildPartial() {
         muni.model.Model.PostalAddress result = new muni.model.Model.PostalAddress(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
         result.id_ = id_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          to_bitField0_ |= 0x00000002;
+        }
         result.streetNum_ = streetNum_;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          to_bitField0_ |= 0x00000004;
+        }
         result.streetName_ = streetName_;
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          to_bitField0_ |= 0x00000008;
+        }
         result.city_ = city_;
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          to_bitField0_ |= 0x00000010;
+        }
         result.province_ = province_;
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          to_bitField0_ |= 0x00000020;
+        }
         result.country_ = country_;
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          to_bitField0_ |= 0x00000040;
+        }
         result.postalCode_ = postalCode_;
-        result.lat_ = lat_;
-        result.lon_ = lon_;
-        result.dirty_ = dirty_;
-        if (createTimeBuilder_ == null) {
-          result.createTime_ = createTime_;
-        } else {
-          result.createTime_ = createTimeBuilder_.build();
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.lat_ = lat_;
+          to_bitField0_ |= 0x00000080;
         }
-        if (updateTimeBuilder_ == null) {
-          result.updateTime_ = updateTime_;
-        } else {
-          result.updateTime_ = updateTimeBuilder_.build();
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.lon_ = lon_;
+          to_bitField0_ |= 0x00000100;
         }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.dirty_ = dirty_;
+          to_bitField0_ |= 0x00000200;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          if (createTimeBuilder_ == null) {
+            result.createTime_ = createTime_;
+          } else {
+            result.createTime_ = createTimeBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000400;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          if (updateTimeBuilder_ == null) {
+            result.updateTime_ = updateTime_;
+          } else {
+            result.updateTime_ = updateTimeBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000800;
+        }
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -3484,41 +4019,48 @@ public final class Model {
 
       public Builder mergeFrom(muni.model.Model.PostalAddress other) {
         if (other == muni.model.Model.PostalAddress.getDefaultInstance()) return this;
-        if (!other.getId().isEmpty()) {
+        if (other.hasId()) {
+          bitField0_ |= 0x00000001;
           id_ = other.id_;
           onChanged();
         }
-        if (!other.getStreetNum().isEmpty()) {
+        if (other.hasStreetNum()) {
+          bitField0_ |= 0x00000002;
           streetNum_ = other.streetNum_;
           onChanged();
         }
-        if (!other.getStreetName().isEmpty()) {
+        if (other.hasStreetName()) {
+          bitField0_ |= 0x00000004;
           streetName_ = other.streetName_;
           onChanged();
         }
-        if (!other.getCity().isEmpty()) {
+        if (other.hasCity()) {
+          bitField0_ |= 0x00000008;
           city_ = other.city_;
           onChanged();
         }
-        if (!other.getProvince().isEmpty()) {
+        if (other.hasProvince()) {
+          bitField0_ |= 0x00000010;
           province_ = other.province_;
           onChanged();
         }
-        if (!other.getCountry().isEmpty()) {
+        if (other.hasCountry()) {
+          bitField0_ |= 0x00000020;
           country_ = other.country_;
           onChanged();
         }
-        if (!other.getPostalCode().isEmpty()) {
+        if (other.hasPostalCode()) {
+          bitField0_ |= 0x00000040;
           postalCode_ = other.postalCode_;
           onChanged();
         }
-        if (other.getLat() != 0D) {
+        if (other.hasLat()) {
           setLat(other.getLat());
         }
-        if (other.getLon() != 0D) {
+        if (other.hasLon()) {
           setLon(other.getLon());
         }
-        if (other.getDirty() != false) {
+        if (other.hasDirty()) {
           setDirty(other.getDirty());
         }
         if (other.hasCreateTime()) {
@@ -3555,10 +4097,18 @@ public final class Model {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object id_ = "";
       /**
-       * <code>string id = 3;</code>
+       * <code>optional string id = 3;</code>
+       * @return Whether the id field is set.
+       */
+      public boolean hasId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional string id = 3;</code>
        * @return The id.
        */
       public java.lang.String getId() {
@@ -3567,14 +4117,16 @@ public final class Model {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          id_ = s;
+          if (bs.isValidUtf8()) {
+            id_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string id = 3;</code>
+       * <code>optional string id = 3;</code>
        * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
@@ -3591,7 +4143,7 @@ public final class Model {
         }
       }
       /**
-       * <code>string id = 3;</code>
+       * <code>optional string id = 3;</code>
        * @param value The id to set.
        * @return This builder for chaining.
        */
@@ -3600,23 +4152,23 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  bitField0_ |= 0x00000001;
         id_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string id = 3;</code>
+       * <code>optional string id = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         id_ = getDefaultInstance().getId();
         onChanged();
         return this;
       }
       /**
-       * <code>string id = 3;</code>
+       * <code>optional string id = 3;</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
        */
@@ -3625,8 +4177,7 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  bitField0_ |= 0x00000001;
         id_ = value;
         onChanged();
         return this;
@@ -3634,7 +4185,14 @@ public final class Model {
 
       private java.lang.Object streetNum_ = "";
       /**
-       * <code>string streetNum = 4;</code>
+       * <code>optional string streetNum = 4;</code>
+       * @return Whether the streetNum field is set.
+       */
+      public boolean hasStreetNum() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional string streetNum = 4;</code>
        * @return The streetNum.
        */
       public java.lang.String getStreetNum() {
@@ -3643,14 +4201,16 @@ public final class Model {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          streetNum_ = s;
+          if (bs.isValidUtf8()) {
+            streetNum_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string streetNum = 4;</code>
+       * <code>optional string streetNum = 4;</code>
        * @return The bytes for streetNum.
        */
       public com.google.protobuf.ByteString
@@ -3667,7 +4227,7 @@ public final class Model {
         }
       }
       /**
-       * <code>string streetNum = 4;</code>
+       * <code>optional string streetNum = 4;</code>
        * @param value The streetNum to set.
        * @return This builder for chaining.
        */
@@ -3676,23 +4236,23 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  bitField0_ |= 0x00000002;
         streetNum_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string streetNum = 4;</code>
+       * <code>optional string streetNum = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearStreetNum() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         streetNum_ = getDefaultInstance().getStreetNum();
         onChanged();
         return this;
       }
       /**
-       * <code>string streetNum = 4;</code>
+       * <code>optional string streetNum = 4;</code>
        * @param value The bytes for streetNum to set.
        * @return This builder for chaining.
        */
@@ -3701,8 +4261,7 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  bitField0_ |= 0x00000002;
         streetNum_ = value;
         onChanged();
         return this;
@@ -3710,7 +4269,14 @@ public final class Model {
 
       private java.lang.Object streetName_ = "";
       /**
-       * <code>string streetName = 5;</code>
+       * <code>optional string streetName = 5;</code>
+       * @return Whether the streetName field is set.
+       */
+      public boolean hasStreetName() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional string streetName = 5;</code>
        * @return The streetName.
        */
       public java.lang.String getStreetName() {
@@ -3719,14 +4285,16 @@ public final class Model {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          streetName_ = s;
+          if (bs.isValidUtf8()) {
+            streetName_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string streetName = 5;</code>
+       * <code>optional string streetName = 5;</code>
        * @return The bytes for streetName.
        */
       public com.google.protobuf.ByteString
@@ -3743,7 +4311,7 @@ public final class Model {
         }
       }
       /**
-       * <code>string streetName = 5;</code>
+       * <code>optional string streetName = 5;</code>
        * @param value The streetName to set.
        * @return This builder for chaining.
        */
@@ -3752,23 +4320,23 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  bitField0_ |= 0x00000004;
         streetName_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string streetName = 5;</code>
+       * <code>optional string streetName = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearStreetName() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         streetName_ = getDefaultInstance().getStreetName();
         onChanged();
         return this;
       }
       /**
-       * <code>string streetName = 5;</code>
+       * <code>optional string streetName = 5;</code>
        * @param value The bytes for streetName to set.
        * @return This builder for chaining.
        */
@@ -3777,8 +4345,7 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  bitField0_ |= 0x00000004;
         streetName_ = value;
         onChanged();
         return this;
@@ -3786,7 +4353,14 @@ public final class Model {
 
       private java.lang.Object city_ = "";
       /**
-       * <code>string city = 6;</code>
+       * <code>optional string city = 6;</code>
+       * @return Whether the city field is set.
+       */
+      public boolean hasCity() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional string city = 6;</code>
        * @return The city.
        */
       public java.lang.String getCity() {
@@ -3795,14 +4369,16 @@ public final class Model {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          city_ = s;
+          if (bs.isValidUtf8()) {
+            city_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string city = 6;</code>
+       * <code>optional string city = 6;</code>
        * @return The bytes for city.
        */
       public com.google.protobuf.ByteString
@@ -3819,7 +4395,7 @@ public final class Model {
         }
       }
       /**
-       * <code>string city = 6;</code>
+       * <code>optional string city = 6;</code>
        * @param value The city to set.
        * @return This builder for chaining.
        */
@@ -3828,23 +4404,23 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  bitField0_ |= 0x00000008;
         city_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string city = 6;</code>
+       * <code>optional string city = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearCity() {
-        
+        bitField0_ = (bitField0_ & ~0x00000008);
         city_ = getDefaultInstance().getCity();
         onChanged();
         return this;
       }
       /**
-       * <code>string city = 6;</code>
+       * <code>optional string city = 6;</code>
        * @param value The bytes for city to set.
        * @return This builder for chaining.
        */
@@ -3853,8 +4429,7 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  bitField0_ |= 0x00000008;
         city_ = value;
         onChanged();
         return this;
@@ -3862,7 +4437,14 @@ public final class Model {
 
       private java.lang.Object province_ = "";
       /**
-       * <code>string province = 7;</code>
+       * <code>optional string province = 7;</code>
+       * @return Whether the province field is set.
+       */
+      public boolean hasProvince() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional string province = 7;</code>
        * @return The province.
        */
       public java.lang.String getProvince() {
@@ -3871,14 +4453,16 @@ public final class Model {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          province_ = s;
+          if (bs.isValidUtf8()) {
+            province_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string province = 7;</code>
+       * <code>optional string province = 7;</code>
        * @return The bytes for province.
        */
       public com.google.protobuf.ByteString
@@ -3895,7 +4479,7 @@ public final class Model {
         }
       }
       /**
-       * <code>string province = 7;</code>
+       * <code>optional string province = 7;</code>
        * @param value The province to set.
        * @return This builder for chaining.
        */
@@ -3904,23 +4488,23 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  bitField0_ |= 0x00000010;
         province_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string province = 7;</code>
+       * <code>optional string province = 7;</code>
        * @return This builder for chaining.
        */
       public Builder clearProvince() {
-        
+        bitField0_ = (bitField0_ & ~0x00000010);
         province_ = getDefaultInstance().getProvince();
         onChanged();
         return this;
       }
       /**
-       * <code>string province = 7;</code>
+       * <code>optional string province = 7;</code>
        * @param value The bytes for province to set.
        * @return This builder for chaining.
        */
@@ -3929,8 +4513,7 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  bitField0_ |= 0x00000010;
         province_ = value;
         onChanged();
         return this;
@@ -3938,7 +4521,14 @@ public final class Model {
 
       private java.lang.Object country_ = "";
       /**
-       * <code>string country = 8;</code>
+       * <code>optional string country = 8;</code>
+       * @return Whether the country field is set.
+       */
+      public boolean hasCountry() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>optional string country = 8;</code>
        * @return The country.
        */
       public java.lang.String getCountry() {
@@ -3947,14 +4537,16 @@ public final class Model {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          country_ = s;
+          if (bs.isValidUtf8()) {
+            country_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string country = 8;</code>
+       * <code>optional string country = 8;</code>
        * @return The bytes for country.
        */
       public com.google.protobuf.ByteString
@@ -3971,7 +4563,7 @@ public final class Model {
         }
       }
       /**
-       * <code>string country = 8;</code>
+       * <code>optional string country = 8;</code>
        * @param value The country to set.
        * @return This builder for chaining.
        */
@@ -3980,23 +4572,23 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  bitField0_ |= 0x00000020;
         country_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string country = 8;</code>
+       * <code>optional string country = 8;</code>
        * @return This builder for chaining.
        */
       public Builder clearCountry() {
-        
+        bitField0_ = (bitField0_ & ~0x00000020);
         country_ = getDefaultInstance().getCountry();
         onChanged();
         return this;
       }
       /**
-       * <code>string country = 8;</code>
+       * <code>optional string country = 8;</code>
        * @param value The bytes for country to set.
        * @return This builder for chaining.
        */
@@ -4005,8 +4597,7 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  bitField0_ |= 0x00000020;
         country_ = value;
         onChanged();
         return this;
@@ -4014,7 +4605,14 @@ public final class Model {
 
       private java.lang.Object postalCode_ = "";
       /**
-       * <code>string postalCode = 9;</code>
+       * <code>optional string postalCode = 9;</code>
+       * @return Whether the postalCode field is set.
+       */
+      public boolean hasPostalCode() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <code>optional string postalCode = 9;</code>
        * @return The postalCode.
        */
       public java.lang.String getPostalCode() {
@@ -4023,14 +4621,16 @@ public final class Model {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          postalCode_ = s;
+          if (bs.isValidUtf8()) {
+            postalCode_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string postalCode = 9;</code>
+       * <code>optional string postalCode = 9;</code>
        * @return The bytes for postalCode.
        */
       public com.google.protobuf.ByteString
@@ -4047,7 +4647,7 @@ public final class Model {
         }
       }
       /**
-       * <code>string postalCode = 9;</code>
+       * <code>optional string postalCode = 9;</code>
        * @param value The postalCode to set.
        * @return This builder for chaining.
        */
@@ -4056,23 +4656,23 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  bitField0_ |= 0x00000040;
         postalCode_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string postalCode = 9;</code>
+       * <code>optional string postalCode = 9;</code>
        * @return This builder for chaining.
        */
       public Builder clearPostalCode() {
-        
+        bitField0_ = (bitField0_ & ~0x00000040);
         postalCode_ = getDefaultInstance().getPostalCode();
         onChanged();
         return this;
       }
       /**
-       * <code>string postalCode = 9;</code>
+       * <code>optional string postalCode = 9;</code>
        * @param value The bytes for postalCode to set.
        * @return This builder for chaining.
        */
@@ -4081,8 +4681,7 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  bitField0_ |= 0x00000040;
         postalCode_ = value;
         onChanged();
         return this;
@@ -4094,7 +4693,19 @@ public final class Model {
        *geo
        * </pre>
        *
-       * <code>double lat = 10;</code>
+       * <code>optional double lat = 10;</code>
+       * @return Whether the lat field is set.
+       */
+      @java.lang.Override
+      public boolean hasLat() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <pre>
+       *geo
+       * </pre>
+       *
+       * <code>optional double lat = 10;</code>
        * @return The lat.
        */
       @java.lang.Override
@@ -4106,12 +4717,12 @@ public final class Model {
        *geo
        * </pre>
        *
-       * <code>double lat = 10;</code>
+       * <code>optional double lat = 10;</code>
        * @param value The lat to set.
        * @return This builder for chaining.
        */
       public Builder setLat(double value) {
-        
+        bitField0_ |= 0x00000080;
         lat_ = value;
         onChanged();
         return this;
@@ -4121,11 +4732,11 @@ public final class Model {
        *geo
        * </pre>
        *
-       * <code>double lat = 10;</code>
+       * <code>optional double lat = 10;</code>
        * @return This builder for chaining.
        */
       public Builder clearLat() {
-        
+        bitField0_ = (bitField0_ & ~0x00000080);
         lat_ = 0D;
         onChanged();
         return this;
@@ -4133,7 +4744,15 @@ public final class Model {
 
       private double lon_ ;
       /**
-       * <code>double lon = 11;</code>
+       * <code>optional double lon = 11;</code>
+       * @return Whether the lon field is set.
+       */
+      @java.lang.Override
+      public boolean hasLon() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <code>optional double lon = 11;</code>
        * @return The lon.
        */
       @java.lang.Override
@@ -4141,22 +4760,22 @@ public final class Model {
         return lon_;
       }
       /**
-       * <code>double lon = 11;</code>
+       * <code>optional double lon = 11;</code>
        * @param value The lon to set.
        * @return This builder for chaining.
        */
       public Builder setLon(double value) {
-        
+        bitField0_ |= 0x00000100;
         lon_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>double lon = 11;</code>
+       * <code>optional double lon = 11;</code>
        * @return This builder for chaining.
        */
       public Builder clearLon() {
-        
+        bitField0_ = (bitField0_ & ~0x00000100);
         lon_ = 0D;
         onChanged();
         return this;
@@ -4164,7 +4783,15 @@ public final class Model {
 
       private boolean dirty_ ;
       /**
-       * <code>bool dirty = 12;</code>
+       * <code>optional bool dirty = 12 [default = false];</code>
+       * @return Whether the dirty field is set.
+       */
+      @java.lang.Override
+      public boolean hasDirty() {
+        return ((bitField0_ & 0x00000200) != 0);
+      }
+      /**
+       * <code>optional bool dirty = 12 [default = false];</code>
        * @return The dirty.
        */
       @java.lang.Override
@@ -4172,22 +4799,22 @@ public final class Model {
         return dirty_;
       }
       /**
-       * <code>bool dirty = 12;</code>
+       * <code>optional bool dirty = 12 [default = false];</code>
        * @param value The dirty to set.
        * @return This builder for chaining.
        */
       public Builder setDirty(boolean value) {
-        
+        bitField0_ |= 0x00000200;
         dirty_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>bool dirty = 12;</code>
+       * <code>optional bool dirty = 12 [default = false];</code>
        * @return This builder for chaining.
        */
       public Builder clearDirty() {
-        
+        bitField0_ = (bitField0_ & ~0x00000200);
         dirty_ = false;
         onChanged();
         return this;
@@ -4201,18 +4828,18 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp createTime = 1;</code>
+       * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
        * @return Whether the createTime field is set.
        */
       public boolean hasCreateTime() {
-        return createTimeBuilder_ != null || createTime_ != null;
+        return ((bitField0_ & 0x00000400) != 0);
       }
       /**
        * <pre>
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp createTime = 1;</code>
+       * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
        * @return The createTime.
        */
       public com.google.protobuf.Timestamp getCreateTime() {
@@ -4227,7 +4854,7 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp createTime = 1;</code>
+       * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
        */
       public Builder setCreateTime(com.google.protobuf.Timestamp value) {
         if (createTimeBuilder_ == null) {
@@ -4239,7 +4866,7 @@ public final class Model {
         } else {
           createTimeBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000400;
         return this;
       }
       /**
@@ -4247,7 +4874,7 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp createTime = 1;</code>
+       * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
        */
       public Builder setCreateTime(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -4257,7 +4884,7 @@ public final class Model {
         } else {
           createTimeBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000400;
         return this;
       }
       /**
@@ -4265,11 +4892,13 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp createTime = 1;</code>
+       * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
        */
       public Builder mergeCreateTime(com.google.protobuf.Timestamp value) {
         if (createTimeBuilder_ == null) {
-          if (createTime_ != null) {
+          if (((bitField0_ & 0x00000400) != 0) &&
+              createTime_ != null &&
+              createTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
             createTime_ =
               com.google.protobuf.Timestamp.newBuilder(createTime_).mergeFrom(value).buildPartial();
           } else {
@@ -4279,7 +4908,7 @@ public final class Model {
         } else {
           createTimeBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000400;
         return this;
       }
       /**
@@ -4287,17 +4916,16 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp createTime = 1;</code>
+       * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
        */
       public Builder clearCreateTime() {
         if (createTimeBuilder_ == null) {
           createTime_ = null;
           onChanged();
         } else {
-          createTime_ = null;
-          createTimeBuilder_ = null;
+          createTimeBuilder_.clear();
         }
-
+        bitField0_ = (bitField0_ & ~0x00000400);
         return this;
       }
       /**
@@ -4305,10 +4933,10 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp createTime = 1;</code>
+       * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreateTimeBuilder() {
-        
+        bitField0_ |= 0x00000400;
         onChanged();
         return getCreateTimeFieldBuilder().getBuilder();
       }
@@ -4317,7 +4945,7 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp createTime = 1;</code>
+       * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder() {
         if (createTimeBuilder_ != null) {
@@ -4332,7 +4960,7 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp createTime = 1;</code>
+       * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -4356,18 +4984,18 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+       * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
        * @return Whether the updateTime field is set.
        */
       public boolean hasUpdateTime() {
-        return updateTimeBuilder_ != null || updateTime_ != null;
+        return ((bitField0_ & 0x00000800) != 0);
       }
       /**
        * <pre>
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+       * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
        * @return The updateTime.
        */
       public com.google.protobuf.Timestamp getUpdateTime() {
@@ -4382,7 +5010,7 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+       * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
        */
       public Builder setUpdateTime(com.google.protobuf.Timestamp value) {
         if (updateTimeBuilder_ == null) {
@@ -4394,7 +5022,7 @@ public final class Model {
         } else {
           updateTimeBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000800;
         return this;
       }
       /**
@@ -4402,7 +5030,7 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+       * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
        */
       public Builder setUpdateTime(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -4412,7 +5040,7 @@ public final class Model {
         } else {
           updateTimeBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000800;
         return this;
       }
       /**
@@ -4420,11 +5048,13 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+       * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
        */
       public Builder mergeUpdateTime(com.google.protobuf.Timestamp value) {
         if (updateTimeBuilder_ == null) {
-          if (updateTime_ != null) {
+          if (((bitField0_ & 0x00000800) != 0) &&
+              updateTime_ != null &&
+              updateTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
             updateTime_ =
               com.google.protobuf.Timestamp.newBuilder(updateTime_).mergeFrom(value).buildPartial();
           } else {
@@ -4434,7 +5064,7 @@ public final class Model {
         } else {
           updateTimeBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000800;
         return this;
       }
       /**
@@ -4442,17 +5072,16 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+       * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
        */
       public Builder clearUpdateTime() {
         if (updateTimeBuilder_ == null) {
           updateTime_ = null;
           onChanged();
         } else {
-          updateTime_ = null;
-          updateTimeBuilder_ = null;
+          updateTimeBuilder_.clear();
         }
-
+        bitField0_ = (bitField0_ & ~0x00000800);
         return this;
       }
       /**
@@ -4460,10 +5089,10 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+       * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
        */
       public com.google.protobuf.Timestamp.Builder getUpdateTimeBuilder() {
-        
+        bitField0_ |= 0x00000800;
         onChanged();
         return getUpdateTimeFieldBuilder().getBuilder();
       }
@@ -4472,7 +5101,7 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+       * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder() {
         if (updateTimeBuilder_ != null) {
@@ -4487,7 +5116,7 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+       * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -4528,7 +5157,7 @@ public final class Model {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PostalAddress>
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<PostalAddress>
         PARSER = new com.google.protobuf.AbstractParser<PostalAddress>() {
       @java.lang.Override
       public PostalAddress parsePartialFrom(
@@ -4560,12 +5189,17 @@ public final class Model {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string id = 3;</code>
+     * <code>optional string id = 3;</code>
+     * @return Whether the id field is set.
+     */
+    boolean hasId();
+    /**
+     * <code>optional string id = 3;</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
-     * <code>string id = 3;</code>
+     * <code>optional string id = 3;</code>
      * @return The bytes for id.
      */
     com.google.protobuf.ByteString
@@ -4576,7 +5210,16 @@ public final class Model {
      *TODO  convert to enum
      * </pre>
      *
-     * <code>string status = 4;</code>
+     * <code>optional string status = 4;</code>
+     * @return Whether the status field is set.
+     */
+    boolean hasStatus();
+    /**
+     * <pre>
+     *TODO  convert to enum
+     * </pre>
+     *
+     * <code>optional string status = 4;</code>
      * @return The status.
      */
     java.lang.String getStatus();
@@ -4585,44 +5228,49 @@ public final class Model {
      *TODO  convert to enum
      * </pre>
      *
-     * <code>string status = 4;</code>
+     * <code>optional string status = 4;</code>
      * @return The bytes for status.
      */
     com.google.protobuf.ByteString
         getStatusBytes();
 
     /**
-     * <code>.muni.model.Person reportedByCustomer = 5;</code>
+     * <code>optional .muni.model.Person reportedByCustomer = 5;</code>
      * @return Whether the reportedByCustomer field is set.
      */
     boolean hasReportedByCustomer();
     /**
-     * <code>.muni.model.Person reportedByCustomer = 5;</code>
+     * <code>optional .muni.model.Person reportedByCustomer = 5;</code>
      * @return The reportedByCustomer.
      */
     muni.model.Model.Person getReportedByCustomer();
     /**
-     * <code>.muni.model.Person reportedByCustomer = 5;</code>
+     * <code>optional .muni.model.Person reportedByCustomer = 5;</code>
      */
     muni.model.Model.PersonOrBuilder getReportedByCustomerOrBuilder();
 
     /**
-     * <code>.muni.model.Person createdByEmployee = 6;</code>
+     * <code>optional .muni.model.Person createdByEmployee = 6;</code>
      * @return Whether the createdByEmployee field is set.
      */
     boolean hasCreatedByEmployee();
     /**
-     * <code>.muni.model.Person createdByEmployee = 6;</code>
+     * <code>optional .muni.model.Person createdByEmployee = 6;</code>
      * @return The createdByEmployee.
      */
     muni.model.Model.Person getCreatedByEmployee();
     /**
-     * <code>.muni.model.Person createdByEmployee = 6;</code>
+     * <code>optional .muni.model.Person createdByEmployee = 6;</code>
      */
     muni.model.Model.PersonOrBuilder getCreatedByEmployeeOrBuilder();
 
     /**
-     * <code>bool dirty = 7;</code>
+     * <code>optional bool dirty = 7 [default = false];</code>
+     * @return Whether the dirty field is set.
+     */
+    boolean hasDirty();
+    /**
+     * <code>optional bool dirty = 7 [default = false];</code>
      * @return The dirty.
      */
     boolean getDirty();
@@ -4632,7 +5280,7 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp createTime = 1;</code>
+     * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
      * @return Whether the createTime field is set.
      */
     boolean hasCreateTime();
@@ -4641,7 +5289,7 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp createTime = 1;</code>
+     * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
      * @return The createTime.
      */
     com.google.protobuf.Timestamp getCreateTime();
@@ -4650,34 +5298,22 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp createTime = 1;</code>
+     * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder();
 
     /**
-     * <pre>
-     *Output only
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+     * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
      * @return Whether the updateTime field is set.
      */
     boolean hasUpdateTime();
     /**
-     * <pre>
-     *Output only
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+     * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
      * @return The updateTime.
      */
     com.google.protobuf.Timestamp getUpdateTime();
     /**
-     * <pre>
-     *Output only
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+     * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
      */
     com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder();
   }
@@ -4718,6 +5354,7 @@ public final class Model {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4730,7 +5367,7 @@ public final class Model {
               break;
             case 10: {
               com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (createTime_ != null) {
+              if (((bitField0_ & 0x00000020) != 0)) {
                 subBuilder = createTime_.toBuilder();
               }
               createTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
@@ -4738,12 +5375,12 @@ public final class Model {
                 subBuilder.mergeFrom(createTime_);
                 createTime_ = subBuilder.buildPartial();
               }
-
+              bitField0_ |= 0x00000020;
               break;
             }
             case 18: {
               com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (updateTime_ != null) {
+              if (((bitField0_ & 0x00000040) != 0)) {
                 subBuilder = updateTime_.toBuilder();
               }
               updateTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
@@ -4751,49 +5388,49 @@ public final class Model {
                 subBuilder.mergeFrom(updateTime_);
                 updateTime_ = subBuilder.buildPartial();
               }
-
+              bitField0_ |= 0x00000040;
               break;
             }
             case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              id_ = bs;
               break;
             }
             case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              status_ = s;
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              status_ = bs;
               break;
             }
             case 42: {
               muni.model.Model.Person.Builder subBuilder = null;
-              if (reportedByCustomer_ != null) {
+              if (((bitField0_ & 0x00000004) != 0)) {
                 subBuilder = reportedByCustomer_.toBuilder();
               }
-              reportedByCustomer_ = input.readMessage(muni.model.Model.Person.parser(), extensionRegistry);
+              reportedByCustomer_ = input.readMessage(muni.model.Model.Person.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(reportedByCustomer_);
                 reportedByCustomer_ = subBuilder.buildPartial();
               }
-
+              bitField0_ |= 0x00000004;
               break;
             }
             case 50: {
               muni.model.Model.Person.Builder subBuilder = null;
-              if (createdByEmployee_ != null) {
+              if (((bitField0_ & 0x00000008) != 0)) {
                 subBuilder = createdByEmployee_.toBuilder();
               }
-              createdByEmployee_ = input.readMessage(muni.model.Model.Person.parser(), extensionRegistry);
+              createdByEmployee_ = input.readMessage(muni.model.Model.Person.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(createdByEmployee_);
                 createdByEmployee_ = subBuilder.buildPartial();
               }
-
+              bitField0_ |= 0x00000008;
               break;
             }
             case 56: {
-
+              bitField0_ |= 0x00000010;
               dirty_ = input.readBool();
               break;
             }
@@ -4829,10 +5466,19 @@ public final class Model {
               muni.model.Model.Case.class, muni.model.Model.Case.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 3;
     private volatile java.lang.Object id_;
     /**
-     * <code>string id = 3;</code>
+     * <code>optional string id = 3;</code>
+     * @return Whether the id field is set.
+     */
+    @java.lang.Override
+    public boolean hasId() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string id = 3;</code>
      * @return The id.
      */
     @java.lang.Override
@@ -4844,12 +5490,14 @@ public final class Model {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        id_ = s;
+        if (bs.isValidUtf8()) {
+          id_ = s;
+        }
         return s;
       }
     }
     /**
-     * <code>string id = 3;</code>
+     * <code>optional string id = 3;</code>
      * @return The bytes for id.
      */
     @java.lang.Override
@@ -4874,7 +5522,19 @@ public final class Model {
      *TODO  convert to enum
      * </pre>
      *
-     * <code>string status = 4;</code>
+     * <code>optional string status = 4;</code>
+     * @return Whether the status field is set.
+     */
+    @java.lang.Override
+    public boolean hasStatus() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     *TODO  convert to enum
+     * </pre>
+     *
+     * <code>optional string status = 4;</code>
      * @return The status.
      */
     @java.lang.Override
@@ -4886,7 +5546,9 @@ public final class Model {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        status_ = s;
+        if (bs.isValidUtf8()) {
+          status_ = s;
+        }
         return s;
       }
     }
@@ -4895,7 +5557,7 @@ public final class Model {
      *TODO  convert to enum
      * </pre>
      *
-     * <code>string status = 4;</code>
+     * <code>optional string status = 4;</code>
      * @return The bytes for status.
      */
     @java.lang.Override
@@ -4916,15 +5578,15 @@ public final class Model {
     public static final int REPORTEDBYCUSTOMER_FIELD_NUMBER = 5;
     private muni.model.Model.Person reportedByCustomer_;
     /**
-     * <code>.muni.model.Person reportedByCustomer = 5;</code>
+     * <code>optional .muni.model.Person reportedByCustomer = 5;</code>
      * @return Whether the reportedByCustomer field is set.
      */
     @java.lang.Override
     public boolean hasReportedByCustomer() {
-      return reportedByCustomer_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <code>.muni.model.Person reportedByCustomer = 5;</code>
+     * <code>optional .muni.model.Person reportedByCustomer = 5;</code>
      * @return The reportedByCustomer.
      */
     @java.lang.Override
@@ -4932,25 +5594,25 @@ public final class Model {
       return reportedByCustomer_ == null ? muni.model.Model.Person.getDefaultInstance() : reportedByCustomer_;
     }
     /**
-     * <code>.muni.model.Person reportedByCustomer = 5;</code>
+     * <code>optional .muni.model.Person reportedByCustomer = 5;</code>
      */
     @java.lang.Override
     public muni.model.Model.PersonOrBuilder getReportedByCustomerOrBuilder() {
-      return getReportedByCustomer();
+      return reportedByCustomer_ == null ? muni.model.Model.Person.getDefaultInstance() : reportedByCustomer_;
     }
 
     public static final int CREATEDBYEMPLOYEE_FIELD_NUMBER = 6;
     private muni.model.Model.Person createdByEmployee_;
     /**
-     * <code>.muni.model.Person createdByEmployee = 6;</code>
+     * <code>optional .muni.model.Person createdByEmployee = 6;</code>
      * @return Whether the createdByEmployee field is set.
      */
     @java.lang.Override
     public boolean hasCreatedByEmployee() {
-      return createdByEmployee_ != null;
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
-     * <code>.muni.model.Person createdByEmployee = 6;</code>
+     * <code>optional .muni.model.Person createdByEmployee = 6;</code>
      * @return The createdByEmployee.
      */
     @java.lang.Override
@@ -4958,17 +5620,25 @@ public final class Model {
       return createdByEmployee_ == null ? muni.model.Model.Person.getDefaultInstance() : createdByEmployee_;
     }
     /**
-     * <code>.muni.model.Person createdByEmployee = 6;</code>
+     * <code>optional .muni.model.Person createdByEmployee = 6;</code>
      */
     @java.lang.Override
     public muni.model.Model.PersonOrBuilder getCreatedByEmployeeOrBuilder() {
-      return getCreatedByEmployee();
+      return createdByEmployee_ == null ? muni.model.Model.Person.getDefaultInstance() : createdByEmployee_;
     }
 
     public static final int DIRTY_FIELD_NUMBER = 7;
     private boolean dirty_;
     /**
-     * <code>bool dirty = 7;</code>
+     * <code>optional bool dirty = 7 [default = false];</code>
+     * @return Whether the dirty field is set.
+     */
+    @java.lang.Override
+    public boolean hasDirty() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional bool dirty = 7 [default = false];</code>
      * @return The dirty.
      */
     @java.lang.Override
@@ -4983,19 +5653,19 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp createTime = 1;</code>
+     * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
      * @return Whether the createTime field is set.
      */
     @java.lang.Override
     public boolean hasCreateTime() {
-      return createTime_ != null;
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <pre>
      *Output only
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp createTime = 1;</code>
+     * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
      * @return The createTime.
      */
     @java.lang.Override
@@ -5007,33 +5677,25 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp createTime = 1;</code>
+     * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder() {
-      return getCreateTime();
+      return createTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createTime_;
     }
 
     public static final int UPDATETIME_FIELD_NUMBER = 2;
     private com.google.protobuf.Timestamp updateTime_;
     /**
-     * <pre>
-     *Output only
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+     * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
      * @return Whether the updateTime field is set.
      */
     @java.lang.Override
     public boolean hasUpdateTime() {
-      return updateTime_ != null;
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
-     * <pre>
-     *Output only
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+     * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
      * @return The updateTime.
      */
     @java.lang.Override
@@ -5041,15 +5703,11 @@ public final class Model {
       return updateTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updateTime_;
     }
     /**
-     * <pre>
-     *Output only
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+     * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder() {
-      return getUpdateTime();
+      return updateTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updateTime_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -5066,25 +5724,25 @@ public final class Model {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (createTime_ != null) {
+      if (((bitField0_ & 0x00000020) != 0)) {
         output.writeMessage(1, getCreateTime());
       }
-      if (updateTime_ != null) {
+      if (((bitField0_ & 0x00000040) != 0)) {
         output.writeMessage(2, getUpdateTime());
       }
-      if (!getIdBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, id_);
       }
-      if (!getStatusBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, status_);
       }
-      if (reportedByCustomer_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(5, getReportedByCustomer());
       }
-      if (createdByEmployee_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         output.writeMessage(6, getCreatedByEmployee());
       }
-      if (dirty_ != false) {
+      if (((bitField0_ & 0x00000010) != 0)) {
         output.writeBool(7, dirty_);
       }
       unknownFields.writeTo(output);
@@ -5096,29 +5754,29 @@ public final class Model {
       if (size != -1) return size;
 
       size = 0;
-      if (createTime_ != null) {
+      if (((bitField0_ & 0x00000020) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCreateTime());
       }
-      if (updateTime_ != null) {
+      if (((bitField0_ & 0x00000040) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getUpdateTime());
       }
-      if (!getIdBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, id_);
       }
-      if (!getStatusBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, status_);
       }
-      if (reportedByCustomer_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getReportedByCustomer());
       }
-      if (createdByEmployee_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getCreatedByEmployee());
       }
-      if (dirty_ != false) {
+      if (((bitField0_ & 0x00000010) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(7, dirty_);
       }
@@ -5137,10 +5795,16 @@ public final class Model {
       }
       muni.model.Model.Case other = (muni.model.Model.Case) obj;
 
-      if (!getId()
-          .equals(other.getId())) return false;
-      if (!getStatus()
-          .equals(other.getStatus())) return false;
+      if (hasId() != other.hasId()) return false;
+      if (hasId()) {
+        if (!getId()
+            .equals(other.getId())) return false;
+      }
+      if (hasStatus() != other.hasStatus()) return false;
+      if (hasStatus()) {
+        if (!getStatus()
+            .equals(other.getStatus())) return false;
+      }
       if (hasReportedByCustomer() != other.hasReportedByCustomer()) return false;
       if (hasReportedByCustomer()) {
         if (!getReportedByCustomer()
@@ -5151,8 +5815,11 @@ public final class Model {
         if (!getCreatedByEmployee()
             .equals(other.getCreatedByEmployee())) return false;
       }
-      if (getDirty()
-          != other.getDirty()) return false;
+      if (hasDirty() != other.hasDirty()) return false;
+      if (hasDirty()) {
+        if (getDirty()
+            != other.getDirty()) return false;
+      }
       if (hasCreateTime() != other.hasCreateTime()) return false;
       if (hasCreateTime()) {
         if (!getCreateTime()
@@ -5173,10 +5840,14 @@ public final class Model {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
-      hash = (37 * hash) + STATUS_FIELD_NUMBER;
-      hash = (53 * hash) + getStatus().hashCode();
+      if (hasId()) {
+        hash = (37 * hash) + ID_FIELD_NUMBER;
+        hash = (53 * hash) + getId().hashCode();
+      }
+      if (hasStatus()) {
+        hash = (37 * hash) + STATUS_FIELD_NUMBER;
+        hash = (53 * hash) + getStatus().hashCode();
+      }
       if (hasReportedByCustomer()) {
         hash = (37 * hash) + REPORTEDBYCUSTOMER_FIELD_NUMBER;
         hash = (53 * hash) + getReportedByCustomer().hashCode();
@@ -5185,9 +5856,11 @@ public final class Model {
         hash = (37 * hash) + CREATEDBYEMPLOYEE_FIELD_NUMBER;
         hash = (53 * hash) + getCreatedByEmployee().hashCode();
       }
-      hash = (37 * hash) + DIRTY_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getDirty());
+      if (hasDirty()) {
+        hash = (37 * hash) + DIRTY_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getDirty());
+      }
       if (hasCreateTime()) {
         hash = (37 * hash) + CREATETIME_FIELD_NUMBER;
         hash = (53 * hash) + getCreateTime().hashCode();
@@ -5324,41 +5997,45 @@ public final class Model {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getReportedByCustomerFieldBuilder();
+          getCreatedByEmployeeFieldBuilder();
+          getCreateTimeFieldBuilder();
+          getUpdateTimeFieldBuilder();
         }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         id_ = "";
-
+        bitField0_ = (bitField0_ & ~0x00000001);
         status_ = "";
-
+        bitField0_ = (bitField0_ & ~0x00000002);
         if (reportedByCustomerBuilder_ == null) {
           reportedByCustomer_ = null;
         } else {
-          reportedByCustomer_ = null;
-          reportedByCustomerBuilder_ = null;
+          reportedByCustomerBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000004);
         if (createdByEmployeeBuilder_ == null) {
           createdByEmployee_ = null;
         } else {
-          createdByEmployee_ = null;
-          createdByEmployeeBuilder_ = null;
+          createdByEmployeeBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000008);
         dirty_ = false;
-
+        bitField0_ = (bitField0_ & ~0x00000010);
         if (createTimeBuilder_ == null) {
           createTime_ = null;
         } else {
-          createTime_ = null;
-          createTimeBuilder_ = null;
+          createTimeBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000020);
         if (updateTimeBuilder_ == null) {
           updateTime_ = null;
         } else {
-          updateTime_ = null;
-          updateTimeBuilder_ = null;
+          updateTimeBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
 
@@ -5385,29 +6062,53 @@ public final class Model {
       @java.lang.Override
       public muni.model.Model.Case buildPartial() {
         muni.model.Model.Case result = new muni.model.Model.Case(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
         result.id_ = id_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          to_bitField0_ |= 0x00000002;
+        }
         result.status_ = status_;
-        if (reportedByCustomerBuilder_ == null) {
-          result.reportedByCustomer_ = reportedByCustomer_;
-        } else {
-          result.reportedByCustomer_ = reportedByCustomerBuilder_.build();
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          if (reportedByCustomerBuilder_ == null) {
+            result.reportedByCustomer_ = reportedByCustomer_;
+          } else {
+            result.reportedByCustomer_ = reportedByCustomerBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000004;
         }
-        if (createdByEmployeeBuilder_ == null) {
-          result.createdByEmployee_ = createdByEmployee_;
-        } else {
-          result.createdByEmployee_ = createdByEmployeeBuilder_.build();
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          if (createdByEmployeeBuilder_ == null) {
+            result.createdByEmployee_ = createdByEmployee_;
+          } else {
+            result.createdByEmployee_ = createdByEmployeeBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000008;
         }
-        result.dirty_ = dirty_;
-        if (createTimeBuilder_ == null) {
-          result.createTime_ = createTime_;
-        } else {
-          result.createTime_ = createTimeBuilder_.build();
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.dirty_ = dirty_;
+          to_bitField0_ |= 0x00000010;
         }
-        if (updateTimeBuilder_ == null) {
-          result.updateTime_ = updateTime_;
-        } else {
-          result.updateTime_ = updateTimeBuilder_.build();
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          if (createTimeBuilder_ == null) {
+            result.createTime_ = createTime_;
+          } else {
+            result.createTime_ = createTimeBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000020;
         }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          if (updateTimeBuilder_ == null) {
+            result.updateTime_ = updateTime_;
+          } else {
+            result.updateTime_ = updateTimeBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000040;
+        }
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -5456,11 +6157,13 @@ public final class Model {
 
       public Builder mergeFrom(muni.model.Model.Case other) {
         if (other == muni.model.Model.Case.getDefaultInstance()) return this;
-        if (!other.getId().isEmpty()) {
+        if (other.hasId()) {
+          bitField0_ |= 0x00000001;
           id_ = other.id_;
           onChanged();
         }
-        if (!other.getStatus().isEmpty()) {
+        if (other.hasStatus()) {
+          bitField0_ |= 0x00000002;
           status_ = other.status_;
           onChanged();
         }
@@ -5470,7 +6173,7 @@ public final class Model {
         if (other.hasCreatedByEmployee()) {
           mergeCreatedByEmployee(other.getCreatedByEmployee());
         }
-        if (other.getDirty() != false) {
+        if (other.hasDirty()) {
           setDirty(other.getDirty());
         }
         if (other.hasCreateTime()) {
@@ -5507,10 +6210,18 @@ public final class Model {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object id_ = "";
       /**
-       * <code>string id = 3;</code>
+       * <code>optional string id = 3;</code>
+       * @return Whether the id field is set.
+       */
+      public boolean hasId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional string id = 3;</code>
        * @return The id.
        */
       public java.lang.String getId() {
@@ -5519,14 +6230,16 @@ public final class Model {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          id_ = s;
+          if (bs.isValidUtf8()) {
+            id_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string id = 3;</code>
+       * <code>optional string id = 3;</code>
        * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
@@ -5543,7 +6256,7 @@ public final class Model {
         }
       }
       /**
-       * <code>string id = 3;</code>
+       * <code>optional string id = 3;</code>
        * @param value The id to set.
        * @return This builder for chaining.
        */
@@ -5552,23 +6265,23 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  bitField0_ |= 0x00000001;
         id_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string id = 3;</code>
+       * <code>optional string id = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         id_ = getDefaultInstance().getId();
         onChanged();
         return this;
       }
       /**
-       * <code>string id = 3;</code>
+       * <code>optional string id = 3;</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
        */
@@ -5577,8 +6290,7 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  bitField0_ |= 0x00000001;
         id_ = value;
         onChanged();
         return this;
@@ -5590,7 +6302,18 @@ public final class Model {
        *TODO  convert to enum
        * </pre>
        *
-       * <code>string status = 4;</code>
+       * <code>optional string status = 4;</code>
+       * @return Whether the status field is set.
+       */
+      public boolean hasStatus() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       *TODO  convert to enum
+       * </pre>
+       *
+       * <code>optional string status = 4;</code>
        * @return The status.
        */
       public java.lang.String getStatus() {
@@ -5599,7 +6322,9 @@ public final class Model {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          status_ = s;
+          if (bs.isValidUtf8()) {
+            status_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -5610,7 +6335,7 @@ public final class Model {
        *TODO  convert to enum
        * </pre>
        *
-       * <code>string status = 4;</code>
+       * <code>optional string status = 4;</code>
        * @return The bytes for status.
        */
       public com.google.protobuf.ByteString
@@ -5631,7 +6356,7 @@ public final class Model {
        *TODO  convert to enum
        * </pre>
        *
-       * <code>string status = 4;</code>
+       * <code>optional string status = 4;</code>
        * @param value The status to set.
        * @return This builder for chaining.
        */
@@ -5640,7 +6365,7 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  bitField0_ |= 0x00000002;
         status_ = value;
         onChanged();
         return this;
@@ -5650,11 +6375,11 @@ public final class Model {
        *TODO  convert to enum
        * </pre>
        *
-       * <code>string status = 4;</code>
+       * <code>optional string status = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         status_ = getDefaultInstance().getStatus();
         onChanged();
         return this;
@@ -5664,7 +6389,7 @@ public final class Model {
        *TODO  convert to enum
        * </pre>
        *
-       * <code>string status = 4;</code>
+       * <code>optional string status = 4;</code>
        * @param value The bytes for status to set.
        * @return This builder for chaining.
        */
@@ -5673,8 +6398,7 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  bitField0_ |= 0x00000002;
         status_ = value;
         onChanged();
         return this;
@@ -5684,14 +6408,14 @@ public final class Model {
       private com.google.protobuf.SingleFieldBuilderV3<
           muni.model.Model.Person, muni.model.Model.Person.Builder, muni.model.Model.PersonOrBuilder> reportedByCustomerBuilder_;
       /**
-       * <code>.muni.model.Person reportedByCustomer = 5;</code>
+       * <code>optional .muni.model.Person reportedByCustomer = 5;</code>
        * @return Whether the reportedByCustomer field is set.
        */
       public boolean hasReportedByCustomer() {
-        return reportedByCustomerBuilder_ != null || reportedByCustomer_ != null;
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
-       * <code>.muni.model.Person reportedByCustomer = 5;</code>
+       * <code>optional .muni.model.Person reportedByCustomer = 5;</code>
        * @return The reportedByCustomer.
        */
       public muni.model.Model.Person getReportedByCustomer() {
@@ -5702,7 +6426,7 @@ public final class Model {
         }
       }
       /**
-       * <code>.muni.model.Person reportedByCustomer = 5;</code>
+       * <code>optional .muni.model.Person reportedByCustomer = 5;</code>
        */
       public Builder setReportedByCustomer(muni.model.Model.Person value) {
         if (reportedByCustomerBuilder_ == null) {
@@ -5714,11 +6438,11 @@ public final class Model {
         } else {
           reportedByCustomerBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000004;
         return this;
       }
       /**
-       * <code>.muni.model.Person reportedByCustomer = 5;</code>
+       * <code>optional .muni.model.Person reportedByCustomer = 5;</code>
        */
       public Builder setReportedByCustomer(
           muni.model.Model.Person.Builder builderForValue) {
@@ -5728,15 +6452,17 @@ public final class Model {
         } else {
           reportedByCustomerBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000004;
         return this;
       }
       /**
-       * <code>.muni.model.Person reportedByCustomer = 5;</code>
+       * <code>optional .muni.model.Person reportedByCustomer = 5;</code>
        */
       public Builder mergeReportedByCustomer(muni.model.Model.Person value) {
         if (reportedByCustomerBuilder_ == null) {
-          if (reportedByCustomer_ != null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+              reportedByCustomer_ != null &&
+              reportedByCustomer_ != muni.model.Model.Person.getDefaultInstance()) {
             reportedByCustomer_ =
               muni.model.Model.Person.newBuilder(reportedByCustomer_).mergeFrom(value).buildPartial();
           } else {
@@ -5746,33 +6472,32 @@ public final class Model {
         } else {
           reportedByCustomerBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000004;
         return this;
       }
       /**
-       * <code>.muni.model.Person reportedByCustomer = 5;</code>
+       * <code>optional .muni.model.Person reportedByCustomer = 5;</code>
        */
       public Builder clearReportedByCustomer() {
         if (reportedByCustomerBuilder_ == null) {
           reportedByCustomer_ = null;
           onChanged();
         } else {
-          reportedByCustomer_ = null;
-          reportedByCustomerBuilder_ = null;
+          reportedByCustomerBuilder_.clear();
         }
-
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
       /**
-       * <code>.muni.model.Person reportedByCustomer = 5;</code>
+       * <code>optional .muni.model.Person reportedByCustomer = 5;</code>
        */
       public muni.model.Model.Person.Builder getReportedByCustomerBuilder() {
-        
+        bitField0_ |= 0x00000004;
         onChanged();
         return getReportedByCustomerFieldBuilder().getBuilder();
       }
       /**
-       * <code>.muni.model.Person reportedByCustomer = 5;</code>
+       * <code>optional .muni.model.Person reportedByCustomer = 5;</code>
        */
       public muni.model.Model.PersonOrBuilder getReportedByCustomerOrBuilder() {
         if (reportedByCustomerBuilder_ != null) {
@@ -5783,7 +6508,7 @@ public final class Model {
         }
       }
       /**
-       * <code>.muni.model.Person reportedByCustomer = 5;</code>
+       * <code>optional .muni.model.Person reportedByCustomer = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           muni.model.Model.Person, muni.model.Model.Person.Builder, muni.model.Model.PersonOrBuilder> 
@@ -5803,14 +6528,14 @@ public final class Model {
       private com.google.protobuf.SingleFieldBuilderV3<
           muni.model.Model.Person, muni.model.Model.Person.Builder, muni.model.Model.PersonOrBuilder> createdByEmployeeBuilder_;
       /**
-       * <code>.muni.model.Person createdByEmployee = 6;</code>
+       * <code>optional .muni.model.Person createdByEmployee = 6;</code>
        * @return Whether the createdByEmployee field is set.
        */
       public boolean hasCreatedByEmployee() {
-        return createdByEmployeeBuilder_ != null || createdByEmployee_ != null;
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
-       * <code>.muni.model.Person createdByEmployee = 6;</code>
+       * <code>optional .muni.model.Person createdByEmployee = 6;</code>
        * @return The createdByEmployee.
        */
       public muni.model.Model.Person getCreatedByEmployee() {
@@ -5821,7 +6546,7 @@ public final class Model {
         }
       }
       /**
-       * <code>.muni.model.Person createdByEmployee = 6;</code>
+       * <code>optional .muni.model.Person createdByEmployee = 6;</code>
        */
       public Builder setCreatedByEmployee(muni.model.Model.Person value) {
         if (createdByEmployeeBuilder_ == null) {
@@ -5833,11 +6558,11 @@ public final class Model {
         } else {
           createdByEmployeeBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000008;
         return this;
       }
       /**
-       * <code>.muni.model.Person createdByEmployee = 6;</code>
+       * <code>optional .muni.model.Person createdByEmployee = 6;</code>
        */
       public Builder setCreatedByEmployee(
           muni.model.Model.Person.Builder builderForValue) {
@@ -5847,15 +6572,17 @@ public final class Model {
         } else {
           createdByEmployeeBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000008;
         return this;
       }
       /**
-       * <code>.muni.model.Person createdByEmployee = 6;</code>
+       * <code>optional .muni.model.Person createdByEmployee = 6;</code>
        */
       public Builder mergeCreatedByEmployee(muni.model.Model.Person value) {
         if (createdByEmployeeBuilder_ == null) {
-          if (createdByEmployee_ != null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+              createdByEmployee_ != null &&
+              createdByEmployee_ != muni.model.Model.Person.getDefaultInstance()) {
             createdByEmployee_ =
               muni.model.Model.Person.newBuilder(createdByEmployee_).mergeFrom(value).buildPartial();
           } else {
@@ -5865,33 +6592,32 @@ public final class Model {
         } else {
           createdByEmployeeBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000008;
         return this;
       }
       /**
-       * <code>.muni.model.Person createdByEmployee = 6;</code>
+       * <code>optional .muni.model.Person createdByEmployee = 6;</code>
        */
       public Builder clearCreatedByEmployee() {
         if (createdByEmployeeBuilder_ == null) {
           createdByEmployee_ = null;
           onChanged();
         } else {
-          createdByEmployee_ = null;
-          createdByEmployeeBuilder_ = null;
+          createdByEmployeeBuilder_.clear();
         }
-
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
       /**
-       * <code>.muni.model.Person createdByEmployee = 6;</code>
+       * <code>optional .muni.model.Person createdByEmployee = 6;</code>
        */
       public muni.model.Model.Person.Builder getCreatedByEmployeeBuilder() {
-        
+        bitField0_ |= 0x00000008;
         onChanged();
         return getCreatedByEmployeeFieldBuilder().getBuilder();
       }
       /**
-       * <code>.muni.model.Person createdByEmployee = 6;</code>
+       * <code>optional .muni.model.Person createdByEmployee = 6;</code>
        */
       public muni.model.Model.PersonOrBuilder getCreatedByEmployeeOrBuilder() {
         if (createdByEmployeeBuilder_ != null) {
@@ -5902,7 +6628,7 @@ public final class Model {
         }
       }
       /**
-       * <code>.muni.model.Person createdByEmployee = 6;</code>
+       * <code>optional .muni.model.Person createdByEmployee = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           muni.model.Model.Person, muni.model.Model.Person.Builder, muni.model.Model.PersonOrBuilder> 
@@ -5920,7 +6646,15 @@ public final class Model {
 
       private boolean dirty_ ;
       /**
-       * <code>bool dirty = 7;</code>
+       * <code>optional bool dirty = 7 [default = false];</code>
+       * @return Whether the dirty field is set.
+       */
+      @java.lang.Override
+      public boolean hasDirty() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional bool dirty = 7 [default = false];</code>
        * @return The dirty.
        */
       @java.lang.Override
@@ -5928,22 +6662,22 @@ public final class Model {
         return dirty_;
       }
       /**
-       * <code>bool dirty = 7;</code>
+       * <code>optional bool dirty = 7 [default = false];</code>
        * @param value The dirty to set.
        * @return This builder for chaining.
        */
       public Builder setDirty(boolean value) {
-        
+        bitField0_ |= 0x00000010;
         dirty_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>bool dirty = 7;</code>
+       * <code>optional bool dirty = 7 [default = false];</code>
        * @return This builder for chaining.
        */
       public Builder clearDirty() {
-        
+        bitField0_ = (bitField0_ & ~0x00000010);
         dirty_ = false;
         onChanged();
         return this;
@@ -5957,18 +6691,18 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp createTime = 1;</code>
+       * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
        * @return Whether the createTime field is set.
        */
       public boolean hasCreateTime() {
-        return createTimeBuilder_ != null || createTime_ != null;
+        return ((bitField0_ & 0x00000020) != 0);
       }
       /**
        * <pre>
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp createTime = 1;</code>
+       * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
        * @return The createTime.
        */
       public com.google.protobuf.Timestamp getCreateTime() {
@@ -5983,7 +6717,7 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp createTime = 1;</code>
+       * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
        */
       public Builder setCreateTime(com.google.protobuf.Timestamp value) {
         if (createTimeBuilder_ == null) {
@@ -5995,7 +6729,7 @@ public final class Model {
         } else {
           createTimeBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000020;
         return this;
       }
       /**
@@ -6003,7 +6737,7 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp createTime = 1;</code>
+       * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
        */
       public Builder setCreateTime(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -6013,7 +6747,7 @@ public final class Model {
         } else {
           createTimeBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000020;
         return this;
       }
       /**
@@ -6021,11 +6755,13 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp createTime = 1;</code>
+       * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
        */
       public Builder mergeCreateTime(com.google.protobuf.Timestamp value) {
         if (createTimeBuilder_ == null) {
-          if (createTime_ != null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+              createTime_ != null &&
+              createTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
             createTime_ =
               com.google.protobuf.Timestamp.newBuilder(createTime_).mergeFrom(value).buildPartial();
           } else {
@@ -6035,7 +6771,7 @@ public final class Model {
         } else {
           createTimeBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000020;
         return this;
       }
       /**
@@ -6043,17 +6779,16 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp createTime = 1;</code>
+       * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
        */
       public Builder clearCreateTime() {
         if (createTimeBuilder_ == null) {
           createTime_ = null;
           onChanged();
         } else {
-          createTime_ = null;
-          createTimeBuilder_ = null;
+          createTimeBuilder_.clear();
         }
-
+        bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
       /**
@@ -6061,10 +6796,10 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp createTime = 1;</code>
+       * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreateTimeBuilder() {
-        
+        bitField0_ |= 0x00000020;
         onChanged();
         return getCreateTimeFieldBuilder().getBuilder();
       }
@@ -6073,7 +6808,7 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp createTime = 1;</code>
+       * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder() {
         if (createTimeBuilder_ != null) {
@@ -6088,7 +6823,7 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp createTime = 1;</code>
+       * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -6108,22 +6843,14 @@ public final class Model {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updateTimeBuilder_;
       /**
-       * <pre>
-       *Output only
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+       * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
        * @return Whether the updateTime field is set.
        */
       public boolean hasUpdateTime() {
-        return updateTimeBuilder_ != null || updateTime_ != null;
+        return ((bitField0_ & 0x00000040) != 0);
       }
       /**
-       * <pre>
-       *Output only
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+       * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
        * @return The updateTime.
        */
       public com.google.protobuf.Timestamp getUpdateTime() {
@@ -6134,11 +6861,7 @@ public final class Model {
         }
       }
       /**
-       * <pre>
-       *Output only
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+       * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
        */
       public Builder setUpdateTime(com.google.protobuf.Timestamp value) {
         if (updateTimeBuilder_ == null) {
@@ -6150,15 +6873,11 @@ public final class Model {
         } else {
           updateTimeBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000040;
         return this;
       }
       /**
-       * <pre>
-       *Output only
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+       * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
        */
       public Builder setUpdateTime(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -6168,19 +6887,17 @@ public final class Model {
         } else {
           updateTimeBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000040;
         return this;
       }
       /**
-       * <pre>
-       *Output only
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+       * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
        */
       public Builder mergeUpdateTime(com.google.protobuf.Timestamp value) {
         if (updateTimeBuilder_ == null) {
-          if (updateTime_ != null) {
+          if (((bitField0_ & 0x00000040) != 0) &&
+              updateTime_ != null &&
+              updateTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
             updateTime_ =
               com.google.protobuf.Timestamp.newBuilder(updateTime_).mergeFrom(value).buildPartial();
           } else {
@@ -6190,45 +6907,32 @@ public final class Model {
         } else {
           updateTimeBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000040;
         return this;
       }
       /**
-       * <pre>
-       *Output only
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+       * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
        */
       public Builder clearUpdateTime() {
         if (updateTimeBuilder_ == null) {
           updateTime_ = null;
           onChanged();
         } else {
-          updateTime_ = null;
-          updateTimeBuilder_ = null;
+          updateTimeBuilder_.clear();
         }
-
+        bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
       /**
-       * <pre>
-       *Output only
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+       * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
        */
       public com.google.protobuf.Timestamp.Builder getUpdateTimeBuilder() {
-        
+        bitField0_ |= 0x00000040;
         onChanged();
         return getUpdateTimeFieldBuilder().getBuilder();
       }
       /**
-       * <pre>
-       *Output only
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+       * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder() {
         if (updateTimeBuilder_ != null) {
@@ -6239,11 +6943,7 @@ public final class Model {
         }
       }
       /**
-       * <pre>
-       *Output only
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+       * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -6284,7 +6984,7 @@ public final class Model {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Case>
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<Case>
         PARSER = new com.google.protobuf.AbstractParser<Case>() {
       @java.lang.Override
       public Case parsePartialFrom(
@@ -6320,7 +7020,16 @@ public final class Model {
      *TODO avoid converting to enum, that would make api less generic?
      * </pre>
      *
-     * <code>string subsystemId = 1;</code>
+     * <code>optional string subsystemId = 1;</code>
+     * @return Whether the subsystemId field is set.
+     */
+    boolean hasSubsystemId();
+    /**
+     * <pre>
+     *TODO avoid converting to enum, that would make api less generic?
+     * </pre>
+     *
+     * <code>optional string subsystemId = 1;</code>
      * @return The subsystemId.
      */
     java.lang.String getSubsystemId();
@@ -6329,7 +7038,7 @@ public final class Model {
      *TODO avoid converting to enum, that would make api less generic?
      * </pre>
      *
-     * <code>string subsystemId = 1;</code>
+     * <code>optional string subsystemId = 1;</code>
      * @return The bytes for subsystemId.
      */
     com.google.protobuf.ByteString
@@ -6371,6 +7080,7 @@ public final class Model {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -6382,9 +7092,9 @@ public final class Model {
               done = true;
               break;
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              subsystemId_ = s;
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              subsystemId_ = bs;
               break;
             }
             default: {
@@ -6419,6 +7129,7 @@ public final class Model {
               muni.model.Model.Subsystem.class, muni.model.Model.Subsystem.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SUBSYSTEMID_FIELD_NUMBER = 1;
     private volatile java.lang.Object subsystemId_;
     /**
@@ -6426,7 +7137,19 @@ public final class Model {
      *TODO avoid converting to enum, that would make api less generic?
      * </pre>
      *
-     * <code>string subsystemId = 1;</code>
+     * <code>optional string subsystemId = 1;</code>
+     * @return Whether the subsystemId field is set.
+     */
+    @java.lang.Override
+    public boolean hasSubsystemId() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     *TODO avoid converting to enum, that would make api less generic?
+     * </pre>
+     *
+     * <code>optional string subsystemId = 1;</code>
      * @return The subsystemId.
      */
     @java.lang.Override
@@ -6438,7 +7161,9 @@ public final class Model {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        subsystemId_ = s;
+        if (bs.isValidUtf8()) {
+          subsystemId_ = s;
+        }
         return s;
       }
     }
@@ -6447,7 +7172,7 @@ public final class Model {
      *TODO avoid converting to enum, that would make api less generic?
      * </pre>
      *
-     * <code>string subsystemId = 1;</code>
+     * <code>optional string subsystemId = 1;</code>
      * @return The bytes for subsystemId.
      */
     @java.lang.Override
@@ -6479,7 +7204,7 @@ public final class Model {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getSubsystemIdBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, subsystemId_);
       }
       unknownFields.writeTo(output);
@@ -6491,7 +7216,7 @@ public final class Model {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSubsystemIdBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, subsystemId_);
       }
       size += unknownFields.getSerializedSize();
@@ -6509,8 +7234,11 @@ public final class Model {
       }
       muni.model.Model.Subsystem other = (muni.model.Model.Subsystem) obj;
 
-      if (!getSubsystemId()
-          .equals(other.getSubsystemId())) return false;
+      if (hasSubsystemId() != other.hasSubsystemId()) return false;
+      if (hasSubsystemId()) {
+        if (!getSubsystemId()
+            .equals(other.getSubsystemId())) return false;
+      }
       return unknownFields.equals(other.unknownFields);
     }
 
@@ -6521,8 +7249,10 @@ public final class Model {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + SUBSYSTEMID_FIELD_NUMBER;
-      hash = (53 * hash) + getSubsystemId().hashCode();
+      if (hasSubsystemId()) {
+        hash = (37 * hash) + SUBSYSTEMID_FIELD_NUMBER;
+        hash = (53 * hash) + getSubsystemId().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6657,7 +7387,7 @@ public final class Model {
       public Builder clear() {
         super.clear();
         subsystemId_ = "";
-
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -6684,7 +7414,13 @@ public final class Model {
       @java.lang.Override
       public muni.model.Model.Subsystem buildPartial() {
         muni.model.Model.Subsystem result = new muni.model.Model.Subsystem(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
         result.subsystemId_ = subsystemId_;
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -6733,7 +7469,8 @@ public final class Model {
 
       public Builder mergeFrom(muni.model.Model.Subsystem other) {
         if (other == muni.model.Model.Subsystem.getDefaultInstance()) return this;
-        if (!other.getSubsystemId().isEmpty()) {
+        if (other.hasSubsystemId()) {
+          bitField0_ |= 0x00000001;
           subsystemId_ = other.subsystemId_;
           onChanged();
         }
@@ -6765,6 +7502,7 @@ public final class Model {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object subsystemId_ = "";
       /**
@@ -6772,7 +7510,18 @@ public final class Model {
        *TODO avoid converting to enum, that would make api less generic?
        * </pre>
        *
-       * <code>string subsystemId = 1;</code>
+       * <code>optional string subsystemId = 1;</code>
+       * @return Whether the subsystemId field is set.
+       */
+      public boolean hasSubsystemId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       *TODO avoid converting to enum, that would make api less generic?
+       * </pre>
+       *
+       * <code>optional string subsystemId = 1;</code>
        * @return The subsystemId.
        */
       public java.lang.String getSubsystemId() {
@@ -6781,7 +7530,9 @@ public final class Model {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          subsystemId_ = s;
+          if (bs.isValidUtf8()) {
+            subsystemId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -6792,7 +7543,7 @@ public final class Model {
        *TODO avoid converting to enum, that would make api less generic?
        * </pre>
        *
-       * <code>string subsystemId = 1;</code>
+       * <code>optional string subsystemId = 1;</code>
        * @return The bytes for subsystemId.
        */
       public com.google.protobuf.ByteString
@@ -6813,7 +7564,7 @@ public final class Model {
        *TODO avoid converting to enum, that would make api less generic?
        * </pre>
        *
-       * <code>string subsystemId = 1;</code>
+       * <code>optional string subsystemId = 1;</code>
        * @param value The subsystemId to set.
        * @return This builder for chaining.
        */
@@ -6822,7 +7573,7 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  bitField0_ |= 0x00000001;
         subsystemId_ = value;
         onChanged();
         return this;
@@ -6832,11 +7583,11 @@ public final class Model {
        *TODO avoid converting to enum, that would make api less generic?
        * </pre>
        *
-       * <code>string subsystemId = 1;</code>
+       * <code>optional string subsystemId = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearSubsystemId() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         subsystemId_ = getDefaultInstance().getSubsystemId();
         onChanged();
         return this;
@@ -6846,7 +7597,7 @@ public final class Model {
        *TODO avoid converting to enum, that would make api less generic?
        * </pre>
        *
-       * <code>string subsystemId = 1;</code>
+       * <code>optional string subsystemId = 1;</code>
        * @param value The bytes for subsystemId to set.
        * @return This builder for chaining.
        */
@@ -6855,8 +7606,7 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  bitField0_ |= 0x00000001;
         subsystemId_ = value;
         onChanged();
         return this;
@@ -6887,7 +7637,7 @@ public final class Model {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Subsystem>
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<Subsystem>
         PARSER = new com.google.protobuf.AbstractParser<Subsystem>() {
       @java.lang.Override
       public Subsystem parsePartialFrom(
@@ -6923,7 +7673,16 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>string id = 3;</code>
+     * <code>optional string id = 3;</code>
+     * @return Whether the id field is set.
+     */
+    boolean hasId();
+    /**
+     * <pre>
+     *Output only
+     * </pre>
+     *
+     * <code>optional string id = 3;</code>
      * @return The id.
      */
     java.lang.String getId();
@@ -6932,89 +7691,119 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>string id = 3;</code>
+     * <code>optional string id = 3;</code>
      * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
 
     /**
-     * <code>string name = 4;</code>
+     * <code>optional string name = 4;</code>
+     * @return Whether the name field is set.
+     */
+    boolean hasName();
+    /**
+     * <code>optional string name = 4;</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
-     * <code>string name = 4;</code>
+     * <code>optional string name = 4;</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
-     * <code>string website = 5;</code>
+     * <code>optional string website = 5;</code>
+     * @return Whether the website field is set.
+     */
+    boolean hasWebsite();
+    /**
+     * <code>optional string website = 5;</code>
      * @return The website.
      */
     java.lang.String getWebsite();
     /**
-     * <code>string website = 5;</code>
+     * <code>optional string website = 5;</code>
      * @return The bytes for website.
      */
     com.google.protobuf.ByteString
         getWebsiteBytes();
 
     /**
-     * <code>string email = 6;</code>
+     * <code>optional string email = 6;</code>
+     * @return Whether the email field is set.
+     */
+    boolean hasEmail();
+    /**
+     * <code>optional string email = 6;</code>
      * @return The email.
      */
     java.lang.String getEmail();
     /**
-     * <code>string email = 6;</code>
+     * <code>optional string email = 6;</code>
      * @return The bytes for email.
      */
     com.google.protobuf.ByteString
         getEmailBytes();
 
     /**
-     * <code>string phone1 = 7;</code>
+     * <code>optional string phone1 = 7;</code>
+     * @return Whether the phone1 field is set.
+     */
+    boolean hasPhone1();
+    /**
+     * <code>optional string phone1 = 7;</code>
      * @return The phone1.
      */
     java.lang.String getPhone1();
     /**
-     * <code>string phone1 = 7;</code>
+     * <code>optional string phone1 = 7;</code>
      * @return The bytes for phone1.
      */
     com.google.protobuf.ByteString
         getPhone1Bytes();
 
     /**
-     * <code>string phone2 = 8;</code>
+     * <code>optional string phone2 = 8;</code>
+     * @return Whether the phone2 field is set.
+     */
+    boolean hasPhone2();
+    /**
+     * <code>optional string phone2 = 8;</code>
      * @return The phone2.
      */
     java.lang.String getPhone2();
     /**
-     * <code>string phone2 = 8;</code>
+     * <code>optional string phone2 = 8;</code>
      * @return The bytes for phone2.
      */
     com.google.protobuf.ByteString
         getPhone2Bytes();
 
     /**
-     * <code>.muni.model.PostalAddress address = 9;</code>
+     * <code>optional .muni.model.PostalAddress address = 9;</code>
      * @return Whether the address field is set.
      */
     boolean hasAddress();
     /**
-     * <code>.muni.model.PostalAddress address = 9;</code>
+     * <code>optional .muni.model.PostalAddress address = 9;</code>
      * @return The address.
      */
     muni.model.Model.PostalAddress getAddress();
     /**
-     * <code>.muni.model.PostalAddress address = 9;</code>
+     * <code>optional .muni.model.PostalAddress address = 9;</code>
      */
     muni.model.Model.PostalAddressOrBuilder getAddressOrBuilder();
 
     /**
-     * <code>bool dirty = 10;</code>
+     * <code>optional bool dirty = 10 [default = false];</code>
+     * @return Whether the dirty field is set.
+     */
+    boolean hasDirty();
+    /**
+     * <code>optional bool dirty = 10 [default = false];</code>
      * @return The dirty.
      */
     boolean getDirty();
@@ -7024,7 +7813,7 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp createTime = 1;</code>
+     * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
      * @return Whether the createTime field is set.
      */
     boolean hasCreateTime();
@@ -7033,7 +7822,7 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp createTime = 1;</code>
+     * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
      * @return The createTime.
      */
     com.google.protobuf.Timestamp getCreateTime();
@@ -7042,7 +7831,7 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp createTime = 1;</code>
+     * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder();
 
@@ -7051,7 +7840,7 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+     * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
      * @return Whether the updateTime field is set.
      */
     boolean hasUpdateTime();
@@ -7060,7 +7849,7 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+     * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
      * @return The updateTime.
      */
     com.google.protobuf.Timestamp getUpdateTime();
@@ -7069,7 +7858,7 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+     * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
      */
     com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder();
   }
@@ -7114,6 +7903,7 @@ public final class Model {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -7126,7 +7916,7 @@ public final class Model {
               break;
             case 10: {
               com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (createTime_ != null) {
+              if (((bitField0_ & 0x00000100) != 0)) {
                 subBuilder = createTime_.toBuilder();
               }
               createTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
@@ -7134,12 +7924,12 @@ public final class Model {
                 subBuilder.mergeFrom(createTime_);
                 createTime_ = subBuilder.buildPartial();
               }
-
+              bitField0_ |= 0x00000100;
               break;
             }
             case 18: {
               com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (updateTime_ != null) {
+              if (((bitField0_ & 0x00000200) != 0)) {
                 subBuilder = updateTime_.toBuilder();
               }
               updateTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
@@ -7147,60 +7937,60 @@ public final class Model {
                 subBuilder.mergeFrom(updateTime_);
                 updateTime_ = subBuilder.buildPartial();
               }
-
+              bitField0_ |= 0x00000200;
               break;
             }
             case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              id_ = bs;
               break;
             }
             case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              name_ = s;
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              name_ = bs;
               break;
             }
             case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              website_ = s;
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              website_ = bs;
               break;
             }
             case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              email_ = s;
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              email_ = bs;
               break;
             }
             case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              phone1_ = s;
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000010;
+              phone1_ = bs;
               break;
             }
             case 66: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              phone2_ = s;
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000020;
+              phone2_ = bs;
               break;
             }
             case 74: {
               muni.model.Model.PostalAddress.Builder subBuilder = null;
-              if (address_ != null) {
+              if (((bitField0_ & 0x00000040) != 0)) {
                 subBuilder = address_.toBuilder();
               }
-              address_ = input.readMessage(muni.model.Model.PostalAddress.parser(), extensionRegistry);
+              address_ = input.readMessage(muni.model.Model.PostalAddress.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(address_);
                 address_ = subBuilder.buildPartial();
               }
-
+              bitField0_ |= 0x00000040;
               break;
             }
             case 80: {
-
+              bitField0_ |= 0x00000080;
               dirty_ = input.readBool();
               break;
             }
@@ -7236,6 +8026,7 @@ public final class Model {
               muni.model.Model.Organization.class, muni.model.Model.Organization.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 3;
     private volatile java.lang.Object id_;
     /**
@@ -7243,7 +8034,19 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>string id = 3;</code>
+     * <code>optional string id = 3;</code>
+     * @return Whether the id field is set.
+     */
+    @java.lang.Override
+    public boolean hasId() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     *Output only
+     * </pre>
+     *
+     * <code>optional string id = 3;</code>
      * @return The id.
      */
     @java.lang.Override
@@ -7255,7 +8058,9 @@ public final class Model {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        id_ = s;
+        if (bs.isValidUtf8()) {
+          id_ = s;
+        }
         return s;
       }
     }
@@ -7264,7 +8069,7 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>string id = 3;</code>
+     * <code>optional string id = 3;</code>
      * @return The bytes for id.
      */
     @java.lang.Override
@@ -7285,7 +8090,15 @@ public final class Model {
     public static final int NAME_FIELD_NUMBER = 4;
     private volatile java.lang.Object name_;
     /**
-     * <code>string name = 4;</code>
+     * <code>optional string name = 4;</code>
+     * @return Whether the name field is set.
+     */
+    @java.lang.Override
+    public boolean hasName() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional string name = 4;</code>
      * @return The name.
      */
     @java.lang.Override
@@ -7297,12 +8110,14 @@ public final class Model {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        name_ = s;
+        if (bs.isValidUtf8()) {
+          name_ = s;
+        }
         return s;
       }
     }
     /**
-     * <code>string name = 4;</code>
+     * <code>optional string name = 4;</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -7323,7 +8138,15 @@ public final class Model {
     public static final int WEBSITE_FIELD_NUMBER = 5;
     private volatile java.lang.Object website_;
     /**
-     * <code>string website = 5;</code>
+     * <code>optional string website = 5;</code>
+     * @return Whether the website field is set.
+     */
+    @java.lang.Override
+    public boolean hasWebsite() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional string website = 5;</code>
      * @return The website.
      */
     @java.lang.Override
@@ -7335,12 +8158,14 @@ public final class Model {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        website_ = s;
+        if (bs.isValidUtf8()) {
+          website_ = s;
+        }
         return s;
       }
     }
     /**
-     * <code>string website = 5;</code>
+     * <code>optional string website = 5;</code>
      * @return The bytes for website.
      */
     @java.lang.Override
@@ -7361,7 +8186,15 @@ public final class Model {
     public static final int EMAIL_FIELD_NUMBER = 6;
     private volatile java.lang.Object email_;
     /**
-     * <code>string email = 6;</code>
+     * <code>optional string email = 6;</code>
+     * @return Whether the email field is set.
+     */
+    @java.lang.Override
+    public boolean hasEmail() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional string email = 6;</code>
      * @return The email.
      */
     @java.lang.Override
@@ -7373,12 +8206,14 @@ public final class Model {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        email_ = s;
+        if (bs.isValidUtf8()) {
+          email_ = s;
+        }
         return s;
       }
     }
     /**
-     * <code>string email = 6;</code>
+     * <code>optional string email = 6;</code>
      * @return The bytes for email.
      */
     @java.lang.Override
@@ -7399,7 +8234,15 @@ public final class Model {
     public static final int PHONE1_FIELD_NUMBER = 7;
     private volatile java.lang.Object phone1_;
     /**
-     * <code>string phone1 = 7;</code>
+     * <code>optional string phone1 = 7;</code>
+     * @return Whether the phone1 field is set.
+     */
+    @java.lang.Override
+    public boolean hasPhone1() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional string phone1 = 7;</code>
      * @return The phone1.
      */
     @java.lang.Override
@@ -7411,12 +8254,14 @@ public final class Model {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        phone1_ = s;
+        if (bs.isValidUtf8()) {
+          phone1_ = s;
+        }
         return s;
       }
     }
     /**
-     * <code>string phone1 = 7;</code>
+     * <code>optional string phone1 = 7;</code>
      * @return The bytes for phone1.
      */
     @java.lang.Override
@@ -7437,7 +8282,15 @@ public final class Model {
     public static final int PHONE2_FIELD_NUMBER = 8;
     private volatile java.lang.Object phone2_;
     /**
-     * <code>string phone2 = 8;</code>
+     * <code>optional string phone2 = 8;</code>
+     * @return Whether the phone2 field is set.
+     */
+    @java.lang.Override
+    public boolean hasPhone2() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <code>optional string phone2 = 8;</code>
      * @return The phone2.
      */
     @java.lang.Override
@@ -7449,12 +8302,14 @@ public final class Model {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        phone2_ = s;
+        if (bs.isValidUtf8()) {
+          phone2_ = s;
+        }
         return s;
       }
     }
     /**
-     * <code>string phone2 = 8;</code>
+     * <code>optional string phone2 = 8;</code>
      * @return The bytes for phone2.
      */
     @java.lang.Override
@@ -7475,15 +8330,15 @@ public final class Model {
     public static final int ADDRESS_FIELD_NUMBER = 9;
     private muni.model.Model.PostalAddress address_;
     /**
-     * <code>.muni.model.PostalAddress address = 9;</code>
+     * <code>optional .muni.model.PostalAddress address = 9;</code>
      * @return Whether the address field is set.
      */
     @java.lang.Override
     public boolean hasAddress() {
-      return address_ != null;
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
-     * <code>.muni.model.PostalAddress address = 9;</code>
+     * <code>optional .muni.model.PostalAddress address = 9;</code>
      * @return The address.
      */
     @java.lang.Override
@@ -7491,17 +8346,25 @@ public final class Model {
       return address_ == null ? muni.model.Model.PostalAddress.getDefaultInstance() : address_;
     }
     /**
-     * <code>.muni.model.PostalAddress address = 9;</code>
+     * <code>optional .muni.model.PostalAddress address = 9;</code>
      */
     @java.lang.Override
     public muni.model.Model.PostalAddressOrBuilder getAddressOrBuilder() {
-      return getAddress();
+      return address_ == null ? muni.model.Model.PostalAddress.getDefaultInstance() : address_;
     }
 
     public static final int DIRTY_FIELD_NUMBER = 10;
     private boolean dirty_;
     /**
-     * <code>bool dirty = 10;</code>
+     * <code>optional bool dirty = 10 [default = false];</code>
+     * @return Whether the dirty field is set.
+     */
+    @java.lang.Override
+    public boolean hasDirty() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <code>optional bool dirty = 10 [default = false];</code>
      * @return The dirty.
      */
     @java.lang.Override
@@ -7516,19 +8379,19 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp createTime = 1;</code>
+     * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
      * @return Whether the createTime field is set.
      */
     @java.lang.Override
     public boolean hasCreateTime() {
-      return createTime_ != null;
+      return ((bitField0_ & 0x00000100) != 0);
     }
     /**
      * <pre>
      *Output only
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp createTime = 1;</code>
+     * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
      * @return The createTime.
      */
     @java.lang.Override
@@ -7540,11 +8403,11 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp createTime = 1;</code>
+     * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder() {
-      return getCreateTime();
+      return createTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createTime_;
     }
 
     public static final int UPDATETIME_FIELD_NUMBER = 2;
@@ -7554,19 +8417,19 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+     * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
      * @return Whether the updateTime field is set.
      */
     @java.lang.Override
     public boolean hasUpdateTime() {
-      return updateTime_ != null;
+      return ((bitField0_ & 0x00000200) != 0);
     }
     /**
      * <pre>
      *Output only
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+     * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
      * @return The updateTime.
      */
     @java.lang.Override
@@ -7578,11 +8441,11 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+     * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder() {
-      return getUpdateTime();
+      return updateTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updateTime_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -7599,34 +8462,34 @@ public final class Model {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (createTime_ != null) {
+      if (((bitField0_ & 0x00000100) != 0)) {
         output.writeMessage(1, getCreateTime());
       }
-      if (updateTime_ != null) {
+      if (((bitField0_ & 0x00000200) != 0)) {
         output.writeMessage(2, getUpdateTime());
       }
-      if (!getIdBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, id_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, name_);
       }
-      if (!getWebsiteBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, website_);
       }
-      if (!getEmailBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, email_);
       }
-      if (!getPhone1Bytes().isEmpty()) {
+      if (((bitField0_ & 0x00000010) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, phone1_);
       }
-      if (!getPhone2Bytes().isEmpty()) {
+      if (((bitField0_ & 0x00000020) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, phone2_);
       }
-      if (address_ != null) {
+      if (((bitField0_ & 0x00000040) != 0)) {
         output.writeMessage(9, getAddress());
       }
-      if (dirty_ != false) {
+      if (((bitField0_ & 0x00000080) != 0)) {
         output.writeBool(10, dirty_);
       }
       unknownFields.writeTo(output);
@@ -7638,37 +8501,37 @@ public final class Model {
       if (size != -1) return size;
 
       size = 0;
-      if (createTime_ != null) {
+      if (((bitField0_ & 0x00000100) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCreateTime());
       }
-      if (updateTime_ != null) {
+      if (((bitField0_ & 0x00000200) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getUpdateTime());
       }
-      if (!getIdBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, id_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, name_);
       }
-      if (!getWebsiteBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, website_);
       }
-      if (!getEmailBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, email_);
       }
-      if (!getPhone1Bytes().isEmpty()) {
+      if (((bitField0_ & 0x00000010) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, phone1_);
       }
-      if (!getPhone2Bytes().isEmpty()) {
+      if (((bitField0_ & 0x00000020) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, phone2_);
       }
-      if (address_ != null) {
+      if (((bitField0_ & 0x00000040) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getAddress());
       }
-      if (dirty_ != false) {
+      if (((bitField0_ & 0x00000080) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(10, dirty_);
       }
@@ -7687,25 +8550,46 @@ public final class Model {
       }
       muni.model.Model.Organization other = (muni.model.Model.Organization) obj;
 
-      if (!getId()
-          .equals(other.getId())) return false;
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getWebsite()
-          .equals(other.getWebsite())) return false;
-      if (!getEmail()
-          .equals(other.getEmail())) return false;
-      if (!getPhone1()
-          .equals(other.getPhone1())) return false;
-      if (!getPhone2()
-          .equals(other.getPhone2())) return false;
+      if (hasId() != other.hasId()) return false;
+      if (hasId()) {
+        if (!getId()
+            .equals(other.getId())) return false;
+      }
+      if (hasName() != other.hasName()) return false;
+      if (hasName()) {
+        if (!getName()
+            .equals(other.getName())) return false;
+      }
+      if (hasWebsite() != other.hasWebsite()) return false;
+      if (hasWebsite()) {
+        if (!getWebsite()
+            .equals(other.getWebsite())) return false;
+      }
+      if (hasEmail() != other.hasEmail()) return false;
+      if (hasEmail()) {
+        if (!getEmail()
+            .equals(other.getEmail())) return false;
+      }
+      if (hasPhone1() != other.hasPhone1()) return false;
+      if (hasPhone1()) {
+        if (!getPhone1()
+            .equals(other.getPhone1())) return false;
+      }
+      if (hasPhone2() != other.hasPhone2()) return false;
+      if (hasPhone2()) {
+        if (!getPhone2()
+            .equals(other.getPhone2())) return false;
+      }
       if (hasAddress() != other.hasAddress()) return false;
       if (hasAddress()) {
         if (!getAddress()
             .equals(other.getAddress())) return false;
       }
-      if (getDirty()
-          != other.getDirty()) return false;
+      if (hasDirty() != other.hasDirty()) return false;
+      if (hasDirty()) {
+        if (getDirty()
+            != other.getDirty()) return false;
+      }
       if (hasCreateTime() != other.hasCreateTime()) return false;
       if (hasCreateTime()) {
         if (!getCreateTime()
@@ -7726,25 +8610,39 @@ public final class Model {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + WEBSITE_FIELD_NUMBER;
-      hash = (53 * hash) + getWebsite().hashCode();
-      hash = (37 * hash) + EMAIL_FIELD_NUMBER;
-      hash = (53 * hash) + getEmail().hashCode();
-      hash = (37 * hash) + PHONE1_FIELD_NUMBER;
-      hash = (53 * hash) + getPhone1().hashCode();
-      hash = (37 * hash) + PHONE2_FIELD_NUMBER;
-      hash = (53 * hash) + getPhone2().hashCode();
+      if (hasId()) {
+        hash = (37 * hash) + ID_FIELD_NUMBER;
+        hash = (53 * hash) + getId().hashCode();
+      }
+      if (hasName()) {
+        hash = (37 * hash) + NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getName().hashCode();
+      }
+      if (hasWebsite()) {
+        hash = (37 * hash) + WEBSITE_FIELD_NUMBER;
+        hash = (53 * hash) + getWebsite().hashCode();
+      }
+      if (hasEmail()) {
+        hash = (37 * hash) + EMAIL_FIELD_NUMBER;
+        hash = (53 * hash) + getEmail().hashCode();
+      }
+      if (hasPhone1()) {
+        hash = (37 * hash) + PHONE1_FIELD_NUMBER;
+        hash = (53 * hash) + getPhone1().hashCode();
+      }
+      if (hasPhone2()) {
+        hash = (37 * hash) + PHONE2_FIELD_NUMBER;
+        hash = (53 * hash) + getPhone2().hashCode();
+      }
       if (hasAddress()) {
         hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
         hash = (53 * hash) + getAddress().hashCode();
       }
-      hash = (37 * hash) + DIRTY_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getDirty());
+      if (hasDirty()) {
+        hash = (37 * hash) + DIRTY_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getDirty());
+      }
       if (hasCreateTime()) {
         hash = (37 * hash) + CREATETIME_FIELD_NUMBER;
         hash = (53 * hash) + getCreateTime().hashCode();
@@ -7881,43 +8779,46 @@ public final class Model {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getAddressFieldBuilder();
+          getCreateTimeFieldBuilder();
+          getUpdateTimeFieldBuilder();
         }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         id_ = "";
-
+        bitField0_ = (bitField0_ & ~0x00000001);
         name_ = "";
-
+        bitField0_ = (bitField0_ & ~0x00000002);
         website_ = "";
-
+        bitField0_ = (bitField0_ & ~0x00000004);
         email_ = "";
-
+        bitField0_ = (bitField0_ & ~0x00000008);
         phone1_ = "";
-
+        bitField0_ = (bitField0_ & ~0x00000010);
         phone2_ = "";
-
+        bitField0_ = (bitField0_ & ~0x00000020);
         if (addressBuilder_ == null) {
           address_ = null;
         } else {
-          address_ = null;
-          addressBuilder_ = null;
+          addressBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000040);
         dirty_ = false;
-
+        bitField0_ = (bitField0_ & ~0x00000080);
         if (createTimeBuilder_ == null) {
           createTime_ = null;
         } else {
-          createTime_ = null;
-          createTimeBuilder_ = null;
+          createTimeBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000100);
         if (updateTimeBuilder_ == null) {
           updateTime_ = null;
         } else {
-          updateTime_ = null;
-          updateTimeBuilder_ = null;
+          updateTimeBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000200);
         return this;
       }
 
@@ -7944,28 +8845,61 @@ public final class Model {
       @java.lang.Override
       public muni.model.Model.Organization buildPartial() {
         muni.model.Model.Organization result = new muni.model.Model.Organization(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
         result.id_ = id_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          to_bitField0_ |= 0x00000002;
+        }
         result.name_ = name_;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          to_bitField0_ |= 0x00000004;
+        }
         result.website_ = website_;
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          to_bitField0_ |= 0x00000008;
+        }
         result.email_ = email_;
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          to_bitField0_ |= 0x00000010;
+        }
         result.phone1_ = phone1_;
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          to_bitField0_ |= 0x00000020;
+        }
         result.phone2_ = phone2_;
-        if (addressBuilder_ == null) {
-          result.address_ = address_;
-        } else {
-          result.address_ = addressBuilder_.build();
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          if (addressBuilder_ == null) {
+            result.address_ = address_;
+          } else {
+            result.address_ = addressBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000040;
         }
-        result.dirty_ = dirty_;
-        if (createTimeBuilder_ == null) {
-          result.createTime_ = createTime_;
-        } else {
-          result.createTime_ = createTimeBuilder_.build();
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.dirty_ = dirty_;
+          to_bitField0_ |= 0x00000080;
         }
-        if (updateTimeBuilder_ == null) {
-          result.updateTime_ = updateTime_;
-        } else {
-          result.updateTime_ = updateTimeBuilder_.build();
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          if (createTimeBuilder_ == null) {
+            result.createTime_ = createTime_;
+          } else {
+            result.createTime_ = createTimeBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000100;
         }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          if (updateTimeBuilder_ == null) {
+            result.updateTime_ = updateTime_;
+          } else {
+            result.updateTime_ = updateTimeBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000200;
+        }
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -8014,34 +8948,40 @@ public final class Model {
 
       public Builder mergeFrom(muni.model.Model.Organization other) {
         if (other == muni.model.Model.Organization.getDefaultInstance()) return this;
-        if (!other.getId().isEmpty()) {
+        if (other.hasId()) {
+          bitField0_ |= 0x00000001;
           id_ = other.id_;
           onChanged();
         }
-        if (!other.getName().isEmpty()) {
+        if (other.hasName()) {
+          bitField0_ |= 0x00000002;
           name_ = other.name_;
           onChanged();
         }
-        if (!other.getWebsite().isEmpty()) {
+        if (other.hasWebsite()) {
+          bitField0_ |= 0x00000004;
           website_ = other.website_;
           onChanged();
         }
-        if (!other.getEmail().isEmpty()) {
+        if (other.hasEmail()) {
+          bitField0_ |= 0x00000008;
           email_ = other.email_;
           onChanged();
         }
-        if (!other.getPhone1().isEmpty()) {
+        if (other.hasPhone1()) {
+          bitField0_ |= 0x00000010;
           phone1_ = other.phone1_;
           onChanged();
         }
-        if (!other.getPhone2().isEmpty()) {
+        if (other.hasPhone2()) {
+          bitField0_ |= 0x00000020;
           phone2_ = other.phone2_;
           onChanged();
         }
         if (other.hasAddress()) {
           mergeAddress(other.getAddress());
         }
-        if (other.getDirty() != false) {
+        if (other.hasDirty()) {
           setDirty(other.getDirty());
         }
         if (other.hasCreateTime()) {
@@ -8078,6 +9018,7 @@ public final class Model {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object id_ = "";
       /**
@@ -8085,7 +9026,18 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>string id = 3;</code>
+       * <code>optional string id = 3;</code>
+       * @return Whether the id field is set.
+       */
+      public boolean hasId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
+       * <code>optional string id = 3;</code>
        * @return The id.
        */
       public java.lang.String getId() {
@@ -8094,7 +9046,9 @@ public final class Model {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          id_ = s;
+          if (bs.isValidUtf8()) {
+            id_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -8105,7 +9059,7 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>string id = 3;</code>
+       * <code>optional string id = 3;</code>
        * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
@@ -8126,7 +9080,7 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>string id = 3;</code>
+       * <code>optional string id = 3;</code>
        * @param value The id to set.
        * @return This builder for chaining.
        */
@@ -8135,7 +9089,7 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  bitField0_ |= 0x00000001;
         id_ = value;
         onChanged();
         return this;
@@ -8145,11 +9099,11 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>string id = 3;</code>
+       * <code>optional string id = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         id_ = getDefaultInstance().getId();
         onChanged();
         return this;
@@ -8159,7 +9113,7 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>string id = 3;</code>
+       * <code>optional string id = 3;</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
        */
@@ -8168,8 +9122,7 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  bitField0_ |= 0x00000001;
         id_ = value;
         onChanged();
         return this;
@@ -8177,7 +9130,14 @@ public final class Model {
 
       private java.lang.Object name_ = "";
       /**
-       * <code>string name = 4;</code>
+       * <code>optional string name = 4;</code>
+       * @return Whether the name field is set.
+       */
+      public boolean hasName() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional string name = 4;</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -8186,14 +9146,16 @@ public final class Model {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          name_ = s;
+          if (bs.isValidUtf8()) {
+            name_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string name = 4;</code>
+       * <code>optional string name = 4;</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -8210,7 +9172,7 @@ public final class Model {
         }
       }
       /**
-       * <code>string name = 4;</code>
+       * <code>optional string name = 4;</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -8219,23 +9181,23 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  bitField0_ |= 0x00000002;
         name_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string name = 4;</code>
+       * <code>optional string name = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         name_ = getDefaultInstance().getName();
         onChanged();
         return this;
       }
       /**
-       * <code>string name = 4;</code>
+       * <code>optional string name = 4;</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -8244,8 +9206,7 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  bitField0_ |= 0x00000002;
         name_ = value;
         onChanged();
         return this;
@@ -8253,7 +9214,14 @@ public final class Model {
 
       private java.lang.Object website_ = "";
       /**
-       * <code>string website = 5;</code>
+       * <code>optional string website = 5;</code>
+       * @return Whether the website field is set.
+       */
+      public boolean hasWebsite() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional string website = 5;</code>
        * @return The website.
        */
       public java.lang.String getWebsite() {
@@ -8262,14 +9230,16 @@ public final class Model {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          website_ = s;
+          if (bs.isValidUtf8()) {
+            website_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string website = 5;</code>
+       * <code>optional string website = 5;</code>
        * @return The bytes for website.
        */
       public com.google.protobuf.ByteString
@@ -8286,7 +9256,7 @@ public final class Model {
         }
       }
       /**
-       * <code>string website = 5;</code>
+       * <code>optional string website = 5;</code>
        * @param value The website to set.
        * @return This builder for chaining.
        */
@@ -8295,23 +9265,23 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  bitField0_ |= 0x00000004;
         website_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string website = 5;</code>
+       * <code>optional string website = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearWebsite() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         website_ = getDefaultInstance().getWebsite();
         onChanged();
         return this;
       }
       /**
-       * <code>string website = 5;</code>
+       * <code>optional string website = 5;</code>
        * @param value The bytes for website to set.
        * @return This builder for chaining.
        */
@@ -8320,8 +9290,7 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  bitField0_ |= 0x00000004;
         website_ = value;
         onChanged();
         return this;
@@ -8329,7 +9298,14 @@ public final class Model {
 
       private java.lang.Object email_ = "";
       /**
-       * <code>string email = 6;</code>
+       * <code>optional string email = 6;</code>
+       * @return Whether the email field is set.
+       */
+      public boolean hasEmail() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional string email = 6;</code>
        * @return The email.
        */
       public java.lang.String getEmail() {
@@ -8338,14 +9314,16 @@ public final class Model {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          email_ = s;
+          if (bs.isValidUtf8()) {
+            email_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string email = 6;</code>
+       * <code>optional string email = 6;</code>
        * @return The bytes for email.
        */
       public com.google.protobuf.ByteString
@@ -8362,7 +9340,7 @@ public final class Model {
         }
       }
       /**
-       * <code>string email = 6;</code>
+       * <code>optional string email = 6;</code>
        * @param value The email to set.
        * @return This builder for chaining.
        */
@@ -8371,23 +9349,23 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  bitField0_ |= 0x00000008;
         email_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string email = 6;</code>
+       * <code>optional string email = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearEmail() {
-        
+        bitField0_ = (bitField0_ & ~0x00000008);
         email_ = getDefaultInstance().getEmail();
         onChanged();
         return this;
       }
       /**
-       * <code>string email = 6;</code>
+       * <code>optional string email = 6;</code>
        * @param value The bytes for email to set.
        * @return This builder for chaining.
        */
@@ -8396,8 +9374,7 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  bitField0_ |= 0x00000008;
         email_ = value;
         onChanged();
         return this;
@@ -8405,7 +9382,14 @@ public final class Model {
 
       private java.lang.Object phone1_ = "";
       /**
-       * <code>string phone1 = 7;</code>
+       * <code>optional string phone1 = 7;</code>
+       * @return Whether the phone1 field is set.
+       */
+      public boolean hasPhone1() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional string phone1 = 7;</code>
        * @return The phone1.
        */
       public java.lang.String getPhone1() {
@@ -8414,14 +9398,16 @@ public final class Model {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          phone1_ = s;
+          if (bs.isValidUtf8()) {
+            phone1_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string phone1 = 7;</code>
+       * <code>optional string phone1 = 7;</code>
        * @return The bytes for phone1.
        */
       public com.google.protobuf.ByteString
@@ -8438,7 +9424,7 @@ public final class Model {
         }
       }
       /**
-       * <code>string phone1 = 7;</code>
+       * <code>optional string phone1 = 7;</code>
        * @param value The phone1 to set.
        * @return This builder for chaining.
        */
@@ -8447,23 +9433,23 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  bitField0_ |= 0x00000010;
         phone1_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string phone1 = 7;</code>
+       * <code>optional string phone1 = 7;</code>
        * @return This builder for chaining.
        */
       public Builder clearPhone1() {
-        
+        bitField0_ = (bitField0_ & ~0x00000010);
         phone1_ = getDefaultInstance().getPhone1();
         onChanged();
         return this;
       }
       /**
-       * <code>string phone1 = 7;</code>
+       * <code>optional string phone1 = 7;</code>
        * @param value The bytes for phone1 to set.
        * @return This builder for chaining.
        */
@@ -8472,8 +9458,7 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  bitField0_ |= 0x00000010;
         phone1_ = value;
         onChanged();
         return this;
@@ -8481,7 +9466,14 @@ public final class Model {
 
       private java.lang.Object phone2_ = "";
       /**
-       * <code>string phone2 = 8;</code>
+       * <code>optional string phone2 = 8;</code>
+       * @return Whether the phone2 field is set.
+       */
+      public boolean hasPhone2() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>optional string phone2 = 8;</code>
        * @return The phone2.
        */
       public java.lang.String getPhone2() {
@@ -8490,14 +9482,16 @@ public final class Model {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          phone2_ = s;
+          if (bs.isValidUtf8()) {
+            phone2_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string phone2 = 8;</code>
+       * <code>optional string phone2 = 8;</code>
        * @return The bytes for phone2.
        */
       public com.google.protobuf.ByteString
@@ -8514,7 +9508,7 @@ public final class Model {
         }
       }
       /**
-       * <code>string phone2 = 8;</code>
+       * <code>optional string phone2 = 8;</code>
        * @param value The phone2 to set.
        * @return This builder for chaining.
        */
@@ -8523,23 +9517,23 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  bitField0_ |= 0x00000020;
         phone2_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string phone2 = 8;</code>
+       * <code>optional string phone2 = 8;</code>
        * @return This builder for chaining.
        */
       public Builder clearPhone2() {
-        
+        bitField0_ = (bitField0_ & ~0x00000020);
         phone2_ = getDefaultInstance().getPhone2();
         onChanged();
         return this;
       }
       /**
-       * <code>string phone2 = 8;</code>
+       * <code>optional string phone2 = 8;</code>
        * @param value The bytes for phone2 to set.
        * @return This builder for chaining.
        */
@@ -8548,8 +9542,7 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  bitField0_ |= 0x00000020;
         phone2_ = value;
         onChanged();
         return this;
@@ -8559,14 +9552,14 @@ public final class Model {
       private com.google.protobuf.SingleFieldBuilderV3<
           muni.model.Model.PostalAddress, muni.model.Model.PostalAddress.Builder, muni.model.Model.PostalAddressOrBuilder> addressBuilder_;
       /**
-       * <code>.muni.model.PostalAddress address = 9;</code>
+       * <code>optional .muni.model.PostalAddress address = 9;</code>
        * @return Whether the address field is set.
        */
       public boolean hasAddress() {
-        return addressBuilder_ != null || address_ != null;
+        return ((bitField0_ & 0x00000040) != 0);
       }
       /**
-       * <code>.muni.model.PostalAddress address = 9;</code>
+       * <code>optional .muni.model.PostalAddress address = 9;</code>
        * @return The address.
        */
       public muni.model.Model.PostalAddress getAddress() {
@@ -8577,7 +9570,7 @@ public final class Model {
         }
       }
       /**
-       * <code>.muni.model.PostalAddress address = 9;</code>
+       * <code>optional .muni.model.PostalAddress address = 9;</code>
        */
       public Builder setAddress(muni.model.Model.PostalAddress value) {
         if (addressBuilder_ == null) {
@@ -8589,11 +9582,11 @@ public final class Model {
         } else {
           addressBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000040;
         return this;
       }
       /**
-       * <code>.muni.model.PostalAddress address = 9;</code>
+       * <code>optional .muni.model.PostalAddress address = 9;</code>
        */
       public Builder setAddress(
           muni.model.Model.PostalAddress.Builder builderForValue) {
@@ -8603,15 +9596,17 @@ public final class Model {
         } else {
           addressBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000040;
         return this;
       }
       /**
-       * <code>.muni.model.PostalAddress address = 9;</code>
+       * <code>optional .muni.model.PostalAddress address = 9;</code>
        */
       public Builder mergeAddress(muni.model.Model.PostalAddress value) {
         if (addressBuilder_ == null) {
-          if (address_ != null) {
+          if (((bitField0_ & 0x00000040) != 0) &&
+              address_ != null &&
+              address_ != muni.model.Model.PostalAddress.getDefaultInstance()) {
             address_ =
               muni.model.Model.PostalAddress.newBuilder(address_).mergeFrom(value).buildPartial();
           } else {
@@ -8621,33 +9616,32 @@ public final class Model {
         } else {
           addressBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000040;
         return this;
       }
       /**
-       * <code>.muni.model.PostalAddress address = 9;</code>
+       * <code>optional .muni.model.PostalAddress address = 9;</code>
        */
       public Builder clearAddress() {
         if (addressBuilder_ == null) {
           address_ = null;
           onChanged();
         } else {
-          address_ = null;
-          addressBuilder_ = null;
+          addressBuilder_.clear();
         }
-
+        bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
       /**
-       * <code>.muni.model.PostalAddress address = 9;</code>
+       * <code>optional .muni.model.PostalAddress address = 9;</code>
        */
       public muni.model.Model.PostalAddress.Builder getAddressBuilder() {
-        
+        bitField0_ |= 0x00000040;
         onChanged();
         return getAddressFieldBuilder().getBuilder();
       }
       /**
-       * <code>.muni.model.PostalAddress address = 9;</code>
+       * <code>optional .muni.model.PostalAddress address = 9;</code>
        */
       public muni.model.Model.PostalAddressOrBuilder getAddressOrBuilder() {
         if (addressBuilder_ != null) {
@@ -8658,7 +9652,7 @@ public final class Model {
         }
       }
       /**
-       * <code>.muni.model.PostalAddress address = 9;</code>
+       * <code>optional .muni.model.PostalAddress address = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           muni.model.Model.PostalAddress, muni.model.Model.PostalAddress.Builder, muni.model.Model.PostalAddressOrBuilder> 
@@ -8676,7 +9670,15 @@ public final class Model {
 
       private boolean dirty_ ;
       /**
-       * <code>bool dirty = 10;</code>
+       * <code>optional bool dirty = 10 [default = false];</code>
+       * @return Whether the dirty field is set.
+       */
+      @java.lang.Override
+      public boolean hasDirty() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <code>optional bool dirty = 10 [default = false];</code>
        * @return The dirty.
        */
       @java.lang.Override
@@ -8684,22 +9686,22 @@ public final class Model {
         return dirty_;
       }
       /**
-       * <code>bool dirty = 10;</code>
+       * <code>optional bool dirty = 10 [default = false];</code>
        * @param value The dirty to set.
        * @return This builder for chaining.
        */
       public Builder setDirty(boolean value) {
-        
+        bitField0_ |= 0x00000080;
         dirty_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>bool dirty = 10;</code>
+       * <code>optional bool dirty = 10 [default = false];</code>
        * @return This builder for chaining.
        */
       public Builder clearDirty() {
-        
+        bitField0_ = (bitField0_ & ~0x00000080);
         dirty_ = false;
         onChanged();
         return this;
@@ -8713,18 +9715,18 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp createTime = 1;</code>
+       * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
        * @return Whether the createTime field is set.
        */
       public boolean hasCreateTime() {
-        return createTimeBuilder_ != null || createTime_ != null;
+        return ((bitField0_ & 0x00000100) != 0);
       }
       /**
        * <pre>
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp createTime = 1;</code>
+       * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
        * @return The createTime.
        */
       public com.google.protobuf.Timestamp getCreateTime() {
@@ -8739,7 +9741,7 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp createTime = 1;</code>
+       * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
        */
       public Builder setCreateTime(com.google.protobuf.Timestamp value) {
         if (createTimeBuilder_ == null) {
@@ -8751,7 +9753,7 @@ public final class Model {
         } else {
           createTimeBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000100;
         return this;
       }
       /**
@@ -8759,7 +9761,7 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp createTime = 1;</code>
+       * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
        */
       public Builder setCreateTime(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -8769,7 +9771,7 @@ public final class Model {
         } else {
           createTimeBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000100;
         return this;
       }
       /**
@@ -8777,11 +9779,13 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp createTime = 1;</code>
+       * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
        */
       public Builder mergeCreateTime(com.google.protobuf.Timestamp value) {
         if (createTimeBuilder_ == null) {
-          if (createTime_ != null) {
+          if (((bitField0_ & 0x00000100) != 0) &&
+              createTime_ != null &&
+              createTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
             createTime_ =
               com.google.protobuf.Timestamp.newBuilder(createTime_).mergeFrom(value).buildPartial();
           } else {
@@ -8791,7 +9795,7 @@ public final class Model {
         } else {
           createTimeBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000100;
         return this;
       }
       /**
@@ -8799,17 +9803,16 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp createTime = 1;</code>
+       * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
        */
       public Builder clearCreateTime() {
         if (createTimeBuilder_ == null) {
           createTime_ = null;
           onChanged();
         } else {
-          createTime_ = null;
-          createTimeBuilder_ = null;
+          createTimeBuilder_.clear();
         }
-
+        bitField0_ = (bitField0_ & ~0x00000100);
         return this;
       }
       /**
@@ -8817,10 +9820,10 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp createTime = 1;</code>
+       * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreateTimeBuilder() {
-        
+        bitField0_ |= 0x00000100;
         onChanged();
         return getCreateTimeFieldBuilder().getBuilder();
       }
@@ -8829,7 +9832,7 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp createTime = 1;</code>
+       * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder() {
         if (createTimeBuilder_ != null) {
@@ -8844,7 +9847,7 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp createTime = 1;</code>
+       * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -8868,18 +9871,18 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+       * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
        * @return Whether the updateTime field is set.
        */
       public boolean hasUpdateTime() {
-        return updateTimeBuilder_ != null || updateTime_ != null;
+        return ((bitField0_ & 0x00000200) != 0);
       }
       /**
        * <pre>
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+       * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
        * @return The updateTime.
        */
       public com.google.protobuf.Timestamp getUpdateTime() {
@@ -8894,7 +9897,7 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+       * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
        */
       public Builder setUpdateTime(com.google.protobuf.Timestamp value) {
         if (updateTimeBuilder_ == null) {
@@ -8906,7 +9909,7 @@ public final class Model {
         } else {
           updateTimeBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000200;
         return this;
       }
       /**
@@ -8914,7 +9917,7 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+       * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
        */
       public Builder setUpdateTime(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -8924,7 +9927,7 @@ public final class Model {
         } else {
           updateTimeBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000200;
         return this;
       }
       /**
@@ -8932,11 +9935,13 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+       * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
        */
       public Builder mergeUpdateTime(com.google.protobuf.Timestamp value) {
         if (updateTimeBuilder_ == null) {
-          if (updateTime_ != null) {
+          if (((bitField0_ & 0x00000200) != 0) &&
+              updateTime_ != null &&
+              updateTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
             updateTime_ =
               com.google.protobuf.Timestamp.newBuilder(updateTime_).mergeFrom(value).buildPartial();
           } else {
@@ -8946,7 +9951,7 @@ public final class Model {
         } else {
           updateTimeBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000200;
         return this;
       }
       /**
@@ -8954,17 +9959,16 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+       * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
        */
       public Builder clearUpdateTime() {
         if (updateTimeBuilder_ == null) {
           updateTime_ = null;
           onChanged();
         } else {
-          updateTime_ = null;
-          updateTimeBuilder_ = null;
+          updateTimeBuilder_.clear();
         }
-
+        bitField0_ = (bitField0_ & ~0x00000200);
         return this;
       }
       /**
@@ -8972,10 +9976,10 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+       * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
        */
       public com.google.protobuf.Timestamp.Builder getUpdateTimeBuilder() {
-        
+        bitField0_ |= 0x00000200;
         onChanged();
         return getUpdateTimeFieldBuilder().getBuilder();
       }
@@ -8984,7 +9988,7 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+       * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder() {
         if (updateTimeBuilder_ != null) {
@@ -8999,7 +10003,7 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updateTime = 2;</code>
+       * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -9040,7 +10044,7 @@ public final class Model {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Organization>
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<Organization>
         PARSER = new com.google.protobuf.AbstractParser<Organization>() {
       @java.lang.Override
       public Organization parsePartialFrom(
@@ -9072,12 +10076,17 @@ public final class Model {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string message = 1;</code>
+     * <code>optional string message = 1;</code>
+     * @return Whether the message field is set.
+     */
+    boolean hasMessage();
+    /**
+     * <code>optional string message = 1;</code>
      * @return The message.
      */
     java.lang.String getMessage();
     /**
-     * <code>string message = 1;</code>
+     * <code>optional string message = 1;</code>
      * @return The bytes for message.
      */
     com.google.protobuf.ByteString
@@ -9156,15 +10165,15 @@ public final class Model {
               done = true;
               break;
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              message_ = s;
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              message_ = bs;
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 details_ = new java.util.ArrayList<com.google.protobuf.Any>();
-                mutable_bitField0_ |= 0x00000001;
+                mutable_bitField0_ |= 0x00000002;
               }
               details_.add(
                   input.readMessage(com.google.protobuf.Any.parser(), extensionRegistry));
@@ -9185,7 +10194,7 @@ public final class Model {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           details_ = java.util.Collections.unmodifiableList(details_);
         }
         this.unknownFields = unknownFields.build();
@@ -9205,10 +10214,19 @@ public final class Model {
               muni.model.Model.ErrorInfo.class, muni.model.Model.ErrorInfo.Builder.class);
     }
 
+    private int bitField0_;
     public static final int MESSAGE_FIELD_NUMBER = 1;
     private volatile java.lang.Object message_;
     /**
-     * <code>string message = 1;</code>
+     * <code>optional string message = 1;</code>
+     * @return Whether the message field is set.
+     */
+    @java.lang.Override
+    public boolean hasMessage() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string message = 1;</code>
      * @return The message.
      */
     @java.lang.Override
@@ -9220,12 +10238,14 @@ public final class Model {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        message_ = s;
+        if (bs.isValidUtf8()) {
+          message_ = s;
+        }
         return s;
       }
     }
     /**
-     * <code>string message = 1;</code>
+     * <code>optional string message = 1;</code>
      * @return The bytes for message.
      */
     @java.lang.Override
@@ -9297,7 +10317,7 @@ public final class Model {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getMessageBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, message_);
       }
       for (int i = 0; i < details_.size(); i++) {
@@ -9312,7 +10332,7 @@ public final class Model {
       if (size != -1) return size;
 
       size = 0;
-      if (!getMessageBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, message_);
       }
       for (int i = 0; i < details_.size(); i++) {
@@ -9334,8 +10354,11 @@ public final class Model {
       }
       muni.model.Model.ErrorInfo other = (muni.model.Model.ErrorInfo) obj;
 
-      if (!getMessage()
-          .equals(other.getMessage())) return false;
+      if (hasMessage() != other.hasMessage()) return false;
+      if (hasMessage()) {
+        if (!getMessage()
+            .equals(other.getMessage())) return false;
+      }
       if (!getDetailsList()
           .equals(other.getDetailsList())) return false;
       return unknownFields.equals(other.unknownFields);
@@ -9348,8 +10371,10 @@ public final class Model {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
-      hash = (53 * hash) + getMessage().hashCode();
+      if (hasMessage()) {
+        hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
+        hash = (53 * hash) + getMessage().hashCode();
+      }
       if (getDetailsCount() > 0) {
         hash = (37 * hash) + DETAILS_FIELD_NUMBER;
         hash = (53 * hash) + getDetailsList().hashCode();
@@ -9489,10 +10514,10 @@ public final class Model {
       public Builder clear() {
         super.clear();
         message_ = "";
-
+        bitField0_ = (bitField0_ & ~0x00000001);
         if (detailsBuilder_ == null) {
           details_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           detailsBuilder_.clear();
         }
@@ -9523,16 +10548,21 @@ public final class Model {
       public muni.model.Model.ErrorInfo buildPartial() {
         muni.model.Model.ErrorInfo result = new muni.model.Model.ErrorInfo(this);
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
         result.message_ = message_;
         if (detailsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             details_ = java.util.Collections.unmodifiableList(details_);
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.details_ = details_;
         } else {
           result.details_ = detailsBuilder_.build();
         }
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -9581,7 +10611,8 @@ public final class Model {
 
       public Builder mergeFrom(muni.model.Model.ErrorInfo other) {
         if (other == muni.model.Model.ErrorInfo.getDefaultInstance()) return this;
-        if (!other.getMessage().isEmpty()) {
+        if (other.hasMessage()) {
+          bitField0_ |= 0x00000001;
           message_ = other.message_;
           onChanged();
         }
@@ -9589,7 +10620,7 @@ public final class Model {
           if (!other.details_.isEmpty()) {
             if (details_.isEmpty()) {
               details_ = other.details_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureDetailsIsMutable();
               details_.addAll(other.details_);
@@ -9602,7 +10633,7 @@ public final class Model {
               detailsBuilder_.dispose();
               detailsBuilder_ = null;
               details_ = other.details_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
               detailsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getDetailsFieldBuilder() : null;
@@ -9643,7 +10674,14 @@ public final class Model {
 
       private java.lang.Object message_ = "";
       /**
-       * <code>string message = 1;</code>
+       * <code>optional string message = 1;</code>
+       * @return Whether the message field is set.
+       */
+      public boolean hasMessage() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional string message = 1;</code>
        * @return The message.
        */
       public java.lang.String getMessage() {
@@ -9652,14 +10690,16 @@ public final class Model {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          message_ = s;
+          if (bs.isValidUtf8()) {
+            message_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string message = 1;</code>
+       * <code>optional string message = 1;</code>
        * @return The bytes for message.
        */
       public com.google.protobuf.ByteString
@@ -9676,7 +10716,7 @@ public final class Model {
         }
       }
       /**
-       * <code>string message = 1;</code>
+       * <code>optional string message = 1;</code>
        * @param value The message to set.
        * @return This builder for chaining.
        */
@@ -9685,23 +10725,23 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  bitField0_ |= 0x00000001;
         message_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string message = 1;</code>
+       * <code>optional string message = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearMessage() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         message_ = getDefaultInstance().getMessage();
         onChanged();
         return this;
       }
       /**
-       * <code>string message = 1;</code>
+       * <code>optional string message = 1;</code>
        * @param value The bytes for message to set.
        * @return This builder for chaining.
        */
@@ -9710,8 +10750,7 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  bitField0_ |= 0x00000001;
         message_ = value;
         onChanged();
         return this;
@@ -9720,9 +10759,9 @@ public final class Model {
       private java.util.List<com.google.protobuf.Any> details_ =
         java.util.Collections.emptyList();
       private void ensureDetailsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           details_ = new java.util.ArrayList<com.google.protobuf.Any>(details_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -9872,7 +10911,7 @@ public final class Model {
       public Builder clearDetails() {
         if (detailsBuilder_ == null) {
           details_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           detailsBuilder_.clear();
@@ -9949,7 +10988,7 @@ public final class Model {
           detailsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder>(
                   details_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           details_ = null;
@@ -9982,7 +11021,7 @@ public final class Model {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<ErrorInfo>
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<ErrorInfo>
         PARSER = new com.google.protobuf.AbstractParser<ErrorInfo>() {
       @java.lang.Override
       public ErrorInfo parsePartialFrom(
@@ -10050,36 +11089,36 @@ public final class Model {
     java.lang.String[] descriptorData = {
       "\n\020muni-model.proto\022\nmuni.model\032\037google/p" +
       "rotobuf/timestamp.proto\032\031google/protobuf" +
-      "/any.proto\"\203\002\n\006Person\022\n\n\002id\030\003 \001(\t\022\021\n\tfir" +
+      "/any.proto\"\212\002\n\006Person\022\n\n\002id\030\003 \001(\t\022\021\n\tfir" +
       "stName\030\004 \001(\t\022\020\n\010lastName\030\005 \001(\t\022\r\n\005email\030" +
       "\006 \001(\t\022\016\n\006phone1\030\007 \001(\t\022\016\n\006phone2\030\010 \001(\t\022*\n" +
       "\007address\030\t \001(\0132\031.muni.model.PostalAddres" +
-      "s\022\r\n\005dirty\030\n \001(\010\022.\n\ncreateTime\030\001 \001(\0132\032.g" +
-      "oogle.protobuf.Timestamp\022.\n\nupdateTime\030\002" +
-      " \001(\0132\032.google.protobuf.Timestamp\"\220\002\n\rPos" +
-      "talAddress\022\n\n\002id\030\003 \001(\t\022\021\n\tstreetNum\030\004 \001(" +
-      "\t\022\022\n\nstreetName\030\005 \001(\t\022\014\n\004city\030\006 \001(\t\022\020\n\010p" +
-      "rovince\030\007 \001(\t\022\017\n\007country\030\010 \001(\t\022\022\n\npostal" +
-      "Code\030\t \001(\t\022\013\n\003lat\030\n \001(\001\022\013\n\003lon\030\013 \001(\001\022\r\n\005" +
-      "dirty\030\014 \001(\010\022.\n\ncreateTime\030\001 \001(\0132\032.google" +
-      ".protobuf.Timestamp\022.\n\nupdateTime\030\002 \001(\0132" +
-      "\032.google.protobuf.Timestamp\"\360\001\n\004Case\022\n\n\002" +
-      "id\030\003 \001(\t\022\016\n\006status\030\004 \001(\t\022.\n\022reportedByCu" +
-      "stomer\030\005 \001(\0132\022.muni.model.Person\022-\n\021crea" +
-      "tedByEmployee\030\006 \001(\0132\022.muni.model.Person\022" +
-      "\r\n\005dirty\030\007 \001(\010\022.\n\ncreateTime\030\001 \001(\0132\032.goo" +
-      "gle.protobuf.Timestamp\022.\n\nupdateTime\030\002 \001" +
-      "(\0132\032.google.protobuf.Timestamp\" \n\tSubsys" +
-      "tem\022\023\n\013subsystemId\030\001 \001(\t\"\203\002\n\014Organizatio" +
-      "n\022\n\n\002id\030\003 \001(\t\022\014\n\004name\030\004 \001(\t\022\017\n\007website\030\005" +
-      " \001(\t\022\r\n\005email\030\006 \001(\t\022\016\n\006phone1\030\007 \001(\t\022\016\n\006p" +
-      "hone2\030\010 \001(\t\022*\n\007address\030\t \001(\0132\031.muni.mode" +
-      "l.PostalAddress\022\r\n\005dirty\030\n \001(\010\022.\n\ncreate" +
-      "Time\030\001 \001(\0132\032.google.protobuf.Timestamp\022." +
-      "\n\nupdateTime\030\002 \001(\0132\032.google.protobuf.Tim" +
-      "estamp\"C\n\tErrorInfo\022\017\n\007message\030\001 \001(\t\022%\n\007" +
-      "details\030\002 \003(\0132\024.google.protobuf.AnyB\014B\005M" +
-      "odelP\000\210\001\000b\006proto3"
+      "s\022\024\n\005dirty\030\n \001(\010:\005false\022.\n\ncreateTime\030\001 " +
+      "\001(\0132\032.google.protobuf.Timestamp\022.\n\nupdat" +
+      "eTime\030\002 \001(\0132\032.google.protobuf.Timestamp\"" +
+      "\227\002\n\rPostalAddress\022\n\n\002id\030\003 \001(\t\022\021\n\tstreetN" +
+      "um\030\004 \001(\t\022\022\n\nstreetName\030\005 \001(\t\022\014\n\004city\030\006 \001" +
+      "(\t\022\020\n\010province\030\007 \001(\t\022\017\n\007country\030\010 \001(\t\022\022\n" +
+      "\npostalCode\030\t \001(\t\022\013\n\003lat\030\n \001(\001\022\013\n\003lon\030\013 " +
+      "\001(\001\022\024\n\005dirty\030\014 \001(\010:\005false\022.\n\ncreateTime\030" +
+      "\001 \001(\0132\032.google.protobuf.Timestamp\022.\n\nupd" +
+      "ateTime\030\002 \001(\0132\032.google.protobuf.Timestam" +
+      "p\"\367\001\n\004Case\022\n\n\002id\030\003 \001(\t\022\016\n\006status\030\004 \001(\t\022." +
+      "\n\022reportedByCustomer\030\005 \001(\0132\022.muni.model." +
+      "Person\022-\n\021createdByEmployee\030\006 \001(\0132\022.muni" +
+      ".model.Person\022\024\n\005dirty\030\007 \001(\010:\005false\022.\n\nc" +
+      "reateTime\030\001 \001(\0132\032.google.protobuf.Timest" +
+      "amp\022.\n\nupdateTime\030\002 \001(\0132\032.google.protobu" +
+      "f.Timestamp\" \n\tSubsystem\022\023\n\013subsystemId\030" +
+      "\001 \001(\t\"\212\002\n\014Organization\022\n\n\002id\030\003 \001(\t\022\014\n\004na" +
+      "me\030\004 \001(\t\022\017\n\007website\030\005 \001(\t\022\r\n\005email\030\006 \001(\t" +
+      "\022\016\n\006phone1\030\007 \001(\t\022\016\n\006phone2\030\010 \001(\t\022*\n\007addr" +
+      "ess\030\t \001(\0132\031.muni.model.PostalAddress\022\024\n\005" +
+      "dirty\030\n \001(\010:\005false\022.\n\ncreateTime\030\001 \001(\0132\032" +
+      ".google.protobuf.Timestamp\022.\n\nupdateTime" +
+      "\030\002 \001(\0132\032.google.protobuf.Timestamp\"C\n\tEr" +
+      "rorInfo\022\017\n\007message\030\001 \001(\t\022%\n\007details\030\002 \003(" +
+      "\0132\024.google.protobuf.AnyB\014B\005ModelP\000\210\001\000"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

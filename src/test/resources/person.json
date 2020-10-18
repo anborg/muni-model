@@ -4,6 +4,9 @@
   "id": "1",
   "firstName": "Jane",
   "lastName": "Doe",
+  "email": "test@gmail",
+  "phone1": "1234",
+  "phone2": "1234",
   "address": {
     "createTime": "2020-10-16T00:59:46Z",
     "updateTime": "2020-10-16T00:59:46Z",
@@ -13,7 +16,8 @@
     "city": "Toronto",
     "province": "Ontario",
     "country": "Canada",
-    "postalCode": "L1L2M2"
+    "postalCode": "L1L2M2",
+    "dirty": true
   },
-  "dirty": true
+  "dirty": false
 }

@@ -1,4 +1,4 @@
-syntax = "proto3";
+syntax = "proto2";
 import "google/api/annotations.proto";
 import "google/protobuf/empty.proto";
 import "google/protobuf/field_mask.proto";
@@ -12,12 +12,12 @@ option java_multiple_files = false; //default behavior
 
 
 message CreatePersonReq{
-  Person person=1;
-  google.protobuf.FieldMask create_mask=2;
+  optional Person person=1;
+  optional google.protobuf.FieldMask create_mask=2;
 }
 
 message ById{
-  string id=1;
+  required string id=1;
 }
 service PersonService{
 
@@ -75,9 +75,9 @@ service CaseService{
 
 
 message SearchRes{
-  string status =1;
-  int32 count =2;
-  ErrorInfo error=3;
+  optional string status =1;
+  optional int32 count =2;
+  optional ErrorInfo error=3;
   //4-9  reserved.
   oneof res {
     PersonList personList = 10;
@@ -93,12 +93,12 @@ message PostalAddressList{
 }
 
 message SearchReqPerson{ //Search for a person who's
-  Person person = 1; //firstname/lastname - not for address
-  google.protobuf.FieldMask create_mask = 2;
+  required Person person = 1; //firstname/lastname - not for address
+  optional google.protobuf.FieldMask create_mask = 2;
 }
 message SearchReqPostalAddress{
-  PostalAddress postalAddress =1;
-  google.protobuf.FieldMask create_mask = 2;
+  required PostalAddress postalAddress =1;
+  optional google.protobuf.FieldMask create_mask = 2;
 }
 
 

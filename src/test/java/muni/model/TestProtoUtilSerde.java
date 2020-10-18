@@ -19,6 +19,7 @@ public class TestProtoUtilSerde {
         String jsonStr = ClasspathUtil.readFileInClasspath("person.json");
         //when
         Optional<Model.Person> p = ProtoUtil.toProto(jsonStr, Model.Person.getDefaultInstance());
+        System.out.println("json to Proto p="+p);
         String jsonStrOut = ProtoUtil.toJson(p.get());
         assertThat(Strings.isNullOrEmpty(jsonStrOut)).isFalse();
         //then - verify

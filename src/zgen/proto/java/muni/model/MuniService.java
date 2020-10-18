@@ -19,32 +19,32 @@ public final class MuniService {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.muni.model.Person person = 1;</code>
+     * <code>optional .muni.model.Person person = 1;</code>
      * @return Whether the person field is set.
      */
     boolean hasPerson();
     /**
-     * <code>.muni.model.Person person = 1;</code>
+     * <code>optional .muni.model.Person person = 1;</code>
      * @return The person.
      */
     muni.model.Model.Person getPerson();
     /**
-     * <code>.muni.model.Person person = 1;</code>
+     * <code>optional .muni.model.Person person = 1;</code>
      */
     muni.model.Model.PersonOrBuilder getPersonOrBuilder();
 
     /**
-     * <code>.google.protobuf.FieldMask create_mask = 2;</code>
+     * <code>optional .google.protobuf.FieldMask create_mask = 2;</code>
      * @return Whether the createMask field is set.
      */
     boolean hasCreateMask();
     /**
-     * <code>.google.protobuf.FieldMask create_mask = 2;</code>
+     * <code>optional .google.protobuf.FieldMask create_mask = 2;</code>
      * @return The createMask.
      */
     com.google.protobuf.FieldMask getCreateMask();
     /**
-     * <code>.google.protobuf.FieldMask create_mask = 2;</code>
+     * <code>optional .google.protobuf.FieldMask create_mask = 2;</code>
      */
     com.google.protobuf.FieldMaskOrBuilder getCreateMaskOrBuilder();
   }
@@ -83,6 +83,7 @@ public final class MuniService {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -95,20 +96,20 @@ public final class MuniService {
               break;
             case 10: {
               muni.model.Model.Person.Builder subBuilder = null;
-              if (person_ != null) {
+              if (((bitField0_ & 0x00000001) != 0)) {
                 subBuilder = person_.toBuilder();
               }
-              person_ = input.readMessage(muni.model.Model.Person.parser(), extensionRegistry);
+              person_ = input.readMessage(muni.model.Model.Person.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(person_);
                 person_ = subBuilder.buildPartial();
               }
-
+              bitField0_ |= 0x00000001;
               break;
             }
             case 18: {
               com.google.protobuf.FieldMask.Builder subBuilder = null;
-              if (createMask_ != null) {
+              if (((bitField0_ & 0x00000002) != 0)) {
                 subBuilder = createMask_.toBuilder();
               }
               createMask_ = input.readMessage(com.google.protobuf.FieldMask.parser(), extensionRegistry);
@@ -116,7 +117,7 @@ public final class MuniService {
                 subBuilder.mergeFrom(createMask_);
                 createMask_ = subBuilder.buildPartial();
               }
-
+              bitField0_ |= 0x00000002;
               break;
             }
             default: {
@@ -151,18 +152,19 @@ public final class MuniService {
               muni.model.MuniService.CreatePersonReq.class, muni.model.MuniService.CreatePersonReq.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PERSON_FIELD_NUMBER = 1;
     private muni.model.Model.Person person_;
     /**
-     * <code>.muni.model.Person person = 1;</code>
+     * <code>optional .muni.model.Person person = 1;</code>
      * @return Whether the person field is set.
      */
     @java.lang.Override
     public boolean hasPerson() {
-      return person_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>.muni.model.Person person = 1;</code>
+     * <code>optional .muni.model.Person person = 1;</code>
      * @return The person.
      */
     @java.lang.Override
@@ -170,25 +172,25 @@ public final class MuniService {
       return person_ == null ? muni.model.Model.Person.getDefaultInstance() : person_;
     }
     /**
-     * <code>.muni.model.Person person = 1;</code>
+     * <code>optional .muni.model.Person person = 1;</code>
      */
     @java.lang.Override
     public muni.model.Model.PersonOrBuilder getPersonOrBuilder() {
-      return getPerson();
+      return person_ == null ? muni.model.Model.Person.getDefaultInstance() : person_;
     }
 
     public static final int CREATE_MASK_FIELD_NUMBER = 2;
     private com.google.protobuf.FieldMask createMask_;
     /**
-     * <code>.google.protobuf.FieldMask create_mask = 2;</code>
+     * <code>optional .google.protobuf.FieldMask create_mask = 2;</code>
      * @return Whether the createMask field is set.
      */
     @java.lang.Override
     public boolean hasCreateMask() {
-      return createMask_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>.google.protobuf.FieldMask create_mask = 2;</code>
+     * <code>optional .google.protobuf.FieldMask create_mask = 2;</code>
      * @return The createMask.
      */
     @java.lang.Override
@@ -196,11 +198,11 @@ public final class MuniService {
       return createMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : createMask_;
     }
     /**
-     * <code>.google.protobuf.FieldMask create_mask = 2;</code>
+     * <code>optional .google.protobuf.FieldMask create_mask = 2;</code>
      */
     @java.lang.Override
     public com.google.protobuf.FieldMaskOrBuilder getCreateMaskOrBuilder() {
-      return getCreateMask();
+      return createMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : createMask_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -217,10 +219,10 @@ public final class MuniService {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (person_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPerson());
       }
-      if (createMask_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getCreateMask());
       }
       unknownFields.writeTo(output);
@@ -232,11 +234,11 @@ public final class MuniService {
       if (size != -1) return size;
 
       size = 0;
-      if (person_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPerson());
       }
-      if (createMask_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getCreateMask());
       }
@@ -265,8 +267,7 @@ public final class MuniService {
         if (!getCreateMask()
             .equals(other.getCreateMask())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      return unknownFields.equals(other.unknownFields);
     }
 
     @java.lang.Override
@@ -412,6 +413,8 @@ public final class MuniService {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getPersonFieldBuilder();
+          getCreateMaskFieldBuilder();
         }
       }
       @java.lang.Override
@@ -420,15 +423,15 @@ public final class MuniService {
         if (personBuilder_ == null) {
           person_ = null;
         } else {
-          person_ = null;
-          personBuilder_ = null;
+          personBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         if (createMaskBuilder_ == null) {
           createMask_ = null;
         } else {
-          createMask_ = null;
-          createMaskBuilder_ = null;
+          createMaskBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -455,16 +458,25 @@ public final class MuniService {
       @java.lang.Override
       public muni.model.MuniService.CreatePersonReq buildPartial() {
         muni.model.MuniService.CreatePersonReq result = new muni.model.MuniService.CreatePersonReq(this);
-        if (personBuilder_ == null) {
-          result.person_ = person_;
-        } else {
-          result.person_ = personBuilder_.build();
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          if (personBuilder_ == null) {
+            result.person_ = person_;
+          } else {
+            result.person_ = personBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000001;
         }
-        if (createMaskBuilder_ == null) {
-          result.createMask_ = createMask_;
-        } else {
-          result.createMask_ = createMaskBuilder_.build();
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          if (createMaskBuilder_ == null) {
+            result.createMask_ = createMask_;
+          } else {
+            result.createMask_ = createMaskBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -547,19 +559,20 @@ public final class MuniService {
         }
         return this;
       }
+      private int bitField0_;
 
       private muni.model.Model.Person person_;
       private com.google.protobuf.SingleFieldBuilderV3<
           muni.model.Model.Person, muni.model.Model.Person.Builder, muni.model.Model.PersonOrBuilder> personBuilder_;
       /**
-       * <code>.muni.model.Person person = 1;</code>
+       * <code>optional .muni.model.Person person = 1;</code>
        * @return Whether the person field is set.
        */
       public boolean hasPerson() {
-        return personBuilder_ != null || person_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>.muni.model.Person person = 1;</code>
+       * <code>optional .muni.model.Person person = 1;</code>
        * @return The person.
        */
       public muni.model.Model.Person getPerson() {
@@ -570,7 +583,7 @@ public final class MuniService {
         }
       }
       /**
-       * <code>.muni.model.Person person = 1;</code>
+       * <code>optional .muni.model.Person person = 1;</code>
        */
       public Builder setPerson(muni.model.Model.Person value) {
         if (personBuilder_ == null) {
@@ -582,11 +595,11 @@ public final class MuniService {
         } else {
           personBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
         return this;
       }
       /**
-       * <code>.muni.model.Person person = 1;</code>
+       * <code>optional .muni.model.Person person = 1;</code>
        */
       public Builder setPerson(
           muni.model.Model.Person.Builder builderForValue) {
@@ -596,15 +609,17 @@ public final class MuniService {
         } else {
           personBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
         return this;
       }
       /**
-       * <code>.muni.model.Person person = 1;</code>
+       * <code>optional .muni.model.Person person = 1;</code>
        */
       public Builder mergePerson(muni.model.Model.Person value) {
         if (personBuilder_ == null) {
-          if (person_ != null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+              person_ != null &&
+              person_ != muni.model.Model.Person.getDefaultInstance()) {
             person_ =
               muni.model.Model.Person.newBuilder(person_).mergeFrom(value).buildPartial();
           } else {
@@ -614,33 +629,32 @@ public final class MuniService {
         } else {
           personBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
         return this;
       }
       /**
-       * <code>.muni.model.Person person = 1;</code>
+       * <code>optional .muni.model.Person person = 1;</code>
        */
       public Builder clearPerson() {
         if (personBuilder_ == null) {
           person_ = null;
           onChanged();
         } else {
-          person_ = null;
-          personBuilder_ = null;
+          personBuilder_.clear();
         }
-
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
       /**
-       * <code>.muni.model.Person person = 1;</code>
+       * <code>optional .muni.model.Person person = 1;</code>
        */
       public muni.model.Model.Person.Builder getPersonBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getPersonFieldBuilder().getBuilder();
       }
       /**
-       * <code>.muni.model.Person person = 1;</code>
+       * <code>optional .muni.model.Person person = 1;</code>
        */
       public muni.model.Model.PersonOrBuilder getPersonOrBuilder() {
         if (personBuilder_ != null) {
@@ -651,7 +665,7 @@ public final class MuniService {
         }
       }
       /**
-       * <code>.muni.model.Person person = 1;</code>
+       * <code>optional .muni.model.Person person = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           muni.model.Model.Person, muni.model.Model.Person.Builder, muni.model.Model.PersonOrBuilder> 
@@ -671,14 +685,14 @@ public final class MuniService {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> createMaskBuilder_;
       /**
-       * <code>.google.protobuf.FieldMask create_mask = 2;</code>
+       * <code>optional .google.protobuf.FieldMask create_mask = 2;</code>
        * @return Whether the createMask field is set.
        */
       public boolean hasCreateMask() {
-        return createMaskBuilder_ != null || createMask_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
-       * <code>.google.protobuf.FieldMask create_mask = 2;</code>
+       * <code>optional .google.protobuf.FieldMask create_mask = 2;</code>
        * @return The createMask.
        */
       public com.google.protobuf.FieldMask getCreateMask() {
@@ -689,7 +703,7 @@ public final class MuniService {
         }
       }
       /**
-       * <code>.google.protobuf.FieldMask create_mask = 2;</code>
+       * <code>optional .google.protobuf.FieldMask create_mask = 2;</code>
        */
       public Builder setCreateMask(com.google.protobuf.FieldMask value) {
         if (createMaskBuilder_ == null) {
@@ -701,11 +715,11 @@ public final class MuniService {
         } else {
           createMaskBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
         return this;
       }
       /**
-       * <code>.google.protobuf.FieldMask create_mask = 2;</code>
+       * <code>optional .google.protobuf.FieldMask create_mask = 2;</code>
        */
       public Builder setCreateMask(
           com.google.protobuf.FieldMask.Builder builderForValue) {
@@ -715,15 +729,17 @@ public final class MuniService {
         } else {
           createMaskBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
         return this;
       }
       /**
-       * <code>.google.protobuf.FieldMask create_mask = 2;</code>
+       * <code>optional .google.protobuf.FieldMask create_mask = 2;</code>
        */
       public Builder mergeCreateMask(com.google.protobuf.FieldMask value) {
         if (createMaskBuilder_ == null) {
-          if (createMask_ != null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+              createMask_ != null &&
+              createMask_ != com.google.protobuf.FieldMask.getDefaultInstance()) {
             createMask_ =
               com.google.protobuf.FieldMask.newBuilder(createMask_).mergeFrom(value).buildPartial();
           } else {
@@ -733,33 +749,32 @@ public final class MuniService {
         } else {
           createMaskBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
         return this;
       }
       /**
-       * <code>.google.protobuf.FieldMask create_mask = 2;</code>
+       * <code>optional .google.protobuf.FieldMask create_mask = 2;</code>
        */
       public Builder clearCreateMask() {
         if (createMaskBuilder_ == null) {
           createMask_ = null;
           onChanged();
         } else {
-          createMask_ = null;
-          createMaskBuilder_ = null;
+          createMaskBuilder_.clear();
         }
-
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
       /**
-       * <code>.google.protobuf.FieldMask create_mask = 2;</code>
+       * <code>optional .google.protobuf.FieldMask create_mask = 2;</code>
        */
       public com.google.protobuf.FieldMask.Builder getCreateMaskBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getCreateMaskFieldBuilder().getBuilder();
       }
       /**
-       * <code>.google.protobuf.FieldMask create_mask = 2;</code>
+       * <code>optional .google.protobuf.FieldMask create_mask = 2;</code>
        */
       public com.google.protobuf.FieldMaskOrBuilder getCreateMaskOrBuilder() {
         if (createMaskBuilder_ != null) {
@@ -770,7 +785,7 @@ public final class MuniService {
         }
       }
       /**
-       * <code>.google.protobuf.FieldMask create_mask = 2;</code>
+       * <code>optional .google.protobuf.FieldMask create_mask = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> 
@@ -811,7 +826,7 @@ public final class MuniService {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<CreatePersonReq>
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CreatePersonReq>
         PARSER = new com.google.protobuf.AbstractParser<CreatePersonReq>() {
       @java.lang.Override
       public CreatePersonReq parsePartialFrom(
@@ -843,12 +858,17 @@ public final class MuniService {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string id = 1;</code>
+     * <code>required string id = 1;</code>
+     * @return Whether the id field is set.
+     */
+    boolean hasId();
+    /**
+     * <code>required string id = 1;</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
-     * <code>string id = 1;</code>
+     * <code>required string id = 1;</code>
      * @return The bytes for id.
      */
     com.google.protobuf.ByteString
@@ -890,6 +910,7 @@ public final class MuniService {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -901,9 +922,9 @@ public final class MuniService {
               done = true;
               break;
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              id_ = bs;
               break;
             }
             default: {
@@ -938,10 +959,19 @@ public final class MuniService {
               muni.model.MuniService.ById.class, muni.model.MuniService.ById.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
-     * <code>string id = 1;</code>
+     * <code>required string id = 1;</code>
+     * @return Whether the id field is set.
+     */
+    @java.lang.Override
+    public boolean hasId() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>required string id = 1;</code>
      * @return The id.
      */
     @java.lang.Override
@@ -953,12 +983,14 @@ public final class MuniService {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        id_ = s;
+        if (bs.isValidUtf8()) {
+          id_ = s;
+        }
         return s;
       }
     }
     /**
-     * <code>string id = 1;</code>
+     * <code>required string id = 1;</code>
      * @return The bytes for id.
      */
     @java.lang.Override
@@ -983,6 +1015,10 @@ public final class MuniService {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
+      if (!hasId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -990,7 +1026,7 @@ public final class MuniService {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
       unknownFields.writeTo(output);
@@ -1002,7 +1038,7 @@ public final class MuniService {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
       size += unknownFields.getSerializedSize();
@@ -1020,10 +1056,12 @@ public final class MuniService {
       }
       muni.model.MuniService.ById other = (muni.model.MuniService.ById) obj;
 
-      if (!getId()
-          .equals(other.getId())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      if (hasId() != other.hasId()) return false;
+      if (hasId()) {
+        if (!getId()
+            .equals(other.getId())) return false;
+      }
+      return unknownFields.equals(other.unknownFields);
     }
 
     @java.lang.Override
@@ -1033,8 +1071,10 @@ public final class MuniService {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
+      if (hasId()) {
+        hash = (37 * hash) + ID_FIELD_NUMBER;
+        hash = (53 * hash) + getId().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1169,7 +1209,7 @@ public final class MuniService {
       public Builder clear() {
         super.clear();
         id_ = "";
-
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -1196,7 +1236,13 @@ public final class MuniService {
       @java.lang.Override
       public muni.model.MuniService.ById buildPartial() {
         muni.model.MuniService.ById result = new muni.model.MuniService.ById(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
         result.id_ = id_;
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -1245,7 +1291,8 @@ public final class MuniService {
 
       public Builder mergeFrom(muni.model.MuniService.ById other) {
         if (other == muni.model.MuniService.ById.getDefaultInstance()) return this;
-        if (!other.getId().isEmpty()) {
+        if (other.hasId()) {
+          bitField0_ |= 0x00000001;
           id_ = other.id_;
           onChanged();
         }
@@ -1256,7 +1303,7 @@ public final class MuniService {
 
       @java.lang.Override
       public final boolean isInitialized() {
-        return true;
+        return hasId();
       }
 
       @java.lang.Override
@@ -1277,10 +1324,18 @@ public final class MuniService {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object id_ = "";
       /**
-       * <code>string id = 1;</code>
+       * <code>required string id = 1;</code>
+       * @return Whether the id field is set.
+       */
+      public boolean hasId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>required string id = 1;</code>
        * @return The id.
        */
       public java.lang.String getId() {
@@ -1289,14 +1344,16 @@ public final class MuniService {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          id_ = s;
+          if (bs.isValidUtf8()) {
+            id_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string id = 1;</code>
+       * <code>required string id = 1;</code>
        * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
@@ -1313,7 +1370,7 @@ public final class MuniService {
         }
       }
       /**
-       * <code>string id = 1;</code>
+       * <code>required string id = 1;</code>
        * @param value The id to set.
        * @return This builder for chaining.
        */
@@ -1322,23 +1379,23 @@ public final class MuniService {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  bitField0_ |= 0x00000001;
         id_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string id = 1;</code>
+       * <code>required string id = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         id_ = getDefaultInstance().getId();
         onChanged();
         return this;
       }
       /**
-       * <code>string id = 1;</code>
+       * <code>required string id = 1;</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
        */
@@ -1347,8 +1404,7 @@ public final class MuniService {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  bitField0_ |= 0x00000001;
         id_ = value;
         onChanged();
         return this;
@@ -1379,7 +1435,7 @@ public final class MuniService {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<ById>
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<ById>
         PARSER = new com.google.protobuf.AbstractParser<ById>() {
       @java.lang.Override
       public ById parsePartialFrom(
@@ -1411,35 +1467,45 @@ public final class MuniService {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string status = 1;</code>
+     * <code>optional string status = 1;</code>
+     * @return Whether the status field is set.
+     */
+    boolean hasStatus();
+    /**
+     * <code>optional string status = 1;</code>
      * @return The status.
      */
     java.lang.String getStatus();
     /**
-     * <code>string status = 1;</code>
+     * <code>optional string status = 1;</code>
      * @return The bytes for status.
      */
     com.google.protobuf.ByteString
         getStatusBytes();
 
     /**
-     * <code>int32 count = 2;</code>
+     * <code>optional int32 count = 2;</code>
+     * @return Whether the count field is set.
+     */
+    boolean hasCount();
+    /**
+     * <code>optional int32 count = 2;</code>
      * @return The count.
      */
     int getCount();
 
     /**
-     * <code>.muni.model.ErrorInfo error = 3;</code>
+     * <code>optional .muni.model.ErrorInfo error = 3;</code>
      * @return Whether the error field is set.
      */
     boolean hasError();
     /**
-     * <code>.muni.model.ErrorInfo error = 3;</code>
+     * <code>optional .muni.model.ErrorInfo error = 3;</code>
      * @return The error.
      */
     muni.model.Model.ErrorInfo getError();
     /**
-     * <code>.muni.model.ErrorInfo error = 3;</code>
+     * <code>optional .muni.model.ErrorInfo error = 3;</code>
      */
     muni.model.Model.ErrorInfoOrBuilder getErrorOrBuilder();
 
@@ -1473,7 +1539,7 @@ public final class MuniService {
      */
     muni.model.MuniService.PostalAddressListOrBuilder getPostalAddressListOrBuilder();
 
-    public muni.model.MuniService.SearchRes.ResCase getResCase();
+    muni.model.MuniService.SearchRes.ResCase getResCase();
   }
   /**
    * Protobuf type {@code muni.model.SearchRes}
@@ -1511,6 +1577,7 @@ public final class MuniService {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1522,27 +1589,27 @@ public final class MuniService {
               done = true;
               break;
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              status_ = s;
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              status_ = bs;
               break;
             }
             case 16: {
-
+              bitField0_ |= 0x00000002;
               count_ = input.readInt32();
               break;
             }
             case 26: {
               muni.model.Model.ErrorInfo.Builder subBuilder = null;
-              if (error_ != null) {
+              if (((bitField0_ & 0x00000004) != 0)) {
                 subBuilder = error_.toBuilder();
               }
-              error_ = input.readMessage(muni.model.Model.ErrorInfo.parser(), extensionRegistry);
+              error_ = input.readMessage(muni.model.Model.ErrorInfo.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(error_);
                 error_ = subBuilder.buildPartial();
               }
-
+              bitField0_ |= 0x00000004;
               break;
             }
             case 82: {
@@ -1551,7 +1618,7 @@ public final class MuniService {
                 subBuilder = ((muni.model.MuniService.PersonList) res_).toBuilder();
               }
               res_ =
-                  input.readMessage(muni.model.MuniService.PersonList.parser(), extensionRegistry);
+                  input.readMessage(muni.model.MuniService.PersonList.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom((muni.model.MuniService.PersonList) res_);
                 res_ = subBuilder.buildPartial();
@@ -1565,7 +1632,7 @@ public final class MuniService {
                 subBuilder = ((muni.model.MuniService.PostalAddressList) res_).toBuilder();
               }
               res_ =
-                  input.readMessage(muni.model.MuniService.PostalAddressList.parser(), extensionRegistry);
+                  input.readMessage(muni.model.MuniService.PostalAddressList.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom((muni.model.MuniService.PostalAddressList) res_);
                 res_ = subBuilder.buildPartial();
@@ -1605,6 +1672,7 @@ public final class MuniService {
               muni.model.MuniService.SearchRes.class, muni.model.MuniService.SearchRes.Builder.class);
     }
 
+    private int bitField0_;
     private int resCase_ = 0;
     private java.lang.Object res_;
     public enum ResCase
@@ -1614,7 +1682,7 @@ public final class MuniService {
       POSTALADDRESSLIST(11),
       RES_NOT_SET(0);
       private final int value;
-      private ResCase(int value) {
+      ResCase(int value) {
         this.value = value;
       }
       /**
@@ -1638,7 +1706,7 @@ public final class MuniService {
       public int getNumber() {
         return this.value;
       }
-    };
+    }
 
     public ResCase
     getResCase() {
@@ -1649,7 +1717,15 @@ public final class MuniService {
     public static final int STATUS_FIELD_NUMBER = 1;
     private volatile java.lang.Object status_;
     /**
-     * <code>string status = 1;</code>
+     * <code>optional string status = 1;</code>
+     * @return Whether the status field is set.
+     */
+    @java.lang.Override
+    public boolean hasStatus() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string status = 1;</code>
      * @return The status.
      */
     @java.lang.Override
@@ -1661,12 +1737,14 @@ public final class MuniService {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        status_ = s;
+        if (bs.isValidUtf8()) {
+          status_ = s;
+        }
         return s;
       }
     }
     /**
-     * <code>string status = 1;</code>
+     * <code>optional string status = 1;</code>
      * @return The bytes for status.
      */
     @java.lang.Override
@@ -1687,7 +1765,15 @@ public final class MuniService {
     public static final int COUNT_FIELD_NUMBER = 2;
     private int count_;
     /**
-     * <code>int32 count = 2;</code>
+     * <code>optional int32 count = 2;</code>
+     * @return Whether the count field is set.
+     */
+    @java.lang.Override
+    public boolean hasCount() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional int32 count = 2;</code>
      * @return The count.
      */
     @java.lang.Override
@@ -1698,15 +1784,15 @@ public final class MuniService {
     public static final int ERROR_FIELD_NUMBER = 3;
     private muni.model.Model.ErrorInfo error_;
     /**
-     * <code>.muni.model.ErrorInfo error = 3;</code>
+     * <code>optional .muni.model.ErrorInfo error = 3;</code>
      * @return Whether the error field is set.
      */
     @java.lang.Override
     public boolean hasError() {
-      return error_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <code>.muni.model.ErrorInfo error = 3;</code>
+     * <code>optional .muni.model.ErrorInfo error = 3;</code>
      * @return The error.
      */
     @java.lang.Override
@@ -1714,11 +1800,11 @@ public final class MuniService {
       return error_ == null ? muni.model.Model.ErrorInfo.getDefaultInstance() : error_;
     }
     /**
-     * <code>.muni.model.ErrorInfo error = 3;</code>
+     * <code>optional .muni.model.ErrorInfo error = 3;</code>
      */
     @java.lang.Override
     public muni.model.Model.ErrorInfoOrBuilder getErrorOrBuilder() {
-      return getError();
+      return error_ == null ? muni.model.Model.ErrorInfo.getDefaultInstance() : error_;
     }
 
     public static final int PERSONLIST_FIELD_NUMBER = 10;
@@ -1797,13 +1883,13 @@ public final class MuniService {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getStatusBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, status_);
       }
-      if (count_ != 0) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeInt32(2, count_);
       }
-      if (error_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(3, getError());
       }
       if (resCase_ == 10) {
@@ -1821,14 +1907,14 @@ public final class MuniService {
       if (size != -1) return size;
 
       size = 0;
-      if (!getStatusBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, status_);
       }
-      if (count_ != 0) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(2, count_);
       }
-      if (error_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getError());
       }
@@ -1855,10 +1941,16 @@ public final class MuniService {
       }
       muni.model.MuniService.SearchRes other = (muni.model.MuniService.SearchRes) obj;
 
-      if (!getStatus()
-          .equals(other.getStatus())) return false;
-      if (getCount()
-          != other.getCount()) return false;
+      if (hasStatus() != other.hasStatus()) return false;
+      if (hasStatus()) {
+        if (!getStatus()
+            .equals(other.getStatus())) return false;
+      }
+      if (hasCount() != other.hasCount()) return false;
+      if (hasCount()) {
+        if (getCount()
+            != other.getCount()) return false;
+      }
       if (hasError() != other.hasError()) return false;
       if (hasError()) {
         if (!getError()
@@ -1877,8 +1969,7 @@ public final class MuniService {
         case 0:
         default:
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      return unknownFields.equals(other.unknownFields);
     }
 
     @java.lang.Override
@@ -1888,10 +1979,14 @@ public final class MuniService {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + STATUS_FIELD_NUMBER;
-      hash = (53 * hash) + getStatus().hashCode();
-      hash = (37 * hash) + COUNT_FIELD_NUMBER;
-      hash = (53 * hash) + getCount();
+      if (hasStatus()) {
+        hash = (37 * hash) + STATUS_FIELD_NUMBER;
+        hash = (53 * hash) + getStatus().hashCode();
+      }
+      if (hasCount()) {
+        hash = (37 * hash) + COUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getCount();
+      }
       if (hasError()) {
         hash = (37 * hash) + ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getError().hashCode();
@@ -2036,21 +2131,22 @@ public final class MuniService {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getErrorFieldBuilder();
         }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         status_ = "";
-
+        bitField0_ = (bitField0_ & ~0x00000001);
         count_ = 0;
-
+        bitField0_ = (bitField0_ & ~0x00000002);
         if (errorBuilder_ == null) {
           error_ = null;
         } else {
-          error_ = null;
-          errorBuilder_ = null;
+          errorBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000004);
         resCase_ = 0;
         res_ = null;
         return this;
@@ -2079,12 +2175,23 @@ public final class MuniService {
       @java.lang.Override
       public muni.model.MuniService.SearchRes buildPartial() {
         muni.model.MuniService.SearchRes result = new muni.model.MuniService.SearchRes(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
         result.status_ = status_;
-        result.count_ = count_;
-        if (errorBuilder_ == null) {
-          result.error_ = error_;
-        } else {
-          result.error_ = errorBuilder_.build();
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.count_ = count_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          if (errorBuilder_ == null) {
+            result.error_ = error_;
+          } else {
+            result.error_ = errorBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000004;
         }
         if (resCase_ == 10) {
           if (personListBuilder_ == null) {
@@ -2100,6 +2207,7 @@ public final class MuniService {
             result.res_ = postalAddressListBuilder_.build();
           }
         }
+        result.bitField0_ = to_bitField0_;
         result.resCase_ = resCase_;
         onBuilt();
         return result;
@@ -2149,11 +2257,12 @@ public final class MuniService {
 
       public Builder mergeFrom(muni.model.MuniService.SearchRes other) {
         if (other == muni.model.MuniService.SearchRes.getDefaultInstance()) return this;
-        if (!other.getStatus().isEmpty()) {
+        if (other.hasStatus()) {
+          bitField0_ |= 0x00000001;
           status_ = other.status_;
           onChanged();
         }
-        if (other.getCount() != 0) {
+        if (other.hasCount()) {
           setCount(other.getCount());
         }
         if (other.hasError()) {
@@ -2215,10 +2324,18 @@ public final class MuniService {
         return this;
       }
 
+      private int bitField0_;
 
       private java.lang.Object status_ = "";
       /**
-       * <code>string status = 1;</code>
+       * <code>optional string status = 1;</code>
+       * @return Whether the status field is set.
+       */
+      public boolean hasStatus() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional string status = 1;</code>
        * @return The status.
        */
       public java.lang.String getStatus() {
@@ -2227,14 +2344,16 @@ public final class MuniService {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          status_ = s;
+          if (bs.isValidUtf8()) {
+            status_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string status = 1;</code>
+       * <code>optional string status = 1;</code>
        * @return The bytes for status.
        */
       public com.google.protobuf.ByteString
@@ -2251,7 +2370,7 @@ public final class MuniService {
         }
       }
       /**
-       * <code>string status = 1;</code>
+       * <code>optional string status = 1;</code>
        * @param value The status to set.
        * @return This builder for chaining.
        */
@@ -2260,23 +2379,23 @@ public final class MuniService {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  bitField0_ |= 0x00000001;
         status_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string status = 1;</code>
+       * <code>optional string status = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         status_ = getDefaultInstance().getStatus();
         onChanged();
         return this;
       }
       /**
-       * <code>string status = 1;</code>
+       * <code>optional string status = 1;</code>
        * @param value The bytes for status to set.
        * @return This builder for chaining.
        */
@@ -2285,8 +2404,7 @@ public final class MuniService {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  bitField0_ |= 0x00000001;
         status_ = value;
         onChanged();
         return this;
@@ -2294,7 +2412,15 @@ public final class MuniService {
 
       private int count_ ;
       /**
-       * <code>int32 count = 2;</code>
+       * <code>optional int32 count = 2;</code>
+       * @return Whether the count field is set.
+       */
+      @java.lang.Override
+      public boolean hasCount() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional int32 count = 2;</code>
        * @return The count.
        */
       @java.lang.Override
@@ -2302,22 +2428,22 @@ public final class MuniService {
         return count_;
       }
       /**
-       * <code>int32 count = 2;</code>
+       * <code>optional int32 count = 2;</code>
        * @param value The count to set.
        * @return This builder for chaining.
        */
       public Builder setCount(int value) {
-        
+        bitField0_ |= 0x00000002;
         count_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>int32 count = 2;</code>
+       * <code>optional int32 count = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearCount() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         count_ = 0;
         onChanged();
         return this;
@@ -2327,14 +2453,14 @@ public final class MuniService {
       private com.google.protobuf.SingleFieldBuilderV3<
           muni.model.Model.ErrorInfo, muni.model.Model.ErrorInfo.Builder, muni.model.Model.ErrorInfoOrBuilder> errorBuilder_;
       /**
-       * <code>.muni.model.ErrorInfo error = 3;</code>
+       * <code>optional .muni.model.ErrorInfo error = 3;</code>
        * @return Whether the error field is set.
        */
       public boolean hasError() {
-        return errorBuilder_ != null || error_ != null;
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
-       * <code>.muni.model.ErrorInfo error = 3;</code>
+       * <code>optional .muni.model.ErrorInfo error = 3;</code>
        * @return The error.
        */
       public muni.model.Model.ErrorInfo getError() {
@@ -2345,7 +2471,7 @@ public final class MuniService {
         }
       }
       /**
-       * <code>.muni.model.ErrorInfo error = 3;</code>
+       * <code>optional .muni.model.ErrorInfo error = 3;</code>
        */
       public Builder setError(muni.model.Model.ErrorInfo value) {
         if (errorBuilder_ == null) {
@@ -2357,11 +2483,11 @@ public final class MuniService {
         } else {
           errorBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000004;
         return this;
       }
       /**
-       * <code>.muni.model.ErrorInfo error = 3;</code>
+       * <code>optional .muni.model.ErrorInfo error = 3;</code>
        */
       public Builder setError(
           muni.model.Model.ErrorInfo.Builder builderForValue) {
@@ -2371,15 +2497,17 @@ public final class MuniService {
         } else {
           errorBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000004;
         return this;
       }
       /**
-       * <code>.muni.model.ErrorInfo error = 3;</code>
+       * <code>optional .muni.model.ErrorInfo error = 3;</code>
        */
       public Builder mergeError(muni.model.Model.ErrorInfo value) {
         if (errorBuilder_ == null) {
-          if (error_ != null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+              error_ != null &&
+              error_ != muni.model.Model.ErrorInfo.getDefaultInstance()) {
             error_ =
               muni.model.Model.ErrorInfo.newBuilder(error_).mergeFrom(value).buildPartial();
           } else {
@@ -2389,33 +2517,32 @@ public final class MuniService {
         } else {
           errorBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000004;
         return this;
       }
       /**
-       * <code>.muni.model.ErrorInfo error = 3;</code>
+       * <code>optional .muni.model.ErrorInfo error = 3;</code>
        */
       public Builder clearError() {
         if (errorBuilder_ == null) {
           error_ = null;
           onChanged();
         } else {
-          error_ = null;
-          errorBuilder_ = null;
+          errorBuilder_.clear();
         }
-
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
       /**
-       * <code>.muni.model.ErrorInfo error = 3;</code>
+       * <code>optional .muni.model.ErrorInfo error = 3;</code>
        */
       public muni.model.Model.ErrorInfo.Builder getErrorBuilder() {
-        
+        bitField0_ |= 0x00000004;
         onChanged();
         return getErrorFieldBuilder().getBuilder();
       }
       /**
-       * <code>.muni.model.ErrorInfo error = 3;</code>
+       * <code>optional .muni.model.ErrorInfo error = 3;</code>
        */
       public muni.model.Model.ErrorInfoOrBuilder getErrorOrBuilder() {
         if (errorBuilder_ != null) {
@@ -2426,7 +2553,7 @@ public final class MuniService {
         }
       }
       /**
-       * <code>.muni.model.ErrorInfo error = 3;</code>
+       * <code>optional .muni.model.ErrorInfo error = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           muni.model.Model.ErrorInfo, muni.model.Model.ErrorInfo.Builder, muni.model.Model.ErrorInfoOrBuilder> 
@@ -2579,7 +2706,7 @@ public final class MuniService {
           res_ = null;
         }
         resCase_ = 10;
-        onChanged();;
+        onChanged();
         return personListBuilder_;
       }
 
@@ -2720,7 +2847,7 @@ public final class MuniService {
           res_ = null;
         }
         resCase_ = 11;
-        onChanged();;
+        onChanged();
         return postalAddressListBuilder_;
       }
       @java.lang.Override
@@ -2749,7 +2876,7 @@ public final class MuniService {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<SearchRes>
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<SearchRes>
         PARSER = new com.google.protobuf.AbstractParser<SearchRes>() {
       @java.lang.Override
       public SearchRes parsePartialFrom(
@@ -2857,7 +2984,7 @@ public final class MuniService {
                 mutable_bitField0_ |= 0x00000001;
               }
               persons_.add(
-                  input.readMessage(muni.model.Model.Person.parser(), extensionRegistry));
+                  input.readMessage(muni.model.Model.Person.PARSER, extensionRegistry));
               break;
             }
             default: {
@@ -2982,8 +3109,7 @@ public final class MuniService {
 
       if (!getPersonsList()
           .equals(other.getPersonsList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      return unknownFields.equals(other.unknownFields);
     }
 
     @java.lang.Override
@@ -3542,7 +3668,7 @@ public final class MuniService {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PersonList>
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<PersonList>
         PARSER = new com.google.protobuf.AbstractParser<PersonList>() {
       @java.lang.Override
       public PersonList parsePartialFrom(
@@ -3650,7 +3776,7 @@ public final class MuniService {
                 mutable_bitField0_ |= 0x00000001;
               }
               addresses_.add(
-                  input.readMessage(muni.model.Model.PostalAddress.parser(), extensionRegistry));
+                  input.readMessage(muni.model.Model.PostalAddress.PARSER, extensionRegistry));
               break;
             }
             default: {
@@ -3775,8 +3901,7 @@ public final class MuniService {
 
       if (!getAddressesList()
           .equals(other.getAddressesList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      return unknownFields.equals(other.unknownFields);
     }
 
     @java.lang.Override
@@ -4335,7 +4460,7 @@ public final class MuniService {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PostalAddressList>
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<PostalAddressList>
         PARSER = new com.google.protobuf.AbstractParser<PostalAddressList>() {
       @java.lang.Override
       public PostalAddressList parsePartialFrom(
@@ -4371,7 +4496,7 @@ public final class MuniService {
      *firstname/lastname - not for address
      * </pre>
      *
-     * <code>.muni.model.Person person = 1;</code>
+     * <code>required .muni.model.Person person = 1;</code>
      * @return Whether the person field is set.
      */
     boolean hasPerson();
@@ -4380,7 +4505,7 @@ public final class MuniService {
      *firstname/lastname - not for address
      * </pre>
      *
-     * <code>.muni.model.Person person = 1;</code>
+     * <code>required .muni.model.Person person = 1;</code>
      * @return The person.
      */
     muni.model.Model.Person getPerson();
@@ -4389,22 +4514,22 @@ public final class MuniService {
      *firstname/lastname - not for address
      * </pre>
      *
-     * <code>.muni.model.Person person = 1;</code>
+     * <code>required .muni.model.Person person = 1;</code>
      */
     muni.model.Model.PersonOrBuilder getPersonOrBuilder();
 
     /**
-     * <code>.google.protobuf.FieldMask create_mask = 2;</code>
+     * <code>optional .google.protobuf.FieldMask create_mask = 2;</code>
      * @return Whether the createMask field is set.
      */
     boolean hasCreateMask();
     /**
-     * <code>.google.protobuf.FieldMask create_mask = 2;</code>
+     * <code>optional .google.protobuf.FieldMask create_mask = 2;</code>
      * @return The createMask.
      */
     com.google.protobuf.FieldMask getCreateMask();
     /**
-     * <code>.google.protobuf.FieldMask create_mask = 2;</code>
+     * <code>optional .google.protobuf.FieldMask create_mask = 2;</code>
      */
     com.google.protobuf.FieldMaskOrBuilder getCreateMaskOrBuilder();
   }
@@ -4447,6 +4572,7 @@ public final class MuniService {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4459,20 +4585,20 @@ public final class MuniService {
               break;
             case 10: {
               muni.model.Model.Person.Builder subBuilder = null;
-              if (person_ != null) {
+              if (((bitField0_ & 0x00000001) != 0)) {
                 subBuilder = person_.toBuilder();
               }
-              person_ = input.readMessage(muni.model.Model.Person.parser(), extensionRegistry);
+              person_ = input.readMessage(muni.model.Model.Person.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(person_);
                 person_ = subBuilder.buildPartial();
               }
-
+              bitField0_ |= 0x00000001;
               break;
             }
             case 18: {
               com.google.protobuf.FieldMask.Builder subBuilder = null;
-              if (createMask_ != null) {
+              if (((bitField0_ & 0x00000002) != 0)) {
                 subBuilder = createMask_.toBuilder();
               }
               createMask_ = input.readMessage(com.google.protobuf.FieldMask.parser(), extensionRegistry);
@@ -4480,7 +4606,7 @@ public final class MuniService {
                 subBuilder.mergeFrom(createMask_);
                 createMask_ = subBuilder.buildPartial();
               }
-
+              bitField0_ |= 0x00000002;
               break;
             }
             default: {
@@ -4515,6 +4641,7 @@ public final class MuniService {
               muni.model.MuniService.SearchReqPerson.class, muni.model.MuniService.SearchReqPerson.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PERSON_FIELD_NUMBER = 1;
     private muni.model.Model.Person person_;
     /**
@@ -4522,19 +4649,19 @@ public final class MuniService {
      *firstname/lastname - not for address
      * </pre>
      *
-     * <code>.muni.model.Person person = 1;</code>
+     * <code>required .muni.model.Person person = 1;</code>
      * @return Whether the person field is set.
      */
     @java.lang.Override
     public boolean hasPerson() {
-      return person_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
      *firstname/lastname - not for address
      * </pre>
      *
-     * <code>.muni.model.Person person = 1;</code>
+     * <code>required .muni.model.Person person = 1;</code>
      * @return The person.
      */
     @java.lang.Override
@@ -4546,25 +4673,25 @@ public final class MuniService {
      *firstname/lastname - not for address
      * </pre>
      *
-     * <code>.muni.model.Person person = 1;</code>
+     * <code>required .muni.model.Person person = 1;</code>
      */
     @java.lang.Override
     public muni.model.Model.PersonOrBuilder getPersonOrBuilder() {
-      return getPerson();
+      return person_ == null ? muni.model.Model.Person.getDefaultInstance() : person_;
     }
 
     public static final int CREATE_MASK_FIELD_NUMBER = 2;
     private com.google.protobuf.FieldMask createMask_;
     /**
-     * <code>.google.protobuf.FieldMask create_mask = 2;</code>
+     * <code>optional .google.protobuf.FieldMask create_mask = 2;</code>
      * @return Whether the createMask field is set.
      */
     @java.lang.Override
     public boolean hasCreateMask() {
-      return createMask_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>.google.protobuf.FieldMask create_mask = 2;</code>
+     * <code>optional .google.protobuf.FieldMask create_mask = 2;</code>
      * @return The createMask.
      */
     @java.lang.Override
@@ -4572,11 +4699,11 @@ public final class MuniService {
       return createMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : createMask_;
     }
     /**
-     * <code>.google.protobuf.FieldMask create_mask = 2;</code>
+     * <code>optional .google.protobuf.FieldMask create_mask = 2;</code>
      */
     @java.lang.Override
     public com.google.protobuf.FieldMaskOrBuilder getCreateMaskOrBuilder() {
-      return getCreateMask();
+      return createMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : createMask_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -4586,6 +4713,10 @@ public final class MuniService {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
+      if (!hasPerson()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -4593,10 +4724,10 @@ public final class MuniService {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (person_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPerson());
       }
-      if (createMask_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getCreateMask());
       }
       unknownFields.writeTo(output);
@@ -4608,11 +4739,11 @@ public final class MuniService {
       if (size != -1) return size;
 
       size = 0;
-      if (person_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPerson());
       }
-      if (createMask_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getCreateMask());
       }
@@ -4641,8 +4772,7 @@ public final class MuniService {
         if (!getCreateMask()
             .equals(other.getCreateMask())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      return unknownFields.equals(other.unknownFields);
     }
 
     @java.lang.Override
@@ -4792,6 +4922,8 @@ public final class MuniService {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getPersonFieldBuilder();
+          getCreateMaskFieldBuilder();
         }
       }
       @java.lang.Override
@@ -4800,15 +4932,15 @@ public final class MuniService {
         if (personBuilder_ == null) {
           person_ = null;
         } else {
-          person_ = null;
-          personBuilder_ = null;
+          personBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         if (createMaskBuilder_ == null) {
           createMask_ = null;
         } else {
-          createMask_ = null;
-          createMaskBuilder_ = null;
+          createMaskBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -4835,16 +4967,25 @@ public final class MuniService {
       @java.lang.Override
       public muni.model.MuniService.SearchReqPerson buildPartial() {
         muni.model.MuniService.SearchReqPerson result = new muni.model.MuniService.SearchReqPerson(this);
-        if (personBuilder_ == null) {
-          result.person_ = person_;
-        } else {
-          result.person_ = personBuilder_.build();
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          if (personBuilder_ == null) {
+            result.person_ = person_;
+          } else {
+            result.person_ = personBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000001;
         }
-        if (createMaskBuilder_ == null) {
-          result.createMask_ = createMask_;
-        } else {
-          result.createMask_ = createMaskBuilder_.build();
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          if (createMaskBuilder_ == null) {
+            result.createMask_ = createMask_;
+          } else {
+            result.createMask_ = createMaskBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -4906,7 +5047,7 @@ public final class MuniService {
 
       @java.lang.Override
       public final boolean isInitialized() {
-        return true;
+        return hasPerson();
       }
 
       @java.lang.Override
@@ -4927,6 +5068,7 @@ public final class MuniService {
         }
         return this;
       }
+      private int bitField0_;
 
       private muni.model.Model.Person person_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4936,18 +5078,18 @@ public final class MuniService {
        *firstname/lastname - not for address
        * </pre>
        *
-       * <code>.muni.model.Person person = 1;</code>
+       * <code>required .muni.model.Person person = 1;</code>
        * @return Whether the person field is set.
        */
       public boolean hasPerson() {
-        return personBuilder_ != null || person_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <pre>
        *firstname/lastname - not for address
        * </pre>
        *
-       * <code>.muni.model.Person person = 1;</code>
+       * <code>required .muni.model.Person person = 1;</code>
        * @return The person.
        */
       public muni.model.Model.Person getPerson() {
@@ -4962,7 +5104,7 @@ public final class MuniService {
        *firstname/lastname - not for address
        * </pre>
        *
-       * <code>.muni.model.Person person = 1;</code>
+       * <code>required .muni.model.Person person = 1;</code>
        */
       public Builder setPerson(muni.model.Model.Person value) {
         if (personBuilder_ == null) {
@@ -4974,7 +5116,7 @@ public final class MuniService {
         } else {
           personBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
         return this;
       }
       /**
@@ -4982,7 +5124,7 @@ public final class MuniService {
        *firstname/lastname - not for address
        * </pre>
        *
-       * <code>.muni.model.Person person = 1;</code>
+       * <code>required .muni.model.Person person = 1;</code>
        */
       public Builder setPerson(
           muni.model.Model.Person.Builder builderForValue) {
@@ -4992,7 +5134,7 @@ public final class MuniService {
         } else {
           personBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
         return this;
       }
       /**
@@ -5000,11 +5142,13 @@ public final class MuniService {
        *firstname/lastname - not for address
        * </pre>
        *
-       * <code>.muni.model.Person person = 1;</code>
+       * <code>required .muni.model.Person person = 1;</code>
        */
       public Builder mergePerson(muni.model.Model.Person value) {
         if (personBuilder_ == null) {
-          if (person_ != null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+              person_ != null &&
+              person_ != muni.model.Model.Person.getDefaultInstance()) {
             person_ =
               muni.model.Model.Person.newBuilder(person_).mergeFrom(value).buildPartial();
           } else {
@@ -5014,7 +5158,7 @@ public final class MuniService {
         } else {
           personBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
         return this;
       }
       /**
@@ -5022,17 +5166,16 @@ public final class MuniService {
        *firstname/lastname - not for address
        * </pre>
        *
-       * <code>.muni.model.Person person = 1;</code>
+       * <code>required .muni.model.Person person = 1;</code>
        */
       public Builder clearPerson() {
         if (personBuilder_ == null) {
           person_ = null;
           onChanged();
         } else {
-          person_ = null;
-          personBuilder_ = null;
+          personBuilder_.clear();
         }
-
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
       /**
@@ -5040,10 +5183,10 @@ public final class MuniService {
        *firstname/lastname - not for address
        * </pre>
        *
-       * <code>.muni.model.Person person = 1;</code>
+       * <code>required .muni.model.Person person = 1;</code>
        */
       public muni.model.Model.Person.Builder getPersonBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getPersonFieldBuilder().getBuilder();
       }
@@ -5052,7 +5195,7 @@ public final class MuniService {
        *firstname/lastname - not for address
        * </pre>
        *
-       * <code>.muni.model.Person person = 1;</code>
+       * <code>required .muni.model.Person person = 1;</code>
        */
       public muni.model.Model.PersonOrBuilder getPersonOrBuilder() {
         if (personBuilder_ != null) {
@@ -5067,7 +5210,7 @@ public final class MuniService {
        *firstname/lastname - not for address
        * </pre>
        *
-       * <code>.muni.model.Person person = 1;</code>
+       * <code>required .muni.model.Person person = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           muni.model.Model.Person, muni.model.Model.Person.Builder, muni.model.Model.PersonOrBuilder> 
@@ -5087,14 +5230,14 @@ public final class MuniService {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> createMaskBuilder_;
       /**
-       * <code>.google.protobuf.FieldMask create_mask = 2;</code>
+       * <code>optional .google.protobuf.FieldMask create_mask = 2;</code>
        * @return Whether the createMask field is set.
        */
       public boolean hasCreateMask() {
-        return createMaskBuilder_ != null || createMask_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
-       * <code>.google.protobuf.FieldMask create_mask = 2;</code>
+       * <code>optional .google.protobuf.FieldMask create_mask = 2;</code>
        * @return The createMask.
        */
       public com.google.protobuf.FieldMask getCreateMask() {
@@ -5105,7 +5248,7 @@ public final class MuniService {
         }
       }
       /**
-       * <code>.google.protobuf.FieldMask create_mask = 2;</code>
+       * <code>optional .google.protobuf.FieldMask create_mask = 2;</code>
        */
       public Builder setCreateMask(com.google.protobuf.FieldMask value) {
         if (createMaskBuilder_ == null) {
@@ -5117,11 +5260,11 @@ public final class MuniService {
         } else {
           createMaskBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
         return this;
       }
       /**
-       * <code>.google.protobuf.FieldMask create_mask = 2;</code>
+       * <code>optional .google.protobuf.FieldMask create_mask = 2;</code>
        */
       public Builder setCreateMask(
           com.google.protobuf.FieldMask.Builder builderForValue) {
@@ -5131,15 +5274,17 @@ public final class MuniService {
         } else {
           createMaskBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
         return this;
       }
       /**
-       * <code>.google.protobuf.FieldMask create_mask = 2;</code>
+       * <code>optional .google.protobuf.FieldMask create_mask = 2;</code>
        */
       public Builder mergeCreateMask(com.google.protobuf.FieldMask value) {
         if (createMaskBuilder_ == null) {
-          if (createMask_ != null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+              createMask_ != null &&
+              createMask_ != com.google.protobuf.FieldMask.getDefaultInstance()) {
             createMask_ =
               com.google.protobuf.FieldMask.newBuilder(createMask_).mergeFrom(value).buildPartial();
           } else {
@@ -5149,33 +5294,32 @@ public final class MuniService {
         } else {
           createMaskBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
         return this;
       }
       /**
-       * <code>.google.protobuf.FieldMask create_mask = 2;</code>
+       * <code>optional .google.protobuf.FieldMask create_mask = 2;</code>
        */
       public Builder clearCreateMask() {
         if (createMaskBuilder_ == null) {
           createMask_ = null;
           onChanged();
         } else {
-          createMask_ = null;
-          createMaskBuilder_ = null;
+          createMaskBuilder_.clear();
         }
-
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
       /**
-       * <code>.google.protobuf.FieldMask create_mask = 2;</code>
+       * <code>optional .google.protobuf.FieldMask create_mask = 2;</code>
        */
       public com.google.protobuf.FieldMask.Builder getCreateMaskBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getCreateMaskFieldBuilder().getBuilder();
       }
       /**
-       * <code>.google.protobuf.FieldMask create_mask = 2;</code>
+       * <code>optional .google.protobuf.FieldMask create_mask = 2;</code>
        */
       public com.google.protobuf.FieldMaskOrBuilder getCreateMaskOrBuilder() {
         if (createMaskBuilder_ != null) {
@@ -5186,7 +5330,7 @@ public final class MuniService {
         }
       }
       /**
-       * <code>.google.protobuf.FieldMask create_mask = 2;</code>
+       * <code>optional .google.protobuf.FieldMask create_mask = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> 
@@ -5227,7 +5371,7 @@ public final class MuniService {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<SearchReqPerson>
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<SearchReqPerson>
         PARSER = new com.google.protobuf.AbstractParser<SearchReqPerson>() {
       @java.lang.Override
       public SearchReqPerson parsePartialFrom(
@@ -5259,32 +5403,32 @@ public final class MuniService {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.muni.model.PostalAddress postalAddress = 1;</code>
+     * <code>required .muni.model.PostalAddress postalAddress = 1;</code>
      * @return Whether the postalAddress field is set.
      */
     boolean hasPostalAddress();
     /**
-     * <code>.muni.model.PostalAddress postalAddress = 1;</code>
+     * <code>required .muni.model.PostalAddress postalAddress = 1;</code>
      * @return The postalAddress.
      */
     muni.model.Model.PostalAddress getPostalAddress();
     /**
-     * <code>.muni.model.PostalAddress postalAddress = 1;</code>
+     * <code>required .muni.model.PostalAddress postalAddress = 1;</code>
      */
     muni.model.Model.PostalAddressOrBuilder getPostalAddressOrBuilder();
 
     /**
-     * <code>.google.protobuf.FieldMask create_mask = 2;</code>
+     * <code>optional .google.protobuf.FieldMask create_mask = 2;</code>
      * @return Whether the createMask field is set.
      */
     boolean hasCreateMask();
     /**
-     * <code>.google.protobuf.FieldMask create_mask = 2;</code>
+     * <code>optional .google.protobuf.FieldMask create_mask = 2;</code>
      * @return The createMask.
      */
     com.google.protobuf.FieldMask getCreateMask();
     /**
-     * <code>.google.protobuf.FieldMask create_mask = 2;</code>
+     * <code>optional .google.protobuf.FieldMask create_mask = 2;</code>
      */
     com.google.protobuf.FieldMaskOrBuilder getCreateMaskOrBuilder();
   }
@@ -5323,6 +5467,7 @@ public final class MuniService {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -5335,20 +5480,20 @@ public final class MuniService {
               break;
             case 10: {
               muni.model.Model.PostalAddress.Builder subBuilder = null;
-              if (postalAddress_ != null) {
+              if (((bitField0_ & 0x00000001) != 0)) {
                 subBuilder = postalAddress_.toBuilder();
               }
-              postalAddress_ = input.readMessage(muni.model.Model.PostalAddress.parser(), extensionRegistry);
+              postalAddress_ = input.readMessage(muni.model.Model.PostalAddress.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(postalAddress_);
                 postalAddress_ = subBuilder.buildPartial();
               }
-
+              bitField0_ |= 0x00000001;
               break;
             }
             case 18: {
               com.google.protobuf.FieldMask.Builder subBuilder = null;
-              if (createMask_ != null) {
+              if (((bitField0_ & 0x00000002) != 0)) {
                 subBuilder = createMask_.toBuilder();
               }
               createMask_ = input.readMessage(com.google.protobuf.FieldMask.parser(), extensionRegistry);
@@ -5356,7 +5501,7 @@ public final class MuniService {
                 subBuilder.mergeFrom(createMask_);
                 createMask_ = subBuilder.buildPartial();
               }
-
+              bitField0_ |= 0x00000002;
               break;
             }
             default: {
@@ -5391,18 +5536,19 @@ public final class MuniService {
               muni.model.MuniService.SearchReqPostalAddress.class, muni.model.MuniService.SearchReqPostalAddress.Builder.class);
     }
 
+    private int bitField0_;
     public static final int POSTALADDRESS_FIELD_NUMBER = 1;
     private muni.model.Model.PostalAddress postalAddress_;
     /**
-     * <code>.muni.model.PostalAddress postalAddress = 1;</code>
+     * <code>required .muni.model.PostalAddress postalAddress = 1;</code>
      * @return Whether the postalAddress field is set.
      */
     @java.lang.Override
     public boolean hasPostalAddress() {
-      return postalAddress_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>.muni.model.PostalAddress postalAddress = 1;</code>
+     * <code>required .muni.model.PostalAddress postalAddress = 1;</code>
      * @return The postalAddress.
      */
     @java.lang.Override
@@ -5410,25 +5556,25 @@ public final class MuniService {
       return postalAddress_ == null ? muni.model.Model.PostalAddress.getDefaultInstance() : postalAddress_;
     }
     /**
-     * <code>.muni.model.PostalAddress postalAddress = 1;</code>
+     * <code>required .muni.model.PostalAddress postalAddress = 1;</code>
      */
     @java.lang.Override
     public muni.model.Model.PostalAddressOrBuilder getPostalAddressOrBuilder() {
-      return getPostalAddress();
+      return postalAddress_ == null ? muni.model.Model.PostalAddress.getDefaultInstance() : postalAddress_;
     }
 
     public static final int CREATE_MASK_FIELD_NUMBER = 2;
     private com.google.protobuf.FieldMask createMask_;
     /**
-     * <code>.google.protobuf.FieldMask create_mask = 2;</code>
+     * <code>optional .google.protobuf.FieldMask create_mask = 2;</code>
      * @return Whether the createMask field is set.
      */
     @java.lang.Override
     public boolean hasCreateMask() {
-      return createMask_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>.google.protobuf.FieldMask create_mask = 2;</code>
+     * <code>optional .google.protobuf.FieldMask create_mask = 2;</code>
      * @return The createMask.
      */
     @java.lang.Override
@@ -5436,11 +5582,11 @@ public final class MuniService {
       return createMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : createMask_;
     }
     /**
-     * <code>.google.protobuf.FieldMask create_mask = 2;</code>
+     * <code>optional .google.protobuf.FieldMask create_mask = 2;</code>
      */
     @java.lang.Override
     public com.google.protobuf.FieldMaskOrBuilder getCreateMaskOrBuilder() {
-      return getCreateMask();
+      return createMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : createMask_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -5450,6 +5596,10 @@ public final class MuniService {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
+      if (!hasPostalAddress()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -5457,10 +5607,10 @@ public final class MuniService {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (postalAddress_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPostalAddress());
       }
-      if (createMask_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getCreateMask());
       }
       unknownFields.writeTo(output);
@@ -5472,11 +5622,11 @@ public final class MuniService {
       if (size != -1) return size;
 
       size = 0;
-      if (postalAddress_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPostalAddress());
       }
-      if (createMask_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getCreateMask());
       }
@@ -5505,8 +5655,7 @@ public final class MuniService {
         if (!getCreateMask()
             .equals(other.getCreateMask())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      return unknownFields.equals(other.unknownFields);
     }
 
     @java.lang.Override
@@ -5652,6 +5801,8 @@ public final class MuniService {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getPostalAddressFieldBuilder();
+          getCreateMaskFieldBuilder();
         }
       }
       @java.lang.Override
@@ -5660,15 +5811,15 @@ public final class MuniService {
         if (postalAddressBuilder_ == null) {
           postalAddress_ = null;
         } else {
-          postalAddress_ = null;
-          postalAddressBuilder_ = null;
+          postalAddressBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         if (createMaskBuilder_ == null) {
           createMask_ = null;
         } else {
-          createMask_ = null;
-          createMaskBuilder_ = null;
+          createMaskBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -5695,16 +5846,25 @@ public final class MuniService {
       @java.lang.Override
       public muni.model.MuniService.SearchReqPostalAddress buildPartial() {
         muni.model.MuniService.SearchReqPostalAddress result = new muni.model.MuniService.SearchReqPostalAddress(this);
-        if (postalAddressBuilder_ == null) {
-          result.postalAddress_ = postalAddress_;
-        } else {
-          result.postalAddress_ = postalAddressBuilder_.build();
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          if (postalAddressBuilder_ == null) {
+            result.postalAddress_ = postalAddress_;
+          } else {
+            result.postalAddress_ = postalAddressBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000001;
         }
-        if (createMaskBuilder_ == null) {
-          result.createMask_ = createMask_;
-        } else {
-          result.createMask_ = createMaskBuilder_.build();
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          if (createMaskBuilder_ == null) {
+            result.createMask_ = createMask_;
+          } else {
+            result.createMask_ = createMaskBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -5766,7 +5926,7 @@ public final class MuniService {
 
       @java.lang.Override
       public final boolean isInitialized() {
-        return true;
+        return hasPostalAddress();
       }
 
       @java.lang.Override
@@ -5787,19 +5947,20 @@ public final class MuniService {
         }
         return this;
       }
+      private int bitField0_;
 
       private muni.model.Model.PostalAddress postalAddress_;
       private com.google.protobuf.SingleFieldBuilderV3<
           muni.model.Model.PostalAddress, muni.model.Model.PostalAddress.Builder, muni.model.Model.PostalAddressOrBuilder> postalAddressBuilder_;
       /**
-       * <code>.muni.model.PostalAddress postalAddress = 1;</code>
+       * <code>required .muni.model.PostalAddress postalAddress = 1;</code>
        * @return Whether the postalAddress field is set.
        */
       public boolean hasPostalAddress() {
-        return postalAddressBuilder_ != null || postalAddress_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>.muni.model.PostalAddress postalAddress = 1;</code>
+       * <code>required .muni.model.PostalAddress postalAddress = 1;</code>
        * @return The postalAddress.
        */
       public muni.model.Model.PostalAddress getPostalAddress() {
@@ -5810,7 +5971,7 @@ public final class MuniService {
         }
       }
       /**
-       * <code>.muni.model.PostalAddress postalAddress = 1;</code>
+       * <code>required .muni.model.PostalAddress postalAddress = 1;</code>
        */
       public Builder setPostalAddress(muni.model.Model.PostalAddress value) {
         if (postalAddressBuilder_ == null) {
@@ -5822,11 +5983,11 @@ public final class MuniService {
         } else {
           postalAddressBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
         return this;
       }
       /**
-       * <code>.muni.model.PostalAddress postalAddress = 1;</code>
+       * <code>required .muni.model.PostalAddress postalAddress = 1;</code>
        */
       public Builder setPostalAddress(
           muni.model.Model.PostalAddress.Builder builderForValue) {
@@ -5836,15 +5997,17 @@ public final class MuniService {
         } else {
           postalAddressBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
         return this;
       }
       /**
-       * <code>.muni.model.PostalAddress postalAddress = 1;</code>
+       * <code>required .muni.model.PostalAddress postalAddress = 1;</code>
        */
       public Builder mergePostalAddress(muni.model.Model.PostalAddress value) {
         if (postalAddressBuilder_ == null) {
-          if (postalAddress_ != null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+              postalAddress_ != null &&
+              postalAddress_ != muni.model.Model.PostalAddress.getDefaultInstance()) {
             postalAddress_ =
               muni.model.Model.PostalAddress.newBuilder(postalAddress_).mergeFrom(value).buildPartial();
           } else {
@@ -5854,33 +6017,32 @@ public final class MuniService {
         } else {
           postalAddressBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
         return this;
       }
       /**
-       * <code>.muni.model.PostalAddress postalAddress = 1;</code>
+       * <code>required .muni.model.PostalAddress postalAddress = 1;</code>
        */
       public Builder clearPostalAddress() {
         if (postalAddressBuilder_ == null) {
           postalAddress_ = null;
           onChanged();
         } else {
-          postalAddress_ = null;
-          postalAddressBuilder_ = null;
+          postalAddressBuilder_.clear();
         }
-
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
       /**
-       * <code>.muni.model.PostalAddress postalAddress = 1;</code>
+       * <code>required .muni.model.PostalAddress postalAddress = 1;</code>
        */
       public muni.model.Model.PostalAddress.Builder getPostalAddressBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getPostalAddressFieldBuilder().getBuilder();
       }
       /**
-       * <code>.muni.model.PostalAddress postalAddress = 1;</code>
+       * <code>required .muni.model.PostalAddress postalAddress = 1;</code>
        */
       public muni.model.Model.PostalAddressOrBuilder getPostalAddressOrBuilder() {
         if (postalAddressBuilder_ != null) {
@@ -5891,7 +6053,7 @@ public final class MuniService {
         }
       }
       /**
-       * <code>.muni.model.PostalAddress postalAddress = 1;</code>
+       * <code>required .muni.model.PostalAddress postalAddress = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           muni.model.Model.PostalAddress, muni.model.Model.PostalAddress.Builder, muni.model.Model.PostalAddressOrBuilder> 
@@ -5911,14 +6073,14 @@ public final class MuniService {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> createMaskBuilder_;
       /**
-       * <code>.google.protobuf.FieldMask create_mask = 2;</code>
+       * <code>optional .google.protobuf.FieldMask create_mask = 2;</code>
        * @return Whether the createMask field is set.
        */
       public boolean hasCreateMask() {
-        return createMaskBuilder_ != null || createMask_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
-       * <code>.google.protobuf.FieldMask create_mask = 2;</code>
+       * <code>optional .google.protobuf.FieldMask create_mask = 2;</code>
        * @return The createMask.
        */
       public com.google.protobuf.FieldMask getCreateMask() {
@@ -5929,7 +6091,7 @@ public final class MuniService {
         }
       }
       /**
-       * <code>.google.protobuf.FieldMask create_mask = 2;</code>
+       * <code>optional .google.protobuf.FieldMask create_mask = 2;</code>
        */
       public Builder setCreateMask(com.google.protobuf.FieldMask value) {
         if (createMaskBuilder_ == null) {
@@ -5941,11 +6103,11 @@ public final class MuniService {
         } else {
           createMaskBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
         return this;
       }
       /**
-       * <code>.google.protobuf.FieldMask create_mask = 2;</code>
+       * <code>optional .google.protobuf.FieldMask create_mask = 2;</code>
        */
       public Builder setCreateMask(
           com.google.protobuf.FieldMask.Builder builderForValue) {
@@ -5955,15 +6117,17 @@ public final class MuniService {
         } else {
           createMaskBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
         return this;
       }
       /**
-       * <code>.google.protobuf.FieldMask create_mask = 2;</code>
+       * <code>optional .google.protobuf.FieldMask create_mask = 2;</code>
        */
       public Builder mergeCreateMask(com.google.protobuf.FieldMask value) {
         if (createMaskBuilder_ == null) {
-          if (createMask_ != null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+              createMask_ != null &&
+              createMask_ != com.google.protobuf.FieldMask.getDefaultInstance()) {
             createMask_ =
               com.google.protobuf.FieldMask.newBuilder(createMask_).mergeFrom(value).buildPartial();
           } else {
@@ -5973,33 +6137,32 @@ public final class MuniService {
         } else {
           createMaskBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
         return this;
       }
       /**
-       * <code>.google.protobuf.FieldMask create_mask = 2;</code>
+       * <code>optional .google.protobuf.FieldMask create_mask = 2;</code>
        */
       public Builder clearCreateMask() {
         if (createMaskBuilder_ == null) {
           createMask_ = null;
           onChanged();
         } else {
-          createMask_ = null;
-          createMaskBuilder_ = null;
+          createMaskBuilder_.clear();
         }
-
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
       /**
-       * <code>.google.protobuf.FieldMask create_mask = 2;</code>
+       * <code>optional .google.protobuf.FieldMask create_mask = 2;</code>
        */
       public com.google.protobuf.FieldMask.Builder getCreateMaskBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getCreateMaskFieldBuilder().getBuilder();
       }
       /**
-       * <code>.google.protobuf.FieldMask create_mask = 2;</code>
+       * <code>optional .google.protobuf.FieldMask create_mask = 2;</code>
        */
       public com.google.protobuf.FieldMaskOrBuilder getCreateMaskOrBuilder() {
         if (createMaskBuilder_ != null) {
@@ -6010,7 +6173,7 @@ public final class MuniService {
         }
       }
       /**
-       * <code>.google.protobuf.FieldMask create_mask = 2;</code>
+       * <code>optional .google.protobuf.FieldMask create_mask = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> 
@@ -6051,7 +6214,7 @@ public final class MuniService {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<SearchReqPostalAddress>
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<SearchReqPostalAddress>
         PARSER = new com.google.protobuf.AbstractParser<SearchReqPostalAddress>() {
       @java.lang.Override
       public SearchReqPostalAddress parsePartialFrom(
@@ -6118,7 +6281,7 @@ public final class MuniService {
       getDescriptor() {
     return descriptor;
   }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
+  private static final com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
     java.lang.String[] descriptorData = {
@@ -6128,7 +6291,7 @@ public final class MuniService {
       "proto\032\020muni-model.proto\"f\n\017CreatePersonR" +
       "eq\022\"\n\006person\030\001 \001(\0132\022.muni.model.Person\022/" +
       "\n\013create_mask\030\002 \001(\0132\032.google.protobuf.Fi" +
-      "eldMask\"\022\n\004ById\022\n\n\002id\030\001 \001(\t\"\301\001\n\tSearchRe" +
+      "eldMask\"\022\n\004ById\022\n\n\002id\030\001 \002(\t\"\301\001\n\tSearchRe" +
       "s\022\016\n\006status\030\001 \001(\t\022\r\n\005count\030\002 \001(\005\022$\n\005erro" +
       "r\030\003 \001(\0132\025.muni.model.ErrorInfo\022,\n\nperson" +
       "List\030\n \001(\0132\026.muni.model.PersonListH\000\022:\n\021" +
@@ -6137,10 +6300,10 @@ public final class MuniService {
       "\007persons\030\001 \003(\0132\022.muni.model.Person\"A\n\021Po" +
       "stalAddressList\022,\n\taddresses\030\001 \003(\0132\031.mun" +
       "i.model.PostalAddress\"f\n\017SearchReqPerson" +
-      "\022\"\n\006person\030\001 \001(\0132\022.muni.model.Person\022/\n\013" +
+      "\022\"\n\006person\030\001 \002(\0132\022.muni.model.Person\022/\n\013" +
       "create_mask\030\002 \001(\0132\032.google.protobuf.Fiel" +
       "dMask\"{\n\026SearchReqPostalAddress\0220\n\rposta" +
-      "lAddress\030\001 \001(\0132\031.muni.model.PostalAddres" +
+      "lAddress\030\001 \002(\0132\031.muni.model.PostalAddres" +
       "s\022/\n\013create_mask\030\002 \001(\0132\032.google.protobuf" +
       ".FieldMask2\356\002\n\rPersonService\022P\n\003get\022\020.mu" +
       "ni.model.ById\032\022.muni.model.Person\"#\202\323\344\223\002" +
@@ -6160,8 +6323,8 @@ public final class MuniService {
       "!\202\323\344\223\002\033\"\023/mkapp/rest/v1/case:\004case2\201\001\n\rS" +
       "earchService\022p\n\013personsLike\022\033.muni.model" +
       ".SearchReqPerson\032\025.muni.model.SearchRes\"" +
-      "-\202\323\344\223\002\'\"\035/mkapp/rest/v1/search/persons:\006" +
-      "personB\005P\000\210\001\000b\006proto3"
+              "-\202\323\344\223\002'\"\035/mkapp/rest/v1/search/persons:\006" +
+      "personB\005P\000\210\001\000"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
