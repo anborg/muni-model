@@ -13,8 +13,10 @@ public class TestSubsystemService {
         Optional<Model.Person> perso = service.person().get("1");
         Model.Person savedP = service.person().save(Model.Person.getDefaultInstance());
         List<Model.Person> foundP = service.person().find(Model.Person.getDefaultInstance());
+        //address
+        Optional<Model.PostalAddress> addr = service.address().get("1");
 
-        //
+        //class
         Optional<Model.Case> ccase = service.ccase().get("1");
 
     }

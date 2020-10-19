@@ -4,6 +4,13 @@ import muni.model.Model;
 
 public class DataQuality {
     public static class Address{
+        public static boolean isValidForeignKeyRef(Model.PostalAddress in){
+            return null != in && in.hasId()
+                    && !in.hasStreetNum()
+                    && !in.hasStreetName()
+                    && !in.hasPostalCode();
+
+        }//valid for forein key ref
         public static boolean isValidForInsert(Model.PostalAddress in) {
             if (null != in && in.hasId()==false) {// ID must be NULL
                 //mandatory check
@@ -28,8 +35,8 @@ public class DataQuality {
             // explict signal to update
             return null != in
                     && in.hasId() // ID must NOT be NULL - preexisting
-                    && in.hasCreateTime() // signal: already created
-                    && in.hasUpdateTime() // signal: already created
+                    //&& in.hasCreateTime() // signal: already created
+                    //&& in.hasUpdateTime() // signal: already created
                     //&& in.getDirty() == true // Don' tcheck dirty - wont be set in json
                     ;
         }
@@ -44,7 +51,7 @@ public class DataQuality {
             final var present_oneOf = ( in.hasEmail() || in.hasPhone1() || in.hasPhone2() || in.hasAddress()) ;
             final var present_mandatory = ( in.hasFirstName() &&  in.hasLastName()); //;&& _present_oneOf ;
 
-            System.out.println("IsvalidforUpdate:" + " present_mandatory="+present_mandatory+",present_oneof="+present_oneOf+",absent_id="+absent_id+",absent_createTS="+absent_createTS+",absent_updateTs="+absent_updateTs+" dirty="+dirty);
+            System.out.println("IsvalidforInsert:" + " present_mandatory="+present_mandatory+",present_oneof="+present_oneOf+",absent_id="+absent_id+",absent_createTS="+absent_createTS+",absent_updateTs="+absent_updateTs+" dirty="+dirty);
 
             if (null != in && absent_id) {// ID must be NULL
                 // Yes no id, so insert.  Is data sufficient for business?
@@ -55,7 +62,9 @@ public class DataQuality {
                 ) {//valid personfor insert
                     return true;
                 } else {//new obj - but mandarory absent
-                    throw new RuntimeException("Insert=no ID, but the objct must have fname, lname and one contact. Hint : Mandatory field missing?");
+                    //Log error? Not fatal
+                    System.out.println("Checked: Person Not valid for insert.");
+                    //throw new RuntimeException("Insert=no ID, but the objct must have fname, lname and one contact. Hint : Mandatory field missing?");
                 }
             }//id empty
             return false;
@@ -73,7 +82,9 @@ public class DataQuality {
                 ) {
                     return true;
                 } else {
-                    throw new RuntimeException("Update=ID-present. BUT! timestamp expected for PRE-exiting obj. Hint : Ensure ts is prsent (though will overridden by db)?");
+                    //Log error? Not fatal
+                    System.out.println("Checked: Person Not valid for Update.");
+                    //throw new RuntimeException("Update=ID-present. BUT! timestamp expected for PRE-exiting obj. Hint : Ensure ts is prsent (though will overridden by db)?");
                 }
             }
             return false;

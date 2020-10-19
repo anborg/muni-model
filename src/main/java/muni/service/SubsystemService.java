@@ -9,11 +9,12 @@ public interface  SubsystemService {
 
     SubsystemDataAccess<Model.Person> person() ;
     SubsystemDataAccess<Model.Case> ccase() ;
-    //SubsystemDataAccess<Model.PostalAddress> address() ;
+    SubsystemDataAccess<Model.PostalAddress> address() ;
 
     interface SubsystemDataAccess<T>{
         //TODO priority-1. return user/customer with id
         T save(T in);
+        T update(T in);
         Optional<T> get(String id);
         List<T> find(T in);
         List<T> recent();
