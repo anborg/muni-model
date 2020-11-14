@@ -2,7 +2,6 @@ package muni.model;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.base.Strings;
-import muni.util.MockUtil;
 import muni.util.ProtoUtil;
 import org.junit.jupiter.api.Test;
 

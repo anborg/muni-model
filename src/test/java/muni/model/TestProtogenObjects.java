@@ -34,7 +34,7 @@ public class TestProtogenObjects {
             Double lat = 22.1111, lon = 22.1111;
             var ts = Timestamp.newBuilder().setSeconds(now.getEpochSecond()).build();
             var add = Model.PostalAddress.newBuilder().setId(id).setStreetNum(streetNum).setStreetName(streetName).setCity(city).setProvince(province).setCountry(country).setPostalCode(postalCode).setCreateTime(ts).setUpdateTime(ts);
-            pers = Model.Person.newBuilder().setId("1").setFirstName("Jane").setLastName("Doe").setAddress(add).setDirty(true).build();
+            pers = Model.Person.newBuilder().setId("1").setFirstName("Jane").setLastName("Doe").setAddress(add).build();//.setDirty(true)
         }//pers
         System.out.println(ProtoUtil.toJson(pers));
 
@@ -42,7 +42,7 @@ public class TestProtogenObjects {
         //set primitives
         //assertThat(pers.hasId()).as("SET primitive must be verifiable as non-empty in protobuf").isTrue();
         assertThat(pers.getId()).as("SET primitive must be verifiable as non-empty in protobuf").isEqualTo("1");
-        assertThat(pers.getDirty()).as("SET primitive must be verifiable as empty in protobuf").isTrue();
+        //assertThat(pers.getDirty()).as("SET primitive must be verifiable as empty in protobuf").isTrue();
         //set objects
         assertThat(pers.hasCreateTime()).as("ProtoObj : Unset Create-Timestamp must result in proto.hasXX()=false").isFalse();
         assertThat(pers.hasUpdateTime()).as("ProtoObj : Unset Update-Timestamp must result in proto.hasXX()=false").isFalse();

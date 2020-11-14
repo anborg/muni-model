@@ -17,7 +17,7 @@ message Person{
   optional string phone1 = 7;
   optional string phone2 = 8;
   optional PostalAddress address = 9; //For objects no need for optional, hasAddress() works
-  optional  bool dirty = 10 [default = false];//for boolean getDirty() default is enough, no need for optional
+  //optional  bool dirty = 10 [default = false];//for boolean getDirty() default is enough, no need for optional
   map<string, Xref> xrefAccounts = 11;
 
 
@@ -29,6 +29,7 @@ message Person{
 message Xref{
   optional string sysId = 1; // {"AMANDA"|"HANSEN" ...}
   optional string personId = 2;
+  repeated Case recentCases = 3;
 }
 //Listed in the order of dependency
 message PostalAddress{
@@ -41,7 +42,7 @@ message PostalAddress{
   optional string postalCode = 9;
   optional double lat = 10;//geo
   optional double lon = 11;
-  optional  bool dirty = 12 [default=false];
+  //optional  bool dirty = 12 [default=false];
   //Output only
   optional google.protobuf.Timestamp createTime = 1;
   //Output only

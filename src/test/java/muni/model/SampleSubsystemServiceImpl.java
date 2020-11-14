@@ -5,16 +5,24 @@ import muni.service.SubsystemService;
 import java.util.List;
 import java.util.Optional;
 // This Dummy is just to see structure of a SSS
-public class TestSubsystemDummy implements SubsystemService {
+public class SampleSubsystemServiceImpl implements SubsystemService {
 
     @Override
-    public SubsystemDataAccess<Model.Person> person() {return buildPersonService();}
-    @Override
-    public SubsystemDataAccess<Model.PostalAddress> address() {return buildAddressService();}
-    @Override
-    public SubsystemDataAccess<Model.Case> ccase() {return buildCaseService(); }
+    public SubsystemDataAccess<Model.Person> person() {
+        return buildPersonService();
+    }
 
-    private SubsystemDataAccess<Model.Person> buildPersonService(){
+    @Override
+    public SubsystemDataAccess<Model.PostalAddress> address() {
+        return buildAddressService();
+    }
+
+    @Override
+    public SubsystemDataAccess<Model.Case> ccase() {
+        return buildCaseService();
+    }
+
+    private SubsystemDataAccess<Model.Person> buildPersonService() {
         return new SubsystemDataAccess<Model.Person>() {
             @Override
             public Model.Person create(Model.Person in) {

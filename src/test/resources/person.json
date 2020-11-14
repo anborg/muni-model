@@ -16,8 +16,6 @@
     "city": "Toronto",
     "province": "Ontario",
     "country": "Canada",
-    "postalCode": "L1L2M2",
-    "dirty": true
-  },
-  "dirty": false
+    "postalCode": "L1L2M2"
+  }
 }

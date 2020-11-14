@@ -47,11 +47,11 @@ public class DataQuality {
             final var absent_id = !in.hasId();
             final var absent_createTS =!in.hasCreateTime();
             final var absent_updateTs =!in.hasUpdateTime();
-            final var dirty = in.getDirty();//Don't bother to check this - as clients wont set this field in json.
+            //final var dirty = in.getDirty();//Don't bother to check this - as clients wont set this field in json.
             final var present_oneOf = ( in.hasEmail() || in.hasPhone1() || in.hasPhone2() || in.hasAddress()) ;
             final var present_mandatory = ( in.hasFirstName() &&  in.hasLastName()); //;&& _present_oneOf ;
 
-            System.out.println("IsvalidforInsert:" + " present_mandatory="+present_mandatory+",present_oneof="+present_oneOf+",absent_id="+absent_id+",absent_createTS="+absent_createTS+",absent_updateTs="+absent_updateTs+" dirty="+dirty);
+            System.out.println("IsvalidforInsert:" + " present_mandatory=" + present_mandatory + ",present_oneof=" + present_oneOf + ",absent_id=" + absent_id + ",absent_createTS=" + absent_createTS + ",absent_updateTs=" + absent_updateTs + " dirty=");
 
             if (null != in && absent_id) {// ID must be NULL
                 // Yes no id, so insert.  Is data sufficient for business?
@@ -74,9 +74,9 @@ public class DataQuality {
             final var present_id = in.hasId();
             final var has_create_time =in.hasCreateTime();
             final var has_update_time =in.hasUpdateTime();
-            final var is_dirty = in.getDirty();//don't check dirty - clients won't set in json
+            //final var is_dirty = in.getDirty();//don't check dirty - clients won't set in json
             final var present_mandatory = (in.hasCreateTime() && in.hasUpdateTime());
-            System.out.println("IsvalidforUpdate: present_id="+present_id+" has_create_time="+has_create_time+" has_update_time="+has_update_time+" is_dirty="+is_dirty);
+            System.out.println("IsvalidforUpdate: present_id=" + present_id + " has_create_time=" + has_create_time + " has_update_time=" + has_update_time + " is_dirty=");
             if (null != in &&  present_id) {// ID must NOT be NULL - preexisting
                 if (present_mandatory // explict signal to update
                 ) {
