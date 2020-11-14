@@ -11,7 +11,7 @@ public class TestSubsystemService {
     public void test_SubsystemService_usage(){
         final var service = new TestSubsystemDummy();
         Optional<Model.Person> perso = service.person().get("1");
-        Model.Person savedP = service.person().save(Model.Person.getDefaultInstance());
+        Model.Person savedP = service.person().create(Model.Person.getDefaultInstance());
         List<Model.Person> foundP = service.person().find(Model.Person.getDefaultInstance());
         //address
         Optional<Model.PostalAddress> addr = service.address().get("1");

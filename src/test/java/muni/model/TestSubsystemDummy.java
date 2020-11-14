@@ -17,7 +17,7 @@ public class TestSubsystemDummy implements SubsystemService {
     private SubsystemDataAccess<Model.Person> buildPersonService(){
         return new SubsystemDataAccess<Model.Person>() {
             @Override
-            public Model.Person save(Model.Person in) {
+            public Model.Person create(Model.Person in) {
                 return null;
             }
 
@@ -46,7 +46,7 @@ public class TestSubsystemDummy implements SubsystemService {
     private SubsystemDataAccess<Model.Case> buildCaseService(){
         return new SubsystemDataAccess<Model.Case>() {
             @Override
-            public Model.Case save(Model.Case in) {
+            public Model.Case create(Model.Case in) {
                 return null;
             }
 
@@ -75,7 +75,7 @@ public class TestSubsystemDummy implements SubsystemService {
         return new SubsystemDataAccess<Model.PostalAddress>() {
 
             @Override
-            public Model.PostalAddress save(Model.PostalAddress in) {
+            public Model.PostalAddress create(Model.PostalAddress in) {
                 return null;
             }
 

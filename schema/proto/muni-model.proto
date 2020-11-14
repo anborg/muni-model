@@ -18,10 +18,17 @@ message Person{
   optional string phone2 = 8;
   optional PostalAddress address = 9; //For objects no need for optional, hasAddress() works
   optional  bool dirty = 10 [default = false];//for boolean getDirty() default is enough, no need for optional
+  map<string, Xref> xrefAccounts = 11;
+
+
   //Output only
   optional google.protobuf.Timestamp createTime = 1;
-  //Output only
   optional google.protobuf.Timestamp updateTime = 2;
+}
+
+message Xref{
+  optional string sysId = 1; // {"AMANDA"|"HANSEN" ...}
+  optional string personId = 2;
 }
 //Listed in the order of dependency
 message PostalAddress{
@@ -43,23 +50,27 @@ message PostalAddress{
 
 
 
+
+
 message Case{
   optional string id = 3;
-  optional string status =4; //TODO  convert to enum
+  optional string status =4; //TODO  convert to enum // BACKLOG, INPROGRESS, WAITING, DONE,
+
   optional Person reportedByCustomer=5;
   optional Person createdByEmployee = 6;
-  optional bool dirty = 7 [default = false];
+  //optional bool dirty = 7 [default = false];
+  repeated string tags = 8 ;//store a list of tags that categrizes //TODO Enum?
+  optional string description = 9;
   //Output only
   optional google.protobuf.Timestamp createTime = 1;
-  optional //Output only
-  google.protobuf.Timestamp updateTime = 2;
+  optional google.protobuf.Timestamp updateTime = 2;
 }
 
 
-message Subsystem{
-  optional string subsystemId =1; //TODO avoid converting to enum, that would make api less generic?
-
-}
+//message Subsystem{
+//  optional string subsystemId =1; //TODO avoid converting to enum, that would make api less generic?
+//
+//}
 
 message Organization {
   //Output only
@@ -70,7 +81,7 @@ message Organization {
   optional string phone1 = 7;
   optional string phone2 = 8;
   optional PostalAddress address = 9;
-  optional bool dirty = 10 [default=false];
+  optional Person contactPerson = 10;
   //Output only
   optional google.protobuf.Timestamp createTime = 1;
   //Output only

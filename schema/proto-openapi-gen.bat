@@ -1,6 +1,4 @@
-
-
-:: onetme execution
+:: onetme execution -- outdated?
 :: cd %GOPATH%\src
 :: git clone https://github.com/grpc-ecosystem/grpc-gateway.git
 :: go get github.com/grpc-ecosystem/grpc-gateway/..
@@ -8,7 +6,6 @@
 set PROJ_DIR=C:\data\proj-mkm\muni-model
 set INPUT_DIR=%PROJ_DIR%\schema\proto
 set SRCGEN_DIR=%PROJ_DIR%\src\zgen\proto\java-new
-set OPENAPIGEN_DIR=%PROJ_DIR%\src\zgen\proto\openapi
 set PROTOC_HOME=C:\apps\google\protoc-3.13.0
 set PROTOC_BIN=%PROTOC_HOME%\bin\protoc.exe
 set PROTOC_INCLUDE=%PROTOC_HOME%\include

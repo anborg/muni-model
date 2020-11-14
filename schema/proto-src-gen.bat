@@ -1,5 +1,3 @@
-
-
 :: onetme execution
 :: cd %GOPATH%\src
 :: git clone https://github.com/grpc-ecosystem/grpc-gateway.git
