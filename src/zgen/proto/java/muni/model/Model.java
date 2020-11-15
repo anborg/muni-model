@@ -2798,1211 +2798,277 @@ public final class Model {
 
   }
 
+  static {
+    java.lang.String[] descriptorData = {
+            "\n\020muni-model.proto\022\nmuni.model\032\037google/p" +
+                    "rotobuf/timestamp.proto\032\031google/protobuf" +
+                    "/any.proto\"\367\002\n\006Person\022\n\n\002id\030\003 \001(\t\022\021\n\tfir" +
+                    "stName\030\004 \001(\t\022\020\n\010lastName\030\005 \001(\t\022\r\n\005email\030" +
+                    "\006 \001(\t\022\016\n\006phone1\030\007 \001(\t\022\016\n\006phone2\030\010 \001(\t\022*\n" +
+                    "\007address\030\t \001(\0132\031.muni.model.PostalAddres" +
+                    "s\022:\n\014xrefAccounts\030\013 \003(\0132$.muni.model.Per" +
+                    "son.XrefAccountsEntry\022.\n\ncreateTime\030\001 \001(" +
+                    "\0132\032.google.protobuf.Timestamp\022.\n\nupdateT" +
+                    "ime\030\002 \001(\0132\032.google.protobuf.Timestamp\032E\n" +
+                    "\021XrefAccountsEntry\022\013\n\003key\030\001 \001(\t\022\037\n\005value" +
+                    "\030\002 \001(\0132\020.muni.model.Xref:\0028\001\"\371\001\n\004Xref\022\n\n" +
+                    "\002id\030\006 \001(\t\022\021\n\txrefSysId\030\007 \001(\t\022\024\n\014xrefPers" +
+                    "onId\030\010 \001(\t\022%\n\013recentCases\030\t \003(\0132\020.muni.m" +
+                    "odel.Case\022.\n\ncreateTime\030\001 \001(\0132\032.google.p" +
+                    "rotobuf.Timestamp\022.\n\nupdateTime\030\002 \001(\0132\032." +
+                    "google.protobuf.Timestamp\0225\n\021subsysRefre" +
+                    "shTime\030\003 \001(\0132\032.google.protobuf.Timestamp" +
+                    "\"\201\002\n\rPostalAddress\022\n\n\002id\030\003 \001(\t\022\021\n\tstreet" +
+                    "Num\030\004 \001(\t\022\022\n\nstreetName\030\005 \001(\t\022\014\n\004city\030\006 " +
+                    "\001(\t\022\020\n\010province\030\007 \001(\t\022\017\n\007country\030\010 \001(\t\022\022" +
+                    "\n\npostalCode\030\t \001(\t\022\013\n\003lat\030\n \001(\001\022\013\n\003lon\030\013" +
+                    " \001(\001\022.\n\ncreateTime\030\001 \001(\0132\032.google.protob" +
+                    "uf.Timestamp\022.\n\nupdateTime\030\002 \001(\0132\032.googl" +
+                    "e.protobuf.Timestamp\"\204\002\n\004Case\022\n\n\002id\030\003 \001(" +
+                    "\t\022\016\n\006status\030\004 \001(\t\022.\n\022reportedByCustomer\030" +
+                    "\005 \001(\0132\022.muni.model.Person\022-\n\021createdByEm" +
+                    "ployee\030\006 \001(\0132\022.muni.model.Person\022\014\n\004tags" +
+                    "\030\010 \003(\t\022\023\n\013description\030\t \001(\t\022.\n\ncreateTim" +
+                    "e\030\001 \001(\0132\032.google.protobuf.Timestamp\022.\n\nu" +
+                    "pdateTime\030\002 \001(\0132\032.google.protobuf.Timest" +
+                    "amp\"\237\002\n\014Organization\022\n\n\002id\030\003 \001(\t\022\014\n\004name" +
+                    "\030\004 \001(\t\022\017\n\007website\030\005 \001(\t\022\r\n\005email\030\006 \001(\t\022\016" +
+                    "\n\006phone1\030\007 \001(\t\022\016\n\006phone2\030\010 \001(\t\022*\n\007addres" +
+                    "s\030\t \001(\0132\031.muni.model.PostalAddress\022)\n\rco" +
+                    "ntactPerson\030\n \001(\0132\022.muni.model.Person\022.\n" +
+                    "\ncreateTime\030\001 \001(\0132\032.google.protobuf.Time" +
+                    "stamp\022.\n\nupdateTime\030\002 \001(\0132\032.google.proto" +
+                    "buf.Timestamp\"C\n\tErrorInfo\022\017\n\007message\030\001 " +
+                    "\001(\t\022%\n\007details\030\002 \003(\0132\024.google.protobuf.A" +
+                    "nyB\014B\005ModelP\000\210\001\000"
+    };
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
+            .internalBuildGeneratedFileFrom(descriptorData,
+                    new com.google.protobuf.Descriptors.FileDescriptor[]{
+                            com.google.protobuf.TimestampProto.getDescriptor(),
+                            com.google.protobuf.AnyProto.getDescriptor(),
+                    });
+    internal_static_muni_model_Person_descriptor =
+            getDescriptor().getMessageTypes().get(0);
+    internal_static_muni_model_Person_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_muni_model_Person_descriptor,
+            new java.lang.String[]{"Id", "FirstName", "LastName", "Email", "Phone1", "Phone2", "Address", "XrefAccounts", "CreateTime", "UpdateTime",});
+    internal_static_muni_model_Person_XrefAccountsEntry_descriptor =
+            internal_static_muni_model_Person_descriptor.getNestedTypes().get(0);
+    internal_static_muni_model_Person_XrefAccountsEntry_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_muni_model_Person_XrefAccountsEntry_descriptor,
+            new java.lang.String[]{"Key", "Value",});
+    internal_static_muni_model_Xref_descriptor =
+            getDescriptor().getMessageTypes().get(1);
+    internal_static_muni_model_Xref_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_muni_model_Xref_descriptor,
+            new java.lang.String[]{"Id", "XrefSysId", "XrefPersonId", "RecentCases", "CreateTime", "UpdateTime", "SubsysRefreshTime",});
+    internal_static_muni_model_PostalAddress_descriptor =
+            getDescriptor().getMessageTypes().get(2);
+    internal_static_muni_model_PostalAddress_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_muni_model_PostalAddress_descriptor,
+            new java.lang.String[]{"Id", "StreetNum", "StreetName", "City", "Province", "Country", "PostalCode", "Lat", "Lon", "CreateTime", "UpdateTime",});
+    internal_static_muni_model_Case_descriptor =
+            getDescriptor().getMessageTypes().get(3);
+    internal_static_muni_model_Case_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_muni_model_Case_descriptor,
+            new java.lang.String[]{"Id", "Status", "ReportedByCustomer", "CreatedByEmployee", "Tags", "Description", "CreateTime", "UpdateTime",});
+    internal_static_muni_model_Organization_descriptor =
+            getDescriptor().getMessageTypes().get(4);
+    internal_static_muni_model_Organization_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_muni_model_Organization_descriptor,
+            new java.lang.String[]{"Id", "Name", "Website", "Email", "Phone1", "Phone2", "Address", "ContactPerson", "CreateTime", "UpdateTime",});
+    internal_static_muni_model_ErrorInfo_descriptor =
+            getDescriptor().getMessageTypes().get(5);
+    internal_static_muni_model_ErrorInfo_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_muni_model_ErrorInfo_descriptor,
+            new java.lang.String[]{"Message", "Details",});
+    com.google.protobuf.TimestampProto.getDescriptor();
+    com.google.protobuf.AnyProto.getDescriptor();
+  }
+
   public interface XrefOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:muni.model.Xref)
-      com.google.protobuf.MessageOrBuilder {
+          // @@protoc_insertion_point(interface_extends:muni.model.Xref)
+          com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <pre>
-     * {"AMANDA"|"HANSEN" ...}
-     * </pre>
+     * <code>optional string id = 6;</code>
      *
-     * <code>optional string sysId = 1;</code>
-     * @return Whether the sysId field is set.
+     * @return Whether the id field is set.
      */
-    boolean hasSysId();
+    boolean hasId();
+
     /**
-     * <pre>
-     * {"AMANDA"|"HANSEN" ...}
-     * </pre>
+     * <code>optional string id = 6;</code>
      *
-     * <code>optional string sysId = 1;</code>
-     * @return The sysId.
+     * @return The id.
      */
-    java.lang.String getSysId();
+    java.lang.String getId();
+
     /**
-     * <pre>
-     * {"AMANDA"|"HANSEN" ...}
-     * </pre>
+     * <code>optional string id = 6;</code>
      *
-     * <code>optional string sysId = 1;</code>
-     * @return The bytes for sysId.
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
-        getSysIdBytes();
+    getIdBytes();
 
     /**
-     * <code>optional string personId = 2;</code>
-     * @return Whether the personId field is set.
+     * <pre>
+     * {"AMANDA"|"HANSEN" ...}
+     * </pre>
+     *
+     * <code>optional string xrefSysId = 7;</code>
+     *
+     * @return Whether the xrefSysId field is set.
      */
-    boolean hasPersonId();
+    boolean hasXrefSysId();
+
     /**
-     * <code>optional string personId = 2;</code>
-     * @return The personId.
+     * <pre>
+     * {"AMANDA"|"HANSEN" ...}
+     * </pre>
+     *
+     * <code>optional string xrefSysId = 7;</code>
+     *
+     * @return The xrefSysId.
      */
-    java.lang.String getPersonId();
+    java.lang.String getXrefSysId();
+
     /**
-     * <code>optional string personId = 2;</code>
-     * @return The bytes for personId.
+     * <pre>
+     * {"AMANDA"|"HANSEN" ...}
+     * </pre>
+     *
+     * <code>optional string xrefSysId = 7;</code>
+     *
+     * @return The bytes for xrefSysId.
      */
     com.google.protobuf.ByteString
-        getPersonIdBytes();
+    getXrefSysIdBytes();
 
     /**
-     * <code>repeated .muni.model.Case recentCases = 3;</code>
+     * <code>optional string xrefPersonId = 8;</code>
+     *
+     * @return Whether the xrefPersonId field is set.
      */
-    java.util.List<muni.model.Model.Case> 
-        getRecentCasesList();
+    boolean hasXrefPersonId();
+
     /**
-     * <code>repeated .muni.model.Case recentCases = 3;</code>
+     * <code>optional string xrefPersonId = 8;</code>
+     *
+     * @return The xrefPersonId.
+     */
+    java.lang.String getXrefPersonId();
+
+    /**
+     * <code>optional string xrefPersonId = 8;</code>
+     * @return The bytes for xrefPersonId.
+     */
+    com.google.protobuf.ByteString
+    getXrefPersonIdBytes();
+
+    /**
+     * <code>repeated .muni.model.Case recentCases = 9;</code>
+     */
+    java.util.List<muni.model.Model.Case>
+    getRecentCasesList();
+    /**
+     * <code>repeated .muni.model.Case recentCases = 9;</code>
      */
     muni.model.Model.Case getRecentCases(int index);
+
     /**
-     * <code>repeated .muni.model.Case recentCases = 3;</code>
+     * <code>repeated .muni.model.Case recentCases = 9;</code>
      */
     int getRecentCasesCount();
+
     /**
-     * <code>repeated .muni.model.Case recentCases = 3;</code>
+     * <code>repeated .muni.model.Case recentCases = 9;</code>
      */
-    java.util.List<? extends muni.model.Model.CaseOrBuilder> 
-        getRecentCasesOrBuilderList();
+    java.util.List<? extends muni.model.Model.CaseOrBuilder>
+    getRecentCasesOrBuilderList();
+
     /**
-     * <code>repeated .muni.model.Case recentCases = 3;</code>
+     * <code>repeated .muni.model.Case recentCases = 9;</code>
      */
     muni.model.Model.CaseOrBuilder getRecentCasesOrBuilder(
-        int index);
-  }
-  /**
-   * Protobuf type {@code muni.model.Xref}
-   */
-  public static final class Xref extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:muni.model.Xref)
-      XrefOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Xref.newBuilder() to construct.
-    private Xref(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Xref() {
-      sysId_ = "";
-      personId_ = "";
-      recentCases_ = java.util.Collections.emptyList();
-    }
+            int index);
 
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Xref();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Xref(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000001;
-              sysId_ = bs;
-              break;
-            }
-            case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000002;
-              personId_ = bs;
-              break;
-            }
-            case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                recentCases_ = new java.util.ArrayList<muni.model.Model.Case>();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              recentCases_.add(
-                  input.readMessage(muni.model.Model.Case.PARSER, extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
-          recentCases_ = java.util.Collections.unmodifiableList(recentCases_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return muni.model.Model.internal_static_muni_model_Xref_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return muni.model.Model.internal_static_muni_model_Xref_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              muni.model.Model.Xref.class, muni.model.Model.Xref.Builder.class);
-    }
-
-    private int bitField0_;
-    public static final int SYSID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object sysId_;
     /**
      * <pre>
-     * {"AMANDA"|"HANSEN" ...}
+     * Output only
      * </pre>
      *
-     * <code>optional string sysId = 1;</code>
-     * @return Whether the sysId field is set.
+     * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
+     *
+     * @return Whether the createTime field is set.
      */
-    @java.lang.Override
-    public boolean hasSysId() {
-      return ((bitField0_ & 0x00000001) != 0);
-    }
+    boolean hasCreateTime();
+
     /**
      * <pre>
-     * {"AMANDA"|"HANSEN" ...}
+     * Output only
      * </pre>
      *
-     * <code>optional string sysId = 1;</code>
-     * @return The sysId.
+     * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
+     *
+     * @return The createTime.
      */
-    @java.lang.Override
-    public java.lang.String getSysId() {
-      java.lang.Object ref = sysId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          sysId_ = s;
-        }
-        return s;
-      }
-    }
+    com.google.protobuf.Timestamp getCreateTime();
+
     /**
      * <pre>
-     * {"AMANDA"|"HANSEN" ...}
+     * Output only
      * </pre>
      *
-     * <code>optional string sysId = 1;</code>
-     * @return The bytes for sysId.
+     * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getSysIdBytes() {
-      java.lang.Object ref = sysId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        sysId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
+    com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder();
 
-    public static final int PERSONID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object personId_;
     /**
-     * <code>optional string personId = 2;</code>
-     * @return Whether the personId field is set.
+     * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
+     *
+     * @return Whether the updateTime field is set.
      */
-    @java.lang.Override
-    public boolean hasPersonId() {
-      return ((bitField0_ & 0x00000002) != 0);
-    }
+    boolean hasUpdateTime();
+
     /**
-     * <code>optional string personId = 2;</code>
-     * @return The personId.
+     * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
+     *
+     * @return The updateTime.
      */
-    @java.lang.Override
-    public java.lang.String getPersonId() {
-      java.lang.Object ref = personId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          personId_ = s;
-        }
-        return s;
-      }
-    }
+    com.google.protobuf.Timestamp getUpdateTime();
+
     /**
-     * <code>optional string personId = 2;</code>
-     * @return The bytes for personId.
+     * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getPersonIdBytes() {
-      java.lang.Object ref = personId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        personId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
+    com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder();
 
-    public static final int RECENTCASES_FIELD_NUMBER = 3;
-    private java.util.List<muni.model.Model.Case> recentCases_;
     /**
-     * <code>repeated .muni.model.Case recentCases = 3;</code>
+     * <code>optional .google.protobuf.Timestamp subsysRefreshTime = 3;</code>
+     *
+     * @return Whether the subsysRefreshTime field is set.
      */
-    @java.lang.Override
-    public java.util.List<muni.model.Model.Case> getRecentCasesList() {
-      return recentCases_;
-    }
+    boolean hasSubsysRefreshTime();
+
     /**
-     * <code>repeated .muni.model.Case recentCases = 3;</code>
+     * <code>optional .google.protobuf.Timestamp subsysRefreshTime = 3;</code>
+     *
+     * @return The subsysRefreshTime.
      */
-    @java.lang.Override
-    public java.util.List<? extends muni.model.Model.CaseOrBuilder> 
-        getRecentCasesOrBuilderList() {
-      return recentCases_;
-    }
+    com.google.protobuf.Timestamp getSubsysRefreshTime();
     /**
-     * <code>repeated .muni.model.Case recentCases = 3;</code>
+     * <code>optional .google.protobuf.Timestamp subsysRefreshTime = 3;</code>
      */
-    @java.lang.Override
-    public int getRecentCasesCount() {
-      return recentCases_.size();
-    }
-    /**
-     * <code>repeated .muni.model.Case recentCases = 3;</code>
-     */
-    @java.lang.Override
-    public muni.model.Model.Case getRecentCases(int index) {
-      return recentCases_.get(index);
-    }
-    /**
-     * <code>repeated .muni.model.Case recentCases = 3;</code>
-     */
-    @java.lang.Override
-    public muni.model.Model.CaseOrBuilder getRecentCasesOrBuilder(
-        int index) {
-      return recentCases_.get(index);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sysId_);
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, personId_);
-      }
-      for (int i = 0; i < recentCases_.size(); i++) {
-        output.writeMessage(3, recentCases_.get(i));
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sysId_);
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, personId_);
-      }
-      for (int i = 0; i < recentCases_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, recentCases_.get(i));
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof muni.model.Model.Xref)) {
-        return super.equals(obj);
-      }
-      muni.model.Model.Xref other = (muni.model.Model.Xref) obj;
-
-      if (hasSysId() != other.hasSysId()) return false;
-      if (hasSysId()) {
-        if (!getSysId()
-            .equals(other.getSysId())) return false;
-      }
-      if (hasPersonId() != other.hasPersonId()) return false;
-      if (hasPersonId()) {
-        if (!getPersonId()
-            .equals(other.getPersonId())) return false;
-      }
-      if (!getRecentCasesList()
-          .equals(other.getRecentCasesList())) return false;
-      return unknownFields.equals(other.unknownFields);
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasSysId()) {
-        hash = (37 * hash) + SYSID_FIELD_NUMBER;
-        hash = (53 * hash) + getSysId().hashCode();
-      }
-      if (hasPersonId()) {
-        hash = (37 * hash) + PERSONID_FIELD_NUMBER;
-        hash = (53 * hash) + getPersonId().hashCode();
-      }
-      if (getRecentCasesCount() > 0) {
-        hash = (37 * hash) + RECENTCASES_FIELD_NUMBER;
-        hash = (53 * hash) + getRecentCasesList().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static muni.model.Model.Xref parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static muni.model.Model.Xref parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static muni.model.Model.Xref parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static muni.model.Model.Xref parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static muni.model.Model.Xref parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static muni.model.Model.Xref parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static muni.model.Model.Xref parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static muni.model.Model.Xref parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static muni.model.Model.Xref parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static muni.model.Model.Xref parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static muni.model.Model.Xref parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static muni.model.Model.Xref parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(muni.model.Model.Xref prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code muni.model.Xref}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:muni.model.Xref)
-        muni.model.Model.XrefOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return muni.model.Model.internal_static_muni_model_Xref_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return muni.model.Model.internal_static_muni_model_Xref_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                muni.model.Model.Xref.class, muni.model.Model.Xref.Builder.class);
-      }
-
-      // Construct using muni.model.Model.Xref.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getRecentCasesFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        sysId_ = "";
-        bitField0_ = (bitField0_ & ~0x00000001);
-        personId_ = "";
-        bitField0_ = (bitField0_ & ~0x00000002);
-        if (recentCasesBuilder_ == null) {
-          recentCases_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
-        } else {
-          recentCasesBuilder_.clear();
-        }
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return muni.model.Model.internal_static_muni_model_Xref_descriptor;
-      }
-
-      @java.lang.Override
-      public muni.model.Model.Xref getDefaultInstanceForType() {
-        return muni.model.Model.Xref.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public muni.model.Model.Xref build() {
-        muni.model.Model.Xref result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public muni.model.Model.Xref buildPartial() {
-        muni.model.Model.Xref result = new muni.model.Model.Xref(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.sysId_ = sysId_;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          to_bitField0_ |= 0x00000002;
-        }
-        result.personId_ = personId_;
-        if (recentCasesBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0)) {
-            recentCases_ = java.util.Collections.unmodifiableList(recentCases_);
-            bitField0_ = (bitField0_ & ~0x00000004);
-          }
-          result.recentCases_ = recentCases_;
-        } else {
-          result.recentCases_ = recentCasesBuilder_.build();
-        }
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof muni.model.Model.Xref) {
-          return mergeFrom((muni.model.Model.Xref)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(muni.model.Model.Xref other) {
-        if (other == muni.model.Model.Xref.getDefaultInstance()) return this;
-        if (other.hasSysId()) {
-          bitField0_ |= 0x00000001;
-          sysId_ = other.sysId_;
-          onChanged();
-        }
-        if (other.hasPersonId()) {
-          bitField0_ |= 0x00000002;
-          personId_ = other.personId_;
-          onChanged();
-        }
-        if (recentCasesBuilder_ == null) {
-          if (!other.recentCases_.isEmpty()) {
-            if (recentCases_.isEmpty()) {
-              recentCases_ = other.recentCases_;
-              bitField0_ = (bitField0_ & ~0x00000004);
-            } else {
-              ensureRecentCasesIsMutable();
-              recentCases_.addAll(other.recentCases_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.recentCases_.isEmpty()) {
-            if (recentCasesBuilder_.isEmpty()) {
-              recentCasesBuilder_.dispose();
-              recentCasesBuilder_ = null;
-              recentCases_ = other.recentCases_;
-              bitField0_ = (bitField0_ & ~0x00000004);
-              recentCasesBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getRecentCasesFieldBuilder() : null;
-            } else {
-              recentCasesBuilder_.addAllMessages(other.recentCases_);
-            }
-          }
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        muni.model.Model.Xref parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (muni.model.Model.Xref) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object sysId_ = "";
-      /**
-       * <pre>
-       * {"AMANDA"|"HANSEN" ...}
-       * </pre>
-       *
-       * <code>optional string sysId = 1;</code>
-       * @return Whether the sysId field is set.
-       */
-      public boolean hasSysId() {
-        return ((bitField0_ & 0x00000001) != 0);
-      }
-      /**
-       * <pre>
-       * {"AMANDA"|"HANSEN" ...}
-       * </pre>
-       *
-       * <code>optional string sysId = 1;</code>
-       * @return The sysId.
-       */
-      public java.lang.String getSysId() {
-        java.lang.Object ref = sysId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            sysId_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * {"AMANDA"|"HANSEN" ...}
-       * </pre>
-       *
-       * <code>optional string sysId = 1;</code>
-       * @return The bytes for sysId.
-       */
-      public com.google.protobuf.ByteString
-          getSysIdBytes() {
-        java.lang.Object ref = sysId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          sysId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * {"AMANDA"|"HANSEN" ...}
-       * </pre>
-       *
-       * <code>optional string sysId = 1;</code>
-       * @param value The sysId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSysId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        sysId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * {"AMANDA"|"HANSEN" ...}
-       * </pre>
-       *
-       * <code>optional string sysId = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSysId() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        sysId_ = getDefaultInstance().getSysId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * {"AMANDA"|"HANSEN" ...}
-       * </pre>
-       *
-       * <code>optional string sysId = 1;</code>
-       * @param value The bytes for sysId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSysIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        sysId_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object personId_ = "";
-      /**
-       * <code>optional string personId = 2;</code>
-       * @return Whether the personId field is set.
-       */
-      public boolean hasPersonId() {
-        return ((bitField0_ & 0x00000002) != 0);
-      }
-      /**
-       * <code>optional string personId = 2;</code>
-       * @return The personId.
-       */
-      public java.lang.String getPersonId() {
-        java.lang.Object ref = personId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            personId_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string personId = 2;</code>
-       * @return The bytes for personId.
-       */
-      public com.google.protobuf.ByteString
-          getPersonIdBytes() {
-        java.lang.Object ref = personId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          personId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string personId = 2;</code>
-       * @param value The personId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPersonId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-        personId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string personId = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearPersonId() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        personId_ = getDefaultInstance().getPersonId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string personId = 2;</code>
-       * @param value The bytes for personId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPersonIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-        personId_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.util.List<muni.model.Model.Case> recentCases_ =
-        java.util.Collections.emptyList();
-      private void ensureRecentCasesIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
-          recentCases_ = new java.util.ArrayList<muni.model.Model.Case>(recentCases_);
-          bitField0_ |= 0x00000004;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          muni.model.Model.Case, muni.model.Model.Case.Builder, muni.model.Model.CaseOrBuilder> recentCasesBuilder_;
-
-      /**
-       * <code>repeated .muni.model.Case recentCases = 3;</code>
-       */
-      public java.util.List<muni.model.Model.Case> getRecentCasesList() {
-        if (recentCasesBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(recentCases_);
-        } else {
-          return recentCasesBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .muni.model.Case recentCases = 3;</code>
-       */
-      public int getRecentCasesCount() {
-        if (recentCasesBuilder_ == null) {
-          return recentCases_.size();
-        } else {
-          return recentCasesBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .muni.model.Case recentCases = 3;</code>
-       */
-      public muni.model.Model.Case getRecentCases(int index) {
-        if (recentCasesBuilder_ == null) {
-          return recentCases_.get(index);
-        } else {
-          return recentCasesBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .muni.model.Case recentCases = 3;</code>
-       */
-      public Builder setRecentCases(
-          int index, muni.model.Model.Case value) {
-        if (recentCasesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureRecentCasesIsMutable();
-          recentCases_.set(index, value);
-          onChanged();
-        } else {
-          recentCasesBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .muni.model.Case recentCases = 3;</code>
-       */
-      public Builder setRecentCases(
-          int index, muni.model.Model.Case.Builder builderForValue) {
-        if (recentCasesBuilder_ == null) {
-          ensureRecentCasesIsMutable();
-          recentCases_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          recentCasesBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .muni.model.Case recentCases = 3;</code>
-       */
-      public Builder addRecentCases(muni.model.Model.Case value) {
-        if (recentCasesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureRecentCasesIsMutable();
-          recentCases_.add(value);
-          onChanged();
-        } else {
-          recentCasesBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .muni.model.Case recentCases = 3;</code>
-       */
-      public Builder addRecentCases(
-          int index, muni.model.Model.Case value) {
-        if (recentCasesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureRecentCasesIsMutable();
-          recentCases_.add(index, value);
-          onChanged();
-        } else {
-          recentCasesBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .muni.model.Case recentCases = 3;</code>
-       */
-      public Builder addRecentCases(
-          muni.model.Model.Case.Builder builderForValue) {
-        if (recentCasesBuilder_ == null) {
-          ensureRecentCasesIsMutable();
-          recentCases_.add(builderForValue.build());
-          onChanged();
-        } else {
-          recentCasesBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .muni.model.Case recentCases = 3;</code>
-       */
-      public Builder addRecentCases(
-          int index, muni.model.Model.Case.Builder builderForValue) {
-        if (recentCasesBuilder_ == null) {
-          ensureRecentCasesIsMutable();
-          recentCases_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          recentCasesBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .muni.model.Case recentCases = 3;</code>
-       */
-      public Builder addAllRecentCases(
-          java.lang.Iterable<? extends muni.model.Model.Case> values) {
-        if (recentCasesBuilder_ == null) {
-          ensureRecentCasesIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, recentCases_);
-          onChanged();
-        } else {
-          recentCasesBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .muni.model.Case recentCases = 3;</code>
-       */
-      public Builder clearRecentCases() {
-        if (recentCasesBuilder_ == null) {
-          recentCases_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
-          onChanged();
-        } else {
-          recentCasesBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .muni.model.Case recentCases = 3;</code>
-       */
-      public Builder removeRecentCases(int index) {
-        if (recentCasesBuilder_ == null) {
-          ensureRecentCasesIsMutable();
-          recentCases_.remove(index);
-          onChanged();
-        } else {
-          recentCasesBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .muni.model.Case recentCases = 3;</code>
-       */
-      public muni.model.Model.Case.Builder getRecentCasesBuilder(
-          int index) {
-        return getRecentCasesFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .muni.model.Case recentCases = 3;</code>
-       */
-      public muni.model.Model.CaseOrBuilder getRecentCasesOrBuilder(
-          int index) {
-        if (recentCasesBuilder_ == null) {
-          return recentCases_.get(index);  } else {
-          return recentCasesBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .muni.model.Case recentCases = 3;</code>
-       */
-      public java.util.List<? extends muni.model.Model.CaseOrBuilder> 
-           getRecentCasesOrBuilderList() {
-        if (recentCasesBuilder_ != null) {
-          return recentCasesBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(recentCases_);
-        }
-      }
-      /**
-       * <code>repeated .muni.model.Case recentCases = 3;</code>
-       */
-      public muni.model.Model.Case.Builder addRecentCasesBuilder() {
-        return getRecentCasesFieldBuilder().addBuilder(
-            muni.model.Model.Case.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .muni.model.Case recentCases = 3;</code>
-       */
-      public muni.model.Model.Case.Builder addRecentCasesBuilder(
-          int index) {
-        return getRecentCasesFieldBuilder().addBuilder(
-            index, muni.model.Model.Case.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .muni.model.Case recentCases = 3;</code>
-       */
-      public java.util.List<muni.model.Model.Case.Builder> 
-           getRecentCasesBuilderList() {
-        return getRecentCasesFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          muni.model.Model.Case, muni.model.Model.Case.Builder, muni.model.Model.CaseOrBuilder> 
-          getRecentCasesFieldBuilder() {
-        if (recentCasesBuilder_ == null) {
-          recentCasesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              muni.model.Model.Case, muni.model.Model.Case.Builder, muni.model.Model.CaseOrBuilder>(
-                  recentCases_,
-                  ((bitField0_ & 0x00000004) != 0),
-                  getParentForChildren(),
-                  isClean());
-          recentCases_ = null;
-        }
-        return recentCasesBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:muni.model.Xref)
-    }
-
-    // @@protoc_insertion_point(class_scope:muni.model.Xref)
-    private static final muni.model.Model.Xref DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new muni.model.Model.Xref();
-    }
-
-    public static muni.model.Model.Xref getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    @java.lang.Deprecated public static final com.google.protobuf.Parser<Xref>
-        PARSER = new com.google.protobuf.AbstractParser<Xref>() {
-      @java.lang.Override
-      public Xref parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Xref(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<Xref> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Xref> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public muni.model.Model.Xref getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
+    com.google.protobuf.TimestampOrBuilder getSubsysRefreshTimeOrBuilder();
   }
 
   public interface PostalAddressOrBuilder extends
@@ -12204,114 +11270,2065 @@ public final class Model {
     internal_static_muni_model_Case_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_muni_model_Case_fieldAccessorTable;
+          internal_static_muni_model_Case_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_muni_model_Organization_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_muni_model_Organization_fieldAccessorTable;
+          internal_static_muni_model_Organization_descriptor;
+  private static final
+  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internal_static_muni_model_Organization_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_muni_model_ErrorInfo_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_muni_model_ErrorInfo_fieldAccessorTable;
+          internal_static_muni_model_ErrorInfo_descriptor;
+  private static final
+  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internal_static_muni_model_ErrorInfo_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
+  getDescriptor() {
     return descriptor;
   }
+
   private static final com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
-  static {
-    java.lang.String[] descriptorData = {
-      "\n\020muni-model.proto\022\nmuni.model\032\037google/p" +
-      "rotobuf/timestamp.proto\032\031google/protobuf" +
-      "/any.proto\"\367\002\n\006Person\022\n\n\002id\030\003 \001(\t\022\021\n\tfir" +
-      "stName\030\004 \001(\t\022\020\n\010lastName\030\005 \001(\t\022\r\n\005email\030" +
-      "\006 \001(\t\022\016\n\006phone1\030\007 \001(\t\022\016\n\006phone2\030\010 \001(\t\022*\n" +
-      "\007address\030\t \001(\0132\031.muni.model.PostalAddres" +
-      "s\022:\n\014xrefAccounts\030\013 \003(\0132$.muni.model.Per" +
-      "son.XrefAccountsEntry\022.\n\ncreateTime\030\001 \001(" +
-      "\0132\032.google.protobuf.Timestamp\022.\n\nupdateT" +
-      "ime\030\002 \001(\0132\032.google.protobuf.Timestamp\032E\n" +
-      "\021XrefAccountsEntry\022\013\n\003key\030\001 \001(\t\022\037\n\005value" +
-      "\030\002 \001(\0132\020.muni.model.Xref:\0028\001\"N\n\004Xref\022\r\n\005" +
-      "sysId\030\001 \001(\t\022\020\n\010personId\030\002 \001(\t\022%\n\013recentC" +
-      "ases\030\003 \003(\0132\020.muni.model.Case\"\201\002\n\rPostalA" +
-      "ddress\022\n\n\002id\030\003 \001(\t\022\021\n\tstreetNum\030\004 \001(\t\022\022\n" +
-      "\nstreetName\030\005 \001(\t\022\014\n\004city\030\006 \001(\t\022\020\n\010provi" +
-      "nce\030\007 \001(\t\022\017\n\007country\030\010 \001(\t\022\022\n\npostalCode" +
-      "\030\t \001(\t\022\013\n\003lat\030\n \001(\001\022\013\n\003lon\030\013 \001(\001\022.\n\ncrea" +
-      "teTime\030\001 \001(\0132\032.google.protobuf.Timestamp" +
-      "\022.\n\nupdateTime\030\002 \001(\0132\032.google.protobuf.T" +
-      "imestamp\"\204\002\n\004Case\022\n\n\002id\030\003 \001(\t\022\016\n\006status\030" +
-      "\004 \001(\t\022.\n\022reportedByCustomer\030\005 \001(\0132\022.muni" +
-      ".model.Person\022-\n\021createdByEmployee\030\006 \001(\013" +
-      "2\022.muni.model.Person\022\014\n\004tags\030\010 \003(\t\022\023\n\013de" +
-      "scription\030\t \001(\t\022.\n\ncreateTime\030\001 \001(\0132\032.go" +
-      "ogle.protobuf.Timestamp\022.\n\nupdateTime\030\002 " +
-      "\001(\0132\032.google.protobuf.Timestamp\"\237\002\n\014Orga" +
-      "nization\022\n\n\002id\030\003 \001(\t\022\014\n\004name\030\004 \001(\t\022\017\n\007we" +
-      "bsite\030\005 \001(\t\022\r\n\005email\030\006 \001(\t\022\016\n\006phone1\030\007 \001" +
-      "(\t\022\016\n\006phone2\030\010 \001(\t\022*\n\007address\030\t \001(\0132\031.mu" +
-      "ni.model.PostalAddress\022)\n\rcontactPerson\030" +
-      "\n \001(\0132\022.muni.model.Person\022.\n\ncreateTime\030" +
-      "\001 \001(\0132\032.google.protobuf.Timestamp\022.\n\nupd" +
-      "ateTime\030\002 \001(\0132\032.google.protobuf.Timestam" +
-      "p\"C\n\tErrorInfo\022\017\n\007message\030\001 \001(\t\022%\n\007detai" +
-      "ls\030\002 \003(\0132\024.google.protobuf.AnyB\014B\005ModelP" +
-      "\000\210\001\000"
+          descriptor;
+
+  /**
+   * Protobuf type {@code muni.model.Xref}
+   */
+  public static final class Xref extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:muni.model.Xref)
+          XrefOrBuilder {
+    private static final long serialVersionUID = 0L;
+
+    // Use Xref.newBuilder() to construct.
+    private Xref(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+
+    public static final int ID_FIELD_NUMBER = 6;
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+      return new Xref();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+
+    public static final int XREFSYSID_FIELD_NUMBER = 7;
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+    getDescriptor() {
+      return muni.model.Model.internal_static_muni_model_Xref_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    internalGetFieldAccessorTable() {
+      return muni.model.Model.internal_static_muni_model_Xref_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                      muni.model.Model.Xref.class, muni.model.Model.Xref.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int XREFPERSONID_FIELD_NUMBER = 8;
+    public static final int RECENTCASES_FIELD_NUMBER = 9;
+    public static final int CREATETIME_FIELD_NUMBER = 1;
+    public static final int UPDATETIME_FIELD_NUMBER = 2;
+    public static final int SUBSYSREFRESHTIME_FIELD_NUMBER = 3;
+    private volatile java.lang.Object id_;
+    private volatile java.lang.Object xrefSysId_;
+    private volatile java.lang.Object xrefPersonId_;
+    private com.google.protobuf.Timestamp createTime_;
+    private com.google.protobuf.Timestamp updateTime_;
+    private com.google.protobuf.Timestamp subsysRefreshTime_;
+
+    private Xref() {
+      id_ = "";
+      xrefSysId_ = "";
+      xrefPersonId_ = "";
+      recentCases_ = java.util.Collections.emptyList();
+    }
+
+    private Xref(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+              com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000008) != 0)) {
+                subBuilder = createTime_.toBuilder();
+              }
+              createTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(createTime_);
+                createTime_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000008;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000010) != 0)) {
+                subBuilder = updateTime_.toBuilder();
+              }
+              updateTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(updateTime_);
+                updateTime_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000010;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000020) != 0)) {
+                subBuilder = subsysRefreshTime_.toBuilder();
+              }
+              subsysRefreshTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(subsysRefreshTime_);
+                subsysRefreshTime_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000020;
+              break;
+            }
+            case 50: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              id_ = bs;
+              break;
+            }
+            case 58: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              xrefSysId_ = bs;
+              break;
+            }
+            case 66: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              xrefPersonId_ = bs;
+              break;
+            }
+            case 74: {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+                recentCases_ = new java.util.ArrayList<muni.model.Model.Case>();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              recentCases_.add(
+                      input.readMessage(muni.model.Model.Case.PARSER, extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                      input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+                e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
+          recentCases_ = java.util.Collections.unmodifiableList(recentCases_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+
+    /**
+     * <code>optional string id = 6;</code>
+     * @return Whether the id field is set.
+     */
+    @java.lang.Override
+    public boolean hasId() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+
+    /**
+     * <code>optional string id = 6;</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          id_ = s;
+        }
+        return s;
+      }
+    }
+
+    /**
+     * <code>optional string id = 6;</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+    getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
+                        (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private java.util.List<muni.model.Model.Case> recentCases_;
+
+    /**
+     * <pre>
+     * {"AMANDA"|"HANSEN" ...}
+     * </pre>
+     *
+     * <code>optional string xrefSysId = 7;</code>
+     * @return Whether the xrefSysId field is set.
+     */
+    @java.lang.Override
+    public boolean hasXrefSysId() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+
+    /**
+     * <pre>
+     * {"AMANDA"|"HANSEN" ...}
+     * </pre>
+     *
+     * <code>optional string xrefSysId = 7;</code>
+     * @return The xrefSysId.
+     */
+    @java.lang.Override
+    public java.lang.String getXrefSysId() {
+      java.lang.Object ref = xrefSysId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          xrefSysId_ = s;
+        }
+        return s;
+      }
+    }
+
+    /**
+     * <pre>
+     * {"AMANDA"|"HANSEN" ...}
+     * </pre>
+     *
+     * <code>optional string xrefSysId = 7;</code>
+     * @return The bytes for xrefSysId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+    getXrefSysIdBytes() {
+      java.lang.Object ref = xrefSysId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
+                        (java.lang.String) ref);
+        xrefSysId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    /**
+     * <code>optional string xrefPersonId = 8;</code>
+     * @return Whether the xrefPersonId field is set.
+     */
+    @java.lang.Override
+    public boolean hasXrefPersonId() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+
+    /**
+     * <code>optional string xrefPersonId = 8;</code>
+     * @return The xrefPersonId.
+     */
+    @java.lang.Override
+    public java.lang.String getXrefPersonId() {
+      java.lang.Object ref = xrefPersonId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          xrefPersonId_ = s;
+        }
+        return s;
+      }
+    }
+
+    /**
+     * <code>optional string xrefPersonId = 8;</code>
+     * @return The bytes for xrefPersonId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+    getXrefPersonIdBytes() {
+      java.lang.Object ref = xrefPersonId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
+                        (java.lang.String) ref);
+        xrefPersonId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    /**
+     * <code>repeated .muni.model.Case recentCases = 9;</code>
+     */
+    @java.lang.Override
+    public java.util.List<muni.model.Model.Case> getRecentCasesList() {
+      return recentCases_;
+    }
+
+    /**
+     * <code>repeated .muni.model.Case recentCases = 9;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends muni.model.Model.CaseOrBuilder>
+    getRecentCasesOrBuilderList() {
+      return recentCases_;
+    }
+
+    /**
+     * <code>repeated .muni.model.Case recentCases = 9;</code>
+     */
+    @java.lang.Override
+    public int getRecentCasesCount() {
+      return recentCases_.size();
+    }
+
+    /**
+     * <code>repeated .muni.model.Case recentCases = 9;</code>
+     */
+    @java.lang.Override
+    public muni.model.Model.Case getRecentCases(int index) {
+      return recentCases_.get(index);
+    }
+
+    /**
+     * <code>repeated .muni.model.Case recentCases = 9;</code>
+     */
+    @java.lang.Override
+    public muni.model.Model.CaseOrBuilder getRecentCasesOrBuilder(
+            int index) {
+      return recentCases_.get(index);
+    }
+
+    /**
+     * <pre>
+     *Output only
+     * </pre>
+     *
+     * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
+     * @return Whether the createTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasCreateTime() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+
+    /**
+     * <pre>
+     *Output only
+     * </pre>
+     *
+     * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
+     * @return The createTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getCreateTime() {
+      return createTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createTime_;
+    }
+
+    /**
+     * <pre>
+     *Output only
+     * </pre>
+     *
+     * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder() {
+      return createTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createTime_;
+    }
+
+    /**
+     * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
+     * @return Whether the updateTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasUpdateTime() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+
+    /**
+     * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
+     * @return The updateTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getUpdateTime() {
+      return updateTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updateTime_;
+    }
+
+    /**
+     * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder() {
+      return updateTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updateTime_;
+    }
+
+    /**
+     * <code>optional .google.protobuf.Timestamp subsysRefreshTime = 3;</code>
+     * @return Whether the subsysRefreshTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasSubsysRefreshTime() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+
+    /**
+     * <code>optional .google.protobuf.Timestamp subsysRefreshTime = 3;</code>
+     * @return The subsysRefreshTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getSubsysRefreshTime() {
+      return subsysRefreshTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : subsysRefreshTime_;
+    }
+
+    /**
+     * <code>optional .google.protobuf.Timestamp subsysRefreshTime = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getSubsysRefreshTimeOrBuilder() {
+      return subsysRefreshTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : subsysRefreshTime_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+            throws java.io.IOException {
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeMessage(1, getCreateTime());
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeMessage(2, getUpdateTime());
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        output.writeMessage(3, getSubsysRefreshTime());
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, id_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, xrefSysId_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, xrefPersonId_);
+      }
+      for (int i = 0; i < recentCases_.size(); i++) {
+        output.writeMessage(9, recentCases_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+                .computeMessageSize(1, getCreateTime());
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+                .computeMessageSize(2, getUpdateTime());
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+                .computeMessageSize(3, getSubsysRefreshTime());
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, id_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, xrefSysId_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, xrefPersonId_);
+      }
+      for (int i = 0; i < recentCases_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+                .computeMessageSize(9, recentCases_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+        return true;
+      }
+      if (!(obj instanceof muni.model.Model.Xref)) {
+        return super.equals(obj);
+      }
+      muni.model.Model.Xref other = (muni.model.Model.Xref) obj;
+
+      if (hasId() != other.hasId()) return false;
+      if (hasId()) {
+        if (!getId()
+                .equals(other.getId())) return false;
+      }
+      if (hasXrefSysId() != other.hasXrefSysId()) return false;
+      if (hasXrefSysId()) {
+        if (!getXrefSysId()
+                .equals(other.getXrefSysId())) return false;
+      }
+      if (hasXrefPersonId() != other.hasXrefPersonId()) return false;
+      if (hasXrefPersonId()) {
+        if (!getXrefPersonId()
+                .equals(other.getXrefPersonId())) return false;
+      }
+      if (!getRecentCasesList()
+              .equals(other.getRecentCasesList())) return false;
+      if (hasCreateTime() != other.hasCreateTime()) return false;
+      if (hasCreateTime()) {
+        if (!getCreateTime()
+                .equals(other.getCreateTime())) return false;
+      }
+      if (hasUpdateTime() != other.hasUpdateTime()) return false;
+      if (hasUpdateTime()) {
+        if (!getUpdateTime()
+                .equals(other.getUpdateTime())) return false;
+      }
+      if (hasSubsysRefreshTime() != other.hasSubsysRefreshTime()) return false;
+      if (hasSubsysRefreshTime()) {
+        if (!getSubsysRefreshTime()
+                .equals(other.getSubsysRefreshTime())) return false;
+      }
+      return unknownFields.equals(other.unknownFields);
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasId()) {
+        hash = (37 * hash) + ID_FIELD_NUMBER;
+        hash = (53 * hash) + getId().hashCode();
+      }
+      if (hasXrefSysId()) {
+        hash = (37 * hash) + XREFSYSID_FIELD_NUMBER;
+        hash = (53 * hash) + getXrefSysId().hashCode();
+      }
+      if (hasXrefPersonId()) {
+        hash = (37 * hash) + XREFPERSONID_FIELD_NUMBER;
+        hash = (53 * hash) + getXrefPersonId().hashCode();
+      }
+      if (getRecentCasesCount() > 0) {
+        hash = (37 * hash) + RECENTCASES_FIELD_NUMBER;
+        hash = (53 * hash) + getRecentCasesList().hashCode();
+      }
+      if (hasCreateTime()) {
+        hash = (37 * hash) + CREATETIME_FIELD_NUMBER;
+        hash = (53 * hash) + getCreateTime().hashCode();
+      }
+      if (hasUpdateTime()) {
+        hash = (37 * hash) + UPDATETIME_FIELD_NUMBER;
+        hash = (53 * hash) + getUpdateTime().hashCode();
+      }
+      if (hasSubsysRefreshTime()) {
+        hash = (37 * hash) + SUBSYSREFRESHTIME_FIELD_NUMBER;
+        hash = (53 * hash) + getSubsysRefreshTime().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static muni.model.Model.Xref parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+
+    public static muni.model.Model.Xref parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+
+    public static muni.model.Model.Xref parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+
+    public static muni.model.Model.Xref parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+
+    public static muni.model.Model.Xref parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+
+    public static muni.model.Model.Xref parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+
+    public static muni.model.Model.Xref parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+    }
+
+    public static muni.model.Model.Xref parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static muni.model.Model.Xref parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static muni.model.Model.Xref parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static muni.model.Model.Xref parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+    }
+
+    public static muni.model.Model.Xref parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() {
+      return newBuilder();
+    }
+
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+
+    public static Builder newBuilder(muni.model.Model.Xref prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+
+    /**
+     * Protobuf type {@code muni.model.Xref}
+     */
+    public static final class Builder extends
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:muni.model.Xref)
+            muni.model.Model.XrefOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+        return muni.model.Model.internal_static_muni_model_Xref_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internalGetFieldAccessorTable() {
+        return muni.model.Model.internal_static_muni_model_Xref_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                        muni.model.Model.Xref.class, muni.model.Model.Xref.Builder.class);
+      }
+
+      // Construct using muni.model.Model.Xref.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+
+      private java.lang.Object id_ = "";
+      private java.lang.Object xrefSysId_ = "";
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+      getDescriptorForType() {
+        return muni.model.Model.internal_static_muni_model_Xref_descriptor;
+      }
+
+      @java.lang.Override
+      public muni.model.Model.Xref getDefaultInstanceForType() {
+        return muni.model.Model.Xref.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public muni.model.Model.Xref build() {
+        muni.model.Model.Xref result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      private java.lang.Object xrefPersonId_ = "";
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+
+      @java.lang.Override
+      public Builder setField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+        return super.setField(field, value);
+      }
+
+      @java.lang.Override
+      public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+
+      @java.lang.Override
+      public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+
+      @java.lang.Override
+      public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+
+      @java.lang.Override
+      public Builder addRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof muni.model.Model.Xref) {
+          return mergeFrom((muni.model.Model.Xref) other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      private com.google.protobuf.Timestamp createTime_;
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+        muni.model.Model.Xref parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (muni.model.Model.Xref) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int bitField0_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createTimeBuilder_;
+      private com.google.protobuf.Timestamp updateTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updateTimeBuilder_;
+      private com.google.protobuf.Timestamp subsysRefreshTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> subsysRefreshTimeBuilder_;
+
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRecentCasesFieldBuilder();
+          getCreateTimeFieldBuilder();
+          getUpdateTimeFieldBuilder();
+          getSubsysRefreshTimeFieldBuilder();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        xrefSysId_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        xrefPersonId_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (recentCasesBuilder_ == null) {
+          recentCases_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        } else {
+          recentCasesBuilder_.clear();
+        }
+        if (createTimeBuilder_ == null) {
+          createTime_ = null;
+        } else {
+          createTimeBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        if (updateTimeBuilder_ == null) {
+          updateTime_ = null;
+        } else {
+          updateTimeBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        if (subsysRefreshTimeBuilder_ == null) {
+          subsysRefreshTime_ = null;
+        } else {
+          subsysRefreshTimeBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
+        return this;
+      }
+
+      @java.lang.Override
+      public muni.model.Model.Xref buildPartial() {
+        muni.model.Model.Xref result = new muni.model.Model.Xref(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.id_ = id_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.xrefSysId_ = xrefSysId_;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.xrefPersonId_ = xrefPersonId_;
+        if (recentCasesBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            recentCases_ = java.util.Collections.unmodifiableList(recentCases_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.recentCases_ = recentCases_;
+        } else {
+          result.recentCases_ = recentCasesBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          if (createTimeBuilder_ == null) {
+            result.createTime_ = createTime_;
+          } else {
+            result.createTime_ = createTimeBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000008;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          if (updateTimeBuilder_ == null) {
+            result.updateTime_ = updateTime_;
+          } else {
+            result.updateTime_ = updateTimeBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000010;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          if (subsysRefreshTimeBuilder_ == null) {
+            result.subsysRefreshTime_ = subsysRefreshTime_;
+          } else {
+            result.subsysRefreshTime_ = subsysRefreshTimeBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000020;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(muni.model.Model.Xref other) {
+        if (other == muni.model.Model.Xref.getDefaultInstance()) return this;
+        if (other.hasId()) {
+          bitField0_ |= 0x00000001;
+          id_ = other.id_;
+          onChanged();
+        }
+        if (other.hasXrefSysId()) {
+          bitField0_ |= 0x00000002;
+          xrefSysId_ = other.xrefSysId_;
+          onChanged();
+        }
+        if (other.hasXrefPersonId()) {
+          bitField0_ |= 0x00000004;
+          xrefPersonId_ = other.xrefPersonId_;
+          onChanged();
+        }
+        if (recentCasesBuilder_ == null) {
+          if (!other.recentCases_.isEmpty()) {
+            if (recentCases_.isEmpty()) {
+              recentCases_ = other.recentCases_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureRecentCasesIsMutable();
+              recentCases_.addAll(other.recentCases_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.recentCases_.isEmpty()) {
+            if (recentCasesBuilder_.isEmpty()) {
+              recentCasesBuilder_.dispose();
+              recentCasesBuilder_ = null;
+              recentCases_ = other.recentCases_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              recentCasesBuilder_ =
+                      com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                              getRecentCasesFieldBuilder() : null;
+            } else {
+              recentCasesBuilder_.addAllMessages(other.recentCases_);
+            }
+          }
+        }
+        if (other.hasCreateTime()) {
+          mergeCreateTime(other.getCreateTime());
+        }
+        if (other.hasUpdateTime()) {
+          mergeUpdateTime(other.getUpdateTime());
+        }
+        if (other.hasSubsysRefreshTime()) {
+          mergeSubsysRefreshTime(other.getSubsysRefreshTime());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>optional string id = 6;</code>
+       * @return Whether the id field is set.
+       */
+      public boolean hasId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+
+      /**
+       * <code>optional string id = 6;</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            id_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+
+      /**
+       * <code>optional string id = 6;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+              java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>optional string id = 6;</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+      getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                          (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      /**
+       * <code>optional string id = 6;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+              com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>optional string id = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * {"AMANDA"|"HANSEN" ...}
+       * </pre>
+       *
+       * <code>optional string xrefSysId = 7;</code>
+       * @return Whether the xrefSysId field is set.
+       */
+      public boolean hasXrefSysId() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+
+      /**
+       * <pre>
+       * {"AMANDA"|"HANSEN" ...}
+       * </pre>
+       *
+       * <code>optional string xrefSysId = 7;</code>
+       * @return The xrefSysId.
+       */
+      public java.lang.String getXrefSysId() {
+        java.lang.Object ref = xrefSysId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            xrefSysId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+
+      /**
+       * <pre>
+       * {"AMANDA"|"HANSEN" ...}
+       * </pre>
+       *
+       * <code>optional string xrefSysId = 7;</code>
+       * @param value The xrefSysId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setXrefSysId(
+              java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        xrefSysId_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * {"AMANDA"|"HANSEN" ...}
+       * </pre>
+       *
+       * <code>optional string xrefSysId = 7;</code>
+       * @return The bytes for xrefSysId.
+       */
+      public com.google.protobuf.ByteString
+      getXrefSysIdBytes() {
+        java.lang.Object ref = xrefSysId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                          (java.lang.String) ref);
+          xrefSysId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      /**
+       * <pre>
+       * {"AMANDA"|"HANSEN" ...}
+       * </pre>
+       *
+       * <code>optional string xrefSysId = 7;</code>
+       * @param value The bytes for xrefSysId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setXrefSysIdBytes(
+              com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        xrefSysId_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * {"AMANDA"|"HANSEN" ...}
+       * </pre>
+       *
+       * <code>optional string xrefSysId = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearXrefSysId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        xrefSysId_ = getDefaultInstance().getXrefSysId();
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<muni.model.Model.Case> recentCases_ =
+              java.util.Collections.emptyList();
+
+      /**
+       * <code>optional string xrefPersonId = 8;</code>
+       * @return Whether the xrefPersonId field is set.
+       */
+      public boolean hasXrefPersonId() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+              muni.model.Model.Case, muni.model.Model.Case.Builder, muni.model.Model.CaseOrBuilder> recentCasesBuilder_;
+
+      /**
+       * <code>optional string xrefPersonId = 8;</code>
+       * @return The xrefPersonId.
+       */
+      public java.lang.String getXrefPersonId() {
+        java.lang.Object ref = xrefPersonId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            xrefPersonId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+
+      /**
+       * <code>optional string xrefPersonId = 8;</code>
+       * @param value The xrefPersonId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setXrefPersonId(
+              java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000004;
+        xrefPersonId_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>optional string xrefPersonId = 8;</code>
+       * @return The bytes for xrefPersonId.
+       */
+      public com.google.protobuf.ByteString
+      getXrefPersonIdBytes() {
+        java.lang.Object ref = xrefPersonId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                          (java.lang.String) ref);
+          xrefPersonId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      /**
+       * <code>optional string xrefPersonId = 8;</code>
+       * @param value The bytes for xrefPersonId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setXrefPersonIdBytes(
+              com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000004;
+        xrefPersonId_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>optional string xrefPersonId = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearXrefPersonId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        xrefPersonId_ = getDefaultInstance().getXrefPersonId();
+        onChanged();
+        return this;
+      }
+
+      private void ensureRecentCasesIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          recentCases_ = new java.util.ArrayList<muni.model.Model.Case>(recentCases_);
+          bitField0_ |= 0x00000008;
+        }
+      }
+
+      /**
+       * <code>repeated .muni.model.Case recentCases = 9;</code>
+       */
+      public java.util.List<muni.model.Model.Case> getRecentCasesList() {
+        if (recentCasesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(recentCases_);
+        } else {
+          return recentCasesBuilder_.getMessageList();
+        }
+      }
+
+      /**
+       * <code>repeated .muni.model.Case recentCases = 9;</code>
+       */
+      public int getRecentCasesCount() {
+        if (recentCasesBuilder_ == null) {
+          return recentCases_.size();
+        } else {
+          return recentCasesBuilder_.getCount();
+        }
+      }
+
+      /**
+       * <code>repeated .muni.model.Case recentCases = 9;</code>
+       */
+      public muni.model.Model.Case getRecentCases(int index) {
+        if (recentCasesBuilder_ == null) {
+          return recentCases_.get(index);
+        } else {
+          return recentCasesBuilder_.getMessage(index);
+        }
+      }
+
+      /**
+       * <code>repeated .muni.model.Case recentCases = 9;</code>
+       */
+      public Builder setRecentCases(
+              int index, muni.model.Model.Case value) {
+        if (recentCasesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRecentCasesIsMutable();
+          recentCases_.set(index, value);
+          onChanged();
+        } else {
+          recentCasesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+
+      /**
+       * <code>repeated .muni.model.Case recentCases = 9;</code>
+       */
+      public Builder setRecentCases(
+              int index, muni.model.Model.Case.Builder builderForValue) {
+        if (recentCasesBuilder_ == null) {
+          ensureRecentCasesIsMutable();
+          recentCases_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          recentCasesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+
+      /**
+       * <code>repeated .muni.model.Case recentCases = 9;</code>
+       */
+      public Builder addRecentCases(muni.model.Model.Case value) {
+        if (recentCasesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRecentCasesIsMutable();
+          recentCases_.add(value);
+          onChanged();
+        } else {
+          recentCasesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+
+      /**
+       * <code>repeated .muni.model.Case recentCases = 9;</code>
+       */
+      public Builder addRecentCases(
+              int index, muni.model.Model.Case value) {
+        if (recentCasesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRecentCasesIsMutable();
+          recentCases_.add(index, value);
+          onChanged();
+        } else {
+          recentCasesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+
+      /**
+       * <code>repeated .muni.model.Case recentCases = 9;</code>
+       */
+      public Builder addRecentCases(
+              muni.model.Model.Case.Builder builderForValue) {
+        if (recentCasesBuilder_ == null) {
+          ensureRecentCasesIsMutable();
+          recentCases_.add(builderForValue.build());
+          onChanged();
+        } else {
+          recentCasesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+
+      /**
+       * <code>repeated .muni.model.Case recentCases = 9;</code>
+       */
+      public Builder addRecentCases(
+              int index, muni.model.Model.Case.Builder builderForValue) {
+        if (recentCasesBuilder_ == null) {
+          ensureRecentCasesIsMutable();
+          recentCases_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          recentCasesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+
+      /**
+       * <code>repeated .muni.model.Case recentCases = 9;</code>
+       */
+      public Builder addAllRecentCases(
+              java.lang.Iterable<? extends muni.model.Model.Case> values) {
+        if (recentCasesBuilder_ == null) {
+          ensureRecentCasesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                  values, recentCases_);
+          onChanged();
+        } else {
+          recentCasesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+
+      /**
+       * <code>repeated .muni.model.Case recentCases = 9;</code>
+       */
+      public Builder clearRecentCases() {
+        if (recentCasesBuilder_ == null) {
+          recentCases_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          recentCasesBuilder_.clear();
+        }
+        return this;
+      }
+
+      /**
+       * <code>repeated .muni.model.Case recentCases = 9;</code>
+       */
+      public Builder removeRecentCases(int index) {
+        if (recentCasesBuilder_ == null) {
+          ensureRecentCasesIsMutable();
+          recentCases_.remove(index);
+          onChanged();
+        } else {
+          recentCasesBuilder_.remove(index);
+        }
+        return this;
+      }
+
+      /**
+       * <code>repeated .muni.model.Case recentCases = 9;</code>
+       */
+      public muni.model.Model.Case.Builder getRecentCasesBuilder(
+              int index) {
+        return getRecentCasesFieldBuilder().getBuilder(index);
+      }
+
+      /**
+       * <code>repeated .muni.model.Case recentCases = 9;</code>
+       */
+      public muni.model.Model.CaseOrBuilder getRecentCasesOrBuilder(
+              int index) {
+        if (recentCasesBuilder_ == null) {
+          return recentCases_.get(index);
+        } else {
+          return recentCasesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+
+      /**
+       * <code>repeated .muni.model.Case recentCases = 9;</code>
+       */
+      public java.util.List<? extends muni.model.Model.CaseOrBuilder>
+      getRecentCasesOrBuilderList() {
+        if (recentCasesBuilder_ != null) {
+          return recentCasesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(recentCases_);
+        }
+      }
+
+      /**
+       * <code>repeated .muni.model.Case recentCases = 9;</code>
+       */
+      public muni.model.Model.Case.Builder addRecentCasesBuilder() {
+        return getRecentCasesFieldBuilder().addBuilder(
+                muni.model.Model.Case.getDefaultInstance());
+      }
+
+      /**
+       * <code>repeated .muni.model.Case recentCases = 9;</code>
+       */
+      public muni.model.Model.Case.Builder addRecentCasesBuilder(
+              int index) {
+        return getRecentCasesFieldBuilder().addBuilder(
+                index, muni.model.Model.Case.getDefaultInstance());
+      }
+
+      /**
+       * <code>repeated .muni.model.Case recentCases = 9;</code>
+       */
+      public java.util.List<muni.model.Model.Case.Builder>
+      getRecentCasesBuilderList() {
+        return getRecentCasesFieldBuilder().getBuilderList();
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+              muni.model.Model.Case, muni.model.Model.Case.Builder, muni.model.Model.CaseOrBuilder>
+      getRecentCasesFieldBuilder() {
+        if (recentCasesBuilder_ == null) {
+          recentCasesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+                  muni.model.Model.Case, muni.model.Model.Case.Builder, muni.model.Model.CaseOrBuilder>(
+                  recentCases_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          recentCases_ = null;
+        }
+        return recentCasesBuilder_;
+      }
+
+      /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
+       * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
+       * @return Whether the createTime field is set.
+       */
+      public boolean hasCreateTime() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+
+      /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
+       * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
+       * @return The createTime.
+       */
+      public com.google.protobuf.Timestamp getCreateTime() {
+        if (createTimeBuilder_ == null) {
+          return createTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createTime_;
+        } else {
+          return createTimeBuilder_.getMessage();
+        }
+      }
+
+      /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
+       * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
+       */
+      public Builder setCreateTime(com.google.protobuf.Timestamp value) {
+        if (createTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          createTime_ = value;
+          onChanged();
+        } else {
+          createTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+
+      /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
+       * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
+       */
+      public Builder setCreateTime(
+              com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (createTimeBuilder_ == null) {
+          createTime_ = builderForValue.build();
+          onChanged();
+        } else {
+          createTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+
+      /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
+       * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
+       */
+      public Builder mergeCreateTime(com.google.protobuf.Timestamp value) {
+        if (createTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+                  createTime_ != null &&
+                  createTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            createTime_ =
+                    com.google.protobuf.Timestamp.newBuilder(createTime_).mergeFrom(value).buildPartial();
+          } else {
+            createTime_ = value;
+          }
+          onChanged();
+        } else {
+          createTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+
+      /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
+       * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
+       */
+      public Builder clearCreateTime() {
+        if (createTimeBuilder_ == null) {
+          createTime_ = null;
+          onChanged();
+        } else {
+          createTimeBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+
+      /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
+       * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getCreateTimeBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getCreateTimeFieldBuilder().getBuilder();
+      }
+
+      /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
+       * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder() {
+        if (createTimeBuilder_ != null) {
+          return createTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return createTime_ == null ?
+                  com.google.protobuf.Timestamp.getDefaultInstance() : createTime_;
+        }
+      }
+
+      /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
+       * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>
+      getCreateTimeFieldBuilder() {
+        if (createTimeBuilder_ == null) {
+          createTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                  com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getCreateTime(),
+                  getParentForChildren(),
+                  isClean());
+          createTime_ = null;
+        }
+        return createTimeBuilder_;
+      }
+
+      /**
+       * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
+       * @return Whether the updateTime field is set.
+       */
+      public boolean hasUpdateTime() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+
+      /**
+       * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
+       * @return The updateTime.
+       */
+      public com.google.protobuf.Timestamp getUpdateTime() {
+        if (updateTimeBuilder_ == null) {
+          return updateTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updateTime_;
+        } else {
+          return updateTimeBuilder_.getMessage();
+        }
+      }
+
+      /**
+       * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
+       */
+      public Builder setUpdateTime(com.google.protobuf.Timestamp value) {
+        if (updateTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          updateTime_ = value;
+          onChanged();
+        } else {
+          updateTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        return this;
+      }
+
+      /**
+       * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
+       */
+      public Builder setUpdateTime(
+              com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (updateTimeBuilder_ == null) {
+          updateTime_ = builderForValue.build();
+          onChanged();
+        } else {
+          updateTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        return this;
+      }
+
+      /**
+       * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
+       */
+      public Builder mergeUpdateTime(com.google.protobuf.Timestamp value) {
+        if (updateTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+                  updateTime_ != null &&
+                  updateTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            updateTime_ =
+                    com.google.protobuf.Timestamp.newBuilder(updateTime_).mergeFrom(value).buildPartial();
+          } else {
+            updateTime_ = value;
+          }
+          onChanged();
+        } else {
+          updateTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000020;
+        return this;
+      }
+
+      /**
+       * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
+       */
+      public Builder clearUpdateTime() {
+        if (updateTimeBuilder_ == null) {
+          updateTime_ = null;
+          onChanged();
+        } else {
+          updateTimeBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        return this;
+      }
+
+      /**
+       * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getUpdateTimeBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getUpdateTimeFieldBuilder().getBuilder();
+      }
+
+      /**
+       * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder() {
+        if (updateTimeBuilder_ != null) {
+          return updateTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return updateTime_ == null ?
+                  com.google.protobuf.Timestamp.getDefaultInstance() : updateTime_;
+        }
+      }
+
+      /**
+       * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>
+      getUpdateTimeFieldBuilder() {
+        if (updateTimeBuilder_ == null) {
+          updateTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                  com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getUpdateTime(),
+                  getParentForChildren(),
+                  isClean());
+          updateTime_ = null;
+        }
+        return updateTimeBuilder_;
+      }
+
+      /**
+       * <code>optional .google.protobuf.Timestamp subsysRefreshTime = 3;</code>
+       * @return Whether the subsysRefreshTime field is set.
+       */
+      public boolean hasSubsysRefreshTime() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+
+      /**
+       * <code>optional .google.protobuf.Timestamp subsysRefreshTime = 3;</code>
+       * @return The subsysRefreshTime.
+       */
+      public com.google.protobuf.Timestamp getSubsysRefreshTime() {
+        if (subsysRefreshTimeBuilder_ == null) {
+          return subsysRefreshTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : subsysRefreshTime_;
+        } else {
+          return subsysRefreshTimeBuilder_.getMessage();
+        }
+      }
+
+      /**
+       * <code>optional .google.protobuf.Timestamp subsysRefreshTime = 3;</code>
+       */
+      public Builder setSubsysRefreshTime(com.google.protobuf.Timestamp value) {
+        if (subsysRefreshTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          subsysRefreshTime_ = value;
+          onChanged();
+        } else {
+          subsysRefreshTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000040;
+        return this;
+      }
+
+      /**
+       * <code>optional .google.protobuf.Timestamp subsysRefreshTime = 3;</code>
+       */
+      public Builder setSubsysRefreshTime(
+              com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (subsysRefreshTimeBuilder_ == null) {
+          subsysRefreshTime_ = builderForValue.build();
+          onChanged();
+        } else {
+          subsysRefreshTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000040;
+        return this;
+      }
+
+      /**
+       * <code>optional .google.protobuf.Timestamp subsysRefreshTime = 3;</code>
+       */
+      public Builder mergeSubsysRefreshTime(com.google.protobuf.Timestamp value) {
+        if (subsysRefreshTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0) &&
+                  subsysRefreshTime_ != null &&
+                  subsysRefreshTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            subsysRefreshTime_ =
+                    com.google.protobuf.Timestamp.newBuilder(subsysRefreshTime_).mergeFrom(value).buildPartial();
+          } else {
+            subsysRefreshTime_ = value;
+          }
+          onChanged();
+        } else {
+          subsysRefreshTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000040;
+        return this;
+      }
+
+      /**
+       * <code>optional .google.protobuf.Timestamp subsysRefreshTime = 3;</code>
+       */
+      public Builder clearSubsysRefreshTime() {
+        if (subsysRefreshTimeBuilder_ == null) {
+          subsysRefreshTime_ = null;
+          onChanged();
+        } else {
+          subsysRefreshTimeBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
+        return this;
+      }
+
+      /**
+       * <code>optional .google.protobuf.Timestamp subsysRefreshTime = 3;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getSubsysRefreshTimeBuilder() {
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return getSubsysRefreshTimeFieldBuilder().getBuilder();
+      }
+
+      /**
+       * <code>optional .google.protobuf.Timestamp subsysRefreshTime = 3;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getSubsysRefreshTimeOrBuilder() {
+        if (subsysRefreshTimeBuilder_ != null) {
+          return subsysRefreshTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return subsysRefreshTime_ == null ?
+                  com.google.protobuf.Timestamp.getDefaultInstance() : subsysRefreshTime_;
+        }
+      }
+
+      /**
+       * <code>optional .google.protobuf.Timestamp subsysRefreshTime = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>
+      getSubsysRefreshTimeFieldBuilder() {
+        if (subsysRefreshTimeBuilder_ == null) {
+          subsysRefreshTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                  com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getSubsysRefreshTime(),
+                  getParentForChildren(),
+                  isClean());
+          subsysRefreshTime_ = null;
+        }
+        return subsysRefreshTimeBuilder_;
+      }
+
+      @java.lang.Override
+      public final Builder setUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:muni.model.Xref)
+    }
+
+    // @@protoc_insertion_point(class_scope:muni.model.Xref)
+    private static final muni.model.Model.Xref DEFAULT_INSTANCE;
+
+    static {
+      DEFAULT_INSTANCE = new muni.model.Model.Xref();
+    }
+
+    public static muni.model.Model.Xref getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated
+    public static final com.google.protobuf.Parser<Xref>
+            PARSER = new com.google.protobuf.AbstractParser<Xref>() {
+      @java.lang.Override
+      public Xref parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Xref(input, extensionRegistry);
+      }
     };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.protobuf.TimestampProto.getDescriptor(),
-          com.google.protobuf.AnyProto.getDescriptor(),
-        });
-    internal_static_muni_model_Person_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_muni_model_Person_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_muni_model_Person_descriptor,
-        new java.lang.String[] { "Id", "FirstName", "LastName", "Email", "Phone1", "Phone2", "Address", "XrefAccounts", "CreateTime", "UpdateTime", });
-    internal_static_muni_model_Person_XrefAccountsEntry_descriptor =
-      internal_static_muni_model_Person_descriptor.getNestedTypes().get(0);
-    internal_static_muni_model_Person_XrefAccountsEntry_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_muni_model_Person_XrefAccountsEntry_descriptor,
-        new java.lang.String[] { "Key", "Value", });
-    internal_static_muni_model_Xref_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_muni_model_Xref_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_muni_model_Xref_descriptor,
-        new java.lang.String[] { "SysId", "PersonId", "RecentCases", });
-    internal_static_muni_model_PostalAddress_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_muni_model_PostalAddress_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_muni_model_PostalAddress_descriptor,
-        new java.lang.String[] { "Id", "StreetNum", "StreetName", "City", "Province", "Country", "PostalCode", "Lat", "Lon", "CreateTime", "UpdateTime", });
-    internal_static_muni_model_Case_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_muni_model_Case_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_muni_model_Case_descriptor,
-        new java.lang.String[] { "Id", "Status", "ReportedByCustomer", "CreatedByEmployee", "Tags", "Description", "CreateTime", "UpdateTime", });
-    internal_static_muni_model_Organization_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_muni_model_Organization_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_muni_model_Organization_descriptor,
-        new java.lang.String[] { "Id", "Name", "Website", "Email", "Phone1", "Phone2", "Address", "ContactPerson", "CreateTime", "UpdateTime", });
-    internal_static_muni_model_ErrorInfo_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_muni_model_ErrorInfo_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_muni_model_ErrorInfo_descriptor,
-        new java.lang.String[] { "Message", "Details", });
-    com.google.protobuf.TimestampProto.getDescriptor();
-    com.google.protobuf.AnyProto.getDescriptor();
+
+    public static com.google.protobuf.Parser<Xref> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Xref> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public muni.model.Model.Xref getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
   }
 
   // @@protoc_insertion_point(outer_class_scope)

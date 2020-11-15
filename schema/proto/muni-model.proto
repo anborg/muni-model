@@ -27,9 +27,17 @@ message Person{
 }
 
 message Xref{
-  optional string sysId = 1; // {"AMANDA"|"HANSEN" ...}
-  optional string personId = 2;
-  repeated Case recentCases = 3;
+  optional string id = 6;
+  optional string xrefSysId = 7; // {"AMANDA"|"HANSEN" ...}
+  optional string xrefPersonId = 8;
+  repeated Case recentCases = 9;
+
+  //Output only
+  optional google.protobuf.Timestamp createTime = 1;
+  optional google.protobuf.Timestamp updateTime = 2;
+  optional google.protobuf.Timestamp subsysRefreshTime = 3;
+
+
 }
 //Listed in the order of dependency
 message PostalAddress{
