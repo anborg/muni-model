@@ -18,23 +18,26 @@ message Person{
   optional string phone2 = 8;
   optional PostalAddress address = 9; //For objects no need for optional, hasAddress() works
   //optional  bool dirty = 10 [default = false];//for boolean getDirty() default is enough, no need for optional
-  map<string, Xref> xrefAccounts = 11;
+  map<string, Xref> xrefAccounts = 11; // Will be empty for Subsystem Person objects.
 
 
   //Output only
   optional google.protobuf.Timestamp createTime = 1;
+  //Output only
   optional google.protobuf.Timestamp updateTime = 2;
 }
 
 message Xref{
-  optional string id = 6;
-  optional string xrefSysId = 7; // {"AMANDA"|"HANSEN" ...}
+  optional string id = 6; //Person.id, may be redundant, Stored in db.
+  optional string xrefSystemId = 7; // {"AMANDA"|"HANSEN" ...}
   optional string xrefPersonId = 8;
   repeated Case recentCases = 9;
 
   //Output only
   optional google.protobuf.Timestamp createTime = 1;
+  //Output only
   optional google.protobuf.Timestamp updateTime = 2;
+  //Output only  - updated by person/{id}/xref/{subsysId}/sync
   optional google.protobuf.Timestamp subsysRefreshTime = 3;
 
 

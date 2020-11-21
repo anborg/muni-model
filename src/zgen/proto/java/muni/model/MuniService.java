@@ -1462,1456 +1462,21 @@ public final class MuniService {
 
   }
 
-  public interface SearchResOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:muni.model.SearchRes)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>optional string status = 1;</code>
-     * @return Whether the status field is set.
-     */
-    boolean hasStatus();
-    /**
-     * <code>optional string status = 1;</code>
-     * @return The status.
-     */
-    java.lang.String getStatus();
-    /**
-     * <code>optional string status = 1;</code>
-     * @return The bytes for status.
-     */
-    com.google.protobuf.ByteString
-        getStatusBytes();
-
-    /**
-     * <code>optional int32 count = 2;</code>
-     * @return Whether the count field is set.
-     */
-    boolean hasCount();
-    /**
-     * <code>optional int32 count = 2;</code>
-     * @return The count.
-     */
-    int getCount();
-
-    /**
-     * <code>optional .muni.model.ErrorInfo error = 3;</code>
-     * @return Whether the error field is set.
-     */
-    boolean hasError();
-    /**
-     * <code>optional .muni.model.ErrorInfo error = 3;</code>
-     * @return The error.
-     */
-    muni.model.Model.ErrorInfo getError();
-    /**
-     * <code>optional .muni.model.ErrorInfo error = 3;</code>
-     */
-    muni.model.Model.ErrorInfoOrBuilder getErrorOrBuilder();
-
-    /**
-     * <code>.muni.model.PersonList personList = 10;</code>
-     * @return Whether the personList field is set.
-     */
-    boolean hasPersonList();
-    /**
-     * <code>.muni.model.PersonList personList = 10;</code>
-     * @return The personList.
-     */
-    muni.model.MuniService.PersonList getPersonList();
-    /**
-     * <code>.muni.model.PersonList personList = 10;</code>
-     */
-    muni.model.MuniService.PersonListOrBuilder getPersonListOrBuilder();
-
-    /**
-     * <code>.muni.model.PostalAddressList postalAddressList = 11;</code>
-     * @return Whether the postalAddressList field is set.
-     */
-    boolean hasPostalAddressList();
-    /**
-     * <code>.muni.model.PostalAddressList postalAddressList = 11;</code>
-     * @return The postalAddressList.
-     */
-    muni.model.MuniService.PostalAddressList getPostalAddressList();
-    /**
-     * <code>.muni.model.PostalAddressList postalAddressList = 11;</code>
-     */
-    muni.model.MuniService.PostalAddressListOrBuilder getPostalAddressListOrBuilder();
-
-    muni.model.MuniService.SearchRes.ResCase getResCase();
-  }
-  /**
-   * Protobuf type {@code muni.model.SearchRes}
-   */
-  public static final class SearchRes extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:muni.model.SearchRes)
-      SearchResOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use SearchRes.newBuilder() to construct.
-    private SearchRes(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private SearchRes() {
-      status_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new SearchRes();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private SearchRes(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000001;
-              status_ = bs;
-              break;
-            }
-            case 16: {
-              bitField0_ |= 0x00000002;
-              count_ = input.readInt32();
-              break;
-            }
-            case 26: {
-              muni.model.Model.ErrorInfo.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000004) != 0)) {
-                subBuilder = error_.toBuilder();
-              }
-              error_ = input.readMessage(muni.model.Model.ErrorInfo.PARSER, extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(error_);
-                error_ = subBuilder.buildPartial();
-              }
-              bitField0_ |= 0x00000004;
-              break;
-            }
-            case 82: {
-              muni.model.MuniService.PersonList.Builder subBuilder = null;
-              if (resCase_ == 10) {
-                subBuilder = ((muni.model.MuniService.PersonList) res_).toBuilder();
-              }
-              res_ =
-                  input.readMessage(muni.model.MuniService.PersonList.PARSER, extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((muni.model.MuniService.PersonList) res_);
-                res_ = subBuilder.buildPartial();
-              }
-              resCase_ = 10;
-              break;
-            }
-            case 90: {
-              muni.model.MuniService.PostalAddressList.Builder subBuilder = null;
-              if (resCase_ == 11) {
-                subBuilder = ((muni.model.MuniService.PostalAddressList) res_).toBuilder();
-              }
-              res_ =
-                  input.readMessage(muni.model.MuniService.PostalAddressList.PARSER, extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((muni.model.MuniService.PostalAddressList) res_);
-                res_ = subBuilder.buildPartial();
-              }
-              resCase_ = 11;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return muni.model.MuniService.internal_static_muni_model_SearchRes_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return muni.model.MuniService.internal_static_muni_model_SearchRes_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              muni.model.MuniService.SearchRes.class, muni.model.MuniService.SearchRes.Builder.class);
-    }
-
-    private int bitField0_;
-    private int resCase_ = 0;
-    private java.lang.Object res_;
-    public enum ResCase
-        implements com.google.protobuf.Internal.EnumLite,
-            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-      PERSONLIST(10),
-      POSTALADDRESSLIST(11),
-      RES_NOT_SET(0);
-      private final int value;
-      ResCase(int value) {
-        this.value = value;
-      }
-      /**
-       * @param value The number of the enum to look for.
-       * @return The enum associated with the given number.
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static ResCase valueOf(int value) {
-        return forNumber(value);
-      }
-
-      public static ResCase forNumber(int value) {
-        switch (value) {
-          case 10: return PERSONLIST;
-          case 11: return POSTALADDRESSLIST;
-          case 0: return RES_NOT_SET;
-          default: return null;
-        }
-      }
-      public int getNumber() {
-        return this.value;
-      }
-    }
-
-    public ResCase
-    getResCase() {
-      return ResCase.forNumber(
-          resCase_);
-    }
-
-    public static final int STATUS_FIELD_NUMBER = 1;
-    private volatile java.lang.Object status_;
-    /**
-     * <code>optional string status = 1;</code>
-     * @return Whether the status field is set.
-     */
-    @java.lang.Override
-    public boolean hasStatus() {
-      return ((bitField0_ & 0x00000001) != 0);
-    }
-    /**
-     * <code>optional string status = 1;</code>
-     * @return The status.
-     */
-    @java.lang.Override
-    public java.lang.String getStatus() {
-      java.lang.Object ref = status_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          status_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string status = 1;</code>
-     * @return The bytes for status.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getStatusBytes() {
-      java.lang.Object ref = status_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        status_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int COUNT_FIELD_NUMBER = 2;
-    private int count_;
-    /**
-     * <code>optional int32 count = 2;</code>
-     * @return Whether the count field is set.
-     */
-    @java.lang.Override
-    public boolean hasCount() {
-      return ((bitField0_ & 0x00000002) != 0);
-    }
-    /**
-     * <code>optional int32 count = 2;</code>
-     * @return The count.
-     */
-    @java.lang.Override
-    public int getCount() {
-      return count_;
-    }
-
-    public static final int ERROR_FIELD_NUMBER = 3;
-    private muni.model.Model.ErrorInfo error_;
-    /**
-     * <code>optional .muni.model.ErrorInfo error = 3;</code>
-     * @return Whether the error field is set.
-     */
-    @java.lang.Override
-    public boolean hasError() {
-      return ((bitField0_ & 0x00000004) != 0);
-    }
-    /**
-     * <code>optional .muni.model.ErrorInfo error = 3;</code>
-     * @return The error.
-     */
-    @java.lang.Override
-    public muni.model.Model.ErrorInfo getError() {
-      return error_ == null ? muni.model.Model.ErrorInfo.getDefaultInstance() : error_;
-    }
-    /**
-     * <code>optional .muni.model.ErrorInfo error = 3;</code>
-     */
-    @java.lang.Override
-    public muni.model.Model.ErrorInfoOrBuilder getErrorOrBuilder() {
-      return error_ == null ? muni.model.Model.ErrorInfo.getDefaultInstance() : error_;
-    }
-
-    public static final int PERSONLIST_FIELD_NUMBER = 10;
-    /**
-     * <code>.muni.model.PersonList personList = 10;</code>
-     * @return Whether the personList field is set.
-     */
-    @java.lang.Override
-    public boolean hasPersonList() {
-      return resCase_ == 10;
-    }
-    /**
-     * <code>.muni.model.PersonList personList = 10;</code>
-     * @return The personList.
-     */
-    @java.lang.Override
-    public muni.model.MuniService.PersonList getPersonList() {
-      if (resCase_ == 10) {
-         return (muni.model.MuniService.PersonList) res_;
-      }
-      return muni.model.MuniService.PersonList.getDefaultInstance();
-    }
-    /**
-     * <code>.muni.model.PersonList personList = 10;</code>
-     */
-    @java.lang.Override
-    public muni.model.MuniService.PersonListOrBuilder getPersonListOrBuilder() {
-      if (resCase_ == 10) {
-         return (muni.model.MuniService.PersonList) res_;
-      }
-      return muni.model.MuniService.PersonList.getDefaultInstance();
-    }
-
-    public static final int POSTALADDRESSLIST_FIELD_NUMBER = 11;
-    /**
-     * <code>.muni.model.PostalAddressList postalAddressList = 11;</code>
-     * @return Whether the postalAddressList field is set.
-     */
-    @java.lang.Override
-    public boolean hasPostalAddressList() {
-      return resCase_ == 11;
-    }
-    /**
-     * <code>.muni.model.PostalAddressList postalAddressList = 11;</code>
-     * @return The postalAddressList.
-     */
-    @java.lang.Override
-    public muni.model.MuniService.PostalAddressList getPostalAddressList() {
-      if (resCase_ == 11) {
-         return (muni.model.MuniService.PostalAddressList) res_;
-      }
-      return muni.model.MuniService.PostalAddressList.getDefaultInstance();
-    }
-    /**
-     * <code>.muni.model.PostalAddressList postalAddressList = 11;</code>
-     */
-    @java.lang.Override
-    public muni.model.MuniService.PostalAddressListOrBuilder getPostalAddressListOrBuilder() {
-      if (resCase_ == 11) {
-         return (muni.model.MuniService.PostalAddressList) res_;
-      }
-      return muni.model.MuniService.PostalAddressList.getDefaultInstance();
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, status_);
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeInt32(2, count_);
-      }
-      if (((bitField0_ & 0x00000004) != 0)) {
-        output.writeMessage(3, getError());
-      }
-      if (resCase_ == 10) {
-        output.writeMessage(10, (muni.model.MuniService.PersonList) res_);
-      }
-      if (resCase_ == 11) {
-        output.writeMessage(11, (muni.model.MuniService.PostalAddressList) res_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, status_);
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, count_);
-      }
-      if (((bitField0_ & 0x00000004) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getError());
-      }
-      if (resCase_ == 10) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(10, (muni.model.MuniService.PersonList) res_);
-      }
-      if (resCase_ == 11) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(11, (muni.model.MuniService.PostalAddressList) res_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof muni.model.MuniService.SearchRes)) {
-        return super.equals(obj);
-      }
-      muni.model.MuniService.SearchRes other = (muni.model.MuniService.SearchRes) obj;
-
-      if (hasStatus() != other.hasStatus()) return false;
-      if (hasStatus()) {
-        if (!getStatus()
-            .equals(other.getStatus())) return false;
-      }
-      if (hasCount() != other.hasCount()) return false;
-      if (hasCount()) {
-        if (getCount()
-            != other.getCount()) return false;
-      }
-      if (hasError() != other.hasError()) return false;
-      if (hasError()) {
-        if (!getError()
-            .equals(other.getError())) return false;
-      }
-      if (!getResCase().equals(other.getResCase())) return false;
-      switch (resCase_) {
-        case 10:
-          if (!getPersonList()
-              .equals(other.getPersonList())) return false;
-          break;
-        case 11:
-          if (!getPostalAddressList()
-              .equals(other.getPostalAddressList())) return false;
-          break;
-        case 0:
-        default:
-      }
-      return unknownFields.equals(other.unknownFields);
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasStatus()) {
-        hash = (37 * hash) + STATUS_FIELD_NUMBER;
-        hash = (53 * hash) + getStatus().hashCode();
-      }
-      if (hasCount()) {
-        hash = (37 * hash) + COUNT_FIELD_NUMBER;
-        hash = (53 * hash) + getCount();
-      }
-      if (hasError()) {
-        hash = (37 * hash) + ERROR_FIELD_NUMBER;
-        hash = (53 * hash) + getError().hashCode();
-      }
-      switch (resCase_) {
-        case 10:
-          hash = (37 * hash) + PERSONLIST_FIELD_NUMBER;
-          hash = (53 * hash) + getPersonList().hashCode();
-          break;
-        case 11:
-          hash = (37 * hash) + POSTALADDRESSLIST_FIELD_NUMBER;
-          hash = (53 * hash) + getPostalAddressList().hashCode();
-          break;
-        case 0:
-        default:
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static muni.model.MuniService.SearchRes parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static muni.model.MuniService.SearchRes parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static muni.model.MuniService.SearchRes parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static muni.model.MuniService.SearchRes parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static muni.model.MuniService.SearchRes parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static muni.model.MuniService.SearchRes parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static muni.model.MuniService.SearchRes parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static muni.model.MuniService.SearchRes parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static muni.model.MuniService.SearchRes parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static muni.model.MuniService.SearchRes parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static muni.model.MuniService.SearchRes parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static muni.model.MuniService.SearchRes parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(muni.model.MuniService.SearchRes prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code muni.model.SearchRes}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:muni.model.SearchRes)
-        muni.model.MuniService.SearchResOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return muni.model.MuniService.internal_static_muni_model_SearchRes_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return muni.model.MuniService.internal_static_muni_model_SearchRes_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                muni.model.MuniService.SearchRes.class, muni.model.MuniService.SearchRes.Builder.class);
-      }
-
-      // Construct using muni.model.MuniService.SearchRes.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getErrorFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        status_ = "";
-        bitField0_ = (bitField0_ & ~0x00000001);
-        count_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        if (errorBuilder_ == null) {
-          error_ = null;
-        } else {
-          errorBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000004);
-        resCase_ = 0;
-        res_ = null;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return muni.model.MuniService.internal_static_muni_model_SearchRes_descriptor;
-      }
-
-      @java.lang.Override
-      public muni.model.MuniService.SearchRes getDefaultInstanceForType() {
-        return muni.model.MuniService.SearchRes.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public muni.model.MuniService.SearchRes build() {
-        muni.model.MuniService.SearchRes result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public muni.model.MuniService.SearchRes buildPartial() {
-        muni.model.MuniService.SearchRes result = new muni.model.MuniService.SearchRes(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.status_ = status_;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.count_ = count_;
-          to_bitField0_ |= 0x00000002;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          if (errorBuilder_ == null) {
-            result.error_ = error_;
-          } else {
-            result.error_ = errorBuilder_.build();
-          }
-          to_bitField0_ |= 0x00000004;
-        }
-        if (resCase_ == 10) {
-          if (personListBuilder_ == null) {
-            result.res_ = res_;
-          } else {
-            result.res_ = personListBuilder_.build();
-          }
-        }
-        if (resCase_ == 11) {
-          if (postalAddressListBuilder_ == null) {
-            result.res_ = res_;
-          } else {
-            result.res_ = postalAddressListBuilder_.build();
-          }
-        }
-        result.bitField0_ = to_bitField0_;
-        result.resCase_ = resCase_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof muni.model.MuniService.SearchRes) {
-          return mergeFrom((muni.model.MuniService.SearchRes)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(muni.model.MuniService.SearchRes other) {
-        if (other == muni.model.MuniService.SearchRes.getDefaultInstance()) return this;
-        if (other.hasStatus()) {
-          bitField0_ |= 0x00000001;
-          status_ = other.status_;
-          onChanged();
-        }
-        if (other.hasCount()) {
-          setCount(other.getCount());
-        }
-        if (other.hasError()) {
-          mergeError(other.getError());
-        }
-        switch (other.getResCase()) {
-          case PERSONLIST: {
-            mergePersonList(other.getPersonList());
-            break;
-          }
-          case POSTALADDRESSLIST: {
-            mergePostalAddressList(other.getPostalAddressList());
-            break;
-          }
-          case RES_NOT_SET: {
-            break;
-          }
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        muni.model.MuniService.SearchRes parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (muni.model.MuniService.SearchRes) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int resCase_ = 0;
-      private java.lang.Object res_;
-      public ResCase
-          getResCase() {
-        return ResCase.forNumber(
-            resCase_);
-      }
-
-      public Builder clearRes() {
-        resCase_ = 0;
-        res_ = null;
-        onChanged();
-        return this;
-      }
-
-      private int bitField0_;
-
-      private java.lang.Object status_ = "";
-      /**
-       * <code>optional string status = 1;</code>
-       * @return Whether the status field is set.
-       */
-      public boolean hasStatus() {
-        return ((bitField0_ & 0x00000001) != 0);
-      }
-      /**
-       * <code>optional string status = 1;</code>
-       * @return The status.
-       */
-      public java.lang.String getStatus() {
-        java.lang.Object ref = status_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            status_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string status = 1;</code>
-       * @return The bytes for status.
-       */
-      public com.google.protobuf.ByteString
-          getStatusBytes() {
-        java.lang.Object ref = status_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          status_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string status = 1;</code>
-       * @param value The status to set.
-       * @return This builder for chaining.
-       */
-      public Builder setStatus(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        status_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string status = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearStatus() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        status_ = getDefaultInstance().getStatus();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string status = 1;</code>
-       * @param value The bytes for status to set.
-       * @return This builder for chaining.
-       */
-      public Builder setStatusBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        status_ = value;
-        onChanged();
-        return this;
-      }
-
-      private int count_ ;
-      /**
-       * <code>optional int32 count = 2;</code>
-       * @return Whether the count field is set.
-       */
-      @java.lang.Override
-      public boolean hasCount() {
-        return ((bitField0_ & 0x00000002) != 0);
-      }
-      /**
-       * <code>optional int32 count = 2;</code>
-       * @return The count.
-       */
-      @java.lang.Override
-      public int getCount() {
-        return count_;
-      }
-      /**
-       * <code>optional int32 count = 2;</code>
-       * @param value The count to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCount(int value) {
-        bitField0_ |= 0x00000002;
-        count_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int32 count = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCount() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        count_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private muni.model.Model.ErrorInfo error_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          muni.model.Model.ErrorInfo, muni.model.Model.ErrorInfo.Builder, muni.model.Model.ErrorInfoOrBuilder> errorBuilder_;
-      /**
-       * <code>optional .muni.model.ErrorInfo error = 3;</code>
-       * @return Whether the error field is set.
-       */
-      public boolean hasError() {
-        return ((bitField0_ & 0x00000004) != 0);
-      }
-      /**
-       * <code>optional .muni.model.ErrorInfo error = 3;</code>
-       * @return The error.
-       */
-      public muni.model.Model.ErrorInfo getError() {
-        if (errorBuilder_ == null) {
-          return error_ == null ? muni.model.Model.ErrorInfo.getDefaultInstance() : error_;
-        } else {
-          return errorBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>optional .muni.model.ErrorInfo error = 3;</code>
-       */
-      public Builder setError(muni.model.Model.ErrorInfo value) {
-        if (errorBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          error_ = value;
-          onChanged();
-        } else {
-          errorBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000004;
-        return this;
-      }
-      /**
-       * <code>optional .muni.model.ErrorInfo error = 3;</code>
-       */
-      public Builder setError(
-          muni.model.Model.ErrorInfo.Builder builderForValue) {
-        if (errorBuilder_ == null) {
-          error_ = builderForValue.build();
-          onChanged();
-        } else {
-          errorBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000004;
-        return this;
-      }
-      /**
-       * <code>optional .muni.model.ErrorInfo error = 3;</code>
-       */
-      public Builder mergeError(muni.model.Model.ErrorInfo value) {
-        if (errorBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0) &&
-              error_ != null &&
-              error_ != muni.model.Model.ErrorInfo.getDefaultInstance()) {
-            error_ =
-              muni.model.Model.ErrorInfo.newBuilder(error_).mergeFrom(value).buildPartial();
-          } else {
-            error_ = value;
-          }
-          onChanged();
-        } else {
-          errorBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000004;
-        return this;
-      }
-      /**
-       * <code>optional .muni.model.ErrorInfo error = 3;</code>
-       */
-      public Builder clearError() {
-        if (errorBuilder_ == null) {
-          error_ = null;
-          onChanged();
-        } else {
-          errorBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000004);
-        return this;
-      }
-      /**
-       * <code>optional .muni.model.ErrorInfo error = 3;</code>
-       */
-      public muni.model.Model.ErrorInfo.Builder getErrorBuilder() {
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return getErrorFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>optional .muni.model.ErrorInfo error = 3;</code>
-       */
-      public muni.model.Model.ErrorInfoOrBuilder getErrorOrBuilder() {
-        if (errorBuilder_ != null) {
-          return errorBuilder_.getMessageOrBuilder();
-        } else {
-          return error_ == null ?
-              muni.model.Model.ErrorInfo.getDefaultInstance() : error_;
-        }
-      }
-      /**
-       * <code>optional .muni.model.ErrorInfo error = 3;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          muni.model.Model.ErrorInfo, muni.model.Model.ErrorInfo.Builder, muni.model.Model.ErrorInfoOrBuilder> 
-          getErrorFieldBuilder() {
-        if (errorBuilder_ == null) {
-          errorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              muni.model.Model.ErrorInfo, muni.model.Model.ErrorInfo.Builder, muni.model.Model.ErrorInfoOrBuilder>(
-                  getError(),
-                  getParentForChildren(),
-                  isClean());
-          error_ = null;
-        }
-        return errorBuilder_;
-      }
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          muni.model.MuniService.PersonList, muni.model.MuniService.PersonList.Builder, muni.model.MuniService.PersonListOrBuilder> personListBuilder_;
-      /**
-       * <code>.muni.model.PersonList personList = 10;</code>
-       * @return Whether the personList field is set.
-       */
-      @java.lang.Override
-      public boolean hasPersonList() {
-        return resCase_ == 10;
-      }
-      /**
-       * <code>.muni.model.PersonList personList = 10;</code>
-       * @return The personList.
-       */
-      @java.lang.Override
-      public muni.model.MuniService.PersonList getPersonList() {
-        if (personListBuilder_ == null) {
-          if (resCase_ == 10) {
-            return (muni.model.MuniService.PersonList) res_;
-          }
-          return muni.model.MuniService.PersonList.getDefaultInstance();
-        } else {
-          if (resCase_ == 10) {
-            return personListBuilder_.getMessage();
-          }
-          return muni.model.MuniService.PersonList.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.muni.model.PersonList personList = 10;</code>
-       */
-      public Builder setPersonList(muni.model.MuniService.PersonList value) {
-        if (personListBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          res_ = value;
-          onChanged();
-        } else {
-          personListBuilder_.setMessage(value);
-        }
-        resCase_ = 10;
-        return this;
-      }
-      /**
-       * <code>.muni.model.PersonList personList = 10;</code>
-       */
-      public Builder setPersonList(
-          muni.model.MuniService.PersonList.Builder builderForValue) {
-        if (personListBuilder_ == null) {
-          res_ = builderForValue.build();
-          onChanged();
-        } else {
-          personListBuilder_.setMessage(builderForValue.build());
-        }
-        resCase_ = 10;
-        return this;
-      }
-      /**
-       * <code>.muni.model.PersonList personList = 10;</code>
-       */
-      public Builder mergePersonList(muni.model.MuniService.PersonList value) {
-        if (personListBuilder_ == null) {
-          if (resCase_ == 10 &&
-              res_ != muni.model.MuniService.PersonList.getDefaultInstance()) {
-            res_ = muni.model.MuniService.PersonList.newBuilder((muni.model.MuniService.PersonList) res_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            res_ = value;
-          }
-          onChanged();
-        } else {
-          if (resCase_ == 10) {
-            personListBuilder_.mergeFrom(value);
-          }
-          personListBuilder_.setMessage(value);
-        }
-        resCase_ = 10;
-        return this;
-      }
-      /**
-       * <code>.muni.model.PersonList personList = 10;</code>
-       */
-      public Builder clearPersonList() {
-        if (personListBuilder_ == null) {
-          if (resCase_ == 10) {
-            resCase_ = 0;
-            res_ = null;
-            onChanged();
-          }
-        } else {
-          if (resCase_ == 10) {
-            resCase_ = 0;
-            res_ = null;
-          }
-          personListBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.muni.model.PersonList personList = 10;</code>
-       */
-      public muni.model.MuniService.PersonList.Builder getPersonListBuilder() {
-        return getPersonListFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.muni.model.PersonList personList = 10;</code>
-       */
-      @java.lang.Override
-      public muni.model.MuniService.PersonListOrBuilder getPersonListOrBuilder() {
-        if ((resCase_ == 10) && (personListBuilder_ != null)) {
-          return personListBuilder_.getMessageOrBuilder();
-        } else {
-          if (resCase_ == 10) {
-            return (muni.model.MuniService.PersonList) res_;
-          }
-          return muni.model.MuniService.PersonList.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.muni.model.PersonList personList = 10;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          muni.model.MuniService.PersonList, muni.model.MuniService.PersonList.Builder, muni.model.MuniService.PersonListOrBuilder> 
-          getPersonListFieldBuilder() {
-        if (personListBuilder_ == null) {
-          if (!(resCase_ == 10)) {
-            res_ = muni.model.MuniService.PersonList.getDefaultInstance();
-          }
-          personListBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              muni.model.MuniService.PersonList, muni.model.MuniService.PersonList.Builder, muni.model.MuniService.PersonListOrBuilder>(
-                  (muni.model.MuniService.PersonList) res_,
-                  getParentForChildren(),
-                  isClean());
-          res_ = null;
-        }
-        resCase_ = 10;
-        onChanged();
-        return personListBuilder_;
-      }
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          muni.model.MuniService.PostalAddressList, muni.model.MuniService.PostalAddressList.Builder, muni.model.MuniService.PostalAddressListOrBuilder> postalAddressListBuilder_;
-      /**
-       * <code>.muni.model.PostalAddressList postalAddressList = 11;</code>
-       * @return Whether the postalAddressList field is set.
-       */
-      @java.lang.Override
-      public boolean hasPostalAddressList() {
-        return resCase_ == 11;
-      }
-      /**
-       * <code>.muni.model.PostalAddressList postalAddressList = 11;</code>
-       * @return The postalAddressList.
-       */
-      @java.lang.Override
-      public muni.model.MuniService.PostalAddressList getPostalAddressList() {
-        if (postalAddressListBuilder_ == null) {
-          if (resCase_ == 11) {
-            return (muni.model.MuniService.PostalAddressList) res_;
-          }
-          return muni.model.MuniService.PostalAddressList.getDefaultInstance();
-        } else {
-          if (resCase_ == 11) {
-            return postalAddressListBuilder_.getMessage();
-          }
-          return muni.model.MuniService.PostalAddressList.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.muni.model.PostalAddressList postalAddressList = 11;</code>
-       */
-      public Builder setPostalAddressList(muni.model.MuniService.PostalAddressList value) {
-        if (postalAddressListBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          res_ = value;
-          onChanged();
-        } else {
-          postalAddressListBuilder_.setMessage(value);
-        }
-        resCase_ = 11;
-        return this;
-      }
-      /**
-       * <code>.muni.model.PostalAddressList postalAddressList = 11;</code>
-       */
-      public Builder setPostalAddressList(
-          muni.model.MuniService.PostalAddressList.Builder builderForValue) {
-        if (postalAddressListBuilder_ == null) {
-          res_ = builderForValue.build();
-          onChanged();
-        } else {
-          postalAddressListBuilder_.setMessage(builderForValue.build());
-        }
-        resCase_ = 11;
-        return this;
-      }
-      /**
-       * <code>.muni.model.PostalAddressList postalAddressList = 11;</code>
-       */
-      public Builder mergePostalAddressList(muni.model.MuniService.PostalAddressList value) {
-        if (postalAddressListBuilder_ == null) {
-          if (resCase_ == 11 &&
-              res_ != muni.model.MuniService.PostalAddressList.getDefaultInstance()) {
-            res_ = muni.model.MuniService.PostalAddressList.newBuilder((muni.model.MuniService.PostalAddressList) res_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            res_ = value;
-          }
-          onChanged();
-        } else {
-          if (resCase_ == 11) {
-            postalAddressListBuilder_.mergeFrom(value);
-          }
-          postalAddressListBuilder_.setMessage(value);
-        }
-        resCase_ = 11;
-        return this;
-      }
-      /**
-       * <code>.muni.model.PostalAddressList postalAddressList = 11;</code>
-       */
-      public Builder clearPostalAddressList() {
-        if (postalAddressListBuilder_ == null) {
-          if (resCase_ == 11) {
-            resCase_ = 0;
-            res_ = null;
-            onChanged();
-          }
-        } else {
-          if (resCase_ == 11) {
-            resCase_ = 0;
-            res_ = null;
-          }
-          postalAddressListBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.muni.model.PostalAddressList postalAddressList = 11;</code>
-       */
-      public muni.model.MuniService.PostalAddressList.Builder getPostalAddressListBuilder() {
-        return getPostalAddressListFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.muni.model.PostalAddressList postalAddressList = 11;</code>
-       */
-      @java.lang.Override
-      public muni.model.MuniService.PostalAddressListOrBuilder getPostalAddressListOrBuilder() {
-        if ((resCase_ == 11) && (postalAddressListBuilder_ != null)) {
-          return postalAddressListBuilder_.getMessageOrBuilder();
-        } else {
-          if (resCase_ == 11) {
-            return (muni.model.MuniService.PostalAddressList) res_;
-          }
-          return muni.model.MuniService.PostalAddressList.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.muni.model.PostalAddressList postalAddressList = 11;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          muni.model.MuniService.PostalAddressList, muni.model.MuniService.PostalAddressList.Builder, muni.model.MuniService.PostalAddressListOrBuilder> 
-          getPostalAddressListFieldBuilder() {
-        if (postalAddressListBuilder_ == null) {
-          if (!(resCase_ == 11)) {
-            res_ = muni.model.MuniService.PostalAddressList.getDefaultInstance();
-          }
-          postalAddressListBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              muni.model.MuniService.PostalAddressList, muni.model.MuniService.PostalAddressList.Builder, muni.model.MuniService.PostalAddressListOrBuilder>(
-                  (muni.model.MuniService.PostalAddressList) res_,
-                  getParentForChildren(),
-                  isClean());
-          res_ = null;
-        }
-        resCase_ = 11;
-        onChanged();
-        return postalAddressListBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:muni.model.SearchRes)
-    }
-
-    // @@protoc_insertion_point(class_scope:muni.model.SearchRes)
-    private static final muni.model.MuniService.SearchRes DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new muni.model.MuniService.SearchRes();
-    }
-
-    public static muni.model.MuniService.SearchRes getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    @java.lang.Deprecated public static final com.google.protobuf.Parser<SearchRes>
-        PARSER = new com.google.protobuf.AbstractParser<SearchRes>() {
-      @java.lang.Override
-      public SearchRes parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new SearchRes(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<SearchRes> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<SearchRes> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public muni.model.MuniService.SearchRes getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
+  private static final
+  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internal_static_muni_model_SearchReqPostalAddress_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.FileDescriptor
+          descriptor;
 
   public interface PersonListOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:muni.model.PersonList)
-      com.google.protobuf.MessageOrBuilder {
+          // @@protoc_insertion_point(interface_extends:muni.model.PersonList)
+          com.google.protobuf.MessageOrBuilder {
 
     /**
      * <code>repeated .muni.model.Person persons = 1;</code>
      */
-    java.util.List<muni.model.Model.Person> 
-        getPersonsList();
+    java.util.List<muni.model.Model.Person>
+    getPersonsList();
     /**
      * <code>repeated .muni.model.Person persons = 1;</code>
      */
@@ -6273,118 +4838,1831 @@ public final class MuniService {
       internal_static_muni_model_SearchReqPerson_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_muni_model_SearchReqPostalAddress_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_muni_model_SearchReqPostalAddress_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
-    return descriptor;
-  }
-  private static final com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\022muni-service.proto\022\nmuni.model\032\034google" +
-      "/api/annotations.proto\032\033google/protobuf/" +
-      "empty.proto\032 google/protobuf/field_mask." +
-      "proto\032\020muni-model.proto\"f\n\017CreatePersonR" +
-      "eq\022\"\n\006person\030\001 \001(\0132\022.muni.model.Person\022/" +
-      "\n\013create_mask\030\002 \001(\0132\032.google.protobuf.Fi" +
-      "eldMask\"\022\n\004ById\022\n\n\002id\030\001 \002(\t\"\301\001\n\tSearchRe" +
-      "s\022\016\n\006status\030\001 \001(\t\022\r\n\005count\030\002 \001(\005\022$\n\005erro" +
-      "r\030\003 \001(\0132\025.muni.model.ErrorInfo\022,\n\nperson" +
-      "List\030\n \001(\0132\026.muni.model.PersonListH\000\022:\n\021" +
-      "postalAddressList\030\013 \001(\0132\035.muni.model.Pos" +
-      "talAddressListH\000B\005\n\003res\"1\n\nPersonList\022#\n" +
-      "\007persons\030\001 \003(\0132\022.muni.model.Person\"A\n\021Po" +
-      "stalAddressList\022,\n\taddresses\030\001 \003(\0132\031.mun" +
-      "i.model.PostalAddress\"f\n\017SearchReqPerson" +
-      "\022\"\n\006person\030\001 \002(\0132\022.muni.model.Person\022/\n\013" +
-      "create_mask\030\002 \001(\0132\032.google.protobuf.Fiel" +
-      "dMask\"{\n\026SearchReqPostalAddress\0220\n\rposta" +
-      "lAddress\030\001 \002(\0132\031.muni.model.PostalAddres" +
-      "s\022/\n\013create_mask\030\002 \001(\0132\032.google.protobuf" +
-      ".FieldMask2\356\002\n\rPersonService\022P\n\003get\022\020.mu" +
-      "ni.model.ById\032\022.muni.model.Person\"#\202\323\344\223\002" +
-      "\035\022\033/mkapp/rest/v1/persons/{id}\022\\\n\006create" +
-      "\022\033.muni.model.CreatePersonReq\032\022.muni.mod" +
-      "el.Person\"!\202\323\344\223\002\033\"\026/mkapp/rest/v1/person" +
-      "s:\001*\022S\n\006update\022\022.muni.model.Person\032\022.mun" +
-      "i.model.Person\"!\202\323\344\223\002\033\"\026/mkapp/rest/v1/p" +
-      "ersons:\001*\022X\n\006getAll\022\026.google.protobuf.Em" +
-      "pty\032\026.muni.model.PersonList\"\036\202\323\344\223\002\030\022\026/mk" +
-      "app/rest/v1/persons2\374\001\n\013CaseService\022K\n\003g" +
-      "et\022\020.muni.model.ById\032\020.muni.model.Case\" " +
-      "\202\323\344\223\002\032\022\030/mkapp/rest/v1/case/{id}\022O\n\006crea" +
-      "te\022\020.muni.model.Case\032\020.muni.model.Case\"!" +
-      "\202\323\344\223\002\033\"\023/mkapp/rest/v1/case:\004case\022O\n\006upd" +
-      "ate\022\020.muni.model.Case\032\020.muni.model.Case\"" +
-      "!\202\323\344\223\002\033\"\023/mkapp/rest/v1/case:\004case2\201\001\n\rS" +
-      "earchService\022p\n\013personsLike\022\033.muni.model" +
-      ".SearchReqPerson\032\025.muni.model.SearchRes\"" +
-              "-\202\323\344\223\002'\"\035/mkapp/rest/v1/search/persons:\006" +
-      "personB\005P\000\210\001\000"
+            "\n\022muni-service.proto\022\nmuni.model\032\034google" +
+                    "/api/annotations.proto\032\033google/protobuf/" +
+                    "empty.proto\032 google/protobuf/field_mask." +
+                    "proto\032\020muni-model.proto\"f\n\017CreatePersonR" +
+                    "eq\022\"\n\006person\030\001 \001(\0132\022.muni.model.Person\022/" +
+                    "\n\013create_mask\030\002 \001(\0132\032.google.protobuf.Fi" +
+                    "eldMask\"\022\n\004ById\022\n\n\002id\030\001 \002(\t\"\301\001\n\tSearchRe" +
+                    "s\022\016\n\006status\030\001 \001(\t\022\r\n\005count\030\002 \001(\005\022$\n\005erro" +
+                    "r\030\003 \001(\0132\025.muni.model.ErrorInfo\022,\n\nperson" +
+                    "List\030\n \001(\0132\026.muni.model.PersonListH\000\022:\n\021" +
+                    "postalAddressList\030\013 \001(\0132\035.muni.model.Pos" +
+                    "talAddressListH\000B\005\n\003res\"1\n\nPersonList\022#\n" +
+                    "\007persons\030\001 \003(\0132\022.muni.model.Person\"A\n\021Po" +
+                    "stalAddressList\022,\n\taddresses\030\001 \003(\0132\031.mun" +
+                    "i.model.PostalAddress\"f\n\017SearchReqPerson" +
+                    "\022\"\n\006person\030\001 \002(\0132\022.muni.model.Person\022/\n\013" +
+                    "create_mask\030\002 \001(\0132\032.google.protobuf.Fiel" +
+                    "dMask\"{\n\026SearchReqPostalAddress\0220\n\rposta" +
+                    "lAddress\030\001 \002(\0132\031.muni.model.PostalAddres" +
+                    "s\022/\n\013create_mask\030\002 \001(\0132\032.google.protobuf" +
+                    ".FieldMask2\267\005\n\rPersonService\022P\n\003get\022\020.mu" +
+                    "ni.model.ById\032\022.muni.model.Person\"#\202\323\344\223\002" +
+                    "\035\022\033/mkapp/rest/v1/persons/{id}\022\\\n\006create" +
+                    "\022\033.muni.model.CreatePersonReq\032\022.muni.mod" +
+                    "el.Person\"!\202\323\344\223\002\033\"\026/mkapp/rest/v1/person" +
+                    "s:\001*\022S\n\006update\022\022.muni.model.Person\032\022.mun" +
+                    "i.model.Person\"!\202\323\344\223\002\033\"\026/mkapp/rest/v1/p" +
+                    "ersons:\001*\022i\n\007xrefAdd\022\020.muni.model.Xref\032\020" +
+                    ".muni.model.Xref\":\202\323\344\223\0024\"//mkapp/rest/v1" +
+                    "/persons/{id}/xref/{subsysId}/add:\001*\022o\n\n" +
+                    "xrefUpdate\022\020.muni.model.Xref\032\020.muni.mode" +
+                    "l.Xref\"=\202\323\344\223\0027\"2/mkapp/rest/v1/persons/{" +
+                    "id}/xref/{subsysId}/update:\001*\022k\n\010xrefSyn" +
+                    "c\022\020.muni.model.Xref\032\020.muni.model.Xref\";\202" +
+                    "\323\344\223\0025\"0/mkapp/rest/v1/persons/{id}/xref/" +
+                    "{subsysId}/sync:\001*\022X\n\006getAll\022\026.google.pr" +
+                    "otobuf.Empty\032\026.muni.model.PersonList\"\036\202\323" +
+                    "\344\223\002\030\022\026/mkapp/rest/v1/persons2\374\001\n\013CaseSer" +
+                    "vice\022K\n\003get\022\020.muni.model.ById\032\020.muni.mod" +
+                    "el.Case\" \202\323\344\223\002\032\022\030/mkapp/rest/v1/case/{id" +
+                    "}\022O\n\006create\022\020.muni.model.Case\032\020.muni.mod" +
+                    "el.Case\"!\202\323\344\223\002\033\"\023/mkapp/rest/v1/case:\004ca" +
+                    "se\022O\n\006update\022\020.muni.model.Case\032\020.muni.mo" +
+                    "del.Case\"!\202\323\344\223\002\033\"\023/mkapp/rest/v1/case:\004c" +
+                    "ase2\201\001\n\rSearchService\022p\n\013personsLike\022\033.m" +
+                    "uni.model.SearchReqPerson\032\025.muni.model.S" +
+                    "earchRes\"-\202\323\344\223\002'\"\035/mkapp/rest/v1/search/" +
+                    "persons:\006personB\005P\000\210\001\000"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
-          com.google.protobuf.EmptyProto.getDescriptor(),
-          com.google.protobuf.FieldMaskProto.getDescriptor(),
-          muni.model.Model.getDescriptor(),
-        });
+            .internalBuildGeneratedFileFrom(descriptorData,
+                    new com.google.protobuf.Descriptors.FileDescriptor[]{
+                            com.google.api.AnnotationsProto.getDescriptor(),
+                            com.google.protobuf.EmptyProto.getDescriptor(),
+                            com.google.protobuf.FieldMaskProto.getDescriptor(),
+                            muni.model.Model.getDescriptor(),
+                    });
     internal_static_muni_model_CreatePersonReq_descriptor =
-      getDescriptor().getMessageTypes().get(0);
+            getDescriptor().getMessageTypes().get(0);
     internal_static_muni_model_CreatePersonReq_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_muni_model_CreatePersonReq_descriptor,
-        new java.lang.String[] { "Person", "CreateMask", });
+            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_muni_model_CreatePersonReq_descriptor,
+            new java.lang.String[]{"Person", "CreateMask",});
     internal_static_muni_model_ById_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+            getDescriptor().getMessageTypes().get(1);
     internal_static_muni_model_ById_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_muni_model_ById_descriptor,
-        new java.lang.String[] { "Id", });
+            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_muni_model_ById_descriptor,
+            new java.lang.String[]{"Id",});
     internal_static_muni_model_SearchRes_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+            getDescriptor().getMessageTypes().get(2);
     internal_static_muni_model_SearchRes_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_muni_model_SearchRes_descriptor,
-        new java.lang.String[] { "Status", "Count", "Error", "PersonList", "PostalAddressList", "Res", });
+            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_muni_model_SearchRes_descriptor,
+            new java.lang.String[]{"Status", "Count", "Error", "PersonList", "PostalAddressList", "Res",});
     internal_static_muni_model_PersonList_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+            getDescriptor().getMessageTypes().get(3);
     internal_static_muni_model_PersonList_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_muni_model_PersonList_descriptor,
-        new java.lang.String[] { "Persons", });
+            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_muni_model_PersonList_descriptor,
+            new java.lang.String[]{"Persons",});
     internal_static_muni_model_PostalAddressList_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+            getDescriptor().getMessageTypes().get(4);
     internal_static_muni_model_PostalAddressList_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_muni_model_PostalAddressList_descriptor,
-        new java.lang.String[] { "Addresses", });
+            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_muni_model_PostalAddressList_descriptor,
+            new java.lang.String[]{"Addresses",});
     internal_static_muni_model_SearchReqPerson_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+            getDescriptor().getMessageTypes().get(5);
     internal_static_muni_model_SearchReqPerson_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_muni_model_SearchReqPerson_descriptor,
-        new java.lang.String[] { "Person", "CreateMask", });
+            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_muni_model_SearchReqPerson_descriptor,
+            new java.lang.String[]{"Person", "CreateMask",});
     internal_static_muni_model_SearchReqPostalAddress_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+            getDescriptor().getMessageTypes().get(6);
     internal_static_muni_model_SearchReqPostalAddress_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_muni_model_SearchReqPostalAddress_descriptor,
-        new java.lang.String[] { "PostalAddress", "CreateMask", });
+            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_muni_model_SearchReqPostalAddress_descriptor,
+            new java.lang.String[]{"PostalAddress", "CreateMask",});
     com.google.protobuf.ExtensionRegistry registry =
-        com.google.protobuf.ExtensionRegistry.newInstance();
+            com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
-        .internalUpdateFileDescriptor(descriptor, registry);
+            .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.EmptyProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     muni.model.Model.getDescriptor();
+  }
+
+  public static com.google.protobuf.Descriptors.FileDescriptor
+  getDescriptor() {
+    return descriptor;
+  }
+
+  public interface SearchResOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:muni.model.SearchRes)
+          com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * success / error?
+     * </pre>
+     *
+     * <code>optional string status = 1;</code>
+     *
+     * @return Whether the status field is set.
+     */
+    boolean hasStatus();
+
+    /**
+     * <pre>
+     * success / error?
+     * </pre>
+     *
+     * <code>optional string status = 1;</code>
+     *
+     * @return The status.
+     */
+    java.lang.String getStatus();
+
+    /**
+     * <pre>
+     * success / error?
+     * </pre>
+     *
+     * <code>optional string status = 1;</code>
+     *
+     * @return The bytes for status.
+     */
+    com.google.protobuf.ByteString
+    getStatusBytes();
+
+    /**
+     * <pre>
+     * num of results
+     * </pre>
+     *
+     * <code>optional int32 count = 2;</code>
+     *
+     * @return Whether the count field is set.
+     */
+    boolean hasCount();
+
+    /**
+     * <pre>
+     * num of results
+     * </pre>
+     *
+     * <code>optional int32 count = 2;</code>
+     *
+     * @return The count.
+     */
+    int getCount();
+
+    /**
+     * <pre>
+     * if error, add detils?
+     * </pre>
+     *
+     * <code>optional .muni.model.ErrorInfo error = 3;</code>
+     *
+     * @return Whether the error field is set.
+     */
+    boolean hasError();
+
+    /**
+     * <pre>
+     * if error, add detils?
+     * </pre>
+     *
+     * <code>optional .muni.model.ErrorInfo error = 3;</code>
+     *
+     * @return The error.
+     */
+    muni.model.Model.ErrorInfo getError();
+
+    /**
+     * <pre>
+     * if error, add detils?
+     * </pre>
+     *
+     * <code>optional .muni.model.ErrorInfo error = 3;</code>
+     */
+    muni.model.Model.ErrorInfoOrBuilder getErrorOrBuilder();
+
+    /**
+     * <code>.muni.model.PersonList personList = 10;</code>
+     *
+     * @return Whether the personList field is set.
+     */
+    boolean hasPersonList();
+
+    /**
+     * <code>.muni.model.PersonList personList = 10;</code>
+     *
+     * @return The personList.
+     */
+    muni.model.MuniService.PersonList getPersonList();
+
+    /**
+     * <code>.muni.model.PersonList personList = 10;</code>
+     */
+    muni.model.MuniService.PersonListOrBuilder getPersonListOrBuilder();
+
+    /**
+     * <code>.muni.model.PostalAddressList postalAddressList = 11;</code>
+     *
+     * @return Whether the postalAddressList field is set.
+     */
+    boolean hasPostalAddressList();
+
+    /**
+     * <code>.muni.model.PostalAddressList postalAddressList = 11;</code>
+     *
+     * @return The postalAddressList.
+     */
+    muni.model.MuniService.PostalAddressList getPostalAddressList();
+
+    /**
+     * <code>.muni.model.PostalAddressList postalAddressList = 11;</code>
+     */
+    muni.model.MuniService.PostalAddressListOrBuilder getPostalAddressListOrBuilder();
+
+    muni.model.MuniService.SearchRes.ResCase getResCase();
+  }
+
+  /**
+   * Protobuf type {@code muni.model.SearchRes}
+   */
+  public static final class SearchRes extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:muni.model.SearchRes)
+          SearchResOrBuilder {
+    public static final int STATUS_FIELD_NUMBER = 1;
+    public static final int COUNT_FIELD_NUMBER = 2;
+    public static final int ERROR_FIELD_NUMBER = 3;
+    public static final int PERSONLIST_FIELD_NUMBER = 10;
+    public static final int POSTALADDRESSLIST_FIELD_NUMBER = 11;
+    @java.lang.Deprecated
+    public static final com.google.protobuf.Parser<SearchRes>
+            PARSER = new com.google.protobuf.AbstractParser<SearchRes>() {
+      @java.lang.Override
+      public SearchRes parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SearchRes(input, extensionRegistry);
+      }
+    };
+    private static final long serialVersionUID = 0L;
+    // @@protoc_insertion_point(class_scope:muni.model.SearchRes)
+    private static final muni.model.MuniService.SearchRes DEFAULT_INSTANCE;
+
+    static {
+      DEFAULT_INSTANCE = new muni.model.MuniService.SearchRes();
+    }
+
+    private int bitField0_;
+    private int resCase_ = 0;
+    private java.lang.Object res_;
+    private volatile java.lang.Object status_;
+    private int count_;
+    private muni.model.Model.ErrorInfo error_;
+    private byte memoizedIsInitialized = -1;
+
+    // Use SearchRes.newBuilder() to construct.
+    private SearchRes(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+
+    private SearchRes() {
+      status_ = "";
+    }
+
+    private SearchRes(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+              com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              status_ = bs;
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              count_ = input.readInt32();
+              break;
+            }
+            case 26: {
+              muni.model.Model.ErrorInfo.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000004) != 0)) {
+                subBuilder = error_.toBuilder();
+              }
+              error_ = input.readMessage(muni.model.Model.ErrorInfo.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(error_);
+                error_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000004;
+              break;
+            }
+            case 82: {
+              muni.model.MuniService.PersonList.Builder subBuilder = null;
+              if (resCase_ == 10) {
+                subBuilder = ((muni.model.MuniService.PersonList) res_).toBuilder();
+              }
+              res_ =
+                      input.readMessage(muni.model.MuniService.PersonList.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((muni.model.MuniService.PersonList) res_);
+                res_ = subBuilder.buildPartial();
+              }
+              resCase_ = 10;
+              break;
+            }
+            case 90: {
+              muni.model.MuniService.PostalAddressList.Builder subBuilder = null;
+              if (resCase_ == 11) {
+                subBuilder = ((muni.model.MuniService.PostalAddressList) res_).toBuilder();
+              }
+              res_ =
+                      input.readMessage(muni.model.MuniService.PostalAddressList.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((muni.model.MuniService.PostalAddressList) res_);
+                res_ = subBuilder.buildPartial();
+              }
+              resCase_ = 11;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                      input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+                e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+    getDescriptor() {
+      return muni.model.MuniService.internal_static_muni_model_SearchRes_descriptor;
+    }
+
+    public static muni.model.MuniService.SearchRes parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+
+    public static muni.model.MuniService.SearchRes parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+
+    public static muni.model.MuniService.SearchRes parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+
+    public static muni.model.MuniService.SearchRes parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+
+    public static muni.model.MuniService.SearchRes parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+
+    public static muni.model.MuniService.SearchRes parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+
+    public static muni.model.MuniService.SearchRes parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+    }
+
+    public static muni.model.MuniService.SearchRes parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static muni.model.MuniService.SearchRes parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static muni.model.MuniService.SearchRes parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static muni.model.MuniService.SearchRes parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+    }
+
+    public static muni.model.MuniService.SearchRes parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+
+    public static Builder newBuilder(muni.model.MuniService.SearchRes prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+
+    public static muni.model.MuniService.SearchRes getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    public static com.google.protobuf.Parser<SearchRes> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+      return new SearchRes();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    internalGetFieldAccessorTable() {
+      return muni.model.MuniService.internal_static_muni_model_SearchRes_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                      muni.model.MuniService.SearchRes.class, muni.model.MuniService.SearchRes.Builder.class);
+    }
+
+    public ResCase
+    getResCase() {
+      return ResCase.forNumber(
+              resCase_);
+    }
+
+    /**
+     * <pre>
+     * success / error?
+     * </pre>
+     *
+     * <code>optional string status = 1;</code>
+     *
+     * @return Whether the status field is set.
+     */
+    @java.lang.Override
+    public boolean hasStatus() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+
+    /**
+     * <pre>
+     * success / error?
+     * </pre>
+     *
+     * <code>optional string status = 1;</code>
+     *
+     * @return The status.
+     */
+    @java.lang.Override
+    public java.lang.String getStatus() {
+      java.lang.Object ref = status_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          status_ = s;
+        }
+        return s;
+      }
+    }
+
+    /**
+     * <pre>
+     * success / error?
+     * </pre>
+     *
+     * <code>optional string status = 1;</code>
+     *
+     * @return The bytes for status.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+    getStatusBytes() {
+      java.lang.Object ref = status_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
+                        (java.lang.String) ref);
+        status_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    /**
+     * <pre>
+     * num of results
+     * </pre>
+     *
+     * <code>optional int32 count = 2;</code>
+     *
+     * @return Whether the count field is set.
+     */
+    @java.lang.Override
+    public boolean hasCount() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+
+    /**
+     * <pre>
+     * num of results
+     * </pre>
+     *
+     * <code>optional int32 count = 2;</code>
+     *
+     * @return The count.
+     */
+    @java.lang.Override
+    public int getCount() {
+      return count_;
+    }
+
+    /**
+     * <pre>
+     * if error, add detils?
+     * </pre>
+     *
+     * <code>optional .muni.model.ErrorInfo error = 3;</code>
+     *
+     * @return Whether the error field is set.
+     */
+    @java.lang.Override
+    public boolean hasError() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+
+    /**
+     * <pre>
+     * if error, add detils?
+     * </pre>
+     *
+     * <code>optional .muni.model.ErrorInfo error = 3;</code>
+     *
+     * @return The error.
+     */
+    @java.lang.Override
+    public muni.model.Model.ErrorInfo getError() {
+      return error_ == null ? muni.model.Model.ErrorInfo.getDefaultInstance() : error_;
+    }
+
+    /**
+     * <pre>
+     * if error, add detils?
+     * </pre>
+     *
+     * <code>optional .muni.model.ErrorInfo error = 3;</code>
+     */
+    @java.lang.Override
+    public muni.model.Model.ErrorInfoOrBuilder getErrorOrBuilder() {
+      return error_ == null ? muni.model.Model.ErrorInfo.getDefaultInstance() : error_;
+    }
+
+    /**
+     * <code>.muni.model.PersonList personList = 10;</code>
+     *
+     * @return Whether the personList field is set.
+     */
+    @java.lang.Override
+    public boolean hasPersonList() {
+      return resCase_ == 10;
+    }
+
+    /**
+     * <code>.muni.model.PersonList personList = 10;</code>
+     *
+     * @return The personList.
+     */
+    @java.lang.Override
+    public muni.model.MuniService.PersonList getPersonList() {
+      if (resCase_ == 10) {
+        return (muni.model.MuniService.PersonList) res_;
+      }
+      return muni.model.MuniService.PersonList.getDefaultInstance();
+    }
+
+    /**
+     * <code>.muni.model.PersonList personList = 10;</code>
+     */
+    @java.lang.Override
+    public muni.model.MuniService.PersonListOrBuilder getPersonListOrBuilder() {
+      if (resCase_ == 10) {
+        return (muni.model.MuniService.PersonList) res_;
+      }
+      return muni.model.MuniService.PersonList.getDefaultInstance();
+    }
+
+    /**
+     * <code>.muni.model.PostalAddressList postalAddressList = 11;</code>
+     *
+     * @return Whether the postalAddressList field is set.
+     */
+    @java.lang.Override
+    public boolean hasPostalAddressList() {
+      return resCase_ == 11;
+    }
+
+    /**
+     * <code>.muni.model.PostalAddressList postalAddressList = 11;</code>
+     *
+     * @return The postalAddressList.
+     */
+    @java.lang.Override
+    public muni.model.MuniService.PostalAddressList getPostalAddressList() {
+      if (resCase_ == 11) {
+        return (muni.model.MuniService.PostalAddressList) res_;
+      }
+      return muni.model.MuniService.PostalAddressList.getDefaultInstance();
+    }
+
+    /**
+     * <code>.muni.model.PostalAddressList postalAddressList = 11;</code>
+     */
+    @java.lang.Override
+    public muni.model.MuniService.PostalAddressListOrBuilder getPostalAddressListOrBuilder() {
+      if (resCase_ == 11) {
+        return (muni.model.MuniService.PostalAddressList) res_;
+      }
+      return muni.model.MuniService.PostalAddressList.getDefaultInstance();
+    }
+
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+            throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, status_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeInt32(2, count_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeMessage(3, getError());
+      }
+      if (resCase_ == 10) {
+        output.writeMessage(10, (muni.model.MuniService.PersonList) res_);
+      }
+      if (resCase_ == 11) {
+        output.writeMessage(11, (muni.model.MuniService.PostalAddressList) res_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, status_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+                .computeInt32Size(2, count_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+                .computeMessageSize(3, getError());
+      }
+      if (resCase_ == 10) {
+        size += com.google.protobuf.CodedOutputStream
+                .computeMessageSize(10, (muni.model.MuniService.PersonList) res_);
+      }
+      if (resCase_ == 11) {
+        size += com.google.protobuf.CodedOutputStream
+                .computeMessageSize(11, (muni.model.MuniService.PostalAddressList) res_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+        return true;
+      }
+      if (!(obj instanceof muni.model.MuniService.SearchRes)) {
+        return super.equals(obj);
+      }
+      muni.model.MuniService.SearchRes other = (muni.model.MuniService.SearchRes) obj;
+
+      if (hasStatus() != other.hasStatus()) return false;
+      if (hasStatus()) {
+        if (!getStatus()
+                .equals(other.getStatus())) return false;
+      }
+      if (hasCount() != other.hasCount()) return false;
+      if (hasCount()) {
+        if (getCount()
+                != other.getCount()) return false;
+      }
+      if (hasError() != other.hasError()) return false;
+      if (hasError()) {
+        if (!getError()
+                .equals(other.getError())) return false;
+      }
+      if (!getResCase().equals(other.getResCase())) return false;
+      switch (resCase_) {
+        case 10:
+          if (!getPersonList()
+                  .equals(other.getPersonList())) return false;
+          break;
+        case 11:
+          if (!getPostalAddressList()
+                  .equals(other.getPostalAddressList())) return false;
+          break;
+        case 0:
+        default:
+      }
+      return unknownFields.equals(other.unknownFields);
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasStatus()) {
+        hash = (37 * hash) + STATUS_FIELD_NUMBER;
+        hash = (53 * hash) + getStatus().hashCode();
+      }
+      if (hasCount()) {
+        hash = (37 * hash) + COUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getCount();
+      }
+      if (hasError()) {
+        hash = (37 * hash) + ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getError().hashCode();
+      }
+      switch (resCase_) {
+        case 10:
+          hash = (37 * hash) + PERSONLIST_FIELD_NUMBER;
+          hash = (53 * hash) + getPersonList().hashCode();
+          break;
+        case 11:
+          hash = (37 * hash) + POSTALADDRESSLIST_FIELD_NUMBER;
+          hash = (53 * hash) + getPostalAddressList().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() {
+      return newBuilder();
+    }
+
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SearchRes> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public muni.model.MuniService.SearchRes getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+    public enum ResCase
+            implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      PERSONLIST(10),
+      POSTALADDRESSLIST(11),
+      RES_NOT_SET(0);
+      private final int value;
+
+      ResCase(int value) {
+        this.value = value;
+      }
+
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ResCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ResCase forNumber(int value) {
+        switch (value) {
+          case 10:
+            return PERSONLIST;
+          case 11:
+            return POSTALADDRESSLIST;
+          case 0:
+            return RES_NOT_SET;
+          default:
+            return null;
+        }
+      }
+
+      public int getNumber() {
+        return this.value;
+      }
+    }
+
+    /**
+     * Protobuf type {@code muni.model.SearchRes}
+     */
+    public static final class Builder extends
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:muni.model.SearchRes)
+            muni.model.MuniService.SearchResOrBuilder {
+      private int resCase_ = 0;
+      private java.lang.Object res_;
+      private int bitField0_;
+      private java.lang.Object status_ = "";
+      private int count_;
+      private muni.model.Model.ErrorInfo error_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+              muni.model.Model.ErrorInfo, muni.model.Model.ErrorInfo.Builder, muni.model.Model.ErrorInfoOrBuilder> errorBuilder_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+              muni.model.MuniService.PersonList, muni.model.MuniService.PersonList.Builder, muni.model.MuniService.PersonListOrBuilder> personListBuilder_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+              muni.model.MuniService.PostalAddressList, muni.model.MuniService.PostalAddressList.Builder, muni.model.MuniService.PostalAddressListOrBuilder> postalAddressListBuilder_;
+
+      // Construct using muni.model.MuniService.SearchRes.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+        return muni.model.MuniService.internal_static_muni_model_SearchRes_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internalGetFieldAccessorTable() {
+        return muni.model.MuniService.internal_static_muni_model_SearchRes_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                        muni.model.MuniService.SearchRes.class, muni.model.MuniService.SearchRes.Builder.class);
+      }
+
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getErrorFieldBuilder();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        status_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        count_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (errorBuilder_ == null) {
+          error_ = null;
+        } else {
+          errorBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        resCase_ = 0;
+        res_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+      getDescriptorForType() {
+        return muni.model.MuniService.internal_static_muni_model_SearchRes_descriptor;
+      }
+
+      @java.lang.Override
+      public muni.model.MuniService.SearchRes getDefaultInstanceForType() {
+        return muni.model.MuniService.SearchRes.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public muni.model.MuniService.SearchRes build() {
+        muni.model.MuniService.SearchRes result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public muni.model.MuniService.SearchRes buildPartial() {
+        muni.model.MuniService.SearchRes result = new muni.model.MuniService.SearchRes(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.status_ = status_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.count_ = count_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          if (errorBuilder_ == null) {
+            result.error_ = error_;
+          } else {
+            result.error_ = errorBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000004;
+        }
+        if (resCase_ == 10) {
+          if (personListBuilder_ == null) {
+            result.res_ = res_;
+          } else {
+            result.res_ = personListBuilder_.build();
+          }
+        }
+        if (resCase_ == 11) {
+          if (postalAddressListBuilder_ == null) {
+            result.res_ = res_;
+          } else {
+            result.res_ = postalAddressListBuilder_.build();
+          }
+        }
+        result.bitField0_ = to_bitField0_;
+        result.resCase_ = resCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+
+      @java.lang.Override
+      public Builder setField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+        return super.setField(field, value);
+      }
+
+      @java.lang.Override
+      public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+
+      @java.lang.Override
+      public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+
+      @java.lang.Override
+      public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+
+      @java.lang.Override
+      public Builder addRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof muni.model.MuniService.SearchRes) {
+          return mergeFrom((muni.model.MuniService.SearchRes) other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(muni.model.MuniService.SearchRes other) {
+        if (other == muni.model.MuniService.SearchRes.getDefaultInstance()) return this;
+        if (other.hasStatus()) {
+          bitField0_ |= 0x00000001;
+          status_ = other.status_;
+          onChanged();
+        }
+        if (other.hasCount()) {
+          setCount(other.getCount());
+        }
+        if (other.hasError()) {
+          mergeError(other.getError());
+        }
+        switch (other.getResCase()) {
+          case PERSONLIST: {
+            mergePersonList(other.getPersonList());
+            break;
+          }
+          case POSTALADDRESSLIST: {
+            mergePostalAddressList(other.getPostalAddressList());
+            break;
+          }
+          case RES_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+        muni.model.MuniService.SearchRes parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (muni.model.MuniService.SearchRes) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      public ResCase
+      getResCase() {
+        return ResCase.forNumber(
+                resCase_);
+      }
+
+      public Builder clearRes() {
+        resCase_ = 0;
+        res_ = null;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * success / error?
+       * </pre>
+       *
+       * <code>optional string status = 1;</code>
+       *
+       * @return Whether the status field is set.
+       */
+      public boolean hasStatus() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+
+      /**
+       * <pre>
+       * success / error?
+       * </pre>
+       *
+       * <code>optional string status = 1;</code>
+       *
+       * @return The status.
+       */
+      public java.lang.String getStatus() {
+        java.lang.Object ref = status_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            status_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+
+      /**
+       * <pre>
+       * success / error?
+       * </pre>
+       *
+       * <code>optional string status = 1;</code>
+       *
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(
+              java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        status_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * success / error?
+       * </pre>
+       *
+       * <code>optional string status = 1;</code>
+       *
+       * @return The bytes for status.
+       */
+      public com.google.protobuf.ByteString
+      getStatusBytes() {
+        java.lang.Object ref = status_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                          (java.lang.String) ref);
+          status_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      /**
+       * <pre>
+       * success / error?
+       * </pre>
+       *
+       * <code>optional string status = 1;</code>
+       *
+       * @param value The bytes for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusBytes(
+              com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        status_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * success / error?
+       * </pre>
+       *
+       * <code>optional string status = 1;</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        status_ = getDefaultInstance().getStatus();
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * num of results
+       * </pre>
+       *
+       * <code>optional int32 count = 2;</code>
+       *
+       * @return Whether the count field is set.
+       */
+      @java.lang.Override
+      public boolean hasCount() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+
+      /**
+       * <pre>
+       * num of results
+       * </pre>
+       *
+       * <code>optional int32 count = 2;</code>
+       *
+       * @return The count.
+       */
+      @java.lang.Override
+      public int getCount() {
+        return count_;
+      }
+
+      /**
+       * <pre>
+       * num of results
+       * </pre>
+       *
+       * <code>optional int32 count = 2;</code>
+       *
+       * @param value The count to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCount(int value) {
+        bitField0_ |= 0x00000002;
+        count_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * num of results
+       * </pre>
+       *
+       * <code>optional int32 count = 2;</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearCount() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        count_ = 0;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * if error, add detils?
+       * </pre>
+       *
+       * <code>optional .muni.model.ErrorInfo error = 3;</code>
+       *
+       * @return Whether the error field is set.
+       */
+      public boolean hasError() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+
+      /**
+       * <pre>
+       * if error, add detils?
+       * </pre>
+       *
+       * <code>optional .muni.model.ErrorInfo error = 3;</code>
+       *
+       * @return The error.
+       */
+      public muni.model.Model.ErrorInfo getError() {
+        if (errorBuilder_ == null) {
+          return error_ == null ? muni.model.Model.ErrorInfo.getDefaultInstance() : error_;
+        } else {
+          return errorBuilder_.getMessage();
+        }
+      }
+
+      /**
+       * <pre>
+       * if error, add detils?
+       * </pre>
+       *
+       * <code>optional .muni.model.ErrorInfo error = 3;</code>
+       */
+      public Builder setError(muni.model.Model.ErrorInfo value) {
+        if (errorBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          error_ = value;
+          onChanged();
+        } else {
+          errorBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+
+      /**
+       * <pre>
+       * if error, add detils?
+       * </pre>
+       *
+       * <code>optional .muni.model.ErrorInfo error = 3;</code>
+       */
+      public Builder setError(
+              muni.model.Model.ErrorInfo.Builder builderForValue) {
+        if (errorBuilder_ == null) {
+          error_ = builderForValue.build();
+          onChanged();
+        } else {
+          errorBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+
+      /**
+       * <pre>
+       * if error, add detils?
+       * </pre>
+       *
+       * <code>optional .muni.model.ErrorInfo error = 3;</code>
+       */
+      public Builder mergeError(muni.model.Model.ErrorInfo value) {
+        if (errorBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+                  error_ != null &&
+                  error_ != muni.model.Model.ErrorInfo.getDefaultInstance()) {
+            error_ =
+                    muni.model.Model.ErrorInfo.newBuilder(error_).mergeFrom(value).buildPartial();
+          } else {
+            error_ = value;
+          }
+          onChanged();
+        } else {
+          errorBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+
+      /**
+       * <pre>
+       * if error, add detils?
+       * </pre>
+       *
+       * <code>optional .muni.model.ErrorInfo error = 3;</code>
+       */
+      public Builder clearError() {
+        if (errorBuilder_ == null) {
+          error_ = null;
+          onChanged();
+        } else {
+          errorBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * if error, add detils?
+       * </pre>
+       *
+       * <code>optional .muni.model.ErrorInfo error = 3;</code>
+       */
+      public muni.model.Model.ErrorInfo.Builder getErrorBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getErrorFieldBuilder().getBuilder();
+      }
+
+      /**
+       * <pre>
+       * if error, add detils?
+       * </pre>
+       *
+       * <code>optional .muni.model.ErrorInfo error = 3;</code>
+       */
+      public muni.model.Model.ErrorInfoOrBuilder getErrorOrBuilder() {
+        if (errorBuilder_ != null) {
+          return errorBuilder_.getMessageOrBuilder();
+        } else {
+          return error_ == null ?
+                  muni.model.Model.ErrorInfo.getDefaultInstance() : error_;
+        }
+      }
+
+      /**
+       * <pre>
+       * if error, add detils?
+       * </pre>
+       *
+       * <code>optional .muni.model.ErrorInfo error = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+              muni.model.Model.ErrorInfo, muni.model.Model.ErrorInfo.Builder, muni.model.Model.ErrorInfoOrBuilder>
+      getErrorFieldBuilder() {
+        if (errorBuilder_ == null) {
+          errorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                  muni.model.Model.ErrorInfo, muni.model.Model.ErrorInfo.Builder, muni.model.Model.ErrorInfoOrBuilder>(
+                  getError(),
+                  getParentForChildren(),
+                  isClean());
+          error_ = null;
+        }
+        return errorBuilder_;
+      }
+
+      /**
+       * <code>.muni.model.PersonList personList = 10;</code>
+       *
+       * @return Whether the personList field is set.
+       */
+      @java.lang.Override
+      public boolean hasPersonList() {
+        return resCase_ == 10;
+      }
+
+      /**
+       * <code>.muni.model.PersonList personList = 10;</code>
+       *
+       * @return The personList.
+       */
+      @java.lang.Override
+      public muni.model.MuniService.PersonList getPersonList() {
+        if (personListBuilder_ == null) {
+          if (resCase_ == 10) {
+            return (muni.model.MuniService.PersonList) res_;
+          }
+          return muni.model.MuniService.PersonList.getDefaultInstance();
+        } else {
+          if (resCase_ == 10) {
+            return personListBuilder_.getMessage();
+          }
+          return muni.model.MuniService.PersonList.getDefaultInstance();
+        }
+      }
+
+      /**
+       * <code>.muni.model.PersonList personList = 10;</code>
+       */
+      public Builder setPersonList(muni.model.MuniService.PersonList value) {
+        if (personListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          res_ = value;
+          onChanged();
+        } else {
+          personListBuilder_.setMessage(value);
+        }
+        resCase_ = 10;
+        return this;
+      }
+
+      /**
+       * <code>.muni.model.PersonList personList = 10;</code>
+       */
+      public Builder setPersonList(
+              muni.model.MuniService.PersonList.Builder builderForValue) {
+        if (personListBuilder_ == null) {
+          res_ = builderForValue.build();
+          onChanged();
+        } else {
+          personListBuilder_.setMessage(builderForValue.build());
+        }
+        resCase_ = 10;
+        return this;
+      }
+
+      /**
+       * <code>.muni.model.PersonList personList = 10;</code>
+       */
+      public Builder mergePersonList(muni.model.MuniService.PersonList value) {
+        if (personListBuilder_ == null) {
+          if (resCase_ == 10 &&
+                  res_ != muni.model.MuniService.PersonList.getDefaultInstance()) {
+            res_ = muni.model.MuniService.PersonList.newBuilder((muni.model.MuniService.PersonList) res_)
+                    .mergeFrom(value).buildPartial();
+          } else {
+            res_ = value;
+          }
+          onChanged();
+        } else {
+          if (resCase_ == 10) {
+            personListBuilder_.mergeFrom(value);
+          }
+          personListBuilder_.setMessage(value);
+        }
+        resCase_ = 10;
+        return this;
+      }
+
+      /**
+       * <code>.muni.model.PersonList personList = 10;</code>
+       */
+      public Builder clearPersonList() {
+        if (personListBuilder_ == null) {
+          if (resCase_ == 10) {
+            resCase_ = 0;
+            res_ = null;
+            onChanged();
+          }
+        } else {
+          if (resCase_ == 10) {
+            resCase_ = 0;
+            res_ = null;
+          }
+          personListBuilder_.clear();
+        }
+        return this;
+      }
+
+      /**
+       * <code>.muni.model.PersonList personList = 10;</code>
+       */
+      public muni.model.MuniService.PersonList.Builder getPersonListBuilder() {
+        return getPersonListFieldBuilder().getBuilder();
+      }
+
+      /**
+       * <code>.muni.model.PersonList personList = 10;</code>
+       */
+      @java.lang.Override
+      public muni.model.MuniService.PersonListOrBuilder getPersonListOrBuilder() {
+        if ((resCase_ == 10) && (personListBuilder_ != null)) {
+          return personListBuilder_.getMessageOrBuilder();
+        } else {
+          if (resCase_ == 10) {
+            return (muni.model.MuniService.PersonList) res_;
+          }
+          return muni.model.MuniService.PersonList.getDefaultInstance();
+        }
+      }
+
+      /**
+       * <code>.muni.model.PersonList personList = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+              muni.model.MuniService.PersonList, muni.model.MuniService.PersonList.Builder, muni.model.MuniService.PersonListOrBuilder>
+      getPersonListFieldBuilder() {
+        if (personListBuilder_ == null) {
+          if (!(resCase_ == 10)) {
+            res_ = muni.model.MuniService.PersonList.getDefaultInstance();
+          }
+          personListBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                  muni.model.MuniService.PersonList, muni.model.MuniService.PersonList.Builder, muni.model.MuniService.PersonListOrBuilder>(
+                  (muni.model.MuniService.PersonList) res_,
+                  getParentForChildren(),
+                  isClean());
+          res_ = null;
+        }
+        resCase_ = 10;
+        onChanged();
+        return personListBuilder_;
+      }
+
+      /**
+       * <code>.muni.model.PostalAddressList postalAddressList = 11;</code>
+       *
+       * @return Whether the postalAddressList field is set.
+       */
+      @java.lang.Override
+      public boolean hasPostalAddressList() {
+        return resCase_ == 11;
+      }
+
+      /**
+       * <code>.muni.model.PostalAddressList postalAddressList = 11;</code>
+       *
+       * @return The postalAddressList.
+       */
+      @java.lang.Override
+      public muni.model.MuniService.PostalAddressList getPostalAddressList() {
+        if (postalAddressListBuilder_ == null) {
+          if (resCase_ == 11) {
+            return (muni.model.MuniService.PostalAddressList) res_;
+          }
+          return muni.model.MuniService.PostalAddressList.getDefaultInstance();
+        } else {
+          if (resCase_ == 11) {
+            return postalAddressListBuilder_.getMessage();
+          }
+          return muni.model.MuniService.PostalAddressList.getDefaultInstance();
+        }
+      }
+
+      /**
+       * <code>.muni.model.PostalAddressList postalAddressList = 11;</code>
+       */
+      public Builder setPostalAddressList(muni.model.MuniService.PostalAddressList value) {
+        if (postalAddressListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          res_ = value;
+          onChanged();
+        } else {
+          postalAddressListBuilder_.setMessage(value);
+        }
+        resCase_ = 11;
+        return this;
+      }
+
+      /**
+       * <code>.muni.model.PostalAddressList postalAddressList = 11;</code>
+       */
+      public Builder setPostalAddressList(
+              muni.model.MuniService.PostalAddressList.Builder builderForValue) {
+        if (postalAddressListBuilder_ == null) {
+          res_ = builderForValue.build();
+          onChanged();
+        } else {
+          postalAddressListBuilder_.setMessage(builderForValue.build());
+        }
+        resCase_ = 11;
+        return this;
+      }
+
+      /**
+       * <code>.muni.model.PostalAddressList postalAddressList = 11;</code>
+       */
+      public Builder mergePostalAddressList(muni.model.MuniService.PostalAddressList value) {
+        if (postalAddressListBuilder_ == null) {
+          if (resCase_ == 11 &&
+                  res_ != muni.model.MuniService.PostalAddressList.getDefaultInstance()) {
+            res_ = muni.model.MuniService.PostalAddressList.newBuilder((muni.model.MuniService.PostalAddressList) res_)
+                    .mergeFrom(value).buildPartial();
+          } else {
+            res_ = value;
+          }
+          onChanged();
+        } else {
+          if (resCase_ == 11) {
+            postalAddressListBuilder_.mergeFrom(value);
+          }
+          postalAddressListBuilder_.setMessage(value);
+        }
+        resCase_ = 11;
+        return this;
+      }
+
+      /**
+       * <code>.muni.model.PostalAddressList postalAddressList = 11;</code>
+       */
+      public Builder clearPostalAddressList() {
+        if (postalAddressListBuilder_ == null) {
+          if (resCase_ == 11) {
+            resCase_ = 0;
+            res_ = null;
+            onChanged();
+          }
+        } else {
+          if (resCase_ == 11) {
+            resCase_ = 0;
+            res_ = null;
+          }
+          postalAddressListBuilder_.clear();
+        }
+        return this;
+      }
+
+      /**
+       * <code>.muni.model.PostalAddressList postalAddressList = 11;</code>
+       */
+      public muni.model.MuniService.PostalAddressList.Builder getPostalAddressListBuilder() {
+        return getPostalAddressListFieldBuilder().getBuilder();
+      }
+
+      /**
+       * <code>.muni.model.PostalAddressList postalAddressList = 11;</code>
+       */
+      @java.lang.Override
+      public muni.model.MuniService.PostalAddressListOrBuilder getPostalAddressListOrBuilder() {
+        if ((resCase_ == 11) && (postalAddressListBuilder_ != null)) {
+          return postalAddressListBuilder_.getMessageOrBuilder();
+        } else {
+          if (resCase_ == 11) {
+            return (muni.model.MuniService.PostalAddressList) res_;
+          }
+          return muni.model.MuniService.PostalAddressList.getDefaultInstance();
+        }
+      }
+
+      /**
+       * <code>.muni.model.PostalAddressList postalAddressList = 11;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+              muni.model.MuniService.PostalAddressList, muni.model.MuniService.PostalAddressList.Builder, muni.model.MuniService.PostalAddressListOrBuilder>
+      getPostalAddressListFieldBuilder() {
+        if (postalAddressListBuilder_ == null) {
+          if (!(resCase_ == 11)) {
+            res_ = muni.model.MuniService.PostalAddressList.getDefaultInstance();
+          }
+          postalAddressListBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                  muni.model.MuniService.PostalAddressList, muni.model.MuniService.PostalAddressList.Builder, muni.model.MuniService.PostalAddressListOrBuilder>(
+                  (muni.model.MuniService.PostalAddressList) res_,
+                  getParentForChildren(),
+                  isClean());
+          res_ = null;
+        }
+        resCase_ = 11;
+        onChanged();
+        return postalAddressListBuilder_;
+      }
+
+      @java.lang.Override
+      public final Builder setUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:muni.model.SearchRes)
+    }
+
   }
 
   // @@protoc_insertion_point(outer_class_scope)

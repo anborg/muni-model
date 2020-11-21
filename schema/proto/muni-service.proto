@@ -41,6 +41,25 @@ service PersonService{
       body: "*"
     };
   }
+  //Xref - will be included in Person, so no GET. Not "resty"
+  rpc xrefAdd(Xref) returns (Xref) {
+    option (google.api.http) = {
+      post: "/mkapp/rest/v1/persons/{id}/xref/{subsysId}/add"
+      body: "*"
+    };
+  }
+  rpc xrefUpdate(Xref) returns (Xref) {
+    option (google.api.http) = {
+      post: "/mkapp/rest/v1/persons/{id}/xref/{subsysId}/update"
+      body: "*"
+    };
+  }
+  rpc xrefSync(Xref) returns (Xref) {
+    option (google.api.http) = {
+      post: "/mkapp/rest/v1/persons/{id}/xref/{subsysId}/sync"
+      body: "*"
+    };
+  }
 
   rpc getAll(google.protobuf.Empty) returns (PersonList){//google.protobuf.Empty
     option (google.api.http) = {
@@ -75,9 +94,9 @@ service CaseService{
 
 
 message SearchRes{
-  optional string status =1;
-  optional int32 count =2;
-  optional ErrorInfo error=3;
+  optional string status = 1; // success / error?
+  optional int32 count = 2; // num of results
+  optional ErrorInfo error = 3; // if error, add detils?
   //4-9  reserved.
   oneof res {
     PersonList personList = 10;
@@ -91,6 +110,7 @@ message PersonList{
 message PostalAddressList{
   repeated PostalAddress addresses = 1;
 }
+
 
 message SearchReqPerson{ //Search for a person who's
   required Person person = 1; //firstname/lastname - not for address

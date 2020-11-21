@@ -9,10 +9,32 @@ import java.time.Instant;
 import java.util.Optional;
 
 public class MockUtil {
-    public static Model.Person buildPerson(){
-        return  buildPerson("99","Jane", "Doe");
+    public static Model.Person buildPerson() {
+        return buildPerson("99", "Jane", "Doe");
     }
-    public static Model.Case buildCase(){
+
+    /**
+     * Use this to mock creation of XREF Person (in a syb-ssystem)
+     *
+     * @param in Person
+     * @param subsysId {AMANDA|...}
+     * @return Person
+     */
+    public static Model.Person buildXrefPerson(Model.Person in, String subsysId) {
+        Model.Person.Builder builder = Model.Person.newBuilder();
+        //ignore id from main person, but make a rand
+        String id = subsysId + (int) (Math.random() * 1000);
+        builder.setId(id)
+                .setFirstName(in.getFirstName())
+                .setLastName(in.getLastName())
+                .setAddress(in.getAddress())
+                .setEmail(in.getEmail())
+                .setPhone1(in.getPhone1())
+                .setPhone2(in.getPhone2());
+        return builder.build();
+    }
+
+    public static Model.Case buildCase() {
         Timestamp ts = Timestamps.fromMillis(System.currentTimeMillis());
         return Model.Case.newBuilder()
                 .setId("1")
