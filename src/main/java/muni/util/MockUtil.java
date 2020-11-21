@@ -23,7 +23,7 @@ public class MockUtil {
     public static Model.Person buildXrefPerson(Model.Person in, String subsysId) {
         Model.Person.Builder builder = Model.Person.newBuilder();
         //ignore id from main person, but make a rand
-        String id = subsysId + (int) (Math.random() * 1000);
+        String id = subsysId + (int) (Math.random() * 1000); //Rand amanda ID
         builder.setId(id)
                 .setFirstName(in.getFirstName())
                 .setLastName(in.getLastName())
