@@ -66,6 +66,8 @@ public class MockUtil {
         Optional.ofNullable(buildAddress()).ifPresent(pb::setAddress);
         Optional.ofNullable(ts).ifPresent(pb::setCreateTime);
         Optional.ofNullable(ts).ifPresent(pb::setUpdateTime);
+        var amandaXref = Model.Xref.newBuilder().setId(id).setXrefSystemId("AMANDA").build();
+        pb.putXrefAccounts(amandaXref.getXrefSystemId(), amandaXref);
         return pb.build();
     }
 

@@ -15,8 +15,8 @@ public class TestSubsystemService {
         var amdCase = Model.Case.newBuilder().setId("12").setDescription("AmandaCase1").build();
         var hansCase = Model.Case.newBuilder().setId("34").setDescription("Water supply shutoff").build();
 
-        var amandaXref = Model.Xref.newBuilder().setXrefSystemId("AMANDA").setXrefPersonId("12345").addRecentCases(amdCase).build();
-        var hansenXref = Model.Xref.newBuilder().setXrefSystemId("HANSEN").setXrefPersonId("67890").addRecentCases(hansCase).build();
+        var amandaXref = Model.Xref.newBuilder().setXrefSystemId("AMANDA").setXrefId("12345").addRecentCases(amdCase).build();
+        var hansenXref = Model.Xref.newBuilder().setXrefSystemId("HANSEN").setXrefId("67890").addRecentCases(hansCase).build();
 
         Model.Person pers = Model.Person.newBuilder()
                 .setFirstName("Jane")

@@ -27,10 +27,11 @@ message Person{
   optional google.protobuf.Timestamp updateTime = 2;
 }
 
+// Person -> Xref of Person , Case -> Xref if Case
 message Xref{
-  optional string id = 6; //Person.id, may be redundant, Stored in db.
+  optional string id = 6; // golden personId, or, caseId
   optional string xrefSystemId = 7; // {"AMANDA"|"HANSEN" ...}
-  optional string xrefPersonId = 8;
+  optional string xrefId = 8;  //subsystem personid or caseid
   repeated Case recentCases = 9;
 
   //Output only
