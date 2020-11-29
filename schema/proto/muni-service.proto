@@ -27,7 +27,7 @@ service PersonService{
       //body: "personById"
     };
   }
-  rpc create(CreatePersonReq) returns (Person) {//TODO change to CreateReq - generic?
+  rpc create(Person) returns (Person) {//TODO change to CreateReq - generic?
     // example:
     //   curl -d '{"id":"99", "firstName": "Bat". "lastName": "Man"}' http://localhost:8080/mkapp/rest/v1/persons/
     option (google.api.http) = {

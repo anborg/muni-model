@@ -7,6 +7,7 @@
   <artifactId>muni-api-protogen</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
+
   <properties>
     <protoc.version>3.13.0</protoc.version>
     <protobuf.version>3.11.1</protobuf.version>

@@ -32,7 +32,7 @@ message Xref{
   optional string id = 6; // golden personId, or, caseId
   optional string xrefSystemId = 7; // {"AMANDA"|"HANSEN" ...}
   optional string xrefId = 8;  //subsystem personid or caseid
-  repeated Case recentCases = 9;
+  optional string status= 9; // Person{ACTIVE|INACTIVE}, CASE{QUEUE | INITIATED | EXT_WAIT | INT_WAIT | DONE}
 
   //Output only
   optional google.protobuf.Timestamp createTime = 1;
@@ -68,12 +68,13 @@ message PostalAddress{
 message Case{
   optional string id = 3;
   optional string status =4; //TODO  convert to enum // BACKLOG, INPROGRESS, WAITING, DONE,
-
+  optional string description = 9;
+  optional PostalAddress eventAddress =7;
   optional Person reportedByCustomer=5;
   optional Person createdByEmployee = 6;
-  //optional bool dirty = 7 [default = false];
-  repeated string tags = 8 ;//store a list of tags that categrizes //TODO Enum?
-  optional string description = 9;
+  repeated string tags = 8 ;//store a list of tags that helps routing, categorizing, reporting //TODO Enum?
+  map<string, Xref> xrefAccounts = 10; // Will be empty for Subsystem Person objects.
+
   //Output only
   optional google.protobuf.Timestamp createTime = 1;
   optional google.protobuf.Timestamp updateTime = 2;
