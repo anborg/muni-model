@@ -58,27 +58,27 @@ public final class PersonServiceGrpc {
     return getGetMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<muni.model.MuniService.CreatePersonReq,
+  private static volatile io.grpc.MethodDescriptor<muni.model.Model.Person,
       muni.model.Model.Person> getCreateMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "create",
-      requestType = muni.model.MuniService.CreatePersonReq.class,
+      requestType = muni.model.Model.Person.class,
       responseType = muni.model.Model.Person.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<muni.model.MuniService.CreatePersonReq,
+  public static io.grpc.MethodDescriptor<muni.model.Model.Person,
       muni.model.Model.Person> getCreateMethod() {
-    io.grpc.MethodDescriptor<muni.model.MuniService.CreatePersonReq, muni.model.Model.Person> getCreateMethod;
+    io.grpc.MethodDescriptor<muni.model.Model.Person, muni.model.Model.Person> getCreateMethod;
     if ((getCreateMethod = PersonServiceGrpc.getCreateMethod) == null) {
       synchronized (PersonServiceGrpc.class) {
         if ((getCreateMethod = PersonServiceGrpc.getCreateMethod) == null) {
           PersonServiceGrpc.getCreateMethod = getCreateMethod =
-              io.grpc.MethodDescriptor.<muni.model.MuniService.CreatePersonReq, muni.model.Model.Person>newBuilder()
+              io.grpc.MethodDescriptor.<muni.model.Model.Person, muni.model.Model.Person>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  muni.model.MuniService.CreatePersonReq.getDefaultInstance()))
+                  muni.model.Model.Person.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   muni.model.Model.Person.getDefaultInstance()))
               .setSchemaDescriptor(new PersonServiceMethodDescriptorSupplier("create"))
@@ -304,7 +304,7 @@ public final class PersonServiceGrpc {
      *TODO change to CreateReq - generic?
      * </pre>
      */
-    public void create(muni.model.MuniService.CreatePersonReq request,
+    public void create(muni.model.Model.Person request,
         io.grpc.stub.StreamObserver<muni.model.Model.Person> responseObserver) {
       asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
@@ -363,7 +363,7 @@ public final class PersonServiceGrpc {
             getCreateMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                muni.model.MuniService.CreatePersonReq,
+                muni.model.Model.Person,
                 muni.model.Model.Person>(
                   this, METHODID_CREATE)))
           .addMethod(
@@ -432,7 +432,7 @@ public final class PersonServiceGrpc {
      *TODO change to CreateReq - generic?
      * </pre>
      */
-    public void create(muni.model.MuniService.CreatePersonReq request,
+    public void create(muni.model.Model.Person request,
         io.grpc.stub.StreamObserver<muni.model.Model.Person> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
@@ -511,7 +511,7 @@ public final class PersonServiceGrpc {
      *TODO change to CreateReq - generic?
      * </pre>
      */
-    public muni.model.Model.Person create(muni.model.MuniService.CreatePersonReq request) {
+    public muni.model.Model.Person create(muni.model.Model.Person request) {
       return blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
@@ -586,7 +586,7 @@ public final class PersonServiceGrpc {
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<muni.model.Model.Person> create(
-        muni.model.MuniService.CreatePersonReq request) {
+        muni.model.Model.Person request) {
       return futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
@@ -668,7 +668,7 @@ public final class PersonServiceGrpc {
               (io.grpc.stub.StreamObserver<muni.model.Model.Person>) responseObserver);
           break;
         case METHODID_CREATE:
-          serviceImpl.create((muni.model.MuniService.CreatePersonReq) request,
+          serviceImpl.create((muni.model.Model.Person) request,
               (io.grpc.stub.StreamObserver<muni.model.Model.Person>) responseObserver);
           break;
         case METHODID_UPDATE:

@@ -12,18 +12,18 @@ public class TestSubsystemService {
         //Step 1: get subsystem obj from persistence layer soap/rest/db [e.g object may be named differently in susbsystem, e.g Customer, User, People, Citizen, Vendor, Organization etc]
         //Step 2: Map fields to Person object / Case object
         //Step 3: Return t
-        var amdCase = Model.Case.newBuilder().setId("12").setDescription("AmandaCase1").build();
-        var hansCase = Model.Case.newBuilder().setId("34").setDescription("Water supply shutoff").build();
-
-        var amandaXref = Model.Xref.newBuilder().setXrefSystemId("AMANDA").setXrefId("12345").addRecentCases(amdCase).build();
-        var hansenXref = Model.Xref.newBuilder().setXrefSystemId("HANSEN").setXrefId("67890").addRecentCases(hansCase).build();
+        //var amdCase = Model.Case.newBuilder().setId("12").setDescription("AmandaCase1").build();
+        //var hansCase = Model.Case.newBuilder().setId("34").setDescription("Water supply shutoff").build();
+        //.addRecentCases(amdCase)
+        var amandaXref = Model.Xref.newBuilder().setXrefSystemId("AMANDA").setXrefId("12345").build();
+        var hansenXref = Model.Xref.newBuilder().setXrefSystemId("HANSEN").setXrefId("67890").build();
 
         Model.Person pers = Model.Person.newBuilder()
                 .setFirstName("Jane")
                 .setLastName("Doe")
                 .setEmail("me@gmail.com")
-                .putXrefAccounts("AMANDA", amandaXref)
-                .putXrefAccounts("HANSEN", hansenXref)
+                .putXrefs("AMANDA", amandaXref)
+                .putXrefs("HANSEN", hansenXref)
                 .build();
     }
 

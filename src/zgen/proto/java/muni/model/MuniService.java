@@ -6461,34 +6461,34 @@ public final class MuniService {
       "dMask\"{\n\026SearchReqPostalAddress\0220\n\rposta" +
       "lAddress\030\001 \002(\0132\031.muni.model.PostalAddres" +
       "s\022/\n\013create_mask\030\002 \001(\0132\032.google.protobuf" +
-      ".FieldMask2\267\005\n\rPersonService\022P\n\003get\022\020.mu" +
+      ".FieldMask2\256\005\n\rPersonService\022P\n\003get\022\020.mu" +
       "ni.model.ById\032\022.muni.model.Person\"#\202\323\344\223\002" +
-      "\035\022\033/mkapp/rest/v1/persons/{id}\022\\\n\006create" +
-      "\022\033.muni.model.CreatePersonReq\032\022.muni.mod" +
-      "el.Person\"!\202\323\344\223\002\033\"\026/mkapp/rest/v1/person" +
-      "s:\001*\022S\n\006update\022\022.muni.model.Person\032\022.mun" +
-      "i.model.Person\"!\202\323\344\223\002\033\"\026/mkapp/rest/v1/p" +
-      "ersons:\001*\022i\n\007xrefAdd\022\020.muni.model.Xref\032\020" +
-      ".muni.model.Xref\":\202\323\344\223\0024\"//mkapp/rest/v1" +
-      "/persons/{id}/xref/{subsysId}/add:\001*\022o\n\n" +
-      "xrefUpdate\022\020.muni.model.Xref\032\020.muni.mode" +
-      "l.Xref\"=\202\323\344\223\0027\"2/mkapp/rest/v1/persons/{" +
-      "id}/xref/{subsysId}/update:\001*\022k\n\010xrefSyn" +
-      "c\022\020.muni.model.Xref\032\020.muni.model.Xref\";\202" +
-      "\323\344\223\0025\"0/mkapp/rest/v1/persons/{id}/xref/" +
-      "{subsysId}/sync:\001*\022X\n\006getAll\022\026.google.pr" +
-      "otobuf.Empty\032\026.muni.model.PersonList\"\036\202\323" +
-      "\344\223\002\030\022\026/mkapp/rest/v1/persons2\374\001\n\013CaseSer" +
-      "vice\022K\n\003get\022\020.muni.model.ById\032\020.muni.mod" +
-      "el.Case\" \202\323\344\223\002\032\022\030/mkapp/rest/v1/case/{id" +
-      "}\022O\n\006create\022\020.muni.model.Case\032\020.muni.mod" +
-      "el.Case\"!\202\323\344\223\002\033\"\023/mkapp/rest/v1/case:\004ca" +
-      "se\022O\n\006update\022\020.muni.model.Case\032\020.muni.mo" +
-      "del.Case\"!\202\323\344\223\002\033\"\023/mkapp/rest/v1/case:\004c" +
-      "ase2\201\001\n\rSearchService\022p\n\013personsLike\022\033.m" +
-      "uni.model.SearchReqPerson\032\025.muni.model.S" +
-      "earchRes\"-\202\323\344\223\002\'\"\035/mkapp/rest/v1/search/" +
-      "persons:\006personB\005P\000\210\001\000"
+      "\035\022\033/mkapp/rest/v1/persons/{id}\022S\n\006create" +
+      "\022\022.muni.model.Person\032\022.muni.model.Person" +
+      "\"!\202\323\344\223\002\033\"\026/mkapp/rest/v1/persons:\001*\022S\n\006u" +
+      "pdate\022\022.muni.model.Person\032\022.muni.model.P" +
+      "erson\"!\202\323\344\223\002\033\"\026/mkapp/rest/v1/persons:\001*" +
+      "\022i\n\007xrefAdd\022\020.muni.model.Xref\032\020.muni.mod" +
+      "el.Xref\":\202\323\344\223\0024\"//mkapp/rest/v1/persons/" +
+      "{id}/xref/{subsysId}/add:\001*\022o\n\nxrefUpdat" +
+      "e\022\020.muni.model.Xref\032\020.muni.model.Xref\"=\202" +
+      "\323\344\223\0027\"2/mkapp/rest/v1/persons/{id}/xref/" +
+      "{subsysId}/update:\001*\022k\n\010xrefSync\022\020.muni." +
+      "model.Xref\032\020.muni.model.Xref\";\202\323\344\223\0025\"0/m" +
+      "kapp/rest/v1/persons/{id}/xref/{subsysId" +
+      "}/sync:\001*\022X\n\006getAll\022\026.google.protobuf.Em" +
+      "pty\032\026.muni.model.PersonList\"\036\202\323\344\223\002\030\022\026/mk" +
+      "app/rest/v1/persons2\374\001\n\013CaseService\022K\n\003g" +
+      "et\022\020.muni.model.ById\032\020.muni.model.Case\" " +
+      "\202\323\344\223\002\032\022\030/mkapp/rest/v1/case/{id}\022O\n\006crea" +
+      "te\022\020.muni.model.Case\032\020.muni.model.Case\"!" +
+      "\202\323\344\223\002\033\"\023/mkapp/rest/v1/case:\004case\022O\n\006upd" +
+      "ate\022\020.muni.model.Case\032\020.muni.model.Case\"" +
+      "!\202\323\344\223\002\033\"\023/mkapp/rest/v1/case:\004case2\201\001\n\rS" +
+      "earchService\022p\n\013personsLike\022\033.muni.model" +
+      ".SearchReqPerson\032\025.muni.model.SearchRes\"" +
+      "-\202\323\344\223\002\'\"\035/mkapp/rest/v1/search/persons:\006" +
+      "personB\005P\000\210\001\000"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

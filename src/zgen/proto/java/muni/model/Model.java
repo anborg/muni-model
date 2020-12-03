@@ -188,42 +188,42 @@ public final class Model {
      *optional  bool dirty = 10 [default = false];//for boolean getDirty() default is enough, no need for optional
      * </pre>
      *
-     * <code>map&lt;string, .muni.model.Xref&gt; xrefAccounts = 11;</code>
+     * <code>map&lt;string, .muni.model.Xref&gt; xrefs = 11;</code>
      */
-    int getXrefAccountsCount();
+    int getXrefsCount();
     /**
      * <pre>
      *optional  bool dirty = 10 [default = false];//for boolean getDirty() default is enough, no need for optional
      * </pre>
      *
-     * <code>map&lt;string, .muni.model.Xref&gt; xrefAccounts = 11;</code>
+     * <code>map&lt;string, .muni.model.Xref&gt; xrefs = 11;</code>
      */
-    boolean containsXrefAccounts(
+    boolean containsXrefs(
         java.lang.String key);
     /**
-     * Use {@link #getXrefAccountsMap()} instead.
+     * Use {@link #getXrefsMap()} instead.
      */
     @java.lang.Deprecated
     java.util.Map<java.lang.String, muni.model.Model.Xref>
-    getXrefAccounts();
+    getXrefs();
     /**
      * <pre>
      *optional  bool dirty = 10 [default = false];//for boolean getDirty() default is enough, no need for optional
      * </pre>
      *
-     * <code>map&lt;string, .muni.model.Xref&gt; xrefAccounts = 11;</code>
+     * <code>map&lt;string, .muni.model.Xref&gt; xrefs = 11;</code>
      */
     java.util.Map<java.lang.String, muni.model.Model.Xref>
-    getXrefAccountsMap();
+    getXrefsMap();
     /**
      * <pre>
      *optional  bool dirty = 10 [default = false];//for boolean getDirty() default is enough, no need for optional
      * </pre>
      *
-     * <code>map&lt;string, .muni.model.Xref&gt; xrefAccounts = 11;</code>
+     * <code>map&lt;string, .muni.model.Xref&gt; xrefs = 11;</code>
      */
 
-    muni.model.Model.Xref getXrefAccountsOrDefault(
+    muni.model.Model.Xref getXrefsOrDefault(
         java.lang.String key,
         muni.model.Model.Xref defaultValue);
     /**
@@ -231,10 +231,10 @@ public final class Model {
      *optional  bool dirty = 10 [default = false];//for boolean getDirty() default is enough, no need for optional
      * </pre>
      *
-     * <code>map&lt;string, .muni.model.Xref&gt; xrefAccounts = 11;</code>
+     * <code>map&lt;string, .muni.model.Xref&gt; xrefs = 11;</code>
      */
 
-    muni.model.Model.Xref getXrefAccountsOrThrow(
+    muni.model.Model.Xref getXrefsOrThrow(
         java.lang.String key);
 
     /**
@@ -420,15 +420,15 @@ public final class Model {
             }
             case 90: {
               if (!((mutable_bitField0_ & 0x00000080) != 0)) {
-                xrefAccounts_ = com.google.protobuf.MapField.newMapField(
-                    XrefAccountsDefaultEntryHolder.defaultEntry);
+                xrefs_ = com.google.protobuf.MapField.newMapField(
+                    XrefsDefaultEntryHolder.defaultEntry);
                 mutable_bitField0_ |= 0x00000080;
               }
               com.google.protobuf.MapEntry<java.lang.String, muni.model.Model.Xref>
-              xrefAccounts__ = input.readMessage(
-                  XrefAccountsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              xrefAccounts_.getMutableMap().put(
-                  xrefAccounts__.getKey(), xrefAccounts__.getValue());
+              xrefs__ = input.readMessage(
+                  XrefsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              xrefs_.getMutableMap().put(
+                  xrefs__.getKey(), xrefs__.getValue());
               break;
             }
             default: {
@@ -461,7 +461,7 @@ public final class Model {
         int number) {
       switch (number) {
         case 11:
-          return internalGetXrefAccounts();
+          return internalGetXrefs();
         default:
           throw new RuntimeException(
               "Invalid map field number: " + number);
@@ -838,81 +838,81 @@ public final class Model {
       return address_ == null ? muni.model.Model.PostalAddress.getDefaultInstance() : address_;
     }
 
-    public static final int XREFACCOUNTS_FIELD_NUMBER = 11;
-    private static final class XrefAccountsDefaultEntryHolder {
+    public static final int XREFS_FIELD_NUMBER = 11;
+    private static final class XrefsDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
           java.lang.String, muni.model.Model.Xref> defaultEntry =
               com.google.protobuf.MapEntry
               .<java.lang.String, muni.model.Model.Xref>newDefaultInstance(
-                  muni.model.Model.internal_static_muni_model_Person_XrefAccountsEntry_descriptor, 
+                  muni.model.Model.internal_static_muni_model_Person_XrefsEntry_descriptor, 
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "",
                   com.google.protobuf.WireFormat.FieldType.MESSAGE,
                   muni.model.Model.Xref.getDefaultInstance());
     }
     private com.google.protobuf.MapField<
-        java.lang.String, muni.model.Model.Xref> xrefAccounts_;
+        java.lang.String, muni.model.Model.Xref> xrefs_;
     private com.google.protobuf.MapField<java.lang.String, muni.model.Model.Xref>
-    internalGetXrefAccounts() {
-      if (xrefAccounts_ == null) {
+    internalGetXrefs() {
+      if (xrefs_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
-            XrefAccountsDefaultEntryHolder.defaultEntry);
+            XrefsDefaultEntryHolder.defaultEntry);
       }
-      return xrefAccounts_;
+      return xrefs_;
     }
 
-    public int getXrefAccountsCount() {
-      return internalGetXrefAccounts().getMap().size();
+    public int getXrefsCount() {
+      return internalGetXrefs().getMap().size();
     }
     /**
      * <pre>
      *optional  bool dirty = 10 [default = false];//for boolean getDirty() default is enough, no need for optional
      * </pre>
      *
-     * <code>map&lt;string, .muni.model.Xref&gt; xrefAccounts = 11;</code>
+     * <code>map&lt;string, .muni.model.Xref&gt; xrefs = 11;</code>
      */
 
     @java.lang.Override
-    public boolean containsXrefAccounts(
+    public boolean containsXrefs(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
-      return internalGetXrefAccounts().getMap().containsKey(key);
+      return internalGetXrefs().getMap().containsKey(key);
     }
     /**
-     * Use {@link #getXrefAccountsMap()} instead.
+     * Use {@link #getXrefsMap()} instead.
      */
     @java.lang.Override
     @java.lang.Deprecated
-    public java.util.Map<java.lang.String, muni.model.Model.Xref> getXrefAccounts() {
-      return getXrefAccountsMap();
+    public java.util.Map<java.lang.String, muni.model.Model.Xref> getXrefs() {
+      return getXrefsMap();
     }
     /**
      * <pre>
      *optional  bool dirty = 10 [default = false];//for boolean getDirty() default is enough, no need for optional
      * </pre>
      *
-     * <code>map&lt;string, .muni.model.Xref&gt; xrefAccounts = 11;</code>
+     * <code>map&lt;string, .muni.model.Xref&gt; xrefs = 11;</code>
      */
     @java.lang.Override
 
-    public java.util.Map<java.lang.String, muni.model.Model.Xref> getXrefAccountsMap() {
-      return internalGetXrefAccounts().getMap();
+    public java.util.Map<java.lang.String, muni.model.Model.Xref> getXrefsMap() {
+      return internalGetXrefs().getMap();
     }
     /**
      * <pre>
      *optional  bool dirty = 10 [default = false];//for boolean getDirty() default is enough, no need for optional
      * </pre>
      *
-     * <code>map&lt;string, .muni.model.Xref&gt; xrefAccounts = 11;</code>
+     * <code>map&lt;string, .muni.model.Xref&gt; xrefs = 11;</code>
      */
     @java.lang.Override
 
-    public muni.model.Model.Xref getXrefAccountsOrDefault(
+    public muni.model.Model.Xref getXrefsOrDefault(
         java.lang.String key,
         muni.model.Model.Xref defaultValue) {
       if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, muni.model.Model.Xref> map =
-          internalGetXrefAccounts().getMap();
+          internalGetXrefs().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
@@ -920,15 +920,15 @@ public final class Model {
      *optional  bool dirty = 10 [default = false];//for boolean getDirty() default is enough, no need for optional
      * </pre>
      *
-     * <code>map&lt;string, .muni.model.Xref&gt; xrefAccounts = 11;</code>
+     * <code>map&lt;string, .muni.model.Xref&gt; xrefs = 11;</code>
      */
     @java.lang.Override
 
-    public muni.model.Model.Xref getXrefAccountsOrThrow(
+    public muni.model.Model.Xref getXrefsOrThrow(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, muni.model.Model.Xref> map =
-          internalGetXrefAccounts().getMap();
+          internalGetXrefs().getMap();
       if (!map.containsKey(key)) {
         throw new java.lang.IllegalArgumentException();
       }
@@ -1055,8 +1055,8 @@ public final class Model {
       com.google.protobuf.GeneratedMessageV3
         .serializeStringMapTo(
           output,
-          internalGetXrefAccounts(),
-          XrefAccountsDefaultEntryHolder.defaultEntry,
+          internalGetXrefs(),
+          XrefsDefaultEntryHolder.defaultEntry,
           11);
       unknownFields.writeTo(output);
     }
@@ -1098,14 +1098,14 @@ public final class Model {
           .computeMessageSize(9, getAddress());
       }
       for (java.util.Map.Entry<java.lang.String, muni.model.Model.Xref> entry
-           : internalGetXrefAccounts().getMap().entrySet()) {
+           : internalGetXrefs().getMap().entrySet()) {
         com.google.protobuf.MapEntry<java.lang.String, muni.model.Model.Xref>
-        xrefAccounts__ = XrefAccountsDefaultEntryHolder.defaultEntry.newBuilderForType()
+        xrefs__ = XrefsDefaultEntryHolder.defaultEntry.newBuilderForType()
             .setKey(entry.getKey())
             .setValue(entry.getValue())
             .build();
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(11, xrefAccounts__);
+            .computeMessageSize(11, xrefs__);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1157,8 +1157,8 @@ public final class Model {
         if (!getAddress()
             .equals(other.getAddress())) return false;
       }
-      if (!internalGetXrefAccounts().equals(
-          other.internalGetXrefAccounts())) return false;
+      if (!internalGetXrefs().equals(
+          other.internalGetXrefs())) return false;
       if (hasCreateTime() != other.hasCreateTime()) return false;
       if (hasCreateTime()) {
         if (!getCreateTime()
@@ -1208,9 +1208,9 @@ public final class Model {
         hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
         hash = (53 * hash) + getAddress().hashCode();
       }
-      if (!internalGetXrefAccounts().getMap().isEmpty()) {
-        hash = (37 * hash) + XREFACCOUNTS_FIELD_NUMBER;
-        hash = (53 * hash) + internalGetXrefAccounts().hashCode();
+      if (!internalGetXrefs().getMap().isEmpty()) {
+        hash = (37 * hash) + XREFS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetXrefs().hashCode();
       }
       if (hasCreateTime()) {
         hash = (37 * hash) + CREATETIME_FIELD_NUMBER;
@@ -1332,7 +1332,7 @@ public final class Model {
           int number) {
         switch (number) {
           case 11:
-            return internalGetXrefAccounts();
+            return internalGetXrefs();
           default:
             throw new RuntimeException(
                 "Invalid map field number: " + number);
@@ -1343,7 +1343,7 @@ public final class Model {
           int number) {
         switch (number) {
           case 11:
-            return internalGetMutableXrefAccounts();
+            return internalGetMutableXrefs();
           default:
             throw new RuntimeException(
                 "Invalid map field number: " + number);
@@ -1396,7 +1396,7 @@ public final class Model {
           addressBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000040);
-        internalGetMutableXrefAccounts().clear();
+        internalGetMutableXrefs().clear();
         if (createTimeBuilder_ == null) {
           createTime_ = null;
         } else {
@@ -1469,8 +1469,8 @@ public final class Model {
           }
           to_bitField0_ |= 0x00000040;
         }
-        result.xrefAccounts_ = internalGetXrefAccounts();
-        result.xrefAccounts_.makeImmutable();
+        result.xrefs_ = internalGetXrefs();
+        result.xrefs_.makeImmutable();
         if (((from_bitField0_ & 0x00000100) != 0)) {
           if (createTimeBuilder_ == null) {
             result.createTime_ = createTime_;
@@ -1569,8 +1569,8 @@ public final class Model {
         if (other.hasAddress()) {
           mergeAddress(other.getAddress());
         }
-        internalGetMutableXrefAccounts().mergeFrom(
-            other.internalGetXrefAccounts());
+        internalGetMutableXrefs().mergeFrom(
+            other.internalGetXrefs());
         if (other.hasCreateTime()) {
           mergeCreateTime(other.getCreateTime());
         }
@@ -2340,80 +2340,80 @@ public final class Model {
       }
 
       private com.google.protobuf.MapField<
-          java.lang.String, muni.model.Model.Xref> xrefAccounts_;
+          java.lang.String, muni.model.Model.Xref> xrefs_;
       private com.google.protobuf.MapField<java.lang.String, muni.model.Model.Xref>
-      internalGetXrefAccounts() {
-        if (xrefAccounts_ == null) {
+      internalGetXrefs() {
+        if (xrefs_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
-              XrefAccountsDefaultEntryHolder.defaultEntry);
+              XrefsDefaultEntryHolder.defaultEntry);
         }
-        return xrefAccounts_;
+        return xrefs_;
       }
       private com.google.protobuf.MapField<java.lang.String, muni.model.Model.Xref>
-      internalGetMutableXrefAccounts() {
+      internalGetMutableXrefs() {
         onChanged();;
-        if (xrefAccounts_ == null) {
-          xrefAccounts_ = com.google.protobuf.MapField.newMapField(
-              XrefAccountsDefaultEntryHolder.defaultEntry);
+        if (xrefs_ == null) {
+          xrefs_ = com.google.protobuf.MapField.newMapField(
+              XrefsDefaultEntryHolder.defaultEntry);
         }
-        if (!xrefAccounts_.isMutable()) {
-          xrefAccounts_ = xrefAccounts_.copy();
+        if (!xrefs_.isMutable()) {
+          xrefs_ = xrefs_.copy();
         }
-        return xrefAccounts_;
+        return xrefs_;
       }
 
-      public int getXrefAccountsCount() {
-        return internalGetXrefAccounts().getMap().size();
+      public int getXrefsCount() {
+        return internalGetXrefs().getMap().size();
       }
       /**
        * <pre>
        *optional  bool dirty = 10 [default = false];//for boolean getDirty() default is enough, no need for optional
        * </pre>
        *
-       * <code>map&lt;string, .muni.model.Xref&gt; xrefAccounts = 11;</code>
+       * <code>map&lt;string, .muni.model.Xref&gt; xrefs = 11;</code>
        */
 
       @java.lang.Override
-      public boolean containsXrefAccounts(
+      public boolean containsXrefs(
           java.lang.String key) {
         if (key == null) { throw new java.lang.NullPointerException(); }
-        return internalGetXrefAccounts().getMap().containsKey(key);
+        return internalGetXrefs().getMap().containsKey(key);
       }
       /**
-       * Use {@link #getXrefAccountsMap()} instead.
+       * Use {@link #getXrefsMap()} instead.
        */
       @java.lang.Override
       @java.lang.Deprecated
-      public java.util.Map<java.lang.String, muni.model.Model.Xref> getXrefAccounts() {
-        return getXrefAccountsMap();
+      public java.util.Map<java.lang.String, muni.model.Model.Xref> getXrefs() {
+        return getXrefsMap();
       }
       /**
        * <pre>
        *optional  bool dirty = 10 [default = false];//for boolean getDirty() default is enough, no need for optional
        * </pre>
        *
-       * <code>map&lt;string, .muni.model.Xref&gt; xrefAccounts = 11;</code>
+       * <code>map&lt;string, .muni.model.Xref&gt; xrefs = 11;</code>
        */
       @java.lang.Override
 
-      public java.util.Map<java.lang.String, muni.model.Model.Xref> getXrefAccountsMap() {
-        return internalGetXrefAccounts().getMap();
+      public java.util.Map<java.lang.String, muni.model.Model.Xref> getXrefsMap() {
+        return internalGetXrefs().getMap();
       }
       /**
        * <pre>
        *optional  bool dirty = 10 [default = false];//for boolean getDirty() default is enough, no need for optional
        * </pre>
        *
-       * <code>map&lt;string, .muni.model.Xref&gt; xrefAccounts = 11;</code>
+       * <code>map&lt;string, .muni.model.Xref&gt; xrefs = 11;</code>
        */
       @java.lang.Override
 
-      public muni.model.Model.Xref getXrefAccountsOrDefault(
+      public muni.model.Model.Xref getXrefsOrDefault(
           java.lang.String key,
           muni.model.Model.Xref defaultValue) {
         if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, muni.model.Model.Xref> map =
-            internalGetXrefAccounts().getMap();
+            internalGetXrefs().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
@@ -2421,23 +2421,23 @@ public final class Model {
        *optional  bool dirty = 10 [default = false];//for boolean getDirty() default is enough, no need for optional
        * </pre>
        *
-       * <code>map&lt;string, .muni.model.Xref&gt; xrefAccounts = 11;</code>
+       * <code>map&lt;string, .muni.model.Xref&gt; xrefs = 11;</code>
        */
       @java.lang.Override
 
-      public muni.model.Model.Xref getXrefAccountsOrThrow(
+      public muni.model.Model.Xref getXrefsOrThrow(
           java.lang.String key) {
         if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, muni.model.Model.Xref> map =
-            internalGetXrefAccounts().getMap();
+            internalGetXrefs().getMap();
         if (!map.containsKey(key)) {
           throw new java.lang.IllegalArgumentException();
         }
         return map.get(key);
       }
 
-      public Builder clearXrefAccounts() {
-        internalGetMutableXrefAccounts().getMutableMap()
+      public Builder clearXrefs() {
+        internalGetMutableXrefs().getMutableMap()
             .clear();
         return this;
       }
@@ -2446,13 +2446,13 @@ public final class Model {
        *optional  bool dirty = 10 [default = false];//for boolean getDirty() default is enough, no need for optional
        * </pre>
        *
-       * <code>map&lt;string, .muni.model.Xref&gt; xrefAccounts = 11;</code>
+       * <code>map&lt;string, .muni.model.Xref&gt; xrefs = 11;</code>
        */
 
-      public Builder removeXrefAccounts(
+      public Builder removeXrefs(
           java.lang.String key) {
         if (key == null) { throw new java.lang.NullPointerException(); }
-        internalGetMutableXrefAccounts().getMutableMap()
+        internalGetMutableXrefs().getMutableMap()
             .remove(key);
         return this;
       }
@@ -2461,22 +2461,22 @@ public final class Model {
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, muni.model.Model.Xref>
-      getMutableXrefAccounts() {
-        return internalGetMutableXrefAccounts().getMutableMap();
+      getMutableXrefs() {
+        return internalGetMutableXrefs().getMutableMap();
       }
       /**
        * <pre>
        *optional  bool dirty = 10 [default = false];//for boolean getDirty() default is enough, no need for optional
        * </pre>
        *
-       * <code>map&lt;string, .muni.model.Xref&gt; xrefAccounts = 11;</code>
+       * <code>map&lt;string, .muni.model.Xref&gt; xrefs = 11;</code>
        */
-      public Builder putXrefAccounts(
+      public Builder putXrefs(
           java.lang.String key,
           muni.model.Model.Xref value) {
         if (key == null) { throw new java.lang.NullPointerException(); }
         if (value == null) { throw new java.lang.NullPointerException(); }
-        internalGetMutableXrefAccounts().getMutableMap()
+        internalGetMutableXrefs().getMutableMap()
             .put(key, value);
         return this;
       }
@@ -2485,12 +2485,12 @@ public final class Model {
        *optional  bool dirty = 10 [default = false];//for boolean getDirty() default is enough, no need for optional
        * </pre>
        *
-       * <code>map&lt;string, .muni.model.Xref&gt; xrefAccounts = 11;</code>
+       * <code>map&lt;string, .muni.model.Xref&gt; xrefs = 11;</code>
        */
 
-      public Builder putAllXrefAccounts(
+      public Builder putAllXrefs(
           java.util.Map<java.lang.String, muni.model.Model.Xref> values) {
-        internalGetMutableXrefAccounts().getMutableMap()
+        internalGetMutableXrefs().getMutableMap()
             .putAll(values);
         return this;
       }
@@ -2951,28 +2951,33 @@ public final class Model {
         getXrefIdBytes();
 
     /**
-     * <code>repeated .muni.model.Case recentCases = 9;</code>
+     * <pre>
+     * Person{ACTIVE|INACTIVE}, CASE{QUEUE | INITIATED | EXT_WAIT | INT_WAIT | DONE}
+     * </pre>
+     *
+     * <code>optional string status = 9;</code>
+     * @return Whether the status field is set.
      */
-    java.util.List<muni.model.Model.Case> 
-        getRecentCasesList();
+    boolean hasStatus();
     /**
-     * <code>repeated .muni.model.Case recentCases = 9;</code>
+     * <pre>
+     * Person{ACTIVE|INACTIVE}, CASE{QUEUE | INITIATED | EXT_WAIT | INT_WAIT | DONE}
+     * </pre>
+     *
+     * <code>optional string status = 9;</code>
+     * @return The status.
      */
-    muni.model.Model.Case getRecentCases(int index);
+    java.lang.String getStatus();
     /**
-     * <code>repeated .muni.model.Case recentCases = 9;</code>
+     * <pre>
+     * Person{ACTIVE|INACTIVE}, CASE{QUEUE | INITIATED | EXT_WAIT | INT_WAIT | DONE}
+     * </pre>
+     *
+     * <code>optional string status = 9;</code>
+     * @return The bytes for status.
      */
-    int getRecentCasesCount();
-    /**
-     * <code>repeated .muni.model.Case recentCases = 9;</code>
-     */
-    java.util.List<? extends muni.model.Model.CaseOrBuilder> 
-        getRecentCasesOrBuilderList();
-    /**
-     * <code>repeated .muni.model.Case recentCases = 9;</code>
-     */
-    muni.model.Model.CaseOrBuilder getRecentCasesOrBuilder(
-        int index);
+    com.google.protobuf.ByteString
+        getStatusBytes();
 
     /**
      * <pre>
@@ -3075,7 +3080,7 @@ public final class Model {
       id_ = "";
       xrefSystemId_ = "";
       xrefId_ = "";
-      recentCases_ = java.util.Collections.emptyList();
+      status_ = "";
     }
 
     @java.lang.Override
@@ -3111,7 +3116,7 @@ public final class Model {
               break;
             case 10: {
               com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000008) != 0)) {
+              if (((bitField0_ & 0x00000010) != 0)) {
                 subBuilder = createTime_.toBuilder();
               }
               createTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
@@ -3119,12 +3124,12 @@ public final class Model {
                 subBuilder.mergeFrom(createTime_);
                 createTime_ = subBuilder.buildPartial();
               }
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000010;
               break;
             }
             case 18: {
               com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000010) != 0)) {
+              if (((bitField0_ & 0x00000020) != 0)) {
                 subBuilder = updateTime_.toBuilder();
               }
               updateTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
@@ -3132,12 +3137,12 @@ public final class Model {
                 subBuilder.mergeFrom(updateTime_);
                 updateTime_ = subBuilder.buildPartial();
               }
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000020;
               break;
             }
             case 26: {
               com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000020) != 0)) {
+              if (((bitField0_ & 0x00000040) != 0)) {
                 subBuilder = subsysRefreshTime_.toBuilder();
               }
               subsysRefreshTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
@@ -3145,7 +3150,7 @@ public final class Model {
                 subBuilder.mergeFrom(subsysRefreshTime_);
                 subsysRefreshTime_ = subBuilder.buildPartial();
               }
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000040;
               break;
             }
             case 50: {
@@ -3167,12 +3172,9 @@ public final class Model {
               break;
             }
             case 74: {
-              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
-                recentCases_ = new java.util.ArrayList<muni.model.Model.Case>();
-                mutable_bitField0_ |= 0x00000008;
-              }
-              recentCases_.add(
-                  input.readMessage(muni.model.Model.Case.PARSER, extensionRegistry));
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              status_ = bs;
               break;
             }
             default: {
@@ -3190,9 +3192,6 @@ public final class Model {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000008) != 0)) {
-          recentCases_ = java.util.Collections.unmodifiableList(recentCases_);
-        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -3391,44 +3390,64 @@ public final class Model {
       }
     }
 
-    public static final int RECENTCASES_FIELD_NUMBER = 9;
-    private java.util.List<muni.model.Model.Case> recentCases_;
+    public static final int STATUS_FIELD_NUMBER = 9;
+    private volatile java.lang.Object status_;
     /**
-     * <code>repeated .muni.model.Case recentCases = 9;</code>
+     * <pre>
+     * Person{ACTIVE|INACTIVE}, CASE{QUEUE | INITIATED | EXT_WAIT | INT_WAIT | DONE}
+     * </pre>
+     *
+     * <code>optional string status = 9;</code>
+     * @return Whether the status field is set.
      */
     @java.lang.Override
-    public java.util.List<muni.model.Model.Case> getRecentCasesList() {
-      return recentCases_;
+    public boolean hasStatus() {
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
-     * <code>repeated .muni.model.Case recentCases = 9;</code>
+     * <pre>
+     * Person{ACTIVE|INACTIVE}, CASE{QUEUE | INITIATED | EXT_WAIT | INT_WAIT | DONE}
+     * </pre>
+     *
+     * <code>optional string status = 9;</code>
+     * @return The status.
      */
     @java.lang.Override
-    public java.util.List<? extends muni.model.Model.CaseOrBuilder> 
-        getRecentCasesOrBuilderList() {
-      return recentCases_;
+    public java.lang.String getStatus() {
+      java.lang.Object ref = status_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          status_ = s;
+        }
+        return s;
+      }
     }
     /**
-     * <code>repeated .muni.model.Case recentCases = 9;</code>
+     * <pre>
+     * Person{ACTIVE|INACTIVE}, CASE{QUEUE | INITIATED | EXT_WAIT | INT_WAIT | DONE}
+     * </pre>
+     *
+     * <code>optional string status = 9;</code>
+     * @return The bytes for status.
      */
     @java.lang.Override
-    public int getRecentCasesCount() {
-      return recentCases_.size();
-    }
-    /**
-     * <code>repeated .muni.model.Case recentCases = 9;</code>
-     */
-    @java.lang.Override
-    public muni.model.Model.Case getRecentCases(int index) {
-      return recentCases_.get(index);
-    }
-    /**
-     * <code>repeated .muni.model.Case recentCases = 9;</code>
-     */
-    @java.lang.Override
-    public muni.model.Model.CaseOrBuilder getRecentCasesOrBuilder(
-        int index) {
-      return recentCases_.get(index);
+    public com.google.protobuf.ByteString
+        getStatusBytes() {
+      java.lang.Object ref = status_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        status_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int CREATETIME_FIELD_NUMBER = 1;
@@ -3443,7 +3462,7 @@ public final class Model {
      */
     @java.lang.Override
     public boolean hasCreateTime() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -3481,7 +3500,7 @@ public final class Model {
      */
     @java.lang.Override
     public boolean hasUpdateTime() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <pre>
@@ -3519,7 +3538,7 @@ public final class Model {
      */
     @java.lang.Override
     public boolean hasSubsysRefreshTime() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <pre>
@@ -3559,13 +3578,13 @@ public final class Model {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (((bitField0_ & 0x00000010) != 0)) {
         output.writeMessage(1, getCreateTime());
       }
-      if (((bitField0_ & 0x00000010) != 0)) {
+      if (((bitField0_ & 0x00000020) != 0)) {
         output.writeMessage(2, getUpdateTime());
       }
-      if (((bitField0_ & 0x00000020) != 0)) {
+      if (((bitField0_ & 0x00000040) != 0)) {
         output.writeMessage(3, getSubsysRefreshTime());
       }
       if (((bitField0_ & 0x00000001) != 0)) {
@@ -3577,8 +3596,8 @@ public final class Model {
       if (((bitField0_ & 0x00000004) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, xrefId_);
       }
-      for (int i = 0; i < recentCases_.size(); i++) {
-        output.writeMessage(9, recentCases_.get(i));
+      if (((bitField0_ & 0x00000008) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, status_);
       }
       unknownFields.writeTo(output);
     }
@@ -3589,15 +3608,15 @@ public final class Model {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (((bitField0_ & 0x00000010) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCreateTime());
       }
-      if (((bitField0_ & 0x00000010) != 0)) {
+      if (((bitField0_ & 0x00000020) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getUpdateTime());
       }
-      if (((bitField0_ & 0x00000020) != 0)) {
+      if (((bitField0_ & 0x00000040) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getSubsysRefreshTime());
       }
@@ -3610,9 +3629,8 @@ public final class Model {
       if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, xrefId_);
       }
-      for (int i = 0; i < recentCases_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(9, recentCases_.get(i));
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, status_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3644,8 +3662,11 @@ public final class Model {
         if (!getXrefId()
             .equals(other.getXrefId())) return false;
       }
-      if (!getRecentCasesList()
-          .equals(other.getRecentCasesList())) return false;
+      if (hasStatus() != other.hasStatus()) return false;
+      if (hasStatus()) {
+        if (!getStatus()
+            .equals(other.getStatus())) return false;
+      }
       if (hasCreateTime() != other.hasCreateTime()) return false;
       if (hasCreateTime()) {
         if (!getCreateTime()
@@ -3684,9 +3705,9 @@ public final class Model {
         hash = (37 * hash) + XREFID_FIELD_NUMBER;
         hash = (53 * hash) + getXrefId().hashCode();
       }
-      if (getRecentCasesCount() > 0) {
-        hash = (37 * hash) + RECENTCASES_FIELD_NUMBER;
-        hash = (53 * hash) + getRecentCasesList().hashCode();
+      if (hasStatus()) {
+        hash = (37 * hash) + STATUS_FIELD_NUMBER;
+        hash = (53 * hash) + getStatus().hashCode();
       }
       if (hasCreateTime()) {
         hash = (37 * hash) + CREATETIME_FIELD_NUMBER;
@@ -3832,7 +3853,6 @@ public final class Model {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
-          getRecentCasesFieldBuilder();
           getCreateTimeFieldBuilder();
           getUpdateTimeFieldBuilder();
           getSubsysRefreshTimeFieldBuilder();
@@ -3847,12 +3867,8 @@ public final class Model {
         bitField0_ = (bitField0_ & ~0x00000002);
         xrefId_ = "";
         bitField0_ = (bitField0_ & ~0x00000004);
-        if (recentCasesBuilder_ == null) {
-          recentCases_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
-        } else {
-          recentCasesBuilder_.clear();
-        }
+        status_ = "";
+        bitField0_ = (bitField0_ & ~0x00000008);
         if (createTimeBuilder_ == null) {
           createTime_ = null;
         } else {
@@ -3911,22 +3927,17 @@ public final class Model {
           to_bitField0_ |= 0x00000004;
         }
         result.xrefId_ = xrefId_;
-        if (recentCasesBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) != 0)) {
-            recentCases_ = java.util.Collections.unmodifiableList(recentCases_);
-            bitField0_ = (bitField0_ & ~0x00000008);
-          }
-          result.recentCases_ = recentCases_;
-        } else {
-          result.recentCases_ = recentCasesBuilder_.build();
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          to_bitField0_ |= 0x00000008;
         }
+        result.status_ = status_;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           if (createTimeBuilder_ == null) {
             result.createTime_ = createTime_;
           } else {
             result.createTime_ = createTimeBuilder_.build();
           }
-          to_bitField0_ |= 0x00000008;
+          to_bitField0_ |= 0x00000010;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           if (updateTimeBuilder_ == null) {
@@ -3934,7 +3945,7 @@ public final class Model {
           } else {
             result.updateTime_ = updateTimeBuilder_.build();
           }
-          to_bitField0_ |= 0x00000010;
+          to_bitField0_ |= 0x00000020;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           if (subsysRefreshTimeBuilder_ == null) {
@@ -3942,7 +3953,7 @@ public final class Model {
           } else {
             result.subsysRefreshTime_ = subsysRefreshTimeBuilder_.build();
           }
-          to_bitField0_ |= 0x00000020;
+          to_bitField0_ |= 0x00000040;
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -4008,31 +4019,10 @@ public final class Model {
           xrefId_ = other.xrefId_;
           onChanged();
         }
-        if (recentCasesBuilder_ == null) {
-          if (!other.recentCases_.isEmpty()) {
-            if (recentCases_.isEmpty()) {
-              recentCases_ = other.recentCases_;
-              bitField0_ = (bitField0_ & ~0x00000008);
-            } else {
-              ensureRecentCasesIsMutable();
-              recentCases_.addAll(other.recentCases_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.recentCases_.isEmpty()) {
-            if (recentCasesBuilder_.isEmpty()) {
-              recentCasesBuilder_.dispose();
-              recentCasesBuilder_ = null;
-              recentCases_ = other.recentCases_;
-              bitField0_ = (bitField0_ & ~0x00000008);
-              recentCasesBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getRecentCasesFieldBuilder() : null;
-            } else {
-              recentCasesBuilder_.addAllMessages(other.recentCases_);
-            }
-          }
+        if (other.hasStatus()) {
+          bitField0_ |= 0x00000008;
+          status_ = other.status_;
+          onChanged();
         }
         if (other.hasCreateTime()) {
           mergeCreateTime(other.getCreateTime());
@@ -4397,244 +4387,112 @@ public final class Model {
         return this;
       }
 
-      private java.util.List<muni.model.Model.Case> recentCases_ =
-        java.util.Collections.emptyList();
-      private void ensureRecentCasesIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
-          recentCases_ = new java.util.ArrayList<muni.model.Model.Case>(recentCases_);
-          bitField0_ |= 0x00000008;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          muni.model.Model.Case, muni.model.Model.Case.Builder, muni.model.Model.CaseOrBuilder> recentCasesBuilder_;
-
+      private java.lang.Object status_ = "";
       /**
-       * <code>repeated .muni.model.Case recentCases = 9;</code>
+       * <pre>
+       * Person{ACTIVE|INACTIVE}, CASE{QUEUE | INITIATED | EXT_WAIT | INT_WAIT | DONE}
+       * </pre>
+       *
+       * <code>optional string status = 9;</code>
+       * @return Whether the status field is set.
        */
-      public java.util.List<muni.model.Model.Case> getRecentCasesList() {
-        if (recentCasesBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(recentCases_);
-        } else {
-          return recentCasesBuilder_.getMessageList();
-        }
+      public boolean hasStatus() {
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
-       * <code>repeated .muni.model.Case recentCases = 9;</code>
+       * <pre>
+       * Person{ACTIVE|INACTIVE}, CASE{QUEUE | INITIATED | EXT_WAIT | INT_WAIT | DONE}
+       * </pre>
+       *
+       * <code>optional string status = 9;</code>
+       * @return The status.
        */
-      public int getRecentCasesCount() {
-        if (recentCasesBuilder_ == null) {
-          return recentCases_.size();
-        } else {
-          return recentCasesBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .muni.model.Case recentCases = 9;</code>
-       */
-      public muni.model.Model.Case getRecentCases(int index) {
-        if (recentCasesBuilder_ == null) {
-          return recentCases_.get(index);
-        } else {
-          return recentCasesBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .muni.model.Case recentCases = 9;</code>
-       */
-      public Builder setRecentCases(
-          int index, muni.model.Model.Case value) {
-        if (recentCasesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
+      public java.lang.String getStatus() {
+        java.lang.Object ref = status_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            status_ = s;
           }
-          ensureRecentCasesIsMutable();
-          recentCases_.set(index, value);
-          onChanged();
+          return s;
         } else {
-          recentCasesBuilder_.setMessage(index, value);
+          return (java.lang.String) ref;
         }
+      }
+      /**
+       * <pre>
+       * Person{ACTIVE|INACTIVE}, CASE{QUEUE | INITIATED | EXT_WAIT | INT_WAIT | DONE}
+       * </pre>
+       *
+       * <code>optional string status = 9;</code>
+       * @return The bytes for status.
+       */
+      public com.google.protobuf.ByteString
+          getStatusBytes() {
+        java.lang.Object ref = status_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          status_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Person{ACTIVE|INACTIVE}, CASE{QUEUE | INITIATED | EXT_WAIT | INT_WAIT | DONE}
+       * </pre>
+       *
+       * <code>optional string status = 9;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        status_ = value;
+        onChanged();
         return this;
       }
       /**
-       * <code>repeated .muni.model.Case recentCases = 9;</code>
+       * <pre>
+       * Person{ACTIVE|INACTIVE}, CASE{QUEUE | INITIATED | EXT_WAIT | INT_WAIT | DONE}
+       * </pre>
+       *
+       * <code>optional string status = 9;</code>
+       * @return This builder for chaining.
        */
-      public Builder setRecentCases(
-          int index, muni.model.Model.Case.Builder builderForValue) {
-        if (recentCasesBuilder_ == null) {
-          ensureRecentCasesIsMutable();
-          recentCases_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          recentCasesBuilder_.setMessage(index, builderForValue.build());
-        }
+      public Builder clearStatus() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        status_ = getDefaultInstance().getStatus();
+        onChanged();
         return this;
       }
       /**
-       * <code>repeated .muni.model.Case recentCases = 9;</code>
+       * <pre>
+       * Person{ACTIVE|INACTIVE}, CASE{QUEUE | INITIATED | EXT_WAIT | INT_WAIT | DONE}
+       * </pre>
+       *
+       * <code>optional string status = 9;</code>
+       * @param value The bytes for status to set.
+       * @return This builder for chaining.
        */
-      public Builder addRecentCases(muni.model.Model.Case value) {
-        if (recentCasesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureRecentCasesIsMutable();
-          recentCases_.add(value);
-          onChanged();
-        } else {
-          recentCasesBuilder_.addMessage(value);
-        }
+      public Builder setStatusBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        status_ = value;
+        onChanged();
         return this;
-      }
-      /**
-       * <code>repeated .muni.model.Case recentCases = 9;</code>
-       */
-      public Builder addRecentCases(
-          int index, muni.model.Model.Case value) {
-        if (recentCasesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureRecentCasesIsMutable();
-          recentCases_.add(index, value);
-          onChanged();
-        } else {
-          recentCasesBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .muni.model.Case recentCases = 9;</code>
-       */
-      public Builder addRecentCases(
-          muni.model.Model.Case.Builder builderForValue) {
-        if (recentCasesBuilder_ == null) {
-          ensureRecentCasesIsMutable();
-          recentCases_.add(builderForValue.build());
-          onChanged();
-        } else {
-          recentCasesBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .muni.model.Case recentCases = 9;</code>
-       */
-      public Builder addRecentCases(
-          int index, muni.model.Model.Case.Builder builderForValue) {
-        if (recentCasesBuilder_ == null) {
-          ensureRecentCasesIsMutable();
-          recentCases_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          recentCasesBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .muni.model.Case recentCases = 9;</code>
-       */
-      public Builder addAllRecentCases(
-          java.lang.Iterable<? extends muni.model.Model.Case> values) {
-        if (recentCasesBuilder_ == null) {
-          ensureRecentCasesIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, recentCases_);
-          onChanged();
-        } else {
-          recentCasesBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .muni.model.Case recentCases = 9;</code>
-       */
-      public Builder clearRecentCases() {
-        if (recentCasesBuilder_ == null) {
-          recentCases_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
-          onChanged();
-        } else {
-          recentCasesBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .muni.model.Case recentCases = 9;</code>
-       */
-      public Builder removeRecentCases(int index) {
-        if (recentCasesBuilder_ == null) {
-          ensureRecentCasesIsMutable();
-          recentCases_.remove(index);
-          onChanged();
-        } else {
-          recentCasesBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .muni.model.Case recentCases = 9;</code>
-       */
-      public muni.model.Model.Case.Builder getRecentCasesBuilder(
-          int index) {
-        return getRecentCasesFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .muni.model.Case recentCases = 9;</code>
-       */
-      public muni.model.Model.CaseOrBuilder getRecentCasesOrBuilder(
-          int index) {
-        if (recentCasesBuilder_ == null) {
-          return recentCases_.get(index);  } else {
-          return recentCasesBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .muni.model.Case recentCases = 9;</code>
-       */
-      public java.util.List<? extends muni.model.Model.CaseOrBuilder> 
-           getRecentCasesOrBuilderList() {
-        if (recentCasesBuilder_ != null) {
-          return recentCasesBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(recentCases_);
-        }
-      }
-      /**
-       * <code>repeated .muni.model.Case recentCases = 9;</code>
-       */
-      public muni.model.Model.Case.Builder addRecentCasesBuilder() {
-        return getRecentCasesFieldBuilder().addBuilder(
-            muni.model.Model.Case.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .muni.model.Case recentCases = 9;</code>
-       */
-      public muni.model.Model.Case.Builder addRecentCasesBuilder(
-          int index) {
-        return getRecentCasesFieldBuilder().addBuilder(
-            index, muni.model.Model.Case.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .muni.model.Case recentCases = 9;</code>
-       */
-      public java.util.List<muni.model.Model.Case.Builder> 
-           getRecentCasesBuilderList() {
-        return getRecentCasesFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          muni.model.Model.Case, muni.model.Model.Case.Builder, muni.model.Model.CaseOrBuilder> 
-          getRecentCasesFieldBuilder() {
-        if (recentCasesBuilder_ == null) {
-          recentCasesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              muni.model.Model.Case, muni.model.Model.Case.Builder, muni.model.Model.CaseOrBuilder>(
-                  recentCases_,
-                  ((bitField0_ & 0x00000008) != 0),
-                  getParentForChildren(),
-                  isClean());
-          recentCases_ = null;
-        }
-        return recentCasesBuilder_;
       }
 
       private com.google.protobuf.Timestamp createTime_;
@@ -7653,16 +7511,28 @@ public final class Model {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     *Output only
+     * </pre>
+     *
      * <code>optional string id = 3;</code>
      * @return Whether the id field is set.
      */
     boolean hasId();
     /**
+     * <pre>
+     *Output only
+     * </pre>
+     *
      * <code>optional string id = 3;</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
+     * <pre>
+     *Output only
+     * </pre>
+     *
      * <code>optional string id = 3;</code>
      * @return The bytes for id.
      */
@@ -7699,6 +7569,38 @@ public final class Model {
         getStatusBytes();
 
     /**
+     * <code>optional string description = 9;</code>
+     * @return Whether the description field is set.
+     */
+    boolean hasDescription();
+    /**
+     * <code>optional string description = 9;</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>optional string description = 9;</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>optional .muni.model.PostalAddress eventAddress = 7;</code>
+     * @return Whether the eventAddress field is set.
+     */
+    boolean hasEventAddress();
+    /**
+     * <code>optional .muni.model.PostalAddress eventAddress = 7;</code>
+     * @return The eventAddress.
+     */
+    muni.model.Model.PostalAddress getEventAddress();
+    /**
+     * <code>optional .muni.model.PostalAddress eventAddress = 7;</code>
+     */
+    muni.model.Model.PostalAddressOrBuilder getEventAddressOrBuilder();
+
+    /**
      * <code>optional .muni.model.Person reportedByCustomer = 5;</code>
      * @return Whether the reportedByCustomer field is set.
      */
@@ -7730,7 +7632,7 @@ public final class Model {
 
     /**
      * <pre>
-     *optional bool dirty = 7 [default = false];
+     *store a list of tags that helps routing, categorizing, reporting //TODO Enum?
      * </pre>
      *
      * <code>repeated string tags = 8;</code>
@@ -7740,7 +7642,7 @@ public final class Model {
         getTagsList();
     /**
      * <pre>
-     *optional bool dirty = 7 [default = false];
+     *store a list of tags that helps routing, categorizing, reporting //TODO Enum?
      * </pre>
      *
      * <code>repeated string tags = 8;</code>
@@ -7749,7 +7651,7 @@ public final class Model {
     int getTagsCount();
     /**
      * <pre>
-     *optional bool dirty = 7 [default = false];
+     *store a list of tags that helps routing, categorizing, reporting //TODO Enum?
      * </pre>
      *
      * <code>repeated string tags = 8;</code>
@@ -7759,7 +7661,7 @@ public final class Model {
     java.lang.String getTags(int index);
     /**
      * <pre>
-     *optional bool dirty = 7 [default = false];
+     *store a list of tags that helps routing, categorizing, reporting //TODO Enum?
      * </pre>
      *
      * <code>repeated string tags = 8;</code>
@@ -7770,21 +7672,141 @@ public final class Model {
         getTagsBytes(int index);
 
     /**
-     * <code>optional string description = 9;</code>
-     * @return Whether the description field is set.
+     * <pre>
+     * a unique case type id
+     * </pre>
+     *
+     * <code>optional string typeId = 11;</code>
+     * @return Whether the typeId field is set.
      */
-    boolean hasDescription();
+    boolean hasTypeId();
     /**
-     * <code>optional string description = 9;</code>
-     * @return The description.
+     * <pre>
+     * a unique case type id
+     * </pre>
+     *
+     * <code>optional string typeId = 11;</code>
+     * @return The typeId.
      */
-    java.lang.String getDescription();
+    java.lang.String getTypeId();
     /**
-     * <code>optional string description = 9;</code>
-     * @return The bytes for description.
+     * <pre>
+     * a unique case type id
+     * </pre>
+     *
+     * <code>optional string typeId = 11;</code>
+     * @return The bytes for typeId.
      */
     com.google.protobuf.ByteString
-        getDescriptionBytes();
+        getTypeIdBytes();
+
+    /**
+     * <pre>
+     *The key-value that are relevant for each specific case typeId.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; typeProps = 12;</code>
+     */
+    int getTypePropsCount();
+    /**
+     * <pre>
+     *The key-value that are relevant for each specific case typeId.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; typeProps = 12;</code>
+     */
+    boolean containsTypeProps(
+        java.lang.String key);
+    /**
+     * Use {@link #getTypePropsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getTypeProps();
+    /**
+     * <pre>
+     *The key-value that are relevant for each specific case typeId.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; typeProps = 12;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getTypePropsMap();
+    /**
+     * <pre>
+     *The key-value that are relevant for each specific case typeId.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; typeProps = 12;</code>
+     */
+
+    java.lang.String getTypePropsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     *The key-value that are relevant for each specific case typeId.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; typeProps = 12;</code>
+     */
+
+    java.lang.String getTypePropsOrThrow(
+        java.lang.String key);
+
+    /**
+     * <pre>
+     * Subsystem(s) where case is handled. For info requests this may be null.
+     * </pre>
+     *
+     * <code>map&lt;string, .muni.model.Xref&gt; xrefs = 10;</code>
+     */
+    int getXrefsCount();
+    /**
+     * <pre>
+     * Subsystem(s) where case is handled. For info requests this may be null.
+     * </pre>
+     *
+     * <code>map&lt;string, .muni.model.Xref&gt; xrefs = 10;</code>
+     */
+    boolean containsXrefs(
+        java.lang.String key);
+    /**
+     * Use {@link #getXrefsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, muni.model.Model.Xref>
+    getXrefs();
+    /**
+     * <pre>
+     * Subsystem(s) where case is handled. For info requests this may be null.
+     * </pre>
+     *
+     * <code>map&lt;string, .muni.model.Xref&gt; xrefs = 10;</code>
+     */
+    java.util.Map<java.lang.String, muni.model.Model.Xref>
+    getXrefsMap();
+    /**
+     * <pre>
+     * Subsystem(s) where case is handled. For info requests this may be null.
+     * </pre>
+     *
+     * <code>map&lt;string, .muni.model.Xref&gt; xrefs = 10;</code>
+     */
+
+    muni.model.Model.Xref getXrefsOrDefault(
+        java.lang.String key,
+        muni.model.Model.Xref defaultValue);
+    /**
+     * <pre>
+     * Subsystem(s) where case is handled. For info requests this may be null.
+     * </pre>
+     *
+     * <code>map&lt;string, .muni.model.Xref&gt; xrefs = 10;</code>
+     */
+
+    muni.model.Model.Xref getXrefsOrThrow(
+        java.lang.String key);
 
     /**
      * <pre>
@@ -7814,16 +7836,28 @@ public final class Model {
     com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder();
 
     /**
+     * <pre>
+     *Output only
+     * </pre>
+     *
      * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
      * @return Whether the updateTime field is set.
      */
     boolean hasUpdateTime();
     /**
+     * <pre>
+     *Output only
+     * </pre>
+     *
      * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
      * @return The updateTime.
      */
     com.google.protobuf.Timestamp getUpdateTime();
     /**
+     * <pre>
+     *Output only
+     * </pre>
+     *
      * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
      */
     com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder();
@@ -7843,8 +7877,9 @@ public final class Model {
     private Case() {
       id_ = "";
       status_ = "";
-      tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       description_ = "";
+      tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      typeId_ = "";
     }
 
     @java.lang.Override
@@ -7880,7 +7915,7 @@ public final class Model {
               break;
             case 10: {
               com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000020) != 0)) {
+              if (((bitField0_ & 0x00000080) != 0)) {
                 subBuilder = createTime_.toBuilder();
               }
               createTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
@@ -7888,12 +7923,12 @@ public final class Model {
                 subBuilder.mergeFrom(createTime_);
                 createTime_ = subBuilder.buildPartial();
               }
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000080;
               break;
             }
             case 18: {
               com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000040) != 0)) {
+              if (((bitField0_ & 0x00000100) != 0)) {
                 subBuilder = updateTime_.toBuilder();
               }
               updateTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
@@ -7901,7 +7936,7 @@ public final class Model {
                 subBuilder.mergeFrom(updateTime_);
                 updateTime_ = subBuilder.buildPartial();
               }
-              bitField0_ |= 0x00000040;
+              bitField0_ |= 0x00000100;
               break;
             }
             case 26: {
@@ -7918,7 +7953,7 @@ public final class Model {
             }
             case 42: {
               muni.model.Model.Person.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000004) != 0)) {
+              if (((bitField0_ & 0x00000010) != 0)) {
                 subBuilder = reportedByCustomer_.toBuilder();
               }
               reportedByCustomer_ = input.readMessage(muni.model.Model.Person.PARSER, extensionRegistry);
@@ -7926,12 +7961,12 @@ public final class Model {
                 subBuilder.mergeFrom(reportedByCustomer_);
                 reportedByCustomer_ = subBuilder.buildPartial();
               }
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000010;
               break;
             }
             case 50: {
               muni.model.Model.Person.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000008) != 0)) {
+              if (((bitField0_ & 0x00000020) != 0)) {
                 subBuilder = createdByEmployee_.toBuilder();
               }
               createdByEmployee_ = input.readMessage(muni.model.Model.Person.PARSER, extensionRegistry);
@@ -7939,22 +7974,67 @@ public final class Model {
                 subBuilder.mergeFrom(createdByEmployee_);
                 createdByEmployee_ = subBuilder.buildPartial();
               }
+              bitField0_ |= 0x00000020;
+              break;
+            }
+            case 58: {
+              muni.model.Model.PostalAddress.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000008) != 0)) {
+                subBuilder = eventAddress_.toBuilder();
+              }
+              eventAddress_ = input.readMessage(muni.model.Model.PostalAddress.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(eventAddress_);
+                eventAddress_ = subBuilder.buildPartial();
+              }
               bitField0_ |= 0x00000008;
               break;
             }
             case 66: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000040) != 0)) {
                 tags_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000040;
               }
               tags_.add(bs);
               break;
             }
             case 74: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000004;
               description_ = bs;
+              break;
+            }
+            case 82: {
+              if (!((mutable_bitField0_ & 0x00000200) != 0)) {
+                xrefs_ = com.google.protobuf.MapField.newMapField(
+                    XrefsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000200;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, muni.model.Model.Xref>
+              xrefs__ = input.readMessage(
+                  XrefsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              xrefs_.getMutableMap().put(
+                  xrefs__.getKey(), xrefs__.getValue());
+              break;
+            }
+            case 90: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000040;
+              typeId_ = bs;
+              break;
+            }
+            case 98: {
+              if (!((mutable_bitField0_ & 0x00000100) != 0)) {
+                typeProps_ = com.google.protobuf.MapField.newMapField(
+                    TypePropsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000100;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              typeProps__ = input.readMessage(
+                  TypePropsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              typeProps_.getMutableMap().put(
+                  typeProps__.getKey(), typeProps__.getValue());
               break;
             }
             default: {
@@ -7972,7 +8052,7 @@ public final class Model {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000010) != 0)) {
+        if (((mutable_bitField0_ & 0x00000040) != 0)) {
           tags_ = tags_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -7984,6 +8064,20 @@ public final class Model {
       return muni.model.Model.internal_static_muni_model_Case_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 12:
+          return internalGetTypeProps();
+        case 10:
+          return internalGetXrefs();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -7996,6 +8090,10 @@ public final class Model {
     public static final int ID_FIELD_NUMBER = 3;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     *Output only
+     * </pre>
+     *
      * <code>optional string id = 3;</code>
      * @return Whether the id field is set.
      */
@@ -8004,6 +8102,10 @@ public final class Model {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
+     * <pre>
+     *Output only
+     * </pre>
+     *
      * <code>optional string id = 3;</code>
      * @return The id.
      */
@@ -8023,6 +8125,10 @@ public final class Model {
       }
     }
     /**
+     * <pre>
+     *Output only
+     * </pre>
+     *
      * <code>optional string id = 3;</code>
      * @return The bytes for id.
      */
@@ -8101,109 +8207,6 @@ public final class Model {
       }
     }
 
-    public static final int REPORTEDBYCUSTOMER_FIELD_NUMBER = 5;
-    private muni.model.Model.Person reportedByCustomer_;
-    /**
-     * <code>optional .muni.model.Person reportedByCustomer = 5;</code>
-     * @return Whether the reportedByCustomer field is set.
-     */
-    @java.lang.Override
-    public boolean hasReportedByCustomer() {
-      return ((bitField0_ & 0x00000004) != 0);
-    }
-    /**
-     * <code>optional .muni.model.Person reportedByCustomer = 5;</code>
-     * @return The reportedByCustomer.
-     */
-    @java.lang.Override
-    public muni.model.Model.Person getReportedByCustomer() {
-      return reportedByCustomer_ == null ? muni.model.Model.Person.getDefaultInstance() : reportedByCustomer_;
-    }
-    /**
-     * <code>optional .muni.model.Person reportedByCustomer = 5;</code>
-     */
-    @java.lang.Override
-    public muni.model.Model.PersonOrBuilder getReportedByCustomerOrBuilder() {
-      return reportedByCustomer_ == null ? muni.model.Model.Person.getDefaultInstance() : reportedByCustomer_;
-    }
-
-    public static final int CREATEDBYEMPLOYEE_FIELD_NUMBER = 6;
-    private muni.model.Model.Person createdByEmployee_;
-    /**
-     * <code>optional .muni.model.Person createdByEmployee = 6;</code>
-     * @return Whether the createdByEmployee field is set.
-     */
-    @java.lang.Override
-    public boolean hasCreatedByEmployee() {
-      return ((bitField0_ & 0x00000008) != 0);
-    }
-    /**
-     * <code>optional .muni.model.Person createdByEmployee = 6;</code>
-     * @return The createdByEmployee.
-     */
-    @java.lang.Override
-    public muni.model.Model.Person getCreatedByEmployee() {
-      return createdByEmployee_ == null ? muni.model.Model.Person.getDefaultInstance() : createdByEmployee_;
-    }
-    /**
-     * <code>optional .muni.model.Person createdByEmployee = 6;</code>
-     */
-    @java.lang.Override
-    public muni.model.Model.PersonOrBuilder getCreatedByEmployeeOrBuilder() {
-      return createdByEmployee_ == null ? muni.model.Model.Person.getDefaultInstance() : createdByEmployee_;
-    }
-
-    public static final int TAGS_FIELD_NUMBER = 8;
-    private com.google.protobuf.LazyStringList tags_;
-    /**
-     * <pre>
-     *optional bool dirty = 7 [default = false];
-     * </pre>
-     *
-     * <code>repeated string tags = 8;</code>
-     * @return A list containing the tags.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getTagsList() {
-      return tags_;
-    }
-    /**
-     * <pre>
-     *optional bool dirty = 7 [default = false];
-     * </pre>
-     *
-     * <code>repeated string tags = 8;</code>
-     * @return The count of tags.
-     */
-    public int getTagsCount() {
-      return tags_.size();
-    }
-    /**
-     * <pre>
-     *optional bool dirty = 7 [default = false];
-     * </pre>
-     *
-     * <code>repeated string tags = 8;</code>
-     * @param index The index of the element to return.
-     * @return The tags at the given index.
-     */
-    public java.lang.String getTags(int index) {
-      return tags_.get(index);
-    }
-    /**
-     * <pre>
-     *optional bool dirty = 7 [default = false];
-     * </pre>
-     *
-     * <code>repeated string tags = 8;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the tags at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getTagsBytes(int index) {
-      return tags_.getByteString(index);
-    }
-
     public static final int DESCRIPTION_FIELD_NUMBER = 9;
     private volatile java.lang.Object description_;
     /**
@@ -8212,7 +8215,7 @@ public final class Model {
      */
     @java.lang.Override
     public boolean hasDescription() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <code>optional string description = 9;</code>
@@ -8252,6 +8255,389 @@ public final class Model {
       }
     }
 
+    public static final int EVENTADDRESS_FIELD_NUMBER = 7;
+    private muni.model.Model.PostalAddress eventAddress_;
+    /**
+     * <code>optional .muni.model.PostalAddress eventAddress = 7;</code>
+     * @return Whether the eventAddress field is set.
+     */
+    @java.lang.Override
+    public boolean hasEventAddress() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional .muni.model.PostalAddress eventAddress = 7;</code>
+     * @return The eventAddress.
+     */
+    @java.lang.Override
+    public muni.model.Model.PostalAddress getEventAddress() {
+      return eventAddress_ == null ? muni.model.Model.PostalAddress.getDefaultInstance() : eventAddress_;
+    }
+    /**
+     * <code>optional .muni.model.PostalAddress eventAddress = 7;</code>
+     */
+    @java.lang.Override
+    public muni.model.Model.PostalAddressOrBuilder getEventAddressOrBuilder() {
+      return eventAddress_ == null ? muni.model.Model.PostalAddress.getDefaultInstance() : eventAddress_;
+    }
+
+    public static final int REPORTEDBYCUSTOMER_FIELD_NUMBER = 5;
+    private muni.model.Model.Person reportedByCustomer_;
+    /**
+     * <code>optional .muni.model.Person reportedByCustomer = 5;</code>
+     * @return Whether the reportedByCustomer field is set.
+     */
+    @java.lang.Override
+    public boolean hasReportedByCustomer() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional .muni.model.Person reportedByCustomer = 5;</code>
+     * @return The reportedByCustomer.
+     */
+    @java.lang.Override
+    public muni.model.Model.Person getReportedByCustomer() {
+      return reportedByCustomer_ == null ? muni.model.Model.Person.getDefaultInstance() : reportedByCustomer_;
+    }
+    /**
+     * <code>optional .muni.model.Person reportedByCustomer = 5;</code>
+     */
+    @java.lang.Override
+    public muni.model.Model.PersonOrBuilder getReportedByCustomerOrBuilder() {
+      return reportedByCustomer_ == null ? muni.model.Model.Person.getDefaultInstance() : reportedByCustomer_;
+    }
+
+    public static final int CREATEDBYEMPLOYEE_FIELD_NUMBER = 6;
+    private muni.model.Model.Person createdByEmployee_;
+    /**
+     * <code>optional .muni.model.Person createdByEmployee = 6;</code>
+     * @return Whether the createdByEmployee field is set.
+     */
+    @java.lang.Override
+    public boolean hasCreatedByEmployee() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <code>optional .muni.model.Person createdByEmployee = 6;</code>
+     * @return The createdByEmployee.
+     */
+    @java.lang.Override
+    public muni.model.Model.Person getCreatedByEmployee() {
+      return createdByEmployee_ == null ? muni.model.Model.Person.getDefaultInstance() : createdByEmployee_;
+    }
+    /**
+     * <code>optional .muni.model.Person createdByEmployee = 6;</code>
+     */
+    @java.lang.Override
+    public muni.model.Model.PersonOrBuilder getCreatedByEmployeeOrBuilder() {
+      return createdByEmployee_ == null ? muni.model.Model.Person.getDefaultInstance() : createdByEmployee_;
+    }
+
+    public static final int TAGS_FIELD_NUMBER = 8;
+    private com.google.protobuf.LazyStringList tags_;
+    /**
+     * <pre>
+     *store a list of tags that helps routing, categorizing, reporting //TODO Enum?
+     * </pre>
+     *
+     * <code>repeated string tags = 8;</code>
+     * @return A list containing the tags.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getTagsList() {
+      return tags_;
+    }
+    /**
+     * <pre>
+     *store a list of tags that helps routing, categorizing, reporting //TODO Enum?
+     * </pre>
+     *
+     * <code>repeated string tags = 8;</code>
+     * @return The count of tags.
+     */
+    public int getTagsCount() {
+      return tags_.size();
+    }
+    /**
+     * <pre>
+     *store a list of tags that helps routing, categorizing, reporting //TODO Enum?
+     * </pre>
+     *
+     * <code>repeated string tags = 8;</code>
+     * @param index The index of the element to return.
+     * @return The tags at the given index.
+     */
+    public java.lang.String getTags(int index) {
+      return tags_.get(index);
+    }
+    /**
+     * <pre>
+     *store a list of tags that helps routing, categorizing, reporting //TODO Enum?
+     * </pre>
+     *
+     * <code>repeated string tags = 8;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the tags at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getTagsBytes(int index) {
+      return tags_.getByteString(index);
+    }
+
+    public static final int TYPEID_FIELD_NUMBER = 11;
+    private volatile java.lang.Object typeId_;
+    /**
+     * <pre>
+     * a unique case type id
+     * </pre>
+     *
+     * <code>optional string typeId = 11;</code>
+     * @return Whether the typeId field is set.
+     */
+    @java.lang.Override
+    public boolean hasTypeId() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <pre>
+     * a unique case type id
+     * </pre>
+     *
+     * <code>optional string typeId = 11;</code>
+     * @return The typeId.
+     */
+    @java.lang.Override
+    public java.lang.String getTypeId() {
+      java.lang.Object ref = typeId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          typeId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * a unique case type id
+     * </pre>
+     *
+     * <code>optional string typeId = 11;</code>
+     * @return The bytes for typeId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTypeIdBytes() {
+      java.lang.Object ref = typeId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        typeId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TYPEPROPS_FIELD_NUMBER = 12;
+    private static final class TypePropsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  muni.model.Model.internal_static_muni_model_Case_TypePropsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> typeProps_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetTypeProps() {
+      if (typeProps_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            TypePropsDefaultEntryHolder.defaultEntry);
+      }
+      return typeProps_;
+    }
+
+    public int getTypePropsCount() {
+      return internalGetTypeProps().getMap().size();
+    }
+    /**
+     * <pre>
+     *The key-value that are relevant for each specific case typeId.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; typeProps = 12;</code>
+     */
+
+    @java.lang.Override
+    public boolean containsTypeProps(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetTypeProps().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getTypePropsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getTypeProps() {
+      return getTypePropsMap();
+    }
+    /**
+     * <pre>
+     *The key-value that are relevant for each specific case typeId.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; typeProps = 12;</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getTypePropsMap() {
+      return internalGetTypeProps().getMap();
+    }
+    /**
+     * <pre>
+     *The key-value that are relevant for each specific case typeId.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; typeProps = 12;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getTypePropsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetTypeProps().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     *The key-value that are relevant for each specific case typeId.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; typeProps = 12;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getTypePropsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetTypeProps().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int XREFS_FIELD_NUMBER = 10;
+    private static final class XrefsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, muni.model.Model.Xref> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, muni.model.Model.Xref>newDefaultInstance(
+                  muni.model.Model.internal_static_muni_model_Case_XrefsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  muni.model.Model.Xref.getDefaultInstance());
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, muni.model.Model.Xref> xrefs_;
+    private com.google.protobuf.MapField<java.lang.String, muni.model.Model.Xref>
+    internalGetXrefs() {
+      if (xrefs_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            XrefsDefaultEntryHolder.defaultEntry);
+      }
+      return xrefs_;
+    }
+
+    public int getXrefsCount() {
+      return internalGetXrefs().getMap().size();
+    }
+    /**
+     * <pre>
+     * Subsystem(s) where case is handled. For info requests this may be null.
+     * </pre>
+     *
+     * <code>map&lt;string, .muni.model.Xref&gt; xrefs = 10;</code>
+     */
+
+    @java.lang.Override
+    public boolean containsXrefs(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetXrefs().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getXrefsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, muni.model.Model.Xref> getXrefs() {
+      return getXrefsMap();
+    }
+    /**
+     * <pre>
+     * Subsystem(s) where case is handled. For info requests this may be null.
+     * </pre>
+     *
+     * <code>map&lt;string, .muni.model.Xref&gt; xrefs = 10;</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, muni.model.Model.Xref> getXrefsMap() {
+      return internalGetXrefs().getMap();
+    }
+    /**
+     * <pre>
+     * Subsystem(s) where case is handled. For info requests this may be null.
+     * </pre>
+     *
+     * <code>map&lt;string, .muni.model.Xref&gt; xrefs = 10;</code>
+     */
+    @java.lang.Override
+
+    public muni.model.Model.Xref getXrefsOrDefault(
+        java.lang.String key,
+        muni.model.Model.Xref defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, muni.model.Model.Xref> map =
+          internalGetXrefs().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Subsystem(s) where case is handled. For info requests this may be null.
+     * </pre>
+     *
+     * <code>map&lt;string, .muni.model.Xref&gt; xrefs = 10;</code>
+     */
+    @java.lang.Override
+
+    public muni.model.Model.Xref getXrefsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, muni.model.Model.Xref> map =
+          internalGetXrefs().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
     public static final int CREATETIME_FIELD_NUMBER = 1;
     private com.google.protobuf.Timestamp createTime_;
     /**
@@ -8264,7 +8650,7 @@ public final class Model {
      */
     @java.lang.Override
     public boolean hasCreateTime() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return ((bitField0_ & 0x00000080) != 0);
     }
     /**
      * <pre>
@@ -8293,14 +8679,22 @@ public final class Model {
     public static final int UPDATETIME_FIELD_NUMBER = 2;
     private com.google.protobuf.Timestamp updateTime_;
     /**
+     * <pre>
+     *Output only
+     * </pre>
+     *
      * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
      * @return Whether the updateTime field is set.
      */
     @java.lang.Override
     public boolean hasUpdateTime() {
-      return ((bitField0_ & 0x00000040) != 0);
+      return ((bitField0_ & 0x00000100) != 0);
     }
     /**
+     * <pre>
+     *Output only
+     * </pre>
+     *
      * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
      * @return The updateTime.
      */
@@ -8309,6 +8703,10 @@ public final class Model {
       return updateTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updateTime_;
     }
     /**
+     * <pre>
+     *Output only
+     * </pre>
+     *
      * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
      */
     @java.lang.Override
@@ -8330,10 +8728,10 @@ public final class Model {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000020) != 0)) {
+      if (((bitField0_ & 0x00000080) != 0)) {
         output.writeMessage(1, getCreateTime());
       }
-      if (((bitField0_ & 0x00000040) != 0)) {
+      if (((bitField0_ & 0x00000100) != 0)) {
         output.writeMessage(2, getUpdateTime());
       }
       if (((bitField0_ & 0x00000001) != 0)) {
@@ -8342,18 +8740,36 @@ public final class Model {
       if (((bitField0_ & 0x00000002) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, status_);
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (((bitField0_ & 0x00000010) != 0)) {
         output.writeMessage(5, getReportedByCustomer());
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (((bitField0_ & 0x00000020) != 0)) {
         output.writeMessage(6, getCreatedByEmployee());
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeMessage(7, getEventAddress());
       }
       for (int i = 0; i < tags_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, tags_.getRaw(i));
       }
-      if (((bitField0_ & 0x00000010) != 0)) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, description_);
       }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetXrefs(),
+          XrefsDefaultEntryHolder.defaultEntry,
+          10);
+      if (((bitField0_ & 0x00000040) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, typeId_);
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetTypeProps(),
+          TypePropsDefaultEntryHolder.defaultEntry,
+          12);
       unknownFields.writeTo(output);
     }
 
@@ -8363,11 +8779,11 @@ public final class Model {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000020) != 0)) {
+      if (((bitField0_ & 0x00000080) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCreateTime());
       }
-      if (((bitField0_ & 0x00000040) != 0)) {
+      if (((bitField0_ & 0x00000100) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getUpdateTime());
       }
@@ -8377,13 +8793,17 @@ public final class Model {
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, status_);
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (((bitField0_ & 0x00000010) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getReportedByCustomer());
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (((bitField0_ & 0x00000020) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getCreatedByEmployee());
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getEventAddress());
       }
       {
         int dataSize = 0;
@@ -8393,8 +8813,31 @@ public final class Model {
         size += dataSize;
         size += 1 * getTagsList().size();
       }
-      if (((bitField0_ & 0x00000010) != 0)) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, description_);
+      }
+      for (java.util.Map.Entry<java.lang.String, muni.model.Model.Xref> entry
+           : internalGetXrefs().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, muni.model.Model.Xref>
+        xrefs__ = XrefsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(10, xrefs__);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, typeId_);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetTypeProps().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        typeProps__ = TypePropsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(12, typeProps__);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8421,6 +8864,16 @@ public final class Model {
         if (!getStatus()
             .equals(other.getStatus())) return false;
       }
+      if (hasDescription() != other.hasDescription()) return false;
+      if (hasDescription()) {
+        if (!getDescription()
+            .equals(other.getDescription())) return false;
+      }
+      if (hasEventAddress() != other.hasEventAddress()) return false;
+      if (hasEventAddress()) {
+        if (!getEventAddress()
+            .equals(other.getEventAddress())) return false;
+      }
       if (hasReportedByCustomer() != other.hasReportedByCustomer()) return false;
       if (hasReportedByCustomer()) {
         if (!getReportedByCustomer()
@@ -8433,11 +8886,15 @@ public final class Model {
       }
       if (!getTagsList()
           .equals(other.getTagsList())) return false;
-      if (hasDescription() != other.hasDescription()) return false;
-      if (hasDescription()) {
-        if (!getDescription()
-            .equals(other.getDescription())) return false;
+      if (hasTypeId() != other.hasTypeId()) return false;
+      if (hasTypeId()) {
+        if (!getTypeId()
+            .equals(other.getTypeId())) return false;
       }
+      if (!internalGetTypeProps().equals(
+          other.internalGetTypeProps())) return false;
+      if (!internalGetXrefs().equals(
+          other.internalGetXrefs())) return false;
       if (hasCreateTime() != other.hasCreateTime()) return false;
       if (hasCreateTime()) {
         if (!getCreateTime()
@@ -8467,6 +8924,14 @@ public final class Model {
         hash = (37 * hash) + STATUS_FIELD_NUMBER;
         hash = (53 * hash) + getStatus().hashCode();
       }
+      if (hasDescription()) {
+        hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+        hash = (53 * hash) + getDescription().hashCode();
+      }
+      if (hasEventAddress()) {
+        hash = (37 * hash) + EVENTADDRESS_FIELD_NUMBER;
+        hash = (53 * hash) + getEventAddress().hashCode();
+      }
       if (hasReportedByCustomer()) {
         hash = (37 * hash) + REPORTEDBYCUSTOMER_FIELD_NUMBER;
         hash = (53 * hash) + getReportedByCustomer().hashCode();
@@ -8479,9 +8944,17 @@ public final class Model {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTagsList().hashCode();
       }
-      if (hasDescription()) {
-        hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
-        hash = (53 * hash) + getDescription().hashCode();
+      if (hasTypeId()) {
+        hash = (37 * hash) + TYPEID_FIELD_NUMBER;
+        hash = (53 * hash) + getTypeId().hashCode();
+      }
+      if (!internalGetTypeProps().getMap().isEmpty()) {
+        hash = (37 * hash) + TYPEPROPS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetTypeProps().hashCode();
+      }
+      if (!internalGetXrefs().getMap().isEmpty()) {
+        hash = (37 * hash) + XREFS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetXrefs().hashCode();
       }
       if (hasCreateTime()) {
         hash = (37 * hash) + CREATETIME_FIELD_NUMBER;
@@ -8598,6 +9071,32 @@ public final class Model {
         return muni.model.Model.internal_static_muni_model_Case_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 12:
+            return internalGetTypeProps();
+          case 10:
+            return internalGetXrefs();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 12:
+            return internalGetMutableTypeProps();
+          case 10:
+            return internalGetMutableXrefs();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -8619,6 +9118,7 @@ public final class Model {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getEventAddressFieldBuilder();
           getReportedByCustomerFieldBuilder();
           getCreatedByEmployeeFieldBuilder();
           getCreateTimeFieldBuilder();
@@ -8632,34 +9132,44 @@ public final class Model {
         bitField0_ = (bitField0_ & ~0x00000001);
         status_ = "";
         bitField0_ = (bitField0_ & ~0x00000002);
+        description_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (eventAddressBuilder_ == null) {
+          eventAddress_ = null;
+        } else {
+          eventAddressBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
         if (reportedByCustomerBuilder_ == null) {
           reportedByCustomer_ = null;
         } else {
           reportedByCustomerBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000010);
         if (createdByEmployeeBuilder_ == null) {
           createdByEmployee_ = null;
         } else {
           createdByEmployeeBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000008);
-        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000010);
-        description_ = "";
         bitField0_ = (bitField0_ & ~0x00000020);
+        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        typeId_ = "";
+        bitField0_ = (bitField0_ & ~0x00000080);
+        internalGetMutableTypeProps().clear();
+        internalGetMutableXrefs().clear();
         if (createTimeBuilder_ == null) {
           createTime_ = null;
         } else {
           createTimeBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000400);
         if (updateTimeBuilder_ == null) {
           updateTime_ = null;
         } else {
           updateTimeBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000800);
         return this;
       }
 
@@ -8697,45 +9207,61 @@ public final class Model {
         }
         result.status_ = status_;
         if (((from_bitField0_ & 0x00000004) != 0)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.description_ = description_;
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          if (eventAddressBuilder_ == null) {
+            result.eventAddress_ = eventAddress_;
+          } else {
+            result.eventAddress_ = eventAddressBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000008;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
           if (reportedByCustomerBuilder_ == null) {
             result.reportedByCustomer_ = reportedByCustomer_;
           } else {
             result.reportedByCustomer_ = reportedByCustomerBuilder_.build();
           }
-          to_bitField0_ |= 0x00000004;
+          to_bitField0_ |= 0x00000010;
         }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
+        if (((from_bitField0_ & 0x00000020) != 0)) {
           if (createdByEmployeeBuilder_ == null) {
             result.createdByEmployee_ = createdByEmployee_;
           } else {
             result.createdByEmployee_ = createdByEmployeeBuilder_.build();
           }
-          to_bitField0_ |= 0x00000008;
+          to_bitField0_ |= 0x00000020;
         }
-        if (((bitField0_ & 0x00000010) != 0)) {
+        if (((bitField0_ & 0x00000040) != 0)) {
           tags_ = tags_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000040);
         }
         result.tags_ = tags_;
-        if (((from_bitField0_ & 0x00000020) != 0)) {
-          to_bitField0_ |= 0x00000010;
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          to_bitField0_ |= 0x00000040;
         }
-        result.description_ = description_;
-        if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.typeId_ = typeId_;
+        result.typeProps_ = internalGetTypeProps();
+        result.typeProps_.makeImmutable();
+        result.xrefs_ = internalGetXrefs();
+        result.xrefs_.makeImmutable();
+        if (((from_bitField0_ & 0x00000400) != 0)) {
           if (createTimeBuilder_ == null) {
             result.createTime_ = createTime_;
           } else {
             result.createTime_ = createTimeBuilder_.build();
           }
-          to_bitField0_ |= 0x00000020;
+          to_bitField0_ |= 0x00000080;
         }
-        if (((from_bitField0_ & 0x00000080) != 0)) {
+        if (((from_bitField0_ & 0x00000800) != 0)) {
           if (updateTimeBuilder_ == null) {
             result.updateTime_ = updateTime_;
           } else {
             result.updateTime_ = updateTimeBuilder_.build();
           }
-          to_bitField0_ |= 0x00000040;
+          to_bitField0_ |= 0x00000100;
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -8796,6 +9322,14 @@ public final class Model {
           status_ = other.status_;
           onChanged();
         }
+        if (other.hasDescription()) {
+          bitField0_ |= 0x00000004;
+          description_ = other.description_;
+          onChanged();
+        }
+        if (other.hasEventAddress()) {
+          mergeEventAddress(other.getEventAddress());
+        }
         if (other.hasReportedByCustomer()) {
           mergeReportedByCustomer(other.getReportedByCustomer());
         }
@@ -8805,18 +9339,22 @@ public final class Model {
         if (!other.tags_.isEmpty()) {
           if (tags_.isEmpty()) {
             tags_ = other.tags_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000040);
           } else {
             ensureTagsIsMutable();
             tags_.addAll(other.tags_);
           }
           onChanged();
         }
-        if (other.hasDescription()) {
-          bitField0_ |= 0x00000020;
-          description_ = other.description_;
+        if (other.hasTypeId()) {
+          bitField0_ |= 0x00000080;
+          typeId_ = other.typeId_;
           onChanged();
         }
+        internalGetMutableTypeProps().mergeFrom(
+            other.internalGetTypeProps());
+        internalGetMutableXrefs().mergeFrom(
+            other.internalGetXrefs());
         if (other.hasCreateTime()) {
           mergeCreateTime(other.getCreateTime());
         }
@@ -8855,6 +9393,10 @@ public final class Model {
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>optional string id = 3;</code>
        * @return Whether the id field is set.
        */
@@ -8862,6 +9404,10 @@ public final class Model {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>optional string id = 3;</code>
        * @return The id.
        */
@@ -8880,6 +9426,10 @@ public final class Model {
         }
       }
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>optional string id = 3;</code>
        * @return The bytes for id.
        */
@@ -8897,6 +9447,10 @@ public final class Model {
         }
       }
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>optional string id = 3;</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -8912,6 +9466,10 @@ public final class Model {
         return this;
       }
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>optional string id = 3;</code>
        * @return This builder for chaining.
        */
@@ -8922,6 +9480,10 @@ public final class Model {
         return this;
       }
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>optional string id = 3;</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
@@ -9045,398 +9607,13 @@ public final class Model {
         return this;
       }
 
-      private muni.model.Model.Person reportedByCustomer_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          muni.model.Model.Person, muni.model.Model.Person.Builder, muni.model.Model.PersonOrBuilder> reportedByCustomerBuilder_;
-      /**
-       * <code>optional .muni.model.Person reportedByCustomer = 5;</code>
-       * @return Whether the reportedByCustomer field is set.
-       */
-      public boolean hasReportedByCustomer() {
-        return ((bitField0_ & 0x00000004) != 0);
-      }
-      /**
-       * <code>optional .muni.model.Person reportedByCustomer = 5;</code>
-       * @return The reportedByCustomer.
-       */
-      public muni.model.Model.Person getReportedByCustomer() {
-        if (reportedByCustomerBuilder_ == null) {
-          return reportedByCustomer_ == null ? muni.model.Model.Person.getDefaultInstance() : reportedByCustomer_;
-        } else {
-          return reportedByCustomerBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>optional .muni.model.Person reportedByCustomer = 5;</code>
-       */
-      public Builder setReportedByCustomer(muni.model.Model.Person value) {
-        if (reportedByCustomerBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          reportedByCustomer_ = value;
-          onChanged();
-        } else {
-          reportedByCustomerBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000004;
-        return this;
-      }
-      /**
-       * <code>optional .muni.model.Person reportedByCustomer = 5;</code>
-       */
-      public Builder setReportedByCustomer(
-          muni.model.Model.Person.Builder builderForValue) {
-        if (reportedByCustomerBuilder_ == null) {
-          reportedByCustomer_ = builderForValue.build();
-          onChanged();
-        } else {
-          reportedByCustomerBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000004;
-        return this;
-      }
-      /**
-       * <code>optional .muni.model.Person reportedByCustomer = 5;</code>
-       */
-      public Builder mergeReportedByCustomer(muni.model.Model.Person value) {
-        if (reportedByCustomerBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0) &&
-              reportedByCustomer_ != null &&
-              reportedByCustomer_ != muni.model.Model.Person.getDefaultInstance()) {
-            reportedByCustomer_ =
-              muni.model.Model.Person.newBuilder(reportedByCustomer_).mergeFrom(value).buildPartial();
-          } else {
-            reportedByCustomer_ = value;
-          }
-          onChanged();
-        } else {
-          reportedByCustomerBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000004;
-        return this;
-      }
-      /**
-       * <code>optional .muni.model.Person reportedByCustomer = 5;</code>
-       */
-      public Builder clearReportedByCustomer() {
-        if (reportedByCustomerBuilder_ == null) {
-          reportedByCustomer_ = null;
-          onChanged();
-        } else {
-          reportedByCustomerBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000004);
-        return this;
-      }
-      /**
-       * <code>optional .muni.model.Person reportedByCustomer = 5;</code>
-       */
-      public muni.model.Model.Person.Builder getReportedByCustomerBuilder() {
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return getReportedByCustomerFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>optional .muni.model.Person reportedByCustomer = 5;</code>
-       */
-      public muni.model.Model.PersonOrBuilder getReportedByCustomerOrBuilder() {
-        if (reportedByCustomerBuilder_ != null) {
-          return reportedByCustomerBuilder_.getMessageOrBuilder();
-        } else {
-          return reportedByCustomer_ == null ?
-              muni.model.Model.Person.getDefaultInstance() : reportedByCustomer_;
-        }
-      }
-      /**
-       * <code>optional .muni.model.Person reportedByCustomer = 5;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          muni.model.Model.Person, muni.model.Model.Person.Builder, muni.model.Model.PersonOrBuilder> 
-          getReportedByCustomerFieldBuilder() {
-        if (reportedByCustomerBuilder_ == null) {
-          reportedByCustomerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              muni.model.Model.Person, muni.model.Model.Person.Builder, muni.model.Model.PersonOrBuilder>(
-                  getReportedByCustomer(),
-                  getParentForChildren(),
-                  isClean());
-          reportedByCustomer_ = null;
-        }
-        return reportedByCustomerBuilder_;
-      }
-
-      private muni.model.Model.Person createdByEmployee_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          muni.model.Model.Person, muni.model.Model.Person.Builder, muni.model.Model.PersonOrBuilder> createdByEmployeeBuilder_;
-      /**
-       * <code>optional .muni.model.Person createdByEmployee = 6;</code>
-       * @return Whether the createdByEmployee field is set.
-       */
-      public boolean hasCreatedByEmployee() {
-        return ((bitField0_ & 0x00000008) != 0);
-      }
-      /**
-       * <code>optional .muni.model.Person createdByEmployee = 6;</code>
-       * @return The createdByEmployee.
-       */
-      public muni.model.Model.Person getCreatedByEmployee() {
-        if (createdByEmployeeBuilder_ == null) {
-          return createdByEmployee_ == null ? muni.model.Model.Person.getDefaultInstance() : createdByEmployee_;
-        } else {
-          return createdByEmployeeBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>optional .muni.model.Person createdByEmployee = 6;</code>
-       */
-      public Builder setCreatedByEmployee(muni.model.Model.Person value) {
-        if (createdByEmployeeBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          createdByEmployee_ = value;
-          onChanged();
-        } else {
-          createdByEmployeeBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000008;
-        return this;
-      }
-      /**
-       * <code>optional .muni.model.Person createdByEmployee = 6;</code>
-       */
-      public Builder setCreatedByEmployee(
-          muni.model.Model.Person.Builder builderForValue) {
-        if (createdByEmployeeBuilder_ == null) {
-          createdByEmployee_ = builderForValue.build();
-          onChanged();
-        } else {
-          createdByEmployeeBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000008;
-        return this;
-      }
-      /**
-       * <code>optional .muni.model.Person createdByEmployee = 6;</code>
-       */
-      public Builder mergeCreatedByEmployee(muni.model.Model.Person value) {
-        if (createdByEmployeeBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) != 0) &&
-              createdByEmployee_ != null &&
-              createdByEmployee_ != muni.model.Model.Person.getDefaultInstance()) {
-            createdByEmployee_ =
-              muni.model.Model.Person.newBuilder(createdByEmployee_).mergeFrom(value).buildPartial();
-          } else {
-            createdByEmployee_ = value;
-          }
-          onChanged();
-        } else {
-          createdByEmployeeBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000008;
-        return this;
-      }
-      /**
-       * <code>optional .muni.model.Person createdByEmployee = 6;</code>
-       */
-      public Builder clearCreatedByEmployee() {
-        if (createdByEmployeeBuilder_ == null) {
-          createdByEmployee_ = null;
-          onChanged();
-        } else {
-          createdByEmployeeBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000008);
-        return this;
-      }
-      /**
-       * <code>optional .muni.model.Person createdByEmployee = 6;</code>
-       */
-      public muni.model.Model.Person.Builder getCreatedByEmployeeBuilder() {
-        bitField0_ |= 0x00000008;
-        onChanged();
-        return getCreatedByEmployeeFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>optional .muni.model.Person createdByEmployee = 6;</code>
-       */
-      public muni.model.Model.PersonOrBuilder getCreatedByEmployeeOrBuilder() {
-        if (createdByEmployeeBuilder_ != null) {
-          return createdByEmployeeBuilder_.getMessageOrBuilder();
-        } else {
-          return createdByEmployee_ == null ?
-              muni.model.Model.Person.getDefaultInstance() : createdByEmployee_;
-        }
-      }
-      /**
-       * <code>optional .muni.model.Person createdByEmployee = 6;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          muni.model.Model.Person, muni.model.Model.Person.Builder, muni.model.Model.PersonOrBuilder> 
-          getCreatedByEmployeeFieldBuilder() {
-        if (createdByEmployeeBuilder_ == null) {
-          createdByEmployeeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              muni.model.Model.Person, muni.model.Model.Person.Builder, muni.model.Model.PersonOrBuilder>(
-                  getCreatedByEmployee(),
-                  getParentForChildren(),
-                  isClean());
-          createdByEmployee_ = null;
-        }
-        return createdByEmployeeBuilder_;
-      }
-
-      private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureTagsIsMutable() {
-        if (!((bitField0_ & 0x00000010) != 0)) {
-          tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
-          bitField0_ |= 0x00000010;
-         }
-      }
-      /**
-       * <pre>
-       *optional bool dirty = 7 [default = false];
-       * </pre>
-       *
-       * <code>repeated string tags = 8;</code>
-       * @return A list containing the tags.
-       */
-      public com.google.protobuf.ProtocolStringList
-          getTagsList() {
-        return tags_.getUnmodifiableView();
-      }
-      /**
-       * <pre>
-       *optional bool dirty = 7 [default = false];
-       * </pre>
-       *
-       * <code>repeated string tags = 8;</code>
-       * @return The count of tags.
-       */
-      public int getTagsCount() {
-        return tags_.size();
-      }
-      /**
-       * <pre>
-       *optional bool dirty = 7 [default = false];
-       * </pre>
-       *
-       * <code>repeated string tags = 8;</code>
-       * @param index The index of the element to return.
-       * @return The tags at the given index.
-       */
-      public java.lang.String getTags(int index) {
-        return tags_.get(index);
-      }
-      /**
-       * <pre>
-       *optional bool dirty = 7 [default = false];
-       * </pre>
-       *
-       * <code>repeated string tags = 8;</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the tags at the given index.
-       */
-      public com.google.protobuf.ByteString
-          getTagsBytes(int index) {
-        return tags_.getByteString(index);
-      }
-      /**
-       * <pre>
-       *optional bool dirty = 7 [default = false];
-       * </pre>
-       *
-       * <code>repeated string tags = 8;</code>
-       * @param index The index to set the value at.
-       * @param value The tags to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTags(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTagsIsMutable();
-        tags_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *optional bool dirty = 7 [default = false];
-       * </pre>
-       *
-       * <code>repeated string tags = 8;</code>
-       * @param value The tags to add.
-       * @return This builder for chaining.
-       */
-      public Builder addTags(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTagsIsMutable();
-        tags_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *optional bool dirty = 7 [default = false];
-       * </pre>
-       *
-       * <code>repeated string tags = 8;</code>
-       * @param values The tags to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllTags(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureTagsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, tags_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *optional bool dirty = 7 [default = false];
-       * </pre>
-       *
-       * <code>repeated string tags = 8;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearTags() {
-        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000010);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *optional bool dirty = 7 [default = false];
-       * </pre>
-       *
-       * <code>repeated string tags = 8;</code>
-       * @param value The bytes of the tags to add.
-       * @return This builder for chaining.
-       */
-      public Builder addTagsBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTagsIsMutable();
-        tags_.add(value);
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object description_ = "";
       /**
        * <code>optional string description = 9;</code>
        * @return Whether the description field is set.
        */
       public boolean hasDescription() {
-        return ((bitField0_ & 0x00000020) != 0);
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        * <code>optional string description = 9;</code>
@@ -9483,7 +9660,7 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000020;
+  bitField0_ |= 0x00000004;
         description_ = value;
         onChanged();
         return this;
@@ -9493,7 +9670,7 @@ public final class Model {
        * @return This builder for chaining.
        */
       public Builder clearDescription() {
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000004);
         description_ = getDefaultInstance().getDescription();
         onChanged();
         return this;
@@ -9508,9 +9685,934 @@ public final class Model {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000020;
+  bitField0_ |= 0x00000004;
         description_ = value;
         onChanged();
+        return this;
+      }
+
+      private muni.model.Model.PostalAddress eventAddress_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          muni.model.Model.PostalAddress, muni.model.Model.PostalAddress.Builder, muni.model.Model.PostalAddressOrBuilder> eventAddressBuilder_;
+      /**
+       * <code>optional .muni.model.PostalAddress eventAddress = 7;</code>
+       * @return Whether the eventAddress field is set.
+       */
+      public boolean hasEventAddress() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional .muni.model.PostalAddress eventAddress = 7;</code>
+       * @return The eventAddress.
+       */
+      public muni.model.Model.PostalAddress getEventAddress() {
+        if (eventAddressBuilder_ == null) {
+          return eventAddress_ == null ? muni.model.Model.PostalAddress.getDefaultInstance() : eventAddress_;
+        } else {
+          return eventAddressBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .muni.model.PostalAddress eventAddress = 7;</code>
+       */
+      public Builder setEventAddress(muni.model.Model.PostalAddress value) {
+        if (eventAddressBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          eventAddress_ = value;
+          onChanged();
+        } else {
+          eventAddressBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .muni.model.PostalAddress eventAddress = 7;</code>
+       */
+      public Builder setEventAddress(
+          muni.model.Model.PostalAddress.Builder builderForValue) {
+        if (eventAddressBuilder_ == null) {
+          eventAddress_ = builderForValue.build();
+          onChanged();
+        } else {
+          eventAddressBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .muni.model.PostalAddress eventAddress = 7;</code>
+       */
+      public Builder mergeEventAddress(muni.model.Model.PostalAddress value) {
+        if (eventAddressBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+              eventAddress_ != null &&
+              eventAddress_ != muni.model.Model.PostalAddress.getDefaultInstance()) {
+            eventAddress_ =
+              muni.model.Model.PostalAddress.newBuilder(eventAddress_).mergeFrom(value).buildPartial();
+          } else {
+            eventAddress_ = value;
+          }
+          onChanged();
+        } else {
+          eventAddressBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .muni.model.PostalAddress eventAddress = 7;</code>
+       */
+      public Builder clearEventAddress() {
+        if (eventAddressBuilder_ == null) {
+          eventAddress_ = null;
+          onChanged();
+        } else {
+          eventAddressBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+      /**
+       * <code>optional .muni.model.PostalAddress eventAddress = 7;</code>
+       */
+      public muni.model.Model.PostalAddress.Builder getEventAddressBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getEventAddressFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .muni.model.PostalAddress eventAddress = 7;</code>
+       */
+      public muni.model.Model.PostalAddressOrBuilder getEventAddressOrBuilder() {
+        if (eventAddressBuilder_ != null) {
+          return eventAddressBuilder_.getMessageOrBuilder();
+        } else {
+          return eventAddress_ == null ?
+              muni.model.Model.PostalAddress.getDefaultInstance() : eventAddress_;
+        }
+      }
+      /**
+       * <code>optional .muni.model.PostalAddress eventAddress = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          muni.model.Model.PostalAddress, muni.model.Model.PostalAddress.Builder, muni.model.Model.PostalAddressOrBuilder> 
+          getEventAddressFieldBuilder() {
+        if (eventAddressBuilder_ == null) {
+          eventAddressBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              muni.model.Model.PostalAddress, muni.model.Model.PostalAddress.Builder, muni.model.Model.PostalAddressOrBuilder>(
+                  getEventAddress(),
+                  getParentForChildren(),
+                  isClean());
+          eventAddress_ = null;
+        }
+        return eventAddressBuilder_;
+      }
+
+      private muni.model.Model.Person reportedByCustomer_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          muni.model.Model.Person, muni.model.Model.Person.Builder, muni.model.Model.PersonOrBuilder> reportedByCustomerBuilder_;
+      /**
+       * <code>optional .muni.model.Person reportedByCustomer = 5;</code>
+       * @return Whether the reportedByCustomer field is set.
+       */
+      public boolean hasReportedByCustomer() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional .muni.model.Person reportedByCustomer = 5;</code>
+       * @return The reportedByCustomer.
+       */
+      public muni.model.Model.Person getReportedByCustomer() {
+        if (reportedByCustomerBuilder_ == null) {
+          return reportedByCustomer_ == null ? muni.model.Model.Person.getDefaultInstance() : reportedByCustomer_;
+        } else {
+          return reportedByCustomerBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .muni.model.Person reportedByCustomer = 5;</code>
+       */
+      public Builder setReportedByCustomer(muni.model.Model.Person value) {
+        if (reportedByCustomerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          reportedByCustomer_ = value;
+          onChanged();
+        } else {
+          reportedByCustomerBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .muni.model.Person reportedByCustomer = 5;</code>
+       */
+      public Builder setReportedByCustomer(
+          muni.model.Model.Person.Builder builderForValue) {
+        if (reportedByCustomerBuilder_ == null) {
+          reportedByCustomer_ = builderForValue.build();
+          onChanged();
+        } else {
+          reportedByCustomerBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .muni.model.Person reportedByCustomer = 5;</code>
+       */
+      public Builder mergeReportedByCustomer(muni.model.Model.Person value) {
+        if (reportedByCustomerBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+              reportedByCustomer_ != null &&
+              reportedByCustomer_ != muni.model.Model.Person.getDefaultInstance()) {
+            reportedByCustomer_ =
+              muni.model.Model.Person.newBuilder(reportedByCustomer_).mergeFrom(value).buildPartial();
+          } else {
+            reportedByCustomer_ = value;
+          }
+          onChanged();
+        } else {
+          reportedByCustomerBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .muni.model.Person reportedByCustomer = 5;</code>
+       */
+      public Builder clearReportedByCustomer() {
+        if (reportedByCustomerBuilder_ == null) {
+          reportedByCustomer_ = null;
+          onChanged();
+        } else {
+          reportedByCustomerBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+      /**
+       * <code>optional .muni.model.Person reportedByCustomer = 5;</code>
+       */
+      public muni.model.Model.Person.Builder getReportedByCustomerBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getReportedByCustomerFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .muni.model.Person reportedByCustomer = 5;</code>
+       */
+      public muni.model.Model.PersonOrBuilder getReportedByCustomerOrBuilder() {
+        if (reportedByCustomerBuilder_ != null) {
+          return reportedByCustomerBuilder_.getMessageOrBuilder();
+        } else {
+          return reportedByCustomer_ == null ?
+              muni.model.Model.Person.getDefaultInstance() : reportedByCustomer_;
+        }
+      }
+      /**
+       * <code>optional .muni.model.Person reportedByCustomer = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          muni.model.Model.Person, muni.model.Model.Person.Builder, muni.model.Model.PersonOrBuilder> 
+          getReportedByCustomerFieldBuilder() {
+        if (reportedByCustomerBuilder_ == null) {
+          reportedByCustomerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              muni.model.Model.Person, muni.model.Model.Person.Builder, muni.model.Model.PersonOrBuilder>(
+                  getReportedByCustomer(),
+                  getParentForChildren(),
+                  isClean());
+          reportedByCustomer_ = null;
+        }
+        return reportedByCustomerBuilder_;
+      }
+
+      private muni.model.Model.Person createdByEmployee_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          muni.model.Model.Person, muni.model.Model.Person.Builder, muni.model.Model.PersonOrBuilder> createdByEmployeeBuilder_;
+      /**
+       * <code>optional .muni.model.Person createdByEmployee = 6;</code>
+       * @return Whether the createdByEmployee field is set.
+       */
+      public boolean hasCreatedByEmployee() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>optional .muni.model.Person createdByEmployee = 6;</code>
+       * @return The createdByEmployee.
+       */
+      public muni.model.Model.Person getCreatedByEmployee() {
+        if (createdByEmployeeBuilder_ == null) {
+          return createdByEmployee_ == null ? muni.model.Model.Person.getDefaultInstance() : createdByEmployee_;
+        } else {
+          return createdByEmployeeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .muni.model.Person createdByEmployee = 6;</code>
+       */
+      public Builder setCreatedByEmployee(muni.model.Model.Person value) {
+        if (createdByEmployeeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          createdByEmployee_ = value;
+          onChanged();
+        } else {
+          createdByEmployeeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        return this;
+      }
+      /**
+       * <code>optional .muni.model.Person createdByEmployee = 6;</code>
+       */
+      public Builder setCreatedByEmployee(
+          muni.model.Model.Person.Builder builderForValue) {
+        if (createdByEmployeeBuilder_ == null) {
+          createdByEmployee_ = builderForValue.build();
+          onChanged();
+        } else {
+          createdByEmployeeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        return this;
+      }
+      /**
+       * <code>optional .muni.model.Person createdByEmployee = 6;</code>
+       */
+      public Builder mergeCreatedByEmployee(muni.model.Model.Person value) {
+        if (createdByEmployeeBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+              createdByEmployee_ != null &&
+              createdByEmployee_ != muni.model.Model.Person.getDefaultInstance()) {
+            createdByEmployee_ =
+              muni.model.Model.Person.newBuilder(createdByEmployee_).mergeFrom(value).buildPartial();
+          } else {
+            createdByEmployee_ = value;
+          }
+          onChanged();
+        } else {
+          createdByEmployeeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000020;
+        return this;
+      }
+      /**
+       * <code>optional .muni.model.Person createdByEmployee = 6;</code>
+       */
+      public Builder clearCreatedByEmployee() {
+        if (createdByEmployeeBuilder_ == null) {
+          createdByEmployee_ = null;
+          onChanged();
+        } else {
+          createdByEmployeeBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        return this;
+      }
+      /**
+       * <code>optional .muni.model.Person createdByEmployee = 6;</code>
+       */
+      public muni.model.Model.Person.Builder getCreatedByEmployeeBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getCreatedByEmployeeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .muni.model.Person createdByEmployee = 6;</code>
+       */
+      public muni.model.Model.PersonOrBuilder getCreatedByEmployeeOrBuilder() {
+        if (createdByEmployeeBuilder_ != null) {
+          return createdByEmployeeBuilder_.getMessageOrBuilder();
+        } else {
+          return createdByEmployee_ == null ?
+              muni.model.Model.Person.getDefaultInstance() : createdByEmployee_;
+        }
+      }
+      /**
+       * <code>optional .muni.model.Person createdByEmployee = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          muni.model.Model.Person, muni.model.Model.Person.Builder, muni.model.Model.PersonOrBuilder> 
+          getCreatedByEmployeeFieldBuilder() {
+        if (createdByEmployeeBuilder_ == null) {
+          createdByEmployeeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              muni.model.Model.Person, muni.model.Model.Person.Builder, muni.model.Model.PersonOrBuilder>(
+                  getCreatedByEmployee(),
+                  getParentForChildren(),
+                  isClean());
+          createdByEmployee_ = null;
+        }
+        return createdByEmployeeBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureTagsIsMutable() {
+        if (!((bitField0_ & 0x00000040) != 0)) {
+          tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+      /**
+       * <pre>
+       *store a list of tags that helps routing, categorizing, reporting //TODO Enum?
+       * </pre>
+       *
+       * <code>repeated string tags = 8;</code>
+       * @return A list containing the tags.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getTagsList() {
+        return tags_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       *store a list of tags that helps routing, categorizing, reporting //TODO Enum?
+       * </pre>
+       *
+       * <code>repeated string tags = 8;</code>
+       * @return The count of tags.
+       */
+      public int getTagsCount() {
+        return tags_.size();
+      }
+      /**
+       * <pre>
+       *store a list of tags that helps routing, categorizing, reporting //TODO Enum?
+       * </pre>
+       *
+       * <code>repeated string tags = 8;</code>
+       * @param index The index of the element to return.
+       * @return The tags at the given index.
+       */
+      public java.lang.String getTags(int index) {
+        return tags_.get(index);
+      }
+      /**
+       * <pre>
+       *store a list of tags that helps routing, categorizing, reporting //TODO Enum?
+       * </pre>
+       *
+       * <code>repeated string tags = 8;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the tags at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getTagsBytes(int index) {
+        return tags_.getByteString(index);
+      }
+      /**
+       * <pre>
+       *store a list of tags that helps routing, categorizing, reporting //TODO Enum?
+       * </pre>
+       *
+       * <code>repeated string tags = 8;</code>
+       * @param index The index to set the value at.
+       * @param value The tags to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTags(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTagsIsMutable();
+        tags_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *store a list of tags that helps routing, categorizing, reporting //TODO Enum?
+       * </pre>
+       *
+       * <code>repeated string tags = 8;</code>
+       * @param value The tags to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTags(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTagsIsMutable();
+        tags_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *store a list of tags that helps routing, categorizing, reporting //TODO Enum?
+       * </pre>
+       *
+       * <code>repeated string tags = 8;</code>
+       * @param values The tags to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllTags(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureTagsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, tags_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *store a list of tags that helps routing, categorizing, reporting //TODO Enum?
+       * </pre>
+       *
+       * <code>repeated string tags = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTags() {
+        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *store a list of tags that helps routing, categorizing, reporting //TODO Enum?
+       * </pre>
+       *
+       * <code>repeated string tags = 8;</code>
+       * @param value The bytes of the tags to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTagsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTagsIsMutable();
+        tags_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object typeId_ = "";
+      /**
+       * <pre>
+       * a unique case type id
+       * </pre>
+       *
+       * <code>optional string typeId = 11;</code>
+       * @return Whether the typeId field is set.
+       */
+      public boolean hasTypeId() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <pre>
+       * a unique case type id
+       * </pre>
+       *
+       * <code>optional string typeId = 11;</code>
+       * @return The typeId.
+       */
+      public java.lang.String getTypeId() {
+        java.lang.Object ref = typeId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            typeId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * a unique case type id
+       * </pre>
+       *
+       * <code>optional string typeId = 11;</code>
+       * @return The bytes for typeId.
+       */
+      public com.google.protobuf.ByteString
+          getTypeIdBytes() {
+        java.lang.Object ref = typeId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          typeId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * a unique case type id
+       * </pre>
+       *
+       * <code>optional string typeId = 11;</code>
+       * @param value The typeId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000080;
+        typeId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * a unique case type id
+       * </pre>
+       *
+       * <code>optional string typeId = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTypeId() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        typeId_ = getDefaultInstance().getTypeId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * a unique case type id
+       * </pre>
+       *
+       * <code>optional string typeId = 11;</code>
+       * @param value The bytes for typeId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000080;
+        typeId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> typeProps_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetTypeProps() {
+        if (typeProps_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              TypePropsDefaultEntryHolder.defaultEntry);
+        }
+        return typeProps_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableTypeProps() {
+        onChanged();;
+        if (typeProps_ == null) {
+          typeProps_ = com.google.protobuf.MapField.newMapField(
+              TypePropsDefaultEntryHolder.defaultEntry);
+        }
+        if (!typeProps_.isMutable()) {
+          typeProps_ = typeProps_.copy();
+        }
+        return typeProps_;
+      }
+
+      public int getTypePropsCount() {
+        return internalGetTypeProps().getMap().size();
+      }
+      /**
+       * <pre>
+       *The key-value that are relevant for each specific case typeId.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; typeProps = 12;</code>
+       */
+
+      @java.lang.Override
+      public boolean containsTypeProps(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetTypeProps().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getTypePropsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getTypeProps() {
+        return getTypePropsMap();
+      }
+      /**
+       * <pre>
+       *The key-value that are relevant for each specific case typeId.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; typeProps = 12;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getTypePropsMap() {
+        return internalGetTypeProps().getMap();
+      }
+      /**
+       * <pre>
+       *The key-value that are relevant for each specific case typeId.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; typeProps = 12;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getTypePropsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetTypeProps().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       *The key-value that are relevant for each specific case typeId.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; typeProps = 12;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getTypePropsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetTypeProps().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearTypeProps() {
+        internalGetMutableTypeProps().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       *The key-value that are relevant for each specific case typeId.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; typeProps = 12;</code>
+       */
+
+      public Builder removeTypeProps(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableTypeProps().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableTypeProps() {
+        return internalGetMutableTypeProps().getMutableMap();
+      }
+      /**
+       * <pre>
+       *The key-value that are relevant for each specific case typeId.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; typeProps = 12;</code>
+       */
+      public Builder putTypeProps(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableTypeProps().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       *The key-value that are relevant for each specific case typeId.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; typeProps = 12;</code>
+       */
+
+      public Builder putAllTypeProps(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableTypeProps().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, muni.model.Model.Xref> xrefs_;
+      private com.google.protobuf.MapField<java.lang.String, muni.model.Model.Xref>
+      internalGetXrefs() {
+        if (xrefs_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              XrefsDefaultEntryHolder.defaultEntry);
+        }
+        return xrefs_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, muni.model.Model.Xref>
+      internalGetMutableXrefs() {
+        onChanged();;
+        if (xrefs_ == null) {
+          xrefs_ = com.google.protobuf.MapField.newMapField(
+              XrefsDefaultEntryHolder.defaultEntry);
+        }
+        if (!xrefs_.isMutable()) {
+          xrefs_ = xrefs_.copy();
+        }
+        return xrefs_;
+      }
+
+      public int getXrefsCount() {
+        return internalGetXrefs().getMap().size();
+      }
+      /**
+       * <pre>
+       * Subsystem(s) where case is handled. For info requests this may be null.
+       * </pre>
+       *
+       * <code>map&lt;string, .muni.model.Xref&gt; xrefs = 10;</code>
+       */
+
+      @java.lang.Override
+      public boolean containsXrefs(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetXrefs().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getXrefsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, muni.model.Model.Xref> getXrefs() {
+        return getXrefsMap();
+      }
+      /**
+       * <pre>
+       * Subsystem(s) where case is handled. For info requests this may be null.
+       * </pre>
+       *
+       * <code>map&lt;string, .muni.model.Xref&gt; xrefs = 10;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, muni.model.Model.Xref> getXrefsMap() {
+        return internalGetXrefs().getMap();
+      }
+      /**
+       * <pre>
+       * Subsystem(s) where case is handled. For info requests this may be null.
+       * </pre>
+       *
+       * <code>map&lt;string, .muni.model.Xref&gt; xrefs = 10;</code>
+       */
+      @java.lang.Override
+
+      public muni.model.Model.Xref getXrefsOrDefault(
+          java.lang.String key,
+          muni.model.Model.Xref defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, muni.model.Model.Xref> map =
+            internalGetXrefs().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Subsystem(s) where case is handled. For info requests this may be null.
+       * </pre>
+       *
+       * <code>map&lt;string, .muni.model.Xref&gt; xrefs = 10;</code>
+       */
+      @java.lang.Override
+
+      public muni.model.Model.Xref getXrefsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, muni.model.Model.Xref> map =
+            internalGetXrefs().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearXrefs() {
+        internalGetMutableXrefs().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Subsystem(s) where case is handled. For info requests this may be null.
+       * </pre>
+       *
+       * <code>map&lt;string, .muni.model.Xref&gt; xrefs = 10;</code>
+       */
+
+      public Builder removeXrefs(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableXrefs().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, muni.model.Model.Xref>
+      getMutableXrefs() {
+        return internalGetMutableXrefs().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Subsystem(s) where case is handled. For info requests this may be null.
+       * </pre>
+       *
+       * <code>map&lt;string, .muni.model.Xref&gt; xrefs = 10;</code>
+       */
+      public Builder putXrefs(
+          java.lang.String key,
+          muni.model.Model.Xref value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableXrefs().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Subsystem(s) where case is handled. For info requests this may be null.
+       * </pre>
+       *
+       * <code>map&lt;string, .muni.model.Xref&gt; xrefs = 10;</code>
+       */
+
+      public Builder putAllXrefs(
+          java.util.Map<java.lang.String, muni.model.Model.Xref> values) {
+        internalGetMutableXrefs().getMutableMap()
+            .putAll(values);
         return this;
       }
 
@@ -9526,7 +10628,7 @@ public final class Model {
        * @return Whether the createTime field is set.
        */
       public boolean hasCreateTime() {
-        return ((bitField0_ & 0x00000040) != 0);
+        return ((bitField0_ & 0x00000400) != 0);
       }
       /**
        * <pre>
@@ -9560,7 +10662,7 @@ public final class Model {
         } else {
           createTimeBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000400;
         return this;
       }
       /**
@@ -9578,7 +10680,7 @@ public final class Model {
         } else {
           createTimeBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000400;
         return this;
       }
       /**
@@ -9590,7 +10692,7 @@ public final class Model {
        */
       public Builder mergeCreateTime(com.google.protobuf.Timestamp value) {
         if (createTimeBuilder_ == null) {
-          if (((bitField0_ & 0x00000040) != 0) &&
+          if (((bitField0_ & 0x00000400) != 0) &&
               createTime_ != null &&
               createTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
             createTime_ =
@@ -9602,7 +10704,7 @@ public final class Model {
         } else {
           createTimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000400;
         return this;
       }
       /**
@@ -9619,7 +10721,7 @@ public final class Model {
         } else {
           createTimeBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000400);
         return this;
       }
       /**
@@ -9630,7 +10732,7 @@ public final class Model {
        * <code>optional .google.protobuf.Timestamp createTime = 1;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreateTimeBuilder() {
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000400;
         onChanged();
         return getCreateTimeFieldBuilder().getBuilder();
       }
@@ -9674,13 +10776,21 @@ public final class Model {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updateTimeBuilder_;
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
        * @return Whether the updateTime field is set.
        */
       public boolean hasUpdateTime() {
-        return ((bitField0_ & 0x00000080) != 0);
+        return ((bitField0_ & 0x00000800) != 0);
       }
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
        * @return The updateTime.
        */
@@ -9692,6 +10802,10 @@ public final class Model {
         }
       }
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
        */
       public Builder setUpdateTime(com.google.protobuf.Timestamp value) {
@@ -9704,10 +10818,14 @@ public final class Model {
         } else {
           updateTimeBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000800;
         return this;
       }
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
        */
       public Builder setUpdateTime(
@@ -9718,15 +10836,19 @@ public final class Model {
         } else {
           updateTimeBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000800;
         return this;
       }
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
        */
       public Builder mergeUpdateTime(com.google.protobuf.Timestamp value) {
         if (updateTimeBuilder_ == null) {
-          if (((bitField0_ & 0x00000080) != 0) &&
+          if (((bitField0_ & 0x00000800) != 0) &&
               updateTime_ != null &&
               updateTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
             updateTime_ =
@@ -9738,10 +10860,14 @@ public final class Model {
         } else {
           updateTimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000800;
         return this;
       }
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
        */
       public Builder clearUpdateTime() {
@@ -9751,18 +10877,26 @@ public final class Model {
         } else {
           updateTimeBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000800);
         return this;
       }
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
        */
       public com.google.protobuf.Timestamp.Builder getUpdateTimeBuilder() {
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000800;
         onChanged();
         return getUpdateTimeFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder() {
@@ -9774,6 +10908,10 @@ public final class Model {
         }
       }
       /**
+       * <pre>
+       *Output only
+       * </pre>
+       *
        * <code>optional .google.protobuf.Timestamp updateTime = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -13342,10 +14480,10 @@ public final class Model {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_muni_model_Person_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_muni_model_Person_XrefAccountsEntry_descriptor;
+    internal_static_muni_model_Person_XrefsEntry_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_muni_model_Person_XrefAccountsEntry_fieldAccessorTable;
+      internal_static_muni_model_Person_XrefsEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_muni_model_Xref_descriptor;
   private static final 
@@ -13361,6 +14499,16 @@ public final class Model {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_muni_model_Case_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_muni_model_Case_TypePropsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_muni_model_Case_TypePropsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_muni_model_Case_XrefsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_muni_model_Case_XrefsEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_muni_model_Organization_descriptor;
   private static final 
@@ -13382,45 +14530,51 @@ public final class Model {
     java.lang.String[] descriptorData = {
       "\n\020muni-model.proto\022\nmuni.model\032\037google/p" +
       "rotobuf/timestamp.proto\032\031google/protobuf" +
-      "/any.proto\"\367\002\n\006Person\022\n\n\002id\030\003 \001(\t\022\021\n\tfir" +
+      "/any.proto\"\342\002\n\006Person\022\n\n\002id\030\003 \001(\t\022\021\n\tfir" +
       "stName\030\004 \001(\t\022\020\n\010lastName\030\005 \001(\t\022\r\n\005email\030" +
       "\006 \001(\t\022\016\n\006phone1\030\007 \001(\t\022\016\n\006phone2\030\010 \001(\t\022*\n" +
       "\007address\030\t \001(\0132\031.muni.model.PostalAddres" +
-      "s\022:\n\014xrefAccounts\030\013 \003(\0132$.muni.model.Per" +
-      "son.XrefAccountsEntry\022.\n\ncreateTime\030\001 \001(" +
+      "s\022,\n\005xrefs\030\013 \003(\0132\035.muni.model.Person.Xre" +
+      "fsEntry\022.\n\ncreateTime\030\001 \001(\0132\032.google.pro" +
+      "tobuf.Timestamp\022.\n\nupdateTime\030\002 \001(\0132\032.go" +
+      "ogle.protobuf.Timestamp\032>\n\nXrefsEntry\022\013\n" +
+      "\003key\030\001 \001(\t\022\037\n\005value\030\002 \001(\0132\020.muni.model.X" +
+      "ref:\0028\001\"\337\001\n\004Xref\022\n\n\002id\030\006 \001(\t\022\024\n\014xrefSyst" +
+      "emId\030\007 \001(\t\022\016\n\006xrefId\030\010 \001(\t\022\016\n\006status\030\t \001" +
+      "(\t\022.\n\ncreateTime\030\001 \001(\0132\032.google.protobuf" +
+      ".Timestamp\022.\n\nupdateTime\030\002 \001(\0132\032.google." +
+      "protobuf.Timestamp\0225\n\021subsysRefreshTime\030" +
+      "\003 \001(\0132\032.google.protobuf.Timestamp\"\201\002\n\rPo" +
+      "stalAddress\022\n\n\002id\030\003 \001(\t\022\021\n\tstreetNum\030\004 \001" +
+      "(\t\022\022\n\nstreetName\030\005 \001(\t\022\014\n\004city\030\006 \001(\t\022\020\n\010" +
+      "province\030\007 \001(\t\022\017\n\007country\030\010 \001(\t\022\022\n\nposta" +
+      "lCode\030\t \001(\t\022\013\n\003lat\030\n \001(\001\022\013\n\003lon\030\013 \001(\001\022.\n" +
+      "\ncreateTime\030\001 \001(\0132\032.google.protobuf.Time" +
+      "stamp\022.\n\nupdateTime\030\002 \001(\0132\032.google.proto" +
+      "buf.Timestamp\"\227\004\n\004Case\022\n\n\002id\030\003 \001(\t\022\016\n\006st" +
+      "atus\030\004 \001(\t\022\023\n\013description\030\t \001(\t\022/\n\014event" +
+      "Address\030\007 \001(\0132\031.muni.model.PostalAddress" +
+      "\022.\n\022reportedByCustomer\030\005 \001(\0132\022.muni.mode" +
+      "l.Person\022-\n\021createdByEmployee\030\006 \001(\0132\022.mu" +
+      "ni.model.Person\022\014\n\004tags\030\010 \003(\t\022\016\n\006typeId\030" +
+      "\013 \001(\t\0222\n\ttypeProps\030\014 \003(\0132\037.muni.model.Ca" +
+      "se.TypePropsEntry\022*\n\005xrefs\030\n \003(\0132\033.muni." +
+      "model.Case.XrefsEntry\022.\n\ncreateTime\030\001 \001(" +
       "\0132\032.google.protobuf.Timestamp\022.\n\nupdateT" +
-      "ime\030\002 \001(\0132\032.google.protobuf.Timestamp\032E\n" +
-      "\021XrefAccountsEntry\022\013\n\003key\030\001 \001(\t\022\037\n\005value" +
-      "\030\002 \001(\0132\020.muni.model.Xref:\0028\001\"\366\001\n\004Xref\022\n\n" +
-      "\002id\030\006 \001(\t\022\024\n\014xrefSystemId\030\007 \001(\t\022\016\n\006xrefI" +
-      "d\030\010 \001(\t\022%\n\013recentCases\030\t \003(\0132\020.muni.mode" +
-      "l.Case\022.\n\ncreateTime\030\001 \001(\0132\032.google.prot" +
-      "obuf.Timestamp\022.\n\nupdateTime\030\002 \001(\0132\032.goo" +
-      "gle.protobuf.Timestamp\0225\n\021subsysRefreshT" +
-      "ime\030\003 \001(\0132\032.google.protobuf.Timestamp\"\201\002" +
-      "\n\rPostalAddress\022\n\n\002id\030\003 \001(\t\022\021\n\tstreetNum" +
-      "\030\004 \001(\t\022\022\n\nstreetName\030\005 \001(\t\022\014\n\004city\030\006 \001(\t" +
-      "\022\020\n\010province\030\007 \001(\t\022\017\n\007country\030\010 \001(\t\022\022\n\np" +
-      "ostalCode\030\t \001(\t\022\013\n\003lat\030\n \001(\001\022\013\n\003lon\030\013 \001(" +
-      "\001\022.\n\ncreateTime\030\001 \001(\0132\032.google.protobuf." +
-      "Timestamp\022.\n\nupdateTime\030\002 \001(\0132\032.google.p" +
-      "rotobuf.Timestamp\"\204\002\n\004Case\022\n\n\002id\030\003 \001(\t\022\016" +
-      "\n\006status\030\004 \001(\t\022.\n\022reportedByCustomer\030\005 \001" +
-      "(\0132\022.muni.model.Person\022-\n\021createdByEmplo" +
-      "yee\030\006 \001(\0132\022.muni.model.Person\022\014\n\004tags\030\010 " +
-      "\003(\t\022\023\n\013description\030\t \001(\t\022.\n\ncreateTime\030\001" +
-      " \001(\0132\032.google.protobuf.Timestamp\022.\n\nupda" +
-      "teTime\030\002 \001(\0132\032.google.protobuf.Timestamp" +
-      "\"\237\002\n\014Organization\022\n\n\002id\030\003 \001(\t\022\014\n\004name\030\004 " +
-      "\001(\t\022\017\n\007website\030\005 \001(\t\022\r\n\005email\030\006 \001(\t\022\016\n\006p" +
-      "hone1\030\007 \001(\t\022\016\n\006phone2\030\010 \001(\t\022*\n\007address\030\t" +
-      " \001(\0132\031.muni.model.PostalAddress\022)\n\rconta" +
-      "ctPerson\030\n \001(\0132\022.muni.model.Person\022.\n\ncr" +
-      "eateTime\030\001 \001(\0132\032.google.protobuf.Timesta" +
-      "mp\022.\n\nupdateTime\030\002 \001(\0132\032.google.protobuf" +
-      ".Timestamp\"C\n\tErrorInfo\022\017\n\007message\030\001 \001(\t" +
-      "\022%\n\007details\030\002 \003(\0132\024.google.protobuf.AnyB" +
-      "\014B\005ModelP\000\210\001\000"
+      "ime\030\002 \001(\0132\032.google.protobuf.Timestamp\0320\n" +
+      "\016TypePropsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
+      "\001(\t:\0028\001\032>\n\nXrefsEntry\022\013\n\003key\030\001 \001(\t\022\037\n\005va" +
+      "lue\030\002 \001(\0132\020.muni.model.Xref:\0028\001\"\237\002\n\014Orga" +
+      "nization\022\n\n\002id\030\003 \001(\t\022\014\n\004name\030\004 \001(\t\022\017\n\007we" +
+      "bsite\030\005 \001(\t\022\r\n\005email\030\006 \001(\t\022\016\n\006phone1\030\007 \001" +
+      "(\t\022\016\n\006phone2\030\010 \001(\t\022*\n\007address\030\t \001(\0132\031.mu" +
+      "ni.model.PostalAddress\022)\n\rcontactPerson\030" +
+      "\n \001(\0132\022.muni.model.Person\022.\n\ncreateTime\030" +
+      "\001 \001(\0132\032.google.protobuf.Timestamp\022.\n\nupd" +
+      "ateTime\030\002 \001(\0132\032.google.protobuf.Timestam" +
+      "p\"C\n\tErrorInfo\022\017\n\007message\030\001 \001(\t\022%\n\007detai" +
+      "ls\030\002 \003(\0132\024.google.protobuf.AnyB\014B\005ModelP" +
+      "\000\210\001\000"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -13433,19 +14587,19 @@ public final class Model {
     internal_static_muni_model_Person_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_muni_model_Person_descriptor,
-        new java.lang.String[] { "Id", "FirstName", "LastName", "Email", "Phone1", "Phone2", "Address", "XrefAccounts", "CreateTime", "UpdateTime", });
-    internal_static_muni_model_Person_XrefAccountsEntry_descriptor =
+        new java.lang.String[] { "Id", "FirstName", "LastName", "Email", "Phone1", "Phone2", "Address", "Xrefs", "CreateTime", "UpdateTime", });
+    internal_static_muni_model_Person_XrefsEntry_descriptor =
       internal_static_muni_model_Person_descriptor.getNestedTypes().get(0);
-    internal_static_muni_model_Person_XrefAccountsEntry_fieldAccessorTable = new
+    internal_static_muni_model_Person_XrefsEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_muni_model_Person_XrefAccountsEntry_descriptor,
+        internal_static_muni_model_Person_XrefsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_muni_model_Xref_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_muni_model_Xref_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_muni_model_Xref_descriptor,
-        new java.lang.String[] { "Id", "XrefSystemId", "XrefId", "RecentCases", "CreateTime", "UpdateTime", "SubsysRefreshTime", });
+        new java.lang.String[] { "Id", "XrefSystemId", "XrefId", "Status", "CreateTime", "UpdateTime", "SubsysRefreshTime", });
     internal_static_muni_model_PostalAddress_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_muni_model_PostalAddress_fieldAccessorTable = new
@@ -13457,7 +14611,19 @@ public final class Model {
     internal_static_muni_model_Case_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_muni_model_Case_descriptor,
-        new java.lang.String[] { "Id", "Status", "ReportedByCustomer", "CreatedByEmployee", "Tags", "Description", "CreateTime", "UpdateTime", });
+        new java.lang.String[] { "Id", "Status", "Description", "EventAddress", "ReportedByCustomer", "CreatedByEmployee", "Tags", "TypeId", "TypeProps", "Xrefs", "CreateTime", "UpdateTime", });
+    internal_static_muni_model_Case_TypePropsEntry_descriptor =
+      internal_static_muni_model_Case_descriptor.getNestedTypes().get(0);
+    internal_static_muni_model_Case_TypePropsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_muni_model_Case_TypePropsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_muni_model_Case_XrefsEntry_descriptor =
+      internal_static_muni_model_Case_descriptor.getNestedTypes().get(1);
+    internal_static_muni_model_Case_XrefsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_muni_model_Case_XrefsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_muni_model_Organization_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_muni_model_Organization_fieldAccessorTable = new
