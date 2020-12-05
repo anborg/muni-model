@@ -15,9 +15,14 @@ public class TestProtogenObjects {
         Model.Person pers = Model.Person.newBuilder().setFirstName("Jane").setLastName("Doe").build();
         //unset primitives
         //TODO enable after proto3-optional bug is fixed
-        //assertThat(pers.hasId()).as("Unset primitive must be verifiable as empty in protobuf").isFalse();
-        assertThat(pers.getId()).as("Unset primitive must be verifiable as empty in protobuf").isEmpty();//TODO Watch! Weirdity of Protobuf
-        assertThat(pers.getId()).as("Unset primitive must be verifiable as empty in protobuf").isNotNull();//TODO Watch! Weirdity of Protobuf
+        assertThat(pers.hasId()).as("Unset primitive must be verifiable as empty in protobuf")
+                .isFalse();
+        assertThat(pers.getId()).as("Unset primitive must be verifiable as empty in protobuf")
+                .isEmpty();//TODO Watch! Weirdity of Protobuf
+        assertThat(pers.getId()).as("Unset primitive must be verifiable as empty in protobuf")
+                .isNotNull();//TODO Watch! Weirdity of Protobuf
+        assertThat(pers.hasFirstName()).as("Unset primitive must be verifiable as empty in protobuf")
+                .isTrue();
         //unset objects
         assertThat(pers.hasAddress()).as("ProtoObj : Unset PostalAddress must result in proto.hasXX()=false").isFalse();
         assertThat(pers.hasCreateTime()).as("ProtoObj : Unset Create-Timestamp must result in proto.hasXX()=false").isFalse();
@@ -41,16 +46,21 @@ public class TestProtogenObjects {
         //Then
         //set primitives
         //assertThat(pers.hasId()).as("SET primitive must be verifiable as non-empty in protobuf").isTrue();
-        assertThat(pers.getId()).as("SET primitive must be verifiable as non-empty in protobuf").isEqualTo("1");
+        assertThat(pers.getId()).as("SET primitive must be verifiable as non-empty in protobuf")
+                .isEqualTo("1");
         //assertThat(pers.getDirty()).as("SET primitive must be verifiable as empty in protobuf").isTrue();
         //set objects
-        assertThat(pers.hasCreateTime()).as("ProtoObj : Unset Create-Timestamp must result in proto.hasXX()=false").isFalse();
-        assertThat(pers.hasUpdateTime()).as("ProtoObj : Unset Update-Timestamp must result in proto.hasXX()=false").isFalse();
+        assertThat(pers.hasCreateTime()).as("ProtoObj : Unset Create-Timestamp must result in proto.hasXX()=false")
+                .isFalse();
+        assertThat(pers.hasUpdateTime()).as("ProtoObj : Unset Update-Timestamp must result in proto.hasXX()=false")
+                .isFalse();
         //set inner objects
         final var addr = pers.getAddress();
-        assertThat(pers.hasAddress()).as("ProtoObj : SET PostalAddress must result in proto.hasXX()=true").isTrue();
+        assertThat(pers.hasAddress()).as("ProtoObj : SET PostalAddress must result in proto.hasXX()=true")
+                .isTrue();
         //assertThat(addr.hasId()).as("SET primitive must be verifiable as non-empty in protobuf").isTrue();
-        assertThat(addr.getId()).as("SET primitive must be verifiable as non-empty in protobuf").isEqualTo("3");
+        assertThat(addr.getId()).as("SET primitive must be verifiable as non-empty in protobuf")
+                .isEqualTo("3");
         //TODO enable after proto3-optional bug is fixed
         //assertThat(addr.hasStreetNum()).as("SET primitive must be verifiable as non-empty in protobuf").isTrue();
         //assertThat(addr.hasStreetName()).as("SET primitive must be verifiable as non-empty in protobuf").isTrue();

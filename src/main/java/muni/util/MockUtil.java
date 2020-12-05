@@ -36,12 +36,16 @@ public class MockUtil {
 
     public static Model.Case buildCase() {
         Timestamp ts = Timestamps.fromMillis(System.currentTimeMillis());
+        String CASETYPE_WATER_PIPE = "WATER_PIPE_TOFIX";
         return Model.Case.newBuilder()
                 .setId("1")
-                .setStatus("INITATED") //PENDING_CUSTOMER , PENDING_ORG, PENDING_OTHER
-                .setReportedByCustomer(buildPerson())
+                .setDescription("Water pipe broken, outside the house")
                 .setAddress(buildAddress())
+                .setTypeId(CASETYPE_WATER_PIPE)
+                .putTypeProps("location","ousideresidence")
+                .setStatus("INITATED") //PENDING_CUSTOMER , PENDING_ORG, PENDING_OTHER
                 .setCreatedByEmployee("rose")
+                .setReportedByCustomer(buildPerson())
                 .setCreateTime(ts).setUpdateTime(ts)
                 .build();
     }

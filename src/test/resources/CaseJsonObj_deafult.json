@@ -1,0 +1,18 @@
+{
+  "id": "1",
+  "status": "INITATED",
+  "reportedByCustomer": {
+    "firstName": "Jane",
+    "lastName": "Doe"
+  },
+  "eventAddress": {
+    "streetNum": "111",
+    "streetName": "My St",
+    "postalCode": "L1Lozo"
+  },
+  "description": "Water pipe broken, outside the house",
+  "typeId": "WATER_PIPE_TOFIX",
+  "typeProps": {
+    "location": "ousideresidence"
+  }
+}

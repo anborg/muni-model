@@ -89,79 +89,135 @@ public class DataQuality {
             }
             return false;
         }//isvalidfor-update
-    }
-    /*
-    public static class Address {
-        public static boolean isValidForInsert(Model.PostalAddress in) {
-            if (null != in && in.hasId() == false) {// ID must be NULL --for insert
-                //mandatory check
-                if (in.hasStreetNum() == true
-                        && in.hasStreetName() == true
-                        && in.hasPostalCode() == true
-                        && in.hasCreateTime() == false //NO create ts
-                        && in.hasUpdateTime() == false//NO update ts
-                ) {// streetname , streetnum, postcal code -
-                    //if postal code is prsent, just the
-                    //assume Canada - country code
-                    // city can be derived from postal code.
-                    return true; // valid to insert
-                } else {// new obj - mandarory FAIL
-                    throw new RuntimeException("Insert=no ID, but the objct must have streetNum#, streetName, postalcode. Hint : Mandatory field missing?");
-                }
-            }
-            return false;
-        }
+    }//Person
 
-        public static boolean isValidForUpdate(Model.PostalAddress in) {
-            // explict signal to update
-            return null != in
-                    && in.hasId() == true // ID must NOT be NULL - preexisting
-                    && in.hasCreateTime() == true// signal: already created
-                    && in.hasUpdateTime() == true// signal: already created
-                    && in.getDirty() == true; //should be set by service  /PATCH
-        }
-    }
+    public static class Case {
 
-    public static class Person {
-        public static boolean isValidForInsert(Model.Person in) {
-            if (null != in && in.hasId() == false) {// ID must be NULL
+        public static boolean isValidForInsert(Model.Case in) {
+            final var absent_id = !in.hasId();
+            final var absent_createTS =!in.hasCreateTime();
+            final var absent_updateTs =!in.hasUpdateTime();
+            //final var dirty = in.getDirty();//Don't bother to check this - as clients wont set this field in json.
+            //final var present_oneOf = ( in.hasEmail() || in.hasPhone1() || in.hasPhone2() || in.hasAddress()) ;
+            final var present_mandatory = ( in.hasDescription() ); //;&& _present_oneOf ;
+
+            System.out.println("IsvalidforInsert:" + " present_mandatory=" + present_mandatory + ",present_oneof= __,"  + ",absent_id=" + absent_id + ",absent_createTS=" + absent_createTS + ",absent_updateTs=" + absent_updateTs + " dirty=");
+
+            if (null != in && absent_id) {// ID must be NULL
                 // Yes no id, so insert.  Is data sufficient for business?
-                if (in.hasFirstName() == true //fn NOT empty
-                        && in.hasLastName() == true //ln NOT empty
-                        && in.hasCreateTime() == false//NO create ts
-                        && in.hasUpdateTime() == false//NO update ts
-                        && (in.hasAddress() == true // one of email/ phone/ address
-                        || in.hasEmail() == true
-                        || in.hasPhone1() == true
-                        || in.hasPhone2() == true)//one contact channel
+                if (present_mandatory
+                        // && present_oneOf //one contact channel
+                        && absent_createTS //NO create ts
+                        && absent_updateTs //NO update ts
                 ) {//valid personfor insert
                     return true;
                 } else {//new obj - but mandarory absent
-                    //return false;
-                    throw new RuntimeException("Insert=no ID, but the objct must have fname, lname and one contact. Hint : Mandatory field missing?");
+                    //Log error? Not fatal
+                    var str = "Checked: Case Not valid for insert.";
+                    System.out.println(str);
+                    //throw new RuntimeException("Insert=no ID, but the objct must have fname, lname and one contact. Hint : Mandatory field missing?");
+                    return false;//Check
                 }
             }//id empty
             return false;
         }//isvalidfor-insert
 
-        public static boolean isValidForUpdate(Model.Person in) {
-            final var id_is_empty = in.getId().isEmpty();
-            final var has_create_time = in.hasCreateTime();
-            final var has_update_time = in.hasUpdateTime();
-            final var is_dirty = in.getDirty();
-            System.out.println("IsvalidforUpdate: id_is_empty=" + id_is_empty + " has_create_time=" + has_create_time + " has_update_time=" + has_update_time + " is_dirty=" + is_dirty);
-            if (null != in && id_is_empty == false) {// ID must NOT be NULL - preexisting
-                if (has_create_time == true // signal: already created
-                        && has_update_time == true // signal: already created
-                        && is_dirty == true // explict signal to update
+        public static boolean isValidForUpdate(Model.Case in) {
+            final var present_id = in.hasId();
+            final var has_create_time =in.hasCreateTime();
+            final var has_update_time =in.hasUpdateTime();
+            //final var is_dirty = in.getDirty();//don't check dirty - clients won't set in json
+            final var present_mandatory = (in.hasCreateTime() && in.hasUpdateTime());
+            System.out.println("IsvalidforUpdate: present_id=" + present_id + " has_create_time=" + has_create_time + " has_update_time=" + has_update_time + " is_dirty=");
+            if (null != in &&  present_id) {// ID must NOT be NULL - preexisting
+                if (present_mandatory // explict signal to update
                 ) {
                     return true;
                 } else {
-                    throw new RuntimeException("Update=ID-present. BUT! timestamp expected for PRE-exiting obj, dirty=true expected. Hint : Forgot to set dirty=true ?");
+                    //Log error? Not fatal
+                    var str = "Checked: Case Not valid for Update.";
+                    System.out.println(str);
+                    //throw new RuntimeException("Update=ID-present. BUT! timestamp expected for PRE-exiting obj. Hint : Ensure ts is prsent (though will overridden by db)?");
                 }
             }
             return false;
         }//isvalidfor-update
-    }*/
+    }//Case
 
 }
+
+
+
+/*
+public static class Address {
+    public static boolean isValidForInsert(Model.PostalAddress in) {
+        if (null != in && in.hasId() == false) {// ID must be NULL --for insert
+            //mandatory check
+            if (in.hasStreetNum() == true
+                    && in.hasStreetName() == true
+                    && in.hasPostalCode() == true
+                    && in.hasCreateTime() == false //NO create ts
+                    && in.hasUpdateTime() == false//NO update ts
+            ) {// streetname , streetnum, postcal code -
+                //if postal code is prsent, just the
+                //assume Canada - country code
+                // city can be derived from postal code.
+                return true; // valid to insert
+            } else {// new obj - mandarory FAIL
+                throw new RuntimeException("Insert=no ID, but the objct must have streetNum#, streetName, postalcode. Hint : Mandatory field missing?");
+            }
+        }
+        return false;
+    }
+
+    public static boolean isValidForUpdate(Model.PostalAddress in) {
+        // explict signal to update
+        return null != in
+                && in.hasId() == true // ID must NOT be NULL - preexisting
+                && in.hasCreateTime() == true// signal: already created
+                && in.hasUpdateTime() == true// signal: already created
+                && in.getDirty() == true; //should be set by service  /PATCH
+    }
+}
+
+public static class Person {
+    public static boolean isValidForInsert(Model.Person in) {
+        if (null != in && in.hasId() == false) {// ID must be NULL
+            // Yes no id, so insert.  Is data sufficient for business?
+            if (in.hasFirstName() == true //fn NOT empty
+                    && in.hasLastName() == true //ln NOT empty
+                    && in.hasCreateTime() == false//NO create ts
+                    && in.hasUpdateTime() == false//NO update ts
+                    && (in.hasAddress() == true // one of email/ phone/ address
+                    || in.hasEmail() == true
+                    || in.hasPhone1() == true
+                    || in.hasPhone2() == true)//one contact channel
+            ) {//valid personfor insert
+                return true;
+            } else {//new obj - but mandarory absent
+                //return false;
+                throw new RuntimeException("Insert=no ID, but the objct must have fname, lname and one contact. Hint : Mandatory field missing?");
+            }
+        }//id empty
+        return false;
+    }//isvalidfor-insert
+
+    public static boolean isValidForUpdate(Model.Person in) {
+        final var id_is_empty = in.getId().isEmpty();
+        final var has_create_time = in.hasCreateTime();
+        final var has_update_time = in.hasUpdateTime();
+        final var is_dirty = in.getDirty();
+        System.out.println("IsvalidforUpdate: id_is_empty=" + id_is_empty + " has_create_time=" + has_create_time + " has_update_time=" + has_update_time + " is_dirty=" + is_dirty);
+        if (null != in && id_is_empty == false) {// ID must NOT be NULL - preexisting
+            if (has_create_time == true // signal: already created
+                    && has_update_time == true // signal: already created
+                    && is_dirty == true // explict signal to update
+            ) {
+                return true;
+            } else {
+                throw new RuntimeException("Update=ID-present. BUT! timestamp expected for PRE-exiting obj, dirty=true expected. Hint : Forgot to set dirty=true ?");
+            }
+        }
+        return false;
+    }//isvalidfor-update
+}*/
