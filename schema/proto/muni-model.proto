@@ -70,9 +70,9 @@ message Case{
   optional string id = 3; // an id from db
   optional string status =4; //TODO  convert to enum // BACKLOG, INPROGRESS, WAITING, DONE,
   optional string description = 9;
-  optional PostalAddress eventAddress =7;
+  optional PostalAddress address =7;
   optional Person reportedByCustomer=5;
-  optional Person createdByEmployee = 6;
+  optional string createdByEmployee = 6;
   repeated string tags = 8 ;//store a list of tags that helps routing, categorizing, reporting //TODO Enum?
   optional string typeId = 11;// a unique case type id
   map<string, string> typeProps = 12; //The key-value that are relevant for each specific case typeId.

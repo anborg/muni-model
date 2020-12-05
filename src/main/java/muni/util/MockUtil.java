@@ -39,8 +39,9 @@ public class MockUtil {
         return Model.Case.newBuilder()
                 .setId("1")
                 .setStatus("INITATED") //PENDING_CUSTOMER , PENDING_ORG, PENDING_OTHER
-                .setCreatedByEmployee(buildPerson())
-                .setCreatedByEmployee(buildPerson())
+                .setReportedByCustomer(buildPerson())
+                .setAddress(buildAddress())
+                .setCreatedByEmployee("rose")
                 .setCreateTime(ts).setUpdateTime(ts)
                 .build();
     }

@@ -7586,19 +7586,19 @@ public final class Model {
         getDescriptionBytes();
 
     /**
-     * <code>optional .muni.model.PostalAddress eventAddress = 7;</code>
-     * @return Whether the eventAddress field is set.
+     * <code>optional .muni.model.PostalAddress address = 7;</code>
+     * @return Whether the address field is set.
      */
-    boolean hasEventAddress();
+    boolean hasAddress();
     /**
-     * <code>optional .muni.model.PostalAddress eventAddress = 7;</code>
-     * @return The eventAddress.
+     * <code>optional .muni.model.PostalAddress address = 7;</code>
+     * @return The address.
      */
-    muni.model.Model.PostalAddress getEventAddress();
+    muni.model.Model.PostalAddress getAddress();
     /**
-     * <code>optional .muni.model.PostalAddress eventAddress = 7;</code>
+     * <code>optional .muni.model.PostalAddress address = 7;</code>
      */
-    muni.model.Model.PostalAddressOrBuilder getEventAddressOrBuilder();
+    muni.model.Model.PostalAddressOrBuilder getAddressOrBuilder();
 
     /**
      * <code>optional .muni.model.Person reportedByCustomer = 5;</code>
@@ -7616,19 +7616,21 @@ public final class Model {
     muni.model.Model.PersonOrBuilder getReportedByCustomerOrBuilder();
 
     /**
-     * <code>optional .muni.model.Person createdByEmployee = 6;</code>
+     * <code>optional string createdByEmployee = 6;</code>
      * @return Whether the createdByEmployee field is set.
      */
     boolean hasCreatedByEmployee();
     /**
-     * <code>optional .muni.model.Person createdByEmployee = 6;</code>
+     * <code>optional string createdByEmployee = 6;</code>
      * @return The createdByEmployee.
      */
-    muni.model.Model.Person getCreatedByEmployee();
+    java.lang.String getCreatedByEmployee();
     /**
-     * <code>optional .muni.model.Person createdByEmployee = 6;</code>
+     * <code>optional string createdByEmployee = 6;</code>
+     * @return The bytes for createdByEmployee.
      */
-    muni.model.Model.PersonOrBuilder getCreatedByEmployeeOrBuilder();
+    com.google.protobuf.ByteString
+        getCreatedByEmployeeBytes();
 
     /**
      * <pre>
@@ -7878,6 +7880,7 @@ public final class Model {
       id_ = "";
       status_ = "";
       description_ = "";
+      createdByEmployee_ = "";
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       typeId_ = "";
     }
@@ -7965,27 +7968,20 @@ public final class Model {
               break;
             }
             case 50: {
-              muni.model.Model.Person.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000020) != 0)) {
-                subBuilder = createdByEmployee_.toBuilder();
-              }
-              createdByEmployee_ = input.readMessage(muni.model.Model.Person.PARSER, extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(createdByEmployee_);
-                createdByEmployee_ = subBuilder.buildPartial();
-              }
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000020;
+              createdByEmployee_ = bs;
               break;
             }
             case 58: {
               muni.model.Model.PostalAddress.Builder subBuilder = null;
               if (((bitField0_ & 0x00000008) != 0)) {
-                subBuilder = eventAddress_.toBuilder();
+                subBuilder = address_.toBuilder();
               }
-              eventAddress_ = input.readMessage(muni.model.Model.PostalAddress.PARSER, extensionRegistry);
+              address_ = input.readMessage(muni.model.Model.PostalAddress.PARSER, extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(eventAddress_);
-                eventAddress_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(address_);
+                address_ = subBuilder.buildPartial();
               }
               bitField0_ |= 0x00000008;
               break;
@@ -8255,30 +8251,30 @@ public final class Model {
       }
     }
 
-    public static final int EVENTADDRESS_FIELD_NUMBER = 7;
-    private muni.model.Model.PostalAddress eventAddress_;
+    public static final int ADDRESS_FIELD_NUMBER = 7;
+    private muni.model.Model.PostalAddress address_;
     /**
-     * <code>optional .muni.model.PostalAddress eventAddress = 7;</code>
-     * @return Whether the eventAddress field is set.
+     * <code>optional .muni.model.PostalAddress address = 7;</code>
+     * @return Whether the address field is set.
      */
     @java.lang.Override
-    public boolean hasEventAddress() {
+    public boolean hasAddress() {
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
-     * <code>optional .muni.model.PostalAddress eventAddress = 7;</code>
-     * @return The eventAddress.
+     * <code>optional .muni.model.PostalAddress address = 7;</code>
+     * @return The address.
      */
     @java.lang.Override
-    public muni.model.Model.PostalAddress getEventAddress() {
-      return eventAddress_ == null ? muni.model.Model.PostalAddress.getDefaultInstance() : eventAddress_;
+    public muni.model.Model.PostalAddress getAddress() {
+      return address_ == null ? muni.model.Model.PostalAddress.getDefaultInstance() : address_;
     }
     /**
-     * <code>optional .muni.model.PostalAddress eventAddress = 7;</code>
+     * <code>optional .muni.model.PostalAddress address = 7;</code>
      */
     @java.lang.Override
-    public muni.model.Model.PostalAddressOrBuilder getEventAddressOrBuilder() {
-      return eventAddress_ == null ? muni.model.Model.PostalAddress.getDefaultInstance() : eventAddress_;
+    public muni.model.Model.PostalAddressOrBuilder getAddressOrBuilder() {
+      return address_ == null ? muni.model.Model.PostalAddress.getDefaultInstance() : address_;
     }
 
     public static final int REPORTEDBYCUSTOMER_FIELD_NUMBER = 5;
@@ -8308,9 +8304,9 @@ public final class Model {
     }
 
     public static final int CREATEDBYEMPLOYEE_FIELD_NUMBER = 6;
-    private muni.model.Model.Person createdByEmployee_;
+    private volatile java.lang.Object createdByEmployee_;
     /**
-     * <code>optional .muni.model.Person createdByEmployee = 6;</code>
+     * <code>optional string createdByEmployee = 6;</code>
      * @return Whether the createdByEmployee field is set.
      */
     @java.lang.Override
@@ -8318,19 +8314,41 @@ public final class Model {
       return ((bitField0_ & 0x00000020) != 0);
     }
     /**
-     * <code>optional .muni.model.Person createdByEmployee = 6;</code>
+     * <code>optional string createdByEmployee = 6;</code>
      * @return The createdByEmployee.
      */
     @java.lang.Override
-    public muni.model.Model.Person getCreatedByEmployee() {
-      return createdByEmployee_ == null ? muni.model.Model.Person.getDefaultInstance() : createdByEmployee_;
+    public java.lang.String getCreatedByEmployee() {
+      java.lang.Object ref = createdByEmployee_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          createdByEmployee_ = s;
+        }
+        return s;
+      }
     }
     /**
-     * <code>optional .muni.model.Person createdByEmployee = 6;</code>
+     * <code>optional string createdByEmployee = 6;</code>
+     * @return The bytes for createdByEmployee.
      */
     @java.lang.Override
-    public muni.model.Model.PersonOrBuilder getCreatedByEmployeeOrBuilder() {
-      return createdByEmployee_ == null ? muni.model.Model.Person.getDefaultInstance() : createdByEmployee_;
+    public com.google.protobuf.ByteString
+        getCreatedByEmployeeBytes() {
+      java.lang.Object ref = createdByEmployee_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        createdByEmployee_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int TAGS_FIELD_NUMBER = 8;
@@ -8744,10 +8762,10 @@ public final class Model {
         output.writeMessage(5, getReportedByCustomer());
       }
       if (((bitField0_ & 0x00000020) != 0)) {
-        output.writeMessage(6, getCreatedByEmployee());
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, createdByEmployee_);
       }
       if (((bitField0_ & 0x00000008) != 0)) {
-        output.writeMessage(7, getEventAddress());
+        output.writeMessage(7, getAddress());
       }
       for (int i = 0; i < tags_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, tags_.getRaw(i));
@@ -8798,12 +8816,11 @@ public final class Model {
           .computeMessageSize(5, getReportedByCustomer());
       }
       if (((bitField0_ & 0x00000020) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, getCreatedByEmployee());
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, createdByEmployee_);
       }
       if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, getEventAddress());
+          .computeMessageSize(7, getAddress());
       }
       {
         int dataSize = 0;
@@ -8869,10 +8886,10 @@ public final class Model {
         if (!getDescription()
             .equals(other.getDescription())) return false;
       }
-      if (hasEventAddress() != other.hasEventAddress()) return false;
-      if (hasEventAddress()) {
-        if (!getEventAddress()
-            .equals(other.getEventAddress())) return false;
+      if (hasAddress() != other.hasAddress()) return false;
+      if (hasAddress()) {
+        if (!getAddress()
+            .equals(other.getAddress())) return false;
       }
       if (hasReportedByCustomer() != other.hasReportedByCustomer()) return false;
       if (hasReportedByCustomer()) {
@@ -8928,9 +8945,9 @@ public final class Model {
         hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
         hash = (53 * hash) + getDescription().hashCode();
       }
-      if (hasEventAddress()) {
-        hash = (37 * hash) + EVENTADDRESS_FIELD_NUMBER;
-        hash = (53 * hash) + getEventAddress().hashCode();
+      if (hasAddress()) {
+        hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+        hash = (53 * hash) + getAddress().hashCode();
       }
       if (hasReportedByCustomer()) {
         hash = (37 * hash) + REPORTEDBYCUSTOMER_FIELD_NUMBER;
@@ -9118,9 +9135,8 @@ public final class Model {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
-          getEventAddressFieldBuilder();
+          getAddressFieldBuilder();
           getReportedByCustomerFieldBuilder();
-          getCreatedByEmployeeFieldBuilder();
           getCreateTimeFieldBuilder();
           getUpdateTimeFieldBuilder();
         }
@@ -9134,10 +9150,10 @@ public final class Model {
         bitField0_ = (bitField0_ & ~0x00000002);
         description_ = "";
         bitField0_ = (bitField0_ & ~0x00000004);
-        if (eventAddressBuilder_ == null) {
-          eventAddress_ = null;
+        if (addressBuilder_ == null) {
+          address_ = null;
         } else {
-          eventAddressBuilder_.clear();
+          addressBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000008);
         if (reportedByCustomerBuilder_ == null) {
@@ -9146,11 +9162,7 @@ public final class Model {
           reportedByCustomerBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000010);
-        if (createdByEmployeeBuilder_ == null) {
-          createdByEmployee_ = null;
-        } else {
-          createdByEmployeeBuilder_.clear();
-        }
+        createdByEmployee_ = "";
         bitField0_ = (bitField0_ & ~0x00000020);
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000040);
@@ -9211,10 +9223,10 @@ public final class Model {
         }
         result.description_ = description_;
         if (((from_bitField0_ & 0x00000008) != 0)) {
-          if (eventAddressBuilder_ == null) {
-            result.eventAddress_ = eventAddress_;
+          if (addressBuilder_ == null) {
+            result.address_ = address_;
           } else {
-            result.eventAddress_ = eventAddressBuilder_.build();
+            result.address_ = addressBuilder_.build();
           }
           to_bitField0_ |= 0x00000008;
         }
@@ -9227,13 +9239,9 @@ public final class Model {
           to_bitField0_ |= 0x00000010;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
-          if (createdByEmployeeBuilder_ == null) {
-            result.createdByEmployee_ = createdByEmployee_;
-          } else {
-            result.createdByEmployee_ = createdByEmployeeBuilder_.build();
-          }
           to_bitField0_ |= 0x00000020;
         }
+        result.createdByEmployee_ = createdByEmployee_;
         if (((bitField0_ & 0x00000040) != 0)) {
           tags_ = tags_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000040);
@@ -9327,14 +9335,16 @@ public final class Model {
           description_ = other.description_;
           onChanged();
         }
-        if (other.hasEventAddress()) {
-          mergeEventAddress(other.getEventAddress());
+        if (other.hasAddress()) {
+          mergeAddress(other.getAddress());
         }
         if (other.hasReportedByCustomer()) {
           mergeReportedByCustomer(other.getReportedByCustomer());
         }
         if (other.hasCreatedByEmployee()) {
-          mergeCreatedByEmployee(other.getCreatedByEmployee());
+          bitField0_ |= 0x00000020;
+          createdByEmployee_ = other.createdByEmployee_;
+          onChanged();
         }
         if (!other.tags_.isEmpty()) {
           if (tags_.isEmpty()) {
@@ -9691,124 +9701,124 @@ public final class Model {
         return this;
       }
 
-      private muni.model.Model.PostalAddress eventAddress_;
+      private muni.model.Model.PostalAddress address_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          muni.model.Model.PostalAddress, muni.model.Model.PostalAddress.Builder, muni.model.Model.PostalAddressOrBuilder> eventAddressBuilder_;
+          muni.model.Model.PostalAddress, muni.model.Model.PostalAddress.Builder, muni.model.Model.PostalAddressOrBuilder> addressBuilder_;
       /**
-       * <code>optional .muni.model.PostalAddress eventAddress = 7;</code>
-       * @return Whether the eventAddress field is set.
+       * <code>optional .muni.model.PostalAddress address = 7;</code>
+       * @return Whether the address field is set.
        */
-      public boolean hasEventAddress() {
+      public boolean hasAddress() {
         return ((bitField0_ & 0x00000008) != 0);
       }
       /**
-       * <code>optional .muni.model.PostalAddress eventAddress = 7;</code>
-       * @return The eventAddress.
+       * <code>optional .muni.model.PostalAddress address = 7;</code>
+       * @return The address.
        */
-      public muni.model.Model.PostalAddress getEventAddress() {
-        if (eventAddressBuilder_ == null) {
-          return eventAddress_ == null ? muni.model.Model.PostalAddress.getDefaultInstance() : eventAddress_;
+      public muni.model.Model.PostalAddress getAddress() {
+        if (addressBuilder_ == null) {
+          return address_ == null ? muni.model.Model.PostalAddress.getDefaultInstance() : address_;
         } else {
-          return eventAddressBuilder_.getMessage();
+          return addressBuilder_.getMessage();
         }
       }
       /**
-       * <code>optional .muni.model.PostalAddress eventAddress = 7;</code>
+       * <code>optional .muni.model.PostalAddress address = 7;</code>
        */
-      public Builder setEventAddress(muni.model.Model.PostalAddress value) {
-        if (eventAddressBuilder_ == null) {
+      public Builder setAddress(muni.model.Model.PostalAddress value) {
+        if (addressBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          eventAddress_ = value;
+          address_ = value;
           onChanged();
         } else {
-          eventAddressBuilder_.setMessage(value);
+          addressBuilder_.setMessage(value);
         }
         bitField0_ |= 0x00000008;
         return this;
       }
       /**
-       * <code>optional .muni.model.PostalAddress eventAddress = 7;</code>
+       * <code>optional .muni.model.PostalAddress address = 7;</code>
        */
-      public Builder setEventAddress(
+      public Builder setAddress(
           muni.model.Model.PostalAddress.Builder builderForValue) {
-        if (eventAddressBuilder_ == null) {
-          eventAddress_ = builderForValue.build();
+        if (addressBuilder_ == null) {
+          address_ = builderForValue.build();
           onChanged();
         } else {
-          eventAddressBuilder_.setMessage(builderForValue.build());
+          addressBuilder_.setMessage(builderForValue.build());
         }
         bitField0_ |= 0x00000008;
         return this;
       }
       /**
-       * <code>optional .muni.model.PostalAddress eventAddress = 7;</code>
+       * <code>optional .muni.model.PostalAddress address = 7;</code>
        */
-      public Builder mergeEventAddress(muni.model.Model.PostalAddress value) {
-        if (eventAddressBuilder_ == null) {
+      public Builder mergeAddress(muni.model.Model.PostalAddress value) {
+        if (addressBuilder_ == null) {
           if (((bitField0_ & 0x00000008) != 0) &&
-              eventAddress_ != null &&
-              eventAddress_ != muni.model.Model.PostalAddress.getDefaultInstance()) {
-            eventAddress_ =
-              muni.model.Model.PostalAddress.newBuilder(eventAddress_).mergeFrom(value).buildPartial();
+              address_ != null &&
+              address_ != muni.model.Model.PostalAddress.getDefaultInstance()) {
+            address_ =
+              muni.model.Model.PostalAddress.newBuilder(address_).mergeFrom(value).buildPartial();
           } else {
-            eventAddress_ = value;
+            address_ = value;
           }
           onChanged();
         } else {
-          eventAddressBuilder_.mergeFrom(value);
+          addressBuilder_.mergeFrom(value);
         }
         bitField0_ |= 0x00000008;
         return this;
       }
       /**
-       * <code>optional .muni.model.PostalAddress eventAddress = 7;</code>
+       * <code>optional .muni.model.PostalAddress address = 7;</code>
        */
-      public Builder clearEventAddress() {
-        if (eventAddressBuilder_ == null) {
-          eventAddress_ = null;
+      public Builder clearAddress() {
+        if (addressBuilder_ == null) {
+          address_ = null;
           onChanged();
         } else {
-          eventAddressBuilder_.clear();
+          addressBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
       /**
-       * <code>optional .muni.model.PostalAddress eventAddress = 7;</code>
+       * <code>optional .muni.model.PostalAddress address = 7;</code>
        */
-      public muni.model.Model.PostalAddress.Builder getEventAddressBuilder() {
+      public muni.model.Model.PostalAddress.Builder getAddressBuilder() {
         bitField0_ |= 0x00000008;
         onChanged();
-        return getEventAddressFieldBuilder().getBuilder();
+        return getAddressFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .muni.model.PostalAddress eventAddress = 7;</code>
+       * <code>optional .muni.model.PostalAddress address = 7;</code>
        */
-      public muni.model.Model.PostalAddressOrBuilder getEventAddressOrBuilder() {
-        if (eventAddressBuilder_ != null) {
-          return eventAddressBuilder_.getMessageOrBuilder();
+      public muni.model.Model.PostalAddressOrBuilder getAddressOrBuilder() {
+        if (addressBuilder_ != null) {
+          return addressBuilder_.getMessageOrBuilder();
         } else {
-          return eventAddress_ == null ?
-              muni.model.Model.PostalAddress.getDefaultInstance() : eventAddress_;
+          return address_ == null ?
+              muni.model.Model.PostalAddress.getDefaultInstance() : address_;
         }
       }
       /**
-       * <code>optional .muni.model.PostalAddress eventAddress = 7;</code>
+       * <code>optional .muni.model.PostalAddress address = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           muni.model.Model.PostalAddress, muni.model.Model.PostalAddress.Builder, muni.model.Model.PostalAddressOrBuilder> 
-          getEventAddressFieldBuilder() {
-        if (eventAddressBuilder_ == null) {
-          eventAddressBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+          getAddressFieldBuilder() {
+        if (addressBuilder_ == null) {
+          addressBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               muni.model.Model.PostalAddress, muni.model.Model.PostalAddress.Builder, muni.model.Model.PostalAddressOrBuilder>(
-                  getEventAddress(),
+                  getAddress(),
                   getParentForChildren(),
                   isClean());
-          eventAddress_ = null;
+          address_ = null;
         }
-        return eventAddressBuilder_;
+        return addressBuilder_;
       }
 
       private muni.model.Model.Person reportedByCustomer_;
@@ -9931,124 +9941,88 @@ public final class Model {
         return reportedByCustomerBuilder_;
       }
 
-      private muni.model.Model.Person createdByEmployee_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          muni.model.Model.Person, muni.model.Model.Person.Builder, muni.model.Model.PersonOrBuilder> createdByEmployeeBuilder_;
+      private java.lang.Object createdByEmployee_ = "";
       /**
-       * <code>optional .muni.model.Person createdByEmployee = 6;</code>
+       * <code>optional string createdByEmployee = 6;</code>
        * @return Whether the createdByEmployee field is set.
        */
       public boolean hasCreatedByEmployee() {
         return ((bitField0_ & 0x00000020) != 0);
       }
       /**
-       * <code>optional .muni.model.Person createdByEmployee = 6;</code>
+       * <code>optional string createdByEmployee = 6;</code>
        * @return The createdByEmployee.
        */
-      public muni.model.Model.Person getCreatedByEmployee() {
-        if (createdByEmployeeBuilder_ == null) {
-          return createdByEmployee_ == null ? muni.model.Model.Person.getDefaultInstance() : createdByEmployee_;
-        } else {
-          return createdByEmployeeBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>optional .muni.model.Person createdByEmployee = 6;</code>
-       */
-      public Builder setCreatedByEmployee(muni.model.Model.Person value) {
-        if (createdByEmployeeBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
+      public java.lang.String getCreatedByEmployee() {
+        java.lang.Object ref = createdByEmployee_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            createdByEmployee_ = s;
           }
-          createdByEmployee_ = value;
-          onChanged();
+          return s;
         } else {
-          createdByEmployeeBuilder_.setMessage(value);
+          return (java.lang.String) ref;
         }
-        bitField0_ |= 0x00000020;
-        return this;
       }
       /**
-       * <code>optional .muni.model.Person createdByEmployee = 6;</code>
+       * <code>optional string createdByEmployee = 6;</code>
+       * @return The bytes for createdByEmployee.
+       */
+      public com.google.protobuf.ByteString
+          getCreatedByEmployeeBytes() {
+        java.lang.Object ref = createdByEmployee_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          createdByEmployee_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string createdByEmployee = 6;</code>
+       * @param value The createdByEmployee to set.
+       * @return This builder for chaining.
        */
       public Builder setCreatedByEmployee(
-          muni.model.Model.Person.Builder builderForValue) {
-        if (createdByEmployeeBuilder_ == null) {
-          createdByEmployee_ = builderForValue.build();
-          onChanged();
-        } else {
-          createdByEmployeeBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000020;
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
+        createdByEmployee_ = value;
+        onChanged();
         return this;
       }
       /**
-       * <code>optional .muni.model.Person createdByEmployee = 6;</code>
-       */
-      public Builder mergeCreatedByEmployee(muni.model.Model.Person value) {
-        if (createdByEmployeeBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) != 0) &&
-              createdByEmployee_ != null &&
-              createdByEmployee_ != muni.model.Model.Person.getDefaultInstance()) {
-            createdByEmployee_ =
-              muni.model.Model.Person.newBuilder(createdByEmployee_).mergeFrom(value).buildPartial();
-          } else {
-            createdByEmployee_ = value;
-          }
-          onChanged();
-        } else {
-          createdByEmployeeBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000020;
-        return this;
-      }
-      /**
-       * <code>optional .muni.model.Person createdByEmployee = 6;</code>
+       * <code>optional string createdByEmployee = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCreatedByEmployee() {
-        if (createdByEmployeeBuilder_ == null) {
-          createdByEmployee_ = null;
-          onChanged();
-        } else {
-          createdByEmployeeBuilder_.clear();
-        }
         bitField0_ = (bitField0_ & ~0x00000020);
+        createdByEmployee_ = getDefaultInstance().getCreatedByEmployee();
+        onChanged();
         return this;
       }
       /**
-       * <code>optional .muni.model.Person createdByEmployee = 6;</code>
+       * <code>optional string createdByEmployee = 6;</code>
+       * @param value The bytes for createdByEmployee to set.
+       * @return This builder for chaining.
        */
-      public muni.model.Model.Person.Builder getCreatedByEmployeeBuilder() {
-        bitField0_ |= 0x00000020;
+      public Builder setCreatedByEmployeeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
+        createdByEmployee_ = value;
         onChanged();
-        return getCreatedByEmployeeFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>optional .muni.model.Person createdByEmployee = 6;</code>
-       */
-      public muni.model.Model.PersonOrBuilder getCreatedByEmployeeOrBuilder() {
-        if (createdByEmployeeBuilder_ != null) {
-          return createdByEmployeeBuilder_.getMessageOrBuilder();
-        } else {
-          return createdByEmployee_ == null ?
-              muni.model.Model.Person.getDefaultInstance() : createdByEmployee_;
-        }
-      }
-      /**
-       * <code>optional .muni.model.Person createdByEmployee = 6;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          muni.model.Model.Person, muni.model.Model.Person.Builder, muni.model.Model.PersonOrBuilder> 
-          getCreatedByEmployeeFieldBuilder() {
-        if (createdByEmployeeBuilder_ == null) {
-          createdByEmployeeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              muni.model.Model.Person, muni.model.Model.Person.Builder, muni.model.Model.PersonOrBuilder>(
-                  getCreatedByEmployee(),
-                  getParentForChildren(),
-                  isClean());
-          createdByEmployee_ = null;
-        }
-        return createdByEmployeeBuilder_;
+        return this;
       }
 
       private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -14551,30 +14525,29 @@ public final class Model {
       "lCode\030\t \001(\t\022\013\n\003lat\030\n \001(\001\022\013\n\003lon\030\013 \001(\001\022.\n" +
       "\ncreateTime\030\001 \001(\0132\032.google.protobuf.Time" +
       "stamp\022.\n\nupdateTime\030\002 \001(\0132\032.google.proto" +
-      "buf.Timestamp\"\227\004\n\004Case\022\n\n\002id\030\003 \001(\t\022\016\n\006st" +
-      "atus\030\004 \001(\t\022\023\n\013description\030\t \001(\t\022/\n\014event" +
-      "Address\030\007 \001(\0132\031.muni.model.PostalAddress" +
-      "\022.\n\022reportedByCustomer\030\005 \001(\0132\022.muni.mode" +
-      "l.Person\022-\n\021createdByEmployee\030\006 \001(\0132\022.mu" +
-      "ni.model.Person\022\014\n\004tags\030\010 \003(\t\022\016\n\006typeId\030" +
-      "\013 \001(\t\0222\n\ttypeProps\030\014 \003(\0132\037.muni.model.Ca" +
-      "se.TypePropsEntry\022*\n\005xrefs\030\n \003(\0132\033.muni." +
-      "model.Case.XrefsEntry\022.\n\ncreateTime\030\001 \001(" +
-      "\0132\032.google.protobuf.Timestamp\022.\n\nupdateT" +
-      "ime\030\002 \001(\0132\032.google.protobuf.Timestamp\0320\n" +
-      "\016TypePropsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
-      "\001(\t:\0028\001\032>\n\nXrefsEntry\022\013\n\003key\030\001 \001(\t\022\037\n\005va" +
-      "lue\030\002 \001(\0132\020.muni.model.Xref:\0028\001\"\237\002\n\014Orga" +
-      "nization\022\n\n\002id\030\003 \001(\t\022\014\n\004name\030\004 \001(\t\022\017\n\007we" +
-      "bsite\030\005 \001(\t\022\r\n\005email\030\006 \001(\t\022\016\n\006phone1\030\007 \001" +
-      "(\t\022\016\n\006phone2\030\010 \001(\t\022*\n\007address\030\t \001(\0132\031.mu" +
-      "ni.model.PostalAddress\022)\n\rcontactPerson\030" +
-      "\n \001(\0132\022.muni.model.Person\022.\n\ncreateTime\030" +
-      "\001 \001(\0132\032.google.protobuf.Timestamp\022.\n\nupd" +
-      "ateTime\030\002 \001(\0132\032.google.protobuf.Timestam" +
-      "p\"C\n\tErrorInfo\022\017\n\007message\030\001 \001(\t\022%\n\007detai" +
-      "ls\030\002 \003(\0132\024.google.protobuf.AnyB\014B\005ModelP" +
-      "\000\210\001\000"
+      "buf.Timestamp\"\376\003\n\004Case\022\n\n\002id\030\003 \001(\t\022\016\n\006st" +
+      "atus\030\004 \001(\t\022\023\n\013description\030\t \001(\t\022*\n\007addre" +
+      "ss\030\007 \001(\0132\031.muni.model.PostalAddress\022.\n\022r" +
+      "eportedByCustomer\030\005 \001(\0132\022.muni.model.Per" +
+      "son\022\031\n\021createdByEmployee\030\006 \001(\t\022\014\n\004tags\030\010" +
+      " \003(\t\022\016\n\006typeId\030\013 \001(\t\0222\n\ttypeProps\030\014 \003(\0132" +
+      "\037.muni.model.Case.TypePropsEntry\022*\n\005xref" +
+      "s\030\n \003(\0132\033.muni.model.Case.XrefsEntry\022.\n\n" +
+      "createTime\030\001 \001(\0132\032.google.protobuf.Times" +
+      "tamp\022.\n\nupdateTime\030\002 \001(\0132\032.google.protob" +
+      "uf.Timestamp\0320\n\016TypePropsEntry\022\013\n\003key\030\001 " +
+      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032>\n\nXrefsEntry\022\013\n\003" +
+      "key\030\001 \001(\t\022\037\n\005value\030\002 \001(\0132\020.muni.model.Xr" +
+      "ef:\0028\001\"\237\002\n\014Organization\022\n\n\002id\030\003 \001(\t\022\014\n\004n" +
+      "ame\030\004 \001(\t\022\017\n\007website\030\005 \001(\t\022\r\n\005email\030\006 \001(" +
+      "\t\022\016\n\006phone1\030\007 \001(\t\022\016\n\006phone2\030\010 \001(\t\022*\n\007add" +
+      "ress\030\t \001(\0132\031.muni.model.PostalAddress\022)\n" +
+      "\rcontactPerson\030\n \001(\0132\022.muni.model.Person" +
+      "\022.\n\ncreateTime\030\001 \001(\0132\032.google.protobuf.T" +
+      "imestamp\022.\n\nupdateTime\030\002 \001(\0132\032.google.pr" +
+      "otobuf.Timestamp\"C\n\tErrorInfo\022\017\n\007message" +
+      "\030\001 \001(\t\022%\n\007details\030\002 \003(\0132\024.google.protobu" +
+      "f.AnyB\014B\005ModelP\000\210\001\000"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -14611,7 +14584,7 @@ public final class Model {
     internal_static_muni_model_Case_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_muni_model_Case_descriptor,
-        new java.lang.String[] { "Id", "Status", "Description", "EventAddress", "ReportedByCustomer", "CreatedByEmployee", "Tags", "TypeId", "TypeProps", "Xrefs", "CreateTime", "UpdateTime", });
+        new java.lang.String[] { "Id", "Status", "Description", "Address", "ReportedByCustomer", "CreatedByEmployee", "Tags", "TypeId", "TypeProps", "Xrefs", "CreateTime", "UpdateTime", });
     internal_static_muni_model_Case_TypePropsEntry_descriptor =
       internal_static_muni_model_Case_descriptor.getNestedTypes().get(0);
     internal_static_muni_model_Case_TypePropsEntry_fieldAccessorTable = new
