@@ -2,9 +2,11 @@ package muni.util;
 
 import muni.model.Model;
 
+import java.util.Objects;
+
 public class DataQuality {
-    public static class Address{
-        public static boolean isValidForeignKeyRef(Model.PostalAddress in){
+    public static class Address {
+        public static boolean isValidForeignKeyRef(Model.PostalAddress in) {
             return null != in && in.hasId()
                     && !in.hasStreetNum()
                     && !in.hasStreetName()
@@ -92,55 +94,57 @@ public class DataQuality {
     }//Person
 
     public static class Case {
+        //common
+        static final RuntimeException EX_NO_NULL_PARAM = new RuntimeException("For new Case, DO NOT pas null for INSERT. Hint : Mandatory field missing?");
+        static final RuntimeException EX_FOR_CASE_REPORTING_CUST_MUST_EXIST = new RuntimeException("For new Case, Customer must pre-exist in system, before creating a case. Hint: Bugfix, Use Anon Custoemer id=0, or ORG dummy id=1");
+        static final RuntimeException EX_FOR_CASE_ADDRESS_MUST_EXIST = new RuntimeException("For new Case, caseAddress must pre-exist in system, before creating a case. Hint: Use anon address id=0, or ORG dummy addr id=1");
+        //new
+        static final RuntimeException EX_FOR_NEWOBJ_No_ID = new RuntimeException("For new Case, Case.id MUST NOT be present. Hint : Bug fix code that sets some value in id");
+        static final RuntimeException EX_FOR_NEWOBJ_NO_CREATETS = new RuntimeException("For new Case,  Case.createTime MUST NOT be present, Case should not be present for new Case. Hint : Bug fix client that sets timestamp. Only server/db can do that");
+        static final RuntimeException EX_FOR_NEWOBJ_NO_UPDATETS = new RuntimeException("For new Case,  Case.updateTime MUST NOT be present, Case should not be present for new Case. Hint : Bug fix client that sets timestamp. Only server/db can do that");
+        //update
+        static final RuntimeException EX_FOR_UPDOBJ_MUST_ID = new RuntimeException("For existing Case, Case.id MUST BE present. Hint : Bug fix code that sets some value in id");
 
         public static boolean isValidForInsert(Model.Case in) {
+            if (Objects.isNull(in)) throw EX_NO_NULL_PARAM;
             final var absent_id = !in.hasId();
-            final var absent_createTS =!in.hasCreateTime();
-            final var absent_updateTs =!in.hasUpdateTime();
+            final var absent_createTS = !in.hasCreateTime();
+            final var absent_updateTs = !in.hasUpdateTime();
             //final var dirty = in.getDirty();//Don't bother to check this - as clients wont set this field in json.
             //final var present_oneOf = ( in.hasEmail() || in.hasPhone1() || in.hasPhone2() || in.hasAddress()) ;
-            final var present_mandatory = ( in.hasDescription() ); //;&& _present_oneOf ;
+            final var present_mandatory = (in.hasDescription()); //;&& _present_oneOf ;
 
-            System.out.println("IsvalidforInsert:" + " present_mandatory=" + present_mandatory + ",present_oneof= __,"  + ",absent_id=" + absent_id + ",absent_createTS=" + absent_createTS + ",absent_updateTs=" + absent_updateTs + " dirty=");
+            System.out.println("IsvalidforInsert:" + " present_mandatory=" + present_mandatory + ",present_oneof= __," + ",absent_id=" + absent_id + ",absent_createTS=" + absent_createTS + ",absent_updateTs=" + absent_updateTs + " dirty=");
 
-            if (null != in && absent_id) {// ID must be NULL
-                // Yes no id, so insert.  Is data sufficient for business?
-                if (present_mandatory
-                        // && present_oneOf //one contact channel
-                        && absent_createTS //NO create ts
-                        && absent_updateTs //NO update ts
-                ) {//valid personfor insert
-                    return true;
-                } else {//new obj - but mandarory absent
-                    //Log error? Not fatal
-                    var str = "Checked: Case Not valid for insert.";
-                    System.out.println(str);
-                    //throw new RuntimeException("Insert=no ID, but the objct must have fname, lname and one contact. Hint : Mandatory field missing?");
-                    return false;//Check
-                }
-            }//id empty
-            return false;
+            if (in.hasId()) throw EX_FOR_NEWOBJ_No_ID;
+            if (in.hasCreateTime()) throw EX_FOR_NEWOBJ_NO_CREATETS;
+            if (in.hasUpdateTime()) throw EX_FOR_NEWOBJ_NO_UPDATETS;
+
+            if (in.hasReportedByCustomer()) {
+                //Customer must pre-exist in system, before creating a case. Hint: Use Anon person id=0, or org dummy person id=1
+                if (!in.getReportedByCustomer().hasId()) throw EX_FOR_CASE_REPORTING_CUST_MUST_EXIST;
+            }
+            if (in.hasAddress()) { // Case address must be already in db for new Case
+                //caseAddress must pre-exist in system, before creating a case. Hint: Use AnonAddress id=0, or org dummy addr id=1
+                if (!in.getAddress().hasId()) throw EX_FOR_CASE_ADDRESS_MUST_EXIST;
+            }
+            return true;
         }//isvalidfor-insert
 
         public static boolean isValidForUpdate(Model.Case in) {
-            final var present_id = in.hasId();
-            final var has_create_time =in.hasCreateTime();
-            final var has_update_time =in.hasUpdateTime();
-            //final var is_dirty = in.getDirty();//don't check dirty - clients won't set in json
-            final var present_mandatory = (in.hasCreateTime() && in.hasUpdateTime());
-            System.out.println("IsvalidforUpdate: present_id=" + present_id + " has_create_time=" + has_create_time + " has_update_time=" + has_update_time + " is_dirty=");
-            if (null != in &&  present_id) {// ID must NOT be NULL - preexisting
-                if (present_mandatory // explict signal to update
-                ) {
-                    return true;
-                } else {
-                    //Log error? Not fatal
-                    var str = "Checked: Case Not valid for Update.";
-                    System.out.println(str);
-                    //throw new RuntimeException("Update=ID-present. BUT! timestamp expected for PRE-exiting obj. Hint : Ensure ts is prsent (though will overridden by db)?");
-                }
+            if (Objects.isNull(in)) throw EX_NO_NULL_PARAM;
+            if (!in.hasId()) throw EX_FOR_UPDOBJ_MUST_ID;
+            //if(in.hasCreateTime() ) throw EX_FOR_NEWOBJ_NO_CREATETS; //Ignore timestamp check for update
+            //if(in.hasUpdateTime() ) throw EX_FOR_NEWOBJ_NO_UPDATETS; //Ignore timestamp check for update
+            if (in.hasReportedByCustomer()) {
+                //Customer must pre-exist in system, before creating a case. Hint: Use Anon person id=0, or org dummy person id=1
+                if (!in.getReportedByCustomer().hasId()) throw EX_FOR_CASE_REPORTING_CUST_MUST_EXIST;
             }
-            return false;
+            if (in.hasAddress()) { // Case address must be already in db for new Case
+                //caseAddress must pre-exist in system, before creating a case. Hint: Use AnonAddress id=0, or org dummy addr id=1
+                if (!in.getAddress().hasId()) throw EX_FOR_CASE_ADDRESS_MUST_EXIST;
+            }
+            return true;
         }//isvalidfor-update
     }//Case
 

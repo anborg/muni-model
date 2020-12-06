@@ -15,7 +15,9 @@ public interface  SubsystemService {
         //TODO priority-1. return user/customer with id
         T create(T in);
         T update(T in);
-        Optional<T> get(String id);
+
+        Optional<T> get(Long id);
+
         List<T> find(T in);
         List<T> recent();
     }

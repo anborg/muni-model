@@ -10,7 +10,7 @@ import java.util.Optional;
 
 public class MockUtil {
     public static Model.Person buildPerson() {
-        return buildPerson("99", "Jane", "Doe");
+        return buildPerson(99L, "Jane", "Doe");
     }
 
     /**
@@ -23,7 +23,9 @@ public class MockUtil {
     public static Model.Person buildXrefPerson(Model.Person in, String subsysId) {
         Model.Person.Builder builder = Model.Person.newBuilder();
         //ignore id from main person, but make a rand
-        String id = subsysId + (int) (Math.random() * 1000); //Rand amanda ID
+        long id = (int) (Math.random() * 10000);
+        id = "AMANDA".equals(subsysId) ? (int) (Math.random() * 11000) : id;
+        id = "HANSEN".equals(subsysId) ? (int) (Math.random() * 22000) : id;
         builder.setId(id)
                 .setFirstName(in.getFirstName())
                 .setLastName(in.getLastName())
@@ -38,7 +40,7 @@ public class MockUtil {
         Timestamp ts = Timestamps.fromMillis(System.currentTimeMillis());
         String CASETYPE_WATER_PIPE = "WATER_PIPE_TOFIX";
         return Model.Case.newBuilder()
-                .setId("1")
+                .setId(1)
                 .setDescription("Water pipe broken, outside the house")
                 .setAddress(buildAddress())
                 .setTypeId(CASETYPE_WATER_PIPE)
@@ -58,7 +60,7 @@ public class MockUtil {
     }
 
 
-    public static Model.Person buildPerson(String id, String firstName, String lastname ) {
+    public static Model.Person buildPerson(Long id, String firstName, String lastname) {
 
         Timestamp ts = Timestamps.fromMillis(System.currentTimeMillis());
         var pb = Model.Person.newBuilder();
@@ -93,7 +95,8 @@ public class MockUtil {
     public static Model.PostalAddress buildAddress() {
 //        Timestamp ts = Timestamps.fromMillis(System.currentTimeMillis());
         Instant now = Instant.now();
-        String streetNum = "111", streetName = "New Street", city = "Toronto", province = "Ontario", country = "Canada", postalCode = "L1L2M2", id = "3";
+        String streetNum = "111", streetName = "New Street", city = "Toronto", province = "Ontario", country = "Canada", postalCode = "L1L2M2";
+        Long id = 3L;
         Double lat = 22.1111, lon = 22.1111;
         var ts = Timestamp.newBuilder().setSeconds(now.getEpochSecond()).build();
         var ab = Model.PostalAddress.newBuilder();
@@ -113,18 +116,34 @@ public class MockUtil {
         return ab.build();
     }
 
-    public static MuniService.SearchReqPerson buildSearchReqPerson(){
+    public static MuniService.SearchReqPerson buildSearchReqPerson() {
         return buildSearchReqPerson(buildPerson());
     }
 
-    public static MuniService.SearchReqPerson buildSearchReqPerson(Model.Person person){
+    public static MuniService.SearchReqPerson buildSearchReqPerson(Model.Person person) {
         return MuniService.SearchReqPerson.newBuilder().setPerson(person).build();
     }
 
-    public MuniService.SearchRes buildSearchRes_personList(){
+    public static Model.Person buildAnonPerson() {
+        var addr = Model.PostalAddress.newBuilder().setId(0L).build();
+        return Model.Person.newBuilder().setId(0L).setFirstName("Anon").setLastName("Doe").setEmail("anon@gmail.com").setAddress(addr).build();
+    }
+
+    public static Model.Person buildOrgAnonPerson() {
+        var addr = Model.PostalAddress.newBuilder().setId(1L).build();
+        return Model.Person.newBuilder().setId(0L).setFirstName("Org-Anon").setLastName("Doe").setEmail("admin@myorg.com").setAddress(addr).build();
+    }
+
+    public static Model.PostalAddress buildOrgAnonAddress() {
+        var addr = Model.PostalAddress.newBuilder().setId(1L).build();
+        return addr;
+    }
+
+    public MuniService.SearchRes buildSearchRes_personList() {
         return MuniService.SearchRes.newBuilder().setPersonList(MuniService.PersonList.newBuilder().addPersons(buildPerson())).build();
     }
-    public MuniService.SearchRes buildSearchRes_addressList(){
+
+    public MuniService.SearchRes buildSearchRes_addressList() {
         return MuniService.SearchRes.newBuilder().setPostalAddressList(MuniService.PostalAddressList.newBuilder().addAddresses(buildAddress())).build();
     }
 }

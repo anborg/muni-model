@@ -35,7 +35,7 @@ public class SampleSubsystemServiceImpl implements SubsystemService {
             }
 
             @Override
-            public Optional<Model.Person> get(String id) {
+            public Optional<Model.Person> get(Long id) {
                 return Optional.empty();
             }
 
@@ -64,7 +64,7 @@ public class SampleSubsystemServiceImpl implements SubsystemService {
             }
 
             @Override
-            public Optional<Model.Case> get(String id) {
+            public Optional<Model.Case> get(Long id) {
                 return Optional.empty();
             }
 
@@ -93,7 +93,7 @@ public class SampleSubsystemServiceImpl implements SubsystemService {
             }
 
             @Override
-            public Optional<Model.PostalAddress> get(String id) {
+            public Optional<Model.PostalAddress> get(Long id) {
                 return Optional.empty();
             }
 

@@ -15,8 +15,8 @@ public class TestSubsystemService {
         //var amdCase = Model.Case.newBuilder().setId("12").setDescription("AmandaCase1").build();
         //var hansCase = Model.Case.newBuilder().setId("34").setDescription("Water supply shutoff").build();
         //.addRecentCases(amdCase)
-        var amandaXref = Model.Xref.newBuilder().setXrefSystemId("AMANDA").setXrefId("12345").build();
-        var hansenXref = Model.Xref.newBuilder().setXrefSystemId("HANSEN").setXrefId("67890").build();
+        var amandaXref = Model.Xref.newBuilder().setXrefSystemId("AMANDA").setXrefId(12345).build();
+        var hansenXref = Model.Xref.newBuilder().setXrefSystemId("HANSEN").setXrefId(67890).build();
 
         Model.Person pers = Model.Person.newBuilder()
                 .setFirstName("Jane")
@@ -30,12 +30,12 @@ public class TestSubsystemService {
     @Test
     public void test_SubsystemService_usage() {
         final var service = new SampleSubsystemServiceImpl();
-        Optional<Model.Person> perso = service.person().get("1");
+        Optional<Model.Person> perso = service.person().get(1L);
         Model.Person savedP = service.person().create(Model.Person.getDefaultInstance());
         List<Model.Person> foundP = service.person().find(Model.Person.getDefaultInstance());
         //address
-        Optional<Model.PostalAddress> addr = service.address().get("1");
+        Optional<Model.PostalAddress> addr = service.address().get(1L);
         //class
-        Optional<Model.Case> ccase = service.ccase().get("1");
+        Optional<Model.Case> ccase = service.ccase().get(1L);
     }
 }

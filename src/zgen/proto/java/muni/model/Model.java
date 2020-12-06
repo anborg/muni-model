@@ -23,7 +23,7 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>optional string id = 3;</code>
+     * <code>optional uint64 id = 3;</code>
      * @return Whether the id field is set.
      */
     boolean hasId();
@@ -32,20 +32,10 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>optional string id = 3;</code>
+     * <code>optional uint64 id = 3;</code>
      * @return The id.
      */
-    java.lang.String getId();
-    /**
-     * <pre>
-     *Output only
-     * </pre>
-     *
-     * <code>optional string id = 3;</code>
-     * @return The bytes for id.
-     */
-    com.google.protobuf.ByteString
-        getIdBytes();
+    long getId();
 
     /**
      * <pre>
@@ -304,7 +294,6 @@ public final class Model {
       super(builder);
     }
     private Person() {
-      id_ = "";
       firstName_ = "";
       lastName_ = "";
       email_ = "";
@@ -369,10 +358,9 @@ public final class Model {
               bitField0_ |= 0x00000100;
               break;
             }
-            case 26: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+            case 24: {
               bitField0_ |= 0x00000001;
-              id_ = bs;
+              id_ = input.readUInt64();
               break;
             }
             case 34: {
@@ -477,13 +465,13 @@ public final class Model {
 
     private int bitField0_;
     public static final int ID_FIELD_NUMBER = 3;
-    private volatile java.lang.Object id_;
+    private long id_;
     /**
      * <pre>
      *Output only
      * </pre>
      *
-     * <code>optional string id = 3;</code>
+     * <code>optional uint64 id = 3;</code>
      * @return Whether the id field is set.
      */
     @java.lang.Override
@@ -495,45 +483,12 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>optional string id = 3;</code>
+     * <code>optional uint64 id = 3;</code>
      * @return The id.
      */
     @java.lang.Override
-    public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          id_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     *Output only
-     * </pre>
-     *
-     * <code>optional string id = 3;</code>
-     * @return The bytes for id.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public long getId() {
+      return id_;
     }
 
     public static final int FIRSTNAME_FIELD_NUMBER = 4;
@@ -1032,7 +987,7 @@ public final class Model {
         output.writeMessage(2, getUpdateTime());
       }
       if (((bitField0_ & 0x00000001) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, id_);
+        output.writeUInt64(3, id_);
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, firstName_);
@@ -1076,7 +1031,8 @@ public final class Model {
           .computeMessageSize(2, getUpdateTime());
       }
       if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, id_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, id_);
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, firstName_);
@@ -1124,8 +1080,8 @@ public final class Model {
 
       if (hasId() != other.hasId()) return false;
       if (hasId()) {
-        if (!getId()
-            .equals(other.getId())) return false;
+        if (getId()
+            != other.getId()) return false;
       }
       if (hasFirstName() != other.hasFirstName()) return false;
       if (hasFirstName()) {
@@ -1182,7 +1138,8 @@ public final class Model {
       hash = (19 * hash) + getDescriptor().hashCode();
       if (hasId()) {
         hash = (37 * hash) + ID_FIELD_NUMBER;
-        hash = (53 * hash) + getId().hashCode();
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getId());
       }
       if (hasFirstName()) {
         hash = (37 * hash) + FIRSTNAME_FIELD_NUMBER;
@@ -1378,7 +1335,7 @@ public final class Model {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        id_ = "";
+        id_ = 0L;
         bitField0_ = (bitField0_ & ~0x00000001);
         firstName_ = "";
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -1438,9 +1395,9 @@ public final class Model {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
           to_bitField0_ |= 0x00000001;
         }
-        result.id_ = id_;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           to_bitField0_ |= 0x00000002;
         }
@@ -1537,9 +1494,7 @@ public final class Model {
       public Builder mergeFrom(muni.model.Model.Person other) {
         if (other == muni.model.Model.Person.getDefaultInstance()) return this;
         if (other.hasId()) {
-          bitField0_ |= 0x00000001;
-          id_ = other.id_;
-          onChanged();
+          setId(other.getId());
         }
         if (other.hasFirstName()) {
           bitField0_ |= 0x00000002;
@@ -1607,15 +1562,16 @@ public final class Model {
       }
       private int bitField0_;
 
-      private java.lang.Object id_ = "";
+      private long id_ ;
       /**
        * <pre>
        *Output only
        * </pre>
        *
-       * <code>optional string id = 3;</code>
+       * <code>optional uint64 id = 3;</code>
        * @return Whether the id field is set.
        */
+      @java.lang.Override
       public boolean hasId() {
         return ((bitField0_ & 0x00000001) != 0);
       }
@@ -1624,59 +1580,24 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>optional string id = 3;</code>
+       * <code>optional uint64 id = 3;</code>
        * @return The id.
        */
-      public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            id_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+      @java.lang.Override
+      public long getId() {
+        return id_;
       }
       /**
        * <pre>
        *Output only
        * </pre>
        *
-       * <code>optional string id = 3;</code>
-       * @return The bytes for id.
-       */
-      public com.google.protobuf.ByteString
-          getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       *Output only
-       * </pre>
-       *
-       * <code>optional string id = 3;</code>
+       * <code>optional uint64 id = 3;</code>
        * @param value The id to set.
        * @return This builder for chaining.
        */
-      public Builder setId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      public Builder setId(long value) {
+        bitField0_ |= 0x00000001;
         id_ = value;
         onChanged();
         return this;
@@ -1686,31 +1607,12 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>optional string id = 3;</code>
+       * <code>optional uint64 id = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearId() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        id_ = getDefaultInstance().getId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *Output only
-       * </pre>
-       *
-       * <code>optional string id = 3;</code>
-       * @param value The bytes for id to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        id_ = value;
+        id_ = 0L;
         onChanged();
         return this;
       }
@@ -2868,7 +2770,7 @@ public final class Model {
      * golden personId, or, caseId
      * </pre>
      *
-     * <code>optional string id = 6;</code>
+     * <code>optional uint64 id = 6;</code>
      * @return Whether the id field is set.
      */
     boolean hasId();
@@ -2877,20 +2779,10 @@ public final class Model {
      * golden personId, or, caseId
      * </pre>
      *
-     * <code>optional string id = 6;</code>
+     * <code>optional uint64 id = 6;</code>
      * @return The id.
      */
-    java.lang.String getId();
-    /**
-     * <pre>
-     * golden personId, or, caseId
-     * </pre>
-     *
-     * <code>optional string id = 6;</code>
-     * @return The bytes for id.
-     */
-    com.google.protobuf.ByteString
-        getIdBytes();
+    long getId();
 
     /**
      * <pre>
@@ -2926,7 +2818,7 @@ public final class Model {
      *subsystem personid or caseid
      * </pre>
      *
-     * <code>optional string xrefId = 8;</code>
+     * <code>optional uint64 xrefId = 8;</code>
      * @return Whether the xrefId field is set.
      */
     boolean hasXrefId();
@@ -2935,20 +2827,10 @@ public final class Model {
      *subsystem personid or caseid
      * </pre>
      *
-     * <code>optional string xrefId = 8;</code>
+     * <code>optional uint64 xrefId = 8;</code>
      * @return The xrefId.
      */
-    java.lang.String getXrefId();
-    /**
-     * <pre>
-     *subsystem personid or caseid
-     * </pre>
-     *
-     * <code>optional string xrefId = 8;</code>
-     * @return The bytes for xrefId.
-     */
-    com.google.protobuf.ByteString
-        getXrefIdBytes();
+    long getXrefId();
 
     /**
      * <pre>
@@ -3077,9 +2959,7 @@ public final class Model {
       super(builder);
     }
     private Xref() {
-      id_ = "";
       xrefSystemId_ = "";
-      xrefId_ = "";
       status_ = "";
     }
 
@@ -3153,10 +3033,9 @@ public final class Model {
               bitField0_ |= 0x00000040;
               break;
             }
-            case 50: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+            case 48: {
               bitField0_ |= 0x00000001;
-              id_ = bs;
+              id_ = input.readUInt64();
               break;
             }
             case 58: {
@@ -3165,10 +3044,9 @@ public final class Model {
               xrefSystemId_ = bs;
               break;
             }
-            case 66: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+            case 64: {
               bitField0_ |= 0x00000004;
-              xrefId_ = bs;
+              xrefId_ = input.readUInt64();
               break;
             }
             case 74: {
@@ -3211,13 +3089,13 @@ public final class Model {
 
     private int bitField0_;
     public static final int ID_FIELD_NUMBER = 6;
-    private volatile java.lang.Object id_;
+    private long id_;
     /**
      * <pre>
      * golden personId, or, caseId
      * </pre>
      *
-     * <code>optional string id = 6;</code>
+     * <code>optional uint64 id = 6;</code>
      * @return Whether the id field is set.
      */
     @java.lang.Override
@@ -3229,45 +3107,12 @@ public final class Model {
      * golden personId, or, caseId
      * </pre>
      *
-     * <code>optional string id = 6;</code>
+     * <code>optional uint64 id = 6;</code>
      * @return The id.
      */
     @java.lang.Override
-    public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          id_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * golden personId, or, caseId
-     * </pre>
-     *
-     * <code>optional string id = 6;</code>
-     * @return The bytes for id.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public long getId() {
+      return id_;
     }
 
     public static final int XREFSYSTEMID_FIELD_NUMBER = 7;
@@ -3331,13 +3176,13 @@ public final class Model {
     }
 
     public static final int XREFID_FIELD_NUMBER = 8;
-    private volatile java.lang.Object xrefId_;
+    private long xrefId_;
     /**
      * <pre>
      *subsystem personid or caseid
      * </pre>
      *
-     * <code>optional string xrefId = 8;</code>
+     * <code>optional uint64 xrefId = 8;</code>
      * @return Whether the xrefId field is set.
      */
     @java.lang.Override
@@ -3349,45 +3194,12 @@ public final class Model {
      *subsystem personid or caseid
      * </pre>
      *
-     * <code>optional string xrefId = 8;</code>
+     * <code>optional uint64 xrefId = 8;</code>
      * @return The xrefId.
      */
     @java.lang.Override
-    public java.lang.String getXrefId() {
-      java.lang.Object ref = xrefId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          xrefId_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     *subsystem personid or caseid
-     * </pre>
-     *
-     * <code>optional string xrefId = 8;</code>
-     * @return The bytes for xrefId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getXrefIdBytes() {
-      java.lang.Object ref = xrefId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        xrefId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public long getXrefId() {
+      return xrefId_;
     }
 
     public static final int STATUS_FIELD_NUMBER = 9;
@@ -3588,13 +3400,13 @@ public final class Model {
         output.writeMessage(3, getSubsysRefreshTime());
       }
       if (((bitField0_ & 0x00000001) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, id_);
+        output.writeUInt64(6, id_);
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, xrefSystemId_);
       }
       if (((bitField0_ & 0x00000004) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, xrefId_);
+        output.writeUInt64(8, xrefId_);
       }
       if (((bitField0_ & 0x00000008) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, status_);
@@ -3621,13 +3433,15 @@ public final class Model {
           .computeMessageSize(3, getSubsysRefreshTime());
       }
       if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, id_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(6, id_);
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, xrefSystemId_);
       }
       if (((bitField0_ & 0x00000004) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, xrefId_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(8, xrefId_);
       }
       if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, status_);
@@ -3649,8 +3463,8 @@ public final class Model {
 
       if (hasId() != other.hasId()) return false;
       if (hasId()) {
-        if (!getId()
-            .equals(other.getId())) return false;
+        if (getId()
+            != other.getId()) return false;
       }
       if (hasXrefSystemId() != other.hasXrefSystemId()) return false;
       if (hasXrefSystemId()) {
@@ -3659,8 +3473,8 @@ public final class Model {
       }
       if (hasXrefId() != other.hasXrefId()) return false;
       if (hasXrefId()) {
-        if (!getXrefId()
-            .equals(other.getXrefId())) return false;
+        if (getXrefId()
+            != other.getXrefId()) return false;
       }
       if (hasStatus() != other.hasStatus()) return false;
       if (hasStatus()) {
@@ -3695,7 +3509,8 @@ public final class Model {
       hash = (19 * hash) + getDescriptor().hashCode();
       if (hasId()) {
         hash = (37 * hash) + ID_FIELD_NUMBER;
-        hash = (53 * hash) + getId().hashCode();
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getId());
       }
       if (hasXrefSystemId()) {
         hash = (37 * hash) + XREFSYSTEMID_FIELD_NUMBER;
@@ -3703,7 +3518,8 @@ public final class Model {
       }
       if (hasXrefId()) {
         hash = (37 * hash) + XREFID_FIELD_NUMBER;
-        hash = (53 * hash) + getXrefId().hashCode();
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getXrefId());
       }
       if (hasStatus()) {
         hash = (37 * hash) + STATUS_FIELD_NUMBER;
@@ -3861,11 +3677,11 @@ public final class Model {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        id_ = "";
+        id_ = 0L;
         bitField0_ = (bitField0_ & ~0x00000001);
         xrefSystemId_ = "";
         bitField0_ = (bitField0_ & ~0x00000002);
-        xrefId_ = "";
+        xrefId_ = 0L;
         bitField0_ = (bitField0_ & ~0x00000004);
         status_ = "";
         bitField0_ = (bitField0_ & ~0x00000008);
@@ -3916,17 +3732,17 @@ public final class Model {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
           to_bitField0_ |= 0x00000001;
         }
-        result.id_ = id_;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           to_bitField0_ |= 0x00000002;
         }
         result.xrefSystemId_ = xrefSystemId_;
         if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.xrefId_ = xrefId_;
           to_bitField0_ |= 0x00000004;
         }
-        result.xrefId_ = xrefId_;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           to_bitField0_ |= 0x00000008;
         }
@@ -4005,9 +3821,7 @@ public final class Model {
       public Builder mergeFrom(muni.model.Model.Xref other) {
         if (other == muni.model.Model.Xref.getDefaultInstance()) return this;
         if (other.hasId()) {
-          bitField0_ |= 0x00000001;
-          id_ = other.id_;
-          onChanged();
+          setId(other.getId());
         }
         if (other.hasXrefSystemId()) {
           bitField0_ |= 0x00000002;
@@ -4015,9 +3829,7 @@ public final class Model {
           onChanged();
         }
         if (other.hasXrefId()) {
-          bitField0_ |= 0x00000004;
-          xrefId_ = other.xrefId_;
-          onChanged();
+          setXrefId(other.getXrefId());
         }
         if (other.hasStatus()) {
           bitField0_ |= 0x00000008;
@@ -4063,15 +3875,16 @@ public final class Model {
       }
       private int bitField0_;
 
-      private java.lang.Object id_ = "";
+      private long id_ ;
       /**
        * <pre>
        * golden personId, or, caseId
        * </pre>
        *
-       * <code>optional string id = 6;</code>
+       * <code>optional uint64 id = 6;</code>
        * @return Whether the id field is set.
        */
+      @java.lang.Override
       public boolean hasId() {
         return ((bitField0_ & 0x00000001) != 0);
       }
@@ -4080,59 +3893,24 @@ public final class Model {
        * golden personId, or, caseId
        * </pre>
        *
-       * <code>optional string id = 6;</code>
+       * <code>optional uint64 id = 6;</code>
        * @return The id.
        */
-      public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            id_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+      @java.lang.Override
+      public long getId() {
+        return id_;
       }
       /**
        * <pre>
        * golden personId, or, caseId
        * </pre>
        *
-       * <code>optional string id = 6;</code>
-       * @return The bytes for id.
-       */
-      public com.google.protobuf.ByteString
-          getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * golden personId, or, caseId
-       * </pre>
-       *
-       * <code>optional string id = 6;</code>
+       * <code>optional uint64 id = 6;</code>
        * @param value The id to set.
        * @return This builder for chaining.
        */
-      public Builder setId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      public Builder setId(long value) {
+        bitField0_ |= 0x00000001;
         id_ = value;
         onChanged();
         return this;
@@ -4142,31 +3920,12 @@ public final class Model {
        * golden personId, or, caseId
        * </pre>
        *
-       * <code>optional string id = 6;</code>
+       * <code>optional uint64 id = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearId() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        id_ = getDefaultInstance().getId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * golden personId, or, caseId
-       * </pre>
-       *
-       * <code>optional string id = 6;</code>
-       * @param value The bytes for id to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        id_ = value;
+        id_ = 0L;
         onChanged();
         return this;
       }
@@ -4279,15 +4038,16 @@ public final class Model {
         return this;
       }
 
-      private java.lang.Object xrefId_ = "";
+      private long xrefId_ ;
       /**
        * <pre>
        *subsystem personid or caseid
        * </pre>
        *
-       * <code>optional string xrefId = 8;</code>
+       * <code>optional uint64 xrefId = 8;</code>
        * @return Whether the xrefId field is set.
        */
+      @java.lang.Override
       public boolean hasXrefId() {
         return ((bitField0_ & 0x00000004) != 0);
       }
@@ -4296,59 +4056,24 @@ public final class Model {
        *subsystem personid or caseid
        * </pre>
        *
-       * <code>optional string xrefId = 8;</code>
+       * <code>optional uint64 xrefId = 8;</code>
        * @return The xrefId.
        */
-      public java.lang.String getXrefId() {
-        java.lang.Object ref = xrefId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            xrefId_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+      @java.lang.Override
+      public long getXrefId() {
+        return xrefId_;
       }
       /**
        * <pre>
        *subsystem personid or caseid
        * </pre>
        *
-       * <code>optional string xrefId = 8;</code>
-       * @return The bytes for xrefId.
-       */
-      public com.google.protobuf.ByteString
-          getXrefIdBytes() {
-        java.lang.Object ref = xrefId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          xrefId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       *subsystem personid or caseid
-       * </pre>
-       *
-       * <code>optional string xrefId = 8;</code>
+       * <code>optional uint64 xrefId = 8;</code>
        * @param value The xrefId to set.
        * @return This builder for chaining.
        */
-      public Builder setXrefId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+      public Builder setXrefId(long value) {
+        bitField0_ |= 0x00000004;
         xrefId_ = value;
         onChanged();
         return this;
@@ -4358,31 +4083,12 @@ public final class Model {
        *subsystem personid or caseid
        * </pre>
        *
-       * <code>optional string xrefId = 8;</code>
+       * <code>optional uint64 xrefId = 8;</code>
        * @return This builder for chaining.
        */
       public Builder clearXrefId() {
         bitField0_ = (bitField0_ & ~0x00000004);
-        xrefId_ = getDefaultInstance().getXrefId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *subsystem personid or caseid
-       * </pre>
-       *
-       * <code>optional string xrefId = 8;</code>
-       * @param value The bytes for xrefId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setXrefIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-        xrefId_ = value;
+        xrefId_ = 0L;
         onChanged();
         return this;
       }
@@ -5020,21 +4726,15 @@ public final class Model {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional string id = 3;</code>
+     * <code>optional uint64 id = 3;</code>
      * @return Whether the id field is set.
      */
     boolean hasId();
     /**
-     * <code>optional string id = 3;</code>
+     * <code>optional uint64 id = 3;</code>
      * @return The id.
      */
-    java.lang.String getId();
-    /**
-     * <code>optional string id = 3;</code>
-     * @return The bytes for id.
-     */
-    com.google.protobuf.ByteString
-        getIdBytes();
+    long getId();
 
     /**
      * <code>optional string streetNum = 4;</code>
@@ -5242,7 +4942,6 @@ public final class Model {
       super(builder);
     }
     private PostalAddress() {
-      id_ = "";
       streetNum_ = "";
       streetName_ = "";
       city_ = "";
@@ -5308,10 +5007,9 @@ public final class Model {
               bitField0_ |= 0x00000400;
               break;
             }
-            case 26: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+            case 24: {
               bitField0_ |= 0x00000001;
-              id_ = bs;
+              id_ = input.readUInt64();
               break;
             }
             case 34: {
@@ -5394,9 +5092,9 @@ public final class Model {
 
     private int bitField0_;
     public static final int ID_FIELD_NUMBER = 3;
-    private volatile java.lang.Object id_;
+    private long id_;
     /**
-     * <code>optional string id = 3;</code>
+     * <code>optional uint64 id = 3;</code>
      * @return Whether the id field is set.
      */
     @java.lang.Override
@@ -5404,41 +5102,12 @@ public final class Model {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>optional string id = 3;</code>
+     * <code>optional uint64 id = 3;</code>
      * @return The id.
      */
     @java.lang.Override
-    public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          id_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string id = 3;</code>
-     * @return The bytes for id.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public long getId() {
+      return id_;
     }
 
     public static final int STREETNUM_FIELD_NUMBER = 4;
@@ -5875,7 +5544,7 @@ public final class Model {
         output.writeMessage(2, getUpdateTime());
       }
       if (((bitField0_ & 0x00000001) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, id_);
+        output.writeUInt64(3, id_);
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, streetNum_);
@@ -5919,7 +5588,8 @@ public final class Model {
           .computeMessageSize(2, getUpdateTime());
       }
       if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, id_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, id_);
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, streetNum_);
@@ -5964,8 +5634,8 @@ public final class Model {
 
       if (hasId() != other.hasId()) return false;
       if (hasId()) {
-        if (!getId()
-            .equals(other.getId())) return false;
+        if (getId()
+            != other.getId()) return false;
       }
       if (hasStreetNum() != other.hasStreetNum()) return false;
       if (hasStreetNum()) {
@@ -6032,7 +5702,8 @@ public final class Model {
       hash = (19 * hash) + getDescriptor().hashCode();
       if (hasId()) {
         hash = (37 * hash) + ID_FIELD_NUMBER;
-        hash = (53 * hash) + getId().hashCode();
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getId());
       }
       if (hasStreetNum()) {
         hash = (37 * hash) + STREETNUM_FIELD_NUMBER;
@@ -6215,7 +5886,7 @@ public final class Model {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        id_ = "";
+        id_ = 0L;
         bitField0_ = (bitField0_ & ~0x00000001);
         streetNum_ = "";
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -6274,9 +5945,9 @@ public final class Model {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
           to_bitField0_ |= 0x00000001;
         }
-        result.id_ = id_;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           to_bitField0_ |= 0x00000002;
         }
@@ -6375,9 +6046,7 @@ public final class Model {
       public Builder mergeFrom(muni.model.Model.PostalAddress other) {
         if (other == muni.model.Model.PostalAddress.getDefaultInstance()) return this;
         if (other.hasId()) {
-          bitField0_ |= 0x00000001;
-          id_ = other.id_;
-          onChanged();
+          setId(other.getId());
         }
         if (other.hasStreetNum()) {
           bitField0_ |= 0x00000002;
@@ -6451,86 +6120,41 @@ public final class Model {
       }
       private int bitField0_;
 
-      private java.lang.Object id_ = "";
+      private long id_ ;
       /**
-       * <code>optional string id = 3;</code>
+       * <code>optional uint64 id = 3;</code>
        * @return Whether the id field is set.
        */
+      @java.lang.Override
       public boolean hasId() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>optional string id = 3;</code>
+       * <code>optional uint64 id = 3;</code>
        * @return The id.
        */
-      public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            id_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+      @java.lang.Override
+      public long getId() {
+        return id_;
       }
       /**
-       * <code>optional string id = 3;</code>
-       * @return The bytes for id.
-       */
-      public com.google.protobuf.ByteString
-          getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string id = 3;</code>
+       * <code>optional uint64 id = 3;</code>
        * @param value The id to set.
        * @return This builder for chaining.
        */
-      public Builder setId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      public Builder setId(long value) {
+        bitField0_ |= 0x00000001;
         id_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional string id = 3;</code>
+       * <code>optional uint64 id = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearId() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        id_ = getDefaultInstance().getId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string id = 3;</code>
-       * @param value The bytes for id to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        id_ = value;
+        id_ = 0L;
         onChanged();
         return this;
       }
@@ -7515,7 +7139,7 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>optional string id = 3;</code>
+     * <code>optional uint64 id = 3;</code>
      * @return Whether the id field is set.
      */
     boolean hasId();
@@ -7524,20 +7148,10 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>optional string id = 3;</code>
+     * <code>optional uint64 id = 3;</code>
      * @return The id.
      */
-    java.lang.String getId();
-    /**
-     * <pre>
-     *Output only
-     * </pre>
-     *
-     * <code>optional string id = 3;</code>
-     * @return The bytes for id.
-     */
-    com.google.protobuf.ByteString
-        getIdBytes();
+    long getId();
 
     /**
      * <pre>
@@ -7675,7 +7289,7 @@ public final class Model {
 
     /**
      * <pre>
-     * a unique case type id
+     * a unique case type id human understandable string
      * </pre>
      *
      * <code>optional string typeId = 11;</code>
@@ -7684,7 +7298,7 @@ public final class Model {
     boolean hasTypeId();
     /**
      * <pre>
-     * a unique case type id
+     * a unique case type id human understandable string
      * </pre>
      *
      * <code>optional string typeId = 11;</code>
@@ -7693,7 +7307,7 @@ public final class Model {
     java.lang.String getTypeId();
     /**
      * <pre>
-     * a unique case type id
+     * a unique case type id human understandable string
      * </pre>
      *
      * <code>optional string typeId = 11;</code>
@@ -7877,7 +7491,6 @@ public final class Model {
       super(builder);
     }
     private Case() {
-      id_ = "";
       status_ = "";
       description_ = "";
       createdByEmployee_ = "";
@@ -7942,10 +7555,9 @@ public final class Model {
               bitField0_ |= 0x00000100;
               break;
             }
-            case 26: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+            case 24: {
               bitField0_ |= 0x00000001;
-              id_ = bs;
+              id_ = input.readUInt64();
               break;
             }
             case 34: {
@@ -8084,13 +7696,13 @@ public final class Model {
 
     private int bitField0_;
     public static final int ID_FIELD_NUMBER = 3;
-    private volatile java.lang.Object id_;
+    private long id_;
     /**
      * <pre>
      *Output only
      * </pre>
      *
-     * <code>optional string id = 3;</code>
+     * <code>optional uint64 id = 3;</code>
      * @return Whether the id field is set.
      */
     @java.lang.Override
@@ -8102,45 +7714,12 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>optional string id = 3;</code>
+     * <code>optional uint64 id = 3;</code>
      * @return The id.
      */
     @java.lang.Override
-    public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          id_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     *Output only
-     * </pre>
-     *
-     * <code>optional string id = 3;</code>
-     * @return The bytes for id.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public long getId() {
+      return id_;
     }
 
     public static final int STATUS_FIELD_NUMBER = 4;
@@ -8406,7 +7985,7 @@ public final class Model {
     private volatile java.lang.Object typeId_;
     /**
      * <pre>
-     * a unique case type id
+     * a unique case type id human understandable string
      * </pre>
      *
      * <code>optional string typeId = 11;</code>
@@ -8418,7 +7997,7 @@ public final class Model {
     }
     /**
      * <pre>
-     * a unique case type id
+     * a unique case type id human understandable string
      * </pre>
      *
      * <code>optional string typeId = 11;</code>
@@ -8441,7 +8020,7 @@ public final class Model {
     }
     /**
      * <pre>
-     * a unique case type id
+     * a unique case type id human understandable string
      * </pre>
      *
      * <code>optional string typeId = 11;</code>
@@ -8753,7 +8332,7 @@ public final class Model {
         output.writeMessage(2, getUpdateTime());
       }
       if (((bitField0_ & 0x00000001) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, id_);
+        output.writeUInt64(3, id_);
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, status_);
@@ -8806,7 +8385,8 @@ public final class Model {
           .computeMessageSize(2, getUpdateTime());
       }
       if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, id_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, id_);
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, status_);
@@ -8873,8 +8453,8 @@ public final class Model {
 
       if (hasId() != other.hasId()) return false;
       if (hasId()) {
-        if (!getId()
-            .equals(other.getId())) return false;
+        if (getId()
+            != other.getId()) return false;
       }
       if (hasStatus() != other.hasStatus()) return false;
       if (hasStatus()) {
@@ -8935,7 +8515,8 @@ public final class Model {
       hash = (19 * hash) + getDescriptor().hashCode();
       if (hasId()) {
         hash = (37 * hash) + ID_FIELD_NUMBER;
-        hash = (53 * hash) + getId().hashCode();
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getId());
       }
       if (hasStatus()) {
         hash = (37 * hash) + STATUS_FIELD_NUMBER;
@@ -9144,7 +8725,7 @@ public final class Model {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        id_ = "";
+        id_ = 0L;
         bitField0_ = (bitField0_ & ~0x00000001);
         status_ = "";
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -9211,9 +8792,9 @@ public final class Model {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
           to_bitField0_ |= 0x00000001;
         }
-        result.id_ = id_;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           to_bitField0_ |= 0x00000002;
         }
@@ -9321,9 +8902,7 @@ public final class Model {
       public Builder mergeFrom(muni.model.Model.Case other) {
         if (other == muni.model.Model.Case.getDefaultInstance()) return this;
         if (other.hasId()) {
-          bitField0_ |= 0x00000001;
-          id_ = other.id_;
-          onChanged();
+          setId(other.getId());
         }
         if (other.hasStatus()) {
           bitField0_ |= 0x00000002;
@@ -9401,15 +8980,16 @@ public final class Model {
       }
       private int bitField0_;
 
-      private java.lang.Object id_ = "";
+      private long id_ ;
       /**
        * <pre>
        *Output only
        * </pre>
        *
-       * <code>optional string id = 3;</code>
+       * <code>optional uint64 id = 3;</code>
        * @return Whether the id field is set.
        */
+      @java.lang.Override
       public boolean hasId() {
         return ((bitField0_ & 0x00000001) != 0);
       }
@@ -9418,59 +8998,24 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>optional string id = 3;</code>
+       * <code>optional uint64 id = 3;</code>
        * @return The id.
        */
-      public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            id_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+      @java.lang.Override
+      public long getId() {
+        return id_;
       }
       /**
        * <pre>
        *Output only
        * </pre>
        *
-       * <code>optional string id = 3;</code>
-       * @return The bytes for id.
-       */
-      public com.google.protobuf.ByteString
-          getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       *Output only
-       * </pre>
-       *
-       * <code>optional string id = 3;</code>
+       * <code>optional uint64 id = 3;</code>
        * @param value The id to set.
        * @return This builder for chaining.
        */
-      public Builder setId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      public Builder setId(long value) {
+        bitField0_ |= 0x00000001;
         id_ = value;
         onChanged();
         return this;
@@ -9480,31 +9025,12 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>optional string id = 3;</code>
+       * <code>optional uint64 id = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearId() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        id_ = getDefaultInstance().getId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *Output only
-       * </pre>
-       *
-       * <code>optional string id = 3;</code>
-       * @param value The bytes for id to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        id_ = value;
+        id_ = 0L;
         onChanged();
         return this;
       }
@@ -10173,7 +9699,7 @@ public final class Model {
       private java.lang.Object typeId_ = "";
       /**
        * <pre>
-       * a unique case type id
+       * a unique case type id human understandable string
        * </pre>
        *
        * <code>optional string typeId = 11;</code>
@@ -10184,7 +9710,7 @@ public final class Model {
       }
       /**
        * <pre>
-       * a unique case type id
+       * a unique case type id human understandable string
        * </pre>
        *
        * <code>optional string typeId = 11;</code>
@@ -10206,7 +9732,7 @@ public final class Model {
       }
       /**
        * <pre>
-       * a unique case type id
+       * a unique case type id human understandable string
        * </pre>
        *
        * <code>optional string typeId = 11;</code>
@@ -10227,7 +9753,7 @@ public final class Model {
       }
       /**
        * <pre>
-       * a unique case type id
+       * a unique case type id human understandable string
        * </pre>
        *
        * <code>optional string typeId = 11;</code>
@@ -10246,7 +9772,7 @@ public final class Model {
       }
       /**
        * <pre>
-       * a unique case type id
+       * a unique case type id human understandable string
        * </pre>
        *
        * <code>optional string typeId = 11;</code>
@@ -10260,7 +9786,7 @@ public final class Model {
       }
       /**
        * <pre>
-       * a unique case type id
+       * a unique case type id human understandable string
        * </pre>
        *
        * <code>optional string typeId = 11;</code>
@@ -10963,7 +10489,7 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>optional string id = 3;</code>
+     * <code>optional uint64 id = 3;</code>
      * @return Whether the id field is set.
      */
     boolean hasId();
@@ -10972,20 +10498,10 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>optional string id = 3;</code>
+     * <code>optional uint64 id = 3;</code>
      * @return The id.
      */
-    java.lang.String getId();
-    /**
-     * <pre>
-     *Output only
-     * </pre>
-     *
-     * <code>optional string id = 3;</code>
-     * @return The bytes for id.
-     */
-    com.google.protobuf.ByteString
-        getIdBytes();
+    long getId();
 
     /**
      * <code>optional string name = 4;</code>
@@ -11169,7 +10685,6 @@ public final class Model {
       super(builder);
     }
     private Organization() {
-      id_ = "";
       name_ = "";
       website_ = "";
       email_ = "";
@@ -11234,10 +10749,9 @@ public final class Model {
               bitField0_ |= 0x00000200;
               break;
             }
-            case 26: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+            case 24: {
               bitField0_ |= 0x00000001;
-              id_ = bs;
+              id_ = input.readUInt64();
               break;
             }
             case 34: {
@@ -11330,13 +10844,13 @@ public final class Model {
 
     private int bitField0_;
     public static final int ID_FIELD_NUMBER = 3;
-    private volatile java.lang.Object id_;
+    private long id_;
     /**
      * <pre>
      *Output only
      * </pre>
      *
-     * <code>optional string id = 3;</code>
+     * <code>optional uint64 id = 3;</code>
      * @return Whether the id field is set.
      */
     @java.lang.Override
@@ -11348,45 +10862,12 @@ public final class Model {
      *Output only
      * </pre>
      *
-     * <code>optional string id = 3;</code>
+     * <code>optional uint64 id = 3;</code>
      * @return The id.
      */
     @java.lang.Override
-    public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          id_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     *Output only
-     * </pre>
-     *
-     * <code>optional string id = 3;</code>
-     * @return The bytes for id.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public long getId() {
+      return id_;
     }
 
     public static final int NAME_FIELD_NUMBER = 4;
@@ -11778,7 +11259,7 @@ public final class Model {
         output.writeMessage(2, getUpdateTime());
       }
       if (((bitField0_ & 0x00000001) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, id_);
+        output.writeUInt64(3, id_);
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, name_);
@@ -11819,7 +11300,8 @@ public final class Model {
           .computeMessageSize(2, getUpdateTime());
       }
       if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, id_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, id_);
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, name_);
@@ -11861,8 +11343,8 @@ public final class Model {
 
       if (hasId() != other.hasId()) return false;
       if (hasId()) {
-        if (!getId()
-            .equals(other.getId())) return false;
+        if (getId()
+            != other.getId()) return false;
       }
       if (hasName() != other.hasName()) return false;
       if (hasName()) {
@@ -11922,7 +11404,8 @@ public final class Model {
       hash = (19 * hash) + getDescriptor().hashCode();
       if (hasId()) {
         hash = (37 * hash) + ID_FIELD_NUMBER;
-        hash = (53 * hash) + getId().hashCode();
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getId());
       }
       if (hasName()) {
         hash = (37 * hash) + NAME_FIELD_NUMBER;
@@ -12097,7 +11580,7 @@ public final class Model {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        id_ = "";
+        id_ = 0L;
         bitField0_ = (bitField0_ & ~0x00000001);
         name_ = "";
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -12162,9 +11645,9 @@ public final class Model {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
           to_bitField0_ |= 0x00000001;
         }
-        result.id_ = id_;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           to_bitField0_ |= 0x00000002;
         }
@@ -12267,9 +11750,7 @@ public final class Model {
       public Builder mergeFrom(muni.model.Model.Organization other) {
         if (other == muni.model.Model.Organization.getDefaultInstance()) return this;
         if (other.hasId()) {
-          bitField0_ |= 0x00000001;
-          id_ = other.id_;
-          onChanged();
+          setId(other.getId());
         }
         if (other.hasName()) {
           bitField0_ |= 0x00000002;
@@ -12338,15 +11819,16 @@ public final class Model {
       }
       private int bitField0_;
 
-      private java.lang.Object id_ = "";
+      private long id_ ;
       /**
        * <pre>
        *Output only
        * </pre>
        *
-       * <code>optional string id = 3;</code>
+       * <code>optional uint64 id = 3;</code>
        * @return Whether the id field is set.
        */
+      @java.lang.Override
       public boolean hasId() {
         return ((bitField0_ & 0x00000001) != 0);
       }
@@ -12355,59 +11837,24 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>optional string id = 3;</code>
+       * <code>optional uint64 id = 3;</code>
        * @return The id.
        */
-      public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            id_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+      @java.lang.Override
+      public long getId() {
+        return id_;
       }
       /**
        * <pre>
        *Output only
        * </pre>
        *
-       * <code>optional string id = 3;</code>
-       * @return The bytes for id.
-       */
-      public com.google.protobuf.ByteString
-          getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       *Output only
-       * </pre>
-       *
-       * <code>optional string id = 3;</code>
+       * <code>optional uint64 id = 3;</code>
        * @param value The id to set.
        * @return This builder for chaining.
        */
-      public Builder setId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      public Builder setId(long value) {
+        bitField0_ |= 0x00000001;
         id_ = value;
         onChanged();
         return this;
@@ -12417,31 +11864,12 @@ public final class Model {
        *Output only
        * </pre>
        *
-       * <code>optional string id = 3;</code>
+       * <code>optional uint64 id = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearId() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        id_ = getDefaultInstance().getId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *Output only
-       * </pre>
-       *
-       * <code>optional string id = 3;</code>
-       * @param value The bytes for id to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        id_ = value;
+        id_ = 0L;
         onChanged();
         return this;
       }
@@ -14504,7 +13932,7 @@ public final class Model {
     java.lang.String[] descriptorData = {
       "\n\020muni-model.proto\022\nmuni.model\032\037google/p" +
       "rotobuf/timestamp.proto\032\031google/protobuf" +
-      "/any.proto\"\342\002\n\006Person\022\n\n\002id\030\003 \001(\t\022\021\n\tfir" +
+      "/any.proto\"\342\002\n\006Person\022\n\n\002id\030\003 \001(\004\022\021\n\tfir" +
       "stName\030\004 \001(\t\022\020\n\010lastName\030\005 \001(\t\022\r\n\005email\030" +
       "\006 \001(\t\022\016\n\006phone1\030\007 \001(\t\022\016\n\006phone2\030\010 \001(\t\022*\n" +
       "\007address\030\t \001(\0132\031.muni.model.PostalAddres" +
@@ -14513,19 +13941,19 @@ public final class Model {
       "tobuf.Timestamp\022.\n\nupdateTime\030\002 \001(\0132\032.go" +
       "ogle.protobuf.Timestamp\032>\n\nXrefsEntry\022\013\n" +
       "\003key\030\001 \001(\t\022\037\n\005value\030\002 \001(\0132\020.muni.model.X" +
-      "ref:\0028\001\"\337\001\n\004Xref\022\n\n\002id\030\006 \001(\t\022\024\n\014xrefSyst" +
-      "emId\030\007 \001(\t\022\016\n\006xrefId\030\010 \001(\t\022\016\n\006status\030\t \001" +
+      "ref:\0028\001\"\337\001\n\004Xref\022\n\n\002id\030\006 \001(\004\022\024\n\014xrefSyst" +
+      "emId\030\007 \001(\t\022\016\n\006xrefId\030\010 \001(\004\022\016\n\006status\030\t \001" +
       "(\t\022.\n\ncreateTime\030\001 \001(\0132\032.google.protobuf" +
       ".Timestamp\022.\n\nupdateTime\030\002 \001(\0132\032.google." +
       "protobuf.Timestamp\0225\n\021subsysRefreshTime\030" +
       "\003 \001(\0132\032.google.protobuf.Timestamp\"\201\002\n\rPo" +
-      "stalAddress\022\n\n\002id\030\003 \001(\t\022\021\n\tstreetNum\030\004 \001" +
+      "stalAddress\022\n\n\002id\030\003 \001(\004\022\021\n\tstreetNum\030\004 \001" +
       "(\t\022\022\n\nstreetName\030\005 \001(\t\022\014\n\004city\030\006 \001(\t\022\020\n\010" +
       "province\030\007 \001(\t\022\017\n\007country\030\010 \001(\t\022\022\n\nposta" +
       "lCode\030\t \001(\t\022\013\n\003lat\030\n \001(\001\022\013\n\003lon\030\013 \001(\001\022.\n" +
       "\ncreateTime\030\001 \001(\0132\032.google.protobuf.Time" +
       "stamp\022.\n\nupdateTime\030\002 \001(\0132\032.google.proto" +
-      "buf.Timestamp\"\376\003\n\004Case\022\n\n\002id\030\003 \001(\t\022\016\n\006st" +
+      "buf.Timestamp\"\376\003\n\004Case\022\n\n\002id\030\003 \001(\004\022\016\n\006st" +
       "atus\030\004 \001(\t\022\023\n\013description\030\t \001(\t\022*\n\007addre" +
       "ss\030\007 \001(\0132\031.muni.model.PostalAddress\022.\n\022r" +
       "eportedByCustomer\030\005 \001(\0132\022.muni.model.Per" +
@@ -14538,7 +13966,7 @@ public final class Model {
       "uf.Timestamp\0320\n\016TypePropsEntry\022\013\n\003key\030\001 " +
       "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032>\n\nXrefsEntry\022\013\n\003" +
       "key\030\001 \001(\t\022\037\n\005value\030\002 \001(\0132\020.muni.model.Xr" +
-      "ef:\0028\001\"\237\002\n\014Organization\022\n\n\002id\030\003 \001(\t\022\014\n\004n" +
+      "ef:\0028\001\"\237\002\n\014Organization\022\n\n\002id\030\003 \001(\004\022\014\n\004n" +
       "ame\030\004 \001(\t\022\017\n\007website\030\005 \001(\t\022\r\n\005email\030\006 \001(" +
       "\t\022\016\n\006phone1\030\007 \001(\t\022\016\n\006phone2\030\010 \001(\t\022*\n\007add" +
       "ress\030\t \001(\0132\031.muni.model.PostalAddress\022)\n" +

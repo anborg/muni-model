@@ -120,6 +120,37 @@ public final class CaseServiceGrpc {
     return getUpdateMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.google.protobuf.Empty,
+      muni.model.MuniService.CaseList> getGetAllMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "getAll",
+      requestType = com.google.protobuf.Empty.class,
+      responseType = muni.model.MuniService.CaseList.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.google.protobuf.Empty,
+      muni.model.MuniService.CaseList> getGetAllMethod() {
+    io.grpc.MethodDescriptor<com.google.protobuf.Empty, muni.model.MuniService.CaseList> getGetAllMethod;
+    if ((getGetAllMethod = CaseServiceGrpc.getGetAllMethod) == null) {
+      synchronized (CaseServiceGrpc.class) {
+        if ((getGetAllMethod = CaseServiceGrpc.getGetAllMethod) == null) {
+          CaseServiceGrpc.getGetAllMethod = getGetAllMethod =
+              io.grpc.MethodDescriptor.<com.google.protobuf.Empty, muni.model.MuniService.CaseList>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getAll"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  muni.model.MuniService.CaseList.getDefaultInstance()))
+              .setSchemaDescriptor(new CaseServiceMethodDescriptorSupplier("getAll"))
+              .build();
+        }
+      }
+    }
+    return getGetAllMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -189,6 +220,16 @@ public final class CaseServiceGrpc {
       asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     *google.protobuf.Empty
+     * </pre>
+     */
+    public void getAll(com.google.protobuf.Empty request,
+        io.grpc.stub.StreamObserver<muni.model.MuniService.CaseList> responseObserver) {
+      asyncUnimplementedUnaryCall(getGetAllMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -212,6 +253,13 @@ public final class CaseServiceGrpc {
                 muni.model.Model.Case,
                 muni.model.Model.Case>(
                   this, METHODID_UPDATE)))
+          .addMethod(
+            getGetAllMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.google.protobuf.Empty,
+                muni.model.MuniService.CaseList>(
+                  this, METHODID_GET_ALL)))
           .build();
     }
   }
@@ -253,6 +301,17 @@ public final class CaseServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     *google.protobuf.Empty
+     * </pre>
+     */
+    public void getAll(com.google.protobuf.Empty request,
+        io.grpc.stub.StreamObserver<muni.model.MuniService.CaseList> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getGetAllMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -288,6 +347,16 @@ public final class CaseServiceGrpc {
     public muni.model.Model.Case update(muni.model.Model.Case request) {
       return blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     *google.protobuf.Empty
+     * </pre>
+     */
+    public muni.model.MuniService.CaseList getAll(com.google.protobuf.Empty request) {
+      return blockingUnaryCall(
+          getChannel(), getGetAllMethod(), getCallOptions(), request);
     }
   }
 
@@ -328,11 +397,23 @@ public final class CaseServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     *google.protobuf.Empty
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<muni.model.MuniService.CaseList> getAll(
+        com.google.protobuf.Empty request) {
+      return futureUnaryCall(
+          getChannel().newCall(getGetAllMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET = 0;
   private static final int METHODID_CREATE = 1;
   private static final int METHODID_UPDATE = 2;
+  private static final int METHODID_GET_ALL = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -362,6 +443,10 @@ public final class CaseServiceGrpc {
         case METHODID_UPDATE:
           serviceImpl.update((muni.model.Model.Case) request,
               (io.grpc.stub.StreamObserver<muni.model.Model.Case>) responseObserver);
+          break;
+        case METHODID_GET_ALL:
+          serviceImpl.getAll((com.google.protobuf.Empty) request,
+              (io.grpc.stub.StreamObserver<muni.model.MuniService.CaseList>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -427,6 +512,7 @@ public final class CaseServiceGrpc {
               .addMethod(getGetMethod())
               .addMethod(getCreateMethod())
               .addMethod(getUpdateMethod())
+              .addMethod(getGetAllMethod())
               .build();
         }
       }

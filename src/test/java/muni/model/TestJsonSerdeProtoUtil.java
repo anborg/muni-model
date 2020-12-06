@@ -7,12 +7,14 @@ import com.google.protobuf.util.Timestamps;
 import muni.util.ProtoUtil;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
 import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestJsonSerdeProtoUtil {
+
     ObjectMapper mapper = new ObjectMapper();
     @Test
     public void test_jsonToProto_Person_roundtrip_is_equal() throws Exception{
@@ -44,21 +46,32 @@ public class TestJsonSerdeProtoUtil {
     }
 
     @Test
-    public void test_jsonToProto_Case_roundtrip_is_equal() throws Exception{
+    public void test_jsonToProto_Case_roundtrip_is_equal() throws Exception {
         //with
         String jsonStr = ClasspathUtil.readFileInClasspath("CaseJsonObj_deafult.json");
         Timestamp ts = Timestamps.fromMillis(System.currentTimeMillis());
+        Long ID = 1L;
         String CASETYPE_WATER_PIPE = "WATER_PIPE_TOFIX";
+        String CASE_STATUS = "AWAIT_TRIAGE";
+        String CASE_DESC = "Water pipe broken, outside the house";
+        var addr = Model.PostalAddress.newBuilder().setStreetNum("111").setStreetName("My St").setPostalCode("L1Lozo").build();
+        var cust = Model.Person.newBuilder().setFirstName("Jane").setLastName("Doe");
+        var empId = "rose";
+        var xrefAmanda = Model.Xref.newBuilder().setXrefSystemId("AMANDA").build();
+        var tags = List.of("WATER", "PUBLICAREA", "FEDERAL");
 
         var aCase = Model.Case.newBuilder()
-                .setId("1")
-                .setDescription("Water pipe broken, outside the house")
-                .setAddress(Model.PostalAddress.newBuilder().setStreetNum("111").setStreetName("My St").setPostalCode("L1Lozo").build())
+                .setId(ID)
+                .setStatus(CASE_STATUS)
+                .setDescription(CASE_DESC)
+                .setAddress(addr)
+                .setReportedByCustomer(cust)
+                .setCreatedByEmployee(empId)
+                .putXrefs(xrefAmanda.getXrefSystemId(), xrefAmanda)
+                //
                 .setTypeId(CASETYPE_WATER_PIPE)
-                .putTypeProps("location","ousideresidence")
-                .setStatus("INITATED") //PENDING_CUSTOMER , PENDING_ORG, PENDING_OTHER
-                .setReportedByCustomer(Model.Person.newBuilder().setFirstName("Jane").setLastName("Doe"))
-                //.setCreatedByEmployee(buildPerson())
+                .putTypeProps("location", "ousideresidence")
+                .addAllTags(tags)
                 // .setCreateTime(ts).setUpdateTime(ts)
                 .build();
 //        jsonStr = ProtoUtil.toJson();
@@ -66,7 +79,7 @@ public class TestJsonSerdeProtoUtil {
 //        Optional<Model.Case> c = ProtoUtil.toProto(jsonStr, Model.Case.getDefaultInstance());
 //        System.out.println("json to Case ="+c);
         String jsonStrOut = ProtoUtil.toJson(aCase);
-
+        System.out.println("json to Case =\n" + jsonStrOut);
         assertThat(Strings.isNullOrEmpty(jsonStrOut)).isFalse();
         //then - verify
         assertEquals(mapper.readTree(jsonStr), mapper.readTree(jsonStrOut));
