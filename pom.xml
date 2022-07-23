@@ -10,7 +10,7 @@
 
   <properties>
     <protoc.version>3.13.0</protoc.version>
-    <protobuf.version>3.11.1</protobuf.version>
+    <protobuf.version>3.21.3</protobuf.version>
     <!--Import "google/api/annotations.proto" was not found -->
     <quarkus.platform.version>1.8.1.Final</quarkus.platform.version>
 
@@ -50,13 +50,13 @@
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
-      <version>2.11.2</version>
+      <version>2.13.3</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter</artifactId>
-      <version>5.7.0</version>
+      <version>5.8.2</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -72,7 +72,7 @@
       <extension>
         <groupId>kr.motd.maven</groupId>
         <artifactId>os-maven-plugin</artifactId>
-        <version>1.6.2</version>
+        <version>1.7.0</version>
       </extension>
     </extensions>
     <plugins>
@@ -113,7 +113,7 @@
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>build-helper-maven-plugin</artifactId>
-        <version>3.0.0</version>
+        <version>3.3.0</version>
         <executions>
           <execution>
             <id>add-source</id>
@@ -135,7 +135,7 @@
       <plugin>
         <groupId>org.jboss.jandex</groupId>
         <artifactId>jandex-maven-plugin</artifactId>
-        <version>1.0.8</version>
+        <version>1.2.3</version>
         <executions>
           <execution>
             <id>make-index</id>
