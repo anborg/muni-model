@@ -18,7 +18,7 @@
 
     <compiler-plugin.version>3.8.0</compiler-plugin.version>
     <!-- Move these to parent? -->
-    <java.version>11</java.version>
+    <java.version>17</java.version>
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
