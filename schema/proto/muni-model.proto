@@ -7,6 +7,9 @@ option java_outer_classname = "Model"; //muni.api.Model
 option java_generic_services = false; //default, prevents complex generic
 option java_multiple_files = false; //default behavior
 
+// Person, Person::PostalAddress, Person::Xref
+//Person has one address. Person is Xref'd in a list of sub-systems in the organization
+// Not modeling CommunicationChannel, just using a flat email/phone..
 message Person{
   //Output only
   optional uint64 id = 3;
@@ -64,7 +67,10 @@ message PostalAddress{
 
 
 
-
+// A case models info need to do some 'business action(s)'
+// Case may be associated with a geo-address
+// Case may have a Person associated with it - 'customer' contact. Org may use this to ask them more info, inform of status etc
+// Case may be handled by specific employee of an organisation - Org contact
 message Case{
   //Output only
   optional uint64 id = 3; // an id from db
@@ -106,6 +112,7 @@ message Organization {
   optional google.protobuf.Timestamp updateTime = 2;
 }
 
+// Add this in 'agile' manner if the necessity is found.
 //message ContactChannels{ //aggregate, some may be in different tables in backend
 //  Phone phone1 =1;
 //  Phone phone2 = 2;
@@ -113,19 +120,21 @@ message Organization {
 //  PostalAddress postalAddress = 4;
 //}
 
+// This splitting is not of value to business at this moment. Add this in 'agile' manner if need is proven.
 //message Phone{// modeled separately to apply clean data rules
 //  int32 countryCode = 1;
 //  string number = 2;
 //  string ext = 3;
 //}
 
+// Having Phone and Email class is more 'pure', however, lets' go for that in next iternation if needed.
 //message Email{ // Modeled separately to apply clean data rules
 //  string value=1;
 //}
 
 
 //https://developers.google.com/protocol-buffers/docs/proto3#any
-
+// Use this to ship errors between layers.
 message ErrorInfo {
   optional string message = 1;
   repeated google.protobuf.Any details = 2;

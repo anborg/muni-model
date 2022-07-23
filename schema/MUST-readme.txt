@@ -1,7 +1,7 @@
 
-Enable PROTO plugiin only for the duration of regenerate
+Enable PROTO plugin only for the duration of regenerate
 
-!! !! Remember to add these annotation back to GENERATED classes!! !! !! !!
+!! !! Remember to add these annotation(s) back to GENERATED classes!! !! !! !!
 
 
 @JsonDeserialize(using = DeserializeSearchRequest.class)
