@@ -5,10 +5,12 @@ import muni.util.ProtoUtil;
 import org.junit.jupiter.api.Test;
 
 import java.time.Instant;
+import java.util.logging.Logger;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class TestProtogenObjects {
+    private static Logger logger = Logger.getLogger(TestProtogenObjects.class.getName());
 
     @Test
     public void objects_UNset_must_false_hasXX() {
@@ -42,7 +44,7 @@ public class TestProtogenObjects {
             var add = Model.PostalAddress.newBuilder().setId(id).setStreetNum(streetNum).setStreetName(streetName).setCity(city).setProvince(province).setCountry(country).setPostalCode(postalCode).setCreateTime(ts).setUpdateTime(ts);
             pers = Model.Person.newBuilder().setId(id).setFirstName("Jane").setLastName("Doe").setAddress(add).build();//.setDirty(true)
         }//pers
-        System.out.println(ProtoUtil.toJson(pers));
+        logger.info(ProtoUtil.toJson(pers));
 
         //Then
         //set primitives
@@ -79,18 +81,18 @@ public class TestProtogenObjects {
 //    @Test
 //    public void createCase(){
 //        Model.Case mycase = MockUtil.buildCase();
-//        //System.out.println(mycase.toString());
+//        //logger.info(mycase.toString());
 //    }
 //
 //    @Test
 //    public void createAddress(){
 //        Model.PostalAddress address = MockUtil.buildAddress();
-//        //System.out.println(address.toString());
+//        //logger.info(address.toString());
 //    }
 //
 //    @Test
 //    public void createOrganization(){
 //        Model.Organization org = MockUtil.buildOrganization();
-//        //System.out.println(org.toString());
+//        //logger.info(org.toString());
 //    }
 }

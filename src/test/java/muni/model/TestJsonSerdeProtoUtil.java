@@ -9,20 +9,23 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.logging.Logger;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestJsonSerdeProtoUtil {
+    private static Logger logger = Logger.getLogger(TestJsonSerdeProtoUtil.class.getName());
 
     ObjectMapper mapper = new ObjectMapper();
     @Test
     public void test_jsonToProto_Person_roundtrip_is_equal() throws Exception{
+
         //with
         String jsonStr = ClasspathUtil.readFileInClasspath("person.json");
         //when
         Optional<Model.Person> p = ProtoUtil.toProto(jsonStr, Model.Person.getDefaultInstance());
-        System.out.println("json to Person p="+p);
+        logger.info("json to Person p="+p);
         String jsonStrOut = ProtoUtil.toJson(p.get());
         assertThat(Strings.isNullOrEmpty(jsonStrOut)).isFalse();
         //then - verify
@@ -34,12 +37,12 @@ public class TestJsonSerdeProtoUtil {
     public void test_emptyJson_serde_as_emptyJson()throws Exception{
         //with
         String jsonStr = ClasspathUtil.readFileInClasspath("person_null.json");
-        System.out.println("jsonStr=" + jsonStr);
+        logger.info("jsonStr=" + jsonStr);
         //when
         Optional<Model.Person> p = ProtoUtil.toProto(jsonStr, Model.Person.getDefaultInstance());
         assertThat(p.isPresent()).isFalse();
         String jsonStrOut = ProtoUtil.toJson(null);
-        System.out.println("empty p=" + p);
+        logger.info("empty p=" + p);
         //then - verify
         assertThat(Strings.isNullOrEmpty(jsonStrOut)).isTrue();
         //assertEquals(mapper.readTree(jsonStr), mapper.readTree(jsonStrOut));
@@ -77,9 +80,9 @@ public class TestJsonSerdeProtoUtil {
 //        jsonStr = ProtoUtil.toJson();
 //        //when
 //        Optional<Model.Case> c = ProtoUtil.toProto(jsonStr, Model.Case.getDefaultInstance());
-//        System.out.println("json to Case ="+c);
+//        logger.info("json to Case ="+c);
         String jsonStrOut = ProtoUtil.toJson(aCase);
-        System.out.println("json to Case =\n" + jsonStrOut);
+        logger.info("json to Case =\n" + jsonStrOut);
         assertThat(Strings.isNullOrEmpty(jsonStrOut)).isFalse();
         //then - verify
         assertEquals(mapper.readTree(jsonStr), mapper.readTree(jsonStrOut));

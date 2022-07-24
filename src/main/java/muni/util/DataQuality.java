@@ -3,8 +3,10 @@ package muni.util;
 import muni.model.Model;
 
 import java.util.Objects;
+import java.util.logging.Logger;
 
 public class DataQuality {
+    private static Logger logger = Logger.getLogger(DataQuality.class.getName());
     public static class Address {
         public static boolean isValidForeignKeyRef(Model.PostalAddress in) {
             return null != in && in.hasId()
@@ -53,7 +55,7 @@ public class DataQuality {
             final var present_oneOf = ( in.hasEmail() || in.hasPhone1() || in.hasPhone2() || in.hasAddress()) ;
             final var present_mandatory = ( in.hasFirstName() &&  in.hasLastName()); //;&& _present_oneOf ;
 
-            System.out.println("IsvalidforInsert:" + " present_mandatory=" + present_mandatory + ",present_oneof=" + present_oneOf + ",absent_id=" + absent_id + ",absent_createTS=" + absent_createTS + ",absent_updateTs=" + absent_updateTs + " dirty=");
+            logger.info("IsvalidforInsert:" + " present_mandatory=" + present_mandatory + ",present_oneof=" + present_oneOf + ",absent_id=" + absent_id + ",absent_createTS=" + absent_createTS + ",absent_updateTs=" + absent_updateTs + " dirty=");
 
             if (null != in && absent_id) {// ID must be NULL
                 // Yes no id, so insert.  Is data sufficient for business?
@@ -65,7 +67,7 @@ public class DataQuality {
                     return true;
                 } else {//new obj - but mandarory absent
                     //Log error? Not fatal
-                    System.out.println("Checked: Person Not valid for insert.");
+                    logger.info("Checked: Person Not valid for insert.");
                     //throw new RuntimeException("Insert=no ID, but the objct must have fname, lname and one contact. Hint : Mandatory field missing?");
                 }
             }//id empty
@@ -78,14 +80,14 @@ public class DataQuality {
             final var has_update_time =in.hasUpdateTime();
             //final var is_dirty = in.getDirty();//don't check dirty - clients won't set in json
             final var present_mandatory = (in.hasCreateTime() && in.hasUpdateTime());
-            System.out.println("IsvalidforUpdate: present_id=" + present_id + " has_create_time=" + has_create_time + " has_update_time=" + has_update_time + " is_dirty=");
+            logger.info("IsvalidforUpdate: present_id=" + present_id + " has_create_time=" + has_create_time + " has_update_time=" + has_update_time + " is_dirty=");
             if (null != in &&  present_id) {// ID must NOT be NULL - preexisting
                 if (present_mandatory // explict signal to update
                 ) {
                     return true;
                 } else {
                     //Log error? Not fatal
-                    System.out.println("Checked: Person Not valid for Update.");
+                    logger.info("Checked: Person Not valid for Update.");
                     //throw new RuntimeException("Update=ID-present. BUT! timestamp expected for PRE-exiting obj. Hint : Ensure ts is prsent (though will overridden by db)?");
                 }
             }
@@ -114,7 +116,7 @@ public class DataQuality {
             //final var present_oneOf = ( in.hasEmail() || in.hasPhone1() || in.hasPhone2() || in.hasAddress()) ;
             final var present_mandatory = (in.hasDescription()); //;&& _present_oneOf ;
 
-            System.out.println("IsvalidforInsert:" + " present_mandatory=" + present_mandatory + ",present_oneof= __," + ",absent_id=" + absent_id + ",absent_createTS=" + absent_createTS + ",absent_updateTs=" + absent_updateTs + " dirty=");
+            logger.info("IsvalidforInsert:" + " present_mandatory=" + present_mandatory + ",present_oneof= __," + ",absent_id=" + absent_id + ",absent_createTS=" + absent_createTS + ",absent_updateTs=" + absent_updateTs + " dirty=");
 
             if (in.hasId()) throw EX_FOR_NEWOBJ_No_ID;
             if (in.hasCreateTime()) throw EX_FOR_NEWOBJ_NO_CREATETS;
@@ -211,7 +213,7 @@ public static class Person {
         final var has_create_time = in.hasCreateTime();
         final var has_update_time = in.hasUpdateTime();
         final var is_dirty = in.getDirty();
-        System.out.println("IsvalidforUpdate: id_is_empty=" + id_is_empty + " has_create_time=" + has_create_time + " has_update_time=" + has_update_time + " is_dirty=" + is_dirty);
+        logger.info("IsvalidforUpdate: id_is_empty=" + id_is_empty + " has_create_time=" + has_create_time + " has_update_time=" + has_update_time + " is_dirty=" + is_dirty);
         if (null != in && id_is_empty == false) {// ID must NOT be NULL - preexisting
             if (has_create_time == true // signal: already created
                     && has_update_time == true // signal: already created
