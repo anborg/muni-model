@@ -2,7 +2,7 @@
 
 Steps To modify model objects:
 
-1. Edit the proto file
+1. Edit the proto file - eg add model , or add se
 2. Reinstall the "model-gen" jar files, by running "mvn install"
 3. Your impl project must have latest changes.
 

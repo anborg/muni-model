@@ -2,14 +2,15 @@ package muni.util;
 
 import com.google.protobuf.Timestamp;
 import com.google.protobuf.util.Timestamps;
-import muni.model.Model;
-import muni.model.MuniService;
+import corp.model.*;
+import corp.service.PersonServices;
+
 
 import java.time.Instant;
 import java.util.Optional;
 
 public class MockUtil {
-    public static Model.Person buildPerson() {
+    public static Person buildPerson() {
         return buildPerson(99L, "Jane", "Doe");
     }
 
@@ -20,8 +21,8 @@ public class MockUtil {
      * @param subsysId {AMANDA|...}
      * @return Person
      */
-    public static Model.Person buildXrefPerson(Model.Person in, String subsysId) {
-        Model.Person.Builder builder = Model.Person.newBuilder();
+    public static Person buildXrefPerson(Person in, String subsysId) {
+        Person.Builder builder = Person.newBuilder();
         //ignore id from main person, but make a rand
         long id = (int) (Math.random() * 10000);
         id = "AMANDA".equals(subsysId) ? (int) (Math.random() * 11000) : id;
@@ -36,10 +37,10 @@ public class MockUtil {
         return builder.build();
     }
 
-    public static Model.Case buildCase() {
+    public static Case buildCase() {
         Timestamp ts = Timestamps.fromMillis(System.currentTimeMillis());
         String CASETYPE_WATER_PIPE = "WATER_PIPE_TOFIX";
-        return Model.Case.newBuilder()
+        return Case.newBuilder()
                 .setId(1)
                 .setDescription("Water pipe broken, outside the house")
                 .setAddress(buildAddress())
@@ -52,18 +53,18 @@ public class MockUtil {
                 .build();
     }
 
-    public static Model.Organization buildOrganization() {
-        return Model.Organization.newBuilder()
+    public static Organization buildOrganization() {
+        return Organization.newBuilder()
                 .setName("Costco Enterprise")
                 .setAddress(buildAddress())
                 .build();
     }
 
 
-    public static Model.Person buildPerson(Long id, String firstName, String lastname) {
+    public static Person buildPerson(Long id, String firstName, String lastname) {
 
         Timestamp ts = Timestamps.fromMillis(System.currentTimeMillis());
-        var pb = Model.Person.newBuilder();
+        var pb = Person.newBuilder();
         Optional.ofNullable(id).ifPresent(pb::setId);
         Optional.ofNullable(firstName).ifPresent(pb::setFirstName);
         Optional.ofNullable(lastname).ifPresent(pb::setLastName);
@@ -73,33 +74,33 @@ public class MockUtil {
         Optional.ofNullable(buildAddress()).ifPresent(pb::setAddress);
         Optional.ofNullable(ts).ifPresent(pb::setCreateTime);
         Optional.ofNullable(ts).ifPresent(pb::setUpdateTime);
-        var amandaXref = Model.Xref.newBuilder().setId(id).setXrefSystemId("AMANDA").build();
+        var amandaXref = Xref.newBuilder().setId(id).setXrefSystemId("AMANDA").build();
         pb.putXrefs(amandaXref.getXrefSystemId(), amandaXref);
         return pb.build();
     }
 
 
-//    public static Model.ContactChannels buildContactChannels(){
-//        return Model.ContactChannels.newBuilder()
+//    public static ContactChannels buildContactChannels(){
+//        return ContactChannels.newBuilder()
 //                .setEmail("me@gmail.com")
-//                .setPhone1(Model.Phone.newBuilder().setCountryCode(1).setNumber("123445678").setExt("xs234").build())
-//                .setPhone2(Model.Phone.newBuilder().setCountryCode(1).setNumber("123445678").setExt("xs234").build())
+//                .setPhone1(Phone.newBuilder().setCountryCode(1).setNumber("123445678").setExt("xs234").build())
+//                .setPhone2(Phone.newBuilder().setCountryCode(1).setNumber("123445678").setExt("xs234").build())
 //                .setPostalAddress(buildAddress())
 //                .build();
 //    }
 
-//    public static Model.Phone buildPhone(){
-//        return Model.Phone.newBuilder().setCountryCode(1).setNumber("123445678").setExt("xs234").build();
+//    public static Phone buildPhone(){
+//        return Phone.newBuilder().setCountryCode(1).setNumber("123445678").setExt("xs234").build();
 //    }
 
-    public static Model.PostalAddress buildAddress() {
+    public static PostalAddress buildAddress() {
 //        Timestamp ts = Timestamps.fromMillis(System.currentTimeMillis());
         Instant now = Instant.now();
         String streetNum = "111", streetName = "New Street", city = "Toronto", province = "Ontario", country = "Canada", postalCode = "L1L2M2";
         Long id = 3L;
         Double lat = 22.1111, lon = 22.1111;
         var ts = Timestamp.newBuilder().setSeconds(now.getEpochSecond()).build();
-        var ab = Model.PostalAddress.newBuilder();
+        var ab = PostalAddress.newBuilder();
         Optional.ofNullable(id).ifPresent(ab::setId);
         Optional.ofNullable(streetNum).ifPresent(ab::setStreetNum);
         Optional.ofNullable(streetName).ifPresent(ab::setStreetName);
@@ -116,34 +117,34 @@ public class MockUtil {
         return ab.build();
     }
 
-    public static MuniService.SearchReqPerson buildSearchReqPerson() {
+    public static PersonServices.SearchReqPerson buildSearchReqPerson() {
         return buildSearchReqPerson(buildPerson());
     }
 
-    public static MuniService.SearchReqPerson buildSearchReqPerson(Model.Person person) {
-        return MuniService.SearchReqPerson.newBuilder().setPerson(person).build();
+    public static PersonServices.SearchReqPerson buildSearchReqPerson(Person person) {
+        return PersonServices.SearchReqPerson.newBuilder().setPerson(person).build();
     }
 
-    public static Model.Person buildAnonPerson() {
-        var addr = Model.PostalAddress.newBuilder().setId(0L).build();
-        return Model.Person.newBuilder().setId(0L).setFirstName("Anon").setLastName("Doe").setEmail("anon@gmail.com").setAddress(addr).build();
+    public static Person buildAnonPerson() {
+        var addr = PostalAddress.newBuilder().setId(0L).build();
+        return Person.newBuilder().setId(0L).setFirstName("Anon").setLastName("Doe").setEmail("anon@gmail.com").setAddress(addr).build();
     }
 
-    public static Model.Person buildOrgAnonPerson() {
-        var addr = Model.PostalAddress.newBuilder().setId(1L).build();
-        return Model.Person.newBuilder().setId(0L).setFirstName("Org-Anon").setLastName("Doe").setEmail("admin@myorg.com").setAddress(addr).build();
+    public static Person buildOrgAnonPerson() {
+        var addr = PostalAddress.newBuilder().setId(1L).build();
+        return Person.newBuilder().setId(0L).setFirstName("Org-Anon").setLastName("Doe").setEmail("admin@myorg.com").setAddress(addr).build();
     }
 
-    public static Model.PostalAddress buildOrgAnonAddress() {
-        var addr = Model.PostalAddress.newBuilder().setId(1L).build();
+    public static PostalAddress buildOrgAnonAddress() {
+        var addr = PostalAddress.newBuilder().setId(1L).build();
         return addr;
     }
 
-    public MuniService.SearchRes buildSearchRes_personList() {
-        return MuniService.SearchRes.newBuilder().setPersonList(MuniService.PersonList.newBuilder().addPersons(buildPerson())).build();
+    public PersonServices.SearchRes buildSearchRes_personList() {
+        return PersonServices.SearchRes.newBuilder().setPersonList(PersonServices.PersonList.newBuilder().addPersons(buildPerson())).build();
     }
 
-    public MuniService.SearchRes buildSearchRes_addressList() {
-        return MuniService.SearchRes.newBuilder().setPostalAddressList(MuniService.PostalAddressList.newBuilder().addAddresses(buildAddress())).build();
+    public PersonServices.SearchRes buildSearchRes_addressList() {
+        return PersonServices.SearchRes.newBuilder().setPostalAddressList(PersonServices.PostalAddressList.newBuilder().addAddresses(buildAddress())).build();
     }
 }
