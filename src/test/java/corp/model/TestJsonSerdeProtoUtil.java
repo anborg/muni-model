@@ -24,7 +24,7 @@ public class TestJsonSerdeProtoUtil {
         //with
         String jsonStr = ClasspathUtil.readFileInClasspath("person.json");
         //when
-        Optional<corp.model.Person> p = ProtoUtil.toProto(jsonStr, corp.model.Person.getDefaultInstance());
+        Optional<Model.Person> p = ProtoUtil.toProto(jsonStr, Model.Person.getDefaultInstance());
         logger.info("json to Person p="+p);
         String jsonStrOut = ProtoUtil.toJson(p.get());
         assertThat(Strings.isNullOrEmpty(jsonStrOut)).isFalse();
@@ -39,7 +39,7 @@ public class TestJsonSerdeProtoUtil {
         String jsonStr = ClasspathUtil.readFileInClasspath("person_null.json");
         logger.info("jsonStr=" + jsonStr);
         //when
-        Optional<corp.model.Person> p = ProtoUtil.toProto(jsonStr, corp.model.Person.getDefaultInstance());
+        Optional<Model.Person> p = ProtoUtil.toProto(jsonStr, Model.Person.getDefaultInstance());
         assertThat(p.isPresent()).isFalse();
         String jsonStrOut = ProtoUtil.toJson(null);
         logger.info("empty p=" + p);
@@ -57,13 +57,13 @@ public class TestJsonSerdeProtoUtil {
         String CASETYPE_WATER_PIPE = "WATER_PIPE_TOFIX";
         String CASE_STATUS = "AWAIT_TRIAGE";
         String CASE_DESC = "Water pipe broken, outside the house";
-        var addr = corp.model.PostalAddress.newBuilder().setStreetNum("111").setStreetName("My St").setPostalCode("L1Lozo").build();
-        var cust = corp.model.Person.newBuilder().setFirstName("Jane").setLastName("Doe");
+        var addr = Model.PostalAddress.newBuilder().setStreetNum("111").setStreetName("My St").setPostalCode("L1Lozo").build();
+        var cust = Model.Person.newBuilder().setFirstName("Jane").setLastName("Doe");
         var empId = "rose";
-        var xrefAmanda = corp.model.Xref.newBuilder().setXrefSystemId("AMANDA").build();
+        var xrefAmanda = Model.Xref.newBuilder().setXrefSystemId("AMANDA").build();
         var tags = List.of("WATER", "PUBLICAREA", "FEDERAL");
 
-        var aCase = corp.model.Case.newBuilder()
+        var aCase = Model.Case.newBuilder()
                 .setId(ID)
                 .setStatus(CASE_STATUS)
                 .setDescription(CASE_DESC)
@@ -79,7 +79,7 @@ public class TestJsonSerdeProtoUtil {
                 .build();
 //        jsonStr = ProtoUtil.toJson();
 //        //when
-//        Optional<corp.model.Case> c = ProtoUtil.toProto(jsonStr, corp.model.Case.getDefaultInstance());
+//        Optional<Model.Case> c = ProtoUtil.toProto(jsonStr, Model.Case.getDefaultInstance());
 //        logger.info("json to Case ="+c);
         String jsonStrOut = ProtoUtil.toJson(aCase);
         logger.info("json to Case =\n" + jsonStrOut);

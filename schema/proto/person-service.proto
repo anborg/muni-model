@@ -35,9 +35,7 @@ message SearchRes{
   }
 }
 
-message PersonList{
-  repeated Person persons=1;
-}
+
 
 message PostalAddressList{
   repeated PostalAddress addresses = 1;

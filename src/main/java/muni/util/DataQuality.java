@@ -1,6 +1,6 @@
 package muni.util;
 
-import corp.model.PostalAddress;
+import corp.model.Model;
 
 import java.util.Objects;
 import java.util.logging.Logger;
@@ -8,14 +8,14 @@ import java.util.logging.Logger;
 public class DataQuality {
     private static Logger logger = Logger.getLogger(DataQuality.class.getName());
     public static class Address {
-        public static boolean isValidForeignKeyRef(corp.model.PostalAddress in) {
+        public static boolean isValidForeignKeyRef(Model.PostalAddress in) {
             return null != in && in.hasId()
                     && !in.hasStreetNum()
                     && !in.hasStreetName()
                     && !in.hasPostalCode();
 
         }//valid for forein key ref
-        public static boolean isValidForInsert(corp.model.PostalAddress in) {
+        public static boolean isValidForInsert(Model.PostalAddress in) {
             if (null != in && in.hasId()==false) {// ID must be NULL
                 //mandatory check
                 if (in.hasStreetNum()
@@ -35,7 +35,7 @@ public class DataQuality {
             return false;
         }
 
-        public static boolean isValidForUpdate(corp.model.PostalAddress in) {
+        public static boolean isValidForUpdate(Model.PostalAddress in) {
             // explict signal to update
             return null != in
                     && in.hasId() // ID must NOT be NULL - preexisting
@@ -47,7 +47,7 @@ public class DataQuality {
     }
     public static class Person {
 
-        public static boolean isValidForInsert(corp.model.Person in) {
+        public static boolean isValidForInsert(Model.Person in) {
             final var absent_id = !in.hasId();
             final var absent_createTS =!in.hasCreateTime();
             final var absent_updateTs =!in.hasUpdateTime();
@@ -74,7 +74,7 @@ public class DataQuality {
             return false;
         }//isvalidfor-insert
 
-        public static boolean isValidForUpdate(corp.model.Person in) {
+        public static boolean isValidForUpdate(Model.Person in) {
             final var present_id = in.hasId();
             final var has_create_time =in.hasCreateTime();
             final var has_update_time =in.hasUpdateTime();
@@ -107,7 +107,7 @@ public class DataQuality {
         //update
         static final RuntimeException EX_FOR_UPDOBJ_MUST_ID = new RuntimeException("For existing Case, Case.id MUST BE present. Hint : Bug fix code that sets some value in id");
 
-        public static boolean isValidForInsert(corp.model.Case in) {
+        public static boolean isValidForInsert(Model.Case in) {
             if (Objects.isNull(in)) throw EX_NO_NULL_PARAM;
             final var absent_id = !in.hasId();
             final var absent_createTS = !in.hasCreateTime();
@@ -133,7 +133,7 @@ public class DataQuality {
             return true;
         }//isvalidfor-insert
 
-        public static boolean isValidForUpdate(corp.model.Case in) {
+        public static boolean isValidForUpdate(Model.Case in) {
             if (Objects.isNull(in)) throw EX_NO_NULL_PARAM;
             if (!in.hasId()) throw EX_FOR_UPDOBJ_MUST_ID;
             //if(in.hasCreateTime() ) throw EX_FOR_NEWOBJ_NO_CREATETS; //Ignore timestamp check for update
@@ -156,7 +156,7 @@ public class DataQuality {
 
 /*
 public static class Address {
-    public static boolean isValidForInsert(corp.model.PostalAddress in) {
+    public static boolean isValidForInsert(PostalAddress in) {
         if (null != in && in.hasId() == false) {// ID must be NULL --for insert
             //mandatory check
             if (in.hasStreetNum() == true
@@ -176,7 +176,7 @@ public static class Address {
         return false;
     }
 
-    public static boolean isValidForUpdate(corp.model.PostalAddress in) {
+    public static boolean isValidForUpdate(PostalAddress in) {
         // explict signal to update
         return null != in
                 && in.hasId() == true // ID must NOT be NULL - preexisting
@@ -187,7 +187,7 @@ public static class Address {
 }
 
 public static class Person {
-    public static boolean isValidForInsert(corp.model.Person in) {
+    public static boolean isValidForInsert(Person in) {
         if (null != in && in.hasId() == false) {// ID must be NULL
             // Yes no id, so insert.  Is data sufficient for business?
             if (in.hasFirstName() == true //fn NOT empty
@@ -208,7 +208,7 @@ public static class Person {
         return false;
     }//isvalidfor-insert
 
-    public static boolean isValidForUpdate(corp.model.Person in) {
+    public static boolean isValidForUpdate(Person in) {
         final var id_is_empty = in.getId().isEmpty();
         final var has_create_time = in.hasCreateTime();
         final var has_update_time = in.hasUpdateTime();

@@ -15,29 +15,29 @@ public final class PersonServiceGrpc {
   public static final String SERVICE_NAME = "corp.model.PersonService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<corp.model.ById,
-      corp.model.Person> getGetMethod;
+  private static volatile io.grpc.MethodDescriptor<corp.model.Model.ById,
+      corp.model.Model.Person> getGetMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "get",
-      requestType = corp.model.ById.class,
-      responseType = corp.model.Person.class,
+      requestType = corp.model.Model.ById.class,
+      responseType = corp.model.Model.Person.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<corp.model.ById,
-      corp.model.Person> getGetMethod() {
-    io.grpc.MethodDescriptor<corp.model.ById, corp.model.Person> getGetMethod;
+  public static io.grpc.MethodDescriptor<corp.model.Model.ById,
+      corp.model.Model.Person> getGetMethod() {
+    io.grpc.MethodDescriptor<corp.model.Model.ById, corp.model.Model.Person> getGetMethod;
     if ((getGetMethod = PersonServiceGrpc.getGetMethod) == null) {
       synchronized (PersonServiceGrpc.class) {
         if ((getGetMethod = PersonServiceGrpc.getGetMethod) == null) {
           PersonServiceGrpc.getGetMethod = getGetMethod =
-              io.grpc.MethodDescriptor.<corp.model.ById, corp.model.Person>newBuilder()
+              io.grpc.MethodDescriptor.<corp.model.Model.ById, corp.model.Model.Person>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  corp.model.ById.getDefaultInstance()))
+                  corp.model.Model.ById.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  corp.model.Person.getDefaultInstance()))
+                  corp.model.Model.Person.getDefaultInstance()))
               .setSchemaDescriptor(new PersonServiceMethodDescriptorSupplier("get"))
               .build();
         }
@@ -46,29 +46,29 @@ public final class PersonServiceGrpc {
     return getGetMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<corp.model.Person,
-      corp.model.Person> getCreateMethod;
+  private static volatile io.grpc.MethodDescriptor<corp.model.Model.Person,
+      corp.model.Model.Person> getCreateMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "create",
-      requestType = corp.model.Person.class,
-      responseType = corp.model.Person.class,
+      requestType = corp.model.Model.Person.class,
+      responseType = corp.model.Model.Person.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<corp.model.Person,
-      corp.model.Person> getCreateMethod() {
-    io.grpc.MethodDescriptor<corp.model.Person, corp.model.Person> getCreateMethod;
+  public static io.grpc.MethodDescriptor<corp.model.Model.Person,
+      corp.model.Model.Person> getCreateMethod() {
+    io.grpc.MethodDescriptor<corp.model.Model.Person, corp.model.Model.Person> getCreateMethod;
     if ((getCreateMethod = PersonServiceGrpc.getCreateMethod) == null) {
       synchronized (PersonServiceGrpc.class) {
         if ((getCreateMethod = PersonServiceGrpc.getCreateMethod) == null) {
           PersonServiceGrpc.getCreateMethod = getCreateMethod =
-              io.grpc.MethodDescriptor.<corp.model.Person, corp.model.Person>newBuilder()
+              io.grpc.MethodDescriptor.<corp.model.Model.Person, corp.model.Model.Person>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  corp.model.Person.getDefaultInstance()))
+                  corp.model.Model.Person.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  corp.model.Person.getDefaultInstance()))
+                  corp.model.Model.Person.getDefaultInstance()))
               .setSchemaDescriptor(new PersonServiceMethodDescriptorSupplier("create"))
               .build();
         }
@@ -77,29 +77,29 @@ public final class PersonServiceGrpc {
     return getCreateMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<corp.model.Person,
-      corp.model.Person> getUpdateMethod;
+  private static volatile io.grpc.MethodDescriptor<corp.model.Model.Person,
+      corp.model.Model.Person> getUpdateMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "update",
-      requestType = corp.model.Person.class,
-      responseType = corp.model.Person.class,
+      requestType = corp.model.Model.Person.class,
+      responseType = corp.model.Model.Person.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<corp.model.Person,
-      corp.model.Person> getUpdateMethod() {
-    io.grpc.MethodDescriptor<corp.model.Person, corp.model.Person> getUpdateMethod;
+  public static io.grpc.MethodDescriptor<corp.model.Model.Person,
+      corp.model.Model.Person> getUpdateMethod() {
+    io.grpc.MethodDescriptor<corp.model.Model.Person, corp.model.Model.Person> getUpdateMethod;
     if ((getUpdateMethod = PersonServiceGrpc.getUpdateMethod) == null) {
       synchronized (PersonServiceGrpc.class) {
         if ((getUpdateMethod = PersonServiceGrpc.getUpdateMethod) == null) {
           PersonServiceGrpc.getUpdateMethod = getUpdateMethod =
-              io.grpc.MethodDescriptor.<corp.model.Person, corp.model.Person>newBuilder()
+              io.grpc.MethodDescriptor.<corp.model.Model.Person, corp.model.Model.Person>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  corp.model.Person.getDefaultInstance()))
+                  corp.model.Model.Person.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  corp.model.Person.getDefaultInstance()))
+                  corp.model.Model.Person.getDefaultInstance()))
               .setSchemaDescriptor(new PersonServiceMethodDescriptorSupplier("update"))
               .build();
         }
@@ -108,29 +108,29 @@ public final class PersonServiceGrpc {
     return getUpdateMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<corp.model.Xref,
-      corp.model.Xref> getXrefAddMethod;
+  private static volatile io.grpc.MethodDescriptor<corp.model.Model.Xref,
+      corp.model.Model.Xref> getXrefAddMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "xrefAdd",
-      requestType = corp.model.Xref.class,
-      responseType = corp.model.Xref.class,
+      requestType = corp.model.Model.Xref.class,
+      responseType = corp.model.Model.Xref.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<corp.model.Xref,
-      corp.model.Xref> getXrefAddMethod() {
-    io.grpc.MethodDescriptor<corp.model.Xref, corp.model.Xref> getXrefAddMethod;
+  public static io.grpc.MethodDescriptor<corp.model.Model.Xref,
+      corp.model.Model.Xref> getXrefAddMethod() {
+    io.grpc.MethodDescriptor<corp.model.Model.Xref, corp.model.Model.Xref> getXrefAddMethod;
     if ((getXrefAddMethod = PersonServiceGrpc.getXrefAddMethod) == null) {
       synchronized (PersonServiceGrpc.class) {
         if ((getXrefAddMethod = PersonServiceGrpc.getXrefAddMethod) == null) {
           PersonServiceGrpc.getXrefAddMethod = getXrefAddMethod =
-              io.grpc.MethodDescriptor.<corp.model.Xref, corp.model.Xref>newBuilder()
+              io.grpc.MethodDescriptor.<corp.model.Model.Xref, corp.model.Model.Xref>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "xrefAdd"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  corp.model.Xref.getDefaultInstance()))
+                  corp.model.Model.Xref.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  corp.model.Xref.getDefaultInstance()))
+                  corp.model.Model.Xref.getDefaultInstance()))
               .setSchemaDescriptor(new PersonServiceMethodDescriptorSupplier("xrefAdd"))
               .build();
         }
@@ -139,29 +139,29 @@ public final class PersonServiceGrpc {
     return getXrefAddMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<corp.model.Xref,
-      corp.model.Xref> getXrefUpdateMethod;
+  private static volatile io.grpc.MethodDescriptor<corp.model.Model.Xref,
+      corp.model.Model.Xref> getXrefUpdateMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "xrefUpdate",
-      requestType = corp.model.Xref.class,
-      responseType = corp.model.Xref.class,
+      requestType = corp.model.Model.Xref.class,
+      responseType = corp.model.Model.Xref.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<corp.model.Xref,
-      corp.model.Xref> getXrefUpdateMethod() {
-    io.grpc.MethodDescriptor<corp.model.Xref, corp.model.Xref> getXrefUpdateMethod;
+  public static io.grpc.MethodDescriptor<corp.model.Model.Xref,
+      corp.model.Model.Xref> getXrefUpdateMethod() {
+    io.grpc.MethodDescriptor<corp.model.Model.Xref, corp.model.Model.Xref> getXrefUpdateMethod;
     if ((getXrefUpdateMethod = PersonServiceGrpc.getXrefUpdateMethod) == null) {
       synchronized (PersonServiceGrpc.class) {
         if ((getXrefUpdateMethod = PersonServiceGrpc.getXrefUpdateMethod) == null) {
           PersonServiceGrpc.getXrefUpdateMethod = getXrefUpdateMethod =
-              io.grpc.MethodDescriptor.<corp.model.Xref, corp.model.Xref>newBuilder()
+              io.grpc.MethodDescriptor.<corp.model.Model.Xref, corp.model.Model.Xref>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "xrefUpdate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  corp.model.Xref.getDefaultInstance()))
+                  corp.model.Model.Xref.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  corp.model.Xref.getDefaultInstance()))
+                  corp.model.Model.Xref.getDefaultInstance()))
               .setSchemaDescriptor(new PersonServiceMethodDescriptorSupplier("xrefUpdate"))
               .build();
         }
@@ -170,29 +170,29 @@ public final class PersonServiceGrpc {
     return getXrefUpdateMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<corp.model.Xref,
-      corp.model.Xref> getXrefSyncMethod;
+  private static volatile io.grpc.MethodDescriptor<corp.model.Model.Xref,
+      corp.model.Model.Xref> getXrefSyncMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "xrefSync",
-      requestType = corp.model.Xref.class,
-      responseType = corp.model.Xref.class,
+      requestType = corp.model.Model.Xref.class,
+      responseType = corp.model.Model.Xref.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<corp.model.Xref,
-      corp.model.Xref> getXrefSyncMethod() {
-    io.grpc.MethodDescriptor<corp.model.Xref, corp.model.Xref> getXrefSyncMethod;
+  public static io.grpc.MethodDescriptor<corp.model.Model.Xref,
+      corp.model.Model.Xref> getXrefSyncMethod() {
+    io.grpc.MethodDescriptor<corp.model.Model.Xref, corp.model.Model.Xref> getXrefSyncMethod;
     if ((getXrefSyncMethod = PersonServiceGrpc.getXrefSyncMethod) == null) {
       synchronized (PersonServiceGrpc.class) {
         if ((getXrefSyncMethod = PersonServiceGrpc.getXrefSyncMethod) == null) {
           PersonServiceGrpc.getXrefSyncMethod = getXrefSyncMethod =
-              io.grpc.MethodDescriptor.<corp.model.Xref, corp.model.Xref>newBuilder()
+              io.grpc.MethodDescriptor.<corp.model.Model.Xref, corp.model.Model.Xref>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "xrefSync"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  corp.model.Xref.getDefaultInstance()))
+                  corp.model.Model.Xref.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  corp.model.Xref.getDefaultInstance()))
+                  corp.model.Model.Xref.getDefaultInstance()))
               .setSchemaDescriptor(new PersonServiceMethodDescriptorSupplier("xrefSync"))
               .build();
         }
@@ -202,28 +202,28 @@ public final class PersonServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<com.google.protobuf.Empty,
-      corp.service.PersonServices.PersonList> getGetAllMethod;
+      corp.model.Model.PersonList> getGetAllMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "getAll",
       requestType = com.google.protobuf.Empty.class,
-      responseType = corp.service.PersonServices.PersonList.class,
+      responseType = corp.model.Model.PersonList.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.protobuf.Empty,
-      corp.service.PersonServices.PersonList> getGetAllMethod() {
-    io.grpc.MethodDescriptor<com.google.protobuf.Empty, corp.service.PersonServices.PersonList> getGetAllMethod;
+      corp.model.Model.PersonList> getGetAllMethod() {
+    io.grpc.MethodDescriptor<com.google.protobuf.Empty, corp.model.Model.PersonList> getGetAllMethod;
     if ((getGetAllMethod = PersonServiceGrpc.getGetAllMethod) == null) {
       synchronized (PersonServiceGrpc.class) {
         if ((getGetAllMethod = PersonServiceGrpc.getGetAllMethod) == null) {
           PersonServiceGrpc.getGetAllMethod = getGetAllMethod =
-              io.grpc.MethodDescriptor.<com.google.protobuf.Empty, corp.service.PersonServices.PersonList>newBuilder()
+              io.grpc.MethodDescriptor.<com.google.protobuf.Empty, corp.model.Model.PersonList>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getAll"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  corp.service.PersonServices.PersonList.getDefaultInstance()))
+                  corp.model.Model.PersonList.getDefaultInstance()))
               .setSchemaDescriptor(new PersonServiceMethodDescriptorSupplier("getAll"))
               .build();
         }
@@ -313,8 +313,8 @@ public final class PersonServiceGrpc {
 
     /**
      */
-    default void get(corp.model.ById request,
-        io.grpc.stub.StreamObserver<corp.model.Person> responseObserver) {
+    default void get(corp.model.Model.ById request,
+        io.grpc.stub.StreamObserver<corp.model.Model.Person> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
@@ -323,15 +323,15 @@ public final class PersonServiceGrpc {
      *TODO change to CreateReq - generic?
      * </pre>
      */
-    default void create(corp.model.Person request,
-        io.grpc.stub.StreamObserver<corp.model.Person> responseObserver) {
+    default void create(corp.model.Model.Person request,
+        io.grpc.stub.StreamObserver<corp.model.Model.Person> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
      */
-    default void update(corp.model.Person request,
-        io.grpc.stub.StreamObserver<corp.model.Person> responseObserver) {
+    default void update(corp.model.Model.Person request,
+        io.grpc.stub.StreamObserver<corp.model.Model.Person> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
@@ -340,22 +340,22 @@ public final class PersonServiceGrpc {
      *Xref - will be included in Person, so no GET. Not "resty"
      * </pre>
      */
-    default void xrefAdd(corp.model.Xref request,
-        io.grpc.stub.StreamObserver<corp.model.Xref> responseObserver) {
+    default void xrefAdd(corp.model.Model.Xref request,
+        io.grpc.stub.StreamObserver<corp.model.Model.Xref> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getXrefAddMethod(), responseObserver);
     }
 
     /**
      */
-    default void xrefUpdate(corp.model.Xref request,
-        io.grpc.stub.StreamObserver<corp.model.Xref> responseObserver) {
+    default void xrefUpdate(corp.model.Model.Xref request,
+        io.grpc.stub.StreamObserver<corp.model.Model.Xref> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getXrefUpdateMethod(), responseObserver);
     }
 
     /**
      */
-    default void xrefSync(corp.model.Xref request,
-        io.grpc.stub.StreamObserver<corp.model.Xref> responseObserver) {
+    default void xrefSync(corp.model.Model.Xref request,
+        io.grpc.stub.StreamObserver<corp.model.Model.Xref> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getXrefSyncMethod(), responseObserver);
     }
 
@@ -365,7 +365,7 @@ public final class PersonServiceGrpc {
      * </pre>
      */
     default void getAll(com.google.protobuf.Empty request,
-        io.grpc.stub.StreamObserver<corp.service.PersonServices.PersonList> responseObserver) {
+        io.grpc.stub.StreamObserver<corp.model.Model.PersonList> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAllMethod(), responseObserver);
     }
 
@@ -406,8 +406,8 @@ public final class PersonServiceGrpc {
 
     /**
      */
-    public void get(corp.model.ById request,
-        io.grpc.stub.StreamObserver<corp.model.Person> responseObserver) {
+    public void get(corp.model.Model.ById request,
+        io.grpc.stub.StreamObserver<corp.model.Model.Person> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
@@ -417,16 +417,16 @@ public final class PersonServiceGrpc {
      *TODO change to CreateReq - generic?
      * </pre>
      */
-    public void create(corp.model.Person request,
-        io.grpc.stub.StreamObserver<corp.model.Person> responseObserver) {
+    public void create(corp.model.Model.Person request,
+        io.grpc.stub.StreamObserver<corp.model.Model.Person> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void update(corp.model.Person request,
-        io.grpc.stub.StreamObserver<corp.model.Person> responseObserver) {
+    public void update(corp.model.Model.Person request,
+        io.grpc.stub.StreamObserver<corp.model.Model.Person> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
@@ -436,24 +436,24 @@ public final class PersonServiceGrpc {
      *Xref - will be included in Person, so no GET. Not "resty"
      * </pre>
      */
-    public void xrefAdd(corp.model.Xref request,
-        io.grpc.stub.StreamObserver<corp.model.Xref> responseObserver) {
+    public void xrefAdd(corp.model.Model.Xref request,
+        io.grpc.stub.StreamObserver<corp.model.Model.Xref> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getXrefAddMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void xrefUpdate(corp.model.Xref request,
-        io.grpc.stub.StreamObserver<corp.model.Xref> responseObserver) {
+    public void xrefUpdate(corp.model.Model.Xref request,
+        io.grpc.stub.StreamObserver<corp.model.Model.Xref> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getXrefUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void xrefSync(corp.model.Xref request,
-        io.grpc.stub.StreamObserver<corp.model.Xref> responseObserver) {
+    public void xrefSync(corp.model.Model.Xref request,
+        io.grpc.stub.StreamObserver<corp.model.Model.Xref> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getXrefSyncMethod(), getCallOptions()), request, responseObserver);
     }
@@ -464,7 +464,7 @@ public final class PersonServiceGrpc {
      * </pre>
      */
     public void getAll(com.google.protobuf.Empty request,
-        io.grpc.stub.StreamObserver<corp.service.PersonServices.PersonList> responseObserver) {
+        io.grpc.stub.StreamObserver<corp.model.Model.PersonList> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetAllMethod(), getCallOptions()), request, responseObserver);
     }
@@ -496,7 +496,7 @@ public final class PersonServiceGrpc {
 
     /**
      */
-    public corp.model.Person get(corp.model.ById request) {
+    public corp.model.Model.Person get(corp.model.Model.ById request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
@@ -506,14 +506,14 @@ public final class PersonServiceGrpc {
      *TODO change to CreateReq - generic?
      * </pre>
      */
-    public corp.model.Person create(corp.model.Person request) {
+    public corp.model.Model.Person create(corp.model.Model.Person request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public corp.model.Person update(corp.model.Person request) {
+    public corp.model.Model.Person update(corp.model.Model.Person request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
@@ -523,21 +523,21 @@ public final class PersonServiceGrpc {
      *Xref - will be included in Person, so no GET. Not "resty"
      * </pre>
      */
-    public corp.model.Xref xrefAdd(corp.model.Xref request) {
+    public corp.model.Model.Xref xrefAdd(corp.model.Model.Xref request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getXrefAddMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public corp.model.Xref xrefUpdate(corp.model.Xref request) {
+    public corp.model.Model.Xref xrefUpdate(corp.model.Model.Xref request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getXrefUpdateMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public corp.model.Xref xrefSync(corp.model.Xref request) {
+    public corp.model.Model.Xref xrefSync(corp.model.Model.Xref request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getXrefSyncMethod(), getCallOptions(), request);
     }
@@ -547,7 +547,7 @@ public final class PersonServiceGrpc {
      *google.protobuf.Empty
      * </pre>
      */
-    public corp.service.PersonServices.PersonList getAll(com.google.protobuf.Empty request) {
+    public corp.model.Model.PersonList getAll(com.google.protobuf.Empty request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetAllMethod(), getCallOptions(), request);
     }
@@ -578,8 +578,8 @@ public final class PersonServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<corp.model.Person> get(
-        corp.model.ById request) {
+    public com.google.common.util.concurrent.ListenableFuture<corp.model.Model.Person> get(
+        corp.model.Model.ById request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
@@ -589,16 +589,16 @@ public final class PersonServiceGrpc {
      *TODO change to CreateReq - generic?
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<corp.model.Person> create(
-        corp.model.Person request) {
+    public com.google.common.util.concurrent.ListenableFuture<corp.model.Model.Person> create(
+        corp.model.Model.Person request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<corp.model.Person> update(
-        corp.model.Person request) {
+    public com.google.common.util.concurrent.ListenableFuture<corp.model.Model.Person> update(
+        corp.model.Model.Person request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
@@ -608,24 +608,24 @@ public final class PersonServiceGrpc {
      *Xref - will be included in Person, so no GET. Not "resty"
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<corp.model.Xref> xrefAdd(
-        corp.model.Xref request) {
+    public com.google.common.util.concurrent.ListenableFuture<corp.model.Model.Xref> xrefAdd(
+        corp.model.Model.Xref request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getXrefAddMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<corp.model.Xref> xrefUpdate(
-        corp.model.Xref request) {
+    public com.google.common.util.concurrent.ListenableFuture<corp.model.Model.Xref> xrefUpdate(
+        corp.model.Model.Xref request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getXrefUpdateMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<corp.model.Xref> xrefSync(
-        corp.model.Xref request) {
+    public com.google.common.util.concurrent.ListenableFuture<corp.model.Model.Xref> xrefSync(
+        corp.model.Model.Xref request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getXrefSyncMethod(), getCallOptions()), request);
     }
@@ -635,7 +635,7 @@ public final class PersonServiceGrpc {
      *google.protobuf.Empty
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<corp.service.PersonServices.PersonList> getAll(
+    public com.google.common.util.concurrent.ListenableFuture<corp.model.Model.PersonList> getAll(
         com.google.protobuf.Empty request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetAllMethod(), getCallOptions()), request);
@@ -677,32 +677,32 @@ public final class PersonServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_GET:
-          serviceImpl.get((corp.model.ById) request,
-              (io.grpc.stub.StreamObserver<corp.model.Person>) responseObserver);
+          serviceImpl.get((corp.model.Model.ById) request,
+              (io.grpc.stub.StreamObserver<corp.model.Model.Person>) responseObserver);
           break;
         case METHODID_CREATE:
-          serviceImpl.create((corp.model.Person) request,
-              (io.grpc.stub.StreamObserver<corp.model.Person>) responseObserver);
+          serviceImpl.create((corp.model.Model.Person) request,
+              (io.grpc.stub.StreamObserver<corp.model.Model.Person>) responseObserver);
           break;
         case METHODID_UPDATE:
-          serviceImpl.update((corp.model.Person) request,
-              (io.grpc.stub.StreamObserver<corp.model.Person>) responseObserver);
+          serviceImpl.update((corp.model.Model.Person) request,
+              (io.grpc.stub.StreamObserver<corp.model.Model.Person>) responseObserver);
           break;
         case METHODID_XREF_ADD:
-          serviceImpl.xrefAdd((corp.model.Xref) request,
-              (io.grpc.stub.StreamObserver<corp.model.Xref>) responseObserver);
+          serviceImpl.xrefAdd((corp.model.Model.Xref) request,
+              (io.grpc.stub.StreamObserver<corp.model.Model.Xref>) responseObserver);
           break;
         case METHODID_XREF_UPDATE:
-          serviceImpl.xrefUpdate((corp.model.Xref) request,
-              (io.grpc.stub.StreamObserver<corp.model.Xref>) responseObserver);
+          serviceImpl.xrefUpdate((corp.model.Model.Xref) request,
+              (io.grpc.stub.StreamObserver<corp.model.Model.Xref>) responseObserver);
           break;
         case METHODID_XREF_SYNC:
-          serviceImpl.xrefSync((corp.model.Xref) request,
-              (io.grpc.stub.StreamObserver<corp.model.Xref>) responseObserver);
+          serviceImpl.xrefSync((corp.model.Model.Xref) request,
+              (io.grpc.stub.StreamObserver<corp.model.Model.Xref>) responseObserver);
           break;
         case METHODID_GET_ALL:
           serviceImpl.getAll((com.google.protobuf.Empty) request,
-              (io.grpc.stub.StreamObserver<corp.service.PersonServices.PersonList>) responseObserver);
+              (io.grpc.stub.StreamObserver<corp.model.Model.PersonList>) responseObserver);
           break;
         case METHODID_PERSONS_LIKE:
           serviceImpl.personsLike((corp.service.PersonServices.SearchReqPerson) request,
@@ -730,50 +730,50 @@ public final class PersonServiceGrpc {
           getGetMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              corp.model.ById,
-              corp.model.Person>(
+              corp.model.Model.ById,
+              corp.model.Model.Person>(
                 service, METHODID_GET)))
         .addMethod(
           getCreateMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              corp.model.Person,
-              corp.model.Person>(
+              corp.model.Model.Person,
+              corp.model.Model.Person>(
                 service, METHODID_CREATE)))
         .addMethod(
           getUpdateMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              corp.model.Person,
-              corp.model.Person>(
+              corp.model.Model.Person,
+              corp.model.Model.Person>(
                 service, METHODID_UPDATE)))
         .addMethod(
           getXrefAddMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              corp.model.Xref,
-              corp.model.Xref>(
+              corp.model.Model.Xref,
+              corp.model.Model.Xref>(
                 service, METHODID_XREF_ADD)))
         .addMethod(
           getXrefUpdateMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              corp.model.Xref,
-              corp.model.Xref>(
+              corp.model.Model.Xref,
+              corp.model.Model.Xref>(
                 service, METHODID_XREF_UPDATE)))
         .addMethod(
           getXrefSyncMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              corp.model.Xref,
-              corp.model.Xref>(
+              corp.model.Model.Xref,
+              corp.model.Model.Xref>(
                 service, METHODID_XREF_SYNC)))
         .addMethod(
           getGetAllMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
               com.google.protobuf.Empty,
-              corp.service.PersonServices.PersonList>(
+              corp.model.Model.PersonList>(
                 service, METHODID_GET_ALL)))
         .addMethod(
           getPersonsLikeMethod(),

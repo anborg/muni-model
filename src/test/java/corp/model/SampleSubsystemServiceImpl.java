@@ -8,102 +8,102 @@ import java.util.Optional;
 public class SampleSubsystemServiceImpl implements SubsystemService {
 
     @Override
-    public SubsystemDataAccess<Person> person() {
+    public SubsystemDataAccess<Model.Person> person() {
         return buildPersonService();
     }
 
     @Override
-    public SubsystemDataAccess<PostalAddress> address() {
+    public SubsystemDataAccess<Model.PostalAddress> address() {
         return buildAddressService();
     }
 
     @Override
-    public SubsystemDataAccess<Case> ccase() {
+    public SubsystemDataAccess<Model.Case> ccase() {
         return buildCaseService();
     }
 
-    private SubsystemDataAccess<Person> buildPersonService() {
-        return new SubsystemDataAccess<Person>() {
+    private SubsystemDataAccess<Model.Person> buildPersonService() {
+        return new SubsystemDataAccess<Model.Person>() {
             @Override
-            public Person create(Person in) {
+            public Model.Person create(Model.Person in) {
                 return null;
             }
 
             @Override
-            public Person update(Person in) {
+            public Model.Person update(Model.Person in) {
                 return null;
             }
 
             @Override
-            public Optional<Person> get(Long id) {
+            public Optional<Model.Person> get(Long id) {
                 return Optional.empty();
             }
 
             @Override
-            public List<Person> find(Person in) {
+            public List<Model.Person> find(Model.Person in) {
                 return null;
             }
 
             @Override
-            public List<Person> recent() {
+            public List<Model.Person> recent() {
                 return null;
             }
         };
     }
 
-    private SubsystemDataAccess<Case> buildCaseService(){
-        return new SubsystemDataAccess<Case>() {
+    private SubsystemDataAccess<Model.Case> buildCaseService(){
+        return new SubsystemDataAccess<Model.Case>() {
             @Override
-            public Case create(Case in) {
+            public Model.Case create(Model.Case in) {
                 return null;
             }
 
             @Override
-            public Case update(Case in) {
+            public Model.Case update(Model.Case in) {
                 return null;
             }
 
             @Override
-            public Optional<Case> get(Long id) {
+            public Optional<Model.Case> get(Long id) {
                 return Optional.empty();
             }
 
             @Override
-            public List<Case> find(Case in) {
+            public List<Model.Case> find(Model.Case in) {
                 return null;
             }
 
             @Override
-            public List<Case> recent() {
+            public List<Model.Case> recent() {
                 return null;
             }
         };
     }//buildcaseService
-    private SubsystemDataAccess<PostalAddress> buildAddressService(){
-        return new SubsystemDataAccess<PostalAddress>() {
+    private SubsystemDataAccess<Model.PostalAddress> buildAddressService(){
+        return new SubsystemDataAccess<Model.PostalAddress>() {
 
             @Override
-            public PostalAddress create(PostalAddress in) {
+            public Model.PostalAddress create(Model.PostalAddress in) {
                 return null;
             }
 
             @Override
-            public PostalAddress update(PostalAddress in) {
+            public Model.PostalAddress update(Model.PostalAddress in) {
                 return null;
             }
 
             @Override
-            public Optional<PostalAddress> get(Long id) {
+            public Optional<Model.PostalAddress> get(Long id) {
                 return Optional.empty();
             }
 
             @Override
-            public List<PostalAddress> find(PostalAddress in) {
+            public List<Model.PostalAddress> find(Model.PostalAddress in) {
                 return null;
             }
 
             @Override
-            public List<PostalAddress> recent() {
+            public List<Model.PostalAddress> recent() {
                 return null;
             }
         };

@@ -15,29 +15,29 @@ public final class CaseServiceGrpc {
   public static final String SERVICE_NAME = "corp.model.CaseService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<corp.model.ById,
-      corp.model.Case> getGetMethod;
+  private static volatile io.grpc.MethodDescriptor<corp.model.Model.ById,
+      corp.model.Model.Case> getGetMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "get",
-      requestType = corp.model.ById.class,
-      responseType = corp.model.Case.class,
+      requestType = corp.model.Model.ById.class,
+      responseType = corp.model.Model.Case.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<corp.model.ById,
-      corp.model.Case> getGetMethod() {
-    io.grpc.MethodDescriptor<corp.model.ById, corp.model.Case> getGetMethod;
+  public static io.grpc.MethodDescriptor<corp.model.Model.ById,
+      corp.model.Model.Case> getGetMethod() {
+    io.grpc.MethodDescriptor<corp.model.Model.ById, corp.model.Model.Case> getGetMethod;
     if ((getGetMethod = CaseServiceGrpc.getGetMethod) == null) {
       synchronized (CaseServiceGrpc.class) {
         if ((getGetMethod = CaseServiceGrpc.getGetMethod) == null) {
           CaseServiceGrpc.getGetMethod = getGetMethod =
-              io.grpc.MethodDescriptor.<corp.model.ById, corp.model.Case>newBuilder()
+              io.grpc.MethodDescriptor.<corp.model.Model.ById, corp.model.Model.Case>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  corp.model.ById.getDefaultInstance()))
+                  corp.model.Model.ById.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  corp.model.Case.getDefaultInstance()))
+                  corp.model.Model.Case.getDefaultInstance()))
               .setSchemaDescriptor(new CaseServiceMethodDescriptorSupplier("get"))
               .build();
         }
@@ -46,29 +46,29 @@ public final class CaseServiceGrpc {
     return getGetMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<corp.model.Case,
-      corp.model.Case> getCreateMethod;
+  private static volatile io.grpc.MethodDescriptor<corp.model.Model.Case,
+      corp.model.Model.Case> getCreateMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "create",
-      requestType = corp.model.Case.class,
-      responseType = corp.model.Case.class,
+      requestType = corp.model.Model.Case.class,
+      responseType = corp.model.Model.Case.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<corp.model.Case,
-      corp.model.Case> getCreateMethod() {
-    io.grpc.MethodDescriptor<corp.model.Case, corp.model.Case> getCreateMethod;
+  public static io.grpc.MethodDescriptor<corp.model.Model.Case,
+      corp.model.Model.Case> getCreateMethod() {
+    io.grpc.MethodDescriptor<corp.model.Model.Case, corp.model.Model.Case> getCreateMethod;
     if ((getCreateMethod = CaseServiceGrpc.getCreateMethod) == null) {
       synchronized (CaseServiceGrpc.class) {
         if ((getCreateMethod = CaseServiceGrpc.getCreateMethod) == null) {
           CaseServiceGrpc.getCreateMethod = getCreateMethod =
-              io.grpc.MethodDescriptor.<corp.model.Case, corp.model.Case>newBuilder()
+              io.grpc.MethodDescriptor.<corp.model.Model.Case, corp.model.Model.Case>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  corp.model.Case.getDefaultInstance()))
+                  corp.model.Model.Case.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  corp.model.Case.getDefaultInstance()))
+                  corp.model.Model.Case.getDefaultInstance()))
               .setSchemaDescriptor(new CaseServiceMethodDescriptorSupplier("create"))
               .build();
         }
@@ -77,29 +77,29 @@ public final class CaseServiceGrpc {
     return getCreateMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<corp.model.Case,
-      corp.model.Case> getUpdateMethod;
+  private static volatile io.grpc.MethodDescriptor<corp.model.Model.Case,
+      corp.model.Model.Case> getUpdateMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "update",
-      requestType = corp.model.Case.class,
-      responseType = corp.model.Case.class,
+      requestType = corp.model.Model.Case.class,
+      responseType = corp.model.Model.Case.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<corp.model.Case,
-      corp.model.Case> getUpdateMethod() {
-    io.grpc.MethodDescriptor<corp.model.Case, corp.model.Case> getUpdateMethod;
+  public static io.grpc.MethodDescriptor<corp.model.Model.Case,
+      corp.model.Model.Case> getUpdateMethod() {
+    io.grpc.MethodDescriptor<corp.model.Model.Case, corp.model.Model.Case> getUpdateMethod;
     if ((getUpdateMethod = CaseServiceGrpc.getUpdateMethod) == null) {
       synchronized (CaseServiceGrpc.class) {
         if ((getUpdateMethod = CaseServiceGrpc.getUpdateMethod) == null) {
           CaseServiceGrpc.getUpdateMethod = getUpdateMethod =
-              io.grpc.MethodDescriptor.<corp.model.Case, corp.model.Case>newBuilder()
+              io.grpc.MethodDescriptor.<corp.model.Model.Case, corp.model.Model.Case>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  corp.model.Case.getDefaultInstance()))
+                  corp.model.Model.Case.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  corp.model.Case.getDefaultInstance()))
+                  corp.model.Model.Case.getDefaultInstance()))
               .setSchemaDescriptor(new CaseServiceMethodDescriptorSupplier("update"))
               .build();
         }
@@ -109,28 +109,28 @@ public final class CaseServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<com.google.protobuf.Empty,
-      corp.model.CaseList> getGetAllMethod;
+      corp.model.Model.CaseList> getGetAllMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "getAll",
       requestType = com.google.protobuf.Empty.class,
-      responseType = corp.model.CaseList.class,
+      responseType = corp.model.Model.CaseList.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.protobuf.Empty,
-      corp.model.CaseList> getGetAllMethod() {
-    io.grpc.MethodDescriptor<com.google.protobuf.Empty, corp.model.CaseList> getGetAllMethod;
+      corp.model.Model.CaseList> getGetAllMethod() {
+    io.grpc.MethodDescriptor<com.google.protobuf.Empty, corp.model.Model.CaseList> getGetAllMethod;
     if ((getGetAllMethod = CaseServiceGrpc.getGetAllMethod) == null) {
       synchronized (CaseServiceGrpc.class) {
         if ((getGetAllMethod = CaseServiceGrpc.getGetAllMethod) == null) {
           CaseServiceGrpc.getGetAllMethod = getGetAllMethod =
-              io.grpc.MethodDescriptor.<com.google.protobuf.Empty, corp.model.CaseList>newBuilder()
+              io.grpc.MethodDescriptor.<com.google.protobuf.Empty, corp.model.Model.CaseList>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getAll"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  corp.model.CaseList.getDefaultInstance()))
+                  corp.model.Model.CaseList.getDefaultInstance()))
               .setSchemaDescriptor(new CaseServiceMethodDescriptorSupplier("getAll"))
               .build();
         }
@@ -189,22 +189,22 @@ public final class CaseServiceGrpc {
 
     /**
      */
-    default void get(corp.model.ById request,
-        io.grpc.stub.StreamObserver<corp.model.Case> responseObserver) {
+    default void get(corp.model.Model.ById request,
+        io.grpc.stub.StreamObserver<corp.model.Model.Case> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
      */
-    default void create(corp.model.Case request,
-        io.grpc.stub.StreamObserver<corp.model.Case> responseObserver) {
+    default void create(corp.model.Model.Case request,
+        io.grpc.stub.StreamObserver<corp.model.Model.Case> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
      */
-    default void update(corp.model.Case request,
-        io.grpc.stub.StreamObserver<corp.model.Case> responseObserver) {
+    default void update(corp.model.Model.Case request,
+        io.grpc.stub.StreamObserver<corp.model.Model.Case> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
@@ -214,7 +214,7 @@ public final class CaseServiceGrpc {
      * </pre>
      */
     default void getAll(com.google.protobuf.Empty request,
-        io.grpc.stub.StreamObserver<corp.model.CaseList> responseObserver) {
+        io.grpc.stub.StreamObserver<corp.model.Model.CaseList> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAllMethod(), responseObserver);
     }
   }
@@ -248,24 +248,24 @@ public final class CaseServiceGrpc {
 
     /**
      */
-    public void get(corp.model.ById request,
-        io.grpc.stub.StreamObserver<corp.model.Case> responseObserver) {
+    public void get(corp.model.Model.ById request,
+        io.grpc.stub.StreamObserver<corp.model.Model.Case> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void create(corp.model.Case request,
-        io.grpc.stub.StreamObserver<corp.model.Case> responseObserver) {
+    public void create(corp.model.Model.Case request,
+        io.grpc.stub.StreamObserver<corp.model.Model.Case> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void update(corp.model.Case request,
-        io.grpc.stub.StreamObserver<corp.model.Case> responseObserver) {
+    public void update(corp.model.Model.Case request,
+        io.grpc.stub.StreamObserver<corp.model.Model.Case> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
@@ -276,7 +276,7 @@ public final class CaseServiceGrpc {
      * </pre>
      */
     public void getAll(com.google.protobuf.Empty request,
-        io.grpc.stub.StreamObserver<corp.model.CaseList> responseObserver) {
+        io.grpc.stub.StreamObserver<corp.model.Model.CaseList> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetAllMethod(), getCallOptions()), request, responseObserver);
     }
@@ -300,21 +300,21 @@ public final class CaseServiceGrpc {
 
     /**
      */
-    public corp.model.Case get(corp.model.ById request) {
+    public corp.model.Model.Case get(corp.model.Model.ById request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public corp.model.Case create(corp.model.Case request) {
+    public corp.model.Model.Case create(corp.model.Model.Case request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public corp.model.Case update(corp.model.Case request) {
+    public corp.model.Model.Case update(corp.model.Model.Case request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
@@ -324,7 +324,7 @@ public final class CaseServiceGrpc {
      *google.protobuf.Empty
      * </pre>
      */
-    public corp.model.CaseList getAll(com.google.protobuf.Empty request) {
+    public corp.model.Model.CaseList getAll(com.google.protobuf.Empty request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetAllMethod(), getCallOptions(), request);
     }
@@ -348,24 +348,24 @@ public final class CaseServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<corp.model.Case> get(
-        corp.model.ById request) {
+    public com.google.common.util.concurrent.ListenableFuture<corp.model.Model.Case> get(
+        corp.model.Model.ById request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<corp.model.Case> create(
-        corp.model.Case request) {
+    public com.google.common.util.concurrent.ListenableFuture<corp.model.Model.Case> create(
+        corp.model.Model.Case request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<corp.model.Case> update(
-        corp.model.Case request) {
+    public com.google.common.util.concurrent.ListenableFuture<corp.model.Model.Case> update(
+        corp.model.Model.Case request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
@@ -375,7 +375,7 @@ public final class CaseServiceGrpc {
      *google.protobuf.Empty
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<corp.model.CaseList> getAll(
+    public com.google.common.util.concurrent.ListenableFuture<corp.model.Model.CaseList> getAll(
         com.google.protobuf.Empty request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetAllMethod(), getCallOptions()), request);
@@ -405,20 +405,20 @@ public final class CaseServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_GET:
-          serviceImpl.get((corp.model.ById) request,
-              (io.grpc.stub.StreamObserver<corp.model.Case>) responseObserver);
+          serviceImpl.get((corp.model.Model.ById) request,
+              (io.grpc.stub.StreamObserver<corp.model.Model.Case>) responseObserver);
           break;
         case METHODID_CREATE:
-          serviceImpl.create((corp.model.Case) request,
-              (io.grpc.stub.StreamObserver<corp.model.Case>) responseObserver);
+          serviceImpl.create((corp.model.Model.Case) request,
+              (io.grpc.stub.StreamObserver<corp.model.Model.Case>) responseObserver);
           break;
         case METHODID_UPDATE:
-          serviceImpl.update((corp.model.Case) request,
-              (io.grpc.stub.StreamObserver<corp.model.Case>) responseObserver);
+          serviceImpl.update((corp.model.Model.Case) request,
+              (io.grpc.stub.StreamObserver<corp.model.Model.Case>) responseObserver);
           break;
         case METHODID_GET_ALL:
           serviceImpl.getAll((com.google.protobuf.Empty) request,
-              (io.grpc.stub.StreamObserver<corp.model.CaseList>) responseObserver);
+              (io.grpc.stub.StreamObserver<corp.model.Model.CaseList>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -442,29 +442,29 @@ public final class CaseServiceGrpc {
           getGetMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              corp.model.ById,
-              corp.model.Case>(
+              corp.model.Model.ById,
+              corp.model.Model.Case>(
                 service, METHODID_GET)))
         .addMethod(
           getCreateMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              corp.model.Case,
-              corp.model.Case>(
+              corp.model.Model.Case,
+              corp.model.Model.Case>(
                 service, METHODID_CREATE)))
         .addMethod(
           getUpdateMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              corp.model.Case,
-              corp.model.Case>(
+              corp.model.Model.Case,
+              corp.model.Model.Case>(
                 service, METHODID_UPDATE)))
         .addMethod(
           getGetAllMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
               com.google.protobuf.Empty,
-              corp.model.CaseList>(
+              corp.model.Model.CaseList>(
                 service, METHODID_GET_ALL)))
         .build();
   }

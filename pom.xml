@@ -113,13 +113,9 @@ Decission: No. for now.
       </extension>
     </extensions>
     <plugins>
-
       <plugin>
-        <!--
-            https://grpc.io/docs/languages/java/generated-code/
-            https://quarkus.io/guides/grpc-getting-started
-        -->
-
+        <!--  https://grpc.io/docs/languages/java/generated-code/
+              https://quarkus.io/guides/grpc-getting-started  -->
         <groupId>org.xolstice.maven.plugins</groupId>
         <artifactId>protobuf-maven-plugin</artifactId>
         <version>0.6.1</version>
@@ -166,8 +162,6 @@ Decission: No. for now.
           </execution>
         </executions>
       </plugin>
-
-
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>build-helper-maven-plugin</artifactId>
@@ -189,20 +183,6 @@ Decission: No. for now.
         </executions>
       </plugin>
 
-      <!-- -->
-<!--      <plugin>-->
-<!--        <groupId>org.jboss.jandex</groupId>-->
-<!--        <artifactId>jandex-maven-plugin</artifactId>-->
-<!--        <version>1.2.3</version>-->
-<!--        <executions>-->
-<!--          <execution>-->
-<!--            <id>make-index</id>-->
-<!--            <goals>-->
-<!--              <goal>jandex</goal>-->
-<!--            </goals>-->
-<!--          </execution>-->
-<!--        </executions>-->
-<!--      </plugin>-->
       <plugin>
         <groupId>io.smallrye</groupId>
         <artifactId>jandex-maven-plugin</artifactId>

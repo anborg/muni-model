@@ -1,5 +1,5 @@
 package corp.model;
-
+import corp.model.Model;
 import com.google.protobuf.Timestamp;
 import muni.util.ProtoUtil;
 import org.junit.jupiter.api.Test;
@@ -14,7 +14,7 @@ public class TestProtogenObjects {
 
     @Test
     public void objects_UNset_must_false_hasXX() {
-        Person pers = Person.newBuilder().setFirstName("Jane").setLastName("Doe").build();
+        Model.Person pers = Model.Person.newBuilder().setFirstName("Jane").setLastName("Doe").build();
         //unset primitives
         //TODO enable after proto3-optional bug is fixed
         assertThat(pers.hasId()).as("Unset primitive must be verifiable as empty in protobuf")
@@ -34,15 +34,15 @@ public class TestProtogenObjects {
     @Test
     public void objects_SET_must_true_hasXX() {
         //When
-        Person pers = null;
+        Model.Person pers = null;
         {
             Instant now = Instant.now();
             Long id = 3L;
             String streetNum = "111", streetName = "New Street", city = "Toronto", province = "Ontario", country = "Canada", postalCode = "L1L2M2";
             Double lat = 22.1111, lon = 22.1111;
             var ts = Timestamp.newBuilder().setSeconds(now.getEpochSecond()).build();
-            var add = PostalAddress.newBuilder().setId(id).setStreetNum(streetNum).setStreetName(streetName).setCity(city).setProvince(province).setCountry(country).setPostalCode(postalCode).setCreateTime(ts).setUpdateTime(ts);
-            pers = Person.newBuilder().setId(id).setFirstName("Jane").setLastName("Doe").setAddress(add).build();//.setDirty(true)
+            var add = Model.PostalAddress.newBuilder().setId(id).setStreetNum(streetNum).setStreetName(streetName).setCity(city).setProvince(province).setCountry(country).setPostalCode(postalCode).setCreateTime(ts).setUpdateTime(ts);
+            pers = Model.Person.newBuilder().setId(id).setFirstName("Jane").setLastName("Doe").setAddress(add).build();//.setDirty(true)
         }//pers
         logger.info(ProtoUtil.toJson(pers));
 

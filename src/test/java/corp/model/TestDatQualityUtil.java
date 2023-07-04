@@ -1,6 +1,7 @@
 package corp.model;
 
 import com.google.protobuf.Timestamp;
+import corp.model.Model;
 import muni.util.DataQuality;
 import org.junit.jupiter.api.Test;
 
@@ -12,7 +13,7 @@ public class TestDatQualityUtil {
 
     @Test
     public void minimal_insertValid_person() {
-        Person pers = Person.newBuilder().setFirstName("Jane").setLastName("Doe").setEmail("jane@gmail.com").build();
+        Model.Person pers = Model.Person.newBuilder().setFirstName("Jane").setLastName("Doe").setEmail("jane@gmail.com").build();
         assertThat(DataQuality.Person.isValidForInsert(pers)).isTrue();
         assertThat(DataQuality.Person.isValidForUpdate(pers)).isFalse();
     }
@@ -21,7 +22,7 @@ public class TestDatQualityUtil {
     public void minimal_updateValid_person() {
         Instant now = Instant.now();
         var ts = Timestamp.newBuilder().setSeconds(now.getEpochSecond()).build();
-        Person pers = Person.newBuilder().setId(1L).setFirstName("Jane-Updated").setCreateTime(ts).setUpdateTime(ts).build();
+        Model.Person pers = Model.Person.newBuilder().setId(1L).setFirstName("Jane-Updated").setCreateTime(ts).setUpdateTime(ts).build();
         assertThat(DataQuality.Person.isValidForInsert(pers)).isFalse();
         assertThat(DataQuality.Person.isValidForUpdate(pers)).isTrue();
 
@@ -33,7 +34,7 @@ public class TestDatQualityUtil {
         String id = "3", streetNum = "111", streetName = "New Street", city = "Toronto", province = "Ontario", country = "Canada", postalCode = "L1L2M2";
         Double lat = 22.1111, lon = 22.1111;
         var ts = Timestamp.newBuilder().setSeconds(now.getEpochSecond()).build();
-        var add = PostalAddress.newBuilder().setStreetNum(streetNum).setStreetName(streetName).setPostalCode(postalCode).build();//.setDirty(true)
+        var add = Model.PostalAddress.newBuilder().setStreetNum(streetNum).setStreetName(streetName).setPostalCode(postalCode).build();//.setDirty(true)
         //
         assertThat(DataQuality.Address.isValidForInsert(add)).isTrue();
         assertThat(DataQuality.Address.isValidForUpdate(add)).isFalse();
@@ -46,7 +47,7 @@ public class TestDatQualityUtil {
         String streetNum = "111", streetName = "New Street", city = "Toronto", province = "Ontario", country = "Canada", postalCode = "L1L2M2";
         Double lat = 22.1111, lon = 22.1111;
         var ts = Timestamp.newBuilder().setSeconds(now.getEpochSecond()).build();
-        var add = PostalAddress.newBuilder().setId(id).setPostalCode(postalCode).setCreateTime(ts).setUpdateTime(ts).build();//.setDirty(true)
+        var add = Model.PostalAddress.newBuilder().setId(id).setPostalCode(postalCode).setCreateTime(ts).setUpdateTime(ts).build();//.setDirty(true)
         //
         assertThat(DataQuality.Address.isValidForInsert(add)).isFalse();
         assertThat(DataQuality.Address.isValidForUpdate(add)).isTrue();
@@ -59,7 +60,7 @@ public class TestDatQualityUtil {
         String streetNum = "111", streetName = "New Street", city = "Toronto", province = "Ontario", country = "Canada", postalCode = "L1L2M2";
         Double lat = 22.1111, lon = 22.1111;
         var ts = Timestamp.newBuilder().setSeconds(now.getEpochSecond()).build();
-        var add = PostalAddress.newBuilder().setId(id).setStreetNum(streetNum).setStreetName(streetName).setCity(city).setProvince(province).setCountry(country).setPostalCode(postalCode).setCreateTime(ts).setUpdateTime(ts);
+        var add = Model.PostalAddress.newBuilder().setId(id).setStreetNum(streetNum).setStreetName(streetName).setCity(city).setProvince(province).setCountry(country).setPostalCode(postalCode).setCreateTime(ts).setUpdateTime(ts);
     }
 
 }
